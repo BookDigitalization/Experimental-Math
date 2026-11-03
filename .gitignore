@@ -1,0 +1,29 @@
+# 编译生成的 PDF 不纳入版本库（请通过 GitHub Releases 发布）
+*.pdf
+
+# LaTeX 中间文件
+*.aux
+*.log
+*.out
+*.toc
+*.thm
+*.lof
+*.lot
+*.bbl
+*.blg
+*.xdv
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.run.xml
+*-blx.bib
+*.nav
+*.snm
+*.vrb
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
