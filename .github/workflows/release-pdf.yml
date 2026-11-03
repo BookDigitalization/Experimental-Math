@@ -1,0 +1,97 @@
+# 发布 Release 时，自动编译全部 6 册（合订本 + 上、下册）并把 PDF 上传到该 Release。
+# 也可在 Actions 页面手动运行：不填标签时只编译并保存为构件（用于测试），
+# 填写已有 Release 的标签时会把 PDF 上传（覆盖同名文件）到该 Release。
+name: 发布 PDF
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "上传到哪个 Release 的标签（留空则只编译、不上传）"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-pdf-${{ github.event.release.tag_name || inputs.tag || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: 编译第 ${{ matrix.vol }} 册
+    runs-on: ubuntu-latest
+    container: texlive/texlive:latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        vol: [1, 2, 3, 4, 5, 6]
+    env:
+      # Linux 上没有 Windows 中文字体，改用 ctex 的 ubuntu 字体集（Noto CJK + 文鼎楷体）
+      CTEX_FONTSET: ubuntu
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 安装中文字体
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            ca-certificates curl \
+            fonts-noto-cjk fonts-noto-cjk-extra fonts-arphic-gkai00mp
+          fc-cache -f
+
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: just
+
+      - name: 编译合订本与上、下册
+        run: |
+          just book ${{ matrix.vol }}
+          just split ${{ matrix.vol }}
+
+      - name: 整理文件名
+        shell: bash
+        run: |
+          v=${{ matrix.vol }}
+          mkdir -p dist
+          cp "math$v/main.pdf"         "dist/Experimental-Math-$v.pdf"
+          cp "math$v/main - ${v}A.pdf" "dist/Experimental-Math-${v}A.pdf"
+          cp "math$v/main - ${v}B.pdf" "dist/Experimental-Math-${v}B.pdf"
+          ls -l dist
+
+      - name: 上传日志（失败时）
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: log-${{ matrix.vol }}
+          path: math${{ matrix.vol }}/*.log
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pdf-${{ matrix.vol }}
+          path: dist/*.pdf
+          if-no-files-found: error
+
+  publish:
+    name: 上传到 Release
+    needs: build
+    if: github.event_name == 'release' || inputs.tag != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: pdf-*
+          path: dist
+          merge-multiple: true
+
+      - name: 上传 PDF
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: |
+          ls -l dist
+          gh release upload "$TAG" dist/*.pdf --clobber --repo "$GITHUB_REPOSITORY"

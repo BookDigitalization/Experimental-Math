@@ -14,6 +14,10 @@ set windows-shell := ["pwsh.exe", "-NoLogo", "-NoProfile", "-Command"]
 
 engine := "xelatex"
 flags := "-interaction=nonstopmode -halt-on-error -file-line-error"
+
+# 可选：通过环境变量 CTEX_FONTSET 指定 ctex 字体集（如 ubuntu、fandol、windows、mac），
+# 不修改源码。留空则由 ctex 按操作系统自动选择。CI 中使用 ubuntu。
+fontset := env("CTEX_FONTSET", "")
 _just := "just --justfile " + quote(justfile())
 
 # 列出所有任务
@@ -44,7 +48,8 @@ clean:
 distclean:
     git clean -fX
 
-# 在目录 dir 中编译主文件 file（两遍）
+# 在目录 dir 中编译主文件 file（两遍）。
+# 指定了字体集时，先向 ctexbook 传入 fontset 选项再 \input 主文件（用 -jobname 保持输出文件名不变）
 [private]
 _tex dir file:
-    cd {{ quote(dir) }} && {{ engine }} {{ flags }} {{ quote(file) }} && {{ engine }} {{ flags }} {{ quote(file) }}
+    cd {{ quote(dir) }} && {{ engine }} {{ flags }} {{ if fontset == "" { quote(file) } else { "-jobname=" + quote(without_extension(file)) + " " + quote('\PassOptionsToClass{fontset=' + fontset + '}{ctexbook}\input{' + file + '}') } }} && {{ engine }} {{ flags }} {{ if fontset == "" { quote(file) } else { "-jobname=" + quote(without_extension(file)) + " " + quote('\PassOptionsToClass{fontset=' + fontset + '}{ctexbook}\input{' + file + '}') } }}
