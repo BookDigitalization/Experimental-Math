@@ -4699,9 +4699,9 @@ $\wideparen{AB}$长和扇形$OAB$的面积．
     \centering
 \begin{tikzpicture}[>=latex, scale=.9]
     \tkzDefPoints{0/0/A, 5/0/B, 3.2/2.4/C}
-    \tkzDrawSemiCircle[pattern=north west lines,diameter](A,C)
-\tkzDrawSemiCircle[pattern=north west lines,diameter](C,B)
-\tkzDrawSemiCircle[fill=white,diameter](A,B)
+    \draw[pattern=north west lines] (C) arc[start angle=36.87, end angle=216.87, radius=2] -- cycle;
+\draw[pattern=north west lines] (B) arc[start angle=-53.13, end angle=126.87, radius=1.5] -- cycle;
+\draw[fill=white] (B) arc[start angle=0, end angle=180, radius=2.5] -- cycle;
 \tkzDrawPolygon[pattern=north east lines](A,B,C)
 \tkzLabelPoints[below](A,B)
 \tkzLabelPoints[above](C)
