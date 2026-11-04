@@ -16,7 +16,7 @@
     &=\sum_{i=1}^{n}\left( x_{i}-\bar{x}\right)^{2}+2\left[\sum_{i=1}^{n}\left( x_{i}-\bar{x}\right)\right](\bar{x}-C)+n(\bar{x}-C)^{2}
 \end{split}\]
 由于
-$$\sum_{i=1}^{n} ( x_{i}-\bar{x} ) =\sum_{i=1}^{*} x_{i}-n\bar{x}=n\bar{x}-n\bar{x}=0$$
+$$\sum_{i=1}^{n} ( x_{i}-\bar{x} ) =\sum_{i=1}^{n} x_{i}-n\bar{x}=n\bar{x}-n\bar{x}=0$$
 因此
 $$\sum_{i=1}^{n}(x_{i}-C)^{2}=\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}+n(\bar{x}-C)^{2}\ge \sum_{i=1}^{n}(x_{i}-\bar{x})^{2}$$
 显然，等号成立当且仅当$\bar x=C$.
@@ -42,13 +42,13 @@ x_{2},\ldots,x_{n}$的好坏标准，则$\bar x$是代表性最好的值.
    &= \frac{1}{n}\left [ na+ \frac {(  n- 1 )n}{2}d \right ]=  a+\frac{(n-1)d}{2}
 \end{split}\]
 \end{example}
-例如求$1,2,\ldots, 100$的平均 数，这 时$a=d=1$, $n=100$于是$\bar{x} = 1+ \frac {99}{2}= 50.5$; 又 如求$3, 6, 9, 12, \ldots, 27 $这几 个数的均值，则$a= d= 3$, $n= 0$, 于是$\bar{x}=3+\frac{8}{2}\times 3=15$.
+例如求$1,2,\ldots, 100$的平均 数，这 时$a=d=1$, $n=100$于是$\bar{x} = 1+ \frac {99}{2}= 50.5$; 又 如求$3, 6, 9, 12, \ldots, 27 $这几 个数的均值，则$a= d= 3$, $n= 9$, 于是$\bar{x}=3+\frac{8}{2}\times 3=15$.
 
 
 \section*{均方差（方差）}
 
 从上面的讨论可以看出，平均数$\bar x$代表$x_1,\ldots,x_n$的好坏程度是由$\sum\limits^n_{i=1}(x_i-\bar x)^2$来反映的，它是$n$个数据$x_i$对
-$\bar x$的偏差平方的总和. 如果用$n$除一下，就得到平均的偏差平方和，它反映了每个数据$x_i$偏离$x$的“平均”状况，因此称它为均方差，简称为方差，通常用$S^2$来表示，即有
+$\bar x$的偏差平方的总和. 如果用$n$除一下，就得到平均的偏差平方和，它反映了每个数据$x_i$偏离$\bar x$的“平均”状况，因此称它为均方差，简称为方差，通常用$S^2$来表示，即有
 \[S^2=\frac{1}{n}\sum^n_{i=1}(x_i-\bar x)^2\]
 方差表明了一组数据$x_1,x_2,\ldots,x_n$的分散程度. $S^2$越小，表示$x_i$之间的差异小，$\bar x$的代表性就好；$S^2$越大，表示$x_i$之间的差异也大，数据便很分散，此时$\bar x$代表性就不强.
 
@@ -56,9 +56,9 @@ $\bar x$的偏差平方的总和. 如果用$n$除一下，就得到平均的偏�
 
 如果$x_1=x_2=\cdots=x_n=a$，则$\bar x=a$，这时方差$S^2=0$. 如果$x_i=i,\; i=1,2,\ldots,n$，则$\bar x=\frac{n+1}{2}$，而方差
 \[\begin{split}
-    S^2=\frac{1}{n}\sum^n_{i=1}(x-\bar x)^2 &=\frac{1}{n}\sum^n_{i=1}\left(i-\frac{n+1}{2}\right)^2\\
+    S^2=\frac{1}{n}\sum^n_{i=1}(x_i-\bar x)^2 &=\frac{1}{n}\sum^n_{i=1}\left(i-\frac{n+1}{2}\right)^2\\
 &=\frac{1}{n}\sum^n_{i=1}i^2-\left(\frac{n+1}{2}\right)^2\\
-&=\frac{n(n+1)(2n+1)}{6}-\frac{(n+1)^2}{4}\\
+&=\frac{(n+1)(2n+1)}{6}-\frac{(n+1)^2}{4}\\
 &=\frac{(n+1)(4n+2-3n-3)}{12}=\frac{n^2-1}{12}
 \end{split}\]
 
@@ -71,7 +71,7 @@ $\bar x$的偏差平方的总和. 如果用$n$除一下，就得到平均的偏�
     \item 如果$y_i=x_i+a,\; i=1,2,\cdots,n$。则 $\bar {y}= \bar{x} + a$.
     
 \begin{proof}
-     $\bar{y} = \frac 1n\sum\limits_{i= 1}^{n}y_{i}= \frac 1n\sum\limits _{i= 1}^{n} ({x_{i}+ a}) = \frac 1n\sum\limits _{i= 1}^{n}x_{i}+ a= x+ a$
+     $\bar{y} = \frac 1n\sum\limits_{i= 1}^{n}y_{i}= \frac 1n\sum\limits _{i= 1}^{n} ({x_{i}+ a}) = \frac 1n\sum\limits _{i= 1}^{n}x_{i}+ a= \bar x+ a$
 \end{proof}
     
 \item 如果$y_i=bx_i,i=1,2,...n$, 则$\bar{y}=b\bar{x}$
@@ -91,7 +91,7 @@ $\bar y= {\frac 1n}\sum\limits _{i= 1}^{n}y_{i}= {\frac 1n}\sum\limits _{i= 1}^{
 
 \begin{proof}
 \[\begin{split}
-    S_{y}^{2}= {\frac 1n}\sum\limits  _{i= 1}^{n}(y_{i}- \bar{y})^2&=\frac{1}{n}\sum\limits ^n_{i=1}\left ( bx_{i}+ a- b\bar{y} - a\right ) ^{2}\\
+    S_{y}^{2}= {\frac 1n}\sum\limits  _{i= 1}^{n}(y_{i}- \bar{y})^2&=\frac{1}{n}\sum\limits ^n_{i=1}\left ( bx_{i}+ a- b\bar{x} - a\right ) ^{2}\\
     &=\frac{b^{2}}{n}\sum\limits _{i=1}^{n}(x_{i}-\bar{x})^{2}=b^{2}S_{x}^{2}
 \end{split}\]
 \end{proof}
@@ -128,19 +128,19 @@ $\Sigma$ &$-3.5$& $11573.43$\\
 所以
 \[\begin{split}
     \bar x&=\bar y+200=-\frac{3.5}{5}+200=199.3\\
-S^2_x&=S^2_y=\frac{1}{n}\left(\sum^n_{i=1} y^2_i-n\bar y^2\right)=\frac{1}{5}(11573.43-245)=2314.196
+S^2_x&=S^2_y=\frac{1}{n}\left(\sum^n_{i=1} y^2_i-n\bar y^2\right)=\frac{1}{5}(11573.43-2.45)=2314.196
 \end{split}
     \]
 
 从演算过程可以看出，$y_i$的平方、求和的计算量比$x_i$的平方、求和的计算量小．这里选200是为了使$x_i-200$数字变小而且减法本身也较易.
 
 \begin{example}
-    设$i=a+id,\; i=1,2,\ldots,n$，即$x_1,x_2,\ldots,x_n$为等差数列，试求方差$S^2_n$.
+    设$x_i=a+id,\; i=1,2,\ldots,n$，即$x_1,x_2,\ldots,x_n$为等差数列，试求方差$S^2_x$.
 \end{example}
 
 为了便于比较，下面用两种方法求解.
 
-\textbf{解一：} 已知$\bar x=a+\frac{n+1}{2}d$，所以$x_i-x=\left(i-\frac{n+1}{2}\right)d$.
+\textbf{解一：} 已知$\bar x=a+\frac{n+1}{2}d$，所以$x_i-\bar x=\left(i-\frac{n+1}{2}\right)d$.
 \[\sum^n_{i=1}(x_i-\bar x)^2 =\sum^n_{i=1}\left(i-\frac{n+1}{2}\right)^2 d^2=\frac{d^2n(n^2-1)}{12} \]
 所以
 \[S^2_x=\frac{d^2(n^2-1)}{12} \]
@@ -157,18 +157,18 @@ S^2_x&=S^2_y=\frac{1}{n}\left(\sum^n_{i=1} y^2_i-n\bar y^2\right)=\frac{1}{5}(11
 
 又
 \[\begin{split}
-    S^2_x&=\frac{1}{n+m}\left[\sum\limits^n_{i=1}(x_i-\bar z)+\sum\limits^m_{i=1}(y_i-\bar z)^2\right]\\
+    S^2_z&=\frac{1}{n+m}\left[\sum\limits^n_{i=1}(x_i-\bar z)^2+\sum\limits^m_{i=1}(y_i-\bar z)^2\right]\\
     &=\frac{1}{n+m}\left[\sum\limits^n_{i=1}(x_i-\bar x)^2 +n(\bar x-\bar z)^2+\sum\limits^m_{i=1}(y_i-\bar y)^2+m(\bar y-\bar z)^2\right]\\
     &=\frac{1}{n+m}\left[nS^2_x+n(\bar x-\bar z)^2+mS^2_y+m(\bar y-\bar z)^2\right]
 \end{split}\]
 但是$\bar z=\frac{n}{n+m}\bar x+\frac{m}{n+m}\bar y$，代入有
 \[\bar x-\bar z=\frac{m}{n+m}(\bar x-\bar y),\qquad \bar y-\bar z=\frac{n}{n+m}(\bar y-\bar x)\]
-\[S_{y}^{2}= \frac n{n+ m} S_{x}^{2}+ \frac m{n+ m} S_{y}^{2}+ \frac n{n+ m}\left(\frac m{n+ m}\right)^{2}(\bar x- \bar{y} ) ^{2}+\frac{m}{n+m}\left(\frac{n}{m+n}\right)^{2}(\bar{y}-\bar x)^{2}\]
+\[S_{z}^{2}= \frac n{n+ m} S_{x}^{2}+ \frac m{n+ m} S_{y}^{2}+ \frac n{n+ m}\left(\frac m{n+ m}\right)^{2}(\bar x- \bar{y} ) ^{2}+\frac{m}{n+m}\left(\frac{n}{m+n}\right)^{2}(\bar{y}-\bar x)^{2}\]
 所以
-\[S_{y}^{2}=\frac{1}{n+m}\left(nS_{x}^{2}+mS_{y}^{2}\right)+\frac{nm}{(n+m)^{2}}(\bar{x}-\bar{y})^2\]
+\[S_{z}^{2}=\frac{1}{n+m}\left(nS_{x}^{2}+mS_{y}^{2}\right)+\frac{nm}{(n+m)^{2}}(\bar{x}-\bar{y})^2\]
 总之有
-$$z=\frac{1}{n+m}(n\bar{x}+m\bar{y})$$
-\[S_{z}^{2}=\frac{1}{n+m}\left(nS_{x}^{2}+mS_{z}^{2}\right)+\frac{nm}{(n+m)^{2}}(\bar{x}-\bar{y})^2\]
+$$\bar z=\frac{1}{n+m}(n\bar{x}+m\bar{y})$$
+\[S_{z}^{2}=\frac{1}{n+m}\left(nS_{x}^{2}+mS_{y}^{2}\right)+\frac{nm}{(n+m)^{2}}(\bar{x}-\bar{y})^2\]
 \end{solution}
 
 特别，当$m=1$时，$S^2_y=0$，记$y_1=x_{n+1}$，这就得到增加一个新数据的递推公式
@@ -248,8 +248,8 @@ $$z=\frac{1}{n+m}(n\bar{x}+m\bar{y})$$
 \begin{proof}
 对任意数$a,b,\hat a,\hat b$，有
 \[\begin{split}
-Q&=\sum^n_{i=1}(y_1-a-bx_i)^2 =\sum^n_{i=1}\left[y_i-\hat a-\hat b x_i+\hat a-a+(\hat b-b)x_i\right]^2\\ 
-&=\sum^n_{i=1}\left(y_i-\hat a-\hat b x_i\right)^2+2\sum^n_{i=1}\left(y_i-\hat a-\hat b x_i\right)\cdot \left(\hat a-\hat a+bx_i-bx_i\right)\\
+Q&=\sum^n_{i=1}(y_i-a-bx_i)^2 =\sum^n_{i=1}\left[y_i-\hat a-\hat b x_i+\hat a-a+(\hat b-b)x_i\right]^2\\ 
+&=\sum^n_{i=1}\left(y_i-\hat a-\hat b x_i\right)^2+2\sum^n_{i=1}\left(y_i-\hat a-\hat b x_i\right)\cdot \left[\hat a-a+(\hat b-b)x_i\right]\\
 &\qquad +\sum^n_{i=1}\left[\hat a-a+(\hat b-b)x_i\right]^2
 \end{split}\]
 取$\hat a,\hat b$使得
@@ -293,7 +293,7 @@ $\Sigma 275$&705&&&1000&1380\\
 于是求得最接近这五点的直线为
 \[y=65.1+1.38x\]
 
-现在，进一步来考查一下，由上述方程算得的$x=35$, 45, 55, 65, 75时$y$值是多少呢？它们与实际的观测值$y_i$的差又是多少呢？为了以示区别，由方程算出的$65.1+1.38x_i$记为$y_i$有
+现在，进一步来考查一下，由上述方程算得的$x=35$, 45, 55, 65, 75时$y$值是多少呢？它们与实际的观测值$y_i$的差又是多少呢？为了以示区别，由方程算出的$65.1+1.38x_i$记为$\hat y_i$有
 
 \begin{center}
 \begin{tabular}{cccc}
@@ -317,7 +317,7 @@ $\Sigma$&&0&31.60\\
 这不是偶然的，可以证明，在一般情况下，总有$\sum\limits^n_{i=1}\left(y_i-\hat y_i\right)=0$. 事实上，
 \[\begin{split}
 \sum^n_{i=1}\left(y_i-\hat y_i\right)&=\sum^n_{i=1}y_i-\sum^n_{i=1}\left(\hat a+\hat b x_i\right)    \\
-&=n\bar y -n\hat a-n\hat b \bar x=n\left(\hat y-\hat a-\hat b \bar x\right)
+&=n\bar y -n\hat a-n\hat b \bar x=n\left(\bar y-\hat a-\hat b \bar x\right)
 \end{split} \]
 由于已知$\hat a=\bar y-\hat b\bar x$，所以有$\sum\limits^n_{i=1}\left(y_i-\hat y_i\right)=0$
 
