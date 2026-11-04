@@ -4,6 +4,7 @@
 #   just all          编译全部 6 册合订本
 #   just book 3       编译第 3 册合订本
 #   just split 3      编译第 3 册拆分的上、下册
+#   just typst 1      编译第 1 册的 Typst 版（试验中）
 #   just clean        清理编译中间文件（保留 PDF）
 #   just distclean    清理全部编译产物（含 PDF）
 #
@@ -48,6 +49,11 @@ split-all: (split "1") (split "2") (split "3") (split "4") (split "5") (split "6
 [private]
 _check n:
     @{{ if n =~ '^[1-6]$' { "" } else { error("册号应为 1~6，收到: " + n) } }}
+
+# 编译第 n 册的 Typst 版（试验中，目前只有第 1 册），输出 typst/math<n>/main.pdf。
+# 同样认环境变量 CTEX_FONTSET=ubuntu 与 PAPER=a4paper
+typst n: (_check n)
+    typst compile --root {{ quote(justfile_directory()) }} --input fontset={{ if fontset == "" { "windows" } else { fontset } }} --input paper={{ if paper == "a4paper" { "a4" } else { "iso-b5" } }} {{ quote("typst/math" + n + "/main.typ") }} {{ quote("typst/math" + n + "/main" + _suffix + ".pdf") }}
 
 # 清理编译中间文件（保留 PDF）
 clean:
