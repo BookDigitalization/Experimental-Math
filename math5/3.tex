@@ -69,7 +69,7 @@ $ON$的方向移动相同的距离，那
 平面上全体点的一个平移通
 常用字母$T$来表示，不同的平移可分别用$T_1,T_2,\ldots$来表示．
 如果$P$点通过平移$T$移动到$P_1$点，则$P_1$点叫做$P$点的\textbf{象
-点}，记作$P_1=T(P)$, 这时有向线段$\Vec{PP_1}$; 可写作$\Vec{PT(P)}$．
+点}，记作$P_1=T(P)$, 这时有向线段$\Vec{PP_1}$可写作$\Vec{PT(P)}$．
 
 为了给出一个平移，根据定义，只需给出平面上任一点
 和它的象点即可．设$P_1=T(P)$, 则$P$、$P_1$这两点 就完全
@@ -620,7 +620,7 @@ $n$个向量之和，在图3.17中，
 \end{enumerate}    
 \end{proof}
 
-下面让我们来分析一下$n\left(\vec{a}+\vec{b}\right)=n\vec{a}+n\vec{b}$的几何意义：取$\Vec{AB}=\vec{a}$, $\Vec{BC}=\vec{b}$ (图3.19), 则$\vec{a}+\vec{b}=\Vec{AC}$, 再取$\Vec{AB'}=n\vec{a}$, 过$B'$点作$BC$的平行线，取$B'C'$和$\Vec{DC}$同向且其长是$|\Vec{BC}|$的$n$倍，即$\Vec{B'C'}=n\vec{b}$, 由上述分配律有：
+下面让我们来分析一下$n\left(\vec{a}+\vec{b}\right)=n\vec{a}+n\vec{b}$的几何意义：取$\Vec{AB}=\vec{a}$, $\Vec{BC}=\vec{b}$ (图3.19), 则$\vec{a}+\vec{b}=\Vec{AC}$, 再取$\Vec{AB'}=n\vec{a}$, 过$B'$点作$BC$的平行线，取$\Vec{B'C'}$和$\Vec{BC}$同向且其长是$|\Vec{BC}|$的$n$倍，即$\Vec{B'C'}=n\vec{b}$, 由上述分配律有：
 \[\Vec{AC'}=\Vec{AB'}+\Vec{B'C'}=n\vec{a}+n\vec{b}=n\left(\vec{a}+\vec{b}\right)=n\Vec{AC}\]
 由此可知，$A$、$C$、$C'$三点共线并且$\Vec{AC'}$的长度是$\Vec{AC}$长度的$n$倍．这就证明了相似三角形基本定理（即\textbf{两个三角形中，如果有三个角对应相等，那么它们的三边就对应成比例}）．
 
@@ -637,8 +637,8 @@ $\frac{\overline{AB'}}{\overline{AB}}=n$，
 这就证明了上述分配律成立．
 
 总结上面的分析，我们可以看到，运算律$n(\vec{a}+\vec{b})=
-=n\vec{a}+n\vec{b}$和相似比为整数的相似三角形定理是同一几何事实的两种表达形式，它们在逻辑上具有等价关系．我们还可以把$n(\vec{a}+\vec{b})=
-=n\vec{a}+n\vec{b}$的代数证明和边长之比为$n$的相似三角形定理的几何证明再加以分析比较．为清楚起见，我们取$n=3$ (图3.19).
+n\vec{a}+n\vec{b}$和相似比为整数的相似三角形定理是同一几何事实的两种表达形式，它们在逻辑上具有等价关系．我们还可以把$n(\vec{a}+\vec{b})=
+n\vec{a}+n\vec{b}$的代数证明和边长之比为$n$的相似三角形定理的几何证明再加以分析比较．为清楚起见，我们取$n=3$ (图3.19).
 
 \begin{figure}[htp]
     \centering
@@ -716,7 +716,7 @@ $\frac{\overline{AB'}}{\overline{AB}}=n$，
 
 \begin{proof}
 \begin{enumerate}
-    \item 等式左边乘以$qn$，由例3.7得
+    \item 等式左边乘以$qn$，由例3.6得
 \[\begin{split}
 qn\left[\frac{m}{n}\left(\frac{p}{q}\vec{a}\right)\right]=q\left[n\frac{m}{n}\left(\frac{p}{q}\vec{a}\right)\right]&=(qm)\left(\frac{p}{q}\vec{a}\right)\\
 &=m\left[q\left(\frac{p}{q}\vec{a}\right)\right]\\
@@ -725,7 +725,7 @@ qn\left[\frac{m}{n}\left(\frac{p}{q}\vec{a}\right)\right]=q\left[n\frac{m}{n}\le
 再由上述有理数乘向量的定义即可得
 \[\frac{m}{n}\left(\frac{p}{q}\vec{a}\right)=\frac{mp}{nq}\vec{a}=\left(\frac{m}{n}\cdot \frac{p}{q}\right)\vec{a}\]
 
-\item 令$\vec{a}'=\frac{1}{m}\vec{a}$, $\vec{b}'=\frac{1}{m}\vec{b}$，则由例3.7可得
+\item 令$\vec{a}'=\frac{1}{m}\vec{a}$, $\vec{b}'=\frac{1}{m}\vec{b}$，则由例3.6可得
 \[\begin{split}
     \frac{n}{m}\left(\vec{a}+\vec{b}\right)=\frac{n}{m}\left(m\vec{a}'+m\vec{b}'\right)&=\frac{n}{m}m\left(\vec{a}'+\vec{b}'\right)\\
 &=n\left(\vec{a}'+\vec{b}'\right)\\
@@ -737,9 +737,9 @@ qn\left[\frac{m}{n}\left(\frac{p}{q}\vec{a}\right)\right]=q\left[n\frac{m}{n}\le
 
 \begin{ex}
 \begin{enumerate}
-    \item 如何定义$(-1)\vec{a}$, $(-2)\vec{a}$和$(-n)\vec{a}$，才能使得例3.7中的两式对任何正负整数都能成立.
-    \item 如何定义$\left(-\frac{1}{2}\right)\vec{a}$, $\left(-\frac{2}{3}\right)\vec{a}$和$\left(-\frac{m}{n}\right)\vec{a}$才能使例3.8中的两式对任何正负分数都成立．
-    \item 比较本节例3.7、例3.8, 及上面练习1、2和初中第一册对于指数法则的逐步推广．
+    \item 如何定义$(-1)\vec{a}$, $(-2)\vec{a}$和$(-n)\vec{a}$，才能使得例3.6中的两式对任何正负整数都能成立.
+    \item 如何定义$\left(-\frac{1}{2}\right)\vec{a}$, $\left(-\frac{2}{3}\right)\vec{a}$和$\left(-\frac{m}{n}\right)\vec{a}$才能使例3.7中的两式对任何正负分数都成立．
+    \item 比较本节例3.6、例3.7, 及上面练习1、2和初中第一册对于指数法则的逐步推广．
 \end{enumerate}   
 \end{ex}
 
@@ -989,7 +989,7 @@ $\frac{\vec{a}+\vec{b}}{2}+\frac{\vec{a}-\vec{b}}{2}=\vec{a}$.
 
 \begin{blk}
 {推论} 两个向量$\vec{a}$, $\vec{b}$平行的充要条件是存在着两个不全为零的实数$x_1,x_2$使
-\[x_1\vec{a}_1+x_2\vec{a}_2=\vec{0}\]
+\[x_1\vec{a}+x_2\vec{b}=\vec{0}\]
 \end{blk}
 
 \begin{proof}
@@ -1039,7 +1039,7 @@ $\frac{\vec{a}+\vec{b}}{2}+\frac{\vec{a}-\vec{b}}{2}=\vec{a}$.
 \end{enumerate}
 \end{multicols}
 \item 已知$\vec{a}+\vec{b}=3\vec{e}$, $\vec{a}-\vec{b}=5\vec{e}$, 问$\vec{a}$与$\vec{b}$是否平行？
-\item 已知$\vec{a}_1=3\vec{e}$, $\vec{a}_2=-2\vec{e}$, 把$\vec{a}_1$、$\vec{a}_2$写成$x_1\vec{a}_1+x_2\vec{a}_2=\vec{0}$的形式．问$\vec{a}$与$\vec{b}$是否线性相关？
+\item 已知$\vec{a}_1=3\vec{e}$, $\vec{a}_2=-2\vec{e}$, 把$\vec{a}_1$、$\vec{a}_2$写成$x_1\vec{a}_1+x_2\vec{a}_2=\vec{0}$的形式．问$\vec{a}_1$与$\vec{a}_2$是否线性相关？
 \item 在什么条件下$\vec{a}+\vec{b}$与$\vec{a}-\vec{b}$线性相关？
 \item 若$\vec{a}\ne \vec{0}$, 试证明$x\vec{a}=\vec{0}\quad \Leftrightarrow\quad x=0$
 \end{enumerate}  
@@ -1130,7 +1130,7 @@ $\vec{a}$与$\vec{b}$的内积通常记为$\vec{a}\cdot \vec{b}$，于是
 \[\vec{a}\cdot \vec{b}=|\vec{a}|\cdot |\vec{b}|\cos\expval{\vec{a},\vec{b}}\]
 \end{blk}
 
-设$\Vec{BC}=\vec{a}$，$\Vec{CA}=\vec{b}$（图3.26），过$B$点作$BB_1$垂直于直线$OA$于$B_1$点，容易推知
+设$\Vec{OA}=\vec{a}$，$\Vec{OB}=\vec{b}$（图3.26），过$B$点作$BB_1$垂直于直线$OA$于$B_1$点，容易推知
 \[OB_1=|\vec{b}|\cos\expval{\vec{a},\vec{b}}\]
 
 \begin{figure}[htp]
@@ -1180,7 +1180,7 @@ $\vec{b}$
 \begin{enumerate}
     \item 如果$\vec{e}$是单位向量，则
 \[\begin{split}
-    \vec{e}\cdot \vec{a}=\vec{a}\cdot \vec{e}&=|\vec{a}|\expval{\vec{a},\vec{e}}\\
+    \vec{e}\cdot \vec{a}=\vec{a}\cdot \vec{e}&=|\vec{a}|\cos\expval{\vec{a},\vec{e}}\\
     &=\vec{a}\text{在}\vec{e}\text{方向上的正投影分量}
 \end{split}  \]
 \item  $\vec{a}\bot \vec{b}\quad \Leftrightarrow\quad \vec{a}\cdot \vec{b}=0$
@@ -1231,8 +1231,9 @@ $\expval{\vec{a},\vec{b}}$
  当$\lambda =0$时，显然有$\vec{a}\cdot (\lambda \vec{b})=\lambda (\vec{a}\cdot \vec{b})$
   
  \item 当$\lambda >0$时，$\vec{a}\cdot (\lambda \vec{b})=|\vec{a}|\left|\lambda\vec{b}\right|\cos\expval{\vec{a},\lambda\vec{b}}$（图3.27），但$\left|\lambda\vec{b}\right|=\lambda\left|\vec{b}\right|$，$\lambda\vec{b}$与$\vec{b}$同方向，$\expval{\vec{a},\lambda \vec{b}}=\expval{\vec{a},\vec{b}}$，所以
+\[\vec{a}\cdot(\lambda\vec{b})=\lambda|\vec{a}||\vec{b}|\cos\expval{\vec{a},\vec{b}}=\lambda(\vec{a}\cdot\vec{b})\]
 
- \item 当$\lambda<0$时，$\vec{a}\cdot (\lambda \vec{b})=|\vec{a}|\left|\lambda\vec{b}\right|\cos\expval{\vec{a},\lambda\vec{b}}$（图3.38），但$\left|\lambda \vec{b}\right|=-\lambda\left|\vec{b}\right|$, $\expval{\vec{a},\lambda\vec{b}}=\pi-\expval{\vec{a},\vec{b}}$
+ \item 当$\lambda<0$时，$\vec{a}\cdot (\lambda \vec{b})=|\vec{a}|\left|\lambda\vec{b}\right|\cos\expval{\vec{a},\lambda\vec{b}}$（图3.28），但$\left|\lambda \vec{b}\right|=-\lambda\left|\vec{b}\right|$, $\expval{\vec{a},\lambda\vec{b}}=\pi-\expval{\vec{a},\vec{b}}$
     所以
 \[
     \vec{a}\cdot (\lambda \vec{b})= (-\lambda )|\vec{a}|\left|\vec{b}\right|\cos\left(\pi-\expval{\vec{a},\vec{b}}\right)=\lambda|\vec{a}|\left|\vec{b}\right|\cos \expval{\vec{a},\vec{b}}=\lambda\left(\vec{a}\cdot \vec{b}\right)
@@ -1426,13 +1427,13 @@ $(3.3)-(3.4)+(3.5)-2\x(3.6)$, 即得
 \addcontentsline{toc}{subsection}{习题3.3}
 
 \begin{enumerate}
-    \item  已知$|\vec{a}|=5$, $\vec{e}$为单位向量，当$\expval{\vec{a},\vec{e}}=30^{\circ},\; 45^{\circ},\; 120^{\circ}$时，分别求出$a$在$\vec{e}$方向上的正投影分量，并绘
+    \item  已知$|\vec{a}|=5$, $\vec{e}$为单位向量，当$\expval{\vec{a},\vec{e}}=30^{\circ},\; 45^{\circ},\; 120^{\circ}$时，分别求出$\vec{a}$在$\vec{e}$方向上的正投影分量，并绘
     图说明．
     \item  当$\vec{a}\cdot \vec{b}=\pm 1$时，$\vec{a}$与
     $\vec{b}$各有什么关系？
     \item  已知$\triangle ABC$, $\overline{BC}=3$, $\overline{CA}=5$, $\overline{AB}=6$, 求$\Vec{A B}\cdot \Vec{AC}$
     （提示：使用例3.14得到的公式）．
-    \item  已知$|\vec{a}|=3$, $\vec{c}$在$\vec{b}$方向上的正投影分量$\vec{a}_1=\frac{1}{2}\vec{b}$,
+    \item  已知$|\vec{a}|=3$, $\vec{a}$在$\vec{b}$方向上的正投影向量$\vec{a}_1=\frac{1}{2}\vec{b}$,
     求$\vec{a}\cdot \vec{b}$.
     \item  已知$\triangle ABC$, $\Vec{AB}=\vec{a}$, $\Vec{AC}=\vec{b}$, 问当$\vec{a}\cdot \vec{b}>0$, $\vec{a}\cdot \vec{b}<0$, $\vec{a}\cdot \vec{b}=0$时，$\triangle ABC$各是什么三角形？
 
@@ -1450,7 +1451,7 @@ $(3.3)-(3.4)+(3.5)-2\x(3.6)$, 即得
     \item  已知$\parallelogram ABCD$, 设$\Vec{AB}=\vec{a}$,$\Vec{AD}=\vec{b}$, 求证此平行四
     边形的面积 $S^2=(\vec{a}\cdot \vec{a})(\vec{b}\cdot \vec{b})-(\vec{a}\cdot \vec{b})^2$.
 
-    （提示：$S^2=|\vec{a}|^2|\vec{b}|^2\sin^2 \expval{\vec{a}\cdot \vec{b}}$）
+    （提示：$S^2=|\vec{a}|^2|\vec{b}|^2\sin^2 \expval{\vec{a},\vec{b}}$）
 \end{enumerate}
 
 \section{空间向量及其运算}
@@ -1569,7 +1570,7 @@ $(3.3)-(3.4)+(3.5)-2\x(3.6)$, 即得
 
 \begin{example}
     已知平行六面体$ABCD-EFGH$(图3.33), 如
-果$\Vec{AB}=\vec{a}$, $\Vec{AB}=\vec{b}$, $\Vec{AB}=\vec{c}$, 试用$\vec{a}$、$\vec{b}$、$\vec{c}$表示对
+果$\Vec{AB}=\vec{a}$, $\Vec{AD}=\vec{b}$, $\Vec{AE}=\vec{c}$, 试用$\vec{a}$、$\vec{b}$、$\vec{c}$表示对
 角线向量$\Vec{AG}$.
 \end{example}
 
@@ -1627,9 +1628,9 @@ $\Vec{OG}=\frac{1}{3}\left(\vec{a}+\vec{b}+\vec{c}\right)$
 \item 已知$\vec{a}$、$\vec{b}$、$\vec{c}$且都不等于
 零，它们可能有6个顺序求和，设一平行六面体$ABCD
 -EFGH$的三个棱向量
-$\Vec{AB}=\vec{a}$, $\Vec{AB}=\vec{b}$, $\Vec{AE}=\vec{c}$, 验证它们的和都等于$\Vec{AG}$.
+$\Vec{AB}=\vec{a}$, $\Vec{AD}=\vec{b}$, $\Vec{AE}=\vec{c}$, 验证它们的和都等于$\Vec{AG}$.
 \item 已知四面体$A-BCD$, 设
-$\Vec{AB}=\vec{a}$, $\Vec{BC}=\vec{b}$, $\Vec{CB}=\vec{c}$, $\Vec{DA}=\vec{d}$, $E$、$F$分
+$\Vec{AB}=\vec{a}$, $\Vec{BC}=\vec{b}$, $\Vec{CD}=\vec{c}$, $\Vec{DA}=\vec{d}$, $E$、$F$分
 别为$\overline{AC}$, $\overline{BD}$的中点，试用$\vec{a}$、$\vec{b}$、$\vec{c}$、$\vec{d}$表示$\Vec{EF}$.
     \end{enumerate}
 \end{ex}
@@ -1688,7 +1689,7 @@ $\Vec{AB}=\vec{a}$, $\Vec{BC}=\vec{b}$, $\Vec{CB}=\vec{c}$, $\Vec{DA}=\vec{d}$, 
 \begin{proof}
 \begin{enumerate}
     \item 必要性：任取一点$O$(图3.35), 作$\Vec{OA}=\vec{a}$, 
-    $\Vec{OB}=\vec{b}$, $\Vec{OC}=\vec{c}$, 则$O$、$A$、$B$三点不共线且点$c\in $平面($O$、$A$、$B$), 在平面($O$、$A$、$B$)上，我们过$C$点作$OB$
+    $\Vec{OB}=\vec{b}$, $\Vec{OC}=\vec{c}$, 则$O$、$A$、$B$三点不共线且点$C\in $平面($O$、$A$、$B$), 在平面($O$、$A$、$B$)上，我们过$C$点作$OB$
     的平行线交直线$OA$于$M$点，过$C$作$OA$的平行线交直线$OB$于
     $N$点，于是存在两个实数$x$、$y$使
 \[\begin{split}
@@ -1886,7 +1887,7 @@ $\vec{b}=\vec{e}_2+\vec{e}_3$, $\vec{c}=4\vec{e}_1-5\vec{e}_2-3\vec{e}_3$, 问$\
     方程$x\vec{a}+y\vec{b}+z\vec{c}=\vec{0}$，
 等价于方程
 \[
-x(2\vec{e}_1-\vec{e}_2)+y(\vec{e}_2+\vec{e}_3)+2(4\vec{e}_1-5\vec{e}_2-3\vec{e}_3)=\vec{0}\]
+x(2\vec{e}_1-\vec{e}_2)+y(\vec{e}_2+\vec{e}_3)+z(4\vec{e}_1-5\vec{e}_2-3\vec{e}_3)=\vec{0}\]
 即：
 \[(2x+4z)\vec{e}_1+(-x+y-5z)\vec{e}_2+(y-3z)\vec{e}_3=\vec{0}\]
 由于$\vec{e}_1$、$\vec{e}_2$、$\vec{e}_3$不共面，即线性无关，所以，
@@ -1915,7 +1916,7 @@ $\vec{a}=4\vec{e}_1-\vec{e}_2+3\vec{e}_3,\; \vec{b}=-12\vec{e}_1+3\vec{e}_2-9\ve
 
 \begin{ex}
 \begin{enumerate}
-    \item 已知$\vec{a}=\vec{e}_1+\vec{e}_2-\vec{e}_3$, $\vec{b}=\vec{e}_2+\vec{e}_2+\vec{e}_3$, $\vec{c} =3\vec{e}_2+\vec{e}_2-\vec{e}_3$, 其中$\vec{e}_1$、$\vec{e}_2$、$\vec{e}_3$不共面，问$a$、$b$、$c$是否共
+    \item 已知$\vec{a}=\vec{e}_1+\vec{e}_2-\vec{e}_3$, $\vec{b}=\vec{e}_1+\vec{e}_2+\vec{e}_3$, $\vec{c} =3\vec{e}_1+\vec{e}_2-\vec{e}_3$, 其中$\vec{e}_1$、$\vec{e}_2$、$\vec{e}_3$不共面，问$\vec{a}$、$\vec{b}$、$\vec{c}$是否共
     面？
     \item     已知向量$\vec{a},\vec{b}$不共线，以及$\parallelogram ABCD$, $\Vec{AB}=3\vec{a}$, $\Vec{AD}=2\vec{b}$, 求$\parallelogram ABCD$两对角线上的向量．
   \item 已知$\vec{e}_1,\vec{e}_2,\vec{e}_3$
@@ -1981,7 +1982,7 @@ $\vec{a}=4\vec{e}_1-\vec{e}_2+3\vec{e}_3,\; \vec{b}=-12\vec{e}_1+3\vec{e}_2-9\ve
 称为构成\textbf{左手系}．显然，如果
 $\vec{a},\vec{b},\vec{c}$
 构成{右手系}，那么把$\vec{a},\vec{b},\vec{c}$循环轮换所得到的向量组
-$\left(\vec{b},\vec{c},\vec{a}\right)$, $\left(\vec{c},\vec{a},\vec{b}\right)$也是右手系．如果$\vec{a},\vec{b},\vec{c}$构成左手系，任意换两个向量的顺序，如$\vec{b}$和$\vec{a}$, 则
+$\left(\vec{b},\vec{c},\vec{a}\right)$, $\left(\vec{c},\vec{a},\vec{b}\right)$也是右手系．如果$\vec{a},\vec{b},\vec{c}$构成右手系，任意换两个向量的顺序，如$\vec{b}$和$\vec{a}$, 则
 $\left(\vec{b},\vec{a},\vec{c}\right)$构成左手系．
 
 
@@ -2072,7 +2073,7 @@ $\left(\vec{b},\vec{a},\vec{c}\right)$构成左手系．
     \left(\vec{a}+\vec{b}\right)\x \vec{c}=\vec{a}\x \vec{c}+\vec{b}\x \vec{c}
 \end{equation}
 
-式(3.8)由外积的定义可直证明，把它留给同学作为
+式(3.8)由外积的定义可直接证明，把它留给同学作为
 练习．现在我们来证明(3.9).
 
 \begin{figure}[htp]
@@ -2137,7 +2138,7 @@ $\left(\vec{b},\vec{a},\vec{c}\right)$构成左手系．
 
 \begin{proof}
 \[\begin{split}
-    \left(\vec{a}-\vec{b}\right)\x\left(\vec{a}+\vec{b}\right)&=\vec{a}\x \vec{a}+\vec{a}\x \vec{b}-\vec{b}\x \vec{a}+\vec{b}\x \vec{b}\\
+    \left(\vec{a}-\vec{b}\right)\x\left(\vec{a}+\vec{b}\right)&=\vec{a}\x \vec{a}+\vec{a}\x \vec{b}-\vec{b}\x \vec{a}-\vec{b}\x \vec{b}\\
     &=-\vec{b}\x \vec{a}+\vec{a}\x \vec{b}\\
     &=\vec{a}\x \vec{b}+\vec{a}\x \vec{b}=2\left(\vec{a}\x \vec{b}\right)
 \end{split}\]
@@ -2188,11 +2189,11 @@ $\left(\vec{b},\vec{a},\vec{c}\right)$构成左手系．
 \end{split}\]
 容易看出，
 \begin{itemize}
-    \item 当$\expval{\vec{e}\cdot \vec{c}}\le\frac{\pi}{2}$
+    \item 当$\expval{\vec{e},\vec{c}}\le\frac{\pi}{2}$
 时（$\vec{a},\vec{b},\vec{c}$
 构成右手系或共面），$\vec{e}\cdot \vec{c}$是个非负数且$\vec{e}\cdot \vec{c}$等于这个平行六面体
 的底面$OADB$上的高$h$；
-\item 当$\expval{\vec{e}\cdot \vec{c}}>\frac{\pi}{2}$时，$\vec{e}\cdot \vec{c}<0$, $h=-\vec{e}\cdot \vec{c}$.
+\item 当$\expval{\vec{e},\vec{c}}>\frac{\pi}{2}$时，$\vec{e}\cdot \vec{c}<0$, $h=-\vec{e}\cdot \vec{c}$.
 \end{itemize}
 综合上面两种情况我们有$h=|\vec{e}\cdot \vec{c}|$, 
 所以，
@@ -2302,7 +2303,7 @@ $\left(\vec{a},\vec{b},\vec{c}\right)<0$时一定构成左手系，当$\left(\ve
  \end{enumerate}           
     \end{multicols}
 
-\item 求证：$\left(\vec{a}+\vec{b}\right)\x\left(\vec{b}+\vec{c}\right)\x \left(\vec{c}+\vec{a}\right)=2\vec{a}\x \vec{b}\x \vec{c}$
+\item 求证：$\left(\vec{a}+\vec{b}\right)\x\left(\vec{b}+\vec{c}\right)\cdot \left(\vec{c}+\vec{a}\right)=2\vec{a}\x \vec{b}\cdot \vec{c}$
 \item 已知：三个向量$\vec{a},\vec{b},\vec{c}$满足条件$\vec{a}+\vec{b}+\vec{c}=0$．
 求证：$\vec{a}\x\vec{b}=\vec{b}\x\vec{c}=\vec{c}\x\vec{a}$.
 \item 用向量外积运算证明三角形中的正弦定理，即
@@ -2344,7 +2345,7 @@ $\Vec{OB}$夹角平分线上的一个单位向量．
 \item 已知$\triangle ABC$, $O$是空间一点，试证
 \[\Vec{OA}+\Vec{OB}+\Vec{OC}=\vec{0}\]
 的充要条件是：$O$点是三角形的重心．
-\item 在坐标系$oxy$平面上，已知图形$F$以坐标原点0为对称
+\item 在坐标系$oxy$平面上，已知图形$F$以坐标原点$O$为对称
 中心，证明：始点是公共的且终点是图形$F$的整数点的
 向量的和等于零的充要条件是：坐标原点是向量的公共
 始点．

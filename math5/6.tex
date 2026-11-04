@@ -1,5 +1,5 @@
 \chapter{圆锥曲线}
-远在古希腊时代，人们就开始研究一个平面和一个正瞬
+远在古希腊时代，人们就开始研究一个平面和一个正圆
 锥的截线的性质，并且获得了丰硕的成果，这些截线分别有
 椭圆、抛物线和双曲线，并统称为圆锥曲线，在第二章
 附录里，我们已用球面切线长相等原理证明了它们分别具有
@@ -141,7 +141,7 @@ $y$递减，当$x=a$时，$y=0$,
 是$X$轴上距$Y$轴最远的两个点，当$x=0$, $y=\pm b$, 点
 $B_1(0,-b)$, $B_2(0,+b)$是$Y$轴上距$X$轴距离最远的
 两个点，这四点，$A_1$、$A_2$、$B_1$、$B_2$叫做\textbf{椭圆的顶点}．
-$\overline{A_1A_2},\overline{B_1B_2}$分别叫做椭圆的长和轴短轴．$\overline{A_1A_2}=2a$, 
+$\overline{A_1A_2},\overline{B_1B_2}$分别叫做椭圆的长轴和短轴．$\overline{A_1A_2}=2a$, 
 $\overline{B_1B_2}=2b$, $a$和$b$分别叫做椭圆的\textbf{长半轴长和短半轴长}．
 长轴和短轴的交点叫做\textbf{椭圆的中心}．
 
@@ -161,13 +161,13 @@ a$, 可知$e<1$, 当离心率愈来愈大时，也就是愈来愈接近
 1时，$1-e^2$就越小，椭圆的形状就愈扁平；反之，就愈接
 近于圆，当$e=0$时，$a=b$椭圆就成为圆了．
 
-如果椭圆的中心在原点，焦点在$Y$轴上，那么长轴也－
+如果椭圆的中心在原点，焦点在$Y$轴上，那么长轴也一
 定在$Y$轴上，这时两个焦点$F_1,F_2$的坐标分别是$(0,-c)$,
-$(0,c)$ (图6.3), 求得圆的标准方程是
+$(0,c)$ (图6.3), 求得椭圆的标准方程是
 \begin{equation}
     \boxed{\frac{x^2}{b^2}+\frac{y^2}{a^2}=1}\qquad a\ge b>0
 \end{equation}
-把方程(6.2)的变量$x$和$y$互换就可得到方程(6.6).
+把方程(6.2)的变量$x$和$y$互换就可得到方程(6.4).
 
 \begin{figure}[htp]\centering
     \centering
@@ -293,7 +293,7 @@ $y$&2&1.97&1.89&1.73&1.49&1.11&0\\
 \[\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\]
 依题意
 \[\begin{split}
-    \overline{A_1F_2}&=a+c=6371+2284=8755\\
+    \overline{A_1F_2}&=a+c=6371+2384=8755\\
     \overline{A_2F_2}&=a-c=6371+439=6810
 \end{split}\]
 由以上两式联立求解得
@@ -478,7 +478,7 @@ $X$轴或$Y$轴为对称轴的轴对称图形，又是以坐标原点为对称
 \end{figure}
 
 当$x=a$时，$y=0$, 当$x$由$a$递增且趋向$\infty$, $y$也由0递
-增趋向，方程的轨迹趋向无穷远（图6.7），但由于
+增趋向$\infty$，方程的轨迹趋向无穷远（图6.7），但由于
 \[y=\frac{b}{a}\sqrt{x^2-a^2}=\frac{b}{a}x\sqrt{1-\left(\frac{a}{x}\right)^2}<\frac{b}{a}x\]
 即
 \[\frac{b}{a}x-\frac{b}{a}\sqrt{x^2-a^2}>0\]
@@ -505,7 +505,7 @@ $\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$与$\frac{x^2}{a^2}-\frac{y^2}{b^2}=-1$
 是互为共轭双曲线（图6.8）．
 
 作为练习，请同学证明：双曲线和它的共轭双曲线有相
-词的渐近线．
+同的渐近线．
 
 \begin{figure}[htp]
     \centering
@@ -669,7 +669,7 @@ $y$ &  $\pm 2.3$ & $\pm 3.5$ & $\pm 4.6$ & $\pm 5.6$\\
 \end{enumerate}
 
 \item 已知双曲线
-$\frac{x^2}{9}-\frac{y^2}{16}=1$, 求出它的共领双曲线方程并
+$\frac{x^2}{9}-\frac{y^2}{16}=1$, 求出它的共轭双曲线方程并
 求共轭双曲线的焦点的坐标，渐近线方程和离心率．
 \end{enumerate}
 \end{ex}
@@ -729,7 +729,7 @@ $y_1^2=2px_1$. 点$P(x_1,y_1)$与焦点$F$的距离
 \[\begin{split}
 F\left(-\frac{p}{2},0\right),\quad x=\frac{p}{2}&\qquad \text{(图6.11)}\\
 F\left(0,\frac{p}{2}\right),\quad y=-\frac{p}{2}&\qquad \text{(图6.12)}\\
-F\left(-\frac{p}{2},0\right),\quad y=\frac{p}{2}&\qquad \text{(图6.13)}\\
+F\left(0,-\frac{p}{2}\right),\quad y=\frac{p}{2}&\qquad \text{(图6.13)}\\
 \end{split}\]
 可分别类似地得到抛物线标准方程为
 \[y^2=-2px,\qquad x^2=2py,\qquad x^2=-2py\]
@@ -922,7 +922,7 @@ $\ell_1$ ($\ell_2$) 的距离的比是一个常数}（等于离心率$e$），�
 \end{figure}
 
 类比上述对椭圆的分析，同样也可证明，双曲线$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$也有两条准线（图6.15）：
-左准线$\ell_1:\; x=-\frac{a^2}{c}$；左准线$\ell_2:\; x=\frac{a^2}{c}$．并且具有如下特征性质．
+左准线$\ell_1:\; x=-\frac{a^2}{c}$；右准线$\ell_2:\; x=\frac{a^2}{c}$．并且具有如下特征性质．
 
 双曲线$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$上任一点$P(x_1,y_1)$到焦点$F_1(-c,
 0)$ ($F_2(c,0)$) 的距离和到定直线$\ell_1$ ($\ell_2$) 的距离的比
@@ -938,12 +938,12 @@ $e=1$时是抛物线}，定点叫做圆锥曲线的焦点，定直线叫做
 物线只有一个焦点和一条准线．
 
 \begin{example}
-    求椭圆$x+4y^2=100$的准线方程．
+    求椭圆$x^2+4y^2=100$的准线方程．
 \end{example}
 
 \begin{solution}
     已知椭圆的标准方程为$\frac{x^2}{100}+\frac{y^2}{25}=1$，因此：
-\[a=10,\qquad b=5,\qquad c=\sqrt{c^2-b^2}=5\sqrt{3}\]
+\[a=10,\qquad b=5,\qquad c=\sqrt{a^2-b^2}=5\sqrt{3}\]
 所以已知椭圆的准线方程为
 \[\ell_1:\; x=-\frac{a^2}{c}=-\frac{20\sqrt{3}}{3},\qquad \ell_2:\; x=\frac{20\sqrt{3}}{3}\]
 \end{solution}
@@ -1019,11 +1019,11 @@ $e=1$时是抛物线}，定点叫做圆锥曲线的焦点，定直线叫做
 所以
 \[y^2_1=b^2\left(1-\frac{x^2_1}{a^2}\right),\qquad y^2_2=b^2\left(1-\frac{x^2_2}{a^2}\right)\]
 两式相减得
-\[y_2^2-y_1^2=\frac{b^2}{a^2}(x^2_2-x^2_1)\]
+\[y_2^2-y_1^2=-\frac{b^2}{a^2}(x^2_2-x^2_1)\]
 代入(6.12)化简即可得
-\[y-y_1=\frac{b^2}{a^2}\cdot \frac{x_2+x_1}{y_2+y_1}(x-x_1)\]
+\[y-y_1=-\frac{b^2}{a^2}\cdot \frac{x_2+x_1}{y_2+y_1}(x-x_1)\]
 当$P_2$与$P_1$重合时，即$x_2=x_1$, $y_2=y_1$, 上式变为
-\[y-y_1=\frac{b^2}{a^2}\cdot \frac{x_1}{y_1}(x-x_1)\]
+\[y-y_1=-\frac{b^2}{a^2}\cdot \frac{x_1}{y_1}(x-x_1)\]
 或
 \[\frac{x_1x}{a^2}+\frac{y_1y}{b^2}=\frac{x_1^2}{a^2}+\frac{y_1^2}{b^2}\]
 即：
@@ -1366,7 +1366,7 @@ $y=kx+c,\quad k\ne 0$．
 因此平行弦中点的横坐标
 \[x=\frac{x_1+x_2}{2}=-\frac{a^2kc}{b^2+a^2k^2}\]
 代入直线系方程得中点的纵坐标
-\[y=-\frac{b^2c}{b^2+a^2k^2}\]
+\[y=\frac{b^2c}{b^2+a^2k^2}\]
 于是
 \[\frac{y}{x}=-\frac{b^2}{a^2k}\]
 所以平行弦中点的坐标都在直线$y=-\frac{b^2}{a^2k}x$
@@ -1509,7 +1509,7 @@ $M(-1,1)$, 求它的方程．
 \item 求直线$Ax+By+C=0$与椭圆$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$相切的条
 件．
 
-\item 已知椭圆$\frac{x^2}{25}-\frac{y^2}{9}=1$
+\item 已知椭圆$\frac{x^2}{25}+\frac{y^2}{9}=1$
 的两个焦点到它的某条切线的距离之比是9, 求此切线方程．
 \item 求双曲线$\frac{x^2}{8}-\frac{y^2}{9}=1$在下列各点的切线，$(2\sqrt{2},0)$, $(-4,3)$.
 \item 一条双曲线在点$M(4,2)$与直线$x-y-2=0$相切．
@@ -1811,7 +1811,7 @@ $OXY$作移轴变换，把原点
 $O$移到$O'(h,k)$得到坐
 标系$O'XY$然后再绕
 $O'$旋转$\theta$角就可得到坐标系
-$O'X'Y'$, 这就说，上述的
+$O'X'Y'$, 这就是说，上述的
 一般的坐标变换是平移与旋
 转的合成．下面我们来确
 定，平面上任意一点$P$的新
@@ -1897,7 +1897,7 @@ $O'(1,1)$, 再旋转$\left(-\frac{\pi}{4}\right)$角，
 \end{figure}
 
 \begin{solution}
-把已知量代入变换公式(6.27), 得
+把已知量代入变换公式(6.26), 得
 \[\begin{split}
  x&=x'\cos\left(-\frac{\pi}{4}\right)-y'\sin\left(-\frac{\pi}{4}\right)+1=\frac{\sqrt{2}}{2}(x'+y')+1\\
 y&=x'\sin\left(-\frac{\pi}{4}\right)+y'\cos\left(-\frac{\pi}{4}\right)+1=\frac{\sqrt{2}}{2}(-x'+y')+1   
@@ -1981,7 +1981,7 @@ $O'X'Y'$中的方程，由例6.17可知它是以新坐标系
     \end{enumerate}
 \end{multicols}
 
-    \item 一定点$P$在坐系$OXY$与$O'X'Y'$中的坐标分别是
+    \item 一定点$P$在坐标系$OXY$与$O'X'Y'$中的坐标分别是
     $(2,5)$, $(-4,3)$且两坐标系的坐标轴方向相同，
     试求每一坐标系的原点相对于另一坐标系中的坐标．
     \item 利用配方因式分解证明下列各方程都表示一对直线，并
@@ -1994,7 +1994,7 @@ $O'X'Y'$中的方程，由例6.17可知它是以新坐标系
 
     \item 转轴到怎样的角度后，才可使点$(2,0)$的两个坐标分
     量相等．
-    \item 利用移变换消去方程$xy-x-y=1$中的一次项．
+    \item 利用移轴变换消去方程$xy-x-y=1$中的一次项．
     \item 证明：方程$x^2+y^2=r^2$不因旋转坐标轴而变形．
     \item 取两条互相垂直的直线
   \[  ax+by+c_1=0,\qquad -bx+ay+c_2=0\]
@@ -2030,9 +2030,9 @@ $O'X'Y'$坐标系中的方程为
 2B'&=-2A\sin\theta \cos\theta +2B(\cos^2\theta -\sin^2\theta)+2C\sin\theta \cos\theta\\
  &=2B\cos2\theta-(A-C)\sin2\theta \\
 C'&=A\sin^2\theta -2B\cos\theta \sin\theta +C\cos^2\theta \\
-D'&=2Ah\cos\theta +2B(k\cos\theta +h\sin\theta )+2Ck\sin\theta\\
+2D'&=2Ah\cos\theta +2B(k\cos\theta +h\sin\theta )+2Ck\sin\theta\\
 &\qquad +2D\cos\theta +2E\sin\theta \\
-E'&=-2Ah\sin\theta +2B(h\cos\theta -k\sin\theta)+2Ck\cos\theta\\
+2E'&=-2Ah\sin\theta +2B(h\cos\theta -k\sin\theta)+2Ck\cos\theta\\
 &\qquad  -2D\sin\theta +2E\cos\theta \\
 F'&=Ah^2+2Bhk+Ck^2+2Dh+2Ek+F
 \end{split}
@@ -2057,8 +2057,8 @@ F'&=Ah^2+2Bhk+Ck^2+2Dh+2Ek+F
 而一次项系数和常数项一般都要改变，且
 \begin{equation}
     \begin{split}
-D'&=2Ah+2Bk+2D\\
-E'&=2Bh+2Ck+2E        
+2D'&=2Ah+2Bk+2D\\
+2E'&=2Bh+2Ck+2E        
     \end{split}
 \end{equation}
 \end{enumerate}
@@ -2102,7 +2102,7 @@ A'-C'&=(A-C)\cos2\theta+2B\sin2\theta \\
     求证：$(A'-C')^2=(A-C)^2+4B^2$.
     \item 对方程(6.28)作平移变换，如果使方程(6.29)中，消去各一
     次项，求证：
-\[F=\frac{-\begin{vmatrix}
+\[F'=\frac{-\begin{vmatrix}
     A&B&D\\B&C&E\\D&E&F
 \end{vmatrix}}{B^2-AC}\]
 \end{enumerate}
@@ -2204,7 +2204,7 @@ $3x^2-4y^2+6x+24y-57=0$
 
 由关系式(6.30), 对一般二元二次方程，若要在
 新坐标系中使得方程不含$x'y'$项，只要选取$\theta$角，使
-\[2B=2Bcos2\theta -(A-C)\sin\theta=0\]
+\[2B'=2B\cos2\theta -(A-C)\sin2\theta=0\]
 即
 \[\cot 2\theta=\frac{A-C}{2B},\qquad \left(0<\theta<\frac{\pi}{2}\right)\]
 把坐标轴旋转由上式所决定的$\theta$角，就可使二次曲线在
@@ -2316,7 +2316,7 @@ $A'$、$C'$与$F'$同号时，显然没有点的坐标满足方程(6.34),
 \begin{equation}
     C'{y'}^2+2D'x'+2E'y'+F=0
 \end{equation}
-作平移变换：令$x''=x'$, $y=y'+\frac{E'}{C'}$，
+作平移变换：令$x''=x'$, $y''=y'+\frac{E'}{C'}$，
 方程(6.35)在新坐标
 系中的方程可写为
 \begin{equation}
@@ -2328,7 +2328,7 @@ $A'$、$C'$与$F'$同号时，显然没有点的坐标满足方程(6.34),
     \item $D'=0$, 当$F'\ne 0$且$C'$与$F'$异号，方程(6.36)
     变为
     \[y''\pm \sqrt{-\frac{F'}{C'}}=0\]
-    这时方程的图象两条平行直线；当$F'\ne 0$且$C'$与$F'$同
+    这时方程的图象是两条平行直线；当$F'\ne 0$且$C'$与$F'$同
 号，显然没有点的坐标满足方程，这时方程(6.32)没有轨迹，当
 $F'=0$时，方程(6.36)化为$y''=0$，
 这时方程(6.32)表示两条重合的直线．
@@ -2358,8 +2358,8 @@ AC=0$. 因此，我们可不作坐标变换，直接根据$B^2-AC$
 \hline
 判别式&类型&一般情形&特殊情形（退化二次曲线）\\
 \hline
-$B^2-4C<0$ &椭圆型&椭圆&一点或没有图象\\
-$B^2-4C>0$ &双曲线型&双曲线&两条相交直线\\
+$B^2-AC<0$ &椭圆型&椭圆&一点或没有图象\\
+$B^2-AC>0$ &双曲线型&双曲线&两条相交直线\\
 $B^2-AC=0$&抛物线型&抛物线&两条平行或重合直线或没有图象\\
 \hline
 \end{tabular}
@@ -2378,7 +2378,7 @@ $B^2-AC=0$&抛物线型&抛物线&两条平行或重合直线或没有图象\\
 
 \begin{solution}
 \begin{enumerate}
-    \item $B^2-AC=\left(\frac{3}{2}\right)^2-1\x 2=\frac{9}{4}-1>0$
+    \item $B^2-AC=\left(-\frac{3}{2}\right)^2-1\x 2=\frac{9}{4}-2=\frac{1}{4}>0$
 因此方程是双曲线型．
 \item $B^2-AC=\left(-3\right)^2-9\x 1=0$
 因此方程是抛物线型．
@@ -2512,7 +2512,7 @@ $(0,1)$为对称中心，求这曲线方程．
 椭圆分别相交于$P$、$Q$两点，求证：
 \[\frac{1}{\overline{OP}^2}+\frac{1}{\overline{OQ}^2}=\frac{1}{a^2}+\frac{1}{b^2}\]
 \item    已知$P(x_1,y_1)$和$Q(x_2,y_2)$是椭圆$b^2x^2+a^2y^2=a^2b^2$
-上任意两点，又知点$L(e_{x_1},0)$, 点$M(e_{x_2},0)$; 
+上任意两点，又知点$L(ex_1,0)$, 点$M(ex_2,0)$; 
 求证：$\overline{PM}=\overline{QL}$.
 \item    已知双曲线$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$，
 求证：通过点$M(h,k)$且被
@@ -2535,7 +2535,7 @@ $(\pm 2,0)$.
 \item 设$\alpha$是双曲线
 $\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$的两条渐近线的夹角，证明
 $\cos\alpha=2e^{-2}-1$.
-\item 已知双曲线$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$, 如果与双曲线在$P$点的切线
+\item 已知双曲线$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$, 如果双曲线在$P$点的切线
 与两条渐近线分别相交于$E$、$F$, 求证：
 \begin{enumerate}
     \item $P$点是$EF$的中点；
