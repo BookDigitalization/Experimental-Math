@@ -354,7 +354,7 @@ $3\x3\x3$记作$3^3$；即$3^3=3\x3\x3= 27$．
 $3\x3\x3\x3\x3$记作$3^5$；
 即$3^5=3\x3\x3\x3\x3=243$……
 
-$\underbrace{3\x3\x\cdots \x3}_{\text{$n$个3}}$记作$3^n$；即$3^n =\underbrace{3\x3\x\cdot \x3}_{\text{$n$个3}}$．
+$\underbrace{3\x3\x\cdots \x3}_{\text{$n$个3}}$记作$3^n$；即$3^n =\underbrace{3\x3\x\cdots \x3}_{\text{$n$个3}}$．
 
 为了方便，显然可以把3也记作$3^1$，即$3^1=3$．
 
@@ -388,7 +388,7 @@ $\underbrace{3\x3\x\cdots \x3}_{\text{$n$个3}}$记作$3^n$；即$3^n =\underbra
 
 \begin{example}
 	计算：
-	$2^3$；$5^2$；$2^6$；$7^8$；$4^3 $；$0^{10}$
+	$2^3$；$5^2$；$2^6$；$7^3$；$4^3 $；$0^{10}$
 \end{example}
 
 \begin{solution}
@@ -483,7 +483,7 @@ $\underbrace{3\x3\x\cdots \x3}_{\text{$n$个3}}$记作$3^n$；即$3^n =\underbra
 
 \begin{example}
 	利用指数运算律，计算下面的值：
-	\[9\x 9^2,\qquad 2^3\x2\x2^3,\qquad a^5\cdot a^{11},\qquad 3^3\cdot 3+2\cdot 2^2 \]
+	\[9\x 9^2,\qquad 2^2\x2\x2^3,\qquad a^5\cdot a^{11},\qquad 3^3\cdot 3+2\cdot 2^2 \]
 \end{example}
 
 \begin{solution}
@@ -528,7 +528,7 @@ $\underbrace{3\x3\x\cdots \x3}_{\text{$n$个3}}$记作$3^n$；即$3^n =\underbra
 	由于
 	\begin{align*}
 	(a\cdot b)^n&=\underbrace{(a\cdot b)\cdot(a\cdot b)\cdots(a\cdot b)}_{\text{$n$个括号}} \tag{乘方的意义}\\
-	&=\underbrace{(a\cdot a\cdots a)}_{\text{$n$个}} \cdot \underbrace{(b\cdot b\cdots b)}_{\text{$n$个}} \tag{乘法交换、结合率}\\
+	&=\underbrace{(a\cdot a\cdots a)}_{\text{$n$个}} \cdot \underbrace{(b\cdot b\cdots b)}_{\text{$n$个}} \tag{乘法交换、结合律}\\
 	&=a^n\cdot b^n \tag{乘方的意义}
 	\end{align*}
 	所以$(a\cdot b)^n=a^n\cdot b^n$．
@@ -553,20 +553,20 @@ $\underbrace{3\x3\x\cdots \x3}_{\text{$n$个3}}$记作$3^n$；即$3^n =\underbra
 		\item \begin{align*}
 		15^2\x 6^3 &=(3\x 5)^2 \x (2\x 3)^3\\
 		&=3^2\x 5^2\x 2^3\x 3^3\tag{指数运算律（二）}\\
-		&=(3^2\x 3^3)\x 5^2\x 2^3 \tag{乘法交换率、结合律}\\
+		&=(3^2\x 3^3)\x 5^2\x 2^3 \tag{乘法交换律、结合律}\\
 		&=3^5\x 5^2\x 2^3\tag{指数运算律（一）}\\
-		&=729\x 25\x 8=145800
+		&=243\x 25\x 8=48600
 		\end{align*}
 		\begin{align*}
 		45\x 15^3&=5\x 9\x (3\x 5)^3\\
 		&=5\x 9\x 3^3\x 5^3\tag{指数运算律（二）}\\
-		&=(5\x 5^3)\x (3^2\x 3^3) \tag{乘法交换率、结合律}\\
+		&=(5\x 5^3)\x (3^2\x 3^3) \tag{乘法交换律、结合律}\\
 		&=5^4\x 3^5\tag{指数运算律（一）}\\
 		&=625\x 243=151875
 		\end{align*}
 		\begin{align*}
 		(a\cdot b)^2\cdot (a\cdot c)^3 &= a^2\cdot b^2\cdot a^3\cdot c^3\tag{指数运算律（二）}\\
-		&=(a^2\cdot a^3)\cdot b^2\cdot c^3 \tag{乘法交换率、结合律}\\
+		&=(a^2\cdot a^3)\cdot b^2\cdot c^3 \tag{乘法交换律、结合律}\\
 		&=a^5\cdot b^2\cdot c^3 \tag{指数运算律（一）}\\
 		\end{align*}
 		\begin{align*}
@@ -897,7 +897,7 @@ $\frac{a}{b}+\frac{c}{d}=\frac{c}{d}+\frac{a}{b}$．
 
 \begin{solution}
 	\begin{align*}
-	\text{原式}&=\frac{3}{5}\left(\frac{1}{7}+\frac{6}{7}\right)+\left(1-\frac{2}{5}\right)^2\tag{分配律、分数乘法法则}\\
+	\text{原式}&=\frac{3}{5}\left(\frac{1}{7}+\frac{6}{7}\right)\x\left(1-\frac{2}{5}\right)^2\tag{分配律、分数乘法法则}\\
 	&=\frac{3}{5}\x\left(\frac{3}{5}\right)^2 \tag{分数加、减法法则}\\
 	&=\left(\frac{3}{5}\right)^{1+2}=\left(\frac{3}{5}\right)^3\tag{指数运算律（一）}\\    
 	&=\frac{3^3}{5^3}=\frac{27}{125}   \tag{分数的乘方运算律}
@@ -1277,7 +1277,7 @@ $\mathbb{Z}$又包含$\mathbb{N}$”，显然，$\mathbb{Q}$也包含$\mathbb{N}
 
 \begin{solution}
 	首先画出数轴$OX$(图1.2)，根据所确定的
-	的原点$O$、方向、单位长，就可以确认：数0用原点
+	原点$O$、方向、单位长，就可以确认：数0用原点
 	$O$表示；其次，可逐次量取，分别将数$3$，$-\frac{3}{2}$，$-0.5$，$1\frac{1}{4}$，$-2$，$-3$
 	用点$A$、$B$、$C$、$D$、$E$、$F$表示．
 	\begin{figure}[htp]
@@ -1412,7 +1412,7 @@ a, & \text{当$a$是正数时}\\
 			\end{tabular}       
 		\end{center}
 		\item 如果$|a|=4$，试问：$a$表示何数？
-		\item 你能说出“任一对相反数”的绝对位有什么关系吗？并举
+		\item 你能说出“任一对相反数”的绝对值有什么关系吗？并举
 		出两例．
 	\end{enumerate}
 \end{ex}
@@ -1620,8 +1620,8 @@ $(-b)$的和，应等于$(a + b)$的相反数．
 \begin{align*}
 (+ a)+(-b)&=+(a-b + b)+(-b)\\
 &=+(a-b)+[(+b)+(-b)]    \tag{加法结合律}\\
-& =+(a-b) + 0 \tag{零的特性}\\
-&  =+(a-b)
+& =+(a-b) + 0 \tag{相反数的性质}\\
+&  =+(a-b)\tag{零的特性}
 \end{align*}
 
 所以，在$a$大于$b$时，我们规定：
@@ -1746,7 +1746,7 @@ $(-b)$的和，应等于$(a + b)$的相反数．
 		\end{split}\]
 		\item 异号相加：
 		\[(+a)+(-b)=\begin{cases}
-		+(a+b),& a>b\\
+		+(a-b),& a>b\\
 		-(b-a),&a<b
 		\end{cases}\]
 		\item 相反数相加：
@@ -1816,7 +1816,7 @@ $$[(-5)-(+3) ]+(+3)=(-5)$$
 由此，可以归纳出\textbf{有理数减法的法则是：}
 
 \textbf{减去一个有理数，就等于加上这个有理数的相反
-	数}．若用宇母表示有理数，则有理数$x$，$y$的减法法
+	数}．若用字母表示有理数，则有理数$x$，$y$的减法法
 则是：
 
 \begin{center}
@@ -1880,7 +1880,7 @@ $$[(-5)-(+3) ]+(+3)=(-5)$$
 	
 	\begin{align*}
 	&\quad    (+1)-\left(+\frac{1}{2}\right)-\left(+\frac{1}{3}\right)-\left(+\frac{1}{6}\right)\\
-	&=(+1)+\left(-\frac{1}{2}\right)-\left(+\frac{1}{3}\right)+\left(-\frac{1}{6}\right)\tag{减法法则}\\
+	&=(+1)+\left(-\frac{1}{2}\right)+\left(-\frac{1}{3}\right)+\left(-\frac{1}{6}\right)\tag{减法法则}\\
 	&=(+1)+\left[ \left(-\frac{1}{2}\right)+\left(-\frac{1}{3}\right) +\left(-\frac{1}{6}\right)\right]  \tag{加法结合律}\\
 	&=(+1)+\left[-\left(\frac{1}{2}+\frac{1}{3}+\frac{1}{6}\right)\right]\tag{同号相加法则}  \\
 	&=(+1)+(-1)=0  \tag{相反数性质}
@@ -1971,7 +1971,7 @@ $(+9)$, $(-2)$都是代数和(1.5)的一项．
 \end{solution}
 
 在代数和式子中，经常省去各项之间的加号“$+$”
-及第一项前的正号“$+$”．比如例1.21中的代数和，可
+及第一项前的正号“$+$”．比如式(1.5)中的代数和，可
 以写成：$3-7+5+9-2$．读作：“正3负7正5正
 9负2的和．”或者读成：“3减7加5加9减2”．
 
@@ -2320,7 +2320,7 @@ $(-a) \div (-b)$如何进行运算呢？
 应是：
 
 \begin{blk}{}
-	两个非零有理教相除时，将绝对值相除，而商的
+	两个非零有理数相除时，将绝对值相除，而商的
 	符号是：同号相除得正，异号相除得负．
 \end{blk}
 
@@ -2351,7 +2351,7 @@ $(-a) \div (-b)$如何进行运算呢？
 	\[-\frac{4}{5}\div 4=\left(-\frac{4}{5}\right)\div (+4)=-\left(\frac{4}{5}\x\frac{1}{4}\right)=-\frac{1}{5} \]
 \end{solution}
 
-又由于任一个非零有理数夕与零的乘积为零，即
+又由于任一个非零有理数$y$与零的乘积为零，即
 $y\cdot 0=0\cdot y=0,\; (y\ne 0)$，所以，可得：
 \[0\div y=0\quad  (y\ne 0)\]
 这就是说：\textbf{零除以任一个非零有理数，其商仍为
@@ -2484,7 +2484,7 @@ a^m\div a^n&=a^{m-n}\qquad (a\ne 0,\; m\ge n)\\
 		(-0.2)^4\div (-0.2)^2&=(-0.2)^2=+0.04
 		\end{split}\]
 		\item $\left[(-2)^m\cdot (-2)^n\right]^2=[(-2)^{m+n}]^2=[(-2)^2]^{m+n}=4^{m+n}$
-		\[\left[\left(-\frac{1}{2}\right)^m\div \left(-\frac{1}{2}\right)^n\right]^3=\left[\left(-\frac{1}{2}\right)^{m-n}\right]^3=\left[\left(-\frac{1}{2}\right)^3\right]^{m-n}=-\frac{1}{8^{m-n}}\]
+		\[\left[\left(-\frac{1}{2}\right)^m\div \left(-\frac{1}{2}\right)^n\right]^3=\left[\left(-\frac{1}{2}\right)^{m-n}\right]^3=\left[\left(-\frac{1}{2}\right)^3\right]^{m-n}=\left(-\frac{1}{8}\right)^{m-n}\]
 	\end{enumerate}
 \end{solution}
 
@@ -2507,7 +2507,7 @@ a^m\div a^n&=a^{m-n}\qquad (a\ne 0,\; m\ge n)\\
 		\item $(-2)^6,\quad -2^6,\quad -(-2)^6,\quad -(-2^6) $
 		\item $5^3\x 6^3,\quad 5\x 6^3,\quad -5\x 6^3,\quad -5^3\x 6^3$
 		\item $(-2\x 4)^2,\qquad -2\x 4^2,\qquad 2\x (-4)^2$
-		\item $\left(-\frac{3}{5}\right)^3,\qquad \frac{3^3}{5},\qquad -\left(-\frac{3}{5}\right)^3$
+		\item $\left(-\frac{3}{5}\right)^3,\qquad -\frac{3^3}{5},\qquad -\left(-\frac{3}{5}\right)^3$
 		\item $\left(-\frac{1}{3}\right)^{2n},\qquad \left(-\frac{1}{3}\right)^{2n+1}$
 	\end{enumerate}
 \end{example}
@@ -2519,7 +2519,7 @@ a^m\div a^n&=a^{m-n}\qquad (a\ne 0,\; m\ge n)\\
 		\[-5\x 6^3=-1080,\qquad-5^3\x 6^3=-(5\x 6)^3=-30^3=-27000\]
 		
 		\item $(-2\x 4)^2=(-8)^2=+64,\quad -2\x 4^2=-32,\quad 2\x (-4)^2=32$
-		\item $\left(-\frac{3}{5}\right)^3=-\frac{27}{125},\qquad \frac{3^3}{5}=-\frac{27}{5},\qquad -\left(-\frac{3}{5}\right)^3=+\frac{27}{125}$
+		\item $\left(-\frac{3}{5}\right)^3=-\frac{27}{125},\qquad -\frac{3^3}{5}=-\frac{27}{5},\qquad -\left(-\frac{3}{5}\right)^3=+\frac{27}{125}$
 		\item $\left(-\frac{1}{3}\right)^{2n}=\left[\left(-\frac{1}{3}\right)^2\right]^n=\left(+\frac{1}{9}\right)^n=+\frac{1}{9^n}  $
 		$$\left(-\frac{1}{3}\right)^{2n+1}=\left(-\frac{1}{3}\right)^{2n}\cdot \left(-\frac{1}{3}\right)=+\frac{1}{3^{2n}}\cdot \left(-\frac{1}{3}\right)=-\frac{1}{3^{2n+1}}$$
 	\end{enumerate}   
@@ -2581,7 +2581,7 @@ a^m\div a^n&=a^{m-n}\qquad (a\ne 0,\; m\ge n)\\
 			$[(-a)^2]^n,\qquad [(-a)^n]^2,\qquad (-a)^n\cdot \left(-\frac{1}{a}\right)^n$
 		\end{enumerate}   
 		\item 计算：$8^2\x \left(-\frac{2}{3}\right)^3\x(-0.25)^2\x (-4.5)^3$
-		\item 用科学计数法，表示下列各数．
+		\item 用科学记数法，表示下列各数．
 		\[10000,\qquad 360000,\qquad -705000,\qquad -198100000  \]
 	\end{enumerate}
 \end{ex}
@@ -2983,7 +2983,7 @@ a^m\div a^n&=a^{m-n}\qquad (a\ne 0,\; m\ge n)\\
 \subsubsection{乘法的交换律、结合律}
 \begin{blk}{}
 	对于有理数$a, b, c$来说：
-	\[ a\cdot b=b\cdot a,\qquad   (a-b)\cdot c=a\cdot  (b\cdot  c)\]
+	\[ a\cdot b=b\cdot a,\qquad   (a\cdot b)\cdot c=a\cdot  (b\cdot  c)\]
 \end{blk}
 
 
@@ -3046,7 +3046,7 @@ a^m\div a^n&=a^{m-n}\qquad (a\ne 0,\; m\ge n)\\
 \end{blk}
 
 这就告诉我们，在有理数运算中，除有“零不作
-除数”一的约定外，$0,  1$还有特殊性，其作用显然可
+除数”的约定外，$0,  1$还有特殊性，其作用显然可
 得：\textbf{“加零如不加”、“乘一如不乘”、“乘零就得
 	零”．}
 
@@ -3070,7 +3070,7 @@ a^m\div a^n&=a^{m-n}\qquad (a\ne 0,\; m\ge n)\\
 		\item $\left[1\frac{1}{24}-\left(\frac{3}{8}+\frac{1}{6}-\frac{3}{4}\right)\x3\x2^3\right]\div 5$
 		\item $\frac{3^{n-1}}{3^{n-5}}+\frac{27^{2n+1}}{9^{3n-1}}$
 		\item $2^n\cdot 6^{n+2}\div 12^n-24^n\div 8^n\cdot 3^{n-2}$
-		\item 说明以下式子：$(a-b)\div c=a\div c-b+c\quad (c\ne 0)$
+		\item 说明以下式子：$(a-b)\div c=a\div c-b\div c\quad (c\ne 0)$
 	\end{enumerate}
 	
 \end{ex}
@@ -3097,7 +3097,7 @@ $a$，就可以用$a>0$表示；对任一个负有理数$b$，就可以
 	\begin{enumerate}
 		\item 用“大于号”或“小于号”连接下列各数：
 		\begin{enumerate}
-			\item $0,\qquad ,-\frac{1}{2},\qquad +\frac{1}{100}$
+			\item $0,\qquad -\frac{1}{2},\qquad +\frac{1}{100}$
 			\item $-0.9,\qquad +0.9,\qquad 0$
 		\end{enumerate}
 		\item 如果$a\ge 0$，$a$表示什么样有理数？
@@ -3146,9 +3146,9 @@ $a$，就可以用$a>0$表示；对任一个负有理数$b$，就可以
 		
 		$\therefore\quad -15<+0.001$，即负数$<$正数．
 		
-		\item $\because\quad (-2.7)-(3.1)=+0.4>0$
+		\item $\because\quad (-2.7)-(-3.1)=+0.4>0$
 		
-		$\therefore\quad -2.7>3.1$．
+		$\therefore\quad -2.7>-3.1$．
 		
 		\item $\because\quad \left(-\frac{2}{3}\right)-\left(-\frac{6}{7}\right)=-\frac{14}{21}+\frac{18}{21}=+\frac{4}{21}>0$
 		
@@ -3180,7 +3180,7 @@ $a$，就可以用$a>0$表示；对任一个负有理数$b$，就可以
 
 \begin{rmk}
 	三个数同时比较大小时，书写的顺序
-	务必要使它们排成由大到小或田小到大，并用\textbf{同向}
+	务必要使它们排成由大到小或由小到大，并用\textbf{同向}
 	“大于号”或\textbf{同向}“小于号”连接起来．切不要写成
 	\textbf{不同向}的形式．如：$-3<+0.1>-\frac{1}{4}$的写法就不
 	妥，因为这样的写法，并没有说明$-3$与$-\frac{1}{4}$的大
@@ -3291,7 +3291,7 @@ $a$，就可以用$a>0$表示；对任一个负有理数$b$，就可以
 下，才是事实．等等，这样的等式，称为\textbf{条件等式}．
 
 此外，还有一种类型，根据等式的意义，只是在
-犯式上用等号连结两个算式，而实际上是根本不能承
+形式上用等号连结两个算式，而实际上是根本不能承
 认的事实，如：$3+5=10$，$0\cdot x=-5$等．这样的等式，
 称为\textbf{矛盾等式}．
 
@@ -3310,7 +3310,7 @@ $a$，就可以用$a>0$表示；对任一个负有理数$b$，就可以
 \end{blk}
 
 
-今后，多当我们遇到有关等式的问题时，就可以利
+今后，每当我们遇到有关等式的问题时，就可以利
 用这些基本性质，根据需要对等式进行适当的变形，
 得出新的等式．
 
@@ -3387,7 +3387,7 @@ $a$，就可以用$a>0$表示；对任一个负有理数$b$，就可以
 
 \subsubsection{不等式}
 在我们进行有理数的比较时，曾经运用了大于号
-“$>$”与小与号，“$<$”(统称为\textbf{不等号})的符号．例
+“$>$”与小于号“$<$”(统称为\textbf{不等号})的符号．例
 如：$5>-7$,  $1-8<-1.4+1$，正数$a>$负数$b$等．
 
 我们就把\textbf{用不等号“$>$”或“$<$”表示出来的关系
