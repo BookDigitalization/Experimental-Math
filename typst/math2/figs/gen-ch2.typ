@@ -9,23 +9,23 @@
     line((0, 0), (1.4142, 1.4142), stroke: (paint: black, thickness: 1.6pt))
     node((0, 0), [$O$], pos: "below")
     node((0.7071, 0.7071), [$r$], pos: "left")
-    node((0, -3), [\(1)圆])
+    node((0, -3), [\(1) 圆])
     circle((6, 0), radius: 2, fill: hatch-nw, stroke: (paint: black, thickness: 0.4pt))
     line((6, 0), (7.4142, 1.4142), stroke: (paint: black, thickness: 1.6pt))
     node((6, 0), [$O$], pos: "below", fill: white)
     node((6.75, 1.299), std.rotate(-45deg, reflow: true, [$r$]), pos: "left", fill: white)
-    node((6, -3), [\(2)圆面])
+    node((6, -3), [\(2) 圆面])
   })
   ,
   "2-02": canvas({
     line((0, 0), (6, 0), stroke: (paint: black, thickness: 0.4pt))
-    circle((1, 0), radius: 0.0527, stroke: (paint: black, thickness: 0.4pt))
+    circle((1, 0), radius: 0.0527, fill: black, stroke: (paint: black, thickness: 0.4pt))
     node((1, 0), [$A$], pos: "below")
-    circle((4.5, 0), radius: 0.0527, stroke: (paint: black, thickness: 0.4pt))
+    circle((4.5, 0), radius: 0.0527, fill: black, stroke: (paint: black, thickness: 0.4pt))
     node((4.5, 0), [$B$], pos: "below")
-    circle((4, -0.5), radius: 0.0527, stroke: (paint: black, thickness: 0.4pt))
+    circle((4, -0.5), radius: 0.0527, fill: black, stroke: (paint: black, thickness: 0.4pt))
     node((4, -0.5), [$Y$], pos: "below")
-    circle((3, 0), radius: 0.0527, stroke: (paint: black, thickness: 0.4pt))
+    circle((3, 0), radius: 0.0527, fill: black, stroke: (paint: black, thickness: 0.4pt))
     node((3, 0), [$X$], pos: "above")
   })
   ,
@@ -38,9 +38,9 @@
   ,
   "2-04": canvas(length: 0.9cm, {
     line((-2, 1), (2, 1), stroke: (paint: black, thickness: 0.4pt), mark: (start: "stealth", end: "stealth", fill: black))
-    circle((-0.8, 1), radius: 0.0527, stroke: (paint: black, thickness: 0.4pt))
+    circle((-0.8, 1), radius: 0.0527, fill: black, stroke: (paint: black, thickness: 0.4pt))
     node((-0.8, 1), [$A$], pos: "below")
-    circle((0.8, 1), radius: 0.0527, stroke: (paint: black, thickness: 0.4pt))
+    circle((0.8, 1), radius: 0.0527, fill: black, stroke: (paint: black, thickness: 0.4pt))
     node((0.8, 1), [$B$], pos: "below")
   })
   ,
@@ -65,9 +65,9 @@
   ,
   "2-07": canvas(length: 0.9cm, {
     line((-2, 1), (2, 1), stroke: (paint: black, thickness: 0.4pt), mark: (start: "stealth", end: "stealth", fill: black))
-    circle((-0.8, 1), radius: 0.0527, stroke: (paint: black, thickness: 0.4pt))
+    circle((-0.8, 1), radius: 0.0527, fill: black, stroke: (paint: black, thickness: 0.4pt))
     node((-0.8, 1), [$A$], pos: "below")
-    circle((0.8, 1), radius: 0.0527, stroke: (paint: black, thickness: 0.4pt))
+    circle((0.8, 1), radius: 0.0527, fill: black, stroke: (paint: black, thickness: 0.4pt))
     node((0.8, 1), [$B$], pos: "below")
   })
   ,
@@ -90,9 +90,9 @@
   ,
   "2-10": canvas(length: 0.9cm, {
     line((-2, 1), (2, 1), stroke: (paint: black, thickness: 0.4pt), mark: (start: "stealth", end: "stealth", fill: black))
-    circle((-0.8, 1), radius: 0.0527, stroke: (paint: black, thickness: 0.4pt))
+    circle((-0.8, 1), radius: 0.0527, fill: black, stroke: (paint: black, thickness: 0.4pt))
     node((-0.8, 1), [$A$], pos: "below")
-    circle((0.8, 1), radius: 0.0527, stroke: (paint: black, thickness: 0.4pt))
+    circle((0.8, 1), radius: 0.0527, fill: black, stroke: (paint: black, thickness: 0.4pt))
     node((0.8, 1), [$B$], pos: "below")
   })
   ,
@@ -101,8 +101,8 @@
     node((0, 0), [$O_1$], pos: "below")
     circle((2.5, 0), radius: 0.8, stroke: (paint: black, thickness: 0.4pt))
     node((2.5, 0), [$O_2$], pos: "below")
-    circle((0, 0), radius: 0.0351, stroke: (paint: black, thickness: 0.4pt))
-    circle((2.5, 0), radius: 0.0351, stroke: (paint: black, thickness: 0.4pt))
+    circle((0, 0), radius: 0.0351, fill: black, stroke: (paint: black, thickness: 0.4pt))
+    circle((2.5, 0), radius: 0.0351, fill: black, stroke: (paint: black, thickness: 0.4pt))
   })
   ,
   "2-12": canvas(length: 1.3cm, {
@@ -154,8 +154,8 @@
     circle((1.4, 0), radius: 0.8, stroke: (paint: black, thickness: 0.4pt))
     node((0, 0), [$O_1$], pos: "below")
     node((1.4, 0), [$O_2$], pos: "below")
-    circle((0, 0), radius: 0.0527, stroke: (paint: black, thickness: 0.4pt))
-    circle((1.4, 0), radius: 0.0527, stroke: (paint: black, thickness: 0.4pt))
+    circle((0, 0), radius: 0.0527, fill: black, stroke: (paint: black, thickness: 0.4pt))
+    circle((1.4, 0), radius: 0.0527, fill: black, stroke: (paint: black, thickness: 0.4pt))
   })
   ,
   "2-17": canvas({

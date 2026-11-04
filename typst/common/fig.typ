@@ -44,10 +44,14 @@
   place(curve(curve.move((-1pt, 3pt)), curve.line((1pt, 5pt)), stroke: 0.4pt))
 })
 
-// pattern=crosshatch（横竖交叉的网格线）
+// pattern=crosshatch（两组 45° 斜线交叉，即 north east lines 与 north west lines 叠在一起）
 #let hatch-cross = tiling(size: (4pt, 4pt), {
-  place(curve(curve.move((0pt, 2pt)), curve.line((4pt, 2pt)), stroke: 0.4pt))
-  place(curve(curve.move((2pt, 0pt)), curve.line((2pt, 4pt)), stroke: 0.4pt))
+  place(curve(curve.move((-1pt, 5pt)), curve.line((5pt, -1pt)), stroke: 0.4pt))
+  place(curve(curve.move((-1pt, 1pt)), curve.line((1pt, -1pt)), stroke: 0.4pt))
+  place(curve(curve.move((3pt, 5pt)), curve.line((5pt, 3pt)), stroke: 0.4pt))
+  place(curve(curve.move((-1pt, -1pt)), curve.line((5pt, 5pt)), stroke: 0.4pt))
+  place(curve(curve.move((3pt, -1pt)), curve.line((5pt, 1pt)), stroke: 0.4pt))
+  place(curve(curve.move((-1pt, 3pt)), curve.line((1pt, 5pt)), stroke: 0.4pt))
 })
 
 // pattern=bricks（砖墙：砖高 3pt、长 6pt，上下两层错开半块）

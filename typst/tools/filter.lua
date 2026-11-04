@@ -33,6 +33,22 @@ end
 
 local function is_space(el) return el.t == "Space" or el.t == "SoftBreak" end
 
+-- 半角标点 , . ; : ? ! )：后面接汉字时 xeCJK 加一个西文与中文之间的间距（ecglue），Typst 不加
+local function is_ascii_punct(c)
+  return c == 0x2C or c == 0x2E or c == 0x3B or c == 0x3A or c == 0x3F or c == 0x21 or c == 0x29
+end
+
+-- 字符串中半角标点直接接汉字时，在中间补一个空格
+local function space_after_punct(s)
+  local out, prev = {}, nil
+  for _, c in utf8.codes(s) do
+    if prev and is_ascii_punct(prev) and is_cjk_char(c) then out[#out + 1] = " " end
+    out[#out + 1] = utf8.char(c)
+    prev = c
+  end
+  return table.concat(out)
+end
+
 -- 1. 去掉与中文相邻的空格和换行（LaTeX 中 xeCJK 会忽略它们，Typst 则会排出空格）；
 -- 2. 行内公式与中文文字相邻时补一个空格（对应 xeCJK 自动加的间距），与全角标点相邻时不加。
 function Inlines(inlines)
@@ -47,6 +63,8 @@ function Inlines(inlines)
         local b = nxt.t ~= "Math" and first_char(nxt) or nil
         if is_cjk(a) or is_cjk(b) then
           drop = true
+          -- 半角标点与后面汉字之间的空格保留（同 xeCJK）
+          if a and is_ascii_punct(a) and b and is_cjk_char(b) then drop = false end
           -- 公式与中文文字之间保留一个空格
           if prev.t == "Math" and b and is_cjk_char(b) then drop = false end
           if nxt.t == "Math" and a and is_cjk_char(a) then drop = false end
@@ -62,6 +80,10 @@ function Inlines(inlines)
       elseif prev and prev.t == "Math" and prev.mathtype == "InlineMath" and el.t ~= "Math" then
         if is_cjk_char(first_char(el) or 0) then out:insert(pandoc.Space()) end
       end
+      if el.t == "Str" then el = pandoc.Str(space_after_punct(el.text)) end
+      -- 半角标点结尾的元素后直接接汉字开头的文字
+      if prev and el.t == "Str" and prev.t == "Str" and is_ascii_punct(last_char(prev) or 0)
+        and is_cjk_char(first_char(el) or 0) then out:insert(pandoc.Space()) end
       out:insert(el)
     end
   end
@@ -123,6 +145,7 @@ local simple = {
   proof = "#proof",
   bookproof = "#proof",
   center = "#align(center)",
+  figcenter = "#fig-center",
   flushright = "#align(right)",
   subcap = "#subcap",
 }

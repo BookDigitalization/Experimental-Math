@@ -34,7 +34,7 @@
     node((1.8, 0), [$N'$], pos: "below")
     node((1.8, 1), [$L'$], pos: "above")
     node((1.8, 2), [$M'$], pos: "above")
-    circle((1.5, 0.6), radius: 0.0527, stroke: (paint: black, thickness: 0.4pt))
+    circle((1.5, 0.6), radius: 0.0527, fill: black, stroke: (paint: black, thickness: 0.4pt))
     node((1.5, 0.6), [$P'$], pos: "right")
   })
   ,

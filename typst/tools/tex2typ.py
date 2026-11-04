@@ -68,7 +68,7 @@ class Converter:
         tex = self.replace_figure_pairs(tex)
         # 没有 \caption 的 figure 在 LaTeX 中不编号；pandoc 会给它图号，所以改成居中的普通内容
         tex = re.sub(r"\\begin\{figure\}(?:\[[^\]]*\])?((?:(?!\\end\{figure\}).)*?)\\end\{figure\}",
-                     lambda m: m.group(0) if r"\caption{" in m.group(1) else r"\begin{center}%s\end{center}" % m.group(1).replace(r"\centering", ""),
+                     lambda m: m.group(0) if r"\caption{" in m.group(1) else r"\begin{figcenter}%s\end{figcenter}" % m.group(1).replace(r"\centering", ""),
                      tex, flags=re.S)
         # pandoc 把显式的 [1.] 当作默认格式丢掉（嵌套时 LaTeX 仍印 1.），借本书未用的 [i)] 传过去，enum_at 中再换回
         tex = re.sub(r"\\begin\{enumerate\}\[1\.\]", r"\\begin{enumerate}[i)]", tex)
@@ -78,6 +78,11 @@ class Converter:
         # \x 是本书定义的 ×；但 \\x 是换行后接字母 x，不能替换
         tex = re.sub(r"(?<!\\)\\x(?![a-zA-Z])", r"\\times ", tex)
         tex = re.sub(r"\\oc(?![a-zA-Z])", "°C", tex)
+        # pandoc 把长箭头转成了短箭头
+        for name, sym in (("Longleftrightarrow", "arrow.l.r.double.long"), ("longleftrightarrow", "arrow.l.r.long"),
+                          ("Longrightarrow", "arrow.r.double.long"), ("longrightarrow", "arrow.r.long"),
+                          ("Longleftarrow", "arrow.l.double.long"), ("longleftarrow", "arrow.l.long")):
+            tex = re.sub(r"\\%s(?![a-zA-Z])" % name, lambda m, s=sym: " " + self.math_slot(s) + " ", tex)
         # pifont 的带圈数字：\ding{172}–{181}、\ding{192}–{201} 都是 ①–⑩
         tex = re.sub(r"\\ding\{(\d+)\}", lambda m: chr(0x2460 + (int(m.group(1)) - 172) % 20)
                      if 172 <= int(m.group(1)) <= 181 or 192 <= int(m.group(1)) <= 201 else m.group(0), tex)
@@ -88,6 +93,12 @@ class Converter:
         tex = re.sub(r"\\section\*\{([^}]*)\}(?!\s*\\addcontentsline)",
                      lambda m: "\n\n" + self.slot("#heading(level: 2, numbering: none, outlined: false)[%s]" % m.group(1)) + "\n\n", tex)
         tex = re.sub(r"\\addcontentsline\{[^}]*\}\{[^}]*\}\{[^}]*\}", "", tex)
+        # 列表、居中环境之后不空行接着写的文字，LaTeX 不缩进（\@endpetrue）
+        tex = re.sub(r"(\\end\{(?:enumerate|itemize|center|figcenter|flushright)\}[ \t]*\n)"
+                     r"(?=[ \t]*([^\s\\%]|\\(?!begin|end|item|section|subsection|par\b|noindent|\[)))",
+                     lambda m: m.group(1) + self.slot("#noindent;"), tex)
+        # \paragraph{X}：LaTeX 中是接排在段首的粗体小标题，不编号、不进目录
+        tex = re.sub(r"\\paragraph\{([^}]*)\}\s*", lambda m: self.slot("#strong[%s]#h(1em)" % m.group(1)), tex)
         # proof 是本书自定义的环境（只印“证明：”），换个名字，免得 pandoc 按 amsthm 加上 Proof. 和 ◻
         tex = re.sub(r"\\(begin|end)\{proof\}", r"\\\1{bookproof}", tex)
         # 多行环境末尾多余的 \\ 会让 pandoc 转错（LaTeX 中只是多一个空行）
@@ -114,12 +125,21 @@ class Converter:
                      r"\\begin{cases}\1\\end{cases}", tex, flags=re.S)
         tex = self.replace_nested_cases(tex)
         tex = self.replace_arrays(tex)
+        # equation 中 split 加 \tag：整组公式只有这一个标签（不编号），排在中间一行的右侧
+        def split_tag(m: re.Match) -> str:
+            body, tag = m.group(1), m.group(2)
+            rows = [r for r in split_top(body, "\\\\") if r.strip()]
+            rows[len(rows) // 2] += r"\tag{%s}" % tag
+            return self.display(m, aligned_rows("\\\\".join(rows), numbered=False))
+        tex = re.sub(r"\\begin\{equation\}\s*\\begin\{split\}(.*?)\\end\{split\}\s*\\tag\{([^}]*)\}\s*\\end\{equation\}",
+                     split_tag, tex, flags=re.S)
         tex = self.replace_tags(tex)
         tex = self.replace_numcases(tex)
-        tex = re.sub(r"\\begin\{align\}(.*?)\\end\{align\}", lambda m: "\n\n" + self.slot(aligned_rows(m.group(1), numbered=True)) + "\n\n",
-                     tex, flags=re.S)
+        tex = re.sub(r"\\begin\{align\}(.*?)\\end\{align\}",
+                     lambda m: self.display(m, aligned_rows(m.group(1), numbered=True)), tex, flags=re.S)
         tex = re.sub(r"\\begin\{equation\}(.*?)\\end\{equation\}",
-                     lambda m: self.slot("#numbered-eq($ %s $)" % tex_math_to_typst(m.group(1))), tex, flags=re.S)
+                     lambda m: self.slot("#numbered-eq($ %s $)" % tex_math_to_typst(m.group(1))) + self.noindent_after(m),
+                     tex, flags=re.S)
         tex = self.replace_inline_envs(tex)
         tex = self.replace_text_spaces(tex)
         tex = self.replace_tabular(tex)
@@ -282,8 +302,16 @@ class Converter:
                 body, caption = conv[k], conv[len(caps) + k]
                 figs.append("figure([%s], caption: [%s])" % (body, caption) if cap else "[%s]" % body)
             widths = ", ".join("%g%%" % (float(w or 1) * 100) for w, _ in parts)
-            return "\n\n" + self.slot("#align(center, grid(columns: (%s,), column-gutter: 0.35em, align: center + bottom, %s))"
-                                      % (widths, ", ".join(figs))) + "\n\n"
+            # 整组不跨页（否则图与下面的“第 n 题”可能分在两页）
+            grid = "block(breakable: false, grid(columns: (%s,), column-gutter: 1em, align: center + bottom, %s))" % (
+                widths, ", ".join(figs))
+            # minipage 之外还有 \caption：整组图共用一个编号图注
+            outer = re.sub(r"\\begin\{minipage\}.*?\\end\{minipage\}", "", m.group(0), flags=re.S)
+            oc = re.search(r"\\caption\{([^}]*)\}", outer)
+            if oc:
+                cap = convert_fragments([oc.group(1)])[0] if oc.group(1).strip() else ""
+                return "\n\n" + self.slot("#figure(kind: image, %s, caption: [%s])" % (grid, cap)) + "\n\n"
+            return "\n\n" + self.slot("#align(center, %s)" % grid) + "\n\n"
         return re.sub(r"\\begin\{figure\}(?:\[[^\]]*\])?(?:(?!\\end\{figure\}).)*?\\begin\{minipage\}.*?\\end\{figure\}",
                       repl, tex, flags=re.S)
 
@@ -297,7 +325,8 @@ class Converter:
         body = args[0].strip()
         if re.fullmatch(r"[A-Za-z]+", body):
             return self.math_slot("overparen(%s)" % " ".join(body))
-        return r"\overline{%s}" % body
+        # 带下标、撇号的弧（如 A_1A_2）
+        return self.math_slot("overparen(%s)" % tex_math_to_typst(body))
 
     def tfrac(self, args: list[str]) -> str:
         a, b = (tex_math_to_typst(x) for x in args)
@@ -334,16 +363,29 @@ class Converter:
             body = m.group(2) if m.group(2) is not None else (m.group(3) if m.group(3) is not None else m.group(4))
             if r"\tag" not in body:
                 return m.group(0)
-            return "\n\n" + self.slot(aligned_rows(body, numbered=False)) + "\n\n"
+            return self.display(m, aligned_rows(body, numbered=False))
         tex = re.sub(r"\\begin\{(align\*|equation\*)\}(.*?)\\end\{\1\}|\\\[(.*?)\\\]|\$\$(.*?)\$\$", repl, tex, flags=re.S)
         return replace_command(tex, "tag", 1, lambda a: r"\qquad\text{(%s)}" % a[0])
+
+    def noindent_after(self, m: re.Match) -> str:
+        """独立公式环境之后不空行、直接接着写文字时，LaTeX 中这些文字不缩进；Typst 中块级的公式把段落断开，
+        后面的文字成了新段落，需要 #noindent"""
+        rest = m.string[m.end():]
+        if re.match(r"[ \t]*(\n[ \t]*)?([^\s\\%]|\\(?!begin|end|item|section|subsection|par\b|noindent|\[))", rest) \
+                and not re.match(r"[ \t]*\n[ \t]*\n", rest):
+            return self.slot("#noindent;")
+        return ""
+
+    def display(self, m: re.Match, typst: str) -> str:
+        """块级的公式占位：前后空行，必要时下一段开头加 #noindent"""
+        return "\n\n" + self.slot(typst) + "\n\n" + self.noindent_after(m)
 
     def replace_numcases(self, tex: str) -> str:
         def repl(m: re.Match) -> str:
             lhs = tex_math_to_typst(m.group(1)) if m.group(1).strip() else ""
             rows = [r.replace("&", " ") for r in re.split(r"\\\\", m.group(2)) if r.strip()]
             parts = ["$%s$" % lhs] + ["$%s$" % tex_math_to_typst(r) for r in rows]
-            return "\n\n" + self.slot("#numcases(%s)" % ", ".join(parts)) + "\n\n"
+            return self.display(m, "#numcases(%s)" % ", ".join(parts))
         return re.sub(r"\\begin\{numcases\}\{(.*?)\}(.*?)\\end\{numcases\}", repl, tex, flags=re.S)
 
     def replace_inline_envs(self, tex: str) -> str:
@@ -368,7 +410,15 @@ class Converter:
         if left:
             raise RuntimeError("占位符没有替换干净：%s" % left[:5])
         typ = fix_math(typ)
+        typ = fix_inline_math(typ)
+        # pandoc 把 \square 转成很小的 □，\bigcirc 转成普通大小的 ○
+        typ = typ.replace("square.stroked.tiny", "square.stroked")
+        typ = re.sub(r"(?<![\w.])circle\.stroked(?![\w.])", "circle.stroked.big", typ)
+        # pandoc 把 \frac{360^\circ}{n} 写成 360 degree / n，Typst 会解析成 360 (degree / n)
+        typ = re.sub(r"(?<![\w.)])(\d+(?:\.\d+)?) degree / ", r"(\1 degree) / ", typ)
         typ = fix_strings(typ)
+        # \subsection* 等带星号的标题 LaTeX 不列入目录（\section* 加 \addcontentsline 的已在预处理中单独处理）
+        typ = re.sub(r"#heading\(level: ([2-9]), numbering: none\)", r"#heading(level: \1, numbering: none, outlined: false)", typ)
         # 列表项以独立公式开头时，LaTeX 的题号单独占一行、公式排在下一行
         typ = re.sub(r"^( *)\+ \$ ", lambda m: "%s+ #h(0pt)\n%s  $ " % (m.group(1), m.group(1)), typ, flags=re.M)
         typ = re.sub(r'^( *)#set enum\(numbering: "([^"]*)", start: (\d+)\)', enum_at, typ, flags=re.M)
@@ -376,6 +426,22 @@ class Converter:
         typ = escape_after_calls(typ)
         typ = re.sub(r"\n{3,}", "\n\n", typ)
         return typ
+
+
+def fix_inline_math(typ: str) -> str:
+    """逐个处理公式：
+    - 花括号转义：Typst 会把成对的 { } 按内容自动放大，LaTeX 的 \\{ \\} 大小不变
+    - 行内公式后紧接字母（如 $12$cm）时加 word joiner，免得在公式和单位之间断行（LaTeX 不会在这里断）"""
+    out, pos = [], 0
+    for m in re.finditer(r"(?<!\\)\$(?:[^$\\]|\\.)*?(?<!\\)\$", typ):
+        out.append(typ[pos : m.start()])
+        seg = re.sub(r"(?<![\\#])([{}])", r"\\\1", m.group(0))
+        out.append(seg)
+        pos = m.end()
+        if seg[1:2] != " " and re.match(r"[A-Za-z]", typ[pos : pos + 1]):
+            out.append("⁠")
+    out.append(typ[pos:])
+    return "".join(out)
 
 
 def escape_after_calls(typ: str) -> str:

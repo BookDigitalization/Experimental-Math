@@ -1231,6 +1231,9 @@ class PathBuilder:
     # ---- 生成 CeTZ ----
     def emit(self):
         pic, st = self.pic, self.st
+        # 路径中间的选项（如 (1,0)[fill=black] circle(1.5pt)）也作用于整条路径
+        if st.fill is not None or st.pattern is not None:
+            self.fill = True
         args = []
         if self.fill:
             if st.pattern:

@@ -25,6 +25,15 @@
   )
 }
 
+// ---- 公式中的几个符号（章节文件 import 本模板后，这些名字覆盖 Typst 的同名符号） ----
+// △、⊙ 按普通符号排，同 LaTeX 的 \triangle\,ABC、\odot O：Typst 把它们当作二元运算符，
+// 后面多出空隙，还会在它们后面断行
+#let triangle = (stroked: (t: math.class("normal", sym.triangle.stroked.t)))
+#let dot = (o: math.class("normal", sym.dot.o), op: sym.dot.op, c: sym.dot.c)
+// ∵ ∴：New Computer Modern Math 的字形比 LaTeX（amssymb）的小，放大到相近大小
+#let because = math.class("relation", scale(125%, origin: bottom, reflow: true, sym.because))
+#let therefore = math.class("relation", scale(125%, origin: bottom, reflow: true, sym.therefore))
+
 #let cyan-frame = rgb("#0097b0")   // 约等于 LaTeX 的 cyan!75!black
 #let magenta-frame = rgb("#c2186b") // 约等于 magenta!75!black
 
@@ -44,19 +53,35 @@
 // ---- 例题、解答等 ----
 #let example-counter = counter("example")
 
+// 抵消段首缩进（同 LaTeX 的 \noindent）。按当前的首行缩进量抵消：正文中为 2em，
+// 列表项和框内本来不缩进，就什么也不做
+#let unindent = context {
+  let fi = par.first-line-indent
+  h(-(if type(fi) == dictionary { fi.amount } else { fi }))
+}
+
+// 去掉内容开头的空格（#proof[ 换行 …] 中换行变成的空格）
+#let trim-start(body) = {
+  if body.has("children") {
+    let ch = body.children
+    while ch.len() > 0 and (ch.first() == [ ] or ch.first().func() == parbreak) { ch = ch.slice(1) }
+    ch.join()
+  } else { body }
+}
+
 #let example(body) = {
   example-counter.step()
   block(width: 100%, above: 1em, below: 1em, {
     // 同 LaTeX 版的 \noindent：抵消段首缩进
-    h(-2em)
+    unindent
     context strong[例 #chapter-number().#example-counter.display()]
     h(0.3em)
-    body
+    trim-start(body)
   })
 }
 
 #let labeled(label) = body => block(width: 100%, above: 0.8em, below: 0.8em)[
-  #h(-2em)#strong(label)#body
+  #unindent#strong(label)#trim-start(body)
 ]
 
 #let solution = labeled[解：]
@@ -66,23 +91,28 @@
 #let proof = labeled[证明：]
 
 // ---- “练习”框与带标题的框（对应 tcolorbox 的 ex、blk） ----
-#let titled-box(title, color, title-align, body) = block.with(
-  width: 100%,
-  above: 1.4em,
-  below: 1em,
-  breakable: true,
-  stroke: 0.8pt + color,
-  radius: 4pt,
-  inset: (x: 10pt, top: 12pt, bottom: 8pt),
-)({
-  if title != [] and title != [ ] { place(
-    top + title-align,
-    dx: if title-align == left { 5mm } else { 0pt },
-    dy: -12pt - 0.6em,
-    box(fill: color, radius: 3pt, inset: (x: 8pt, y: 3pt), text(fill: white, font: fonts.sans, title)),
-  ) }
-  body
-})
+#let titled-box(title, color, title-align, body) = {
+  let has-title = title != [] and title != [ ]
+  block(
+    width: 100%,
+    above: if has-title { 1.4em } else { 1em },
+    below: 1em,
+    breakable: true,
+    stroke: 0.8pt + color,
+    radius: 4pt,
+    inset: (x: 10pt, top: if has-title { 12pt } else { 8pt }, bottom: 8pt),
+    {
+    if has-title { place(
+      top + title-align,
+      dx: if title-align == left { 5mm } else { 0pt },
+      dy: -12pt - 0.6em,
+      box(fill: color, radius: 3pt, inset: (x: 8pt, y: 3pt), text(fill: white, font: fonts.sans, weight: "bold", title)),
+    ) }
+    // tcolorbox 内的段落不缩进
+    set par(first-line-indent: 0pt)
+    body
+  })
+}
 
 #let exercise(title: [练习], body) = titled-box(title, cyan-frame, center, body)
 #let blk(title, body) = titled-box(title, magenta-frame, left, body)
@@ -100,7 +130,7 @@
 }
 
 // 抵消段首缩进（独立公式之后接着写的文字，同 LaTeX 不缩进）
-#let noindent = h(-2em)
+#let noindent = unindent
 
 // 分栏（对应 multicols）。Typst 的 columns 不会像 multicols 那样把各栏排得一样高，
 // 所以先量出排成一栏时的高度，再放进高度约为其 1/n 的盒子里分栏。
@@ -121,6 +151,9 @@
   inset: 1em,
   text(fill: red)[待绘制的插图 #id],
 ))
+
+// 不编号的图（LaTeX 中没有 \caption 的 figure）：居中，图与图注“第 n 题”不分在两页
+#let fig-center(body) = block(width: 100%, breakable: false, align(center, body))
 
 // 不编号的图注（LaTeX 的 \caption*），字体同编号图注
 #let subcap(body) = block(above: 0.6em, below: 0.6em, text(font: fonts.sans, weight: "bold", body))
@@ -241,11 +274,21 @@
           [第#chinese-number(counter(heading).at(hd.location()).first())章#h(1em)#hd.body]
         }
       }
+      // 奇数页印节名（同 LaTeX 的 \rightmark：本页的第一节，本页没有节标题时取前面最近的一节）；
+      // 本章还没有节时为空。不编号的 \section*（习题等）不算
+      let chap = counter(heading).get().first()
+      let in-chap(h) = h.numbering != none and counter(heading).at(h.location()).first() == chap
+      let here-secs = query(heading.where(level: 2)).filter(h => h.location().page() == here().page() and in-chap(h))
+      let prev-secs = query(heading.where(level: 2).before(here())).filter(in-chap)
+      let sec = if here-secs.len() > 0 { here-secs.first() } else if prev-secs.len() > 0 { prev-secs.last() }
+      let sec-name = if sec == none { [] } else {
+        [第#chinese-number(counter(heading).at(sec.location()).at(1))节#h(1em)#sec.body]
+      }
       set text(size: 9pt)
-      if calc.even(here().page()) [#counter(page).display()#h(1fr)#name]
-      else [#name#h(1fr)#counter(page).display()]
-      v(-0.6em)
-      line(length: 100%, stroke: 0.4pt)
+      set par(first-line-indent: 0pt)
+      // 奇偶按印出的页码判断（前置部分与正文分别编号）
+      if calc.even(page-no) [#counter(page).display()#h(1fr)#name]
+      else [#sec-name#h(1fr)#counter(page).display()]
     },
     footer: context {
       let starts = query(heading.where(level: 1)).filter(h => h.location().page() == here().page())
@@ -268,6 +311,10 @@
   // 加粗文字中的公式不加粗（同 LaTeX 的 \textbf 不影响数学）
   show strong: it => { show math.equation: set text(weight: "regular"); it }
   show emph: set text(font: fonts.kai, style: "normal")
+  // “latin-in-cjk”把带圈数字划给了西文字体（New Computer Modern 中 ① 的字形比步进宽，与相邻的字重叠），
+  // 又把 en dash 划给了中文字体（“8–9”印得很宽）。各自改回来
+  show regex("[\u{2460}-\u{2473}]"): set text(font: fonts.serif.slice(1))
+  show "–": set text(font: "New Computer Modern")
 
   // 原书的 \frac 一律按 \dfrac 排
   show math.frac: it => if it.has("label") and it.label == <tfrac> { it } else { math.display(it) }
@@ -301,7 +348,8 @@
     else if n.len() == 3 { chinese-number(n.at(2)) + "、" }
     else if n.len() == 4 { "（" + chinese-number(n.at(3)) + "）" }
   })
-  show heading: set text(font: fonts.sans, weight: "regular")
+  // 标题中的汉字用黑体，西文字母和数字用粗体（同 LaTeX 的 \bfseries）
+  show heading: set text(font: fonts.sans, weight: "bold")
   show heading.where(level: 1): it => {
     pagebreak(weak: true)
     counter(math.equation).update(0)
@@ -316,19 +364,17 @@
     }))
     v(2em)
   }
-  show heading.where(level: 2): it => {
-    v(1em)
+  // sticky：标题与下文排在同一页，不单独留在页底
+  show heading.where(level: 2): it => block(width: 100%, sticky: true, above: 1.6em, below: 1.2em,
     align(center, text(size: 15pt, {
       if it.numbering != none { counter(heading).display(it.numbering); h(1em) }
       it.body
-    }))
-    v(0.6em)
-  }
-  show heading.where(level: 3): it => block(above: 1.2em, below: 0.8em, text(size: 12pt, {
+    })))
+  show heading.where(level: 3): it => block(sticky: true, above: 1.2em, below: 0.8em, text(size: 12pt, {
     if it.numbering != none { counter(heading).display(it.numbering) }
     it.body
   }))
-  show heading.where(level: 4): it => block(above: 1em, below: 0.7em, text(size: 10.5pt, {
+  show heading.where(level: 4): it => block(sticky: true, above: 1em, below: 0.7em, text(size: 10.5pt, {
     if it.numbering != none { counter(heading).display(it.numbering) }
     it.body
   }))
