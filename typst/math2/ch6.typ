@@ -1,6 +1,7 @@
 // 由 typst/tools/tex2typ.py 从 math2/6.tex 转换而来，已人工校对的部分以本文件为准。
 #import "../common/template.typ": *
 #import "figs.typ": fig
+#import "defs.typ": *
 
 = 三角比与角边关系
 人们为了要确定空间各点之间的相互位置，就得做一番测量，测量是几何学的起源，也是几何学最直接的实践．
@@ -1128,7 +1129,7 @@ cos 140 degree & = - cos\(180 degree - 140 degree\)= - cos 40 degree approx - 0.
 #example[
 用余弦定理证明广义勾股定理．
 
-已知：$parallelogram.stroked A B C D$ (图6.29)
+已知：$pgram A B C D$ (图6.29)
 
 求证：$overline(A C)^2 + overline(B D)^2 = 2\(overline(A B)^2 + overline(A D)^2\)$
 
@@ -1571,7 +1572,7 @@ $therefore quad x = frac(overline(A B), cot alpha + cot beta)$
 
 + 等腰梯形 $A B C D$ 的上底 $overline(A D) = 18$cm,下底 $overline(B C) = 22$cm, $angle A B C = 60 degree$,求它的面积．
 
-+ 已知梯形 $A B C D$, $A D parallel B C$. $overline(A B) = 13$, $overline(B C) = 18$, $overline(C D) = 15$, $overline(D A) = 4$,求它的面积．
++ 已知梯形 $A B C D$, $A D pll B C$. $overline(A B) = 13$, $overline(B C) = 18$, $overline(C D) = 15$, $overline(D A) = 4$,求它的面积．
 
 + 如果已知四边形 $A B C D$ 的 $angle A = 90 degree$, $overline(A B) = 32$, $overline(B C) = 27$, $overline(C D) = 35$, $overline(D A) = 24$,那么它的面积是多少？
 

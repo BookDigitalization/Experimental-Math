@@ -721,16 +721,27 @@ def tex_math_to_typst(math: str) -> str:
     return m.group(1) if m else out
 
 
+# 各册主文件中“本册专用”的公式命令 -> typst/math<册>/defs.typ 中的定义
+VOLUME_MACROS = {
+    2: {"parallelogram": "pgram", "parallel": "pll"},
+}
+
+
 def convert(volume: int, chapter: int, src: Path) -> str:
     conv = Converter(chapter)
-    tex = conv.preprocess(src.read_text(encoding="utf-8"))
+    tex = src.read_text(encoding="utf-8")
+    for name, ident in VOLUME_MACROS.get(volume, {}).items():
+        tex = re.sub(r"\\%s(?![a-zA-Z])\s*" % name, lambda m, i=ident: conv.math_slot(i) + " ", tex)
+    tex = conv.preprocess(tex)
     typ = conv.postprocess(pandoc(MACROS + tex))
     # 插图沿用 LaTeX 版目录中的图片文件（编译时 --root 为仓库根目录）
     typ = re.sub(r'image\("(?!/)', 'image("/math%d/' % volume, typ)
     header = (
         f"// 由 typst/tools/tex2typ.py 从 math{volume}/{src.name} 转换而来，已人工校对的部分以本文件为准。\n"
         '#import "../common/template.typ": *\n'
-        '#import "figs.typ": fig\n\n'
+        '#import "figs.typ": fig\n'
+        + ('#import "defs.typ": *\n' if volume in VOLUME_MACROS else "")
+        + "\n"
     )
     if chapter == 0:
         typ = re.sub(r"^= (.*)$", lambda m: "#heading(numbering: none)[%s]" % m.group(1).replace("\u00a0", "#h(1em)").replace("  ", "#h(1em)"),

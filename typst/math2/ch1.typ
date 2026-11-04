@@ -1,6 +1,7 @@
 // 由 typst/tools/tex2typ.py 从 math2/1.tex 转换而来，已人工校对的部分以本文件为准。
 #import "../common/template.typ": *
 #import "figs.typ": fig
+#import "defs.typ": *
 
 = 实验几何
 几何学是研究“空间”的形体和性质的科学．“空间”就是我们和万物以至星象天体共存的所在．在日常生活中，我们举目四望所见到的地方，都是空间的一部分．同学们在小学数学课中学过的柱体、锥体、球体等等，它们都各自占有空间的一部分，并且构成不同的形体．各种形体的种种性质，如各部分的长度、角度、面积，以及体积等等．都是在我们的生活和生产实践中所不可缺少的知识．
@@ -956,7 +957,7 @@ $therefore quad angle D B C = 180 degree - angle C - angle B D C = 180 degree - 
 
 我们把 $angle C A B$ 和 $angle C' A' B'$ 这样位置的角叫做#strong[同位角]．如图1.46所示．
 
-连结同一平面内的射线 $A B$ 和 $A' B'$ 的端点 $A$、$A'$ 后，如果得到的同位角相等（图1.45）即 $angle C A B = angle C' A' B'$,我们就说射线 $A B$ 和 $A' B'$ 互相平行．同样地，如果同一平面内的两条直线 $ell$ 和 $ell'$ 被另一条直线 $A A'$ 截出的同位角相等（图1.47），我们就说直线 $ell$ 和 $ell'$ #strong[互相平行]．记作 $ell parallel ell'$．
+连结同一平面内的射线 $A B$ 和 $A' B'$ 的端点 $A$、$A'$ 后，如果得到的同位角相等（图1.45）即 $angle C A B = angle C' A' B'$,我们就说射线 $A B$ 和 $A' B'$ 互相平行．同样地，如果同一平面内的两条直线 $ell$ 和 $ell'$ 被另一条直线 $A A'$ 截出的同位角相等（图1.47），我们就说直线 $ell$ 和 $ell'$ #strong[互相平行]．记作 $ell pll ell'$．
 
 #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("1-62");], caption: []), figure([#fig("1-63");], caption: [])));
 
@@ -990,9 +991,9 @@ $therefore quad angle D B C = 180 degree - angle C - angle B D C = 180 degree - 
 #solution[
 由小学数学课中我们已知长方形的各角都是直角，如图，长方形的 $angle 1$、$angle 2$、$angle 3$、$angle 4$ 都是直角．
 
-因为 $angle 1'$ 是 $angle 1$ 的补角，所以 $angle 1'$ 也是直角，于是同位角 $angle 1' = angle 2$,因此长方形的对边 $a parallel a'$.
+因为 $angle 1'$ 是 $angle 1$ 的补角，所以 $angle 1'$ 也是直角，于是同位角 $angle 1' = angle 2$,因此长方形的对边 $a pll a'$.
 
-同样，同位角 $angle 3' = angle 2$,因此另一对边 $b parallel b'$.
+同样，同位角 $angle 3' = angle 2$,因此另一对边 $b pll b'$.
 
 ]
 我们学习了平行线的意义之后，进一步考虑平面上两条直线 $ell$, $m$ 有几种可能的位置关系呢？参看图1.50,同学们自己归纳出结论．
@@ -1007,7 +1008,7 @@ $therefore quad angle D B C = 180 degree - angle C - angle B D C = 180 degree - 
 #exercise[
 + 如图，在同一平面内，直线 $m$ 和 $ell$ 垂直于 $A$ 点，直线 $ell'$ 和 $m$ 垂直于 $A'$ 点，直线 $ell$ 和 $ell'$ 平行吗？为什么？
 
-+ 如图，先把三角板的一边 $a$ 和直线 $ell$ 密合；再用直尺和三角板的另一边 $b$ 密合；固定直尺，推动三角板使 $b$ 总和直尺密合，当 $a$ 过 $P$ 点时，沿 $a$ 画直线 $ell'$,那么 $ell' parallel ell$.为什么？
++ 如图，先把三角板的一边 $a$ 和直线 $ell$ 密合；再用直尺和三角板的另一边 $b$ 密合；固定直尺，推动三角板使 $b$ 总和直尺密合，当 $a$ 过 $P$ 点时，沿 $a$ 画直线 $ell'$,那么 $ell' pll ell$.为什么？
 
 + 已知直线 $A B$ 外一点 $C$,过 $C$ 点划一条直线和 $A B$ 平行．
 
@@ -1786,7 +1787,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
 则直线 $P M$ 和 $ell$ 平行．
 
-理由：由作法 $angle Q P M = angle alpha$，所以直线 $P M parallel ell$（同位角相等则两条直线平行）．
+理由：由作法 $angle Q P M = angle alpha$，所以直线 $P M pll ell$（同位角相等则两条直线平行）．
 
 #exercise[
 + 已知线段 $a\,b$,求作一线段等于 $a + b$\; $a - b thick\(a > b\)$.

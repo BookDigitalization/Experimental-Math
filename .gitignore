@@ -33,3 +33,6 @@ Thumbs.db
 
 # Python 缓存
 __pycache__/
+
+# tools/tikzref.py 默认的输出目录（LaTeX 版插图的对照 PNG）
+typst/*/_ref/

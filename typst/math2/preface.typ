@@ -1,6 +1,7 @@
 // 由 typst/tools/tex2typ.py 从 math2/preface.tex 转换而来，已人工校对的部分以本文件为准。
 #import "../common/template.typ": *
 #import "figs.typ": fig
+#import "defs.typ": *
 
 #heading(numbering: none)[前~~言]
 这一套中学数学实验教材，内容的选取原则是精简实用，教材的处理力求深入浅出，顺理成章，尽量作到使人人能懂，到处有用．

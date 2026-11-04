@@ -1,6 +1,7 @@
 // 由 typst/tools/tex2typ.py 从 math2/4.tex 转换而来，已人工校对的部分以本文件为准。
 #import "../common/template.typ": *
 #import "figs.typ": fig
+#import "defs.typ": *
 
 = 圆
 在工农业生产和日常生活中，圆的应用相当广泛．过去我们初步掌握了一些圆的知识，这一章我们将在复习这些知识的基础上，把圆和直线形结合起来，进一步学习有关圆的一些性质．
@@ -111,7 +112,7 @@
 
 我们知道，经过 $A$、$B$ 两点的圆的圆心必定在 $overline(A B)$ 的垂直平分线上（图4.7中的 $ell_1$），经过 $B$、$C$ 两点的圆的圆心又必定在 $overline(B C)$ 的垂直平分线上（图4.7中的 $ell_2$），因而经过 $A$、$B$、$C$ 三点的圆的圆心必定是直线 $ell_1$ 和 $ell_2$ 的交点 $O$,由于 $overline(O A) = overline(O B) = overline(O C)$,所以以 $O$ 为圆心 $overline(O A)$ 为半径的圆经过 $A$、$B$、$C$ 三点．
 
-这样一来，能不能说经过三个点就可作一个圆呢？我们再来看图4.8中所示的三点 $A$、$B$、$C$,它们是在同一条直线上的，这时 $overline(A B)$ 和 $overline(B C)$ 的垂直平分线 $ell_1$ 和 $ell_2$ 都垂直于同一条直线，于是 $ell_1 parallel ell_2$, $ell_1$ 和 $ell_2$ 便没有交点，这就说明了经过 $A$、$B$、$C$ 三点的圆的圆心根本不存在，所以也就没有圆都经过 $A$、$B$、$C$ 三点．因此，我们不能笼统地说经过三个点可作一个圆．如果 $A$、$B$、$C$ 三点在同一条直线上（叫做共线的点），便没有圆经过这三点；如果 $A$、$B$、$C$ 三点不在同一条直线上（叫做不共线的点），那么 $overline(A B)$ 与 $overline(B C)$ 的垂直平分线必相交（为什么？），这时，就可作一个圆经过这三点，又由于 $overline(A B)$ 和 $overline(B C)$ 的垂直平分线都只有一条，所以它们的交点也是唯一的，从而 $overline(O A)$ 的长也是唯一的，所以经过 $A$、$B$、$C$ 三点也只能作一个圆．
+这样一来，能不能说经过三个点就可作一个圆呢？我们再来看图4.8中所示的三点 $A$、$B$、$C$,它们是在同一条直线上的，这时 $overline(A B)$ 和 $overline(B C)$ 的垂直平分线 $ell_1$ 和 $ell_2$ 都垂直于同一条直线，于是 $ell_1 pll ell_2$, $ell_1$ 和 $ell_2$ 便没有交点，这就说明了经过 $A$、$B$、$C$ 三点的圆的圆心根本不存在，所以也就没有圆都经过 $A$、$B$、$C$ 三点．因此，我们不能笼统地说经过三个点可作一个圆．如果 $A$、$B$、$C$ 三点在同一条直线上（叫做共线的点），便没有圆经过这三点；如果 $A$、$B$、$C$ 三点不在同一条直线上（叫做不共线的点），那么 $overline(A B)$ 与 $overline(B C)$ 的垂直平分线必相交（为什么？），这时，就可作一个圆经过这三点，又由于 $overline(A B)$ 和 $overline(B C)$ 的垂直平分线都只有一条，所以它们的交点也是唯一的，从而 $overline(O A)$ 的长也是唯一的，所以经过 $A$、$B$、$C$ 三点也只能作一个圆．
 
 于是，我们便得到确切的结论：
 
@@ -198,11 +199,11 @@ $therefore quad O$ 是 $overparen(E F)$ 所在圆的圆心．
 #proof[
 已知 $O L tack.t overline(B C)$ 于 $L$ 点，作 $O M tack.t overline(A B)$ 于 $M$ 点，由于 $O$ 是 $triangle.stroked.t A B C$ 的外心，所以 $L$、$M$ 分别是 $overline(B C)$、$overline(A B)$ 的中点．取 $overline(B H)$ 的中点 $K$,作 $overline(M K)$, $overline(L K)$,
 
-$because quad M K parallel A H\,quad O L parallel A H$,
+$because quad M K pll A H\,quad O L pll A H$,
 
-$therefore quad M K parallel O L$,
+$therefore quad M K pll O L$,
 
-同理可证，$L K parallel O M$,
+同理可证，$L K pll O M$,
 
 $therefore quad O M K L$ 是平行四边形，
 
@@ -313,7 +314,7 @@ $therefore quad overline(A C) = overline(B D)$
 #solution[
 作 $O E tack.t overline(A B)$ 于 $E$ 点，延长 $overline(E O)$ 交 $overline(C D)$ 于 $F$ 点．
 
-$because quad A B parallel C D$,
+$because quad A B pll C D$,
 
 $therefore quad O F tack.t C D$,
 
@@ -574,7 +575,7 @@ $therefore quad dot.o O$ 与 $dot.o O'$ 在 $P$ 点外切．
   ]
 )
 
-设 $A$ 是 $dot.o\(O\,r\)$ 上任一点，同样可作出 $A$ 的对应点 $A'$,使 $overline(S A') / overline(S A) = k$,于是 $ overline(S O') / overline(S O) = overline(S A') / overline(S A)\,#h(2em) O' A' parallel O A $
+设 $A$ 是 $dot.o\(O\,r\)$ 上任一点，同样可作出 $A$ 的对应点 $A'$,使 $overline(S A') / overline(S A) = k$,于是 $ overline(S O') / overline(S O) = overline(S A') / overline(S A)\,#h(2em) O' A' pll O A $
 
 $therefore quad triangle.stroked.t S O' A' tilde.rev triangle.stroked.t S O A$.
 
@@ -720,7 +721,7 @@ $therefore quad A B tack.t overline(O C)$.
 #example[
 求证连结圆的两条平行切线的切点间的弦必是圆的直径．
 
-已知：直线 $ell_1$ 和直线 $ell_2$ 分别与 $dot.o O$ 切于 $A$、$B$ 两点，且 $ell_1 parallel ell_2$.
+已知：直线 $ell_1$ 和直线 $ell_2$ 分别与 $dot.o O$ 切于 $A$、$B$ 两点，且 $ell_1 pll ell_2$.
 
 求证：$overline(A B)$ 是 $dot.o O$ 的直径．
 
@@ -733,11 +734,11 @@ $therefore quad A B tack.t overline(O C)$.
 )
 
 #proof[
-作 $overline(O A)$、$overline(O B)$,过 $O$ 点作直线 $ell_3 parallel ell_2$
+作 $overline(O A)$、$overline(O B)$,过 $O$ 点作直线 $ell_3 pll ell_2$
 
-$because quad ell_1 parallel ell_2$
+$because quad ell_1 pll ell_2$
 
-$therefore quad ell_3 parallel ell_1$
+$therefore quad ell_3 pll ell_1$
 
 $because quad ell_1$ 是 $dot.o O$ 的切线，
 
@@ -1000,7 +1001,7 @@ $therefore quad overline(A M) = overline(A N)$.
 )
 
 #analyze[
-假设 $A B$ 是所求作的 $dot.o O$ 和 $dot.o O'$ 的外公切线（图4.42），$A$ 和 $B$ 是切点，分别作半径 $overline(O A)$，$overline(O' B)$，由于 $overline(O A)$，$overline(O' B)$ 都垂直于 $A B$，所以 $O A parallel O' B$，作 $O' E parallel A B$ 交 $overline(O A)$ 于 $E$ 点，则 $O' E tack.t O A$，且 $overline(O E) = r - r'$，这时 $O' E$ 与 $dot.o\(O\,r - r'\)$ 相切于 $E$ 点．$dot.o\(O\,r - r'\)$ 可作，过 $O'$ 也可作 $dot.o\(O\,r - r'\)$ 的切线．故切点 $E$ 可定，于是 $A B$ 可作．
+假设 $A B$ 是所求作的 $dot.o O$ 和 $dot.o O'$ 的外公切线（图4.42），$A$ 和 $B$ 是切点，分别作半径 $overline(O A)$，$overline(O' B)$，由于 $overline(O A)$，$overline(O' B)$ 都垂直于 $A B$，所以 $O A pll O' B$，作 $O' E pll A B$ 交 $overline(O A)$ 于 $E$ 点，则 $O' E tack.t O A$，且 $overline(O E) = r - r'$，这时 $O' E$ 与 $dot.o\(O\,r - r'\)$ 相切于 $E$ 点．$dot.o\(O\,r - r'\)$ 可作，过 $O'$ 也可作 $dot.o\(O\,r - r'\)$ 的切线．故切点 $E$ 可定，于是 $A B$ 可作．
 
 ]
 作法（图4.43）．
@@ -1011,7 +1012,7 @@ $therefore quad overline(A M) = overline(A N)$.
 
 + 作 $overline(O E)$，并延长交 $dot.o O$ 于 $A$ 点；
 
-+ 过 $O'$ 点作 $O' B parallel O A$ 交 $dot.o O'$ 于 $B$ 点；
++ 过 $O'$ 点作 $O' B pll O A$ 交 $dot.o O'$ 于 $B$ 点；
 
 + 过 $A$、$B$ 作直线 $A B$，则直线 $A B$ 为所求的公切线．
 
@@ -1035,7 +1036,7 @@ $therefore quad overline(A M) = overline(A N)$.
 求作：$dot.o\(O\,r\)$ 和 $dot.o\(O'\,r'\)$ 的内公切线．
 
 #analyze[
-如图4.45，设 $A B$ 为所求的内公切线，$A$ 和 $B$ 为切点，作 $overline(O A)$，$overline(O' B)$，因为这两条半径都垂直于公切线 $A B$，所以互相平行，再从 $O'$ 点引 $O' C parallel B A$ 交 $overline(O A)$ 的延长线于 $C$，所以 $O' C$ 和以 $O$ 为圆心，$overline(O C)$ 为半径的圆相切，但这圆的半径 $overline(O C)$ 等于 $overline(O A) + overline(A C)$，也等于 $overline(O A) + overline(O' B)$，就是等于 $r + r'$，而它的圆心就是已知圆的圆心 $O$，所以这个圆可作．
+如图4.45，设 $A B$ 为所求的内公切线，$A$ 和 $B$ 为切点，作 $overline(O A)$，$overline(O' B)$，因为这两条半径都垂直于公切线 $A B$，所以互相平行，再从 $O'$ 点引 $O' C pll B A$ 交 $overline(O A)$ 的延长线于 $C$，所以 $O' C$ 和以 $O$ 为圆心，$overline(O C)$ 为半径的圆相切，但这圆的半径 $overline(O C)$ 等于 $overline(O A) + overline(A C)$，也等于 $overline(O A) + overline(O' B)$，就是等于 $r + r'$，而它的圆心就是已知圆的圆心 $O$，所以这个圆可作．
 
 ]
 #figure([#fig("4-49");
@@ -1053,7 +1054,7 @@ $therefore quad overline(A M) = overline(A N)$.
 
 + 作 $overline(O C)$ 交 $dot.o O$ 于 $A$ 点；
 
-+ 过 $A$ 作 $A B parallel C O'$，切 $dot.o O'$ 于 $B$ 点，$A B$ 即为所求作的内公切线.
++ 过 $A$ 作 $A B pll C O'$，切 $dot.o O'$ 于 $B$ 点，$A B$ 即为所求作的内公切线.
 
 #figure([#fig("4-50");
 
@@ -1310,7 +1311,7 @@ $therefore quad b / d = h / a\,quad a b = h d$.
 
 + 由 $dot.o O$ 外一点引 $dot.o O$ 的两条割线，一条与 $dot.o O$ 相交于 $A$、$B$ 两点，另一条与 $dot.o O$ 相交于 $C$、$D$ 两点，求证：$angle P$ 的度数 $= 1 / 2 (overparen(B D) - overparen(A C))$ 的度数．
 
-+ 假设 $triangle.stroked.t A B C$ 内接于 $dot.o O$,过 $overparen(A C)$ 的中点 $M$ 作弦 $overline(M N) parallel A B$ 交 $overline(B C)$ 于 $D$ 点，求证：$overparen(M C N) = overparen(B N C)$, $overline(D M) = overline(D B)$.
++ 假设 $triangle.stroked.t A B C$ 内接于 $dot.o O$,过 $overparen(A C)$ 的中点 $M$ 作弦 $overline(M N) pll A B$ 交 $overline(B C)$ 于 $D$ 点，求证：$overparen(M C N) = overparen(B N C)$, $overline(D M) = overline(D B)$.
 
 + 两等圆 $dot.o O_1$ 和 $dot.o O_2$ 相交于 $A$、$B$ 两点，过 $A$ 点作直线且与 $dot.o O_1$ 和 $dot.o O_2$ 分别相交于 $C$、$D$ 两点，求证 $triangle.stroked.t B C D$ 是等腰三角形．
 
@@ -1434,7 +1435,7 @@ $overparen(A m B)$ 所含的圆周角 $= angle B A C = angle alpha$（弦切角�
 #example[
 已知：两圆外切于 $A$ 点，过 $A$ 作二条直线，一条与两圆相交于 $C$、$D$ 两点，另一条与两圆相交于 $E$、$F$ 两点（图4.59）.
 
-求证：$C E parallel F D$.
+求证：$C E pll F D$.
 
 ]
 #proof[
@@ -1444,7 +1445,7 @@ $because quad angle A C E = angle E A N\,quad angle F D A = angle F A M$（弦�
 
 又 $because quad angle E A N = angle F A M$，
 
-$therefore quad angle A C E = angle F D A\,quad C E parallel F D$
+$therefore quad angle A C E = angle F D A\,quad C E pll F D$
 
 ]
 #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("4-68");
@@ -1468,9 +1469,9 @@ $therefore quad angle A C E = angle F D A\,quad C E parallel F D$
 
 + 以3cm长的线段为弦求作一条弧，使它所含的圆周角是 $52 degree$（只要求画出图形）．
 
-+ 两圆内切于 $A$，从 $A$ 作二条直线，一条与两圆分别交于 $C$、$D$，另一条与两圆分别交于 $E$、$F$，求证：$C E parallel D F$.
++ 两圆内切于 $A$，从 $A$ 作二条直线，一条与两圆分别交于 $C$、$D$，另一条与两圆分别交于 $E$、$F$，求证：$C E pll D F$.
 
-+ 两圆外切于 $A$ 点，过 $A$ 点作一条直线分别交两圆于 $C$、$D$，过 $C$、$D$ 分别作两圆的切线 $C P$ 和 $D Q$，求证 $C P parallel D Q$.
++ 两圆外切于 $A$ 点，过 $A$ 点作一条直线分别交两圆于 $C$、$D$，过 $C$、$D$ 分别作两圆的切线 $C P$ 和 $D Q$，求证 $C P pll D Q$.
 
 ]
 #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("4-70");
@@ -1818,7 +1819,7 @@ $therefore quad angle A F G = angle G D B$, $B$、$D$、$G$、$F$ 四点共圆�
   
   ]]));
 
-+ 已知 $overline(A B)$ 是 $dot.o O$ 的直径，半径 $overline(O C) tack.t overline(A B)$,过 $overline(O C)$ 的中点 $D$ 作弦 $overline(E F) parallel overline(A B)$,求证：$angle C B E = 2 angle A B E$.
++ 已知 $overline(A B)$ 是 $dot.o O$ 的直径，半径 $overline(O C) tack.t overline(A B)$,过 $overline(O C)$ 的中点 $D$ 作弦 $overline(E F) pll overline(A B)$,求证：$angle C B E = 2 angle A B E$.
 
 + 如图，$triangle.stroked.t A B C$ 内接于一圆，$angle A = 57 degree$, $angle B = 66 degree$,过 $A$、$B$、$C$ 作圆外切三角形 $A' B' C'$,求 $triangle.stroked.t A' B' C'$ 的三内角的大小.
 
@@ -1826,7 +1827,7 @@ $therefore quad angle A F G = angle G D B$, $B$、$D$、$G$、$F$ 四点共圆�
 
 + 如图，$overline(A B)$ 是 $dot.o O$ 的直径，$A D$ 是 $dot.o O$ 的切线，$F B$ 与 $D B$ 是 $dot.o O$ 的割线，求证 $overline(B E) dot.op overline(B F) = overline(B C) dot.op overline(B D)$（提示：先证 $D$、$C$、$E$、$F$ 共圆）．
 
-+ 已知等腰梯形 $A B C D$ 外切于 $dot.o O$, $overline(A D) parallel overline(B C)$, $angle B = 30 degree$.中线 $overline(E F) = 1$cm,求 $dot.o O$ 的半径（提示：外切梯形的高等于 $dot.o O$ 的直径）．
++ 已知等腰梯形 $A B C D$ 外切于 $dot.o O$, $overline(A D) pll overline(B C)$, $angle B = 30 degree$.中线 $overline(E F) = 1$cm,求 $dot.o O$ 的半径（提示：外切梯形的高等于 $dot.o O$ 的直径）．
 
   #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("4-90");
   

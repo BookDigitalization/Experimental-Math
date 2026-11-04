@@ -1,6 +1,7 @@
 // 由 typst/tools/tex2typ.py 从 math2/5.tex 转换而来，已人工校对的部分以本文件为准。
 #import "../common/template.typ": *
 #import "figs.typ": fig
+#import "defs.typ": *
 
 = 轨迹与作图
 在前面的几章中，我们学习了直线形和圆的有关性质．学习的途径主要是根据图形的定义和已知性质去推演图形的其它性质．这一章，我们将把图形看成点的集合（点集），研究如何根据点所具有的某种性质来求出点集在平面上的形状和位置．
@@ -79,7 +80,7 @@
 与一条直线的距离等于定长的点的轨迹，是平行于这条直线，并和这条直线的距离等于定长的两条直线．
 
 ]
-已知：直线 $C D parallel$ 直线 $A B$\;直线 $E F parallel$ 直线 $A B$\; $C D$、$E F$ 和 $A B$ 之间的距离都是 $d$（图5.2）．
+已知：直线 $C D pll$ 直线 $A B$\;直线 $E F pll$ 直线 $A B$\; $C D$、$E F$ 和 $A B$ 之间的距离都是 $d$（图5.2）．
 
 求证：与 $A B$ 的距离等于 $d$ 的点的轨迹是 $C D$ 和 $E F$.
 
@@ -93,7 +94,7 @@
 #proof[
 + 设 $P$ 是 $C D$ 或 $E F$ 上的任一点．作 $P L tack.t A B$ 于 $L$ 点．
 
-  $because quad C D parallel A B$ 且和 $A B$ 的距离等于 $d$
+  $because quad C D pll A B$ 且和 $A B$ 的距离等于 $d$
 
   $therefore quad overline(P L)$ 是 $A B$ 和 $C D$ 的公垂线段，且 $overline(P L) = d$.
 
@@ -351,7 +352,7 @@ $therefore dot.o O$ 为所求作的圆．
 
 + 当直线 $ell$ 与AB所在的直线不垂直时，$overline(A B)$ 的垂直平分线 $m$ 与 $ell$ 一定有一个交点，且只有一个交点．这时，问题有一解．
 
-+ 当 $ell$ 与直线 $overline(A B)$ 垂直时，如果 $ell$ 与 $m$ 重合时，问题有无穷多解；如果 $ell parallel m$ 时问题无解．
++ 当 $ell$ 与直线 $overline(A B)$ 垂直时，如果 $ell$ 与 $m$ 重合时，问题有无穷多解；如果 $ell pll m$ 时问题无解．
 
 #example[
 已知三角形的一边和这条边上的中线及高，求作三角形．
@@ -387,7 +388,7 @@ $therefore dot.o O$ 为所求作的圆．
 
 + 任取一点 $B$,作 $overline(B C) = a$,
 
-+ 作直线 $ell parallel$ 直线 $B C$,且与直线 $B C$ 的距离等于 $h$.
++ 作直线 $ell pll$ 直线 $B C$,且与直线 $B C$ 的距离等于 $h$.
 
 + 作 $overline(B C)$ 的中点 $M$,作 $dot.o\(M\,m\)$ 交 $ell$ 于 $A$ 点
 
@@ -427,7 +428,7 @@ $therefore dot.o O$ 为所求作的圆．
 
 + 作 $angle A B C$ 的平分线 $B F$\;
 
-+ 作直线 $ell parallel B C$,且与 $B C$ 的距离等于 $r$,设 $ell$ 与 $B F$ 相交于 $O$ 点；
++ 作直线 $ell pll B C$,且与 $B C$ 的距离等于 $r$,设 $ell$ 与 $B F$ 相交于 $O$ 点；
 
 + 以 $O$ 为圆心，$r$ 为半径作 $dot.o\(O\,r\)$, $dot.o\(O\,r\)$ 即为所求作的圆．
 

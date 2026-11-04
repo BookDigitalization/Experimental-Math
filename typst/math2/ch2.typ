@@ -1,6 +1,7 @@
 // 由 typst/tools/tex2typ.py 从 math2/2.tex 转换而来，已人工校对的部分以本文件为准。
 #import "../common/template.typ": *
 #import "figs.typ": fig
+#import "defs.typ": *
 
 = 集合与简易逻辑
 == 集合
@@ -200,7 +201,7 @@ B & = { 2 n + 1\|n upright("为任意整数") } = { 2 n + 1\|n in bb(Z) } $
   ]
 )
 
-如果直线 $a parallel$ 直线 $b$,那么 $a inter b = nothing$.
+如果直线 $a pll$ 直线 $b$,那么 $a inter b = nothing$.
 
 ===== 基集与补集
 如果我们所讨论的集合都是一个给定集合的子集，我们就称这个给定集合为#strong[基集]，通常用符号 $I$ 表示基集．
@@ -614,7 +615,7 @@ C & = { X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 子集、交集、并集、补集、基集、空集、命题、原命题、逆命题、否命题、逆否命题、充分条件、必要条件、充要条件．
 
 ===== 符号
-$angle$, $triangle.stroked.t$, $dot.o$, $tack.t$, $parallel$, $tilde.equiv$, $tilde.rev$, $in$, $in.not$, $subset.eq$, $=$, $union$, $inter$, $upright(I)$, $nothing$, $and$, $or$, $arrow.r.double$, $arrow.l.r.double$.
+$angle$, $triangle.stroked.t$, $dot.o$, $tack.t$, $pll$, $tilde.equiv$, $tilde.rev$, $in$, $in.not$, $subset.eq$, $=$, $union$, $inter$, $upright(I)$, $nothing$, $and$, $or$, $arrow.r.double$, $arrow.l.r.double$.
 
 ===== 基本性质
 我们要论证一个命题的正确性，必须先由实践确立一系列命题的正确性，再以它们为根据作为出发点，才能设法论证其他命题的正确性，作为论证的原始依据的正确命题，我们称它为#strong[基本性质（或公理）]．基本性质的正确性不是通过推理论证而得出来的，而是通过实践检验确定无疑地归纳出来的．
@@ -784,7 +785,7 @@ $therefore quad overline(P A) = overline(P B)$（全等三角形的对应边相�
 #example[
 已知：直线 $E F$ 与直线 $A B$、$C D$ 分别相交于 $P$、$Q$ 两点，并且 $angle 1 = angle 2$（图2.20）．
 
-求证：$A B parallel C D$
+求证：$A B pll C D$
 
 ]
 #figure([#fig("2-22");
@@ -803,7 +804,7 @@ $therefore quad angle 1$ 与 $angle E P B$ 是对顶角
 
 $therefore quad angle 1 = angle E P B$
 
-已知 $angle 1 = angle 2$,由等量代换，就有 $angle 2 = angle E P B$．由平行线定义，可知 $A B parallel C D$.
+已知 $angle 1 = angle 2$,由等量代换，就有 $angle 2 = angle E P B$．由平行线定义，可知 $A B pll C D$.
 
 ]
 通过以上三例，我们初步体会了一下证明定理的步骤．值得注意的是在推理时，每推一步都要有可靠的根据，都要有充分的理由．定义、基本性质、已经证明过的定理和已知条件都可作为推理的根据．推理的根据可以象例2.4、例2.5那样写在结论后面的（#h(2em);）之中，也可以象例2.6那样写在结论的前面．总之，不管怎样叙述，都要“出言有本”，“推理有据”把论证的理由说清楚．
@@ -1295,7 +1296,7 @@ $therefore quad angle 1 = angle E P B$
 
 + 已知：如图，$overline(A B) = overline(D E)$, $overline(A C) = overline(D F)$, $overline(B C) = overline(E F)$.
 
-  求证：$angle 1 = angle 2$, $A C parallel D F$.
+  求证：$angle 1 = angle 2$, $A C pll D F$.
 
 + 已知：如图，$angle 1 = angle 2$, $overline(A D) = overline(B C)$.
 
