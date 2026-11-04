@@ -32,8 +32,8 @@ $2,-\sqrt{5}, 0.3,-3\sqrt{2},-7\frac{1}{2}$等，都是零次
             $-2x^4$& $-2$& 一元 & 4次\\
             $\frac{1}{2}x^7$& $\frac{1}{2}$& 一元 & 7次\\
             $-\frac{3}{7}x^{32}$& $-\frac{3}{7}$& 一元 & 32次\\
-            $0.618xy^2$& 0.618 & 二元& 3次  \\
             $-\sqrt{2}x^{121}$& $-\sqrt{2}$ & 一元& 121次     \\
+            $0.618xy^2$& 0.618 & 二元& 3次  \\
              $7x^2y$ & 7 & 二元& 3次    \\
               $-\sqrt{7}xyz$ & $-\sqrt{7}$ & 三元& 3次     \\
               $\frac{3}{4}x^2y^3z$  & $\frac{3}{4}$ & 三元& 6次   \\
@@ -55,9 +55,9 @@ $2,-\sqrt{5}, 0.3,-3\sqrt{2},-7\frac{1}{2}$等，都是零次
     \begin{tikzpicture}
         \node (A) at (-2,0){单项式};
         \node (B) at (1,1){非零单项式};
-        \node (C) at (1,-1){零单项式};
-        \node (D) at (4,2){零次单项式};
-        \node (E) at (4,0){非零次单项式};
+        \node (C) at (1,-1){零单项式：$0$};
+        \node[anchor=west] (D) at (3,2){零次单项式：如$-7,\ \sqrt{2},\ \frac{1}{2},\ \cdots$};
+        \node[anchor=west] (E) at (3,0){非零次单项式：如$5x^2,\ \frac{1}{4}xy^2,\ \cdots$};
     \draw(A)--(B);
     \draw(A)--(C);
     \draw(D)--(B);
@@ -162,7 +162,7 @@ $7x^3+0=7x^3$, $(7x^3)\cdot 0=0$, $7x^3\cdot 1=7x^3$等．
     \item $3x+0.5+2x^2$就是一元、三项、二次多项式；
     \item $x^3-3x+x^2+\sqrt{2}-x^2=x^3-3x+\sqrt{2}$(合并同类项），就是一元、三项、三次多项式；
     \item $xy-3x+\sqrt{5}y+1$就是二元四项二次多项式；
-    \item $-\frac{\sqrt{2}}{2}x^2y^2 +2.3xz-8z^2$就是三元、三项、五
+    \item $-\frac{\sqrt{2}}{7}x^2y^3 +2.3xz-8z^2$就是三元、三项、五
 次多项式．
 \end{itemize}
 
@@ -171,7 +171,7 @@ $7x^3+0=7x^3$, $(7x^3)\cdot 0=0$, $7x^3\cdot 1=7x^3$等．
     \item $x^3-3x+\sqrt{2}$ 称为一元三次多项式；
     \item $x^2+x^3-y-x^2=x^3-y$ 称为二元三次多项式．
 \end{itemize}
-特别是，象$10,\sqrt{2},-\frac{1}{3}$等非零实数，称为零
+特别是，像$10,\sqrt{2},-\frac{1}{3}$等非零实数，称为零
 次多项式（一元或多元的）．数0，称为\textbf{零多项式}（一元或多元的，次数不定）．
 
 一个多项式，经过合并同类项以后，还可以把所
@@ -338,7 +338,7 @@ $\therefore\quad 1=2m-1$，解出$m=1$
 \begin{ex}
     \begin{enumerate}
         \item 已知$f(x)=9x^3+8x^2+7x+6$，试求：$f(0)$，$f(1)$，$f(10)$．
-        \item 已知$\varphi(x)=5x^5+4x-1$, $h(x)=7x^4+\frac{1}{2}x^2+\frac{1}{3}$，$g(y)=y^{10}+7$，以及$R(x)=x^5-x^3-x+\frac{8}{7}$．试分别求出：$\varphi(0), h(0), g(0)$及$R(0)$．从这里你能发现有什么规律吗？
+        \item 已知$\varphi(x)=5x^6+4x-1$, $h(x)=7x^4+\frac{1}{2}x^2+\frac{1}{3}$，$g(y)=y^{10}+7$，以及$R(x)=x^5-x^3-x+\frac{8}{7}$．试分别求出：$\varphi(0), h(0), g(0)$及$R(0)$．从这里你能发现有什么规律吗？
         \item 运用上题的规律，求出$f(0),g(0)$．
         \begin{enumerate}
             \item $f(y)=ay^9+by^7-my^3+ny+\sqrt{2}$
@@ -391,7 +391,7 @@ g (x) &=3x^2+2x-1
 
 反过来，我们也可以得出：
 \begin{blk}{}
-    如果$f(x)=g(x)$，那么，对于任意一个数值$a$，都有$f(a)=g(a)$．
+    如果$f(x)\equiv g(x)$，那么，对于任意一个数值$a$，都有$f(a)=g(a)$．
 \end{blk}
 
 实际上，要判断两个多项式是否恒等，也用不着取遍$x$的任意值去计算，只要根据两个多项式的表达式，用下面的结论就不难判断清楚：
@@ -504,7 +504,7 @@ $a$．
 
 由方程$2x^2-13x+21=10$，可解出：$x_1=1$，$x_2=\frac{11}{2}$．
 
-$\therefore\quad $ 当$b=1$或$b=\frac{11}{2}$时，$f(b)=10$．由方程$2x^2-13x+21=0$，可解出：$x_1=3,\quad x_2=\frac{7}{2}$．
+$\therefore\quad $ 当$b=1$或$b=\frac{11}{2}$时，$f(b)=10$．又由方程$2x^2-13x+21=0$，可解出：$x_1=3,\quad x_2=\frac{7}{2}$．
 
 $\therefore\quad $ 当$a=3$或$a=\frac{7}{2}$时，$f(a)=0$．
 
@@ -637,11 +637,11 @@ $\therefore\quad $ $f(x)$与$g(x)$的公根是$x=-3$．
 \item 求出$f(x)=x^2-x-56$与$g(x)=x^2+6x-7$的公根，并求出$f(1)+g(8)$的值．
 \item 如果多项式$f(x)=ax^2+bx+c$的根是5和1,并且
 $f(0)=5$，试求$a,b,c$的值．
-\item 试写出一个一元二次多项式$g(x)$，使它能够同时满足$g(0)=-1$, $g(1)=-1$, $g(2)=1$的条件．
-\item 如果多项式
+\staritem 试写出一个一元二次多项式$g(x)$，使它能够同时满足$g(0)=-1$, $g(1)=-1$, $g(2)=1$的条件．
+\staritem 如果多项式
 \[f (x) =a_nx^n+a_{n-1} x^{n-1}+\cdots+a_1x+a_0\]
 与多项式$g(x)=x^n-3x^3+2x-1$是恒等的，试写出$a_n,a_{n-1},\ldots,a_1,a_0$各应取什么值？
-\item 已知$f(x)=x^n-x^{n-1}+1$，试求出$f(1)$, $f(-1)$及$f (10)$．
+\staritem 已知$f(x)=x^n-x^{n-1}+1$，试求出$f(1)$, $f(-1)$及$f (10)$．
 
 \end{enumerate}
 
@@ -778,7 +778,7 @@ $\therefore\quad f(10)+g(0)=2\x 10+7+2=29$
     \item $(13x-3x^2-2x^3-6)+ (15x-3x^4+5x^3-9x^2)$
     \item $(8x^5+3x^3-2x+1)+(4x-5x^4-2x^3-1)+(7x^2-9x^5)$
     \item $(3x^2+x-5)-(4-x+7x^2)$
-    \item $(2x^2-5x+4)-(3x^2)-x+3$
+    \item $(2x^2-5x+4)-(3x^2-x+3)$
     \item $(10x^3-6x^2+5x-4)-(2x^2-4x-9x^3-2)$
     \item $(5x^4+x^3-2x^2-3x)-(5x^3-2x-3x^2+7)$
     \item $(5x^5+4x^4+3x^3+2x^2+x+1)-(4x^4+2x^2-1)-(x^3-1)$
@@ -1188,7 +1188,7 @@ $+)$    &    $+9x^7$    &    $-9x^6$    &    $+9x^5$    &    $-9x^4$    &    $+0
 \end{align*}  
 \end{solution}
 
-例4.25、例4.26可以看出，若将公式II中的$b$用$-b$代换，就能得到另一个公式．
+由例4.25、例4.26可以看出，若将公式II中的$b$用$-b$代换，就能得到另一个公式．
 
 \begin{blk}{两项差的平方公式}
 \begin{equation*}
@@ -1196,7 +1196,7 @@ $+)$    &    $+9x^7$    &    $-9x^6$    &    $+9x^5$    &    $-9x^4$    &    $+0
 \end{equation*}    
 \end{blk}
 
-今后在运算中，可以直接使用．
+今后在运算中，可以直接应用．
 
 \begin{example}
     计算：$(2x^2-xy-y^2)^2$
@@ -1502,14 +1502,14 @@ $(x+3)^3=x^3+9x^2+27x+27$
 \[5a^2b^3 (-4a^3bc)(-5ab^2),\quad (-5ax^2)^3\cdot (-2b^2x)^4,\quad (4a^2b+3ab^2)^2-(-ab^2+2a^2b)^2\]
 \[a(b-c)^2+b(c-a)^2+c(a-b)^2,\qquad (e+2m-3n)^2\cdot (e-2m+3n)^2\]
 \[(a+b-c)^3-(a-b+c)^3,\qquad \left[\frac{1}{3}a^2b^2-(ab+1)(ab-1)\right]^2\]
-\item 计算：
+\staritem 计算：
 \begin{enumerate}
     \item $(x-y)(x+y)(x^n+x^{n-1}y+x^{n-2}y^2+\cdots +xy^{n-1}+y^n)$
     \item $(x-y)(x+y)(x^n-x^{n-1}y+x^{n-2}y^2-\cdots +xy^{n-1}-y^n)$ （$n$是正奇数）
     \item 化简：$(x^n+y^n)(x^n-y^n)(x^{2n}+y^{2n})$，并求出当$x=y=1$时，此多项式的值．
 \end{enumerate}
 
-\item 先化简：
+\staritem 先化简：
 \[f(x,y)=(x+y)(x-y)(x^2+y^2)(x^4+y^4)\cdots (x^{2n}+y^{2n})\left(x^{8n}+x^{4n}y^{4n}+y^{8n}\right)  \]
 再求出：$f(-1,-1)$．
 \end{enumerate}
@@ -1538,12 +1538,12 @@ $(x+3)^3=x^3+9x^2+27x+27$
         \item $(-2x^3)\div 4x=-\frac{2}{4}x^{3-1}=-\frac{1}{2}x^2$
         \item $(0.5x^5)\div \left(-\frac{1}{8}x^2\right)=\left[0.5\div \left(-\frac{1}{8}\right)\right]x^{5-2}=-4x^3$
         \item $(27x^5)\div (-9)=-3x^5$
-        \item $0\div 2x^2=0$
+        \item $0\div 2x^2=0x^3\div 2x^2=0\cdot x=0$
         \item $(-17x^7)\div 1=-17x^7$
     \end{enumerate}
 \end{solution}
 
-不难发现：
+不难由(5)(6)发现：
 \begin{blk}{}
     零单项式除以任一非零单项式，仍得零单项
     式；任一单项式除以1，仍得原单项式．
@@ -1583,7 +1583,7 @@ $(x+3)^3=x^3+9x^2+27x+27$
       \item $-x^{n+1}\div \frac{1}{2}x$
       \item $c^{12}\div c^3\div c^4$
       \item $(n^8\div n^4)\div (n^6\div n^3)$
-      \item $(-0.2x)^3\div (-0.2x^8)$
+      \item $(-0.2x)^3\div (-0.2x^3)$
       \item $ax^5\div bx\div cx^3$
       \item $\left[(-3y^3-4y^7)\div (-y) \right]-\left[6y^{12}\div (-2y^6) \right]$
       \item $x$取什么值时，$x^{2n}\div x^n=x^n$成立？
@@ -2239,7 +2239,7 @@ $\therefore\quad $商式$Q(x)=\frac{1}{2}x-\frac{1}{4}$，余式$R(x)=\frac{1}{4
 \begin{enumerate}
     \item $\poly{1,6,11,6,0}$ 除以 $x+3$；
     \item $\poly{1,6,11,6,0}$ 除以 $\poly{1,3,1}$；
-    \item $\poly{1,2,-1,-2,1}$ 除以 $\poly{1,-1,1}$；
+    \item $\poly{1,2,-1,-2,1}$ 除以 $\poly{1,-1,-1}$；
     \item $1-2x+8x^3-4x^2$ 除以 $4x^2-2$；
     \item $x+1+x^5+2x^3$ 除以 $2x+x^2+1$；
     \item $\poly{3,-5,-4,3,-2}$ 除以 $2x^2+x$．
@@ -2263,11 +2263,11 @@ $\therefore\quad $商式$Q(x)=\frac{1}{2}x-\frac{1}{4}$，余式$R(x)=\frac{1}{4
 \item 已知$x^3+ax^2+bx+c=(x-1)(x-2)(x-3)+4$，试求：$a,b,c$的值．
 \item 已知$f(x)=ax^4+bx^2+cx+d$的根是：$x_1=10$, $x_2=1$,
 $x_3=12$, $x_4=4$．试求：$f(-1)$及$f\left(-\frac{1}{2}\right)$．
-\item 如果已知$f(x)=8x^3-2x^2+ax+b$ 除以
+\staritem 如果已知$f(x)=8x^3-2x^2+ax+b$ 除以
 $g(x)=4x^2-2$所得的余式为0，试求$a,b$的值．
-\item 在第7题中，如果$f(x)$除以$g(x)$的余式是$5x-3$，
+\staritem 在第7题中，如果$f(x)$除以$g(x)$的余式是$5x-3$，
 那么，$a$与$b$又是何值？
-\item 试把多项式$3x^3-10x^2+13$表示成关于$(x-2)$的方
+\staritem 试把多项式$3x^3-10x^2+13$表示成关于$(x-2)$的方
 幂的形式．
 
 \textbf{提示：} 先设$3x^3-10x^2+13=A(x-2)^3+B(x-2)^2
@@ -2373,7 +2373,7 @@ $f(x)$的根．要求多项式$f(x)$的根，只要解方程$f(x)=0$就可以得
 \item  有两个单项式，它们的和为$10x^2y$，它们的差为
 $-6x^2y$．试求出这两个单项式．
 
-\item 设$f(x)=\poly{3,-4,-5,1}$，$g(x)=\poly{2,1,4,-3}$，$h(x)=\poly{1,-1,-5,2}$
+\item 设$f(x)=\poly{1,-4,-5,1}$，$g(x)=\poly{2,1,4,-3}$，$h(x)=\poly{1,-1,-5,2}$
 \begin{enumerate}
     \item 试计算：
     \[A=f(x)+g(x)+h(x),\qquad B=f(x)-g(x)+h(x)\]
@@ -2427,25 +2427,25 @@ $f (a)$：
 \end{enumerate}
 （参看习题4.3第9题提示）．
 
-\item 证明：
+\staritem 证明：
 \begin{enumerate}
     \item 两个相邻奇数的平方差是8的倍数；
     \item 任意两个奇数的平方差除以8余0．
 \end{enumerate}
 
-\item 证明：
+\staritem 证明：
 \begin{enumerate}
     \item $(x-y)(x^n+x^{n-1}y+\cdots +xy^{n-1}+y^n)=x^{n+1}-y^{n+1}$；
     \item $(x+y)(x^{2n}-x^{2n-1}y+\cdots -xy^{2n-1}+y^{2n})=x^{2n+1}+y^{2n+1}$
 \end{enumerate}
 \textbf{注：}第2题左边第二个括号内的符号是“$+$”、“$-$”相间．
 
-\item  已知$ax^2+bx+c$是一个一次二项式的完全平方式．
+\staritem  已知$ax^2+bx+c$是一个一次二项式的完全平方式．
 试用待定系数法证明：$b^2-4ac=0$．
-\item  如果$f(x)=6x^4-x^3-18x^2+x+12$，试证明$f(x)$
+\staritem  如果$f(x)=6x^4-x^3-18x^2+x+12$，试证明$f(x)$
 能写成下面的形式：
 \[f(x)=(x-1)(x+1)(2x-3)(3x+4)\]
-\item 已知$f(x+2)=\poly{3,20,45,50}$，试求：
+\staritem 已知$f(x+2)=\poly{3,20,45,50}$，试求：
     \begin{multicols}{2}
 \begin{enumerate}
     \item $f(0)$；$f(-2)$

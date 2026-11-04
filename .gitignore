@@ -22,6 +22,9 @@
 *.snm
 *.vrb
 
+# 原始扫描资料（仅本地参考，不纳入版本库）
+original/
+
 # 编辑器 / 系统
 .vscode/
 .idea/

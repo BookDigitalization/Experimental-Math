@@ -30,6 +30,13 @@
 
 \usepackage{enumerate}
 
+% 选做题：用 \staritem 代替 \item，编号照常递增，题号左侧加“*”（同原书）
+\makeatletter
+\newcommand{\staritem}{%
+  \refstepcounter{\@enumctr}%
+  \item[\llap{*}\csname label\@enumctr\endcsname]}
+\makeatother
+
 \theoremstyle{plain}
 \theoremheaderfont{\normalfont\bfseries}
 \theorembodyfont{\normalfont}
