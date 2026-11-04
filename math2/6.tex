@@ -380,8 +380,8 @@ $\angle B=45^{\circ}$, 设$\overline{BC}=a$, 则$\overline{AC}=a$, $\overline{AB
         \hline
 $\alpha$&$30^{\circ}$&$45^{\circ}$&$60^{\circ}$\\
 \hline
-$\sin\alpha$  &  $\frac{1}{2}$ & $\frac{\sqrt{2}}{2}$& $\frac{\sqrt{3}}{2}$\\
-$\cos\alpha$  &  $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{2}}{2}$& $\frac{1}{2}$\\
+$\sin\alpha$  &  $\frac{\sqrt{1}}{2}$ & $\frac{\sqrt{2}}{2}$& $\frac{\sqrt{3}}{2}$\\
+$\cos\alpha$  &  $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{2}}{2}$& $\frac{\sqrt{1}}{2}$\\
 $\tan\alpha$  &  $\frac{\sqrt{3}}{3}$ &1&$\sqrt{3}$\\
 $\cot\alpha$  &  $\sqrt{3}$ &1&$\frac{\sqrt{3}}{3}$\\
 \hline
@@ -751,13 +751,13 @@ $\therefore\quad \tan\alpha\cdot \cot\alpha=\frac{a}{b}\cdot \frac{b}{a}=1$
 
 上面的定理，表示了同一锐角的三角比之间的关系，我
 们可利用定理中的三个公式，由已知锐角的一个三角比，去
-计算这个角的其它的三个三角比；也可以利用它们来化简含
+计算这个角的其他的三个三角比；也可以利用它们来化简含
 有三角比的式子．
 
 
 \begin{example}
     已知：$\sin\alpha=\frac{3}{5}$, 
-    求$\alpha$角（$\alpha$为锐角）的其它
+    求$\alpha$角（$\alpha$为锐角）的其他
     的三个三角比．
 \end{example}
 
@@ -904,7 +904,7 @@ $\sin A=\frac{1}{3}$
 \end{enumerate}
 
 
-\item 当$0^{\circ}\le \alpha\le 45^{\circ}$, $\alpha=45^{\circ}$, $45^{\circ}<\alpha\le 90^{\circ}$时，分别比较
+\item 当$0^{\circ}\le \alpha< 45^{\circ}$, $\alpha=45^{\circ}$, $45^{\circ}<\alpha\le 90^{\circ}$时，分别比较
 $\sin\alpha$与$\cos\alpha$的大小．
 \end{enumerate}
 
@@ -927,7 +927,7 @@ $\sin\alpha$与$\cos\alpha$的大小．
     \item 勾股定理：$a^2+b^2=c^2$
     \item 两锐角互余：$\angle A+\angle B=90^{\circ}$
     \item 四个三角比：
-\[\sin A=\frac{\angle A\text{的对边}}{\angle A\text{斜边}},\qquad \cos A=\frac{\angle A\text{的邻边}}{\angle A\text{斜边}}\]
+\[\sin A=\frac{\angle A\text{的对边}}{\text{斜边}},\qquad \cos A=\frac{\angle A\text{的邻边}}{\text{斜边}}\]
 \[\tan A=\frac{\angle A\text{的对边}}{\angle A\text{的邻边}},\qquad \cot A=\frac{\angle A\text{的邻边}}{\angle A\text{的对边}}\]
 \end{enumerate}
     为了应用方便，我们把3中的四个公式写成下面的形
@@ -968,7 +968,7 @@ $\sin\alpha$与$\cos\alpha$的大小．
 根据三角形的某些已知元素求出它的未知元素，这种过
 程叫做\textbf{解三角形}．在直角三角形中，直角总是已知的．除直
 角外，只要再知道两个元素，其中至少有一边，就可以求出
-直角三角形的其它各元素．因此，解直角三角形，只有下面
+直角三角形的其他各元素．因此，解直角三角形，只有下面
 四种情况：
 \begin{enumerate}
     \item 已知斜边与一锐角，
@@ -977,7 +977,7 @@ $\sin\alpha$与$\cos\alpha$的大小．
     \item 已知两条直角边．
 \end{enumerate}
 
-上述四种情况，都可用前面中所列出的关系式，并利用
+上述四种情况，都可用前面所列出的关系式，并利用
 三角比值表来求解．
 
 \begin{example}
@@ -1057,8 +1057,10 @@ c&=\frac{a}{\sin A}=\frac{3.8}{\sin 42^{\circ}}\approx 5.68
     \begin{minipage}[t]{0.48\textwidth}
     \centering
     \begin{tikzpicture}[>=latex, scale=.8]
-\draw(0,0)node[left]{$B$}--node[below]{$c$}(5,0)node[right]{$A$}--node[right]{$b$}(90-36.87:3)node[above]{$C$}--node[left]{$a$}(0,0);  
-  
+\draw(0,0)node[left]{$B$}--node[below]{$c$}(5,0)node[right]{$A$}--node[right]{$b$}(90-36.87:3)node[above]{$C$}--node[left]{$a$}(0,0);
+\tkzDefPoints{0/0/B, 5/0/A}
+\tkzDefPoint(90-36.87:3){C}
+\tkzMarkRightAngle[size=.2](B,C,A)
     \end{tikzpicture}
     \caption{}
     \end{minipage}
@@ -1392,7 +1394,7 @@ $A$测得敌舰$C$在它的南偏东$40^{\circ}$的方向，炮台$B$测得敌�
 来表示；$\angle A$、$\angle B$、$\angle C$的对边分别用$a$、$b$、$c$来表示；外
 接圆的半径用$r$来表示．
 
-假定$\alpha$是锐角（图6.22），作$\triangle ABC$的外接圆$O$, 再作$\odot O$的直径$\overline{CA'}$, 弦$\overline{BA'}$, 在$\triangle A'BC$中，$\angle A'BC$是直角，因此$a=2r\sin A'$
+假定$\alpha$是锐角（图6.22），作$\triangle ABC$的外接圆$\odot O$, 再作$\odot O$的直径$\overline{CA'}$, 弦$\overline{BA'}$, 在$\triangle A'BC$中，$\angle A'BC$是直角，因此$a=2r\sin A'$
 
 $\because\quad \angle A'=\angle A=\alpha$
 
@@ -1423,10 +1425,10 @@ $\therefore\quad a=2r\sin\alpha$，因此：
     \centering
     \begin{tikzpicture}[>=latex, scale=1]
   \draw[thick](0,0) circle(2);
-\tkzDefPoint(120:2){B}\tkzDefPoint(-120:2){C}\tkzDefPoint(180:2){A}\tkzDefPoint(60:2){A'}    
+\tkzDefPoint(120:2){B}\tkzDefPoint(-120:2){C}\tkzDefPoint(180:2){A}\tkzDefPoint(60:2){A'}
+\tkzDefPoints{0/0/O}
 \tkzLabelPoints[right](O)
 \tkzDrawPoints(O)
-\tkzDefPoints{0/0/O}
 \tkzDrawPolygon(A,B,C)
 \tkzDrawPolygon[dashed](A',B,C)
 \tkzAutoLabelPoints[center=O](A,B,C,A')
@@ -2266,7 +2268,7 @@ S_{\triangle}&=\frac{c^{2} \sin \alpha \cdot \sin \beta}{2 \sin (\alpha+\beta)}
 
 $\therefore\quad S_{\triangle}=\frac{a^{2} \sin \beta \cdot \sin \gamma}{2 \sin (\beta+\gamma)}$
 
-同理可证明其它两个公式．
+同理可证明其他两个公式．
 \end{proof}
 
 
@@ -2375,7 +2377,7 @@ $\alpha$、$\beta$的大小和$AB$的长度（图
 月平均距离为385400公里．
 
 在地球上，我们可使用的最长基线是地球的直径，由
-于地球绕太阳按椭圆形轨道运行，当我们要测量其它星球到
+于地球绕太阳按椭圆形轨道运行，当我们要测量其他星球到
 地球的距离时，可使用的最长基线是地球椭圆轨道的长轴
 （图6.43）．
 
@@ -2386,7 +2388,7 @@ $\alpha$、$\beta$的大小和$AB$的长度（图
 \end{figure}
 
 从以上的分析我们知道，当我们应用解三角形原理在地
-球上测量地球与其它星球的距离时，可使用的基线是有限
+球上测量地球与其他星球的距离时，可使用的基线是有限
 的，所以星球离地球越远、视角也越小，相对基线就越短，
 测的结果也就越不精确了．
 
@@ -2431,7 +2433,7 @@ $\alpha$、$\beta$的大小和$AB$的长度（图
 \begin{enumerate}
     \item 已知$a=8$、$\beta=40^{\circ}$、$\gamma=90^{\circ}$, 求$b$.
     \item 已知$a=25$、$b=31$、$\gamma=90^{\circ}$, 求$\alpha$、$c$.
-    \item 已知$a=6$、$\beta=40^{\circ}$、$\gamma=80^{\circ}$, 求b.
+    \item 已知$a=6$、$\beta=40^{\circ}$、$\gamma=80^{\circ}$, 求$b$.
     \item 已知$a=8$、$b=6$、$\alpha=75^{\circ}$, 求$\beta$、$c$.
     \item 已知$a=3$、$b=4$、$c=5$, 求$\gamma$.
 \end{enumerate}
@@ -2500,13 +2502,13 @@ $\overline{CD}=15$, $\overline{DA}=4$, 求它的面积．
 
     \item 已知$\triangle ABC$, $\angle C=90^{\circ}$, 求证
   \[  \tan A+\tan B=\frac{c^2}{ab}\]
-    \item 已知在$\triangle ABC$中，$\angle C=90^{\circ}$, $\overline{CE}\overline{CB}$, 延长$CA$到$D$
+    \item 已知在$\triangle ABC$中，$\angle C=90^{\circ}$, $\overline{CA}=\overline{CB}$, 延长$CA$到$D$
     使$\overline{AD}=\overline{AB}$, 作$\overline{DB}$, 求$\angle D$的度数，并根据图形求
     $\angle D$的正弦、余弦、正切和余切的值．
 
 \item 在正方形$ABCD$中，已知$E$是$\overline{BC}$的中点，求$\angle AEC$的正
 弦和余弦．
-\item 在四边形$ABCD$中，$\overline{AB}=2a$, $BC=(\sqrt{3}+1)a$, 
+\item 在四边形$ABCD$中，$\overline{AB}=2a$, $\overline{BC}=(\sqrt{3}+1)a$, 
 $\overline{CD}=\sqrt{2}a$, $\angle B=60^{\circ}$, $\angle C=75^{\circ}$, 求$\overline{AC}$的长和四边
 形$ABCD$的面积．
 \item 已知在$\triangle ABC$中，$a=4$、$b=5$、$c=6$, 求$\cos\alpha$、$\sin\gamma$、
@@ -2568,7 +2570,7 @@ $S$海里，海岸线是过$A$点及$B$点的直线，一外国船在$P$点，
 \tkzLabelPoints[above left](B)
 \tkzLabelPoints[below right](C,I_b,I_a)
 \tkzLabelPoints[above](A, I_c,I)
-\tkzInterLL(B,I_b)(A,C) \tkzGetPoint{X}
+\tkzDefPointBy[projection=onto A--C](I_b) \tkzGetPoint{X}
 \tkzDrawCircle(I_b,X)
 \end{tikzpicture}
     \caption*{第17题}
