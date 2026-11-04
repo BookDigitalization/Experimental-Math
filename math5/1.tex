@@ -154,7 +154,7 @@ $A'B'C'D'$就是正方形$ABCD$的直观图．（图1.2）．
     $X'$轴上取$A'B'=AB$, 且使$O'$为$A'B'$中点，并在$X'$轴
     上分别取$C'_1$点和$E'_1$点，使$O'C'_1=OC_1$, $O'E'_1=OE_1$.
     \item 在$Y'$轴上截取$O'D'=\frac{1}{2}OD$, 并引$E'_1E'\parallel
-    O'Y'$, 且使$E'_1E=\frac{1}{2}E_1E$, 引$C_1'C'\parallel O'Y'$, 且使
+    O'Y'$, 且使$E'_1E'=\frac{1}{2}E_1E$, 引$C_1'C'\parallel O'Y'$, 且使
     $C'_1C'=\frac{1}{2}C_1C$.
     \item 连结$A'E'$、$E'D'$、$D'C'$、$C'B'$, 则五边
     形$A'B'C'D'E'$就是正五边形$ABCDE$的直观图．（图
@@ -189,7 +189,7 @@ $A'B'C'D'$就是正方形$ABCD$的直观图．（图1.2）．
 于$O'$点对称的顶点．
 \item 连$ED'$, $FA'$, 交于$G$; 连$EB'$、$FC'$交于$H$.
 \item 以$E$为心，以$ED'$为半径，作$\wideparen{D'B'}$, 以$F$为心，
-以$FA'$为半径作$\wideparen{A'C'}$, 以$G$为心，以$GA'$为半径作$\wideparen{D'A}$,
+以$FA'$为半径作$\wideparen{A'C'}$, 以$G$为心，以$GA'$为半径作$\wideparen{D'A'}$,
 以$H$为心，以$HC'$半径作$\wideparen{B'C'}$, 则此四弧连接成一个近似椭
 圆．（图1.4(2)）
 \end{enumerate}
@@ -1401,7 +1401,7 @@ $B$\\
   {基本性质3}经过不在同一直线上三点，有且只有一个平面．（图1.21(1)）
 \end{blk}
  
-这条基本性换个说法就是：“经过不在同一条直线上的任
+这条基本性质换个说法就是：“经过不在同一条直线上的任
 意三点，可以作一个平面，且只可以作一个平面”，也可以说：“不共线三点确定一个平面”．
 
 例如，一扇门当在门框安上两个合页（如$A$、$B$两个点）门可以自由转动，但再锁上一把锁之后（如$C$点），门就被固定了，这就是利用了上述平面的基本性质．（图1.21(2)）
@@ -1496,7 +1496,7 @@ $B$\\
 求证：直线$AB$和点$C$确定一个平面．
 
 \begin{proof}
-$\because\quad $经过直线$AB$上的两点$A$、$B$与$C$点可以作一个平面$\alpha$ (基本性质2), 而直线$ABC$平面$\alpha$ (基本性质1)
+$\because\quad $经过直线$AB$上的两点$A$、$B$与$C$点可以作一个平面$\alpha$ (基本性质3), 而直线$AB\subset$平面$\alpha$ (基本性质1)
 
 又$\because\quad $过直线$AB$与点$C$不可能再作第二个平面，否
 则与基本性质3矛盾．
@@ -1835,7 +1835,7 @@ $\therefore\quad P\in BD$.
   BB_1$, $A_1B_1\bot BB_1$, $A_1B_1\bot B_1C_1$, 则$AB$和$A_1B_1$有什么关系？
   \item 在正方体$ABCD-A_1B_1C_1D_1$内，若$AD\bot AA_1$, $AA_1\parallel
   BB_1$, 则$AD$与$BB_1$有什么关系？
-  \item 在正方体$ABCD-A_1B_1C_1D_1$内，$BB_1\bot A_1B$, $BB_1\bot 
+  \item 在正方体$ABCD-A_1B_1C_1D_1$内，$BB_1\bot A_1B_1$, $BB_1\bot
   B_1C_1$且$A_1C_1\bot B_1D_1$, 则$BD_1$与$A_1C_1$有什么关系？
 \end{enumerate}
 \begin{figure}[htp]\centering
@@ -1878,7 +1878,7 @@ $\therefore\quad P\in BD$.
 \item 直线与平面位置关系的观察．
 \begin{enumerate}
   \item 在正方体$ABCD-A_1B_1C_1D_1$中，若$A_1B_1\subset$平面$A_1C_1$, 
-  $AB\parallel A_1B_1$, 则$AB\cap $平面$A_1C=?$
+  $AB\parallel A_1B_1$, 则$AB\cap $平面$A_1C_1=?$
   \item 在正方体$ABCD-A_1B_1C_1D_1$内，若平面$AC\cap $
   平面$B_1D_1=\emptyset$, 则$AC\cap $平面$B_1D_1=?$ $BD\cap $平面$A_1C_1=?$
   \item 在正方体$ABCD-A_1B_1C_1D_1$中，若$DD_1\bot A_1D_1$, 
@@ -1924,7 +1924,7 @@ $\therefore\quad P\in BD$.
 
 \end{enumerate}
 
-通过对正方体的线面位置关系的察观与思考，你能就上
+通过对正方体的线面位置关系的观察与思考，你能就上
 述三组问题中的每个小题，得到一个一般性的命题吗？
 
 \section{直线与直线的位置关系}
@@ -2089,7 +2089,7 @@ $a\parallel b$, $c\parallel b$.
 
   $\therefore\quad a,b$确定一个平面$\pi_1$，
 
-  $\because\quad b,c$确定一个平$\pi_2$，设$P\in c$, 则$P,a$确定一个平面$\pi_3$. 设$\pi_2\cap \pi_3=c'$，
+  $\because\quad b,c$确定一个平面$\pi_2$，设$P\in c$, 则$P,a$确定一个平面$\pi_3$. 设$\pi_2\cap \pi_3=c'$，
   那么
 \[\begin{split}
   c'\cap \pi_1&=(\pi_2\cap \pi_3)\cap \pi_1\\
@@ -2104,7 +2104,7 @@ $\therefore\quad c'\parallel b,\quad c'\parallel a$
 
 又$\because\quad c\parallel b$且$c\cap c'=P,\quad c,c',b\subset \pi_2$
 
-$\because\quad c=c',\quad c'\parallel a$
+$\therefore\quad c=c',\quad c'\parallel a$
 
 $\therefore\quad a\parallel c$
 \end{proof}
@@ -2178,7 +2178,7 @@ $EFGH$是什么图形？
 \begin{blk}{问题4}
   上例中，若$\frac{AE}{EB}=\frac{AH}{HD}\ne \frac{CF}{FB}=\frac{CG}{GD}$，
 则四边形
-$ABCD$是什么图形？
+$EFGH$是什么图形？
 \end{blk}
 
 \begin{blk}{问题5}
@@ -2535,8 +2535,8 @@ $AB\displaystyle\mathop{=}^{\parallel}EF$.
 {定义}
 \begin{enumerate}
 \item 直线$\ell$在平面$\pi$内$\Longleftrightarrow\ell\cap\pi=\ell$．
-\item 直线$\ell$在平面$\pi$平行$\Longleftrightarrow\ell\cap\pi=\emptyset$．
-\item 直线$\ell$在平面$\pi$相交$\Longleftrightarrow\ell\cap\pi=P$．
+\item 直线$\ell$与平面$\pi$平行$\Longleftrightarrow\ell\cap\pi=\emptyset$．
+\item 直线$\ell$与平面$\pi$相交$\Longleftrightarrow\ell\cap\pi=P$．
 （$P$是$\ell$与$\pi$的唯一公共点）
 \end{enumerate}
 当直线$\ell$与平面$\pi$平行时，也记作$\ell\parallel\pi$（或$\pi\parallel\ell$）．
@@ -2547,7 +2547,7 @@ $AB\displaystyle\mathop{=}^{\parallel}EF$.
 \subsection{直线与平面平行}
 \begin{blk}
   {定理}
-  若直线$a\parallel$平面$\alpha$，直线$a\subset$平面$\beta$，$\alpha\cap \beta=b$，则$\alpha\parallel a$的充要条件是$a\parallel b$.
+  若直线$a\not\subset$平面$\alpha$，直线$a\subset$平面$\beta$，$\alpha\cap \beta=b$，则$\alpha\parallel a$的充要条件是$a\parallel b$.
 \end{blk}
 
 \begin{proof}
@@ -2685,7 +2685,7 @@ $\therefore\quad   B_1O\parallel DO'$
 
 $\because\quad DO'\subset$平面$A_1C_1D$
 
-$\therefore\quad  B_1O\parallel$ 平面$AC_1D$．
+$\therefore\quad  B_1O\parallel$ 平面$A_1C_1D$．
 \end{proof}
 
 \begin{ex}
@@ -2778,7 +2778,7 @@ $\therefore\quad  B_1O\parallel$ 平面$AC_1D$．
 \begin{blk}
    {定理} 在空间$V$中，和相异两点$P$、$P'$距离相等的点的
 集合是一个平面$\pi$, 它和线段$PP'$相交于$PP'$的中点$M$, 而且
-$PP'$和$\pi$的任何直线都垂直（我们称$\pi$为线段$PP'$的垂直平分
+$PP'$和$\pi$内的任何直线都垂直（我们称$\pi$为线段$PP'$的垂直平分
 面）．
 \end{blk}
 
@@ -2786,7 +2786,7 @@ $PP'$和$\pi$的任何直线都垂直（我们称$\pi$为线段$PP'$的垂直平
 如图1.36(2), 设$\pi=\{X|X\in V,\; PX=P'X\}$, 
 即$\pi$是空间$V$中，所有和$P$、$P'$距离相等的点所成的集合．
 
-设$\pi$是经过$P$、$P'$的任意一个平面，在$\pi$上，$PP'$的垂
+设$\pi'$是经过$P$、$P'$的任意一个平面，在$\pi'$上，$PP'$的垂
 直平分线在$\pi$内，由于$\pi'$的任意性，所以$\pi$中必有不共线的
 点存在．又$\pi$显然是$V$的一个真子集，以下证明$\pi$具有平面的
 另一重要特征．
@@ -2806,7 +2806,7 @@ $\therefore\quad \angle PAC=\angle P'AC$
 
 由于$AC=AC$, $PA=P'A$,
 
-$\therefore\quad \triangle PAC=\triangle P'AC$ (SAS)
+$\therefore\quad \triangle PAC\cong\triangle P'AC$ (SAS)
 
 $\therefore\quad PC=P'C$
 
@@ -2906,7 +2906,7 @@ $\ell_1'\cap \ell_2'=M$.
 
 $\therefore\quad $点$M$、$A_1$、$A_2$在线段$PP'$的垂直平分面上，且$M$、
 $A_1$、$A_2$不共线，因此平面$MA_1A_2$是线段$PP'$的垂直平分面，
-但$M',A_1,A_2\in \pi$, 因为过不共线三点只能确定一个平面，
+但$M,A_1,A_2\in \pi$, 因为过不共线三点只能确定一个平面，
 所以，平面$\pi$就是平面$MA_1A_2$.
 
 $\therefore\quad \ell\bot \pi$.
@@ -2987,7 +2987,7 @@ $\therefore\quad \ell\bot \pi$.
   
 
   \item 必要性：
-  设$ \ell_1\bot \pi$, $ \ell_2\bot \pi$, $\ell_2\cap\pi =P$ (图1.39) 过$P$作直线$\ell_2'\parallel \ell_1$，假定假定$\ell_2'$与$\ell_2$相异，
+  设$ \ell_1\bot \pi$, $ \ell_2\bot \pi$, $\ell_2\cap\pi =P$ (图1.39) 过$P$作直线$\ell_2'\parallel \ell_1$，假定$\ell_2'$与$\ell_2$相异，
 
   $\because \ell_1\bot \pi$
 
@@ -2997,7 +2997,7 @@ $\therefore\quad \ell\bot \pi$.
 
 $\because\quad \ell_2\bot \pi$
 
-$\therefore\quad \ell_2\bot\ell_1$,
+$\therefore\quad \ell_2\bot\ell$,
 
 同理，$\ell_2'\bot\ell$. 而$\ell,\ell_2,\ell_2'\subset \pi'$, 且有
   一个公共点$P$, 这与平面几何中“过一点与已知直线垂直的
@@ -3071,15 +3071,15 @@ $\because\quad AA_1\bot\alpha,\quad AA_2\bot\beta$,
 $\therefore\quad AA_1\bot XY,\quad AA_2\bot XY$.
 
 设$\gamma$是$AA_1$和$AA_2$所确定的平面，
-则$XY\bot\alpha$, 设垂足为$A_0$
+则$XY\bot\gamma$, 设垂足为$A_0$
 
 $\because\quad A_1A_0, A_2A_0\subset \gamma$.
 
 $\therefore\quad XY\bot A_1A_0,\quad XY\bot A_2A_0$
 
-$\therefore\quad \angle AA_0X=\angle A_2A_0X=90^{\circ}$.
+$\therefore\quad \angle A_1A_0X=\angle A_2A_0X=90^{\circ}$.
 
-$\therefore\quad $当把图1.40(2)还原成图1.41(1)之后，$A_1A_2$必与$XY$
+$\therefore\quad $当把图1.40(2)还原成图1.40(1)之后，$A_1A_2$必与$XY$
 垂直.
 \end{proof}
 
@@ -3117,7 +3117,7 @@ $\therefore\quad $当把图1.40(2)还原成图1.41(1)之后，$A_1A_2$必与$XY$
 \begin{proof}
 $\because\quad $在$\triangle ABC$中，$\angle ABC=90^{\circ}$, $D$是$AC$中点，
 
-$\therefore\quad AD=AD=DC$.
+$\therefore\quad AD=BD=DC$.
 
 又$\because\quad PA=PB=PC$，
 而$PD$为公共边，
@@ -3300,7 +3300,7 @@ $\therefore\quad AA'\parallel BB'$
 $\therefore\quad AA'$和$BB'$确定一个平
 面$\beta$, 则$\ell\subset\beta$.
 
-在$\ell$上任取异于$A$、$B$的一点$C$, 过$C$作$CC'\parallel AA'$交$A'B'$于$C$.
+在$\ell$上任取异于$A$、$B$的一点$C$, 过$C$作$CC'\parallel AA'$交$A'B'$于$C'$.
 
 $\because\quad AA'\bot \alpha$
 
@@ -3374,7 +3374,7 @@ $\therefore \quad \angle AOC=\angle AOB=90^{\circ}$，
 角边，由勾股定理可知：
 \begin{enumerate}
   \item $AB=AC\quad \Longleftrightarrow \quad OB=OC$
-  \item $AB>AC\quad \Longleftrightarrow \quad OB<OC$
+  \item $AB>AC\quad \Longleftrightarrow \quad OB>OC$
 \end{enumerate}
 \end{proof}
 
@@ -3548,7 +3548,7 @@ $\therefore\quad A'B'=AB''=AB\cos\theta$.
   \end{blk}
 
 已知：如图1.47, $AA'$和$AB$分别是平面$\alpha$的垂线和斜
-线，$A'B$是$AB$在$\alpha$内的射线，$CD\subset \alpha$, $CD\bot A'B$.
+线，$A'B$是$AB$在$\alpha$内的射影，$CD\subset \alpha$, $CD\bot A'B$.
 
 求证：$CD\bot AB$.
 
@@ -3719,7 +3719,7 @@ $\therefore\quad PD=\sqrt{OP^2+OD^2}=\sqrt{h^2+\frac{3a^2}{6^2}}=\frac{1}{6}\sqr
     \item 如图，$ABCD$是矩形，$PA\bot $
     平面$AC$, 连$PB,PC,PD$. 试指出图中有几个直角三角形？并说明道理．
   
-    \item 叙述并证明三垂线定的逆定理．
+    \item 叙述并证明三垂线定理的逆定理．
   \end{enumerate}
   \end{ex}
   
@@ -3838,7 +3838,7 @@ $\therefore\quad PD=\sqrt{OP^2+OD^2}=\sqrt{h^2+\frac{3a^2}{6^2}}=\frac{1}{6}\sqr
   \begin{blk}
     {问题2} 设直线$\ell_1\parallel$平面$\alpha$, $\ell_1$在$\alpha$上的射影为$\ell$, 平面$\beta$过$\ell_1$, $\beta\cap\alpha=\ell_2$ 
   \begin{enumerate}
-    \item 求证 $\ell_2/\ell$
+    \item 求证 $\ell_2\parallel\ell$
     \item 如果$\ell_1$和$\ell_2$的距离为25cm, $\ell_2$和$\ell$的距离为10cm, 那么$\ell$和平面$\alpha$的距离为多少？
   \end{enumerate}
   \end{blk}
@@ -3962,7 +3962,7 @@ $\therefore\quad PD=\sqrt{OP^2+OD^2}=\sqrt{h^2+\frac{3a^2}{6^2}}=\frac{1}{6}\sqr
   \end{figure}
   
   若$P_1P_2$、$P_1'P_2'$都是$\ell_1$和$\ell_2$的公垂线，上面已经证明，
-  $P_1P_2\bot\pi$，因为$\ell_1\parallel \ell_2$，所以$P_1'P_2'\bot\ell$，又由于$P_1'P_2'\bot \ell_2$，所以$P_1'P_2'\bot \pi$，于是$P_1P_2\parallel P_1'P_2'$，因此$\ell_1$与$\ell_2$共面，这和$\ell_1$与$\ell_2$是异面直线相矛盾，所以$\ell_1$与$\ell_2$的公垂线只能有唯一的一条$P_1P_2$．
+  $P_1P_2\bot\pi$，因为$\ell_1\parallel \ell$，所以$P_1'P_2'\bot\ell$，又由于$P_1'P_2'\bot \ell_2$，所以$P_1'P_2'\bot \pi$，于是$P_1P_2\parallel P_1'P_2'$，因此$\ell_1$与$\ell_2$共面，这和$\ell_1$与$\ell_2$是异面直线相矛盾，所以$\ell_1$与$\ell_2$的公垂线只能有唯一的一条$P_1P_2$．
   
   两条异面直线$\ell_1$和$\ell_2$的公垂线的垂足间线段称为异面直线的公垂线段. 不难证明，两条异面直线的公垂线段是连结端点分别在两条异面直线上所得到的线段中最短的线段，事实上在图1.53中，$\ell\parallel \ell_1$，设$\ell$和$\ell_1$所确定的平面为$\pi'$，在$\pi'$上过$P_1'$作$P_1'P\parallel P_1P_2$，则$P_1P_2=PP_1'$，因为$P_1P_2\bot $平
   面$P_2P_2'P$，所以$P_1'P\bot $平面$P_2P_2'P$，于是，$P_1'P\bot PP_2'$，
@@ -3978,7 +3978,7 @@ $\therefore\quad PD=\sqrt{OP^2+OD^2}=\sqrt{h^2+\frac{3a^2}{6^2}}=\frac{1}{6}\sqr
 \end{blk}
 
 
-由前面关于异面直线公垂线段的作法可知异面直线$\ell_1$和$\ell_2$的距离，也就是$\ell_1$和过$\ell_2$且平行于$h$的平面$\pi$间的距离．
+由前面关于异面直线公垂线段的作法可知异面直线$\ell_1$和$\ell_2$的距离，也就是$\ell_1$和过$\ell_2$且平行于$\ell_1$的平面$\pi$间的距离．
 
 \begin{example}
   已知：在图1.54中，正方体$A_1A_2A_3A_4-B_1B_2B_3B_4$中，面的对角线$A_2B_3$和$B_2B_4$的公垂线段为$CD$, 求证：线段$CD$等于正方体对角线的三分之一．
@@ -4183,7 +4183,7 @@ $A$为垂足，$B$、$C$均为斜足，已知 $DA=a$, $\angle BDA=\angle CDA=60^
 \item 求证：如果平面$\pi'$和直线$a$都垂直于平面$\pi$, 并且$a\not\subset\pi'$，那么$a\parallel \pi'$.
 
 \item 高空中有一气球，它和地面的距离是$h$, 在气球的东南
-处看气球的仰角是$\theta_1$, 同时在地球的西南处看气球的仰角是$\theta_2$, $A,B$两地距离为$a$. 求证：
+$A$处看气球的仰角是$\theta_1$, 同时在气球的西南$B$处看气球的仰角是$\theta_2$, $A,B$两地距离为$a$. 求证：
 \[h=\frac{a}{\sqrt{\cot^2\theta_1+\cot^2\theta_2}}\]
 \item 证明：两条异面直线不能同时和一个平面垂直．
 \item 如果$\triangle ABC$的各边所在直线与平面$\pi$都平行，那么
@@ -4366,7 +4366,7 @@ $PB$, $O$、$A$、$B$分别为垂足和斜足，已知 $PA=8$cm, $PB=5$cm, 它�
 
 当平面$\alpha$平行于平面$\beta$时，记作$\alpha\parallel \beta$(或$\beta\parallel \alpha$).
 
-有时我们也把两个平面重合看作两个平面平行的极限情况，这时我们也可以说：两个平面$\pi_1$和$\pi_2$平行$\Longleftrightarrow \pi_1\cap \pi_2=\emptyset$或$\pi_1=\pi_2$. 不过通常说两个平面行是指两个相异平面的平行．
+有时我们也把两个平面重合看作两个平面平行的极限情况，这时我们也可以说：两个平面$\pi_1$和$\pi_2$平行$\Longleftrightarrow \pi_1\cap \pi_2=\emptyset$或$\pi_1=\pi_2$. 不过通常说两个平面平行是指两个相异平面的平行．
 
 \begin{ex}
 \begin{enumerate}
@@ -4420,7 +4420,7 @@ $b\cap$平面$\beta=\emptyset$.
   假定$\alpha\nparallel \beta$, 不妨设
 $\alpha\cap\beta=\ell\ne \emptyset$
 
-$\because\quad \alpha\parallel \beta,\quad b\parallel \beta$ 且$\ell\subset\alpha$,
+$\because\quad a\parallel \beta,\quad b\parallel \beta$ 且$\ell\subset\alpha$,
 
 $\therefore\quad \ell \parallel a$且 $\ell\parallel b$
 
@@ -4597,7 +4597,7 @@ $\therefore\quad\ell_1\parallel \ell_2$.
 面，那么也垂直于另一个平面。
 \end{blk}
 
-如图1.58, 设平面$\alpha\parallel$平面$\beta$, 直线$AA'\bot\alpha$于$A'$, 则$AA'$必交平面$\beta$于一点$A'$ (推论1), 经过$AA'$的平面$\pi_1$和$\pi_2$
+如图1.58, 设平面$\alpha\parallel$平面$\beta$, 直线$AA'\bot\alpha$于$A$, 则$AA'$必交平面$\beta$于一点$A'$ (推论1), 经过$AA'$的平面$\pi_1$和$\pi_2$
 分别与$\alpha$和$\beta$的交线设为$a$、$a'$和$b$、$b'$,
 
 $\because\quad a\parallel \beta \qquad \therefore\quad a\parallel a'$
@@ -4753,7 +4753,7 @@ $\therefore\quad$ 平面$ABC\parallel $ 平面$A'B'C'$.
   于$A_3''$．令$\ell_1$和$\ell_3$确定的平面为$\pi_1$, $\ell_3$和$\ell_2$确定的平面为$\pi_2$, 由平行平面
   的性质定理容易看出：
 \[  A_1A_1'\parallel A_2A_2''\parallel A_3A_3'',\qquad 
-  A_2''A2'\parallel A_3''A_3'\]
+  A_2''A_2'\parallel A_3''A_3'\]
 
 $\therefore\quad \frac{A_1A_2}{A_2A_3}=\frac{A_1'A_2''}{A_2''A_3''}=\frac{A_1'A_2'}{A_2'A_3'}$
   \end{proof}
@@ -4894,7 +4894,7 @@ $\alpha\parallel \pi$, $\beta\parallel \pi$.
   假定$\alpha\nparallel\beta$, 那么$\alpha$与$\beta$必
 相交，设$\alpha\cap \beta=\ell$, 由于$\alpha,\beta$都和$\pi$
 平行，那么过$\ell$上任一点$P$便有两个
-平面$\pi$平行了，此与上一定理矛盾。
+平面和$\pi$平行了，此与上一定理矛盾。
 
 所以$\alpha\parallel \beta$.
 \end{proof}
@@ -4930,8 +4930,8 @@ $\pi_1-\ell-\pi_2$, 也可简记作$\pi_1\ell\pi_2$.
 在二面角$\alpha-\ell-\beta$中（如图1.65）.
 
 在棱$\ell$上任取两点$O$和$O'$, 过$O$和$O'$在平面$\alpha$和平面$\beta$内
-分别引射线$OA$、$OA'$、$OB$、$OB'$都与$\ell$垂直，则$OA\parallel OA'$, 
-$OB\parallel OB'$, 则$\angle AOB=\angle A'O'B'$. 因此，过二面角的棱上任
+分别引射线$OA$、$O'A'$、$OB$、$O'B'$都与$\ell$垂直，则$OA\parallel O'A'$,
+$OB\parallel O'B'$, 则$\angle AOB=\angle A'O'B'$. 因此，过二面角的棱上任
 一点，在每一面内引棱的垂线，这样两条垂线的夹角都相
 等，与顶点在棱上的位置无关。
 
@@ -4988,7 +4988,7 @@ $OB\parallel OB'$, 则$\angle AOB=\angle A'O'B'$. 因此，过二面角的棱上
 
 
 \begin{blk}
- {定义} 以二面棱上任意一点为端点，在它的两个面内
+ {定义} 以二面角的棱上任意一点为端点，在它的两个面内
 分别作垂直于棱的两条射线，这两条射线所成的角叫做二面
 角的平面角。在图1.65中$\angle AOB$就是二面角$\alpha-\ell-\beta$的平面
 角。 
@@ -5010,7 +5010,7 @@ $OB\parallel OB'$, 则$\angle AOB=\angle A'O'B'$. 因此，过二面角的棱上
   么$FH$就是上升的高度。
 
   经过$H$作$HG\bot AB$于$G$, 由三垂线定理，$FG\bot AB$, 则
-  $\angle FGH$就是坡面和地面所成二面角的平面角，所以$\angle FGB
+  $\angle FGH$就是坡面和地面所成二面角的平面角，所以$\angle FGH
   =30^{\circ}$.
 
 $\therefore\quad FH=FG\sin 30^{\circ}=FE\sin 60^{\circ}\sin 30^{\circ}=100\x\frac{\sqrt{3}}{2}\x\frac{1}{2}=25\sqrt{3}(\text{米})$
@@ -5281,9 +5281,9 @@ $AB\bot\ell$于$B$, $AB\subset\alpha$
 
 $\therefore\quad \angle ABC$是二面角$\alpha-\ell-\beta$的平面角．
 
-$\therefore\quad$ 平面$\alpha\bot$平面$\beta$,
+$\because\quad$ 平面$\alpha\bot$平面$\beta$,
 
-$\therefore\quad ABC=90^{\circ},\qquad AB\bot BC$
+$\therefore\quad \angle ABC=90^{\circ},\qquad AB\bot BC$
 
 又$\because\quad AB\bot \ell$, 而$\ell\cap CB=B,\quad \ell\subset \beta,\quad BC\subset \beta$
 
@@ -5319,7 +5319,7 @@ $AC=3$cm, 在平面$\pi_2$内引$BD\bot\ell$, $BD=5$cm. 求线
 \begin{solution}
   在平面$\pi_2$内引$AE\displaystyle\mathop{=}^{\parallel}BD$, 连结$ED,CE$.
 
-$\because\quad   AE,BDC\subset \pi_2,\quad AE\displaystyle\mathop{=}^{\parallel}BD,\quad BD\bot \ell$.
+$\because\quad   AE,BD\subset \pi_2,\quad AE\displaystyle\mathop{=}^{\parallel}BD,\quad BD\bot \ell$.
 
 $\therefore\quad  ABDE$是矩形。
 
@@ -5345,7 +5345,7 @@ $\therefore\quad AE$是$CE$在$\pi_2$内的射影，
 
 $\because\quad DE\bot AE,\quad DE\subset \pi_2$
 
-$\therefore\quad DE\bot CE\quad CED=90^{\circ}$
+$\therefore\quad DE\bot CE,\quad \angle CED=90^{\circ}$
 
 $\therefore\quad $在直角三角形$CED$中，
 \[CD=\sqrt{10^2+(\sqrt{34})^2}=\sqrt{134}{\rm (cm)}\]
@@ -5439,7 +5439,7 @@ $\therefore\quad $在直角三角形$CED$中，
   直线与这两个平面的交线平行。
   \item 求证：过已知平面外一点且平行于这个平面的直线，都
   在过已知点且平行于这个平面的平面内。
-  \item 设平面$\pi_1\parallel \pi_2$, 平面$\pi_2$上有四边形$ABCD$, 平面$\pi_2$上有四
+  \item 设平面$\pi_1\parallel \pi_2$, 平面$\pi_1$上有四边形$ABCD$, 平面$\pi_2$上有四
   边形$A'B'C'D'$, 如果直线$AA'$、$BB'$、$CC'$、$DD'$交于
   一点$P$, 则这两个四边形相似。试证明这一命题，然后
   把它推广到任意多边形的情况。
@@ -5637,7 +5637,7 @@ $y$轴上的线段$A'B'$的映射。
 \item 若$P,Q\notin \pi$, $PP'$与$QQ'$不共线，则线段$PP'$和$QQ'$
 都被$\pi$垂直平分，所以$PP'\parallel QQ'$, 因此$P$、$Q$、$P'$、$Q'$共面。
 
-过$P$作$PQ_1$垂直$QQ'$于$Q_1$, 过$P'$作$PQ'_1$垂直$QQ'$于$Q_1'$, 
+过$P$作$PQ_1$垂直$QQ'$于$Q_1$, 过$P'$作$P'Q'_1$垂直$QQ'$于$Q_1'$, 
 则$Q_1$的像便是$Q_1'$, 由3知：$d(Q,Q_1)=d(Q',Q_1')$, 由勾
 股定理得$d(P,Q)=d(P',Q')$. (图1.76)
 \end{enumerate}  
@@ -5840,7 +5840,7 @@ $\therefore\quad PP'$
 \begin{enumerate}
     \item 在平面$\pi$的同侧有$A,B$两点，在$\pi$上求一点$P$, 使$AP+
     BP$达到极小．
-    \item 在平面$\pi$外有两点$A,B$, 且直线$AB\nparallel \pi$, 在$\pi$在上求一
+    \item 在平面$\pi$外有两点$A,B$, 且直线$AB\nparallel \pi$, 在$\pi$上求一
     点$P$, 使$|AP-BP|$达到极大．
     \item 试问一个正方体有几个对称面？一个长方体有几个对
     称面？
@@ -6129,7 +6129,7 @@ $AP=18.9$cm, $BP=29.4$cm, $CD=57.5$cm, 求$CP$和$DP$
 \item 在直二面角的棱上有两点$A,B$, $AC$, $BD$各在这个二
 面角的一个面内，并且都垂直于棱，设$AB=8$cm, $AC
 =6$cm, $BD=24$cm, 求$CD$的长．
-\item 已知：共点的三条线段$OA$, $OB$, $OC$两点互相垂直，
+\item 已知：共点的三条线段$OA$, $OB$, $OC$两两互相垂直，
 且$OA=a$, $OB=b$, $OC=c$, 求$O$点到平面$ABC$的距离．
 \item 一条长$2a$的线段夹在互相垂直的两个平面之间，它和两
 个平面所成的角都是$30^{\circ}$, 求这条线段与这两个平面的

@@ -22,7 +22,7 @@
 都表示极点，除去极点，显
 然，不同的点对应不同的极
 坐标；反过来任取一对实数
-$(r,\theta)$, 其中$0<r<\infty$, $0\le 0\theta<2\pi$, 我们能够且只能够
+$(r,\theta)$, 其中$0<r<\infty$, $0\le\theta<2\pi$, 我们能够且只能够
 在平面上找到一点$P$, 使它的坐标恰好是$(r,\theta)$. 由此可
 见，平面上除了极点外的所有点和实数对集合：
 \[\{(r,\theta)|0<r<\infty,\quad 0\le\theta<2\pi\}\]
@@ -112,7 +112,7 @@ $(r,\theta)$, 其中$0<r<\infty$, $0\le 0\theta<2\pi$, 我们能够且只能够
 
 \begin{ex}
 \begin{enumerate}
-    \item 在极坐标系中，描出下各点．
+    \item 在极坐标系中，描出下列各点．
   \[  L\left(3,\frac{\pi}{3}\right),\qquad  M(3,0),\qquad N\left(1,\frac{\pi}{2}\right),\qquad P\left(-3,\frac{\pi}{4}\right)\]
 \[    Q\left(3, -\frac{\pi}{4}\right), \qquad R\left(-2,-\frac{2}{3}\pi\right),\qquad S\left(1,\frac{3}{4}\pi \right)\]
 \item 在极坐标系中，描出下列各点和它们关于原点和极轴的
@@ -164,7 +164,7 @@ $(r,\theta)$和$(-r,\theta+\pi)$表示同一点，故可用$(-r,\theta+\pi)$
 \end{equation}
 求得该点的极坐标，由上一小节可知，点$P$的极坐标可对应
 无穷多对数值，其中任一对数值都可作为点$P$的极坐标．在
-一般情况下，我们只求$r\ge 0$, $0\le 0<2\pi$ 的一对数值就可
+一般情况下，我们只求$r\ge 0$, $0\le\theta<2\pi$ 的一对数值就可
 以了．
 
 \begin{example}
@@ -395,7 +395,7 @@ $r$ & 0&  $0.78a$ & $1.57a$ & $2.36a$ & $3.14a$ & $3.93a$ & $4.71a$ & $5.50a$ & 
 \end{enumerate}
 \end{multicols}
     \item 画出心脏线$r=a(1+\cos\theta )$的图象．
-    \item 画出双纽线$p^2=a^2\cos2\theta$的图象．
+    \item 画出双纽线$r^2=a^2\cos2\theta$的图象．
 \end{enumerate}
 \end{ex}
 
@@ -460,9 +460,9 @@ $\ell$是它的右准线（图7.10）．
     坐标方程是
     \[(1-e^2)x^2+y^2-2e^2px-e^2p^2=0\]
     当$e>1$时，直角坐标方程是$\sqrt{x^2+y^2}=e(x+p)$.
-    \item 一颗慧星的轨道是抛物线，太阳位于这条抛物线的焦点
-    上，已知这颗慧星在距太阳为$1.6\x10^8$公里时，它的极
-    径和轨道轴成$60^{\circ}$角．求这颗慧星的轨道的极方程，并
+    \item 一颗彗星的轨道是抛物线，太阳位于这条抛物线的焦点
+    上，已知这颗彗星在距太阳为$1.6\x10^8$公里时，它的极
+    径和轨道轴成$60^{\circ}$角．求这颗彗星的轨道的极方程，并
     且求出它的近日点与太阳的距离．
     \item 说明下列方程的图形是什么，并且画出草图．
 \begin{multicols}{2}
@@ -684,7 +684,7 @@ $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$上任一点，以$O$为圆心，
 $X$轴，垂足为$Q$点，并交大
 辅助圆于$M$点，作$\overline{OM}$．
 
-设$\angle MOX\varphi$，则$x=\overline{OQ}=a\cos\varphi$．
+设$\angle MOX=\varphi$，则$x=\overline{OQ}=a\cos\varphi$．
 把上式代入椭圆方程，得$y=b\sin\varphi$，因此：
 \begin{equation}
     \begin{cases}
@@ -727,7 +727,7 @@ $X$轴，垂足为$Q$点，并交大
 
 下面我们来建立旋轮线的参数方程．
 
-取$P$点落在轨道上的个一位置作为原点．轨道所在直线
+取$P$点落在轨道上的一个位置作为原点．轨道所在直线
 作为$X$轴，当车轮从开始起转过了$\varphi$角，设这时$P$点的坐标
 是$(x,y)$, 车轮的圆心在$B$点，与轨道相切于$A$点，于
 是$\wideparen{AP}$的长等于$\overline{OA}$的长，我们引入参数$\varphi$（弧度）．（叫
@@ -880,12 +880,12 @@ $t_1,t_2$两点的弦的方程．
 \end{ex}
 
 \subsection{参数方程和普通方程的互化}
-设曲线的参数是
+设曲线的参数方程是
 \[\begin{cases}
    x=f(t)\\
 y=\varphi(t) 
 \end{cases}\]
-如果我们能从这个方程消去参数$t$, 那么我们就可求出当线
+如果我们能从这个方程消去参数$t$, 那么我们就可求出曲线
 的普通方程．
  
 \begin{example}
@@ -964,7 +964,7 @@ y=2\sin t-3
 \item 把下列普通方程化为参数方程．
 \begin{multicols}{2}
 \begin{enumerate}
-    \item $\frac{x-2}{4}=\frac{x+5}{3}$
+    \item $\frac{x-2}{4}=\frac{y+5}{3}$
     \item $y=4x$
     \item $\frac{(x-h)^2}{a^2}+\frac{(y-k)^2}{b^2}=1$
     \item $\frac{(x-h)^2}{a^2}-\frac{(y-k)^2}{b^2}=1$

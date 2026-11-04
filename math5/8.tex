@@ -82,7 +82,7 @@ $(a_x,a_y,a_z)$使
 $(a_x,a_y,a_z)$就叫做$\vec{a}$在
 $OXYZ$中的坐标．并简记作
 \[\vec{a}=(a_x,a_y,a_z)\]
-其中$a$叫做$\vec{a}$在$X$轴上的坐标分量．
+其中$a_x$叫做$\vec{a}$在$X$轴上的坐标分量．
 $a_y$叫做$\vec{a}$在$Y$轴上的坐标分量．$a_z$叫做$\vec{a}$在$Z$轴上的坐标分量．
 
 如果$\vec{a}=a_x\eX+a_y\eY+a_z\eZ$，那么分别对这个表示式两
@@ -157,7 +157,7 @@ $OXYZ$也可用$[O:\eX,\eY,\eZ]$来表示，$\eX,\eY,\eZ$叫
     直角坐标系$OXY$中的坐标是$(2,3)$, 求它在
     $OXYZ$中的坐标．
     \item 写出基向量$\eX,\eY,\eZ$的坐标．
-    \item 已知$\vec{a}=12$, $\langle\eX ,\vec{a}\rangle=30^{\circ}$, $\langle\eY ,\vec{a}\rangle=45^{\circ}$, $\langle\eZ ,\vec{a}\rangle=60^{\circ}$，
+    \item 已知$|\vec{a}|=12$, $\langle\eX ,\vec{a}\rangle=30^{\circ}$, $\langle\eY ,\vec{a}\rangle=45^{\circ}$, $\langle\eZ ,\vec{a}\rangle=60^{\circ}$，
 求$\vec{a}$的坐标．
     \item 已知$P(-3,2,4)$, $Q(5,7,-2)$, 求$\Vec{PQ}$与$\Vec{QP}$的坐标．
     \item 已知$A(2,-1,5)$, $B(3,2,-1)$用基向量$\eX,\eY,\eZ$表示向量$\Vec{AB}$.
@@ -248,13 +248,13 @@ $\vec{a}\parallel \vec{b}$.
 
  \item 已知$\vec{a}=(2,3,4)$, $\vec{b}=(-3,-6,6)$, 求证$\vec{a}\bot \vec{b}$.
 
- \item 设$\vec{a}=(2,-1,4)$, $\vec{b}=(-4,-5.-1)$, 求使
+ \item 设$\vec{a}=(2,-1,4)$, $\vec{b}=(-4,-5,-1)$, 求使
  $\vec{a}-k\vec{b}$垂直于$\vec{b}$的实数$k$的值．
 
  \item 已知$\vec{a}=(-5,2,3)$, $\vec{b}=(0,-3,2)$, $\vec{c}=(5,
  -2,-3)$, 求证：$\vec{a},\vec{b},\vec{c}$三个向量共面．
 \item 已知$P(x,y,z)$, $P_1(x_1,y_1,z_1)$, $P_2(x_2,y_2,
-z_2)$, $P_3(x_3, У_3,z_3)$. 求证这四点共面的充要条件是
+z_2)$, $P_3(x_3,y_3,z_3)$. 求证这四点共面的充要条件是
 \[\begin{vmatrix}
     x-x_1 &y-y_1&z-z_1\\
     x_2-x_1 &y_2-y_1&z_2-z_1\\
@@ -343,7 +343,7 @@ $\mu=2$分割$\Vec{AB}$, 求$P(x,y,z)$.
 \end{equation}
 (8.8)式就是\textbf{向量$\vec{a}$的方向余弦的计算公式}．
 
-把(8.7)式两边平方加起来，得
+把(8.8)式两边平方加起来，得
 \[\cos^2\alpha+\cos^2\beta+\cos^2\gamma=1\]
 这就是说，\textbf{任何一个向量的方向余弦的平方和恒等于1}.
 
@@ -389,7 +389,7 @@ $\therefore\quad \cos\alpha=\frac{2}{\sqrt{14}},\qquad \cos\beta=\frac{-3}{\sqrt
 \end{example}
 
 \begin{solution}
-\[\cos\langle \vec{a}\cdot \vec{b} \rangle=\frac{1\x 1+1\x 0+0\x 1}{\sqrt{1^2+1^2+0^2}\cdot \sqrt{1^2+1^2+0^2}}=\frac{1}{2} \]
+\[\cos\langle \vec{a},\vec{b} \rangle=\frac{1\x 1+1\x 0+0\x 1}{\sqrt{1^2+1^2+0^2}\cdot \sqrt{1^2+0^2+1^2}}=\frac{1}{2} \]
 $\therefore\quad \langle \vec{a},\vec{b}\rangle=\frac{\pi}{3}$    
 \end{solution}
 
@@ -409,7 +409,7 @@ $\therefore\quad \langle \vec{a},\vec{b}\rangle=\frac{\pi}{3}$
     两点间的距离．
     \item 已知$|\vec{a}|=10$, $\langle \eX,\vec{a} \rangle=60^{\circ}$, $\langle \eY,\vec{a} \rangle=60^{\circ}$
 
-    求$\langle \eZ,\vec{a} \rangle=60^{\circ}$和$\vec{a}$的坐标．
+    求$\langle \eZ,\vec{a} \rangle$和$\vec{a}$的坐标．
 \item 已知$\vec{a}\parallel \vec{b}$, $|\vec{a}|=10$, $\vec{b}=(3,-3,3)$, 求$\vec{a}$的坐标．
 
 \item 已知$\vec{a}=(-1,2,3)$, $\vec{b}=(2,5,4)$, 求$\langle \vec{a},\vec{b} \rangle$
@@ -599,7 +599,7 @@ x-0&y-0&z-0\\
 解此方程组，得
 \[a=-\frac{1}{2}c,\qquad b=-3c,\qquad d=0\]
 所以，所求的平面方程为
-\[\frac{1}{2}cx-3cy+cz=0\]
+\[-\frac{1}{2}cx-3cy+cz=0\]
 即：$x+6y-2z=0$.
 \end{solution}
 
@@ -641,7 +641,7 @@ $2x+y-z+3=0$的平面方程．
 于$P_0$点，则
 \[d=|\Vec{P_0P_1}|\]
 设$P_0$的坐标为$(x_0,y_0,z_0)$. 则
-\[|\Vec{P_0P_2}|=|\Vec{P_0P_1} \cdot \vec{n}_0|\]
+\[|\Vec{P_0P_1}|=|\Vec{P_0P_1} \cdot \vec{n}_0|\]
 其中$\vec{n}_0$是$\pi$的单位法向量．换用坐标表示，即为
 \[|\Vec{P_0P_1}|=\frac{a(x_1-x_0)+b(y_1-y_0)+c(z_1-z_0)}{\sqrt{a^2+b^2+c^2}}\]
 因为$P_0\in \pi$, 所以
@@ -711,7 +711,9 @@ z=z_0+a_3t
 (8.14)式叫做直线$\ell$的\textbf{参数方程}．$t$叫做\textbf{参数}．
 
 如果$a_1,a_2,a_3$都不为零，从(8.14)式消去参数$t$, 得
-\[\frac{x-x_0}{a_1}=\frac{y-y_0}{a_2}=\frac{z-z_0}{a_3}\]
+\begin{equation}
+    \frac{x-x_0}{a_1}=\frac{y-y_0}{a_2}=\frac{z-z_0}{a_3}
+\end{equation}
 (8.15)式叫做$\ell$的\textbf{点、方向式方程}又叫\textbf{对称式方程}．其中
 $\vec{a}=(a_1,a_2,a_3)$叫做$\ell$的方向向量．如果取$\vec{a}$的单位向量
 \[\vec{a}_0=(\cos\alpha, \cos\beta,\cos\gamma)\]
@@ -749,7 +751,7 @@ y_2,z_2)$的直线的参数方程．
 
 \begin{solution}
     取直线$P_1P_2$的方向向量
-\[    \Vec{P_1P_2}=(x_2-x_1, y_2-У_1,z_2-z_1)\]
+\[    \Vec{P_1P_2}=(x_2-x_1, y_2-y_1,z_2-z_1)\]
     由直线的参数方程．可得直线$P_1P_2$的参数方程为
 \[\begin{cases}
     x=x_1+(x_2-x_1)t\\
@@ -786,7 +788,7 @@ z=1+3t\\
     \item 求通过点$(2,3,1)$且和$X$轴平行的直线方程．
     \item 求过点$(2,-3,7)$, 其方向向量为$(2,0,3)$的直
     线方程．
-    \item 求直线$2x-6=4-y=2-5$的方向向量．
+    \item 求直线$2x-6=4-y=z-5$的方向向量．
     \item 求平行于两平面$x-2y+5z+2=0$和$3x+y-z
     +5=0$的交线，且通过原点的直线方程．
 \end{enumerate}
@@ -822,7 +824,7 @@ z=1+3t\\
 \end{figure}
 
 
-方程(8.16)就是以$A(a,b,c)$为球心，以$R$为半径的\textbf{球面
+方程(8.17)就是以$A(a,b,c)$为球心，以$R$为半径的\textbf{球面
 方程}．当$A$点在原点，球面方程变为
 \[    x^2+y^2+z^2=R^2\]
 

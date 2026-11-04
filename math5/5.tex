@@ -213,7 +213,7 @@ $\therefore\quad \vec{c}=\left(2\sqrt{3},-2\right)$
 这就是说\textbf{向量的和与差的坐标等于各向量相应坐标的和与差}．
 
 已知$\vec{a}=(a_x,a_y)$和一实数$\lambda$，则
-\[\lambda a=\lambda (a_x\eX+a_y\eY) = \lambda a_x\eX+\lambda a_y\eY\]
+\[\lambda\vec{a}=\lambda (a_x\eX+a_y\eY) = \lambda a_x\eX+\lambda a_y\eY\]
 即：$\lambda\vec{a}=\lambda (a_x ,a_y) = (\lambda a_x,\lambda a_y)$.
 
 这就是说\textbf{向量倍积的坐标等于该向量相应的坐标与倍数的乘积}．
@@ -273,7 +273,7 @@ $\therefore\quad \vec{c}=\left(2\sqrt{3},-2\right)$
 \end{split}\]
 \end{solution}
 
-由例5.2我们可得到如下运算
+由例5.3我们可得到如下运算
 法则：
 
 \begin{blk}{}
@@ -348,7 +348,7 @@ $\Vec{OC}=\vec{c}$, 以$\Vec{OA}$的方向作为$X$轴
     \Vec{OB}&=\left(|\vec{b}|\cos120^{\circ}, |\vec{b}|\cos 30^{\circ}\right)=\left(-\frac{r}{2},\frac{\sqrt{3}}{2}r\right)\\
     \Vec{OC}&=\left(|\vec{c}|\cos120^{\circ}, |\vec{c}|\cos 150^{\circ}\right)=\left(-\frac{r}{2},-\frac{\sqrt{3}}{2}r\right)\\
     \Vec{OA}+  \Vec{OB}+\Vec{OC}&=(r,0)+\left(-\frac{r}{2},\frac{\sqrt{3}}{2}r\right)+\left(-\frac{r}{2},-\frac{\sqrt{3}}{2}r\right)\\
-    &=\left(r-\frac{r}{2}-\frac{r}{2}, 0+\frac{\sqrt{3}}{2}-\frac{\sqrt{3}}{2}\right)=(0,0)
+    &=\left(r-\frac{r}{2}-\frac{r}{2}, 0+\frac{\sqrt{3}}{2}r-\frac{\sqrt{3}}{2}r\right)=(0,0)
 \end{split}\]
 $\therefore\quad \vec{a}+\vec{b}+\vec{c}=\vec{0}$.
 \end{proof}
@@ -433,7 +433,7 @@ a_y=\lambda b_y
 
 \begin{blk}
 {推论} 如果$A(x_1,y_1)$, $B(x_2,y_2)$, $C(x_3,y_3)$
-是坐标平面上三个不同的点，那么$A$、$B$、$C$三点共线的－
+是坐标平面上三个不同的点，那么$A$、$B$、$C$三点共线的一
 个充要条件是
 \[\frac{x_2-x_1}{x_3-x_1}=\frac{y_2-y_1}{y_3-y_1}\]
 或者用三阶行列式写为
@@ -767,7 +767,7 @@ $|\Vec{AB}|$，所以(5.5)式是求两
 |\Vec{AC}|&=\sqrt{(5-1)^2+(0-2)^2}=\sqrt{20}\\
 |\Vec{BC}|&=\sqrt{(5-3)^2+(0-4)^2}=\sqrt{20}\\
 \end{split}\]
-由此得$|\Vec{AC}|=|\Vec{BC}$, 所以$\triangle ABC$是等腰三角形．
+由此得$|\Vec{AC}|=|\Vec{BC}|$, 所以$\triangle ABC$是等腰三角形．
 \end{proof}
 
 \begin{ex}
@@ -784,7 +784,7 @@ $|\Vec{AB}|$，所以(5.5)式是求两
     求$\vec{a}$的坐标．
     \item 用坐标法证明：如果$M$是$\triangle ABC$的$\overline{BC}$
     边上的中点，
-    求证：$\overline{AB}^2+\overline{AС}^2=2\overline{AМ}^2+2\overline{BM}^2$.
+    求证：$\overline{AB}^2+\overline{AC}^2=2\overline{AM}^2+2\overline{BM}^2$.
 \end{enumerate}
 \end{ex}
 
@@ -822,12 +822,12 @@ $|\Vec{AB}|$，所以(5.5)式是求两
 
 \begin{example}
   已知$A(\sqrt{3},1)$, $B(0,1)$, 
-$c\left(\frac{\sqrt{3}}{2},\frac{1}{2}\right)$, 
+$C\left(\frac{\sqrt{3}}{2},\frac{1}{2}\right)$,
 求$\Vec{AB}$与$\Vec{AC}$之间的夹角．  
 \end{example}
 
 \begin{solution}
-因为$\Vec{AB}=(-\sqrt{3},0)$, $\Vec{AC}=\left(-\frac{\sqrt{3}}{2},\frac{1}{2}\right)$, 所以
+因为$\Vec{AB}=(-\sqrt{3},0)$, $\Vec{AC}=\left(-\frac{\sqrt{3}}{2},-\frac{1}{2}\right)$, 所以
 \[\cos \expval{\Vec{AB},\Vec{AC}} =\frac{-\sqrt{3}\x\left(-\frac{\sqrt{3}}{2}\right)+0\x \left(-\frac{1}{2}\right)}{\sqrt{\left(\sqrt{3}\right)^2+0^2}\sqrt{\left(-\frac{\sqrt{3}}{2}\right)^2+\left(-\frac{1}{2}\right)^2}}=\frac{\sqrt{3}}{2}\]
 因此，
 \[\expval{\Vec{AB},\Vec{AC}}=\frac{\pi}{6}\]
@@ -986,9 +986,9 @@ $OB$之间的旋转角，也可说$\varphi$
 因为$|\vec{a}|=\sqrt{3}$, $|\vec{b}|=\sqrt{\left(\frac{\sqrt{3}}{2}\right)^2+\left(-\frac{1}{2}\right)^2}=1$
 所以
 \[\cos\varphi=\frac{a_xb_x+a_yb_y}{|\vec{a}|\left|\vec{b}\right|}=\frac{\sqrt{3}\cdot \frac{\sqrt{3}}{2}+0\cdot \left(-\frac{1}{2}\right)}{\sqrt{3}\cdot 1}=\frac{\sqrt{3}}{2}\]
-于是$\varphi=\frac{\pi}{6}$, 或$\varphi=-\frac{11}{6}\pi$. 又因为
+于是$\varphi=\frac{\pi}{6}$, 或$\varphi=\frac{11}{6}\pi$. 又因为
 \[\sin\varphi=\frac{a_xb_y-a_yb_x}{|\vec{a}|\left|\vec{b}\right|}=\frac{\sqrt{3}\x \left(-\frac{1}{2}\right)+0\x \frac{\sqrt{3}}{2}}{\sqrt{3}\cdot 1}=-\frac{1}{2}\]
-所以：$\varphi=-\frac{11}{6}\pi$.
+所以：$\varphi=\frac{11}{6}\pi$.
 \end{solution}
 
 由例5.19可知，如果我们要求两向量的夹角，只用余弦公
@@ -1002,8 +1002,8 @@ $OB$之间的旋转角，也可说$\varphi$
 
 \begin{solution}
     设$\vec{n}_0=(\cos\varphi,\sin\varphi)$，由于$\vec{n}_0\bot \vec{a}$, 所以
-\[a_x\cos\alpha+a_y\sin\alpha= 0\]
-即：$\frac{\cos\alpha}{-a_y}=\frac{\sin\alpha}{a_x}$.
+\[a_x\cos\varphi+a_y\sin\varphi= 0\]
+即：$\frac{\cos\varphi}{-a_y}=\frac{\sin\varphi}{a_x}$.
 
 由此可见，向量$\vec{n}_0$与向量$(-a_y,a_x)$平行．
 于是存在数$\lambda$, 使
@@ -1095,7 +1095,7 @@ $OB$之间的旋转角，也可说$\varphi$
 由于$\Vec{EB}\bot \Vec{EA}$, $\Vec{ED}\bot \Vec{EA}$, 
 且$|\Vec{ED}|=|\Vec{EB}|=|\Vec{EA}|$, 
 所以
-\[\Vec{EB}=\left(0,-1\frac{1}{2}\right),\qquad \Vec{ED}=\left(9,1\frac{1}{2}\right)\]
+\[\Vec{EB}=\left(0,-1\frac{1}{2}\right),\qquad \Vec{ED}=\left(0,1\frac{1}{2}\right)\]
 \[\begin{split}
      \Vec{OB}=\Vec{OE}+\Vec{EB}=\left(-\frac{1}{2},1\right)+\left(0,-1\frac{1}{2}\right)=\left(-\frac{1}{2},-\frac{1}{2}\right)\\
      \Vec{OD}=\Vec{OE}+\Vec{ED}=\left(-\frac{1}{2},1\right)+\left(0,1\frac{1}{2}\right)=\left(-\frac{1}{2},2\frac{1}{2}\right)\\
@@ -1244,13 +1244,13 @@ $B(-5,4)$, $C(-6,-3)$, 求$\triangle ABC$的面积.
     \item 说明$\begin{vmatrix}
        a_x&a_y\\b_x&b_y 
     \end{vmatrix}=-\begin{vmatrix}
-        \b_x&b_y \\a_x&a_y
+        b_x&b_y \\a_x&a_y
     \end{vmatrix}$
     的几何意义．
     \item 说明$\begin{vmatrix}
         a_x&a_y\\a_x+b_x&a_y+b_y 
      \end{vmatrix}=\begin{vmatrix}
-         a_x&a_y \\\b_x&b_y
+         a_x&a_y \\ b_x&b_y
      \end{vmatrix}$的几何意义．
 \end{enumerate}
 \end{ex}
@@ -1296,7 +1296,7 @@ $B(-5,4)$, $C(-6,-3)$, 求$\triangle ABC$的面积.
     \item $A (2, 1) ,\quad  B (0, 5) ,\quad  C (4, -3)$
     \item $A (-1, 0) ,\quad  B (1, -2) ,\quad  C (3, -4)$
 \end{enumerate}
-\item 已知$\parallelogram{ABCD}$, $\overline{AC}$, $\overline{BD}$相交于$P$, 且$A(-1, 2)$, $B(3, 0)$, $P(0, 2)$, 求$B,C$两顶点的坐标．
+\item 已知$\parallelogram{ABCD}$, $\overline{AC}$, $\overline{BD}$相交于$P$, 且$A(-1, 2)$, $B(3, 0)$, $P(0, 2)$, 求$C,D$两顶点的坐标．
 \item 求证$\vec{m}=(-2, 3)$, $\vec{n}=(2,-3)$与$\vec{a}=(3, 2)$垂直并作图验证．
 \item 已知$\vec{a}=(2,-1)$, $\vec{b}=(-1, 1)$, 求$\vec{a}+\vec{b}$, $\vec{a}-\vec{b}$, $\vec{a}\cdot \vec{b}$, 
 $\left(3\vec{a}-2\vec{b}\right)\cdot\left(\vec{a}+4\vec{b}\right)$.
@@ -1487,7 +1487,7 @@ $b\ne 0$, 直线$\ell$垂直于$Y$轴（图
 \subsubsection{点方向式}
 已知点$P_0(x_0,y_0)$和
 $\vec{\mu}=(a,b)$, 且$a\ne 0$, 
-$\vec{b}\ne 0$（即$\vec{\mu}$和两条坐标轴
+$b\ne 0$（即$\vec{\mu}$和两条坐标轴
 都不平行），过$P_0$作直线$\ell\parallel \vec{\mu}$, 
 求直线$\ell$的方程（图5.21）.
 
@@ -1615,7 +1615,7 @@ $P_1P_2$的方程为
 
 \begin{solution}
     因$\Vec{AB}=(-a,b)$, 由两点式可得
-\[\frac{x-a}{-a}=\frac{y-b}{b}\]
+\[\frac{x-a}{-a}=\frac{y}{b}\]
 整理得
 \begin{equation}
     \frac{x}{a}+\frac{y}{b}=1
@@ -1754,7 +1754,7 @@ by+c=0$. 通常我们根据直线$\ell$的法向量$(a,b)$来规
 
 \begin{example}
     已知直线$\ell:\; 2x+3y-4=0$在坐标平面上，
-出直线$\ell$和它的法向量，并标出直线的方向．
+画出直线$\ell$和它的法向量，并标出直线的方向．
 \end{example}
 
 \begin{solution}
@@ -1823,10 +1823,10 @@ $\Vec{OP}=(2,1)$, $\vec{n}=(2,-3)$,
 \[(x_0,y_0)=(2,1)+t(2,-3)=(2+2t,1-3t)\]
 即
 \[x_0=2+2t,\qquad y_0=1-3t\]
-由于$M_0\in\ell$, 所以代入$\ell$的方程可得
+由于$M\in\ell$, 所以代入$\ell$的方程可得
 \[2(2+2t)-3(1-3t)+6=0\]
 解之得$t=-\frac{7}{13}$. 所以可求得$M$的坐标是
-\[x_0=2+2\left(\frac{7}{13}\right)=\frac{12}{13},\qquad y_0=1-3\left(-\frac{7}{13}\right)=\frac{34}{13}\]
+\[x_0=2+2\left(-\frac{7}{13}\right)=\frac{12}{13},\qquad y_0=1-3\left(-\frac{7}{13}\right)=\frac{34}{13}\]
 即：$M\left(\frac{12}{13},\; \frac{34}{13}\right)$
 \end{solution}
 
@@ -2017,7 +2017,7 @@ $y$的系数向量是单位法向量，且常数项的值为负数．
 由于法线式方程要求常数项一定是个负数，所以只要取根号
 前的符号使$\frac{c}{\pm\sqrt{a^2+b^2}}<0$
 即可．因此，当$c>0$时根号
-前负号；当$c<0$时根号前取正号．
+前取负号；当$c<0$时根号前取正号．
 
 在法线式方程中，当$p=0$时，直线通过原点，这时一
 般式方程中$c=0$, 于是方程变为
@@ -2331,7 +2331,7 @@ $\vec{n}_2=(a_2,b_2)$,
     所表示的直线有什么关系，并作出$k=0,1,2$的三
     条直线．
     \item 求证方程$y=3x+b$, 当$b$取各种不同的值时，它们
-    所表示的直线互相平行，作出$k=0,1,2$的直线．
+    所表示的直线互相平行，作出$b=0,1,2$的直线．
     \item 求证直线$\ell_1:\; x-5y+1=0$与直线$\ell_2:\; 5x+y-8=0$
     互相垂直．
      \item 求出直线$a_1x+b_1y+c_1=0$与$\frac{x-x_0}{a_2}=\frac{y-y_0}{b_2}$
@@ -2410,11 +2410,11 @@ $a_2x+b_2y+c_2=0$的交点的充要条件是存在两个不全为零
 这条直线又通过点$(1,2)$, 所以
 \[\lambda_1(3\x1-2\x2-6)+\lambda_2(1+2-5)=0\]
 由此得
-\[\lambda_1=-\frac{7}{2}\lambda_2\]
+\[\lambda_1=-\frac{2}{7}\lambda_2\]
 所以，所求的直线方程为
-\[\frac{7}{2}\lambda_2(3x-2y-6)+\lambda_2(x+y-5)=0\]
+\[-\frac{2}{7}\lambda_2(3x-2y-6)+\lambda_2(x+y-5)=0\]
 化简，得
-\[19x-16y+32=0\]
+\[x+11y-23=0\]
 \end{solution}
 
 \begin{example}
@@ -2654,7 +2654,7 @@ $\begin{cases}
 \end{cases}$
 \end{enumerate}
 \end{multicols}
-    \item 画出下列三元一次不等式组表示的区域．
+    \item 画出下列二元一次不等式组表示的区域．
 \begin{multicols}{2}
 \begin{enumerate}    
     \item $\begin{cases}
@@ -2717,7 +2717,7 @@ $aP_1+bP_2+cP_3=0$
 证明：$P$点的轨迹是直线．
 \item 证明由直线$x=0$, $y=m_1x+b_1$和$y=m_2x+b_2$所围成
 的三角形面积是
-$\frac{(b_2-b_1)^2}{|m_2-m_1|}\; (m_2\ne m_1)$
+$\frac{(b_2-b_1)^2}{2|m_2-m_1|}\; (m_2\ne m_1)$
 \item 已知$A(1,3)$, $B(4,10)$, $C(-4,8)$, $D(-2,0)$. 
 若一动点$P(x,y)$使$\triangle PAB$的面积等于$\triangle PCD$的面
 积．求证$P$点的轨迹是直线$15x-y+18=0$或$x+5y+
@@ -2743,7 +2743,7 @@ $ap+bq=0$.
 坐标都满足方程(\ref{circle1}); 反过来，一个点的坐标如果满足方
 程(\ref{circle1}), 那么它必在以$C$为圆心$r$为半径的圆上，方程
 (\ref{circle1})叫做以$C$为圆心，$r$为半径的\textbf{圆的方程}，如果圆心在原
-点（图3.38），那么圆的方程为
+点（图5.38），那么圆的方程为
 \begin{equation}
     x^2+y^2=r^2
 \end{equation}
@@ -3005,7 +3005,7 @@ $C_2$的两个交点，如果方程(\ref{circles1})是所求圆的方程，那�
 $x=-2$, $y=2$代入(\ref{circles1})得
 \[\lambda_1[(-2)^2+2^2-4(-2)-1]+\lambda_2[(-2)^2+2^2-8(-2)+11]=0\]
 由此，得
-\[\lambda_1=-\frac{3}{7}\lambda_2\]
+\[\lambda_1=-\frac{7}{3}\lambda_2\]
 所以，所求圆的方程为
 \[-7\lambda_2(x^2+y^2-4x-1)+3\lambda_2(x^2+y^2-8x+11)=0\]
 消去$\lambda_2$, 整理最后得所求圆的方程为
@@ -3036,7 +3036,7 @@ $x=-2$, $y=2$代入(\ref{circles1})得
 \end{multicols}
 
 \item 已知$A(-2,4)$, $B(8,-2)$. 求以$\overline{AB}$为直径的圆的方程．
-\item 已知$A(x_1,y_1)$, $B(x_2,y_2)$. 求证以$\overline{AB}$为直径的圈的方程可写为
+\item 已知$A(x_1,y_1)$, $B(x_2,y_2)$. 求证以$\overline{AB}$为直径的圆的方程可写为
 \[(x-x_1)(x-x_2)+(y-y_1)(y-y_2)=0\]
 \item 求以$C(3,5)$为圆心，且通过点$A(1,-3)$的圆的方程．
 \item 已知$A(4,-5)$, $B(-1,2)$, $C(11,0)$. 求证$A$、$B$、
@@ -3140,7 +3140,7 @@ $\frac{1}{2}$的点的轨迹的方程，并画出方程的图象．
 \[(1+k^2)x^2+2kbx+b^2-r^2=0\]
 由圆的切线定义可知：已知直线与圆相切的充要条件是上面
 方程有重根，即它的判别式
-\[\Delta=\sqrt{(2kb)^2-4(1+k^2)(b^2-r^2)}=0\]
+\[\Delta=(2kb)^2-4(1+k^2)(b^2-r^2)=0\]
 化简就可得到直线$\ell$与已知圆相切的条件是
 \[
     b^2=r^2(1+k^2)\quad \Rightarrow\quad   r=\pm\frac{b}{\sqrt{1+k^2}}
@@ -3155,7 +3155,7 @@ $\frac{1}{2}$的点的轨迹的方程，并画出方程的图象．
 
 \begin{example}
     已知$P_0(x_0,y_0)$是已知圆$x^2+y^2=r^2$外任一点，
-$PT$, $PV$与此已知圆相切于$T(x_1,y_1)$, $V(x_2,y_2)$两点，
+$P_0T$, $P_0V$与此已知圆相切于$T(x_1,y_1)$, $V(x_2,y_2)$两点，
 求直线$TV$的方程．
 \end{example}
 
@@ -3166,7 +3166,7 @@ $PT$, $PV$与此已知圆相切于$T(x_1,y_1)$, $V(x_2,y_2)$两点，
     x_1x+y_1y=r^2\\
     x_2x+y_2y=r^2
 \end{align}
-因为切线(5.35), (5.36)都通过$A$点，所以
+因为切线(5.35), (5.36)都通过$P_0$点，所以
 \begin{align}
     x_1x_0+y_1y_0=r^2\\
     x_2x_0+y_2y_0=r^2
@@ -3265,7 +3265,7 @@ $\overline{AP}^2+\overline{BP}^2=82$, 证明$P$点的轨迹是半径等于6的�
 斜率是$m$, 求证以$OC$作直径圆的方程是
 \[(1+m^2)(x^2+y^2)-2a(x+my)=0\]
 \item 如果$a,b$是常数，$\theta$是一动角，求证两直线$x\cos\theta+
-y\sin\theta=a$与$x\cos\theta-y\sin\theta=b$的交点的轨迹是一个圆
+y\sin\theta=a$与$x\sin\theta-y\cos\theta=b$的交点的轨迹是一个圆
 圆心在原点．半径等于$\sqrt{a^2+b^2}$.
 \item 已知一圆与$Y$轴相切于$A(0,-3)$且半径$r=2$, 求
 此圆的方程．
@@ -3296,7 +3296,7 @@ y\sin\theta=a$与$x\cos\theta-y\sin\theta=b$的交点的轨迹是一个圆
     分别相交于$C$、$D$两点，求$C$、$D$两点分割$AB$的比
     值．
     \item 已知$P(x,y)$, $A(x_1,y_1)$, $B(x_2,y_2)$且
-    \[x=x_1+t(x_2-xy),\qquad y=y_1+t(y_2-y_1)\]
+    \[x=x_1+t(x_2-x_1),\qquad y=y_1+t(y_2-y_1)\]
     求证：$P$点按定比$\mu=\frac{t}{1-t}$
     分割$\Vec{AB}$.
     \item 已知直线$\ell:\; ax+by+c=0$及$P_1(x_1,y_1)$, $P_2(x_2,  y_2)$两点，
@@ -3369,13 +3369,13 @@ y-8=0$相切．
 b_2)^2=r^2_2$正交（即在两圆公共点处的切线互相垂直）
 的条件是
 \[(a_1-a_2)^2+(b_1-b_2)^2=r_1^2+r_2^2\]
-\item 一条$AB=2a$的两个端点$A$和$B$分别在$X$轴和$Y$轴上滑
+\item 一条线段$AB=2a$的两个端点$A$和$B$分别在$X$轴和$Y$轴上滑
 动，求$\overline{AB}$中点$M$的轨迹．
 \item 已知$A(2,2)$, $\triangle OAC$是等边三角形，且$O$、$A$、
 $C$构成反时针排列，求点$C$的坐标．
 \item 已知$A(x_1,y_1)$, $B(x_2,y_2)$, $C(x_3,y_3)$, 求证
 $\triangle ABC$的重心到三顶点的距离平方和为最小．
-\item 已知$A(-5,4)$, 过点$A$作条直线使它与两坐标轴
+\item 已知$A(-5,4)$, 过点$A$作一条直线使它与两坐标轴
 相交所成的三角形的面积等于5个平方单位，求证这条
 直线的方程是$8x+5y+20=0$或$2x+5y-10=0$.
 \item 已知点$A(a,b)$在第1象限，过点$A$求一条直线使与坐
@@ -3401,7 +3401,7 @@ $\triangle ABC$的重心到三顶点的距离平方和为最小．
 \begin{enumerate}
 \item 不与$X$轴相交；    
 \item 和$X$轴交于两点；    
-\item 和$X$相切，
+\item 和$X$轴相切，
 \end{enumerate}
 问它的方程中的系数分别应该满足怎样的条件？
 
