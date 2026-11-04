@@ -29,7 +29,15 @@
     (i * step + step / 2, if calc.even(i) { 1pt } else { -1pt }),
     ((i + 1) * step, 0pt),
   ))
-  box(body + place(bottom + left, dy: 2.5pt, curve(stroke: 0.4pt, curve.move((0pt, 0pt)), ..segs)))
+  // 盒子的下边界固定在基线上，波浪线相对基线定位，不受外层 top-edge / bottom-edge 设置影响
+  set text(bottom-edge: "baseline")
+  box({
+    // 盒内自成一段，不能带正文的首行缩进，否则文字右移而波浪线不动。
+    // 这条 set 必须写在盒子里面：写在外面会把外层的段落切断
+    set par(first-line-indent: 0pt)
+    body
+    place(bottom + left, dy: 4pt, curve(stroke: 0.4pt, curve.move((0pt, 0pt)), ..segs))
+  })
 }
 
 // 分离系数法的竖式：nodes 为 (y, 内容) 列表，都从 x = 0 向右排；
@@ -220,9 +228,7 @@
     node((0, 0), $quad + a_2 b wide wide + (a_2 b + a_1) b$, pos: "right")
     node((-.5, 0), $+)$, pos: "left")
     line((-1, -.25), (6, -.25))
-    // 正文版心较窄时 CeTZ 会让节点里的公式折行，所以给这一行定为它的自然宽度
-    let last = [$a_2 + (a_2 b + a_1)$#h(1em)#uwave($+(a_2 b^2 + a_1 b + a_0)$)]
-    node((0, -.75), context box(width: measure(last).width + 1pt, last), pos: "right")
+    node((0, -.75), [$a_2 + (a_2 b + a_1)$#h(1em)#uwave($+(a_2 b^2 + a_1 b + a_0)$)], pos: "right")
     line((6, -.25), (6, 1))
     line((6, .25), (7, .25))
   }),

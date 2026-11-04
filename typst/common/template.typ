@@ -88,8 +88,16 @@
 #let blk(title, body) = titled-box(title, magenta-frame, left, body)
 
 // 选做题：在 enum 项目开头调用，题号左侧加“*”（同原书）
-// 放在题号左侧、与题号同一基线（零宽盒子里向左伸出）
-#let staritem = box(width: 0pt)[#h(-2.4em)\*]
+// LaTeX 各层列表的默认编号格式：1.  (a)  i.  A.
+#let latex-pattern(level) = ("1.", "(a)", "i.", "A.").at(calc.clamp(level, 1, 4) - 1)
+
+// 选做题：#staritem(n) 放在第 n 题的开头，“*”紧贴在题号“n.”左侧（零宽盒子里向左伸出，与题号同一基线）。
+// 0.6em 是 enum 的 body-indent；题号靠右对齐，所以“*”的位置要按本题题号的宽度算
+#let staritem(n, depth: 1) = context {
+  let label = numbering(latex-pattern(depth), n)
+  let w = measure(label).width + measure[\*].width + 0.6em.to-absolute()
+  box(width: 0pt)[#h(-w)\*]
+}
 
 // 抵消段首缩进（独立公式之后接着写的文字，同 LaTeX 不缩进）
 #let noindent = h(-2em)
@@ -118,8 +126,7 @@
 // 列表的层数（与 LaTeX 一样，练习框等 tcolorbox 内的列表接着框外的层数算）
 #let latex-level(n) = n.len()
 
-// LaTeX 各层的默认编号：1.  (a)  i.  A.
-#let latex-pattern(level) = ("1.", "(a)", "i.", "A.").at(calc.clamp(level, 1, 4) - 1)
+// LaTeX 各层的默认编号：1.  (a)  i.  A.（latex-pattern 定义在前面 staritem 之前）
 #let latex-enum(..n) = context numbering(latex-pattern(latex-level(n.pos())), n.pos().last())
 
 // 第 depth 层列表改用指定格式（对应 \begin{enumerate}[(1)]），pattern 为 none 时用默认格式；
@@ -154,17 +161,28 @@
     counter(math.equation).step()
     context "(" + str(chapter-number()) + "." + str(counter(math.equation).get().first()) + ")"
   }
-  block(width: 100%, above: 1em, below: 1em, grid(
-    columns: (1fr, auto, auto, 1fr),
-    row-gutter: 0.8em,
-    align: (right, right, left, right),
-    ..rows.pos().map(((l, r, n)) => (
-      [],
-      math.equation(block: false, numbering: none, math.display(l)),
-      math.equation(block: false, numbering: none, math.display(r)),
-      if n == true { number } else if n == false { [] } else { box(n) },
-    )).flatten(),
-  ))
+  let eq(x) = math.equation(block: false, numbering: none, math.display(x))
+  let rows = rows.pos().map(((l, r, n)) => (eq(l), eq(r), n))
+  block(width: 100%, above: 1em, below: 1em, layout(size => {
+    // 公式块居中后右侧剩下的宽度；说明放不下时同 LaTeX，移到下一行靠右排
+    let lw = calc.max(..rows.map(((l, r, n)) => measure(l).width))
+    let rw = calc.max(..rows.map(((l, r, n)) => measure(r).width))
+    let side = (size.width - lw - rw) / 2
+    let cells = ()
+    for (l, r, n) in rows {
+      let mark = if n == true { number } else if n == false { none } else { box(n) }
+      let fits = mark == none or n == true or measure(mark).width + 1em.to-absolute() <= side
+      cells += ([], l, r, if fits and mark != none { mark } else { [] })
+      if not fits { cells.push(grid.cell(colspan: 4, align: right, mark)) }
+    }
+    // 整块宽于版心时缩小（LaTeX 版中这些公式排得下）
+    fit-width(grid(
+      columns: (1fr, auto, auto, 1fr),
+      row-gutter: 0.8em,
+      align: (right, right, left, right),
+      ..cells,
+    ))
+  }))
 }
 
 // 不按 display 样式排的分数（对应 \tfrac）
@@ -237,6 +255,9 @@
   set text(font: fonts.serif, size: 10.5pt, lang: "zh", region: "cn", top-edge: "bounds", bottom-edge: "bounds")
   // 与 LaTeX 版一致：段落之间不额外加距离（spacing 与行距相同）
   set par(justify: true, first-line-indent: (amount: 2em, all: true), leading: 0.56em, spacing: 0.56em)
+  // 两端对齐时允许字距略有伸缩（xeCJK 的汉字间距也可伸缩）。否则行内有长公式断不开时，
+  // 多出的空隙只能全加在一行的汉字之间，字距被拉得很大
+  set par(justification-limits: (tracking: (min: -0.02em, max: 0.03em)))
   // 列表项中的后续段落不缩进（同 LaTeX 的 \listparindent = 0）
   show enum: set par(first-line-indent: 0pt)
   show list: set par(first-line-indent: 0pt)

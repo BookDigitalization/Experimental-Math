@@ -343,7 +343,7 @@ class Converter:
         # 占位符里可能还套着占位符，反复替换到没有为止
         while True:
             new = re.sub(r'upright\(\s*"?P\s*H\s*M\s*(\d+)"?\s*\)', lambda m: self.slots[int(m.group(1))], typ)
-            new = re.sub(r"#smallcaps\[PH(\d+)\]", lambda m: code_slot(self.slots[int(m.group(1))]), new)
+            new = re.sub(r"#smallcaps\[PH(\d+)\]", lambda m: indent_like(new, m.start(), code_slot(self.slots[int(m.group(1))])), new)
             if new == typ:
                 break
             typ = new
@@ -355,6 +355,7 @@ class Converter:
         # 列表项以独立公式开头时，LaTeX 的题号单独占一行、公式排在下一行
         typ = re.sub(r"^( *)\+ \$ ", lambda m: "%s+ #h(0pt)\n%s  $ " % (m.group(1), m.group(1)), typ, flags=re.M)
         typ = re.sub(r'^( *)#set enum\(numbering: "([^"]*)", start: (\d+)\)', enum_at, typ, flags=re.M)
+        typ = number_staritems(typ)
         typ = escape_after_calls(typ)
         typ = re.sub(r"\n{3,}", "\n\n", typ)
         return typ
@@ -427,6 +428,30 @@ def split_item_multicols(tex: str) -> str:
     return "".join(out)
 
 
+def number_staritems(typ: str) -> str:
+    """给每个 #staritem; 填上它的题号：#staritem(13);，模板据此把“*”紧贴在题号左侧。
+    按 pandoc 输出的缩进追踪各层列表：同一缩进的“+ ”是同一列表的各项；
+    出现缩进更浅的非空行时，更深的列表结束。起始编号取自紧挨列表前的 #set enum(…, start: n)"""
+    counts: dict[int, int] = {}       # 缩进 → 当前项号
+    pending_start: dict[int, int] = {}
+    out = []
+    for line in typ.split("\n"):
+        if line.strip():
+            indent = len(line) - len(line.lstrip(" "))
+            for k in [k for k in counts if k > indent or (k == indent and not line.lstrip().startswith("+ "))]:
+                del counts[k]
+            m = re.match(r" *#set enum\(.*start: (\d+)", line)
+            if m:
+                pending_start[indent] = int(m.group(1))
+            if line.lstrip().startswith("+ "):
+                counts[indent] = counts.get(indent, pending_start.pop(indent, 1) - 1) + 1
+                depth = indent // 2 + 1
+                arg = "%d" % counts[indent] + (", depth: %d" % depth if depth > 1 else "")
+                line = line.replace("#staritem;", "#staritem(%s);" % arg, 1)
+        out.append(line)
+    return "\n".join(out)
+
+
 def enum_at(m: re.Match) -> str:
     """pandoc 的 #set enum(numbering: "(1)", start: n) 会作用到嵌套的各层，改为只作用于本层。
     pandoc 每嵌套一层列表缩进 2 格，由此得出层数。pandoc 对默认格式也写出 "1."（如 \\setcounter 之后），
@@ -439,6 +464,14 @@ def enum_at(m: re.Match) -> str:
     pat = "none" if pattern == "1." and start > 1 else '"%s"' % pattern
     opt = ", start: %d" % start if start != 1 else ""
     return "%s#set enum(numbering: enum-at(%d, %s%s))" % (indent, depth, pat, opt)
+
+
+def indent_like(text: str, pos: int, s: str) -> str:
+    """多行的占位内容换回时，续行按占位符所在行的缩进对齐（否则列表项中的表格等会顶格，
+    number_staritems 按缩进追踪列表时会误以为列表结束）"""
+    line_start = text.rfind("\n", 0, pos) + 1
+    indent = re.match(r" *", text[line_start:]).group(0)
+    return s.replace("\n", "\n" + indent) if indent else s
 
 
 def code_slot(s: str) -> str:
