@@ -4531,6 +4531,12 @@ $A$点作$AQ\parallel DB$交$\overline{CB}$延长线于$Q$.
 \item     一平方米($\rm m^2$)$=\underline{\qquad\qquad}$平方分米($\rm dm^2$)
 \item    一平方分米($\rm dm^2$)$=\underline{\qquad\qquad}$平方厘米($\rm cm^2$)
 \item 一平方厘米($\rm cm^2$)$=\underline{\qquad\qquad}$平方毫米($\rm mm^2$)
+\item 一平方丈$=\underline{\qquad\qquad}$平方尺
+\item 一平方尺$=\underline{\qquad\qquad}$平方寸
+\item 一平方寸$=\underline{\qquad\qquad}$平方分
+\item 一平方米$=\underline{\qquad\qquad}$平方尺
+\item 一分$=\underline{\qquad\qquad}$平方尺$=\underline{\qquad\qquad}$厘
+\item 一平方米$=\underline{\qquad\qquad}$亩
 \end{enumerate}
 
     \item 工程技术人员通常用“加半移三”的办法把平方米数换
@@ -4575,7 +4581,7 @@ $A$点作$AQ\parallel DB$交$\overline{CB}$延长线于$Q$.
 好是3个单位长，$ABCD$正好被12个单位正方形填满．可
 是，$\overline{AB}$、$\overline{BC}$的长不见得都能用整数表示，甚至有的线段长
 不能用有理数来表示，那么上述公式当$a$、$b$不是正整数时是
-否还成立呢：所以长方形面积的讨论并不是同学想像的那么
+否还成立呢？所以长方形面积的讨论并不是同学想像的那么
 简单，以至我们现在还不能严格证明它．下面我们仅对$a$、
 $b$都是整数或都是分数时加以证明．
 
@@ -4631,7 +4637,7 @@ $a=\frac{m}{n}$, $b=\frac{\ell}{n}$，
     \end{figure}
 
 
-    有了长方形面积公式后，一些其它与长方形有关连的图
+    有了长方形面积公式后，一些其他与长方形有关连的图
     形的面积就很容易求得．
 
     平行四边形的一边叫底，这条边与其对边之间的公垂线
@@ -4665,13 +4671,13 @@ $a=\frac{m}{n}$, $b=\frac{\ell}{n}$，
 
 \begin{proof}
     引$AF\bot AB$交$CD$的延长线于$F$, 
-    则$AF\parallel BE$, 四边形$ABEF$是矩形．
+    则$AF\parallel BE$, 四边形$ABEF$是矩形（为什么？）．
 
     在直角三角形$ADF$与$BCE$中，
 
 $\because\quad \overline{AF}=\overline{BE},\quad \overline{AD}=\overline{BC}$,
 
-$\therefore\quad     \triangle ADF\cong \triangle BCE$
+$\therefore\quad     \triangle ADF\cong \triangle BCE$（为什么？）
 
 $\therefore\quad \triangle ADF$的面积$=\triangle BCE$的面积（性质1）
 
@@ -4889,7 +4895,7 @@ $\therefore\quad \triangle ABC$的面积$=\frac{1}{2}ah$.
 
 我国古代约二千年前就掌握了直角三角形三边之间的关
 系．中国古算书记载有“勾三股四弦五”的规律．我国通常
-“直角三角形中较短的直角边叫做勾，较长的直角边叫做股，斜边叫做弦（图3.80）．那么“勾三股四弦五”的意思是：如果一
+把直角三角形中较短的直角边叫做勾，较长的直角边叫做股，斜边叫做弦（图3.80）．那么“勾三股四弦五”的意思是：如果一
 个直角三角形的两条直角边长是3和4个长度单
 位，那么斜边长一定是5个长度单位，3、4、5三个数之间满
 足关系：
@@ -5083,8 +5089,8 @@ $BCFG$的面积．
 三边的长．
 
 \begin{example}
-    已知：直角$\triangle ABC$, $\angle B=90^{\circ}$, $AB=12$cm,
-$BC=5$cm (图3.84).
+    已知：直角$\triangle ABC$, $\angle B=90^{\circ}$, $\overline{AB}=12$cm,
+$\overline{BC}=5$cm (图3.84).
 
 求：$\overline{AC}$之长．
 \end{example}
@@ -5173,6 +5179,7 @@ $\therefore\quad \angle C=\angle C'=90^{\circ}$
 \end{scope}
 \begin{scope}[xshift=6cm]
     \draw(0,0)node[below]{$B'$}--node[below]{$a$}(3,0)node[below]{$C'$}--(3,4)node[above]{$A'$}--node[left]{$c$}(0,0);
+    \draw(2.7,0)--(2.7,.3)--(3,.3);
 \end{scope}
 \end{tikzpicture}
     \caption{}
@@ -5378,7 +5385,7 @@ $\therefore\quad \overline{AM}^2=\frac{1}{4}\x [2(b^2+c^2)-a^2]$
     \caption*{第5题}
 \end{figure}
 
-\item 象图中那样作出一系列的
+\item 像图中那样作出一系列的
 直角三角形，$\overline{AB_2}$、$\overline{AB_3}$、
 $\overline{AB_4}$、$\overline{AB_5}$分别是$\overline{AB_1}$的
 多少倍？
@@ -5440,7 +5447,7 @@ $\overline{AB}$叫做比的\textbf{前项}，$\overline{CD}$叫做比的\textbf{
 不等于0的数）．
 
 \begin{blk}{性质1：比例的基本性质}
-\[\frac{a}{b}=\frac{c}{d}\quad \Rightarrow\quad ad=bc\]    
+\[\frac{a}{b}=\frac{c}{d}\quad \Leftrightarrow\quad ad=bc\]
 \end{blk}
 
 \begin{blk}{性质2：反比定理}
@@ -5469,7 +5476,7 @@ $\overline{AB}$叫做比的\textbf{前项}，$\overline{CD}$叫做比的\textbf{
 
 \begin{proof}
 证明性质1：
-\begin{enumerate}
+\begin{enumerate}[(i)]
     \item 先证$\frac{a}{b}=\frac{c}{d}$是$ad=bc$的充分条件．
 
     因为已知$\frac{a}{b}=\frac{c}{d}$，所以两边同乘以$bd$, 即得$ad=bc$.
@@ -5478,8 +5485,8 @@ $\overline{AB}$叫做比的\textbf{前项}，$\overline{CD}$叫做比的\textbf{
 因为已知$ad=bc$, 所以两边同除以$bd$, 即得$\frac{a}{b}=\frac{c}{d}$．
 \end{enumerate}
 
-由(a)、(b)所以有：
-\[\frac{a}{b}=\frac{c}{d}\quad \Rightarrow\quad ad=bc\]    
+由(i)、(ii)所以有：
+\[\frac{a}{b}=\frac{c}{d}\quad \Leftrightarrow\quad ad=bc\]
 
 证明性质6：
 
@@ -5618,7 +5625,7 @@ $\therefore\quad \frac{\overline{AE}}{\overline{BE}}=\frac{\overline{ED}}{\overl
 中，$\angle A=\angle A'$、$\angle B=\angle B'$、$\angle C=\angle C'$、$\angle D=\angle D'$, 
 并且$\overline{AB}:\overline{A'B'}=\overline{BC}:\overline{B'C'}=\overline{CD}:\overline{C'D'}=\overline{DA}:\overline{D'A'}$, 则
 这两个四边形相似．记作“四边形$ABCD\backsim$四边形
-$A'B'C'D'$. 
+$A'B'C'D'$”.
 
 \begin{blk}
     {定义} 相似多边形（包括相似三角形）对应边的比叫做
@@ -5828,7 +5835,7 @@ $\frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{BC}}{\overline{B'C'}}=\fr
 
 \begin{proof}
     设$\overline{AB}>\overline{A'B'}$, 在$\overline{AB}$上取一点$D$, 使$\overline{AD}=\overline{A'B'}$, 过
-$D$作$DE\parallel BC$交$\overline{AC}$于$E$, 则$\triangle ADE\backsim \triangle ABC$
+$D$作$DE\parallel BC$交$\overline{AC}$于$E$, 则$\triangle ADE\backsim \triangle ABC$（为什么？）
 
 已知$\frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{BC}}{\overline{B'C'}}=\frac{\overline{AC}}{\overline{A'C'}}$，但$\overline{A'B'}=\overline{AD}$，因此：
 \[\frac{\overline{AB}}{\overline{AD}}=\frac{\overline{BC}}{\overline{B'C'}}=\frac{\overline{AC}}{\overline{A'C'}}\]
@@ -5882,13 +5889,13 @@ $\angle A=\angle A'$, 并且$\frac{\overline{AB}}{\overline{A'B'}}=\frac{\overli
 \begin{proof}
 设$\overline{AB}>\overline{A'B'}$, 在$\overline{AB}$
 上取一点$D$, 
-使$\overline{AD}=\overline{A'B'}$, 过$D$作$DE\parallel BC$交$\overline{AC}$于$E$, 则$\triangle ABC\backsim \triangle ADE$
+使$\overline{AD}=\overline{A'B'}$, 过$D$作$DE\parallel BC$交$\overline{AC}$于$E$, 则$\triangle ABC\backsim \triangle ADE$（为什么？）
 
 已知$\frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{AC}}{\overline{A'C'}}$，
 但$\overline{AD}=\overline{A'B'}$, 因此：
 \[\frac{\overline{AB}}{\overline{AD}}=\frac{\overline{AC}}{\overline{A'C'}}\]
 
-又$\because\quad \frac{\overline{AB}}{\overline{AD}}=\frac{\overline{AC}}{\overline{AE}}$
+又$\because\quad \frac{\overline{AB}}{\overline{AD}}=\frac{\overline{AC}}{\overline{AE}}$（为什么？）
 
 $\therefore\quad \frac{\overline{AC}}{\overline{A'C'}}=\frac{\overline{AC}}{\overline{AE}}$
 
@@ -5925,11 +5932,11 @@ $\therefore\quad \angle AED=\angle C$.
 
 又：$\because\quad \angle A=\angle A$
 
-$\therefore\quad \triangle AED\backsim \triangle ACB$
+$\therefore\quad \triangle AED\backsim \triangle ACB$（为什么？）
 
-$\therefore\quad \frac{\overline{AD}}{\overline{AB}}=\frac{\overline{AE}}{\overline{AC}}$
+$\therefore\quad \frac{\overline{AD}}{\overline{AB}}=\frac{\overline{AE}}{\overline{AC}}$（为什么？）
 
-$\therefore\quad \overline{AD}\cdot \overline{AC}=\overline{AE}\cdot \overline{AB}$ 
+$\therefore\quad \overline{AD}\cdot \overline{AC}=\overline{AE}\cdot \overline{AB}$（为什么？）
 \end{proof}
 
 \begin{figure}[htp]\centering
@@ -5995,7 +6002,7 @@ $\therefore\quad \angle ADB=\angle FBD$.
 
 又$\because\quad \angle DEA=\angle BEF$,
 
-$\therefore\quad \triangle ADE\backsim \triangle FBE$，因此：
+$\therefore\quad \triangle ADE\backsim \triangle FBE$（为什么？），因此：
 \begin{equation}
     \frac{\overline{EF}}{\overline{EA}}=\frac{\overline{BE}}{\overline{ED}}
 \end{equation}
@@ -6019,7 +6026,7 @@ $\frac{\overline{AO}}{\overline{OD}}=\frac{\overline{BO}}{\overline{OC}}$等于�
 分，把螺丝固定在刻度3的地方，那么
 $\frac{\overline{AO}}{\overline{OD}}=\frac{\overline{BO}}{\overline{OC}}=3$，由于$\angle AOB=\angle COD$，
 
-$\therefore\quad \triangle AOB\backsim \triangle COD$
+$\therefore\quad \triangle AOB\backsim \triangle COD$（为什么？）
 
 $\therefore\quad \overline{CD}=\frac{1}{3}\overline{AB}$
 
@@ -6152,13 +6159,13 @@ $E$、$F$.
 \begin{proof}
 $\because\quad  \overline{DE}\parallel \overline{BC}$
 
-$\therefore\quad \triangle ADE\backsim \triangle ABC$
+$\therefore\quad \triangle ADE\backsim \triangle ABC$（为什么？）
 
-$\therefore\quad \frac{\overline{AB}}{\overline{AD}}=\frac{\overline{AC}}{\overline{AE}},\qquad \frac{\overline{AB}-\overline{AD}}{\overline{AD}}=\frac{\overline{AC}-\overline{AE}}{\overline{AE}}$
+$\therefore\quad \frac{\overline{AB}}{\overline{AD}}=\frac{\overline{AC}}{\overline{AE}}$（为什么？），\quad $\frac{\overline{AB}-\overline{AD}}{\overline{AD}}=\frac{\overline{AC}-\overline{AE}}{\overline{AE}}$（为什么？）
 
 即：$\frac{\overline{BD}}{\overline{AD}}=\frac{\overline{EC}}{\overline{AE}}$
 
-$\therefore\quad \frac{\overline{AD}}{\overline{DB}}=\frac{\overline{AE}}{\overline{EC}}$
+$\therefore\quad \frac{\overline{AD}}{\overline{DB}}=\frac{\overline{AE}}{\overline{EC}}$（为什么？）
 \end{proof}
 
 \begin{figure}[htp]\centering
@@ -6224,7 +6231,7 @@ $\therefore\quad \frac{\overline{AD}}{\overline{DB}}=\frac{\overline{AE}}{\overl
 \begin{proof}
     过$D$点引$\ell$的平行线与直线$BE$、$CF$分别交于$G$、
 $H$两点．
-则$$\frac{\overline{DG}}{\overline{GH}}=\frac{\overline{DE}}{\overline{EF}}$$
+则$$\frac{\overline{DG}}{\overline{GH}}=\frac{\overline{DE}}{\overline{EF}}\quad\text{（为什么？）}$$
 
 又$\because\quad $四边形$ABGD$和四边形$BCHG$都是平行四边形．
 
@@ -6330,7 +6337,8 @@ $DE\parallel BC$.
 \begin{proof}
 $\because\quad DF\parallel EG$,
 
-$\therefore\quad \frac{\overline{AD}}{\overline{DE}}=\frac{\overline{AF}}{\overline{FG}}$
+$\therefore\quad \frac{\overline{AD}}{\overline{DE}}=\frac{\overline{AF}}{\overline{FG}}$（为什么？）
+
 即：
 \[\frac{a}{b}=\frac{c}{\overline{FG}}\]
 
@@ -7102,7 +7110,7 @@ $\frac{\overline{OA'}}{\overline{OA}}=k<0$. 于是位
 当放缩尺绕着固定点$S$转动时，四边形$ABCD$的形状和
 位置虽然随时改变，但各边的长不变，因此它始终是一个平
 行四边形．根据上面所说的可以知道，不管$A$点移动到什么
-地方，$S$、$A$、$E$总在一条直线上，$A$、$E$在$SC$的同旁，
+地方，$S$、$A$、$E$总在同一条直线上，$A$、$E$在$SC$的同旁，
 并且$\frac{\overline{SE}}{\overline{SA}}=\frac{\overline{SC}}{\overline{SD}}$
 
 我们可以预先把螺丝钉固定在适当的小孔$B$和$D$处，使$\frac{\overline{SC}}{\overline{SD}}$
@@ -7136,7 +7144,7 @@ $k$叫作\textbf{$T'$对$T$的相似比}（也叫放大率或缩小率）．
 \begin{enumerate}
     \item 以五边形为例，证明相似多边形的对角线的比等于相似比．
     \item 已知相似多边形的相似比，周长的比，面积比中的一个，
-    填写其它两个：
+    填写其他两个：
 \begin{center}
 \begin{tabular}{c|cccccccc}
     \hline
@@ -7220,7 +7228,7 @@ $\overline{AB}=\frac{1}{k}\overline{A'B'}$.
 \end{figure}
 
 \subsubsection{测绘具有多边形形状地段的平面图}
-要测绘多边形$ABCDE$形状地块的平面（图3.118），
+要测绘多边形$ABCDE$形状地块的平面图（图3.118），
 可以按照下面的步骤进行．
 
 \begin{figure}[htp]
@@ -7455,7 +7463,7 @@ $\overline{AC}=7$cm, $\overline{AD}$, $\overline{AD'}$分别是$\angle A$和它�
 $\overline{DD'}$的长．
 \item 已知$P$是$\angle A$内的一个定点，求经过$P$作一条直线，分
 别交$\angle A$的两边于$B$、$C$, 使$\overline{AB}:\overline{AC}=3:2$.
-\item $OC$是$\angle AOB$内的一条射线，求证从$OC$上任意两 点到
+\item $OC$是$\angle AOB$内的一条射线，求证从$OC$上任意两点到
 $\angle AOB$的两边的距离的比一定．
 
 \begin{figure}[htp]\centering
@@ -7590,7 +7598,7 @@ $\frac{\overline{BX}}{\overline{XC}}\cdot \frac{\overline{CY}}{\overline{YA}}\cd
     \end{figure}
 
 \item 从$\triangle ABC$的一边$\overline{BC}$的延长线上的一点$D$, 引直线与
-其它二边$\overline{AC}$、$\overline{AB}$相交于$E$、$F$, 若$\angle AEF=\angle AFE$, 则$\overline{BD}:\overline{CD}=\overline{BF}:\overline{CE}$.
+其他二边$\overline{AC}$、$\overline{AB}$相交于$E$、$F$, 若$\angle AEF=\angle AFE$, 则$\overline{BD}:\overline{CD}=\overline{BF}:\overline{CE}$.
 
 
 \item 在$\triangle ABC$之边$\overline{AB}$、$\overline{AC}$上取$E$、$F$两点，使$\overline{EB}=2\overline{EA}$, $\overline{AF}=2\overline{FC}$, 延长$\overline{EF}$、$\overline{BC}$交于$H$, 求$\overline{BH}:\overline{CH}$.
