@@ -17,10 +17,12 @@
 | [`math5/`](math5/) | 第五册 | 1984 年 6 月 | 立体几何、向量、解析几何、圆锥曲线、极坐标与参数方程 |
 | [`math6/`](math6/) | 第六册 | 1986 年 5 月 | 复数、排列组合与二项式定理、概率论初步、统计学简介；极限与连续、微商、积分、微积分基本定理 |
 
+[`common/preamble.tex`](common/preamble.tex) 是六册共用的导言区（宏包、例题与练习框、章节编号格式等），改动会影响全部 6 册。
+
 每册目录下：
 
-- `main.tex`：合订本主文件；
-- `main - nA.tex` / `main - nB.tex`：拆分后的上、下册主文件（不随 Release 发布，需要时自行编译）；
+- `main.tex`：本册主文件。依次是本册专用的宏包与命令、封面信息和各章列表，直接编译得到合订本；
+- `main - nA.tex` / `main - nB.tex`：上、下册入口，只有几行，先选定分册再读入 `main.tex`，所以和合订本共用同一份导言区和章节列表（拆分版不随 Release 发布，需要时自行编译）；
 - `1.tex`、`2.tex`……：各章正文；`preface.tex`：前言；
 - `fig/`：从扫描版中截取的点阵图（矢量图均直接以 TikZ / tkz-euclide / CircuiTikZ 绘制在正文中）。
 
@@ -71,7 +73,7 @@ xelatex main.tex
 
 ### macOS 字体
 
-macOS 下若 ctex 默认字体不可用，可在主文件导言区加入（参见上游 [math6-2#10](https://github.com/jamesfang8499/math6-2/issues/10)）：
+macOS 下若 ctex 默认字体不可用，可在 `common/preamble.tex` 末尾加入（参见上游 [math6-2#10](https://github.com/jamesfang8499/math6-2/issues/10)）：
 
 ```latex
 \usepackage{xeCJK}

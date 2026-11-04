@@ -1,0 +1,140 @@
+% 六册共用的导言区。各册 main.tex 在 \documentclass 之后 \input 本文件，
+% 再追加本册专用的宏包与命令。改动这里会影响全部 6 册，改完请逐册编译检查。
+%
+% 宏包加载顺序会影响结果（如 hyperref 应较晚加载），调整顺序前请先确认。
+
+\usepackage[margin=2.5cm]{geometry}
+
+% 脚注用带圈数字 ①②③……，每页重新编号
+\usepackage{pifont}
+\usepackage[perpage,symbol*]{footmisc}
+\DefineFNsymbols{circled}{{\ding{192}}{\ding{193}}{\ding{194}}
+{\ding{195}}{\ding{196}}{\ding{197}}{\ding{198}}{\ding{199}}{\ding{200}}{\ding{201}}}
+\setfnsymbol{circled}
+
+\usepackage{ulem}
+
+\usepackage{amsmath,amsfonts,mathrsfs,amssymb}
+\usepackage{graphicx}
+
+\usepackage[font=bf,labelfont=bf,labelsep=quad]{caption}
+
+\usepackage{tikz}
+
+\usepackage{ntheorem}
+\theoremseparator{\;}
+
+\usepackage{blkarray}
+\usepackage{bm}
+\usepackage[colorlinks=true, linkcolor=black]{hyperref}
+
+\usepackage{enumerate}
+
+\theoremstyle{plain}
+\theoremheaderfont{\normalfont\bfseries}
+\theorembodyfont{\normalfont}
+
+\usepackage[framemethod=tikz]{mdframed}
+
+% ---- 例题、解答等环境 ----
+\newtheorem{example}{\bf 例}[chapter]
+\newenvironment{solution}{\noindent {\bf 解：}}{}
+\newenvironment{analyze}{\noindent {\bf 分析：}}{}
+\newenvironment{rmk}{\noindent {\bf 注意：}}{}
+\newenvironment{note}{\noindent {\bf 说明：}}{}
+
+\renewcommand{\proofname}{\bf 证明：}
+\newenvironment{proof}{{\noindent \bf 证明：}}{}%{\hfill $\square$\par}
+
+% ---- 常用数学命令 ----
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\Pr}{\mathbb{P}}
+\newcommand{\EP}{\mathbb{E}^{\mathbb{P}}}
+\newcommand{\EQ}{\mathbb{E}^{\mathbb{Q}}}
+\newcommand{\dif}{\,{\rm d}}
+\newcommand{\Var}{{\rm Var}}
+\newcommand{\Cov}{{\rm Cov}}
+\newcommand{\x}{\times}
+
+% ---- “练习”框与带标题的框 ----
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+\tcbuselibrary{most}
+
+\newtcolorbox{ex}[1][]
+  {colback = white, colframe = cyan!75!black, fonttitle = \bfseries,
+    colbacktitle = cyan!85!black, enhanced,
+    attach boxed title to top center={yshift=-2mm},breakable,
+    title=练习, #1}
+
+\newtcolorbox{blk}[2][]
+  {colback = white, colframe = magenta!75!black, fonttitle = \bfseries,
+    colbacktitle = magenta!85!black, enhanced,
+    attach boxed title to top left={xshift=5mm, yshift=-2mm},breakable,
+    title=#2, #1}
+
+% ---- 章节编号：第一节 / 一、/（一） ----
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+
+\ctexset {
+section = {
+	name = {第,节},
+ 	number = \chinese{section}},
+subsection = {
+	name = {,、\hspace{-1em}},
+	number = \chinese{subsection}
+},
+subsubsection = {
+	name = {（,）\hspace{-1em}},
+	number = \chinese{subsubsection},
+}
+}
+
+\renewcommand{\contentsname}{目~~录}
+
+\newcommand{\poly}{\polynomial[reciprocal]}
+
+\usepackage{mathtools}
+
+\setlength{\abovecaptionskip}{0.cm}
+\setlength{\belowcaptionskip}{-0.cm}
+
+\usetikzlibrary{decorations.pathmorphing, patterns}
+\usetikzlibrary{calc, patterns, decorations.markings}
+\usetikzlibrary{positioning, snakes}
+
+\usepackage{yhmath}   % \wideparen
+\usepackage{longdivision}
+\usepackage{polynom}
+\usepackage{polynomial}
+\usepackage{cancel}
+
+\renewcommand{\frac}{\dfrac}
+\newcommand{\oc}{$^{\circ}{\rm C}$}
+
+\usepackage{multicol}
+\usepackage{cases}
+
+% ---- 合订本 / 上册 / 下册 ----
+% “main - nA.tex”“main - nB.tex”先 \def\BookPart{A} 或 {B}，再 \input{main.tex}；
+% 直接编译 main.tex 时 \BookPart 未定义，得到合订本。main.tex 中用：
+%   \ifPartA ... \fi      合订本和上册包含的内容
+%   \ifPartB ... \fi      合订本和下册包含的内容
+%   \ifFullBook ... \fi   只有合订本包含的内容
+%   \BookPartSuffix       书名后缀：合订本为空，上、下册为“（上）”“（下）”
+%   \PartChoice{合订本}{上册}{下册}   按版本取不同的文字（如出版日期）
+\newif\ifFullBook
+\newif\ifPartA
+\newif\ifPartB
+\ifdefined\BookPart\else\def\BookPart{}\fi
+\def\BookPartNameA{A}
+\def\BookPartNameB{B}
+\ifx\BookPart\BookPartNameA
+  \PartAtrue \def\BookPartSuffix{（上）}
+\else\ifx\BookPart\BookPartNameB
+  \PartBtrue \def\BookPartSuffix{（下）}
+\else
+  \FullBooktrue \PartAtrue \PartBtrue \def\BookPartSuffix{}
+\fi\fi
+\newcommand{\PartChoice}[3]{\ifFullBook#1\else\ifPartA#2\else#3\fi\fi}
