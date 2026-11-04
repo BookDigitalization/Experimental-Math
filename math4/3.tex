@@ -9,21 +9,20 @@
     形如$a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x +a_0$
 的式子，叫做$x$的一元多项式（简称多项式）．其中，$a_i$ $(i=0, 1, 2,\ldots,n)$是已知实数，$n$是已知非负整数．
 \end{blk}
-.
 一元多项式一般简记为$f(x)$或$g(x)$等，即
 $$f (x) =a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x +a_0$$
 
 在多项式$f(x)$中，$a_ix^i$ $(i=0, 1, 2,\ldots,n)$叫做$f(x)$的$i$次项，$a_i$叫做$i$次项的系数；当$a_i\ne 0$时，多项式$f(x)$称为一元$i$次多项式，并把它的次数记作${\rm deg} f(x)=i$．
 
 特别地，当$n=0$时，多项式成为
-$f (x) =a$，
+$f (x) =a_0$，
 这时，若$a_0\ne 0$, 就叫做零次多项式；若$a_0=0$就叫做零多项式，它的次数不定义．
 
 例如，
-$f_1(x)=7x^3-1$叫做一元三多项式，$f_2(x)=-5$叫做零次多项式，$f_3(x)=0$叫做零多项式，它不定义次数．
+$f_1(x)=7x^3-1$叫做一元三次多项式，$f_2(x)=-5$叫做零次多项式，$f_3(x)=0$叫做零多项式，它不定义次数．
 
 \begin{rmk}
-    在初中我们把多项式中的字母．称为未知数，也称为元．现在我们还可以用函数的观点把它称为自变数，甚至可以更一般地称为不定元．它和数作运算时满足数系运算通性，即满足加法和乘法的结合律、交换律以及乘法对加法的分配律；同时，零与1的运算特性、指数运算律仍然适合．
+    在初中我们把多项式中的字母称为未知数，也称为元．现在我们还可以用函数的观点把它称为自变数，甚至可以更一般地称为不定元．它和数作运算时满足数系运算通性，即满足加法和乘法的结合律、交换律以及乘法对加法的分配律；同时，零与1的运算特性、指数运算律仍然适合．
 \end{rmk}
 
 这样一来，任何一个$n$次多项式，经过整理合并同类项，总可以写成标准形式
@@ -45,7 +44,7 @@ f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x +a_0\quad (a_n\ne 0)
 \begin{blk}{定义2}
 如果用一个已知数$b$去代替多项式中的元$x$, 就得到 
 \[f(b)=a_nb^n+a_{n-1}b^{n-1}+\cdots+a_1b +a_0\]
-那么，数$f(b)$就叫做当$x=b$时$f(a)$的值．
+那么，数$f(b)$就叫做当$x=b$时$f(x)$的值．
 \end{blk}
 
 \begin{example}
@@ -63,7 +62,7 @@ f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x +a_0\quad (a_n\ne 0)
 \end{solution}
 
 \begin{example}
-    已知$f(x)=x^2+2x+8$, 求$f(-x)$, $f(x+1)$．
+    已知$f(x)=x^2+2x+3$, 求$f(-x)$, $f(x+1)$．
 \end{example}
 
 \begin{analyze}
@@ -133,9 +132,9 @@ g (x) &=b_nx^n+b_{n-1}x^{n-1}+\cdots+b_1x+b_0.
 \[\begin{cases}
     \frac{35}{4}=\frac{35}{4}a\\
     -168=-42b\\
-    -30=-45c
+    -30=30c
 \end{cases}\Rightarrow\quad \begin{cases}
-    a=1\\b=4\\c=\frac{2}{3}
+    a=1\\b=4\\c=-1
 \end{cases}\]
 \end{solution}
 
@@ -145,13 +144,13 @@ g (x) &=b_nx^n+b_{n-1}x^{n-1}+\cdots+b_1x+b_0.
     什么叫零次多项式？什么叫零多项式？它们的区别是什么？
     \item 把下列多项式整理成降幂标准式，并分别求出x=1, 10，t时的值
     \begin{enumerate}
-        \item $f (2) =\frac{1}{2}x^3-\frac{1}{3}x+\frac{1}{3}x^3-\frac{3}{4}x^2-\frac{1}{2}x-7+\frac{1}{6}x^3$
+        \item $f (x) =\frac{1}{2}x^3-\frac{1}{3}x+\frac{1}{3}x^3-\frac{3}{4}x^2-\frac{1}{2}x-7+\frac{1}{6}x^3$
         \item $g(x)=7+6x+4x^3+5x^2+3x^4+x^6+2x^5$
     \end{enumerate}  
     \item 试求下列等式成立的充要条件
     \begin{enumerate}
-        \item $x^2+b_{n+1}x^{n-1}+\cdots+b_1x+b_0=x^n-3x-1$；
-        \item $x^2+b_{n+1}x^{n-1}+\cdots+b_1x+b_0=x^m+1$
+        \item $x^n+b_{n-1}x^{n-1}+\cdots+b_1x+b_0=x^n-3x-1$；
+        \item $x^n+b_{n-1}x^{n-1}+\cdots+b_1x+b_0=x^m+1$
     \end{enumerate}
 \end{enumerate}
 \end{ex}
@@ -168,7 +167,7 @@ g (x) &=b_nx^n+b_{n-1}x^{n-1}+\cdots+b_1x+b_0.
 系数在同一个数系范围内的两个多项式$f(x)$与$g(x)$的和$f(x)+g(x)$与积$f(x)g(x)$仍然是一个多项式，而且它们的系数仍在原来数系范围内．这就是多项式加法与乘法的封闭性．
 
 例如，两个有理系数多项式
-\[f(x)=2x^3+\frac{1}{2}x^2-x+1,\qquad g(x)=3x^2+2x-3\]
+\[f(x)=2x^3+\frac{1}{2}x^2-7x+1,\qquad g(x)=3x^2+2x-3\]
 的和与积
 \[\begin{split}
     f(x)+g(x)&=2x^3+\frac{7}{2}x^2-5x-2\\
@@ -184,7 +183,7 @@ g (x) &=b_nx^n+b_{n-1}x^{n-1}+\cdots+b_1x+b_0.
     \item 满足结合律，即对于任意多项式$f(x),g(x),h(x)$总有
 \[\begin{split}
    [ f (x) +g (x) ] +h (x) &=f (x) +[g (x) +h (x) ]\\
-    [f (x) \cdot g (x) ] \cdot h (x) &=f (x) \cdot g (x) \cdot [h (x) ]
+    [f (x) \cdot g (x) ] \cdot h (x) &=f (x) \cdot [g (x) \cdot h (x) ]
 \end{split}\]    
 这就使我们在进行加或乘法的运算中，可以省略括号而按任何顺序进行．
 
@@ -193,7 +192,7 @@ g (x) &=b_nx^n+b_{n-1}x^{n-1}+\cdots+b_1x+b_0.
 这就使我们在进行加或乘法的运算中，可以任意交换参加运算的多项式的位置．
 \item 满足乘法对加法的分配律，即
 \[f (x) \cdot  [g (x) +h (x) ] =f (x) \cdot g (x) +f(x)\cdot h(x)\]
-或者 \[[f(x)+g(x)]\cdot h(x) =f(x)\cdot h(z) +g(x)\cdot h(x)\]
+或者 \[[f(x)+g(x)]\cdot h(x) =f(x)\cdot h(x) +g(x)\cdot h(x)\]
 \item 存在零多项式．与零次多项式1, 对任意多项式
 $f(x)$, 它们满足以下特性：
 \[\begin{split}
@@ -213,7 +212,7 @@ $f(x)$, 它们满足以下特性：
 
 \subsubsection{两多项式的和与积的次数}
 
-设$f(x)$是$n$次多项式，$g(x)$是$m$次多项式，那么它们的和$f(x)+g(y)$也是一个多项式，这个多项式的次数$p$有以下几种情形：
+设$f(x)$是$n$次多项式，$g(x)$是$m$次多项式，那么它们的和$f(x)+g(x)$也是一个多项式，这个多项式的次数$p$有以下几种情形：
 \begin{itemize}
     \item 当$m\ne n$时，$p=\max\{m,n\}$
     \item 当$m=n$时，$p\le n$
@@ -339,7 +338,7 @@ $f(x)$, $g(x)$, $q(x)$和$r(x)$分别称为被除式、除式、商式和余式�
 \node at (0,0)[right]{$-\frac{3}{2}$};
 \end{tikzpicture}
 \end{center}
-所以$f(x)$除以$\left(x+\frac{3}{2}\right)$得商式$4x^3+2x^2-6x+2$，余式$-3$．即所求的商式为$q(x)=4x^3+2x^2-6x+2$，余式为$r(x)=-3$．
+所以$f(x)$除以$\left(x+\frac{3}{2}\right)$得商式$4x^3+2x^2-6x+2$，余式$-3$．即所求的商式为$q(x)=2x^3+x^2-3x+1$，余式为$r(x)=-3$．
 \end{solution}
 
 容易看出以上两个例子中所得的结果，都符合带余除法恒等式
@@ -369,7 +368,7 @@ $f(x) =q(x)\cdot g (x) + r(x) $
 
 首先用$g(x)$的最高次项去除$f(x)$的最高次项，可得到商$q_1(x)$与余$f_1(x)$，使等式
 \begin{equation}
-    f (x) =q_1 (x)\cdot y(x)+f_1(x)
+    f (x) =q_1 (x)\cdot g(x)+f_1(x)
 \end{equation}
 成立，其中$f_1(x)$至少比$f(x)$降低一次，即${\rm deg}f_1(x)<{\rm deg}f(x)$，或$f_1(x)=0$．这时可能有两种情况出现：
 \begin{enumerate}
@@ -401,7 +400,7 @@ $f(x) =q(x)\cdot g (x) + r(x) $
 综上所述，由等式(3.3)、(3.4)、……($k$)，就可以得到
 \[\begin{split}
    f(x)&=q_1(x)\cdot g(x)+f_1(x)\\
-   &=[g_1(x)+q_2(x)]\cdot g(x)+f_2(x)\\ 
+   &=[q_1(x)+q_2(x)]\cdot g(x)+f_2(x)\\ 
 &=\cdots\cdots\\
 &=[q_1(x)+q_2(x)+\cdots+q_k(x)]\cdot g(x)+f_k(x)
 \end{split}\]
@@ -415,7 +414,7 @@ $f(x) =q(x)\cdot g (x) + r(x) $
 显然，这样定理的条件被满足．存在性证毕．
 \end{enumerate}
 
-下面再证$q(x)$与$r(x)q$的唯一性．假设除$q(x),r(x)$外，还存在另外一组$q'(x),r'(x)$也满足
+下面再证$q(x)$与$r(x)$的唯一性．假设除$q(x),r(x)$外，还存在另外一组$q'(x),r'(x)$也满足
 \begin{enumerate}
     \item $f(x)=q'(x)\cdot g(x)+r'(x)$，且${\rm deg}r'(x)<{\rm deg}g(x)$或$r'(x)=0$．结合已有的$q(x)$, $r(x)$满足．
     \item $f(x)=q(x)\cdot g(x)+r(x)$，且${\rm deg}r(x)<{\rm deg}g(x)$或$r(x)=0$就可以得出
@@ -563,7 +562,7 @@ g(x)&=px^3+(p^2-q)x^2+rx-q^2+s
 试求证：$f(x)$除以$h(x)$, $g(x)$除以$h(x)$分别得到的余式或同时为零，或同时不为零．
 
 \item 如果已知
-$f(x)=q(x)\cdot g(x)+r(x)$, 且${\rm deg}r(x)>{\rm deg}g(x)$或$r(x)=0$，$k$是非零常数，试问：
+$f(x)=q(x)\cdot g(x)+r(x)$, 且${\rm deg}r(x)<{\rm deg}g(x)$或$r(x)=0$，$k$是非零常数，试问：
 \begin{enumerate}
     \item $kf(x)$除以$g(x)$的商式、余式各是什么？
     \item $f(x)$除以$k\cdot g(x)$商式、余式又是什么？
@@ -601,7 +600,7 @@ $f(x)=q(x)\cdot g(x)+r(x)$, 且${\rm deg}r(x)>{\rm deg}g(x)$或$r(x)=0$，$k$是
 \end{proof}
 
 \begin{example}
-    试求$f(x)$除以$g(x)=k(x+\alpha)$所得的余式．
+    试求$f(x)$除以$g(x)=kx+\alpha$所得的余式．
 \end{example}
 
 \begin{solution}
@@ -636,7 +635,7 @@ f(x)=q(x)(x-\alpha)(x-\beta)+r(x)
 \end{equation}
 令$x=\beta$，由(3.6)得
 \begin{equation}
-    f(\alpha)=a\beta+b
+    f(\beta)=a\beta+b
 \end{equation}
 将(3.7), (3.8)联立可以解出
 \[a=\frac{f(\alpha)-f(\beta)}{\alpha-\beta},\qquad b=\frac{\alpha f(\beta)-\beta f(\alpha)}{\alpha-\beta}\]
@@ -655,7 +654,7 @@ f(x)=q(x)(x-\alpha)(x-\beta)+r(x)
 \item $k(x^2-1)f(x)+3x-1$除以$x-m$的余式．
 \end{enumerate}
 
-\item 如果$f(x)$除以$-2$的余式为2, 除以$x+3$的余式为
+\item 如果$f(x)$除以$x-2$的余式为2, 除以$x+3$的余式为
 4, 那么$f(x)$除以$x^2+x-6$的余式是什么？
 \end{enumerate}
 \end{ex}
@@ -720,9 +719,9 @@ $f(x)=2x^2-7x+3$, 由于$f\left(\frac{1}{2}\right)=f(3)=0$, 因而就说$\frac{1
 \[f (\alpha_2) = (\alpha_2-\alpha_1) \cdot q_1(\alpha_2)\]
 其中，因$f(\alpha_2)=0$, $\alpha_2-\alpha_1\ne 0$, 所以
 \[q_1(\alpha_2)=0\]
-再根据因式定理，就得出$\alpha_2$是$g_1(x)$的根，即
+再根据因式定理，就得出$\alpha_2$是$q_1(x)$的根，即
 \begin{equation}
-q_1(x)=(a-\alpha_2)\cdot q_2(x)
+q_1(x)=(x-\alpha_2)\cdot q_2(x)
 \end{equation}
 将(3.10)代入(3.9)得
 \begin{equation}
@@ -732,7 +731,7 @@ q_1(x)=(a-\alpha_2)\cdot q_2(x)
 \begin{equation}
     f (x) = (x-\alpha_1 ) (x-\alpha_2)\cdots(x-\alpha_{k-1})\cdot q_{k-1}(x) 
 \end{equation}
-将$x=\alpha_k$代入(3.11)式，得
+将$x=\alpha_k$代入(3.12)式，得
 \[f (\alpha_k) = (\alpha_k -\alpha_1)\cdots (\alpha_k-\alpha_{k-1})\cdot q_{k-1}(\alpha_k)\]
 其中，已知$f(\alpha_k)=0$, 且$(\alpha_k-\alpha_1),(\alpha_{k}-\alpha_2),\ldots,(\alpha_k-\alpha_{k-1})$都不等于零，因而有 $q_{k-1}(\alpha_k)=0$．
 
@@ -750,22 +749,22 @@ q_1(x)=(a-\alpha_2)\cdot q_2(x)
 
 \begin{example}
 证明恒等式
-\[a^2(b-c)+b^2(c-a)+c^2(a-b)=(a-b)(b-c)(c-a)\]
+\[a^2(b-c)+b^2(c-a)+c^2(a-b)=-(a-b)(b-c)(c-a)\]
 \end{example}
 
 \begin{proof}
 等式左边是一个三元多项式，可以分别将$a,b,c$看作元，同时将$b,c$; $a,c$; $b,a$看作常数，依次将$a=b$, $b=c$, $c=a$代入，分别得到
 \[\begin{split}
    b^2 (b-c) +b^2 (c-b) +c^2 (b-b) =0\\
-   a^2 (c-c) +c^2 (c-a) +c^2 (a-b) =0\\
-a^2(b-a)= b^2(a-a) + a^2(a-b) =0 
+   a^2 (c-c) +c^2 (c-a) +c^2 (a-c) =0\\
+a^2(b-a)+ b^2(a-a) + a^2(a-b) =0 
 \end{split}\]
 
 因此，根据因式定理可得
 \[a^2 (b-c) +b^2 (c-a) +c^2 (a-b)=k (a-b) (b-c)(c-a)\]
-由多项式恒等不难断定$k=1$. 所以
+由多项式恒等不难断定$k=-1$. 所以
 \[a^2 (b-c) +b^2 (c-a) +c^2 (a-b)
-= (a-b) (b-c)(c-a)\]
+= -(a-b) (b-c)(c-a)\]
 \end{proof}
 
 \begin{example}
@@ -812,11 +811,11 @@ $\alpha_1, \alpha_2, \ldots, \alpha_n$
 \begin{equation}
     f (x) = (x-\alpha_1) (x-\alpha_2)\cdots (x-\alpha_n)\cdot q(x)
 \end{equation}
-但由于${\rm deg}f(x)=n$, 且${\rm deg}[(x-\alpha_1)(x-\alpha_2)\cdots(x-\alpha_n)]=n$, 所以(3.14)式中$q(x)$只能是零次多项式，即${\rm deg}g(x)=0$, 再由多项式相等的定义，可知
+但由于${\rm deg}f(x)=n$, 且${\rm deg}[(x-\alpha_1)(x-\alpha_2)\cdots(x-\alpha_n)]=n$, 所以(3.14)式中$q(x)$只能是零次多项式，即${\rm deg}q(x)=0$, 再由多项式相等的定义，可知
 \[q (x) =a_n\ne 0\]
 
 若再选任一个与$\alpha_i,\; (i=1, 2,\ldots,n)$都不相等的数$\alpha_{n+1}$代入(3.14)式，得
-\[f(\alpha_{n+1})=(\alpha_{n+1}-\alpha_{1})(\alpha_{n+1}-\alpha_2)\cdots (\alpha_{n+1}-\alpha_n)\cdot \alpha_n\]
+\[f(\alpha_{n+1})=(\alpha_{n+1}-\alpha_{1})(\alpha_{n+1}-\alpha_2)\cdots (\alpha_{n+1}-\alpha_n)\cdot a_n\]
 其中，由$\alpha_i,\; (i=1, 2,\ldots,n,n+1)$都不相等，可知
 \[\alpha_{n+1}-\alpha_i\ne 0\;  (i=1, 2,\ldots,n),\quad \text{且}\quad a_n\ne 0\]
 $\therefore\quad f(\alpha_{n+1}) \ne 0$
@@ -825,7 +824,7 @@ $\therefore\quad f(\alpha_{n+1}) \ne 0$
 \end{proof}
 
 \begin{blk}{推论2}
-如果多项式$f(x)$与$g(x)$的次数都不大于$n$, 且有$n+1$个两两不相等的数$\alpha1,\alpha2,\ldots,a_{n+1}$能使这两个多项式相应的值相等，即   
+如果多项式$f(x)$与$g(x)$的次数都不大于$n$, 且有$n+1$个两两不相等的数$\alpha_1,\alpha_2,\ldots,\alpha_{n+1}$能使这两个多项式相应的值相等，即   
 \[f(\alpha_i)=g(\alpha_i)\quad (i=1,2,\ldots,n,n+1)\]
  那么，这两个多项式必定相等，即$f(x)=g(x)$．
 \end{blk}
@@ -882,7 +881,7 @@ g (x) = (x^2-3x+1)^2$．
 
 由此方程组可消去$m,n$，就得
 \[\begin{cases}
-    a=-\frac{1}{3}x=\frac{1}{2}e\ne 0\\
+    a=-\frac{1}{3}c=\frac{1}{2}e\ne 0\\
     b=-\frac{1}{3}d=\frac{1}{2}f
 \end{cases}\Rightarrow\quad \begin{cases}
     6a=-2c=3e\ne 0\\
@@ -906,7 +905,7 @@ g (x) = (x^2-3x+1)^2$．
 已知$f(x)=x^3+3x^2+x+1$, 求$f(x-1)$, $f(x+1)$, $f (-x^2)$
 \item 已知$f(x-1)=x^3+3x^2+x-1$, 求$f(x)$, $f(-x)$．
 \item 已知$f(x)=x^3+ax^2+5x-4$, 且$f(2)=f(-3)$, 试求$a$及$f(2)$．
-\item 若有一多项式$g(x)$, 已知$g(-1)=1$, $g(4)=11$, 试求$f(x)$被$(x+1)(x-4)$除后的余数．
+\item 若有一多项式$g(x)$, 已知$g(-1)=1$, $g(4)=11$, 试求$g(x)$被$(x+1)(x-4)$除后的余数．
 
 \item 如果$f(x)$被$2x-3$除以后余数为4, 试求多项式
 $(x^2+1)\cdot f(x)+7$被$2x-3$除的余数．
@@ -916,7 +915,7 @@ $(x^2+1)\cdot f(x)+7$被$2x-3$除的余数．
 \item 用余式定理及其推论证明：
 \[\begin{split}
    & (b-c) (x-b)(x-c)+(c-a)(x-c)(x-a)\\
-&\qquad + (a-b) (x-a)(z-b)+(a-b)(b - c)(c-a)=0
+&\qquad + (a-b) (x-a)(x-b)+(a-b)(b - c)(c-a)=0
 \end{split}\]
 \item 证明$2b^2c^2+2c^2a^2+2a^2b^2-a^4-b^4-c^4$ 能被$(a+b+c)(b+c-a)(c+a-b)(a+b-c)$整除，
 并求其商式．
@@ -936,8 +935,8 @@ $(x^2+1)\cdot f(x)+7$被$2x-3$除的余数．
 \end{enumerate}
 
 \section{最高公因式与辗转相除法}
-关于两个多项式的公因式、最高公因式的概念，我们在初中代数中已经学过，同时，我们还学习过用辗转相除、分解因式两种方法去求最高公因式，还学习了两个多项式的公倍式与最低公倍式以及求最低公倍式的方法，并得出了最低，公倍式与最高公因式之间的关系
-\[[f(x),g(x)]=\frac{k\cdot f(x)\cdot g(x)}{(f(x)\cdot g(x))}\]
+关于两个多项式的公因式、最高公因式的概念，我们在初中代数中已经学过，同时，我们还学习过用辗转相除、分解因式两种方法去求最高公因式，还学习了两个多项式的公倍式与最低公倍式以及求最低公倍式的方法，并得出了最低公倍式与最高公因式之间的关系
+\[[f(x),g(x)]=\frac{k\cdot f(x)\cdot g(x)}{(f(x),g(x))}\]
 
 由于最高公因式与辗转相除法在多项式理论中占有重要地位，本节将重点进一步加深学习这两个内容．
 
@@ -969,9 +968,9 @@ $f(x)=x(2x-1)^4(x+3)^3$，$g(x)=x^2(2x-1)^2(x+2)^2$
 \end{example}
 
 \begin{solution}
-    公因式为$x,2x-1$，$x$的指数$f(x)$中的1，$2x-1$的指数取$g(x)$中的2，得：
+    公因式为$x,2x-1$，$x$的指数取$f(x)$中的1，$2x-1$的指数取$g(x)$中的2，得：
 \[(f(x),g(x))=k\cdot x (2x-1)^2\]
-$k$是待定系数，为使$(f(x),g(x))$的首期系数为1，显然应取$k=\frac{1}{4}$，所以
+$k$是待定系数，为使$(f(x),g(x))$的首项系数为1，显然应取$k=\frac{1}{4}$，所以
 \[(f(x),g(x))=\frac{1}{4}  x (2x-1)^2\]
 \end{solution}
 
@@ -1054,7 +1053,7 @@ $d(x)$也是$f(x)$的因式，因而也是$f(x),g(x)$的公因式；
 \end{enumerate}
 \end{proof}
 
-这样一个定理对于求两个已知多项式的最高公因式起到一些什么作用呢？两个多项式中总有一个多项式的次数不大于另一个多项式的次数，不妨设$g(x)$设的次数不大于$f(x)$的次数，则因在带余除法中，$r(x)$的次数小于$g(x)$的次数或$r(x)=0$. （注意，定理2并不要求$r(x)$满足带余除法中对余式的要求，但带余除法中的余式满足定理2中$r(x)$的条件）这就说明$r(x)$的次数小于$f(x)$的次数，把求$\big(f(x), g(x)\big)$转化为求$\big(g(x), r(x)\big)$实际上是一个降次的过程．
+这样一个定理对于求两个已知多项式的最高公因式起到一些什么作用呢？两个多项式中总有一个多项式的次数不大于另一个多项式的次数，不妨设$g(x)$的次数不大于$f(x)$的次数，则因在带余除法中，$r(x)$的次数小于$g(x)$的次数或$r(x)=0$. （注意，定理2并不要求$r(x)$满足带余除法中对余式的要求，但带余除法中的余式满足定理2中$r(x)$的条件）这就说明$r(x)$的次数小于$f(x)$的次数，把求$\big(f(x), g(x)\big)$转化为求$\big(g(x), r(x)\big)$实际上是一个降次的过程．
 
 次数是降低了，那么有没有把握求出$\big(g(x),r(x)\big)$呢？
 现在可以对$g(x)$, $r(x)$再进行带余除法，求出又一个余
@@ -1149,8 +1148,8 @@ $g(x)=\poly{4,2,-18,3,-5}$
 \end{solution}
 
 在习题3.1第7题中，我们知道对被除式$f(x)$乘以非零常数$k$, 给予$r(x)$的影响也不过是乘一个常数$k$, 而我们所求的最后的$r_s(x)$本来就得乘以$\frac{1}{c}$（$c$是$r_s(x)$的首项系数）才成为
-$\big(f(x),g(x)\big)$, 所以实际上对$\big(f(x),g(x)\big)$完全没有影响，即使对部分余式$f_1(x)$(如例3.19)的$-14x^4+3x^3-15x^2+9x-2$乘以非零常数$k$, 对$\big(f(x),g(x)\big)$也没有影响，因为$\big(f(x),g(x)\big)=\big(f_1(x),g(x)\big)$在辗转相除法中，实际上我们已把求$\big(f(x),g(x)\big)$转化为求$\big(f_1(x),g(x)\big)$, (注意在定理2中，并未要求${\rm deg}r(x)<{\rm deg}g(x)$，
-所以$f_1(x)$又起一个被除式的角色，因而乘以非零常数$k$，对于所得的$r(x)$仍不过相关一个常数因子，而这一点上面已说明对$\big(f(x),g(x)\big)$不会有影响的．
+$\big(f(x),g(x)\big)$, 所以实际上对$\big(f(x),g(x)\big)$完全没有影响，即使对部分余式$f_1(x)$(如例3.19)的$-14x^4+32x^3-15x^2+9x-2$乘以非零常数$k$, 对$\big(f(x),g(x)\big)$也没有影响，因为$\big(f(x),g(x)\big)=\big(f_1(x),g(x)\big)$在辗转相除法中，实际上我们已把求$\big(f(x),g(x)\big)$转化为求$\big(f_1(x),g(x)\big)$, (注意在定理2中，并未要求${\rm deg}r(x)<{\rm deg}g(x)$，
+所以$f_1(x)$又起一个被除式的角色，因而乘以非零常数$k$，对于所得的$r(x)$仍不过相差一个常数因子，而这一点上面已说明对$\big(f(x),g(x)\big)$不会有影响的．
 
 辗转相除法是一个运算过程较繁的方法．如果$f(x)$, $g(x)$很容易分解因式，或者说如果$f(x)$与$g(x)$这两个多项式中至少有一个很容易分解成不可约因式的乘积，我们当然宁愿用分解因式的方法来求这两个多项式的最高公因式．但是多项式的因式分解并不总能做到．例如把一个三次多项式与一个四次多项式相乘，求出作为乘积的七次多项式是轻而易举的；但反过来，给出一个七次多项式，要求分解成两个次数较低的多项式的乘积，一般是很难做到的．相比之下，辗转相除法尽管较繁，却是有效、能算，总能求出两个多项式的最高公因式．再进一步考察任何一个多项式的不可约因式分解的表达式，是否总存在．如果存在，是否唯一，我们在以前的学习中并未作出结论．将来的进一步学习可以对这个问题作出肯定的答案．而这个结论要通过一系列命题的推导才能得出，辗转相除法之有效、能算恰恰是推导这一系列命题的基础之一．因此，从理论上来，辗转相除法是不可替代的重
 要的数学方法．
@@ -1250,7 +1249,7 @@ $h(x)=\poly{1,3,1,5,6}$
 
 \subsection{余式定理推论的应用举例}
 \begin{example}
-    已知$f(2)=8$, $f(3)=f(4)=f(5)=0$, 求次数不大于3的多项式$f(x)$．
+    已知$f(2)=3$, $f(3)=f(4)=f(5)=0$, 求次数不大于3的多项式$f(x)$．
 \end{example}
 
 \begin{analyze}
@@ -1287,7 +1286,7 @@ $h(x)=\poly{1,3,1,5,6}$
 \end{split}\]
 \end{solution}
 
-以上两例说明在已知函数值有若干个为零时，充分应用因式定理可以减少对待定系数的繁杂的计算量．（若一开始就令$f(x) =a_3a^3+a_2x^2+a_1x+a_0$, 就得解关于待定系数 $a_3,a_2,a_1,a_0$的四元一次方程组）．在已知函数值中没有零，或者很少为零的情况下，我们可以把所求的多项式$f(x)$分解为若干个多项式的和其中每一个多项式的函数值只有一个非零数．
+以上两例说明在已知函数值有若干个为零时，充分应用因式定理可以减少对待定系数的繁杂的计算量．（若一开始就令$f(x) =a_3x^3+a_2x^2+a_1x+a_0$, 就得解关于待定系数 $a_3,a_2,a_1,a_0$的四元一次方程组）．在已知函数值中没有零，或者很少为零的情况下，我们可以把所求的多项式$f(x)$分解为若干个多项式的和其中每一个多项式的函数值只有一个非零数．
 
 
 \begin{example}
@@ -1327,7 +1326,7 @@ $f_1(x),f_2(x),f_3(x),f_4(x)$，$f_i(\alpha_j)=\delta_{ij}c_i$
     \end{cases}\quad  (i,j=1, 2, 3, 4)$$
 则显然有$f(x)=f_1(x)+f_2(x)+f_3(x)+f_4(x)$.
 还可以简记为$$f(x)=\sum^4_{i=1}f_i(x)$$
-其中，$f_i(x)=k(x-\alpha_2)(x-\alpha_3)(x-\alpha_4)$
+其中，$f_1(x)=k_1(x-\alpha_2)(x-\alpha_3)(x-\alpha_4)$
 
 $\because\quad f_1(\alpha_1)=c_1$
 
@@ -1396,7 +1395,7 @@ $f (\alpha_i) =b_i,\; (i=1, 2,\ldots,n,n+1)$，则：
 则由因式定理可知
 \[f_i(x)=c_i(x-\alpha_1)\cdots(x-\alpha_{i-1})(x-\alpha_{i+1})\cdots (x-\alpha_{n+1})\]
 由$f_i(\alpha_i)=b_i$定出$c_i$的值，可得
-\[c_i=\frac{b_1}{(\alpha_i-\alpha_1)\cdots(\alpha_i-\alpha_{i-1})(\alpha_i-\alpha_{i+1})\cdots (\alpha_i-\alpha_{n+1})}\]
+\[c_i=\frac{b_i}{(\alpha_i-\alpha_1)\cdots(\alpha_i-\alpha_{i-1})(\alpha_i-\alpha_{i+1})\cdots (\alpha_i-\alpha_{n+1})}\]
 $\therefore\quad f_i(x)=b_i\frac{(x-\alpha_1)\cdots(x-\alpha_{i-1})(x-\alpha_{i+1})\cdots (x-\alpha_{n+1})}{(\alpha_i-\alpha_1)\cdots(\alpha_i-\alpha_{i-1})(\alpha_i-\alpha_{i+1})\cdots (\alpha_i-\alpha_{n+1})}$
 
 显然有 $f(x)=\displaystyle\sum^{n+1}_{i=1} f_i(x)$.
@@ -1445,7 +1444,7 @@ $n!=1\x2\x\cdots \x n$, 并规定$0!=1$.
 \begin{solution}
     由已知$f(0)=0$, $f(15)=0. 259$, $f(30)=0. 5$, $f(45)=0. 707$, $f(60)=0. 866$, 求$f(23)$．
 
-方法同例3.26
+方法同例3.27
 \[\begin{split}
     f(23)&=0. 259\x \frac{23 (23-30) (23-45)(23-60)}{15 (15-30) (15-45)(15-60)}\\
     &\quad +0. 5\x \frac{23 (23-15) (23-45)(23-60)}{30 (30-15) (30-45)(30-60)}\\
@@ -1524,7 +1523,7 @@ $f(x)$的$k$阶导数，记作$f^{(k)}(x)$，即：
 \end{split}\]
     \end{solution}    
 
-    显然，一元$n$次多项式的$n$阶导数是一个非零常数（零次多项式），从$n+1$阶系数开始，以后各高阶导数都是零；
+    显然，一元$n$次多项式的$n$阶导数是一个非零常数（零次多项式），从$n+1$阶导数开始，以后各高阶导数都是零；
     特别地，零次多项式的导数等于零；而零多项式的各阶导数仍是零．
 
     总之，多项式的导数仍然是多项式．而且对于系数在整数，有理数，实数范围内的各多项式集合，求导数这种运算也是封闭的．
@@ -1635,7 +1634,7 @@ $f(x)$的$k$阶导数，记作$f^{(k)}(x)$，即：
 \end{enumerate}
 \end{multicols}
 
-    \item 对于$f(x)=a_3x^3+a_2x^2+ax+a_0,\quad g(x)=b_2x^2+b_1x+b_0$
+    \item 对于$f(x)=a_3x^3+a_2x^2+a_1x+a_0,\quad g(x)=b_2x^2+b_1x+b_0$
     
     验证导数的性质3是成立的．
 
@@ -1748,7 +1747,7 @@ f(1+t)&=(a_0+a_1 +a_2 +a_3) +(a_1 +2a_2+3a_3)t \\
 \item 直接换元，令$x=x_0+t$代入$f(x)$, 并展开整理成$t$
 的升幂排列形式
 \[\begin{split}
-    f (x_0+t) &=a_3(x_0+t) +a_2(x_0+t)^2+a_1(x_0+t)+a_0\\
+    f (x_0+t) &=a_3(x_0+t)^3 +a_2(x_0+t)^2+a_1(x_0+t)+a_0\\
 &=(a_0 +a_1x_0 +a_2x_0^2+a_3x_0^3) + (a_1+2a_2x_0+3a_3 x^2_0)t\\
 &\qquad + (a_2+3a_3x_0) t^2+a_3t^3
 \end{split} \]
@@ -1763,9 +1762,9 @@ f(1+t)&=(a_0+a_1 +a_2 +a_3) +(a_1 +2a_2+3a_3)t \\
 $c_1 =f' (x_0)$．
 
 换元展开式中的二次项系数 $a_2+3a_3x_0$正是$x=x_0$时，
-$f(x)$的二阶导数$f'(x)=6a_3x+2a_2$的值的一半：$\frac{1}{2}f''(x_0)=a_2+3a_3x_0$．例3.32及例3.33(1)也是如此；$c_2=\frac{1}{2}f''(x_0)$．
+$f(x)$的二阶导数$f''(x)=6a_3x+2a_2$的值的一半：$\frac{1}{2}f''(x_0)=a_2+3a_3x_0$．例3.32及例3.33(1)也是如此；$c_2=\frac{1}{2}f''(x_0)$．
 
-换元展开式中的三次项系数$c_3$, 也容易分析出它正是当$x=x_0$时，$f(x)$的三阶导数$f'''(x)=6a_1$的值的六分之一，$\frac{1}{6}f'''(x_0)=a_3$, 可验证例3.33(1)也是如此；
+换元展开式中的三次项系数$c_3$, 也容易分析出它正是当$x=x_0$时，$f(x)$的三阶导数$f'''(x)=6a_3$的值的六分之一，$\frac{1}{6}f'''(x_0)=a_3$, 可验证例3.33(1)也是如此；
 $c_3=\frac{1}{6}f''' (x_0)$．
 
 这样一来，利用导数概念，换元展开式就可以写成：
@@ -1775,7 +1774,7 @@ $c_3=\frac{1}{6}f''' (x_0)$．
 同样，例3.33(1)的换元展开写成
 \[f (1+t) =f (1) +\frac{f'(1)}{1!}t+\frac{f''(1)}{2!}t^2+\frac{f'''(1)}{3!}t^3\]
 例3.32 也可以写成
-\[f (1+t) =f (1) +\frac{f'(1)}{1!}t+\frac{f''(1)}{2!}t^2=-1+3t-2t^2\]
+\[f (1+t) =f (1) +\frac{f'(1)}{1!}t+\frac{f''(1)}{2!}t^2=-1+3t+2t^2\]
 
 实际上，这正是多项式换元展开式的一般规律，推广到$n$次多项式就得到重要的泰勒定理．
     
@@ -1783,7 +1782,7 @@ $c_3=\frac{1}{6}f''' (x_0)$．
  一元$n$次多项式$f(x)$在点$x_0$
 的换元展开式为
 \begin{equation}
-    f(x_0+t)=f(x_0)+\frac{f'(x_0)}{1!}t+\frac{f''(x_0)}{2!}t^2+\cdots+\frac{f'''(x_0)}{n!}t^n
+    f(x_0+t)=f(x_0)+\frac{f'(x_0)}{1!}t+\frac{f''(x_0)}{2!}t^2+\cdots+\frac{f^{(n)}(x_0)}{n!}t^n
 \end{equation}   
 \end{blk}
 
@@ -1797,7 +1796,7 @@ $c_3=\frac{1}{6}f''' (x_0)$．
 \begin{center}
 \begin{tabular}{lll}
 $f(x)=\poly{1,0,-2,3,5}$  &  $f(1)=7$  \\
-$f'(x)=\poly{4,0,4,3}$  &  $f'(1)=3$  \\
+$f'(x)=\poly{4,0,-4,3}$  &  $f'(1)=3$  \\
 $f''(x)=\poly{12,0,-4}$  &  $f''(1)=8$& $\frac{8}{2}=4$  \\
 $f'''(x)=24x$  &  $f'''(1)=24$ & $\frac{24}{3!}=4$\\
 $f''''(x)=24$  &  $f''''(1)=24$ & $\frac{24}{4!}=1$\\
@@ -1817,7 +1816,7 @@ $\therefore\quad f(1+t)=7+3t+4t^2+4t^3+t^4$．又由于$x=a+(x-a)$，因此：
 (3.16)与(3.17)本质上是相同的，都叫做泰勒公式，只是(3.16)式中的$t$相当于(3.17)式中的$x-a$罢了，不过在今后应用更多的是(3.17)式．
 
  \begin{example}
-    已知$f(x)=x^5+2x^4-2x^3+7x-5$, 试将$f(x)$展开成$x+1$的升幂多项式．
+    已知$f(x)=x^5+2x^4-x^3+7x-5$, 试将$f(x)$展开成$x+1$的升幂多项式．
     \end{example}
 
     \begin{solution}    
@@ -1832,14 +1831,14 @@ $f^{(5)}(x)=120$  &  $f^{(5)}(-1)=120$ & $\frac{120}{5!}=1$\\
 \end{tabular}    
 \end{center}
           
-$\therefore\quad f(x)=-10+(x-1)+5(x-1)^2+(x-1)^3-3(x-1)^4+(x-1)^5$
+$\therefore\quad f(x)=-10+(x+1)+5(x+1)^2+(x+1)^3-3(x+1)^4+(x+1)^5$
     \end{solution}
 
     还可以用连续作综合除法的方法，得出同样的结果．同学们可以验证一下．
 
 \begin{ex}
 \begin{enumerate}
-    \item 试用秦勒公式将下列多项式在给定点展开成升幂形式：
+    \item 试用泰勒公式将下列多项式在给定点展开成升幂形式：
 \begin{enumerate}
     \item $g(x)=\poly{7,-3,4,-1}$，在$x=2$点；
     \item $f (x) =9x^5-188$，在$x=-2$点；
@@ -1953,7 +1952,7 @@ $\therefore\quad f(x)$除以$g(x)$所得的余式为
     \item $g(x)=x^n+x^{n-1}+x^{n-2}+x^{n-3}-4,\quad (n\ge 3)$
     \item $h(x)=4!x^4-3!x^3-2!x^2-1!x-0!$
 \end{enumerate}
-\item 已知$f(2)=(x-2)^2+1$, $g(x)=(x^2+\sqrt{2})^3$.
+\item 已知$f(x)=(x-2)^2+1$, $g(x)=(x^2+\sqrt{2})^3$.
 试求下列各多项式的导数：
 \begin{multicols}{2}
 \begin{enumerate}
@@ -1971,7 +1970,7 @@ $\therefore\quad f(x)$除以$g(x)$所得的余式为
         \item $\big(f(x),f'(x)\big)$
     \end{enumerate}
     \end{multicols}
-\item 已知$f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_x+a_0$, 
+\item 已知$f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0$,
 $g(x)=bx^m,\quad (a,b\ne 0)$．
 
 求证：$[f(x)g(x)]'=f'(x)g(x)+g'(x)f(x)$
@@ -2081,7 +2080,7 @@ f(x)&=b_1\frac{(x-\alpha_2)(x-\alpha_{3})\cdots (x-\alpha_{n+1})}{(\alpha_1-\alp
     \item $f(x)$除以$x-a$时，余式为$f(a)$——余式定理；
     \item $f(x)$除以$(x-a)^2$时，余式为$f(a)+\frac{f'(a)}{1!}(x-a)$;
     \item $f(x)$除以$(x-a)^k$时，得到的余式为
-    \[r_k (x) =f (x) +\frac{f'(a)}{1!}(x-a)+\frac{f''(a)}{2!}(x-a)^2+\cdots +\frac{f^{(k-1)}(a)}{(k-1)!}(x-a)^{k-1}\]
+    \[r_k (x) =f (a) +\frac{f'(a)}{1!}(x-a)+\frac{f''(a)}{2!}(x-a)^2+\cdots +\frac{f^{(k-1)}(a)}{(k-1)!}(x-a)^{k-1}\]
 \end{enumerate}
 
 
@@ -2095,7 +2094,7 @@ f(x)&=b_1\frac{(x-\alpha_2)(x-\alpha_{3})\cdots (x-\alpha_{n+1})}{(\alpha_1-\alp
 \begin{enumerate}
 \item 证明恒等式：
 \[\begin{split}
-   & \left(x+\frac{5}{2}a\right)^4-10a\left(x+\frac{5}{2}a\right)^3+35a^2\left(x+\frac{5}{2}a\right)^2-50a^3\left(x+\frac{5}{2}a\right)+24a^2\\
+   & \left(x+\frac{5}{2}a\right)^4-10a\left(x+\frac{5}{2}a\right)^3+35a^2\left(x+\frac{5}{2}a\right)^2-50a^3\left(x+\frac{5}{2}a\right)+24a^4\\
 &\qquad = \left(x^2-\frac{1}{4}a^2\right)\left(x^2-\frac{9}{4}a^2\right)
 \end{split}\]
 \item 若
@@ -2131,7 +2130,7 @@ $g(x)=(x^2-1)(x+1)$所得的余式为0, 试求$a,b,c$.
 $(y-z)^{2n+1}+(z-x)^{2n+1}+(x-y)^{2n+1}$可被$(x-y)(y-z)(z-x)$整除．
 \item  在下面等式中，求满足条件的$a,b,c$．
 \begin{enumerate}
-    \item $a (x-2 (x-8) +b (x-3) (x-1)+c (x-1) (x-2)=5x^2+19x+18$
+    \item $a (x-2) (x-3) +b (x-3) (x-1)+c (x-1) (x-2)=5x^2+19x+18$
     \item $a (x-3) (x-5)+b(x-5)(x-7)+c (x-7) (x-3)=8x-32$
 \end{enumerate}
 

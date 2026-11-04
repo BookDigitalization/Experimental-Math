@@ -40,7 +40,7 @@ $u_n$&2&3&5&8&13&21&34&55&89&144&233&377\\
 设$n$代表月份，$u_n$代表该月内兔子对数．在第一个月里，
 第一对兔子生了一对后代，因此$u_1=2$, 在这两对中，只有
 第一对能够在下一个月里生一对兔子，所以$u_2=3$, 以后各
-月的兔子总对数除了上一个月的兔子总对数外，再加上其中1
+月的兔子总对数除了上一个月的兔子总对数外，再加上其中
 能够在这个月产生后代的兔子对数，即前一个月的兔子的总
 对数，因此以后各月的兔子总对数可以由公式：
 \[u_n=u_{n-1}+u_{n-2},\qquad (2<n\le 12)\]
@@ -152,7 +152,7 @@ $n$个数位上的数码而把它后面尾部数码都舍去，这样得到的
 叫做\textbf{无界数列}．    
 \end{blk}
  
-例如，数列$\{(-1)^n\}$和$\{n+(-1)^n n\}$都是无界数列．
+例如，数列$\{(-1)^n n\}$和$\{n+(-1)^n n\}$都是无界数列．
 
 数列$\left\{(-1)^{n+1}\left(1+\frac{1}{n}\right)\right\}$
 是有界数列，因为
@@ -361,7 +361,7 @@ $6.1,\; 7.7,\; 9.3,\; 10.9$．
     汽车需运电杆$48\div 3=16$次才能完成任务，所以，
     $n=16$．设$a_n$为第$n$次拖运电杆再返回原地所行驶的路程，依
     题意$\{a_n\}$是等差数列，且知
-\[    a1=2060,\qquad d=90,\qquad n=16\]
+\[    a_1=2060,\qquad d=90,\qquad n=16\]
 因此：
 \[\begin{split}
     S_n&=na_1+\frac{n(n-1)}{2}d\\
@@ -512,7 +512,7 @@ $n$的多项式为
     S_k(n)&=\sum^{n-1}_{i=0} q_k(i)=q_k(0)+q_k(1)+\cdots+q_k(n-1)\\
     &=\frac{1}{(k+1)!}n(n-1)\cdots(n-k)
 \end{split}\]
-换言之，其和是这样一个多项式，它在$0,1,2,\ldots,(k-1)$，共$k$个点处与坐标轴相交且通过$((k+1),1)$点．
+换言之，其和是这样一个多项式，它在$0,1,2,\ldots,k$，共$k+1$个点处与坐标轴相交且通过$((k+1),1)$点．
 \end{example}
 
 \begin{solution}
@@ -626,7 +626,7 @@ $S_n=a_0+a_1x+a_2x^2+a_3x^3+\cdots+a_nx^n$的和．
 \begin{equation}
     a_nx^n-2x(a_{n-1}x^{n-1})+x^2(a_{n-2}x^{n-2})=0,\qquad n\ge 2
 \end{equation}
-让(5.6)的两边分别乘以$1,2x,x^2$, 然后相加，得
+让(5.6)的两边分别乘以$1,-2x,x^2$, 然后相加，得
 \[\begin{split}
     S_n&=a_0+a_1x+a_2x^2+a_3x^3+\cdots+a_{n-1}x^{n-1}+a_nx^n\\
     -2xS_n&=-2a_0x-2a_1x^2-2a_2x^3-\cdots-2a_{n-1}x^n-2a_nx^{n+1}\\
@@ -634,7 +634,7 @@ $S_n=a_0+a_1x+a_2x^2+a_3x^3+\cdots+a_nx^n$的和．
 \end{split}\]
 所以：
 \[(1-x)^2 S_n=a_0+(a_1-2a_0)x+0+\cdots+0+(a_{n-1}-2a_n)x^{n+1}+a_nx^{n+2}\]
-由(5.8)可知在上面等式中，其余各项为0, 若$x=1$, 两边
+由(5.8)可知在上面等式中，其余各项为0, 若$x\ne1$, 两边
 除以$(1-x)^2$, 得
 \[S_n=\frac{a_0+(a_1-2a_0)x+0+\cdots+0+(a_{n-1}-2a_n)x^{n+1}+a_nx^{n+2}}{(1-x)^2}\]
 若$x=1$，原题就变成求等差数列前$n$项的和，这时，
@@ -806,7 +806,7 @@ $n=1,2,3,\ldots$），所说的不同形状的三角形有多少个？求
 \item 数列$\{a_n\}$是：
 \[a_1=\frac{1}{3},\qquad \frac{1}{a_{n+1}}-\frac{1}{a_n}=2n+3\quad (n=1,2,3,4,\ldots)\]
 \begin{enumerate}
-    \item 用3的式子表示一般项；
+    \item 用$n$的式子表示一般项；
     \item 用$n$的式子表示前$n$项的和 $\displaystyle\sum^n_{k=1}a_k$
 \end{enumerate}
 
@@ -985,7 +985,7 @@ $2+4+6+\cdots+2k=k^2+k+1$
 由此知，当$n=k+1$时，等式仍成立．如果仅从数学归纳法
 中的2就得出等式对于任何自然数都成立，那是错误的．
 
-事实上，当$n=1$时，等式左边$=2$, 右边$=12+1+1=
+事实上，当$n=1$时，等式左边$=2$, 右边$=1^2+1+1=
 3$，因此，上面的等式是错误的．
 \end{proof}
 
@@ -1016,7 +1016,7 @@ $2+4+6+\cdots+2k=k^2+k+1$
 \begin{example}
 证明：
 \[\begin{split}
-    S(n)&= \sin \alpha+\sin (\alpha+\beta)+\sin (\alpha+2 \beta)+\cdots+\sin (a+(n-1) \beta) \\
+    S(n)&= \sin \alpha+\sin (\alpha+\beta)+\sin (\alpha+2 \beta)+\cdots+\sin (\alpha+(n-1) \beta) \\
 &= \frac{\sin \frac{n \beta}{2}}{\sin \frac{\beta}{2}} \sin \left(\alpha+\frac{n-1}{2} \beta\right)
 \end{split}\]
 \end{example}
@@ -1030,12 +1030,12 @@ $\therefore\quad $等式成立．
 \item 假设 $n=k$ 时,
 \[\begin{split}
     S(k)&=\sin \alpha+\sin (\alpha+\beta)+\sin (\alpha+2 \beta)+\cdots+\sin (\alpha+(k-1) \beta) \\
-&=\frac{\sin \frac{k \beta}{2}}{\sin \frac{\beta}{2}} \sin \left(a+\frac{k-1}{2} \beta\right)
+&=\frac{\sin \frac{k \beta}{2}}{\sin \frac{\beta}{2}} \sin \left(\alpha+\frac{k-1}{2} \beta\right)
 \end{split}\]
 成立，那么：
 \[\begin{split}
     S(k+1)&= S(k)+\sin(\alpha+k\beta)\\
-    &=\frac{\sin \frac{k \beta}{2}}{\sin \frac{\beta}{2}} \sin \left(a+\frac{k-1}{2} \beta\right)+\sin(\alpha+k\beta)\\
+    &=\frac{\sin \frac{k \beta}{2}}{\sin \frac{\beta}{2}} \sin \left(\alpha+\frac{k-1}{2} \beta\right)+\sin(\alpha+k\beta)\\
     &=\frac{1}{\sin \frac{\beta}{2}}\left[\sin\left(\alpha+\frac{k-1}{2}\beta\right)\sin\frac{k\beta}{2}+\sin(\alpha+k\beta)\sin\frac{\beta}{2}\right]\\
     &=\frac{1}{2\sin \frac{\beta}{2}}\left[\cos\left(\alpha-\frac{\beta}{2}\right)-\cos\left(\alpha+k\beta-\frac{\beta}{2}\right)\right. \\
     &\qquad \qquad \left. +\cos\left(\alpha+k\beta -\frac{\beta}{2}\right)-\cos\left(\alpha+k\beta+\frac{\beta}{2}\right)\right]\\
@@ -1069,7 +1069,7 @@ $\therefore\quad $等式成立．
     &=x^2(x^{2k}-y^{2k})+(x^2-y^2)\cdot y^{2k}
 \end{split}\]
     
-    因为$x^{2k}-y^{2k}$与$x^2-y^2$都能被$x+y$整除，所以$x^2(x^{2k}-y^{2k})+(x^2-y^2)y^{2k}$也能被$x+y$整除，这就是说，$x^{2k+1}-y^{2k+1}$能
+    因为$x^{2k}-y^{2k}$与$x^2-y^2$都能被$x+y$整除，所以$x^2(x^{2k}-y^{2k})+(x^2-y^2)y^{2k}$也能被$x+y$整除，这就是说，$x^{2(k+1)}-y^{2(k+1)}$能
     被$x+y$整除．
 \end{enumerate}  
 
@@ -1167,14 +1167,14 @@ $f(k)$求得$f(k+1)$的关系．为此，我们在平面上再增加
 \item 当$n$是正整数时，$x^n-y^n$能被$x-y$整除．
 \item 当$n$是正奇数时，$x^n+y^n$能被$x+y$整除．
 \item $(3n+1)7^n-1$能被9整除．
-\item 连接的三个自然数的立方和，必定能被9整除．
+\item 连续的三个自然数的立方和，必定能被9整除．
 \item 当$n$是正整数时，$(11)^{n+2}+(12)^{2n+1}$能被133
 整除．
 \item 当$n$是正整数时，$3^{2n+2}-8n-9$能被64整除．
 \end{enumerate}
 
 \item 数列$\{a_n\}$是这样确定的：
-\[a1=1,\quad 4a_ka_{k+1}=(a_k+a_{k+1}-1)^2,\quad a_k<a_{k+1}\quad (k=1,2,3,\ldots)\]
+\[a_1=1,\quad 4a_ka_{k+1}=(a_k+a_{k+1}-1)^2,\quad a_k<a_{k+1}\quad (k=1,2,3,\ldots)\]
 \begin{enumerate}
     \item 求 $a_2,a_3,a_4$, 并由此推断$a_n$；
     \item 用数学归纳法证明(a)中推断出的$a_n$的正

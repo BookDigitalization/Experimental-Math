@@ -68,8 +68,8 @@ $x=\arcsin y$ (即$x$是一角或弧，其相应的正弦值为$y$)，
 
     \item 函数$f(x)=\arcsin x$在闭区间$[-1,1]$上单调递
     增，并且连续．
-    \item $y=\arcsin x,\; -1\le x\le 1$的图象与$y=\sin x,\; -\frac{\pi}{2}\le y\le \frac{\pi}{2}$
-    的图象关于直线$y=x$对称（图5.2）．
+    \item $y=\arcsin x,\; -1\le x\le 1$的图象与$y=\sin x,\; -\frac{\pi}{2}\le x\le \frac{\pi}{2}$
+    的图象关于直线$y=x$对称（图9.2）．
 \end{itemize}
 
 \begin{figure}[htp]
@@ -252,7 +252,7 @@ $2\pi$为周期，因此，只研究它在长度为$2\pi$的区间内情形即�
 \begin{itemize}
     \item 当$x\in\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$时，则$y=x$．
     \item 当$x\in\left[\frac{\pi}{2},\frac{3\pi}{2}\right]$时，则由上面的命题2知
-    \[x=\pi-y\quad \Rightarrow\quad y=\pi-x\in \left(-\frac{\pi}{2},\frac{\pi}{2}\right)\]
+    \[x=\pi-y\quad \Rightarrow\quad y=\pi-x\in \left[-\frac{\pi}{2},\frac{\pi}{2}\right]\]
 \end{itemize}
 因之，在此区间内函数的图象与直线$y=\pi-x$一致，总之，
 由上面的命题中的1和3的结果：
@@ -261,7 +261,7 @@ $2\pi$为周期，因此，只研究它在长度为$2\pi$的区间内情形即�
     \item 当$x\in \left[\frac{\pi}{2}+2k\pi,\frac{3\pi}{2}+2k\pi\right]$时，则$x=\pi-y+2k\pi$，则$y=(\pi-x)-2k\pi$．
 \end{enumerate}
 由上面讨论的结果，得到函数$y= \arcsin
-(\sin x)$的图象是折线的形状，如图5.4所示．
+(\sin x)$的图象是折线的形状，如图9.4所示．
 \begin{figure}[htp]
     \centering
 \begin{tikzpicture}[>=latex, scale=.5]
@@ -296,7 +296,7 @@ $2\pi$为周期，因此，只研究它在长度为$2\pi$的区间内情形即�
     \begin{multicols}{2}
 \begin{enumerate}
     \item $\sin\frac{\pi}{4}=\frac{\sqrt{2}}{2}$
-    \item $\sin\frac{5\pi}{3}=-\frac{\sqrt{3}}{3}$
+    \item $\sin\frac{5\pi}{3}=-\frac{\sqrt{3}}{2}$
     \item $\sin\frac{7\pi}{3}=\frac{\sqrt{3}}{2}$
     \item $\sin(-2.314)=-0.04038$
 \end{enumerate}
@@ -399,9 +399,9 @@ $\cos y=x$．
 \begin{solution}
 \begin{enumerate}
     \item $\arccos\frac{1}{2}=\frac{\pi}{3}$，因为$\cos\frac{\pi}{3}=\frac{1}{2}$，而且$0<\frac{\pi}{3}<\pi$．
-    \item $\arccos\left(-\frac{1}{2}\right)=\frac{2\pi}{3}$，因为$\cos\frac{2\pi}{3}=\cos\left(\pi-\frac{\pi}{3}\right)=\frac{1}{2}$，而且$0<\frac{2\pi}{3}<\pi$．
+    \item $\arccos\left(-\frac{1}{2}\right)=\frac{2\pi}{3}$，因为$\cos\frac{2\pi}{3}=\cos\left(\pi-\frac{\pi}{3}\right)=-\frac{1}{2}$，而且$0<\frac{2\pi}{3}<\pi$．
     \item $\arccos1=0$，因为$\cos 0=1$而且0不出$[0,\pi]$的界限．
-    \item $\arccos0=\frac{\pi}{2}$，因为$\cos\frac{\pi}{2}=1$，而且$0<\frac{\pi}{2}<\pi$．
+    \item $\arccos0=\frac{\pi}{2}$，因为$\cos\frac{\pi}{2}=0$，而且$0<\frac{\pi}{2}<\pi$．
 \end{enumerate}
 \end{solution}
 
@@ -441,7 +441,7 @@ $\cos y=x$．
 \end{enumerate}
 
 \begin{proof}
-    因为$0\le \arccos(-x)\le \pi$, 又$0\le \pi -\arccos x\le x$
+    因为$0\le \arccos(-x)\le \pi$, 又$0\le \pi -\arccos x\le \pi$
 而且
 \[\cos(\pi -\arccos x)=-\cos(\arccos x)=-x\]
 由余弦函数在$[0,\pi]$ 上是单调的，得到
@@ -551,7 +551,7 @@ $y=x-2k\pi$；
 \item  当$x\in[(2k-1)\pi ,2k\pi]$ 时，$x=-y+2k\pi$, 即
 $y=-x+2k\pi$．
 \end{enumerate}
-函数$y=\arccos(\cos x)$的图象是折线（图5.7）．
+函数$y=\arccos(\cos x)$的图象是折线（图9.7）．
 
 \begin{figure}[htp]
     \centering
@@ -586,8 +586,8 @@ $y=-x+2k\pi$．
     \item 用反余弦的形式表示下列各式的角（$x\in[0,\pi]$）．
 \begin{multicols}{2}
 \begin{enumerate}
-    \item $\cos\pi =1$
-    \item $\cos\frac{5\pi}{3}=-\frac{1}{2}$
+    \item $\cos\pi =-1$
+    \item $\cos\frac{5\pi}{3}=\frac{1}{2}$
     \item $\cos(-3)=-0.9900$
     \item $\cos\frac{7\pi}{6}=-\frac{\sqrt{3}}{2}$
     \item $\cos x=-0.8065$
@@ -663,7 +663,7 @@ $\arccos x=\pi-\arcsin\sqrt{1-x^2}$
 \section{反正切函数}
 
 由正切函数$y=\tan x$的图象（图9.8）可以看出，函数$\tan x$
-在每个开区间$\left(-\frac{\pi}{2}+2k\pi, \frac{\pi}{2}+2k\pi\right)$内，由$-\infty$上升到$+\infty$．
+在每个开区间$\left(-\frac{\pi}{2}+k\pi, \frac{\pi}{2}+k\pi\right)$内，由$-\infty$上升到$+\infty$．
 所以在每个这样的开区间里能带来一个反函数．
 
 
@@ -716,13 +716,13 @@ $(-\infty, +\infty)$内，数$y$的反
 \begin{enumerate}
     \item $\arctan (\tan x)=x, \qquad -\frac{\pi}{2}<x<\frac{\pi}{2}$
     
-    $\tan (\arctan y)=y,\qquad -\infty<x<+\infty$
+    $\tan (\arctan y)=y,\qquad -\infty<y<+\infty$
     \item $y=\arctan x,\; x\in\mathbb{R}$是单调递增的并且连续；
     \item $\arctan x$是奇函数，即
     \[\arctan (-x)=-\arctan x\]
     证明留给同学们去完成．
     \item 反正切函数$y=\arctan x,\; -\infty<x<+\infty$的图象如
-    图5.9所示．
+    图9.9所示．
 \end{enumerate}
 
 \begin{figure}[htp]
@@ -838,7 +838,7 @@ $\tan y=\tan x$, 这里$-\frac{\pi}{2}<y<\frac{\pi}{2}$, $x\ne \frac{\pi}{2}+k\p
 \end{itemize}
 现在考虑间断点的情形：
 
-当$\frac{\pi}{2}+(k-)\pi<x<\frac{\pi}{2}+k\pi$时，$y=x-k\pi$, 于是当$x$
+当$\frac{\pi}{2}+(k-1)\pi<x<\frac{\pi}{2}+k\pi$时，$y=x-k\pi$, 于是当$x$
 取每一个数列$\{x_n\}$从左边趋近$\frac{\pi}{2}+k\pi$ 时，记作
 $x_n\to \left(\frac{\pi}{2}+k\pi \right)^-$, 
 便有
@@ -880,7 +880,7 @@ $x=\frac{\pi}{2}+k\pi$处的左、右极
 \begin{blk}{定义4}
      函数$y=\cot x$在开区间$(0,\pi )$内的反函数叫
 \textbf{反余切函数或反余切}，记作
-\[x=\arctan y\]
+\[x=\arccot y\]
 它的定义域是开区间$-\infty<y<+\infty$．
 \end{blk}
 
@@ -1064,17 +1064,17 @@ $\therefore\quad \sin\left[\arccot\left(-\frac{1}{3}\right)\right]=\sin\alpha=\f
   \[\arctan x=\arccot \frac{1}{x}=\arcsin\frac{x}{\sqrt{1+x^2}}=\arccos\frac{1}{\sqrt{1+x^2}}\]
   \item 若$x>0$, 那么
   \[\arccot x=\arctan \frac{1}{x}=\arcsin\frac{1}{\sqrt{1+x^2}}=\arccos\frac{x}{\sqrt{1+x^2}}\]
-  \item 若$|x|\le 1$，那么 $\arcsin x=\arctan\frac{x}{\sqrt{1-x^2}}$
+  \item 若$|x|<1$，那么 $\arcsin x=\arctan\frac{x}{\sqrt{1-x^2}}$
   
   若$-1\le x\le 0$，那么 $\arcsin x=-\arccos{\sqrt{1-x^2}}$
 
-  若$-1\le x< 0$，那么 $\arcsin x=\arctan\frac{\sqrt{1-x^2}}{x}-\pi$
+  若$-1\le x< 0$，那么 $\arcsin x=\arccot\frac{\sqrt{1-x^2}}{x}-\pi$
 
 \item 若$-1\le x\le 0$，那么 $\arccos x=\pi-\arcsin{\sqrt{1-x^2}}$
 
 若$-1\le x< 0$，那么 $\arccos x=\pi+\arctan\frac{\sqrt{1-x^2}}{x}$
 
-若$|x|\le 1$，那么 $\arccos x=\arctan\frac{x}{\sqrt{1-x^2}}$
+若$|x|<1$，那么 $\arccos x=\arccot\frac{x}{\sqrt{1-x^2}}$
 
 \item 若$x<0$, 那么$\arctan x=\arccot \frac{1}{x}-\pi$
 
@@ -1246,7 +1246,7 @@ $|a|>1$ & 方程无解\\
 
 \begin{solution}
     \[x=k\pi+(-1)^k\arcsin\frac{1}{2}=k\pi+(-1)^k\frac{\pi}{6}\]
-    或者\[x=k\cdot 360^{\circ}+(-1)^k\cdot 30^{\circ},\qquad (k\in\mathbb{Z})\]
+    或者\[x=k\cdot 180^{\circ}+(-1)^k\cdot 30^{\circ},\qquad (k\in\mathbb{Z})\]
 \end{solution}
 
 
@@ -1256,7 +1256,7 @@ $|a|>1$ & 方程无解\\
 
 \begin{solution}
 \[x=k\pi+(-1)^k\arcsin\left(-\frac{1}{2}\right)=k\pi+(-1)^{k+1}\frac{\pi}{6}\]
-    或者\[x=k\cdot 360^{\circ}+(-1)^{k+1}\cdot  30^{\circ},\qquad (k\in\mathbb{Z})\]
+    或者\[x=k\cdot 180^{\circ}+(-1)^{k+1}\cdot  30^{\circ},\qquad (k\in\mathbb{Z})\]
 \end{solution}
 
 
@@ -1494,7 +1494,7 @@ $\therefore\quad $原方程的近似解是：
 \[\cos x=\frac{-1\pm\sqrt{1+8}}{4}=\frac{-1\pm 3}{4}\]
 由此得：$\cos x=\frac{1}{2}$或$\cos x=-1$．
 
-由$\cos x=\frac{1}{2}$，得：$x=2k\pi+\frac{\pi}{3}$；由$\cos x=-1$，得：$x=(2k+1)\pi$．
+由$\cos x=\frac{1}{2}$，得：$x=2k\pi\pm\frac{\pi}{3}$；由$\cos x=-1$，得：$x=(2k+1)\pi$．
 
 $\therefore\quad $原方程的解集是
 \[\left\{x\big| x=2k\pi\pm \frac{\pi}{3}\right\}\cup \left\{x\big| x=(2k+1)\pi \right\}\]
@@ -1851,7 +1851,7 @@ $a^2+b^2\ge c^2$.
 \begin{solution}
     原方程两边除以$\sqrt{(-\sqrt{3})^2+1}=2$, 得到
 \[-\frac{\sqrt{3}}{2}\sin x+\frac{1}{2}\cos x=\frac{1}{2}\]
-令$\cos\varphi=-\frac{\sqrt{3}}{2}<0,\quad \sin\varphi=\frac{1}{2}>0$，则角$\varphi$是第一象限角，
+令$\cos\varphi=-\frac{\sqrt{3}}{2}<0,\quad \sin\varphi=\frac{1}{2}>0$，则角$\varphi$是第二象限角，
 \[\varphi=\arccos\left(-\frac{\sqrt{3}}{2}\right)=\pi-\arccos\frac{\sqrt{3}}{2}=\pi-\frac{\pi}{6}=\frac{5\pi}{6}\]
 于是，原方程可写成
 \[\sin x\cos\frac{5\pi}{6}+\cos x\sin \frac{5\pi}{6}=\frac{1}{2}\]
@@ -2115,11 +2115,11 @@ $\therefore\quad 2\cos^2 2x<1$的解集是
     移项，并将$\cos2x=2cos^2x-1$代入得
    \[\frac{\cos x(1-2\cos x)}{2cos^2x-1}>0\] 
     因为原不等式的解使$\cos2x\ne 0$（即$2cos^2x-1\ne 0$），两边乘
-    以$(2\cos^x-1)^2$, 得到同解不等式
+    以$(2\cos^2x-1)^2$, 得到同解不等式
  \[   \cos x(1-2\cos x)(2\cos^2x-1)>0\]
     即
 \[\left(\cos x+\frac{1}{\sqrt{2}}\right)\cos x\left(\cos x-\frac{1}{2}\right)\left(\cos x-\frac{1}{\sqrt{2}}\right)<0\]
-上面不等式右端的函数式$f(x)$的零点依大小排列是
+上面不等式左端的函数式$f(x)$的零点依大小排列是
 $-\frac{1}{\sqrt{2}},\; 0,\; \frac{1}{2},\; \frac{1}{\sqrt{2}}$．由此得知，仅当
 \begin{equation}
     -\frac{1}{\sqrt{2}}<\cos x<0
@@ -2128,7 +2128,7 @@ $-\frac{1}{\sqrt{2}},\; 0,\; \frac{1}{2},\; \frac{1}{\sqrt{2}}$．由此得知�
 \begin{equation}
     \frac{1}{2}<\cos x<\frac{1}{\sqrt{2}}
 \end{equation}
-时，$f(x)=\cos x(1-2\cos x)(2\cos^2x-1)<0$．
+时，$\cos x(1-2\cos x)(2\cos^2x-1)>0$．
 
 由于$\cos x$在区间$[0,\pi]$内是递减的，在区间$[\pi,2\pi]$内
 是递增的，所以由不等式(9.10), 得（图9.21）：
@@ -2254,7 +2254,7 @@ $-\frac{1}{\sqrt{2}},\; 0,\; \frac{1}{2},\; \frac{1}{\sqrt{2}}$．由此得知�
 
 \item $a, b$ 满足什么条件, 方程
 $
-\frac{a^{2} \sin x^{2}+b \cos x^{2}}{b^{2} \sin ^{2} x+a \cos x}=1
+\frac{a^{2} \sin^{2} x+b \cos^{2} x}{b^{2} \sin ^{2} x+a \cos^{2} x}=1
 $有解．
 \item 解下列各方程：
 \begin{enumerate}

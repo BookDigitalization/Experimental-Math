@@ -14,7 +14,7 @@ a^{-\tfrac{m}{n}}=\frac{1}{a^{\tfrac{m}{n}}},&\qquad (a> 0)\\
 \end{split}\]
 采用上面定义后，我们在第三册中也证明了正实数$a$和$b$的有
 理指数幂依然满足指数运算法则：
-\[a{\alpha}\cdot a^{\beta}=a^{\alpha+\beta},\qquad (a^{\alpha})^{\beta}=a^{\alpha\beta},\qquad (a\cdot b)^{\alpha}=a^{\alpha}\cdot b^{\alpha}\]
+\[a^{\alpha}\cdot a^{\beta}=a^{\alpha+\beta},\qquad (a^{\alpha})^{\beta}=a^{\alpha\beta},\qquad (a\cdot b)^{\alpha}=a^{\alpha}\cdot b^{\alpha}\]
 这里$\alpha,\beta \in \mathbb{Q}$．
 
 这样一来，函数$a^x\; (a>0)$对于任意有理数$x$都有定义
@@ -54,7 +54,7 @@ $a^x=a^{-x_1}=\frac{1}{a^{x_1}}>1$, ($\because\; a^{x_1}<1$)．
 性质1的几何意义表明：当$a>1$时，有理指数函数$y=
 a^x$的图象上的点在有单斜线的区域I和II的部分；当$0<a<
 1$时，$y=a^x$的图象上的点在有双斜线的区域III和IV的部分
-（图6.1）．
+（图10.1）．
 
 \begin{figure}[htp]
   \centering
@@ -85,12 +85,12 @@ a^x$的图象上的点在有单斜线的区域I和II的部分；当$0<a<
 \[a^{x_2}-a^{x_1}=a^{x_1}\left(\frac{a^{x_2}}{a^{x_1}}-1\right)=a^{x_1}\left(a^{x_2-x_1}-1\right)\]
   
 因为$x_2-x_1>0$, $a>1$, 所以$a^{x_2-x_1}>1$, 又$a^{x_1}>0$. 因
-此，$a^{x_2-x_1}>0$, 即$f(x)=a^x,\; (a>1)$是递增的．
+此，$a^{x_2}-a^{x_1}>0$,即$f(x)=a^x,\; (a>1)$是递增的．
 
 若$0<a<1$和$x_1<x_2$, 那么
 \[a^{x_2}-a^{x_1}=a^{x_1}\left(a^{x_2-x_1}-1\right)\]
 因为$x_2-x_1>0$, $0<a<1$, 所以$a^{x_2-x_1}<1$, 又$a^{x_1}>0$, 因
-此$a^{x_2-x_1}<0$, 即$f(x)=a^x,\; (0<a<1)$是递减的．
+此$a^{x_2}-a^{x_1}<0$,即$f(x)=a^x,\; (0<a<1)$是递减的．
 \end{proof}
 
 我们现在的任务是要把有理指数函数开拓为一个定义在
@@ -112,7 +112,7 @@ a^x$的图象上的点在有单斜线的区域I和II的部分；当$0<a<
   设$a^{\tfrac{1}{n}}=1+h$, 其中$h>0$, 两边$n$次方，得到
  \[ a=(1+h)^n\]
  
- 由贝努力不等式得
+ 由贝努利不等式得
 \[  a=(1+h)^n>1+nh\]
   所以，
 $  0<h<\frac{a-1}{n},\qquad 1<1+h<1+\frac{a-1}{n}$，
@@ -150,7 +150,7 @@ $  0<h<\frac{a-1}{n},\qquad 1<1+h<1+\frac{a-1}{n}$，
 \end{equation}
 所以，当$i\ge N$时，有
 \[\frac{1}{m_i+1}<|h_i|\le\frac{1}{m_i}\]
-由$h\to 0$知，$\frac{1}{|h_i|}\to \infty$. 从而由$m_i+1>\frac{1}{|h_i|}$知，$m_i\to\infty$．根据有理指数幂的单调性，得
+由$h_i\to 0$知，$\frac{1}{|h_i|}\to \infty$. 从而由$m_i+1>\frac{1}{|h_i|}$知，$m_i\to\infty$．根据有理指数幂的单调性，得
 \[1<a^{|h_i|}<a^{\tfrac{1}{m_i}},\qquad (a>1)\]
 
 仿照性质3的证明，令$b_i=a^{\tfrac{1}{m_i}}-1>0$, 于是，
@@ -159,9 +159,9 @@ $  0<h<\frac{a-1}{n},\qquad 1<1+h<1+\frac{a-1}{n}$，
   a&=(1+b_i)^{m_i}>1+m_ib_i\\
   & 0<b_i<\frac{a-1}{m_i}
 \end{split}\]
-当$i\to 0$时，$m_i\to \infty$,
+当$i\to \infty$时，$m_i\to \infty$,
 
-$\therefore\quad b_i\to 0$, 即$a^{h_i}\to 1$， 从而当$i\to \infty$时，$|h_i|\to 0$, $a^{|h_i|}\to 1$, 即$a^{h_i}\to 1$．
+$\therefore\quad b_i\to 0$, 即$a^{\tfrac{1}{m_i}}\to 1$，从而当$i\to \infty$时，$|h_i|\to 0$, $a^{|h_i|}\to 1$, 即$a^{h_i}\to 1$．
 
 若$0<a<1$, 令$b=\frac{1}{a}>1$, 于是
 \[\lim_{i\to \infty} a^{h_i}=\lim_{i\to \infty} \left(\frac{1}{b}\right)^{h_i}=\frac{1}{\Lim_{i\to \infty} b^{h_i}}=\frac{1}{1}=1\]
@@ -181,7 +181,7 @@ a^x$的变化可以任意小．
 是
 \[\begin{split}
   \lim_{x_2\to x_1}\left(a^{x_2}-a^{x_1}\right)&=\lim_{i\to \infty}\left(a^{x_1+h_i}-a^{x_1}\right)\\
-  &=a^{x_1}\cdot \lim_{i\to \infty}\left(a^{x_i}-1\right)=0
+  &=a^{x_1}\cdot \lim_{i\to \infty}\left(a^{h_i}-1\right)=0
 \end{split}\]
 这就是说，只要$|h_i|$够小，那么$|a^{x_2}-a^{x_1}|$
 就小于任意给定的正数$\varepsilon$.
@@ -241,7 +241,7 @@ a^x$的变化可以任意小．
 \item  $\frac{a^{2}+a^{-2}-2}{a^{2}-a^{-2}}$
 \item  $\left(a^{3 / 4}+b^{3 / 4}\right)\left(a^{3 / 4}-b^{3 / 4}\right) /\left(a^{1 / 2}-b^{1 / 2}\right)$
 \item  $\left(e^{3 / 2}+2+e^{-3 / 2}\right)\left(e^{3 / 2}-2+e^{-3 / 2}\right)$
-\item  $\left(a^{1 / 3}+a^{-1 / 3}\right)\left(a^{2 / 3}-1+a^{2 / 3}\right)$
+\item  $\left(a^{1 / 3}+a^{-1 / 3}\right)\left(a^{2 / 3}-1+a^{-2 / 3}\right)$
 \item  $\frac{m-n}{m^{1 / 2}-n^{1 / 2}}+\frac{m^{3 / 2}+n^{3/2}}{m^{1 / 2}+n^{1 / 2}}$
 \item  $\frac{x^{2 p(q+1)}-y^{2 q(p-1)}}{x^{p(q+1)}-y^{q(p-1)}}$
 \item  $\left(a^{4 / 3}-2+a^{-4 / 3}\right)\left(a^{2 / 3}-a^{-2 / 3}\right)$
@@ -314,7 +314,7 @@ a^x$的变化可以任意小．
 
 \begin{blk}{定义}
   设$\beta$是一任意无理数，$r_n\to\beta\leftarrow s_n$是$\beta$的左、右夹
-逼数列，并且$u>0$, 则定义
+逼数列，并且$a>0$, 则定义
 \[a^{\beta}=\lim a^{r_n}=\lim a^{s_n}\]
 \end{blk}
 
@@ -354,12 +354,11 @@ a^x$的变化可以任意小．
 只讨论$a>1,\; \beta ,\gamma>0$的情形），
 
 设$r_n\to \beta \leftarrow s_n,\quad c_n\to \gamma\leftarrow d_n$，$r_n, s_n,c_n,d_n>0$, 则有
-\[r_n\cdot c_n\to \beta_{\gamma}\leftarrow s_n\cdot d_n\]
+\[r_n\cdot c_n\to \beta\gamma\leftarrow s_n\cdot d_n\]
 根据正分指数的幂函数与有理指数函数的单调性有
 \[(a^{r_n})^{c_n}<(a^{\beta})^{c_n}<(a^{\beta})^{\gamma}<(a^{\beta})^{d_n}<(a^{s_n})^{d_n}\]
 所以由有理指数法则，得到
-\[a^{r_n\cdot c_n}=(a^{\beta})^{c_n}<(a^{\beta})^{\gamma}<(a^{s_n})^{d_n}=a^{s_n\cdot d_n}\]
-\[60+(u,.u,p-pus)\]
+\[a^{r_n\cdot c_n}=(a^{r_n})^{c_n}<(a^{\beta})^{\gamma}<(a^{s_n})^{d_n}=a^{s_n\cdot d_n}\]
 $\therefore\quad $由引理知，存在唯一的极限
 \[(a^{\beta})^{\gamma}=\lim a^{r_n\cdot c_n} =\lim a^{s_n\cdot d_n} =a^{\beta\cdot \gamma}\]
 
@@ -413,7 +412,7 @@ $\therefore\quad ab>1$, 于是
 所有的$n$, 有$c_n\le 0$, 于是$\lim c_n\le 0$即$x\le 0$, 这和已知的$x>0$
 矛盾．
 
-令$c_N>0$, 则$a^{C_N}>a^0=1$, 而$a^x>a^{c_N}>1$, 这就证明了
+令$c_N>0$, 则$a^{c_N}>a^0=1$, 而$a^x>a^{c_N}>1$, 这就证明了
 $a^x>1$.
 
 设$x<0$, $x=-y$, 则$y>0$, $a^x=a^{-y}=\frac{1}{a^y}$
@@ -466,14 +465,14 @@ $\Lim_{x\to\infty} a^x=0$
 
 这就是说，当$x\to +\infty$时，$\lim a^x=\infty$.
 
-设$0<a<1$, $a=\frac{1}{b}$, 则$b>1$, $a^x=\left(\frac{1}{b}\right)^n=\frac{1}{b^n}$，
-任给$\varepsilon=\frac{1}{M}>0$, 则$M=\frac{1}{\varepsilon}$, 依前段，当$x>n>\frac{M-1}{a-1}$时，有$b^x>M$. 于是$a^x=\frac{1}{b^x}<\frac{1}{M}=\varepsilon$. 这就证明了当$x\to\infty$时，$\lim a^x=0,\; (0<a<1)$.
+设$0<a<1$, $a=\frac{1}{b}$, 则$b>1$, $a^x=\left(\frac{1}{b}\right)^x=\frac{1}{b^x}$，
+任给$\varepsilon=\frac{1}{M}>0$, 则$M=\frac{1}{\varepsilon}$, 依前段，当$x>n>\frac{M-1}{b-1}$时，有$b^x>M$. 于是$a^x=\frac{1}{b^x}<\frac{1}{M}=\varepsilon$. 这就证明了当$x\to\infty$时，$\lim a^x=0,\; (0<a<1)$.
 \end{proof}
 
 \begin{blk}{性质5}
 \begin{enumerate}
   \item 若$a>1$, $\Lim_{x\to-\infty} a^x=0$.
-  \item 若$0\le a<1$, $\Lim_{x\to-\infty} a^x=+\infty$.
+  \item 若$0<a<1$,$\Lim_{x\to-\infty} a^x=+\infty$.
 \end{enumerate}  
 \end{blk}
 
@@ -488,7 +487,7 @@ $0<a<1$的情形，证明留给读者．
 总结上面的讨论，指数函数有下面的主要性质：
 
 \begin{blk}{定理}
-   指数函数$f:(-\infty,+\infty)\mapsto (0,+\infty)$, 这里$f(x)=a^x,\; (a>0\text{\; 且\; }a=1)$, 满足下列三个性质：
+   指数函数$f:(-\infty,+\infty)\mapsto (0,+\infty)$, 这里$f(x)=a^x,\; (a>0\text{\; 且\; }a\ne 1)$, 满足下列三个性质：
 \begin{enumerate}
   \item $f(x_1+x_2)=f(x_1)f(x_2)$
   \item $f(x)$是严格单调的，$a>1$时，递增；$0<a<1$时，递减
@@ -542,7 +541,7 @@ $f(x)$递减时，$f(1)=a<f(0)=1$.
 
 所以$f\left(-\frac{m}{n}\right)=\frac{1}{f\left(\frac{m}{n}\right)}=\frac{1}{a^{\tfrac{m}{n}}}=a^{-\tfrac{m}{n}}$
 
-所以，$f(r)=a'$, 对于正、负分数$r$都成立．
+所以，$f(r)=a^r$,对于正、负分数$r$都成立．
 
 再由单调性，和实指数幂的定义，就可以说明$f(x)=a^x$
 对于任何实数都成立．
@@ -668,14 +667,14 @@ $f(x)=\log_a x$称为\textbf{对数函数}．
 这个定义导致下面有用的结果：
 \begin{enumerate}
   \item $a^{\log_a x}=x,\qquad \log_a a^x=x$
-  \item $\log_a (xy)=1ogax+\log_a y$
+  \item $\log_a (xy)=\log_a x+\log_a y$
   \item $\log_a \frac{x}{y}=\log_a x-\log_a y$
   \item $\log_a x^r=r\log_a x$
   \item $\log_a b=\frac{\log_c b}{\log_c a}$（换底公式）．
 \end{enumerate}
 证明过程请看第三册第一章．
 
-从函数的图象来说：$y=\log_a x,\; (x\in\mathbb{R})$的图象能由$y=a^x,\; (x\in\mathbb{R})$的图象经$y=x$的反射而得到，如图10.4．
+从函数的图象来说：$y=\log_a x,\; (x\in\mathbb{R}^+)$的图象能由$y=a^x,\; (x\in\mathbb{R})$的图象经$y=x$的反射而得到，如图10.4．
 \begin{figure}[htp]
   \centering
 \begin{tikzpicture}[>=latex]
@@ -744,7 +743,7 @@ $f(x)=\log_a x$称为\textbf{对数函数}．
 
 \begin{proof}
   由性质1，$f(x_1)=f(x_1\cdot 1)=f(x_1)+f(1)$．
-因此$f(1)=f(x_1)-f(x_2)=0$.
+因此$f(1)=f(x_1)-f(x_1)=0$.
 
 我们先任取一常数$A>1$, 则由性质2知
 \[f(A)\ne f(1)=0\]
@@ -760,7 +759,7 @@ $\therefore\quad f\left(A^{\tfrac{m}{n}}\right)=\frac{m}{n}f(A),\qquad m,n\in\ma
 
 又$\because\quad f\left(A^{\tfrac{m}{n}}\right)+f\left(A^{-\tfrac{m}{n}}\right)=f\left(A^{\tfrac{m}{n}}\cdot A^{-\tfrac{m}{n}}\right)=f(A^0)=f(1)=0$
 
-$\therefore\quad f\left(-A^{\tfrac{m}{n}}\right)=-f\left(A^{\tfrac{m}{n}}\right)=-\frac{m}{n}f(A)$
+$\therefore\quad f\left(A^{-\tfrac{m}{n}}\right)=-f\left(A^{\tfrac{m}{n}}\right)=-\frac{m}{n}f(A)$
 
 综合上面所证，所以对于所有有理数$r\in\mathbb{Q}$, 都有
 \[f(A^r)=rf(A)\]
@@ -802,7 +801,7 @@ $\therefore\quad f\left(-A^{\tfrac{m}{n}}\right)=-f\left(A^{\tfrac{m}{n}}\right)
   \item $5^{\log_{0.2} 7}$
   \item $3^{\log_{\sqrt{2}}6}$
   \item $6^{1+\log_6 5}$
-  \item $25^{\tfrac{1}{3} \log 5^{27}-\log_{5} 4}$
+  \item $25^{\tfrac{1}{3} \log_5 27-\log_{5} 4}$
   \item $10^{\lg\sqrt{100}}$
   \item $\log _{\sqrt{4-\sqrt{15}}} \sqrt{4+\sqrt{15}}$
   \item $4-\lg 8-3 \lg 5$
@@ -842,7 +841,7 @@ $\therefore\quad f\left(-A^{\tfrac{m}{n}}\right)=-f\left(A^{\tfrac{m}{n}}\right)
   \item $\left|\log _{a} b\right|+\left|\log _{b} a\right| \geqslant 2$
   \item  $\frac{1}{\log _{2} \pi}+\frac{1}{\log _{\pi} 2}>2$
   \item 若 $a>b>0$ 且 $c>1$, 则 $\log _{c} \frac{b}{a}<\log _{c} \frac{1+b}{1+a}$.
-  \item 若 $t>-1$, $\varphi(t)=-\lg(1+t)$, 则 $\varphi\left(\frac{t_{1}+t_{2}}{3}\right)<\frac{\varphi\left(t_{1}\right)+\varphi\left(t_{2}\right)}{2}$
+  \item 若 $t>-1$, $\varphi(t)=-\lg(1+t)$, 则 $\varphi\left(\frac{t_{1}+t_{2}}{2}\right)<\frac{\varphi\left(t_{1}\right)+\varphi\left(t_{2}\right)}{2}$
 \end{enumerate}
 
 
@@ -863,8 +862,8 @@ $$\lg100,\; \lg\left(100\sin\frac{\pi}{4}\right),\; \lg\left(100\sin^2\frac{\pi}
 指数中含有未知数的方程叫做\textbf{指数方程}．下面我们介绍
 几种常见的指数方程及其解法．
 
-\subsection{可化为$\alpha^{f(x)}=\alpha^{g(x)}\; (a>0\text{\;且\;}a\ne 1)$的指数方程}
-对于这类方程，我们根据指数函数的单调性得到$\alpha^{f(x)}=\alpha^{g(x)}$成立的必要充分条件是$f(x)=g(x)$. 因此，指数方程$\alpha^{f(x)}=\alpha^{g(x)}$在$a>0$且$a\ne 1$的条件下就可以转化为代数方程$f(x)=g(x)$来解．
+\subsection{可化为$a^{f(x)}=a^{g(x)}\; (a>0\text{\;且\;}a\ne 1)$的指数方程}
+对于这类方程，我们根据指数函数的单调性得到$a^{f(x)}=a^{g(x)}$成立的必要充分条件是$f(x)=g(x)$. 因此，指数方程$a^{f(x)}=a^{g(x)}$在$a>0$且$a\ne 1$的条件下就可以转化为代数方程$f(x)=g(x)$来解．
 
 \begin{example}
   解方程$5^{-x}\cdot 50^x=\frac{1}{1000(10^{2x-1})^{-3}}$
@@ -876,7 +875,7 @@ $$\lg100,\; \lg\left(100\sin\frac{\pi}{4}\right),\; \lg\left(100\sin^2\frac{\pi}
 \[10^x=10^{6x-6}\]
 
 由于底数$a=10>0$且$\ne 1$, 得到
-\[x=5x-6 \quad \Rightarrow\quad x=\frac{6}{5}\]
+\[x=6x-6 \quad \Rightarrow\quad x=\frac{6}{5}\]
 所以原方程的解集是$\left\{\frac{6}{5}\right\}$．
 \end{solution}
 
@@ -911,7 +910,7 @@ $$17^{3x^2+x-2}=17^{0}$$
 \end{solution}  
   
 \begin{example}
-  解方程$5^{2x}-7x-35\cdot 5^{2x}+35\cdot 7^x=0$
+  解方程$5^{2x}-7^x-35\cdot 5^{2x}+35\cdot 7^x=0$
 \end{example}
 
 \begin{solution}
@@ -976,7 +975,7 @@ $\therefore\quad $原方程的解集是$\{-2,2\}$．
   方程中的对数有意义必须
   \[\begin{cases}
     x>5\quad\text{且}\quad  x-5\ne 1 \\
-    13x^2-16x+29>0
+    3x^2-16x+29>0
   \end{cases}\] 
   根据对数定义得到
  \[ 3x^2-16x+29=(x-5)^2\]
@@ -1027,16 +1026,16 @@ $\therefore\quad $原方程的解集是$\{-2,2\}$．
 \end{cases}\]
 原方程化为$\lg x(x^2-4)=\lg 3(x+2)$，由此得到
 \[x(x^2-4)=3(x+2)\]
-即：$(x-2)(x^2-2x-3)=0$，
+即：$(x+2)(x^2-2x-3)=0$，
 解得：
-\[x_1=2,\qquad x_2=-1,\qquad x_3=3\]
+\[x_1=-2,\qquad x_2=-1,\qquad x_3=3\]
 其中只有$x_3=3>2$, 所以原方程的解集是$\{3\}$．
 \end{solution}
 
 根据指数函数与对数函数的单调性也可以解相应的一些
 不等式．由于作对数变形时，也有可能把原来数的定义域
 缩小了，这时就会丢掉解，因此，作对数变形时，应该避免这
-种情形发生．例如，解$\lg x=1$, 如果利用等式：$\lg x^2
+种情形发生．例如，解$\lg x^2=1$,如果利用等式：$\lg x^2
 =2\lg x$，
 把原方程变形为$2\lg x=1$, 这时由这个方程只能解出
 $x=\sqrt{10}$, 丢失了原方程的一个根$-\sqrt{10}$．
@@ -1117,17 +1116,17 @@ $\therefore\quad $原不等式的解集是$\left\{x|0<x<a^2\right\}\cup\left\{x\
   \end{cases}           \\
   &\Longleftrightarrow     \begin{cases}
     -1<x<0\quad \text{或}\quad x>1\\
-    x<-1\quad \text{或}\quad \frac{1-\sqrt{5}}{2}<x<1\quad \text{或}\quad x>\frac{1+\sqrt{5}}{2}
+    x<-1\quad \text{或}\quad \frac{1-\sqrt{5}}{2}\le x<1\quad \text{或}\quad x\ge\frac{1+\sqrt{5}}{2}
   \end{cases}               \\
   &\Longleftrightarrow   \begin{cases}
-    -1<x<0\\  \frac{1-\sqrt{5}}{2}<x<1
+    -1<x<0\\  \frac{1-\sqrt{5}}{2}\le x<1
   \end{cases}      \text{或}\quad  \begin{cases}
-    x>1\\x>\frac{1+\sqrt{5}}{2}
+    x>1\\x\ge\frac{1+\sqrt{5}}{2}
   \end{cases}           \\
-  &\Longleftrightarrow    \frac{1-\sqrt{5}}{2}<x<1  \quad \text{或}\quad   x>\frac{1+\sqrt{5}}{2}   \\
+  &\Longleftrightarrow    \frac{1-\sqrt{5}}{2}\le x<1  \quad \text{或}\quad   x\ge\frac{1+\sqrt{5}}{2}   \\
 \end{split}\]
 故函数$f$的定义域为
-\[\left\{x\Big| \frac{1-\sqrt{5}}{2}<x<1 \right\}\bigcup\left\{x\Big|x>\frac{1+\sqrt{5}}{2}  \right\}\]
+\[\left\{x\Big| \frac{1-\sqrt{5}}{2}\le x<1 \right\}\bigcup\left\{x\Big|x\ge\frac{1+\sqrt{5}}{2}  \right\}\]
 \end{solution}
 
 
@@ -1139,7 +1138,7 @@ $\therefore\quad $原不等式的解集是$\left\{x|0<x<a^2\right\}\cup\left\{x\
   要使方程中的对数有意义，$x$必须满足条件：
 \begin{equation}
   \begin{cases}
-    \sin 3x\quad \text{且}\quad \sin3 x\ne 1\\
+    \sin 3x>0\quad \text{且}\quad \sin3 x\ne 1\\
     \cos x-\cos2x>0
   \end{cases}
 \end{equation}
@@ -1257,8 +1256,8 @@ $(a>0,\;  a \neq 1)$
 \item  $4^{x}+2^{x+1}=80$ 
 \item  $ 3^{x+2}+9^{x+1}-810=0$
 \item  $3^{2 x+5}=3^{x+2}+2$
-\item   $3^{4 \sqrt{x}}-4.3^{2 \sqrt{x}}+3=0$
-\item   $4.9^{\sqrt{x}-2}-3.15^{\sqrt{x}-2}=25^{\sqrt{x}-2} $
+\item   $3^{4 \sqrt{x}}-4\cdot 3^{2 \sqrt{x}}+3=0$
+\item   $4\cdot 9^{\sqrt{x}-2}-3\cdot 15^{\sqrt{x}-2}=25^{\sqrt{x}-2} $
 \item   $4^{2 x}-2.18^{2 x}=3.81^{28} $
 \end{multicols}
 \item   $\left(\sqrt{5+2 \sqrt{6}}\right)^{x}+\left(\sqrt{5-2 \sqrt{6}}\right)^{x}=\frac{10}{3}$
@@ -1283,7 +1282,7 @@ $(a>0,\;  a \neq 1)$
 \item  $8^{x}+16^{\tfrac{3}{4} x+1}<34$
 \item  $\frac{(0.5)^{3 x^{2}+10 x+6}}{100}<0.00125$
 \item  $2^{x+1} \cdot 5^{2 x-3}<\frac{24}{25}$
-\item  $5^{2x}-30.5^{x}+125<0$
+\item  $5^{2x}-30\cdot 5^{x}+125<0$
 \item  $2^{3 x}-2^{x+1}<2^{3} $
 \item  $\frac{1}{\left(\frac{1}{10}\right)^{y}-1} \leqslant \frac{2}{\left(\frac{1}{100}\right)^{y}-10}$
 \item  $\frac{1}{2^{x}-1} \geqslant \frac{1}{4^{x}-3}$
@@ -1341,8 +1340,8 @@ $(a>0,\;  a \neq 1)$
   \item  $\begin{cases}2^{\sqrt{{x}}+\sqrt{y}}=512 \\ \lg \sqrt{x y}=1+\lg 2\end{cases}$
 \item  $\begin{cases}\log _{x} \log _{2} \log _{x} y=0 \\ \log _{y} 9=1\end{cases}$
 \item  $\begin{cases}2^{\tfrac{x-y}{2}}-2^{\tfrac{x-y}{4}}=2 \\ 3^{\lg(2 y-x)}=1\end{cases}$
-\item $\begin{cases}x y=40 \\ x^{12 y}=4,\end{cases}$
-\item  $\begin{cases}3.2^{x}-\log _{2} y=2 \\ 2^{x} \cdot \log _{2} y=1\end{cases}$
+\item $\begin{cases}x y=40 \\ x^{\lg y}=4,\end{cases}$
+\item  $\begin{cases}3\cdot 2^{x}-\log _{2} y=2 \\ 2^{x} \cdot \log _{2} y=1\end{cases}$
 \item  $\begin{cases}7^{y} \cdot \log _{5} x=2 \\ 4.7^{y}+\log _{5} x=2\end{cases}$
 \item $\begin{cases}
 \lg^2x+\lg^2y=5\\
