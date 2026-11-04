@@ -58,11 +58,18 @@ class Converter:
     def preprocess(self, tex: str) -> str:
         tex = strip_comments(tex)
         tex = self.replace_tikz(tex)
+        # 单独的 \includegraphics[scale=s]{f}：pandoc 会套上带图号的 figure，LaTeX 版没有图号
+        tex = re.sub(r"\\includegraphics\[scale=([\d.]+)\]\{([^}]*)\}",
+                     lambda m: self.slot('#scale(%g%%, reflow: true, image("%s"))' % (float(m.group(1)) * 100, m.group(2))), tex)
+        tex = re.sub(r"\\includegraphics\[width=([\d.]*)\\(?:line|text)width\]\{([^}]*)\}",
+                     lambda m: self.slot('#image("%s", width: %g%%)' % (m.group(2), float(m.group(1) or 1) * 100)), tex)
+        # \caption* 是不编号的图注，换成 subcap 环境（filter.lua 转为 #subcap）
+        tex = replace_command(tex, "caption*", 1, lambda a: r"\begin{subcap}%s\end{subcap}" % a[0])
+        tex = self.replace_figure_pairs(tex)
         # 没有 \caption 的 figure 在 LaTeX 中不编号；pandoc 会给它图号，所以改成居中的普通内容
         tex = re.sub(r"\\begin\{figure\}(?:\[[^\]]*\])?((?:(?!\\end\{figure\}).)*?)\\end\{figure\}",
-                     lambda m: m.group(0) if r"\caption" in m.group(1) else r"\begin{center}%s\end{center}" % m.group(1).replace(r"\centering", ""),
+                     lambda m: m.group(0) if r"\caption{" in m.group(1) else r"\begin{center}%s\end{center}" % m.group(1).replace(r"\centering", ""),
                      tex, flags=re.S)
-        tex = self.replace_figure_pairs(tex)
         # pandoc 把显式的 [1.] 当作默认格式丢掉（嵌套时 LaTeX 仍印 1.），借本书未用的 [i)] 传过去，enum_at 中再换回
         tex = re.sub(r"\\begin\{enumerate\}\[1\.\]", r"\\begin{enumerate}[i)]", tex)
         tex = split_item_multicols(tex)
@@ -80,12 +87,11 @@ class Converter:
         tex = re.sub(r"\\addcontentsline\{[^}]*\}\{[^}]*\}\{[^}]*\}", "", tex)
         # proof 是本书自定义的环境（只印“证明：”），换个名字，免得 pandoc 按 amsthm 加上 Proof. 和 ◻
         tex = re.sub(r"\\(begin|end)\{proof\}", r"\\\1{bookproof}", tex)
-        # 单独的 \includegraphics[scale=s]{f}：pandoc 会套上带图号的 figure，LaTeX 版没有图号
-        tex = re.sub(r"\\includegraphics\[scale=([\d.]+)\]\{([^}]*)\}",
-                     lambda m: self.slot('#scale(%g%%, reflow: true, image("%s"))' % (float(m.group(1)) * 100, m.group(2))), tex)
         # 多行环境末尾多余的 \\ 会让 pandoc 转错（LaTeX 中只是多一个空行）
         tex = re.sub(r"\\\\\s*(\\end\{(cases|array|aligned|align\*?|split|gathered|matrix|pmatrix)\})", r"\1", tex)
         tex = re.sub(r"\{\\rm\s+([^{}]*)\}", r"\\mathrm{\1}", tex)
+        # 整个公式都是 \rm 的：$\rm II'$、$\rm cm^2$
+        tex = re.sub(r"\$\\rm\s+([^$]*?)(['^][^$]*)?\$", lambda m: "$\\mathrm{%s}%s$" % (m.group(1), m.group(2) or ""), tex)
         tex = re.sub(r"\\polynomial\[reciprocal,\s*var=(\w)\]", r"\\poly[\1]", tex)
         tex = re.sub(r"\\polynomial\[reciprocal\]", r"\\poly", tex)
         tex = re.sub(r"\\poly\[(\w)\]", r"\\polyvar\1", tex)
@@ -181,6 +187,12 @@ class Converter:
                     out.append(self.slot("#h(%s)" % width))
                     i += m.end()
                     continue
+                # 正文中的 \text{…}（LaTeX 中照常排出）会被 pandoc 丢掉
+                if re.match(r"\\text\{", tex[i:]):
+                    arg, j = read_group(tex, i + 5)
+                    out.append(arg)
+                    i = j
+                    continue
             out.append(tex[i])
             i += 1
         return "".join(out)
@@ -258,15 +270,17 @@ class Converter:
         """figure 中用两个 minipage 并排、各带 \\caption 的两幅图：pandoc 会合成一幅图、一个图号。
         改为并排的两个 #figure，各占一个图号"""
         def repl(m: re.Match) -> str:
-            parts = re.findall(r"\\begin\{minipage\}(?:\[[^\]]*\])?\{[^}]*\}(.*?)\\end\{minipage\}", m.group(0), flags=re.S)
+            parts = re.findall(r"\\begin\{minipage\}(?:\[[^\]]*\])?\{([\d.]*)\\(?:text|line)width\}(.*?)\\end\{minipage\}", m.group(0), flags=re.S)
+            caps = [re.search(r"\\caption\{([^}]*)\}", p) for _, p in parts]
+            bodies = [re.sub(r"\\caption\{[^}]*\}|\\centering|\\label\{[^}]*\}|\\(?:h|v)space\*?\{[^}]*\}", "", p).strip() for _, p in parts]
+            conv = convert_fragments(bodies + [c.group(1) if c else "" for c in caps])
             figs = []
-            for p in parts:
-                cap = re.search(r"\\caption\{([^}]*)\}", p)
-                body = re.sub(r"\\caption\{[^}]*\}|\\centering", "", p).strip()
-                body = re.sub(r"\\textsc\{(PH\d+)\}", r"#smallcaps[\1]", body)
-                caption = convert_fragments([cap.group(1)])[0] if cap and cap.group(1).strip() else ""
+            for k, cap in enumerate(caps):
+                body, caption = conv[k], conv[len(caps) + k]
                 figs.append("figure([%s], caption: [%s])" % (body, caption) if cap else "[%s]" % body)
-            return "\n\n" + self.slot("#grid(columns: (1fr,) * %d, align: center + bottom, %s)" % (len(figs), ", ".join(figs))) + "\n\n"
+            widths = ", ".join("%g%%" % (float(w or 1) * 100) for w, _ in parts)
+            return "\n\n" + self.slot("#align(center, grid(columns: (%s,), column-gutter: 0.35em, align: center + bottom, %s))"
+                                      % (widths, ", ".join(figs))) + "\n\n"
         return re.sub(r"\\begin\{figure\}(?:\[[^\]]*\])?(?:(?!\\end\{figure\}).)*?\\begin\{minipage\}.*?\\end\{figure\}",
                       repl, tex, flags=re.S)
 

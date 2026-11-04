@@ -124,6 +124,7 @@ local simple = {
   bookproof = "#proof",
   center = "#align(center)",
   flushright = "#align(right)",
+  subcap = "#subcap",
 }
 
 function Div(div)

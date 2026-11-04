@@ -122,6 +122,9 @@
   text(fill: red)[待绘制的插图 #id],
 ))
 
+// 不编号的图注（LaTeX 的 \caption*），字体同编号图注
+#let subcap(body) = block(above: 0.6em, below: 0.6em, text(font: fonts.sans, weight: "bold", body))
+
 // ---- 编号列表 ----
 // 列表的层数（与 LaTeX 一样，练习框等 tcolorbox 内的列表接着框外的层数算）
 #let latex-level(n) = n.len()

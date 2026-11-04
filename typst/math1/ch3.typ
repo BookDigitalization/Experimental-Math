@@ -26,7 +26,7 @@
 这个结果，还可以用图3.1说明：$  & quad upright("大正方形") A B C D upright("的面积") S\
  & =\(upright("正方形") A E M H + upright("矩形") B F M E + upright("矩形") D H M G + upright("正方形") M F C G\)upright("的面积") $
 
-#grid(columns: (1fr,) * 2, align: center + bottom, figure([#fig("3-01");], caption: []), figure([#fig("3-02");], caption: []));
+#align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("3-01");], caption: []), figure([#fig("3-02");], caption: [])));
 
 由图形也能说明：#numbered-eq($ \(a + b\)^2 = a^2 + 2 a b + b^2 $);
 
@@ -223,7 +223,7 @@ $therefore quad - 25$ 的平方根是无意义的．
 
 用类似的办法，可以说明：任一个正有理数的平方根都是存在的．而且都有两个．同学们可以从图3.4, 3.5中，练习说明 $sqrt(3)$，$sqrt(7)$ 都是存在的．从而 $- sqrt(3)$，$- sqrt(7)$ 也应存在．因此，$3\,7$ 同样各有两个平方根：$plus.minus sqrt(3)$，$plus.minus sqrt(7)$ 等等．
 
-#grid(columns: (1fr,) * 2, align: center + bottom, figure([#fig("3-04");], caption: []), figure([#fig("3-05");], caption: []));
+#align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("3-04");], caption: []), figure([#fig("3-05");], caption: [])));
 
 综合以上讨论，可以得出结论：
 
@@ -1591,7 +1591,7 @@ $therefore quad x_1 = 6\,#h(2em) x_2 = 0$
 
 这时，我们可以如图3.9所示，把 $4 times x$ 的小长方形平分为两个 $2 times x$ 的更小长方形，再把其中带阴影的一个移至正方形 $x times x$ 的下方．这样，原来长方形就变成了⿸形，但面积仍为32$upright(m)^2$．
 
-#grid(columns: (1fr,) * 2, align: center + bottom, figure([#fig("3-14");], caption: []), figure([#fig("3-15");], caption: []));
+#align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("3-14");], caption: []), figure([#fig("3-15");], caption: [])));
 
 如果我们把右下方补上一个边长为2的小正方形，如图3.10所示，那么，就可以得到一个边长为 $\(x + 2\)$ 的大正方形．这个正方形的面积比原来的长方形面积多了 $2^2 = 4$.
 
