@@ -134,7 +134,7 @@ B & = \{ 2 n + 1\|n upright("为任意整数") \} = \{ 2 n + 1\|n in bb(Z) \} $
 
 如果集合 $A$ 中的每一个元素都是集合 $B$ 中的元素，而 $B$ 中的元素却有不属于 $A$ 的，这时我们说 $A$ 是 $B$ 的#strong[真子集]，记作 $A subset B$．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("2-03");], caption: []), figure([#fig("2-04");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("2-03");], caption: []), figure([#fig("2-04");], caption: []))));
 
 在图2.4中，$overline(A B)$ 上的点都是直线 $A B$ 上的点，但是直线 $A B$ 上的点却还有很多不属于 $overline(A B)$, 所以 $overline(A B)$ 是直线 $A B$ 的真子集，记作：$ overline(A B) subset upright("直线") A B $
 
@@ -149,9 +149,11 @@ B & = \{ 2 n + 1\|n upright("为任意整数") \} = \{ 2 n + 1\|n in bb(Z) \} $
 如果有三个集合 $A$、$B$、$C$, $A subset.eq B$ 且 $B subset.eq C$, 那么显然有 $A subset.eq C$. 这就是说集合的含于关系具有传递性．
 
 ==== 集合的运算
-#strong[交集]#h(1em);由集合 $A$ 与集合 $B$ 的公共元素所成的集合叫做集合 $A$ 与集合 $B$ 的交集（或交）．记为：$A inter B$，读为 $A$ 交 $B$.
+#v(0.8em);
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("2-05");], caption: []), figure([#fig("2-06");], caption: []))));
+#noindent;#strong[交集]#h(1em);由集合 $A$ 与集合 $B$ 的公共元素所成的集合叫做集合 $A$ 与集合 $B$ 的交集（或交）．记为：$A inter B$，读为 $A$ 交 $B$.
+
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("2-05");], caption: []), figure([#fig("2-06");], caption: []))));
 
 两个集合 $A$、$B$ 的交集用维恩图来示意，如图2.5中的阴影部分就表示 $A inter B$.
 
@@ -159,17 +161,19 @@ B & = \{ 2 n + 1\|n upright("为任意整数") \} = \{ 2 n + 1\|n in bb(Z) \} $
 
 在图2.6中，直线 $ell$ 与直线 $m$ 的交集是 $A$ 点，即 $ell inter m = \{ A upright("点") \}$．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("2-07");], caption: []), figure([#fig("2-08");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("2-07");], caption: []), figure([#fig("2-08");], caption: []))));
 
 在图2.7中，$overline(A B)$ 是射线 $A B$ 和射线 $B A$ 的交集，即：$ overline(A B) = upright("射线") A B inter upright("射线") B A $
 
 一条直线把一个平面分成两部分，其中每一部分都叫做半平面，这条直线叫作半平面的界．图2.8中，$angle A O B$ 的内部是以直线 $O A$ 为界含有射线 $O B$ 的半平面与以直线 $O B$ 为界含有射线 $O A$ 的半平面的交集（即图中的阴影部分）．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("2-09");], caption: []), figure([#fig("2-10");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("2-09");], caption: []), figure([#fig("2-10");], caption: []))));
 
 显然，若 $A subset.eq B$, 则 $A inter B = A$, 反之，若 $A inter B = A$, 则 $A subset.eq B$.
 
-#strong[并集]#h(1em);由集合 $A$ 的元素或集合 $B$ 的元素合并而成的集合叫做集合 $A$ 与集合 $B$ 的并集（或并）记为：$A union B$，读为A并B．
+#v(0.8em);
+
+#noindent;#strong[并集]#h(1em);由集合 $A$ 的元素或集合 $B$ 的元素合并而成的集合叫做集合 $A$ 与集合 $B$ 的并集（或并）记为：$A union B$，读为A并B．
 
 集合 $A$ 与集合 $B$ 的并集用维恩图示意，如图2.9所示，图中的阴影部分就表示 $A union B$.
 
@@ -183,7 +187,9 @@ B & = \{ 2 n + 1\|n upright("为任意整数") \} = \{ 2 n + 1\|n in bb(Z) \} $
 
 在图2.10中，直线 $A B$ 是射线 $A B$ 和射线 $B A$ 的并集，即 $ upright("直线") A B = upright("射线") A B union upright("射线") B A $
 
-#strong[空集]#h(1em);为了使集合 $A$ 和集合 $B$ 的交集 $A inter B$ 在集合 $A$ 与集合 $B$ 不含有任何公共元素时仍有意义，我们自然想到：这时的 $A inter B$ 应是一个不含有任何元素的集合．因此，我们把这种不含任何元素的集合叫做#strong[空集]，并用符号 $nothing$ 表示．
+#v(0.8em);
+
+#noindent;#strong[空集]#h(1em);为了使集合 $A$ 和集合 $B$ 的交集 $A inter B$ 在集合 $A$ 与集合 $B$ 不含有任何公共元素时仍有意义，我们自然想到：这时的 $A inter B$ 应是一个不含有任何元素的集合．因此，我们把这种不含任何元素的集合叫做#strong[空集]，并用符号 $nothing$ 表示．
 
 由空集的意义可知，对任何一个集合 $P$, 都有 $P inter nothing = nothing$, $P union nothing = P$ 成立，并且空集是任何一个集合 $P$ 的子集．即：$P supset.eq nothing$
 
@@ -200,7 +206,9 @@ B & = \{ 2 n + 1\|n upright("为任意整数") \} = \{ 2 n + 1\|n in bb(Z) \} $
 
 如果直线 $a pll$ 直线 $b$, 那么 $a inter b = nothing$.
 
-#strong[基集与补集]#h(1em);如果我们所讨论的集合都是一个给定集合的子集，我们就称这个给定集合为#strong[基集]，通常用符号 $I$ 表示基集．
+#v(0.8em);
+
+#noindent;#strong[基集与补集]#h(1em);如果我们所讨论的集合都是一个给定集合的子集，我们就称这个给定集合为#strong[基集]，通常用符号 $I$ 表示基集．
 
 例如，我们所讨论的集合是 $nothing$、$\{ 1 \}$、$\{ 2 \}$、$\{ 3 \}$、$\{ 1\,2 \}$、$\{ 2\,3 \}$、$\{ 1\,3 \}$ 和 $\{ 1\,2\,3 \}$ 时，因为上述集合都是集合 $\{ 1\,2\,3 \}$ 的子集，所以我们称 $\{ 1\,2\,3 \}$ 为基集．
 
@@ -212,7 +220,7 @@ B & = \{ 2 n + 1\|n upright("为任意整数") \} = \{ 2 n + 1\|n in bb(Z) \} $
 
 基集在图示时，常常用一矩形所包围的点表示．图2.12中的阴影部分示意 $A^c$．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("2-12");], caption: []), figure([#fig("2-13");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("2-12");], caption: []), figure([#fig("2-13");], caption: []))));
 
 如果以实数全体为基集 $I$，$A = \{ upright("有理数") \}$，$B = \{ upright("无理数") \}$，那么 $A^c = B$, $B^c = A$, $A union B = I$, $A$ 和 $B$ 互为补集．
 
@@ -224,7 +232,7 @@ B & = \{ 2 n + 1\|n upright("为任意整数") \} = \{ 2 n + 1\|n in bb(Z) \} $
 
 $A inter B = A$ 和 $A inter B^c = nothing$ 是同一件事的两种说法（图2.14）．$A subset.eq B$ 和 $B^c subset.eq A^c$ 也是同一事件的两种说法（图2.15）．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("2-14");], caption: []), figure([#fig("2-15");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("2-14");], caption: []), figure([#fig("2-15");], caption: []))));
 
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题2.1]
 
@@ -240,7 +248,8 @@ $A inter B = A$ 和 $A inter B^c = nothing$ 是同一件事的两种说法（图
 
   + 存在一个既是 $A$ 的元素又是 $A$ 的子集的对象吗？
 
-+ 设 $A = \{ x\|x upright("是一位的奇数") \}$，指出在下列集合中，哪个是空集？哪个是只有一个元素的集合？$ B = \{ x\|x in A upright("且") x > 2 \}\;#h(2em) C = \{ x\|x in A upright("且") x > 9 \} $ #noindent;$ D = \{ x\|x in A upright("且") x upright("除以3余2") \} $
++ 设 $A = \{ x\|x upright("是一位的奇数") \}$，指出在下列集合中，哪个是空集？哪个是只有一个元素的集合？$ B = \{ x\|x in A upright("且") x > 2 \}\;#h(2em) C = \{ x\|x in A upright("且") x > 9 \}\
+  D = \{ x\|x in A upright("且") x upright("除以3余2") \} $
 
 + 指出下列各题中集合 $A$ 与集合 $B$ 的关系．
 
@@ -589,7 +598,9 @@ C & = \{ X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
 ]
 ==== 定义和基本性质
-#strong[定义]#h(1em);在数学中，我们使用的“概念”和“符号”，如果它们的意义不明确，人们可以自由理解，那就无法研究问题了．所以必须对“概念”和“符号”的意义作确切的规定．这种对“概念”和“符号”的意义作规定的工作就叫做给“概念”和“符号”下定义．
+#v(0.8em);
+
+#noindent;#strong[定义]#h(1em);在数学中，我们使用的“概念”和“符号”，如果它们的意义不明确，人们可以自由理解，那就无法研究问题了．所以必须对“概念”和“符号”的意义作确切的规定．这种对“概念”和“符号”的意义作规定的工作就叫做给“概念”和“符号”下定义．
 
 例如，“两个形状和大小完全相同的图形叫做全等形．”这就是全等形的定义．
 
@@ -605,13 +616,21 @@ C & = \{ X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
 在前面我们已经给很多概念和使用的符号下了定义，请复习和记忆下列各概念和符号的意义，以作为今后学习的依据．
 
-#strong[概念]#h(1em);点、线段、直线、射线、平面、两点间距离、线段中点、角、角的平分线、锐角、直角、钝角、平角、周角、对顶角、两条直线互相垂直、线段的垂直平分线、点到直线的距离、两角的和与差、两角互余、两角互补、同位角、两条直线互相平行、全等形、相似形、相似比、圆．
+#v(0.8em);
 
-#strong[集合]#h(1em);子集、交集、并集、补集、基集、空集、命题、原命题、逆命题、否命题、逆否命题、充分条件、必要条件、充要条件．
+#noindent;#strong[概念]#h(1em);点、线段、直线、射线、平面、两点间距离、线段中点、角、角的平分线、锐角、直角、钝角、平角、周角、对顶角、两条直线互相垂直、线段的垂直平分线、点到直线的距离、两角的和与差、两角互余、两角互补、同位角、两条直线互相平行、全等形、相似形、相似比、圆．
 
-#strong[符号]#h(1em);$angle$, $triangle.stroked.t$, $dot.o$, $tack.t$, $pll$, $tilde.equiv$, $tilde.rev$, $in$, $in.not$, $subset.eq$, $=$, $union$, $inter$, $upright(I)$, $nothing$, $and$, $or$, $arrow.r.double$, $arrow.l.r.double$.
+#v(0.8em);
 
-#strong[基本性质]#h(1em);我们要论证一个命题的正确性，必须先由实践确立一系列命题的正确性，再以它们为根据作为出发点，才能设法论证其他命题的正确性，作为论证的原始依据的正确命题，我们称它为#strong[基本性质（或公理）]．基本性质的正确性不是通过推理论证而得出来的，而是通过实践检验确定无疑地归纳出来的．
+#noindent;#strong[集合]#h(1em);子集、交集、并集、补集、基集、空集、命题、原命题、逆命题、否命题、逆否命题、充分条件、必要条件、充要条件．
+
+#v(0.8em);
+
+#noindent;#strong[符号]#h(1em);$angle$, $triangle.stroked.t$, $dot.o$, $tack.t$, $pll$, $tilde.equiv$, $tilde.rev$, $in$, $in.not$, $subset.eq$, $=$, $union$, $inter$, $upright(I)$, $nothing$, $and$, $or$, $arrow.r.double$, $arrow.l.r.double$.
+
+#v(0.8em);
+
+#noindent;#strong[基本性质]#h(1em);我们要论证一个命题的正确性，必须先由实践确立一系列命题的正确性，再以它们为根据作为出发点，才能设法论证其他命题的正确性，作为论证的原始依据的正确命题，我们称它为#strong[基本性质（或公理）]．基本性质的正确性不是通过推理论证而得出来的，而是通过实践检验确定无疑地归纳出来的．
 
 以下几个命题今后作为#strong[基本性质]使用．
 
@@ -860,7 +879,7 @@ $therefore quad angle 1 = angle E P B$
 
     $therefore quad overline(A B) = overline(D E)$（#h(2em);）．
 
-    #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-24");
+    #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-24");
     
     #subcap[
     第2(b) 题
@@ -884,7 +903,7 @@ $therefore quad angle 1 = angle E P B$
 
     $therefore quad angle A B D = angle H F G$（#h(2em);）
 
-    #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-26");
+    #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-26");
     
     #subcap[
     第2(d) 题
@@ -938,7 +957,7 @@ $therefore quad angle 1 = angle E P B$
 
     $therefore quad angle 1 = angle 2$（#h(2em);）
 
-    #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-28");
+    #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-28");
     
     #subcap[
     第2(f) 题
@@ -980,7 +999,7 @@ $therefore quad angle 1 = angle E P B$
 
     $therefore quad overline(A B) = overline(C D)$
 
-    #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-30");
+    #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-30");
     
     #subcap[
     第2(h) 题
@@ -1004,7 +1023,7 @@ $therefore quad angle 1 = angle E P B$
 
     $therefore quad overline(A C) = overline(A D)$（#h(2em);）
 
-    #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-32");
+    #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-32");
     
     #subcap[
     第2(j) 题
@@ -1052,7 +1071,7 @@ $therefore quad angle 1 = angle E P B$
 
     $therefore quad overline(B F) = overline(C E)$（等量减等量差相等）
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-34");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-34");
   
   #subcap[
   第3(b) 题
@@ -1094,7 +1113,7 @@ $therefore quad angle 1 = angle E P B$
 
     $therefore quad angle B = angle D$（全等三角形的对应角相等）．
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-36");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-36");
   
   #subcap[
   第4(b) 题
@@ -1118,7 +1137,7 @@ $therefore quad angle 1 = angle E P B$
 
   求证：$triangle.stroked.t A B D tilde.equiv triangle.stroked.t A C D$.
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-38");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-38");
   
   #subcap[
   第6题
@@ -1138,7 +1157,7 @@ $therefore quad angle 1 = angle E P B$
 
   求证：$triangle.stroked.t A B D tilde.equiv triangle.stroked.t C B D$.
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-40");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-40");
   
   #subcap[
   第8题
@@ -1151,6 +1170,7 @@ $therefore quad angle 1 = angle E P B$
   ]])));
 
 #heading(level: 2, numbering: none, outlined: false)[复习题二]
+
 + 试举出五个集合的例子，并用列举法或描述法表示出来．
 
 + 写出下列集合的所有元素．
@@ -1232,7 +1252,7 @@ $therefore quad angle 1 = angle E P B$
   + $\(A union B\)union C$
 
   ]
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-42");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-42");
   
   #subcap[
   第7题
@@ -1295,7 +1315,7 @@ $therefore quad angle 1 = angle E P B$
 
   求证：$angle B = angle D$, $overline(A B) = overline(C D)$.
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-44");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("2-44");
   
   #subcap[
   第12题

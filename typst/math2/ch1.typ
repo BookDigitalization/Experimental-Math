@@ -19,13 +19,13 @@
 点、直线和平面是空间最简单的，也是最基本的图形．同学们在日常生活中，对它们早已有直观的认识了．在这一节里，我们再对它们的本质和相互关系作进一步的分析，确立点、直线和平面这三个基本的几何概念，并总结点、直线和平面之间相互关系方面的一些基本性质．
 
 === 点和直线
-在空间，最原始的，也是最基本的概念就是“位置”．通常，我们就用“点”来标记“位置”．例如在一张地图上，我们就以小圆点来标记各地的位置（见图1.2). 你可能发现，在地图上北京用“$star.filled$”，南京用“$circle.stroked.big$”印制的，这只是为了把首都和地方城市区别开来．其实，北京、南京的“位置”与地图上印制的图形“$star.filled$”或“$circle.stroked.big$”的形状和大小是没有关系的．这样，仅仅考虑“位置”的图形就是点．在天象图上也是以小圆点来标记各星体的位置的（见图1.3）．
+在空间，最原始的，也是最基本的概念就是“位置”．通常，我们就用“点”来标记“位置”．例如在一张地图上，我们就以小圆点来标记各地的位置（见图1.2). 你可能发现，在地图上北京用“★”，南京用“$circle.stroked.big$”印制的，这只是为了把首都和地方城市区别开来．其实，北京、南京的“位置”与地图上印制的图形“★”或“$circle.stroked.big$”的形状和大小是没有关系的．这样，仅仅考虑“位置”的图形就是点．在天象图上也是以小圆点来标记各星体的位置的（见图1.3）．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#image("/math2/fig/1-2.png", width: 100%);], caption: []), figure([#image("/math2/fig/1-3.png", width: 100%);], caption: [北斗七星]))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#image("/math2/fig/1-2.png", width: 100%);], caption: []), figure([#image("/math2/fig/1-3.png", width: 100%);], caption: [北斗七星]))));
 
 在几何学的讨论中，我们用不同的大写字母 $A\,B\,C\,dots.h$ 表示不同的点，如图1.4中的五个点，就在点旁分别标记以 $A$、$B$、$C$、$D$、$E$, 并分别读作点 $A$、点 $B$、点 $C$、点 $D$、点 $E$．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-02");], caption: []), figure([#image("/math2/fig/1-5.png", width: 100%);], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-02");], caption: []), figure([#image("/math2/fig/1-5.png", width: 100%);], caption: []))));
 
 在日常生活中，我们经常需要从一个地方走到另一个地方．例如，同学们早起上学，就得由自己的家所在的位置走到学校所在的位置．因此，在空间第二个原始的基本概念就要算是“通路”了．所谓“通路”，就是从一个位置移到另一个位置的路线．通常在地图上，我们用线来标记各地之间的种种通路，如铁路、公路等．在几何学的讨论中，“线”就是表示通路的．它的直观含义就是：一个“动点”由一个位置移动到另一个位置所走过的“路线”．如图1.5所示，设 $A$、$B$ 两点分别表示空间的两个位置，那么连结 $A$、$B$ 两点的可能通路是很多很多的．
 
@@ -73,7 +73,7 @@
 
 同学们一定会想到，把绳子 $overline(A B)$ 的两端点 $A$、$B$ 重叠在一起，并且把绳子拉直，那么在绳子的中间就折出一个 $C$ 点来（图1.8(2)), 而被折成的两段绳子 $overline(A C)$ 和 $overline(C B)$ 恰好长度相等，这就是说 $C$ 点把 $overline(A B)$ 平分了．所以我们把平分线段的点叫做#strong[线段的中点]．如果点 $C$ 是 $overline(A B)$ 的中点，则 $overline(A B) = 2 overline(A C) = 2 overline(C B)$.
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-05");], caption: []), figure([#fig("1-06");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-05");], caption: []), figure([#fig("1-06");], caption: []))));
 
 #example[
 已知 $overline(A B) = 24$ 厘米，点 $C$ 在 $overline(A B)$ 上，点 $M$、$N$ 分别是 $overline(A C)$ 和 $overline(C B)$ 的中点，求 $overline(M N)$ 的长度（见图1.9）．
@@ -244,7 +244,7 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 一般地说，如果所要度量的线段 $a$ 恰好可以分割成 $m$ 段和 $u$ 等长的线段，那么所求的比值就是整数 $m$, $a$ 的长度就是 $m u$.
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-12");], caption: []), figure([#fig("1-13");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-12");], caption: []), figure([#fig("1-13");], caption: []))));
 
 #example[
 设长度单位是 $u$, 所要度量的线段是 $b$ (图1.15)．单位长 $u$ 恰好可以分割成3段和 $b$ 等长的线段，那么所求的比值是 $1 / 3$, $b$ 的长度就是 $1 / 3 u$.
@@ -280,7 +280,8 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 ]
 #solution[
 在 $d$ 上用圆规截取2段 $u$ 后，所余的一段 $overline(D_2 E)$ 较 $u$ 短；在 $u$ 上截取2段 $overline(D_2 E)$ 后，所余的 $overline(U_2 V)$ 较 $overline(D_2 E)$ 短；在 $overline(D_2 E)$ 上截取2段 $overline(U_2 V)$ 后，所余的一段 $overline(F_2 E)$ 较 $overline(U_2 V)$ 短；但 $overline(U_2 V)$ 恰好是 $overline(F_2 E)$ 的2倍．于是 $ overline(D_2 E) & = overline(D_2 F_2) + overline(F_2 E) = 2 overline(U_2 V) + overline(F_2 E)\
- & = 2 dot.op 2 overline(F_2 E) + overline(F_2 E) = 5 overline(F_2 E) $ #noindent;$ u = 2 overline(D_2 E) + overline(U_2 V) = 2 dot.op 5 overline(F_2 E) + 2 overline(F_2 E) = 12 overline(F_2 E) $ #noindent;$therefore quad overline(F_2 E) = 1 / 12 u\,quad overline(D_2 E) = 5 / 12 u\,quad d = 2 5 / 12 u$
+ & = 2 dot.op 2 overline(F_2 E) + overline(F_2 E) = 5 overline(F_2 E)\
+u = 2 overline(D_2 E) + overline(U_2 V) = 2 dot.op 5 overline(F_2 E) + 2 overline(F_2 E) = 12 overline(F_2 E) $ #noindent;$therefore quad overline(F_2 E) = 1 / 12 u\,quad overline(D_2 E) = 5 / 12 u\,quad d = 2 5 / 12 u$
 
 ]
 由例1.7和例1.8可以看出，当被度量线段（$c$ 和 $d$）不能恰好被分割而成为长度单位的整数倍，也就是它们不能被长度单位量尽时，都是求出另一条线段（例1.7中是 $overline(U_1 V)$, 例1.8中是 $overline(F_2 E)$），使得它能量尽长度单位和被量线段．再按例1.6的方法求出以长度单位为单位的这条线段的长度，然后便可求出原来被量线段的长度了．
@@ -318,11 +319,11 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 
 通常检查一个桌面是否“平直”，最简单的方法就是用一根直尺放在桌面上（图1.18），如果放在任何位置上，直尺的边都和桌面密合，那么桌面就是“平直”的．我们就说桌面是平面．但是像图1.19的面上，虽然直尺放在 $ell_1\,ell_2\,dots.h\,ell_n$ 等位置时，直尺边和这个面密合，而在 $A B$ 位置上直尺边和面就不密合了．这就是说并不是在任何位置上直尺的边总和这个面密合，这个面不是一个平面，实际上是一个曲面．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#image("/math2/fig/1-18.png", width: 100%);], caption: []), figure([#image("/math2/fig/1-19.png", width: 100%);], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#image("/math2/fig/1-18.png", width: 100%);], caption: []), figure([#image("/math2/fig/1-19.png", width: 100%);], caption: []))));
 
 在几何学的讨论中，平面就是一个到处平直而且向各个方向无限延展的面，它的特点就是在它上面任取两点 $A$ 和 $B$（图1.20），直线 $A B$ 就完全在这个平面内．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-17");], caption: []), figure([#fig("1-18");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-17");], caption: []), figure([#fig("1-18");], caption: []))));
 
 我们观察一扇门，把它看作平面的一部分，那么它的轴线既在墙壁的平面内（图1.21），又在这扇门所在的平面内，不可能连结两个“合页”的直线不都在这两个平面内．推动这扇门，它每到一个新的位置都表现了通过轴线的一个平面．这些事实说明了：#strong[空间相交的两个平面的“交界”是一条直线．通过一条直线可有无数个平面．]
 
@@ -462,7 +463,7 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 
 由 $A$ 点出发，沿着一个固定的方向（比如向着 $B$ 点的方向）前进时，它的路线就是一条#strong[射线]．如图1.24所示，它就是居于 $A$ 点右侧的那条半直线．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-25");], caption: []), figure([#fig("1-26");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-25");], caption: []), figure([#fig("1-26");], caption: []))));
 
 所以我们把直线上一点一旁的部分叫做#strong[射线]，这一点叫做射线的#strong[端点]．例如射线 $A B$（图1.24）．（注意：表示射线时，射线的端点字母必须写在前面）．在几何中，我们把以 $A$ 点为端点的一条射线看作是由 $A$ 点出发的一个方向．
 
@@ -479,7 +480,7 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 
 当一个角的两条边重合时，其夹角显然为 $0$（即方向没有差别）．另外一种特殊情形是当角的一边是另一边的反向延长线时，就称这个角为#strong[平角]．如图1.27中射线 $C A$ 和射线 $C B$ 的方向相反，那么 $angle A C B$ 就是一个平角．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-28");], caption: []), figure([#fig("1-29");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-28");], caption: []), figure([#fig("1-29");], caption: []))));
 
 根据上述，我们可以把日常常用的“方向”和角这两个概念，给以如下的说明：
 
@@ -513,7 +514,7 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 + 如果在直线 $ell$ 上依次取3个点，那么直线 $ell$ 上有多少条射线？如果取100个点，那么直线 $ell$ 上有多少条射线？如果在 $ell$ 上依次取 $n$ 个点，那么直线 $ell$ 上有多少条射线？
 
 ]
-#align(center, block(breakable: false, grid(columns: (30%, 30%, 34%,), column-gutter: 1em, align: center + bottom, [#fig("1-30");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (30%, 30%, 34%,), column-gutter: 1em, align: center + bottom, [#fig("1-30");
 
 #subcap[
 第4题
@@ -530,7 +531,7 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 
 ]])));
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-33");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-33");
 
 #subcap[
 第7题
@@ -555,7 +556,7 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 
 如图1.29所示，$angle B A C$ 和 $angle B' A' C'$ 分别是以 $A$ 和 $A'$ 为顶点的两个角，用一张透明的塑胶片，先把它盖在 $angle B' A' C'$ 的上面，用笔把 $angle B' A' C'$ 复印到塑胶片上．然后把塑胶片移到 $angle B A C$ 的上面，调整其位置使得顶点 $A$ 和顶点 $A'$ 相重合；再用一个针插在 $A$、$A'$ 点之上，这样，塑胶片仍然可以绕着针尖所插的 $A'$ 点旋转，但是 $A$、$A'$ 点依然确保重合．适当旋转可以使得两个角的边 $A B$ 和 $A' B'$ 重合，而且“角区”位于相重边的同侧（图1.30）．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-36");], caption: []), figure([#fig("1-37");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-36");], caption: []), figure([#fig("1-37");], caption: []))));
 
 这样，两角之间有下列三种可能的位置关系：
 
@@ -704,7 +705,7 @@ $therefore quad angle C O B = 140 degree$
 
 #noindent;过 $A$ 点画直线 $ell$ 的垂线的方法如图1.39所示．
 
-#figure(kind: image, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#scale(60%, reflow: true, image("/math2/fig/1-39-1.png"));
+#figure(kind: image, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#scale(60%, reflow: true, image("/math2/fig/1-39-1.png"));
 
 #subcap[
 过直线 $ell$ 上一点 $A$ 画 $ell$ 的垂线
@@ -729,7 +730,7 @@ $therefore quad angle C O B = 140 degree$
 + 从直线外一点和这条直线上各点所引的线段中，垂直线段最短．
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-45");], caption: []), figure([#fig("1-46");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-45");], caption: []), figure([#fig("1-46");], caption: []))));
 
 过直线外一点画这条直线的垂线，这点到垂足间的线段的长度叫做这点到这条直线的#strong[距离]．
 
@@ -805,7 +806,7 @@ $therefore quad angle D B C = 180 degree - angle C - angle B D C = 180 degree - 
 
   + $angle A B E - angle C B D = angle A B C +\(#h(2em)\)$
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-49");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-49");
   
   #subcap[
   第1题
@@ -879,7 +880,7 @@ $therefore quad angle D B C = 180 degree - angle C - angle B D C = 180 degree - 
 
   + $64 degree 27' 15'' - 28 degree 37' 35''$
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-54");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-54");
   
   #subcap[
   第9题
@@ -917,7 +918,7 @@ $therefore quad angle D B C = 180 degree - angle C - angle B D C = 180 degree - 
 
   + 过 $C$ 点画出直线 $A B$ 的垂线．
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-56");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-56");
   
   #subcap[
   第17题
@@ -941,7 +942,7 @@ $therefore quad angle D B C = 180 degree - angle C - angle B D C = 180 degree - 
 
 + 如果顺次延长四边形 $A B C D$ 的各边，得到 $angle 1$、$angle 2$、$angle 3$ 和 $angle 4$, 那么，请你根据21题的计算结果猜想一下这四个角之和可能是多少度？然后再计算一下 $angle 1 + angle 2 + angle 3 + angle 4 = ?$ 来验证一下你的猜想是否正确．
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-58");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-58");
   
   #subcap[
   第21题
@@ -956,13 +957,13 @@ $therefore quad angle D B C = 180 degree - angle C - angle B D C = 180 degree - 
 === 角度和平行
 在前面的讨论中，我们已经明确了沿着一个固定方向一直走，所经过的路线就是一条射线．如图1.45所示，射线 $A B$ 和射线 $A' B'$ 分别表示起点为 $A$ 和 $A'$ 的两个方向．连结 $A$、$A'$ 再延长得射线 $A A'$, 于是射线 $A C$ 和射线 $A' C'$ 是相同的两个方向；$angle C A B$ 表示射线 $A B$ 和 $A C$ 这两个方向的差别，$angle C' A' B'$ 表示射线 $A' B'$ 和 $A' C'$ 这两个方向的差别．如果 $angle C A B = angle C' A' B'$, 显然射线 $A B$ 和 $A' B'$ 的方向就是相同的．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-60");], caption: []), figure([#fig("1-61");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-60");], caption: []), figure([#fig("1-61");], caption: []))));
 
 我们把 $angle C A B$ 和 $angle C' A' B'$ 这样位置的角叫做#strong[同位角]．如图1.46所示．
 
 连结同一平面内的射线 $A B$ 和 $A' B'$ 的端点 $A$、$A'$ 后，如果得到的同位角相等（图1.45）即 $angle C A B = angle C' A' B'$, 我们就说射线 $A B$ 和 $A' B'$ 互相平行．同样地，如果同一平面内的两条直线 $ell$ 和 $ell'$ 被另一条直线 $A A'$ 截出的同位角相等（图1.47），我们就说直线 $ell$ 和 $ell'$ #strong[互相平行]．记作 $ell pll ell'$．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-62");], caption: []), figure([#fig("1-63");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-62");], caption: []), figure([#fig("1-63");], caption: []))));
 
 #example[
 在纸上画一条直线记为 $ell$, 在 $ell$ 外任意取一点 $A'$（图1.48），怎样在纸上过 $A'$ 画一条直线和 $ell$ 平行？
@@ -1018,7 +1019,7 @@ $therefore quad angle D B C = 180 degree - angle C - angle B D C = 180 degree - 
 + 两条平行直线是否可以确定一个平面？
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-66");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-66");
 
 #subcap[
 第1题
@@ -1072,7 +1073,7 @@ $therefore quad angle D B C = 180 degree - angle C - angle B D C = 180 degree - 
 
 + 检验图中两条直线 $O A$, $O' A'$ 是否平行．
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-68");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-68");
   
   #subcap[
   第3题
@@ -1134,7 +1135,7 @@ $therefore quad angle D B C = 180 degree - angle C - angle B D C = 180 degree - 
 
   + 过 $O$ 点画直线 $B D$ 的垂线？
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-70");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-70");
   
   #subcap[
   第12题
@@ -1243,7 +1244,7 @@ angle A = angle A''\, & quad angle B = angle C''\,quad angle C = angle B'' $
 #noindent; $therefore quad triangle.stroked.t A B C tilde.equiv triangle.stroked.t D C B$ (SSS).
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-76");], caption: []), figure([#fig("1-77");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-76");], caption: []), figure([#fig("1-77");], caption: []))));
 
 #example[
 在图1.56中已知 $overline(A D) = overline(A E)$, $overline(A B) = overline(A C)$, 那么 $triangle.stroked.t A B E$ 和 $triangle.stroked.t A C D$ 全等吗？为什么？
@@ -1283,7 +1284,7 @@ angle A = angle A''\, & quad angle B = angle C''\,quad angle C = angle B'' $
   + $overline(A C) = 50 upright(m m)\,quad angle A = 95 degree\,quad angle B = 40 degree$
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-78");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-78");
 
 #subcap[
 第1题
@@ -1329,7 +1330,7 @@ angle A = angle A''\, & quad angle B = angle C''\,quad angle C = angle B'' $
 
 + 如图，画一条线段 $overline(A B) = 5$⁠cm, 画 $angle B A C = 30 degree$, $angle A B D = 30 degree$ 连 $C D$ 交 $A B$ 于 $M$ 点，如果 $M$ 点恰好是 $A B$ 的中点，那么 $triangle.stroked.t A M C$ 和 $triangle.stroked.t B M D$ 全等吗？为什么？
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-84");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-84");
   
   #subcap[
   第3题
@@ -1373,7 +1374,7 @@ angle A = angle A''\, & quad angle B = angle C''\,quad angle C = angle B'' $
 
 在图1.59中，让两个四边形边长的比都是1:1, 但各角不对应地相等，形状也就不同．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-87");], caption: []), figure([#fig("1-88");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-87");], caption: []), figure([#fig("1-88");], caption: []))));
 
 通过以上的观察分析，我们可推测，两个多边形相似的特征是：#strong[对应角相等，对应边成比例]．
 
@@ -1426,7 +1427,7 @@ $therefore quad overline(A' B') = 500000 overline(A B)\,quad overline(B' C') = 5
 + 把下面的长方形各边长缩小到原长的 $1 / 3$，画在作业纸上.
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-90");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-90");
 
 #subcap[
 第2题
@@ -1524,7 +1525,7 @@ $therefore quad h = 2 times 4 div 1.5 approx 5.33 upright(m)$
   ]
 )
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#image("/math2/fig/1-2ti.png", width: 100%);
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#image("/math2/fig/1-2ti.png", width: 100%);
 
 #subcap[
 第2题
@@ -1554,7 +1555,7 @@ $therefore quad h = 2 times 4 div 1.5 approx 5.33 upright(m)$
 
 + 如图，$A B$、$C D$ 交于 $E$ 点，$angle D = angle B$, $triangle.stroked.t A E D$ 与 $triangle.stroked.t C E B$ 是否相似？如果相似，试指出它们的对应边和对应角．
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-95");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-95");
   
   #subcap[
   第1题
@@ -1568,7 +1569,7 @@ $therefore quad h = 2 times 4 div 1.5 approx 5.33 upright(m)$
 
 + 如图，试找出图中的所有相似三角形．
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-97");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-97");
   
   #subcap[
   第3题
@@ -1752,7 +1753,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
 理由：请同学们自己说明．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-105");], caption: []), figure([#fig("1-106");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-105");], caption: []), figure([#fig("1-106");], caption: []))));
 
 === 过已知直线外一点作已知直线的垂线
 已知：直线 $ell$ 和 $ell$ 外一点 $P$\(图1.73),
@@ -1784,7 +1785,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 这种作法和作 $overline(A B)$ 的垂线的作法一致，因而直线 $P Q$ 不仅平分 $overline(A B)$, 还垂直 $overline(A B)$, 因此我们把 $P Q$ 叫做 $overline(A B)$ 的垂直平分线．线段的垂直平分线的一般意义可表述为：垂直且平分一条线段的直线叫做这条#strong[线段的垂直平分线]．
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-107");], caption: []), figure([#fig("1-108");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-107");], caption: []), figure([#fig("1-108");], caption: []))));
 
 === 过已知直线外一点作已知直线的平行线
 已知：直线 $ell$ 和 $ell$ 外一点 $P$\(图1.75).
@@ -1920,6 +1921,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
 ]
 #heading(level: 2, numbering: none, outlined: false)[复习题一]
+
 + $A$、$B$、$C$、$D$ 是依此顺序位于一条直线上的四个点，并且 $overline(A B) = overline(B D)$, $overline(B C) = overline(C D)$, 把下列各组线段的长度关系，分别用式子表示：
 
   #cols(3)[
@@ -1945,7 +1947,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
   + 比较一下(a) 与(b) 所得的结果，你能作出什么猜想？
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-113");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-113");
   
   #subcap[
   第4题
@@ -1983,7 +1985,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
   + $D$ 点在 $E$ 点右边多少米远的地方？
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-115");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-115");
   
   #subcap[
   第10题
@@ -2037,7 +2039,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
   + $A C$ 与 $B D$ 是否平行？为什么？
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-119");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-119");
   
   #subcap[
   第19题
@@ -2063,7 +2065,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
   #noindent;求作 $triangle.stroked.t A B C$.
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-121");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-121");
   
   #subcap[
   第21题
@@ -2079,7 +2081,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
 + 已知如图，如果 $overline(A B) = overline(D C)$, $overline(A C) = overline(D B)$, 那么 $triangle.stroked.t A B C$ 与 $triangle.stroked.t D C B$ 是否全等？为什么？
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-123");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-123");
   
   #subcap[
   第24题
@@ -2111,7 +2113,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
   + $triangle.stroked.t A C D$ 与 $triangle.stroked.t B C A$ 是否相似？为什么？
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-125");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("1-125");
   
   #subcap[
   第28题

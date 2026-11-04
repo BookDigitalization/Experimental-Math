@@ -88,8 +88,10 @@ class Converter:
                      if 172 <= int(m.group(1)) <= 181 or 192 <= int(m.group(1)) <= 201 else m.group(0), tex)
         tex = re.sub(r"\\vskip\s*[\d.]+\s*(ex|em|pt|mm|cm)", "", tex)
         # \section*：后面跟 \addcontentsline{toc}{subsection} 的（习题）以小节的缩进列入目录，否则不列入目录
-        tex = re.sub(r"\\section\*\{([^}]*)\}\s*\\addcontentsline\{toc\}\{subsection\}\{[^}]*\}",
-                     lambda m: "\n\n" + self.slot("#heading(level: 2, numbering: none, supplement: [toc-sub])[%s]" % m.group(1)) + "\n\n", tex)
+        # 后面跟 \addcontentsline{toc}{section} 的（复习题）与“第X节”同级列入目录
+        tex = re.sub(r"\\section\*\{([^}]*)\}\s*\\addcontentsline\{toc\}\{(sub)?section\}\{[^}]*\}",
+                     lambda m: "\n\n" + self.slot("#heading(level: 2, numbering: none%s)[%s]" % (
+                         ", supplement: [toc-sub]" if m.group(2) else "", m.group(1))) + "\n\n", tex)
         tex = re.sub(r"\\section\*\{([^}]*)\}(?!\s*\\addcontentsline)",
                      lambda m: "\n\n" + self.slot("#heading(level: 2, numbering: none, outlined: false)[%s]" % m.group(1)) + "\n\n", tex)
         tex = re.sub(r"\\addcontentsline\{[^}]*\}\{[^}]*\}\{[^}]*\}", "", tex)
@@ -98,7 +100,9 @@ class Converter:
                      r"(?=[ \t]*([^\s\\%]|\\(?!begin|end|item|section|subsection|par\b|noindent|\[)))",
                      lambda m: m.group(1) + self.slot("#noindent;"), tex)
         # \paragraph{X}：LaTeX 中是接排在段首的粗体小标题，不编号、不进目录
-        tex = re.sub(r"\\paragraph\{([^}]*)\}\s*", lambda m: self.slot("#strong[%s]#h(1em)" % m.group(1)), tex)
+        # （\@startsection 的缩进为 0，段前空约 3.25ex）
+        tex = re.sub(r"\\paragraph\{([^}]*)\}\s*",
+                     lambda m: "\n\n" + self.slot("#v(0.8em)") + "\n\n" + self.slot("#noindent;#strong[%s]#h(1em)" % m.group(1)), tex)
         # proof 是本书自定义的环境（只印“证明：”），换个名字，免得 pandoc 按 amsthm 加上 Proof. 和 ◻
         tex = re.sub(r"\\(begin|end)\{proof\}", r"\\\1{bookproof}", tex)
         # 多行环境末尾多余的 \\ 会让 pandoc 转错（LaTeX 中只是多一个空行）
@@ -304,7 +308,7 @@ class Converter:
                 figs.append("figure([%s], caption: [%s])" % (body, caption) if cap else "[%s]" % body)
             widths = ", ".join("%g%%" % (float(w or 1) * 100) for w, _ in parts)
             # 整组不跨页（否则图与下面的“第 n 题”可能分在两页）
-            grid = "block(breakable: false, grid(columns: (%s,), column-gutter: 1em, align: center + bottom, %s))" % (
+            grid = "block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (%s,), column-gutter: 1em, align: center + bottom, %s))" % (
                 widths, ", ".join(figs))
             # minipage 之外还有 \caption：整组图共用一个编号图注
             outer = re.sub(r"\\begin\{minipage\}.*?\\end\{minipage\}", "", m.group(0), flags=re.S)
@@ -325,9 +329,9 @@ class Converter:
     def wideparen(self, args: list[str]) -> str:
         body = args[0].strip()
         if re.fullmatch(r"[A-Za-z]+", body):
-            return self.math_slot("overparen(%s)" % " ".join(body))
+            return self.math_slot("wideparen(%s)" % " ".join(body))
         # 带下标、撇号的弧（如 A_1A_2）
-        return self.math_slot("overparen(%s)" % tex_math_to_typst(body))
+        return self.math_slot("wideparen(%s)" % tex_math_to_typst(body))
 
     def tfrac(self, args: list[str]) -> str:
         a, b = (tex_math_to_typst(x) for x in args)
@@ -416,12 +420,18 @@ class Converter:
         # 所以把 #strong[…] 中的行内公式拆到 strong 外面
         def split_strong(m: re.Match) -> str:
             parts = re.split(r"(\$[^$]*\$)", m.group(1))
-            return "".join(p if p.startswith("$") else ("#strong[%s]" % p if p.strip() else p) for p in parts if p)
+            out = "".join(p if p.startswith("$") else ("#strong[%s]" % p if p.strip() else p) for p in parts if p)
+            # 拆出来的公式在最前面、前面紧挨着汉字时补一个空格（filter.lua 只给同一层的汉字与公式之间加空格）
+            if out.startswith("$") and m.start() > 0 and re.match(r"[一-鿿）]", m.string[m.start() - 1]):
+                out = " " + out
+            return out
         typ = re.sub(r"#strong\[([^\[\]]*\$[^\[\]]*)\]", split_strong, typ)
         # 填空的横线：#underline 不给纯空白画线
         typ = re.sub(r"#underline\[#h\(([\d.]+em)\);?\]", r"#box(width: \1, stroke: (bottom: 0.4pt), outset: (bottom: 2pt))", typ)
         # pandoc 把 \square 转成很小的 □，\bigcirc 转成普通大小的 ○
         typ = typ.replace("square.stroked.tiny", "square.stroked")
+        # \bigstar：数学字体中的 star.filled 很小，改用正文的实心大星
+        typ = typ.replace("$star.filled$", "★")
         typ = re.sub(r"(?<![\w.])circle\.stroked(?![\w.])", "circle.stroked.big", typ)
         # pandoc 把 \frac{360^\circ}{n} 写成 360 degree / n，Typst 会解析成 360 (degree / n)
         typ = re.sub(r"(?<![\w.)])(\d+(?:\.\d+)?) degree / ", r"(\1 degree) / ", typ)
@@ -775,7 +785,9 @@ def aligned_rows(body: str, numbered: bool) -> str:
         left, _, right = r.partition("&")
         rows.append("($%s$, $%s$, %s)" % (tex_math_to_typst(left) if left.strip() else "",
                                          # 右半以 = 开头时前面补一个普通符号类的空占位 eqph（见 template.typ），否则 Typst 会去掉 = 左侧的间距
-                                         ("eqph " if left.strip() else "") + tex_math_to_typst(right) if right.strip() else "",
+                                         # 左半为空的续行也要补，否则这些行的 = 比首行偏左
+                                         ("eqph " if left.strip() or re.match(r"\s*[=<>]|\s*\\(?:ne|le|ge|approx|equiv|sim)", right) else "")
+                                         + tex_math_to_typst(right) if right.strip() else "",
                                          mark))
     return "#numbered-align(%s)" % ", ".join(rows)
 

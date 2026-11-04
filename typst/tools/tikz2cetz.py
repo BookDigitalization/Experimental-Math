@@ -614,10 +614,9 @@ class Picture:
                 return None
             if t in ("|",):
                 return '"|"'
-            if t in (">", "<", "latex", "stealth"):
-                return '"stealth"'
-            if t in (">>", "<<"):
-                return '"stealth"'
+            # |<->| 之类：端点先是竖杠，再是箭头（CeTZ 的记号数组从端点往里排）
+            if "|" in t and t.strip("|"):
+                return '("|", "stealth")'
             return '"stealth"'
         d = []
         if tip(left):
@@ -1665,11 +1664,20 @@ class Tkz:
         self.out.append("line(%s, %s)" % (", ".join(self.xy(p) for p in pts), ", ".join(args)))
 
     def tkz_DrawSegments(self, args):
-        st = self.tkz_style(arg(args, "["), "segment")
+        opt = arg(args, "[")
+        st = self.tkz_style(opt, "segment")
+        d = dict(parse_options(opt or ""))
         for g in point_groups(arg(args, "(")):
-            self.emit_path([self.get(x) for x in g], st)
+            pts = [self.get(x) for x in g]
+            # add=l and r：线段两端各按长度的比例延长（同 tkzDrawLines）
+            if "add" in d and len(pts) == 2:
+                l_, r_ = (num(x) for x in d["add"].split(" and "))
+                a, b = pts
+                pts = [add(a, mul(sub(a, b), l_)), add(b, mul(sub(b, a), r_))]
+            self.emit_path(pts, st)
 
-    tkz_DrawSegment = tkz_DrawSegments
+    def tkz_DrawSegment(self, args):
+        self.tkz_DrawSegments(args)
 
     def tkz_DrawPolygon(self, args):
         st = self.tkz_style(arg(args, "["), "polygon")

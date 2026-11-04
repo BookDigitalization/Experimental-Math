@@ -66,7 +66,7 @@ $therefore quad triangle.stroked.t A B D tilde.equiv triangle.stroked.t A C E$ (
 $therefore quad overline(B D) = overline(C E)$（全等三角形的对应边相等）．
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-03");], caption: []), figure([#fig("3-04");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-03");], caption: []), figure([#fig("3-04");], caption: []))));
 
 #example[
 已知：在四边形 $A B C D$ 中，$overline(A D) = overline(B C)$, $overline(A B) = overline(C D)$（图3.4）．
@@ -110,7 +110,7 @@ $therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t C D F$ (
 $therefore quad overline(A E) = overline(C F)$（全等三角形的对应边相等）．
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-05");], caption: []), figure([#fig("3-06");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-05");], caption: []), figure([#fig("3-06");], caption: []))));
 
 #example[
 在图3.6中，已知：$overline(A B) = overline(B C)$, $overline(A D) = overline(C D)$, $E$ 点在 $B D$ 上．
@@ -174,7 +174,7 @@ $therefore quad overline(A E) = overline(C E)$（全等三角形的对应边相�
   求证：$overline(O E) = overline(O F)$.
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-07");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-07");
 
 #subcap[
 第1题
@@ -186,7 +186,7 @@ $therefore quad overline(A E) = overline(C E)$（全等三角形的对应边相�
 
 ]])));
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-09");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-09");
 
 #subcap[
 第3题
@@ -198,7 +198,7 @@ $therefore quad overline(A E) = overline(C E)$（全等三角形的对应边相�
 
 ]])));
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-11");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-11");
 
 #subcap[
 第5题
@@ -210,7 +210,7 @@ $therefore quad overline(A E) = overline(C E)$（全等三角形的对应边相�
 
 ]])));
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-13");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-13");
 
 #subcap[
 第7题
@@ -222,7 +222,7 @@ $therefore quad overline(A E) = overline(C E)$（全等三角形的对应边相�
 
 ]])));
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-15");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-15");
 
 #subcap[
 第9题
@@ -353,7 +353,7 @@ $therefore quad angle A D C = angle A$（等腰三角形的底角相等）．
 $therefore quad angle A D C = angle A E B$（等量代换）．
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-20");], caption: []), figure([#fig("3-21");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-20");], caption: []), figure([#fig("3-21");], caption: []))));
 
 #example[
 如图3.12, 已知：$overline(A C) = overline(B C)$, $overline(A E) = overline(D B)$.
@@ -417,7 +417,7 @@ $therefore quad overline(C D) = overline(C E)$
 
 ]
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-23");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-23");
 
 #subcap[
 第7题
@@ -429,7 +429,7 @@ $therefore quad overline(C D) = overline(C E)$
 
 ]])));
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-25");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-25");
 
 #subcap[
 第10--11题
@@ -490,7 +490,7 @@ $therefore quad overline(C D) = overline(C E)$
 
 由此，我们就可以作出已知图形以某直线为轴的对称形．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-28");], caption: []), figure([#fig("3-29");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-28");], caption: []), figure([#fig("3-29");], caption: []))));
 
 #example[
 已知：四边形 $A B C D$ 及直线 $ell$. (图3.16)
@@ -594,7 +594,7 @@ $therefore quad triangle.stroked.t A B A' tilde.equiv triangle.stroked.t A C A'$
 三角形的外角大于和它不相邻的任一内角．
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-32");], caption: []), figure([#fig("3-33");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-32");], caption: []), figure([#fig("3-33");], caption: []))));
 
 已知：$triangle.stroked.t A B C$ 和外角 $angle C B D$（图3.20）．
 
@@ -630,7 +630,7 @@ $therefore quad angle C B D > angle C$（等量代换）．
 ]
 已知：$triangle.stroked.t A B C$（图3.21)
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-34");], caption: []), figure([#fig("3-35");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-34");], caption: []), figure([#fig("3-35");], caption: []))));
 
 求证：
 
@@ -696,7 +696,7 @@ $therefore quad overline(A B) + overline(A C) > overline(B C)$
 求证：$overline(A D) < overline(A B) < overline(A E)$
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-36");], caption: []), figure([#fig("3-37");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-36");], caption: []), figure([#fig("3-37");], caption: []))));
 
 #proof[
 $because quad overline(A B) = overline(A C)$
@@ -789,7 +789,7 @@ $therefore quad overline(B E) + overline(E C) < overline(A B) + overline(A C)$�
   + $overline(B C) > overline(B E)$
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-39");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-39");
 
 #subcap[
 第1--2题
@@ -811,7 +811,7 @@ $therefore quad overline(B E) + overline(E C) < overline(A B) + overline(A C)$�
 
 + 已知：如图，$angle B = angle C$, $overline(B D) = overline(E C)$. 求证：$angle 1 = angle 2$.
 
-  #align(center, block(breakable: false, grid(columns: (31%, 31%, 31%,), column-gutter: 1em, align: center + bottom, [#fig("3-41");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (31%, 31%, 31%,), column-gutter: 1em, align: center + bottom, [#fig("3-41");
   
   #subcap[
   第1题
@@ -836,7 +836,7 @@ $therefore quad overline(B E) + overline(E C) < overline(A B) + overline(A C)$�
 
 + 如图，已知：$overline(B E) = overline(E D)$, $angle 1 = angle 2$. 求证：$overline(A B) = overline(C D)$.
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-44");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-44");
   
   #subcap[
   第5题
@@ -854,7 +854,7 @@ $therefore quad overline(B E) + overline(E C) < overline(A B) + overline(A C)$�
 
 + 在 $triangle.stroked.t A B C$ 中，$angle B = 2 angle C$, $A D$ 平分 $angle A$, 交 $overline(B C)$ 于 $D$ 点，求证：$overline(A B) + overline(B D) = overline(A C)$.
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-46");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-46");
   
   #subcap[
   第7题
@@ -903,7 +903,7 @@ $therefore quad overline(B E) + overline(E C) < overline(A B) + overline(A C)$�
 平面上两条直线被第三条直线所截，截得八个角，如图3.26, 其中的 $angle 1$ 和 $angle 5$, $angle 4$ 和 $angle 8$, $angle 2$ 和 $angle 6$, $angle 3$ 和 $angle 7$, 都叫做#strong[同位角]，$angle 4$ 和 $angle 6$, $angle 3$ 和 $angle 5$ 都叫#strong[内错角]，$angle 4$ 和 $angle 5$, $angle 3$ 和 $angle 6$ 都叫做#strong[同旁内角]．
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-49");], caption: []), figure([#fig("3-50");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-49");], caption: []), figure([#fig("3-50");], caption: []))));
 
 由平行线定义可知，两条直线平行的充要条件是这两条直线被第三条直线所截出的同位角相等．这就是说：
 
@@ -994,7 +994,7 @@ $therefore quad C D pll E F$（内错角相等，则两条直线平行）．
 $therefore quad A B pll C D$（平行于第三条直线的两条直线平行）．
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-52");], caption: []), figure([#fig("3-53");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-52");], caption: []), figure([#fig("3-53");], caption: []))));
 
 #example[
 在图3.30中，已知 $overline(C D) = overline(A B)$, $A D$ 是直线．$angle A = angle D$, 并且 $overline(A E) = overline(D F)$.
@@ -1044,7 +1044,7 @@ $therefore quad angle A' C B = angle A O B$（两条直线平行，同位角相�
 $therefore quad angle A O B = angle A' O' B'$（等量代换）．
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-54");], caption: []), figure([#fig("3-55");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-54");], caption: []), figure([#fig("3-55");], caption: []))));
 
 上面的例子我们可以写成下面的定理：
 
@@ -1110,7 +1110,7 @@ $therefore quad A B pll C D$（内错角相等，则两条直线平行）．
 + 在四边形 $A B C D$ 中，$A D pll B C$, $A B pll C D$ 且 $overline(B E) = overline(D F)$, 则 $overline(A E) pll overline(F C)$.
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-56");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-56");
 
 #subcap[
 第1题
@@ -1122,7 +1122,7 @@ $therefore quad A B pll C D$（内错角相等，则两条直线平行）．
 
 ]])));
 
-#align(center, block(breakable: false, grid(columns: (32%, 32%, 32%,), column-gutter: 1em, align: center + bottom, [#fig("3-58");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (32%, 32%, 32%,), column-gutter: 1em, align: center + bottom, [#fig("3-58");
 
 #subcap[
 第4题
@@ -1139,7 +1139,7 @@ $therefore quad A B pll C D$（内错角相等，则两条直线平行）．
 
 ]])));
 
-#align(center, block(breakable: false, grid(columns: (32%, 32%, 32%,), column-gutter: 1em, align: center + bottom, [#fig("3-61");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (32%, 32%, 32%,), column-gutter: 1em, align: center + bottom, [#fig("3-61");
 
 #subcap[
 第8题
@@ -1156,7 +1156,7 @@ $therefore quad A B pll C D$（内错角相等，则两条直线平行）．
 
 ]])));
 
-#align(center, block(breakable: false, grid(columns: (46%, 46%,), column-gutter: 1em, align: center + bottom, [#fig("3-64");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (46%, 46%,), column-gutter: 1em, align: center + bottom, [#fig("3-64");
 
 #subcap[
 第11题
@@ -1168,7 +1168,7 @@ $therefore quad A B pll C D$（内错角相等，则两条直线平行）．
 
 ]])));
 
-#align(center, block(breakable: false, grid(columns: (46%, 46%,), column-gutter: 1em, align: center + bottom, [#fig("3-66");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (46%, 46%,), column-gutter: 1em, align: center + bottom, [#fig("3-66");
 
 #subcap[
 第14题
@@ -1265,7 +1265,7 @@ $therefore quad angle D O B + angle D O C = angle A B O + angle A C O + angle B 
 $therefore quad angle B O C = angle A + angle A B O + angle A C O$
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-70");], caption: []), figure([#fig("3-71");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-70");], caption: []), figure([#fig("3-71");], caption: []))));
 
 #example[
 在图3.36中．已知：$overline(C D) tack.t overline(A B)$ 于 $D$, $overline(B E) tack.t overline(A C)$ 于 $E$, 且 $overline(B E) = overline(C D)$.
@@ -1328,7 +1328,7 @@ $therefore quad overline(P E) = overline(P F)$（全等三角形的对应边相�
 连结多边形的不相邻两个顶点的线段叫做这个多边形的#strong[对角线]．如图3.38中的四边形 $A B C D$ 中就有两条对角线 $overline(A C)$、$overline(B D)$.
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-73");], caption: []), figure([#fig("3-74");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-73");], caption: []), figure([#fig("3-74");], caption: []))));
 
 #blk[推论][
 从 $n$ 边形的一个顶点引对角线，可把这个 $n$ 边形分成 $n - 2$ 个三角形，如图3.39中的五边形 $A B C D E$，从 $A$ 点引对角线 $overline(A C)$、$overline(A D)$，则分成了三个三角形．
@@ -1342,7 +1342,7 @@ $therefore quad overline(P E) = overline(P F)$（全等三角形的对应边相�
 ]
 这个定理请同学们参看图3.40或图3.41自己证明．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-75");], caption: []), figure([#fig("3-76");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-75");], caption: []), figure([#fig("3-76");], caption: []))));
 
 #blk[定义][
 多边形内角的一边和另一边的反向延长线所组成的角叫做多边形的#strong[外角]．
@@ -1362,7 +1362,7 @@ $therefore quad overline(P E) = overline(P F)$（全等三角形的对应边相�
 各边都相等，各角都相等的多边形叫做#strong[正多边形]．
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-77");], caption: []), figure([#fig("3-78");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-77");], caption: []), figure([#fig("3-78");], caption: []))));
 
 #example[
 在图3.43中，已知：$A B C D E$ 是正五边形，对角线 $overline(A D)$、$overline(C E)$ 相交于 $F$.
@@ -1397,7 +1397,7 @@ $therefore quad triangle.stroked.t A E F$ 是等腰三角形．
 #example[
 已知：正六边形 $A B C D E F$ (图3.44)．
 
-求证：对角线 $overline(A D)$、$overline(B E)$ $overline(C F)$ 相交于一点，且把正六边形 $A B C D E F$ 分割成六个正三角形．
+求证：对角线 $overline(A D)$、$overline(B E)$、$overline(C F)$ 相交于一点，且把正六边形 $A B C D E F$ 分割成六个正三角形．
 
 ]
 #figure([#fig("3-79");
@@ -1490,7 +1490,7 @@ $therefore quad angle B = angle C A D$.
 同理：$angle C = angle B A D$\.（两边分别互相垂直的两个锐角相等）
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-80");], caption: []), figure([#fig("3-81");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-80");], caption: []), figure([#fig("3-81");], caption: []))));
 
 #example[
 已知：$triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$ 中，$angle A C B = angle A' C' B' = 90 degree$, $overline(A B) = overline(A' B')$, $overline(A C) = overline(A' C')$ (图3.47).
@@ -1646,7 +1646,7 @@ $therefore quad triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'
 
 + 求图中五角星形的五个角之和．
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-86");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-86");
   
   #subcap[
   第16题
@@ -1676,7 +1676,7 @@ $therefore quad triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'
 
   + $F G pll A B$
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-88");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-88");
 
 #subcap[
 第20题
@@ -1758,7 +1758,7 @@ $therefore quad A D pll B C\,quad A B pll C D$（内错角相等，则两条直�
 $therefore quad$ 四边形 $A B C D$ 为平行四边形（平行四边形定义）．
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-91");], caption: []), figure([#fig("3-92");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-91");], caption: []), figure([#fig("3-92");], caption: []))));
 
 已知：四边形 $A B C D$ 中，$angle A = angle C$, $angle B = angle D$（图3.51）．
 
@@ -1818,7 +1818,7 @@ $therefore quad A O$ 是 $overline(B E)$ 的垂直平分线（为什么？）．
 $therefore quad triangle.stroked.t A O B$ 是直角三角形；$overline(B O) = overline(O E)$.
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-93");], caption: []), figure([#fig("3-94");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-93");], caption: []), figure([#fig("3-94");], caption: []))));
 
 #example[
 从 $pgram A B C D$ 的各顶点作对角线的垂线 $A F$、$B E$、$C G$、$D H$, $E$、$F$、$G$、$H$ 是垂足（图3.53）．
@@ -1909,7 +1909,7 @@ $therefore quad overline(D E) = 1 / 2 overline(B C)$.
 由同学自己完成（提示：射线 $A F$ 交 $overline(B C)$ 的延长线于 $G$, 则 $overline(E F)$ 转化为 $triangle.stroked.t A B G$ 的中位线）．
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-96");], caption: []), figure([#fig("3-97");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-96");], caption: []), figure([#fig("3-97");], caption: []))));
 
 #example[
 三角形的三条中线相交于一点，这点和各边中点的距离等于这边上中线的三分之一．
@@ -1975,7 +1975,7 @@ $therefore quad overline(C D) = overline(D B)$. 但 $overline(D B) = overline(D 
 $therefore quad overline(C D) = overline(D B) = overline(D A)$.
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-98");], caption: []), figure([#fig("3-99");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-98");], caption: []), figure([#fig("3-99");], caption: []))));
 
 #example[
 在直角三角形中，$30 degree$ 角的对边等于斜边的一半．
@@ -2018,7 +2018,7 @@ $therefore quad overline(B C) = overline(B D) = 1 / 2 overline(A B)$.
 
 例如，已知 $triangle.stroked.t A B C$, 我们作顶点 $A$、$B$、$C$ 关于 $O$ 点的中心对称点 $A'\,B'\,C'$, 容易证明 $triangle.stroked.t A' B' C'$ 就是 $triangle.stroked.t A B C$ 的关于对称中心 $O$ 的中心对称形（图3.60）．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-101");], caption: []), figure([#fig("3-102");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-101");], caption: []), figure([#fig("3-102");], caption: []))));
 
 从任意两个中心对称形的定义，我们很容易看出：
 
@@ -2193,7 +2193,7 @@ $therefore quad overline(A E) + overline(A H) = overline(B E) + overline(B F)$�
 + 已知：正方形 $A B C D$, $E$、$F$、$G$、$H$ 分别在 $overline(A B)$、$overline(B C)$、$overline(C D)$、$overline(D A)$ 上，并且 $overline(A E) = overline(B F) = overline(C G) = overline(D H)$, 求证：四边形 $E F G H$ 是正方形．
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-106");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-106");
 
 #subcap[
 第1、2题
@@ -2205,7 +2205,7 @@ $therefore quad overline(A E) + overline(A H) = overline(B E) + overline(B F)$�
 
 ]])));
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-108");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-108");
 
 #subcap[
 第5题
@@ -2217,7 +2217,7 @@ $therefore quad overline(A E) + overline(A H) = overline(B E) + overline(B F)$�
 
 ]])));
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-110");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-110");
 
 #subcap[
 第8题
@@ -2229,7 +2229,7 @@ $therefore quad overline(A E) + overline(A H) = overline(B E) + overline(B F)$�
 
 ]])));
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-112");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-112");
 
 #subcap[
 第16题
@@ -2281,7 +2281,7 @@ $therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
 ]
 应用平行线等分线段定理可以用直尺和圆规任意等分一条线段．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-115");], caption: []), figure([#fig("3-116");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-115");], caption: []), figure([#fig("3-116");], caption: []))));
 
 #example[
 已知：$overline(A B)$（图3.67）．
@@ -2319,7 +2319,7 @@ $therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
 
   求证：四边形 $E F G H$ 是平行四边形．
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-117");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-117");
   
   #subcap[
   第3题
@@ -2354,7 +2354,7 @@ $therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
 
   求证：$overline(B K) = overline(K L) = overline(L D)$（提示：连 $overline(A C)$, 在 $triangle.stroked.t A B C$ 中应用重心定理）
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-120");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-120");
   
   #subcap[
   第7题
@@ -2378,7 +2378,7 @@ $therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
 
 + 设 $P$ 点是正方形 $A B C D$ 的 $overline(C D)$ 上的一点，$angle B A P$ 的平分线与 $overline(B C)$ 的交点为 $Q$, 那么 $overline(A P) = overline(D P) + overline(B Q)$.
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-122");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-122");
   
   #subcap[
   第11题
@@ -2441,7 +2441,7 @@ $therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
 
 + 设区域 $T$ 是区域 $R$ 的一部分，也就是区域 $R$ 包含区域 $T$, 则有：$T$ 的面积 $< R$ 的面积（图3.71）．例如在图3.72中，正方形 $A B C D$ 的面积 $<$ 圆的面积 $<$ 正方形 $A' B' C' D'$ 的面积．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#scale(80%, reflow: true, image("/math2/fig/3-71.png"));], caption: []), figure([#fig("3-125");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#scale(80%, reflow: true, image("/math2/fig/3-71.png"));], caption: []), figure([#fig("3-125");], caption: []))));
 
 #blk[定义][
 如果两个平面图形的面积相等，我们说它们是等积图形．
@@ -2499,7 +2499,7 @@ $therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
 
 + $a$、$b$ 都是实数时，长方形的面积仍等于长 $times$ 宽．这到高中我们才能证明它．
 
-#align(center, block(breakable: false, grid(columns: (40%, 55%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-127");], caption: []), figure([#fig("3-128");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (40%, 55%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-127");], caption: []), figure([#fig("3-128");], caption: []))));
 
 有了长方形面积公式后，一些其他与长方形有关连的图形的面积就很容易求得．
 
@@ -2603,7 +2603,7 @@ $therefore quad triangle.stroked.t A B C$ 的面积 $= 1 / 2 a h$.
 梯形的面积等于高与它的中位线的积．
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-131");], caption: []), figure([#fig("3-132");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-131");], caption: []), figure([#fig("3-132");], caption: []))));
 
 #example[
 已知：五边形 $A B C D E$\(图3.79).
@@ -2649,7 +2649,7 @@ $because quad triangle.stroked.t D B C$ 的面积 $= triangle.stroked.t D B G$ �
 + 求作一等腰三角形和已知不等边三角形等积．
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-133");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-133");
 
 #subcap[
 第6题
@@ -2664,7 +2664,7 @@ $because quad triangle.stroked.t D B C$ 的面积 $= triangle.stroked.t D B G$ �
 === 勾股定理
 我国古代约二千年前就掌握了直角三角形三边之间的关系．中国古算书记载有“勾三股四弦五”的规律．我国通常把直角三角形中较短的直角边叫做勾，较长的直角边叫做股，斜边叫做弦（图3.80）．那么“勾三股四弦五”的意思是：如果一个直角三角形的两条直角边长是3和4个长度单位，那么斜边长一定是5个长度单位，3、4、5三个数之间满足关系：$ 3^2 + 4^2 = 5^2 $ #noindent;这就是说以3、4为边长的两个正方形的面积的和正好等于以5为边长的正方形的面积（图3.81）
 
-#align(center, block(breakable: false, grid(columns: (35%, 58%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-135");], caption: []), figure([#fig("3-136");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (35%, 58%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-135");], caption: []), figure([#fig("3-136");], caption: []))));
 
 由“勾三股四弦五”可以归纳出一般规律：
 
@@ -2688,7 +2688,7 @@ $therefore quad gamma = 90 degree$.
 所以 $ \(a + b\)^2 = 4 times 1 / 2 a b + c^2 $ #noindent;展开得：$ a^2 + 2 a b + b^2 = 2 a b + c^2 $ #noindent;即 $ a^2 + b^2 = c^2 $
 
 ]
-#align(center, block(breakable: false, grid(columns: (38%, 58%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-137");], caption: []), figure([#fig("3-138");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (38%, 58%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-137");], caption: []), figure([#fig("3-138");], caption: []))));
 
 我国古代算学家对这个定理作了各种证明，上面的证法只是其中的一种．作为例子，我们再介绍一种勾股定理的欧几里得的证法．
 
@@ -2728,7 +2728,7 @@ $therefore quad$ 正方形 $A E D C$ 的面积 $=$ 正方形 $A B H K$ 的面积
 设 $overline(A C)$ 的长为 $x$⁠cm, 根据勾股定理：$ x^2 = 5^2 + 12^2 quad arrow.r.double quad x^2 = 169 $ #noindent;$because quad x > 0\,#h(2em) therefore quad x = 13\(upright(c m)\)$
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-139");], caption: []), figure([#fig("3-140");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-139");], caption: []), figure([#fig("3-140");], caption: []))));
 
 #example[
 将长为5米的梯子 $overline(A C)$ 斜靠在墙上，$overline(B C)$ 长为2米，求地面到梯子上端高 $overline(A B)$ 之长（精确到0.01米）（图3.85）.
@@ -2790,7 +2790,7 @@ $therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t D C F$ (
  & = overline(A B)^2 + overline(B C)^2 + overline(C D)^2 + overline(D A)^2 $
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-142");], caption: []), figure([#fig("3-143");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-142");], caption: []), figure([#fig("3-143");], caption: []))));
 
 当平行四边形为矩形时（图3.88），由于矩形两条对角线相等，上面的关系式转化为：$ 2 overline(A C)^2 = 2 (overline(A B)^2 + overline(B C)^2) $ #noindent;即 $ overline(A C)^2 = overline(A B)^2 + overline(B C)^2 $ #noindent;这恰好符合勾股定理．因此，一般平行四边形对角线与边的关系可看成广义勾股定理．
 
@@ -2806,7 +2806,7 @@ $therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t D C F$ (
 同理可得：$ m_b = 1 / 2 sqrt(2\(a^2 + c^2\)- b^2)\,#h(2em) m_c = 1 / 2 sqrt(2\(a^2 + b^2\)- c^2) $
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-144");], caption: []), [#fig("3-145");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-144");], caption: []), [#fig("3-145");
 
 #subcap[
 第1题
@@ -3221,7 +3221,7 @@ $therefore quad overline(A D) / overline(A B) = overline(A E) / overline(A C)$�
 $therefore quad overline(A D) dot.op overline(A C) = overline(A E) dot.op overline(A B)$（为什么？）
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-155");], caption: []), figure([#fig("3-156");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-155");], caption: []), figure([#fig("3-156");], caption: []))));
 
 #example[
 已知：$pgram A B C D$ 中，$G$ 是 $overline(D C)$ 边延长线上的一点，$A G$ 分别交 $overline(B D)$、$overline(B C)$ 于 $E$、$F$\(图3.98).
@@ -3265,7 +3265,7 @@ $therefore quad overline(C D) = 1 / 3 overline(A B)$
 用 $overline(C D)$ 去截要分的线段 $overline(A B)$, 就可以把它三等分．
 
 ]
-#align(center, block(breakable: false, grid(columns: (38%, 58%,), column-gutter: 1em, align: center + bottom, figure([#scale(60%, reflow: true, image("/math2/fig/3-99.png"));], caption: []), figure([#fig("3-157");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (38%, 58%,), column-gutter: 1em, align: center + bottom, figure([#scale(60%, reflow: true, image("/math2/fig/3-99.png"));], caption: []), figure([#fig("3-157");], caption: []))));
 
 #example[
 如果一个直角三角形的斜边和一条直角边与另一个直角三角形的斜边和一条直角边成比例，那么这两个直角三角形相似．
@@ -3276,7 +3276,8 @@ $therefore quad overline(C D) = 1 / 3 overline(A B)$
 
 ]
 #proof[
-设 $overline(A B) / overline(A' B') = overline(A C) / overline(A' C') = k$，那么：$ overline(A B) = k overline(A' B')\,#h(2em) overline(A C) = k overline(A' C') $ #noindent;$ overline(B C) = sqrt(overline(A B)^2 - overline(A C)^2) = sqrt(k^2 (overline(A' B')^2 - overline(A' C')^2)) = k overline(B' C') $ #noindent;则：$overline(B C) / overline(B' C') = k$
+设 $overline(A B) / overline(A' B') = overline(A C) / overline(A' C') = k$，那么：$ overline(A B) = k overline(A' B')\,#h(2em) overline(A C) = k overline(A' C')\
+overline(B C) = sqrt(overline(A B)^2 - overline(A C)^2) = sqrt(k^2 (overline(A' B')^2 - overline(A' C')^2)) = k overline(B' C') $ #noindent;则：$overline(B C) / overline(B' C') = k$
 
 $therefore quad overline(A B) / overline(A' B') = overline(A C) / overline(A' C') = overline(B C) / overline(B' C')$
 
@@ -3352,7 +3353,7 @@ $therefore quad overline(A B) / overline(A D) = overline(A C) / overline(A E)$�
 $therefore quad overline(A D) / overline(D B) = overline(A E) / overline(E C)$（为什么？）
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-159");], caption: []), figure([#fig("3-160");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-159");], caption: []), figure([#fig("3-160");], caption: []))));
 
 把上述定理推广就得到平行截割定理．
 
@@ -3396,7 +3397,7 @@ $therefore quad overline(E' C) = overline(E C)$
 因为 $E'$ 和 $E$ 都在 $overline(A C)$ 上，所以 $E$ 和 $E'$ 重合，$overline(D E')$ 和 $overline(D E)$ 重合，因此 $D E pll B C$.
 
 ]
-#align(center, block(breakable: false, grid(columns: (38%, 58%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-161");], caption: []), figure([#fig("3-162");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (38%, 58%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-161");], caption: []), figure([#fig("3-162");], caption: []))));
 
 #example[
 已知：线段 $a$、$b$、$c$.
@@ -3442,7 +3443,7 @@ $because quad D X pll F B$，（作图）
 $therefore quad overline(A X) / overline(X B) = overline(A D) / overline(D F) = 3 / 2$.
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-163");], caption: []), figure([#fig("3-164");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-163");], caption: []), figure([#fig("3-164");], caption: []))));
 
 #example[
 三角形内角平分线定理：三角形一个内角的平分线分它的对边成两条线段，这两条线段和它们相邻的两边成比例．
@@ -3470,7 +3471,7 @@ $because quad A D pll E C$,
 $therefore quad overline(B D) / overline(D C) = overline(B A) / overline(A E) quad arrow.r.double quad overline(B D) / overline(D C) = overline(A B) / overline(A C)$
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-165");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-165");
 
 #subcap[
 第1题
@@ -3482,7 +3483,7 @@ $therefore quad overline(B D) / overline(D C) = overline(B A) / overline(A E) qu
 
 ]])));
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-167");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-167");
 
 #subcap[
 第3题
@@ -3494,7 +3495,7 @@ $therefore quad overline(B D) / overline(D C) = overline(B A) / overline(A E) qu
 
 ]])));
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-169");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-169");
 
 #subcap[
 第5题
@@ -3534,7 +3535,7 @@ $therefore quad overline(B D) / overline(D C) = overline(B A) / overline(A E) qu
 + 已知：$overline(A D)$ 是 $triangle.stroked.t A B C$ 中 $angle B A C$ 的外角平分线，交 $overline(B C)$ 的延长线于 $D$ 点，求证：$overline(B D) / overline(C D) = overline(A B) / overline(A C)$.
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-171");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-171");
 
 #subcap[
 第7题
@@ -3629,7 +3630,7 @@ $therefore quad frac(overline(A C)^2 + overline(B C)^2, overline(A B)^2) = 1$
 $therefore quad overline(A C)^2 + overline(B C)^2 = overline(A B)^2$
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-174");], caption: []), figure([#fig("3-175");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-174");], caption: []), figure([#fig("3-175");], caption: []))));
 
 #example[
 在图3.109中，已知正方形 $P L M N$ 顶点 $L$ 和 $M$ 在 $triangle.stroked.t A B C$ 的 $overline(B C)$ 边上，顶点 $N$ 和 $P$ 分别在边 $overline(A C)$ 和边 $overline(A B)$ 上，$overline(B C) = 12$⁠cm, $overline(B C)$ 上的高 $overline(A D) = 8$⁠cm, 求这个正方形的边长，并正确地作出这个正方形．
@@ -3782,7 +3783,7 @@ $therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由同�
 
 作一个图形的位似形，位似中心可以任意选择，例如可以选在多边形的内部（图3.111），可以选在多边形的外部（图3.112或图3.113），也可以选在多边形的边上或顶点处（图3.114和图3.115）等等．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-180");], caption: []), figure([#fig("3-181");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-180");], caption: []), figure([#fig("3-181");], caption: []))));
 
 把一个图形放大或缩小，常常使用放缩尺，放缩尺是根据位似形原理做成的．
 
@@ -3808,7 +3809,7 @@ $therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由同�
 前面我们研究了相似多边形和位似形，下面我们给出任意两个相似图形的一般定义．
 
 #blk[定义][
-如果两个图形 $T$ 和 $T'$ 上的点一一对应，并且图形 $T'$ 上任意一个线段 $overline(A' B')$ 和 $T$ 上与之对应的线段 $overline(A B)$ 的长度的比等于一个常数 $k$, 则称#strong[图形 ]$T$#strong[ 和 ]$T'$#strong[ 相似]，表示作“$T tilde.rev T'$”，$k$ 叫作$T'$#strong[ 对 ]$T$#strong[ 的相似比]（也叫放大率或缩小率）．
+如果两个图形 $T$ 和 $T'$ 上的点一一对应，并且图形 $T'$ 上任意一个线段 $overline(A' B')$ 和 $T$ 上与之对应的线段 $overline(A B)$ 的长度的比等于一个常数 $k$, 则称#strong[图形 ]$T$#strong[ 和 ]$T'$#strong[ 相似]，表示作“$T tilde.rev T'$”，$k$ 叫作 $T'$#strong[ 对 ]$T$#strong[ 的相似比]（也叫放大率或缩小率）．
 
 ]
 实际生活中，相似形的例子是很多的，它们都符合上述相似形的定义．例如某地方的地图上任意两点间的线段和这个地方实际相对应的两点之间线段长度的比等于同一常数------比例尺．
@@ -3943,7 +3944,7 @@ $therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由同�
 
 + 在梯形 $A B C D$ 中，作与两底互相平行的直线，交两腰 $overline(A B)$、$overline(C D)$ 于 $P$、$Q$ 两点，与对角线的交点是 $R$、$S$, 那么 $overline(P R) = overline(S Q)$
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-184");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-184");
 
 #subcap[
 第7题
@@ -3956,6 +3957,7 @@ $therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由同�
 ]])));
 
 #heading(level: 2, numbering: none, outlined: false)[复习题三]
+
 + 已知不共线三点，能不能作一个等边三角形，使这三个点分别在三边上？
 
 + 求证：三角形的三条角平分线相交于一点．
@@ -3982,7 +3984,7 @@ $therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由同�
 
   求证：$overline(D E) / overline(A C) + overline(D F) / overline(A B) = 1$
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-186");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-186");
   
   #subcap[
   第11题
@@ -4006,7 +4008,7 @@ $therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由同�
 
 + $O C$ 是 $angle A O B$ 内的一条射线，求证从 $O C$ 上任意两点到 $angle A O B$ 的两边的距离的比一定．
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-188");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-188");
   
   #subcap[
   第15题
@@ -4034,7 +4036,7 @@ $therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由同�
 
 + 如图，已知 $overline(O M) : overline(M P) = overline(O N) : overline(N R)$, 求证：$triangle.stroked.t P Q R$ 是等腰三角形．
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-190");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-190");
   
   #subcap[
   第24题
@@ -4052,7 +4054,7 @@ $therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由同�
 
 + 设 $O$ 是 $triangle.stroked.t A B C$ 内任一点，射线 $A O$、$B O$、$C O$ 与对边的交点分别是 $X$、$Y$、$Z$, 那么 $overline(B X) / overline(X C) dot.op overline(C Y) / overline(Y A) dot.op overline(A Z) / overline(Z B) = 1$
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-192");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-192");
   
   #subcap[
   第26题
@@ -4068,7 +4070,7 @@ $therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由同�
 
 + 在 $triangle.stroked.t A B C$ 之边 $overline(A B)$、$overline(A C)$ 上取 $E$、$F$ 两点，使 $overline(E B) = 2 overline(E A)$, $overline(A F) = 2 overline(F C)$, 延长 $overline(E F)$、$overline(B C)$ 交于 $H$, 求 $overline(B H) : overline(C H)$.
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-194");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-194");
   
   #subcap[
   第28题
@@ -4086,7 +4088,7 @@ $therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由同�
 
 + 从 $triangle.stroked.t A B C$ 的底边 $overline(B C)$ 中点 $D$ 引直线，与过顶点 $A$ 平行 $B C$ 的直线相交于 $G$, 与 $overline(B A)$ 的延长线相交于 $E$, 又与 $A C$ 相交于 $F$, 求证：$overline(D F) : overline(F G) = overline(D E) : overline(E G)$.
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-196");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-196");
   
   #subcap[
   第30题

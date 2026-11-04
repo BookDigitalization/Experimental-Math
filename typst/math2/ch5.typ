@@ -166,7 +166,7 @@ $because quad M$ 是弦 $overline(C C')$ 的中点，作 $overline(O M)$
 
 则 $overline(O M) tack.t overline(C C')$，即：$angle O M P$ 是直角．
 
-这就是说，过 $P$ 点作 $dot.o O$ 的任一条割线被 $dot.o O$ 截下的弦的中点与 $O$、$P$ 的连线的夹角等于直角，因此，符合题中条件的弦的中点都在以 $overline(O P)$ 为直径的圆上，以 $overline(O P)$ 为直径作 $dot.o O'$, 我们所作的 $dot.o O'$ 是不是就是所求的轨迹呢？这还要看 $dot.o O'$ 上有没有不符合条件的点．设 $dot.o O'$ 与 $dot.o O$ 相交于 $A$、$B$ 两点．显然，在 $dot.o O'$ 上 $overparen(A O B)$ 外的点都是不合条件的（包括 $A$、$B$），我们再来看 $overparen(A O B)$ 上的点是不是都是合条件的点．在 $overparen(A O B)$ 上任取一点 $X$, 设 $P X$ 与 $dot.o O$ 相交于 $D$、$D'$, 作 $overline(O X)$, 则 $overline(O X) tack.t overline(D D')$, 所以 $X$ 是 $overline(D D')$ 的中点，这就是说 $overparen(A O B)$ 上的点都是过 $P$ 点的某条割线被 $dot.o O$ 截下的弦的中点．
+这就是说，过 $P$ 点作 $dot.o O$ 的任一条割线被 $dot.o O$ 截下的弦的中点与 $O$、$P$ 的连线的夹角等于直角，因此，符合题中条件的弦的中点都在以 $overline(O P)$ 为直径的圆上，以 $overline(O P)$ 为直径作 $dot.o O'$, 我们所作的 $dot.o O'$ 是不是就是所求的轨迹呢？这还要看 $dot.o O'$ 上有没有不符合条件的点．设 $dot.o O'$ 与 $dot.o O$ 相交于 $A$、$B$ 两点．显然，在 $dot.o O'$ 上 $wideparen(A O B)$ 外的点都是不合条件的（包括 $A$、$B$），我们再来看 $wideparen(A O B)$ 上的点是不是都是合条件的点．在 $wideparen(A O B)$ 上任取一点 $X$, 设 $P X$ 与 $dot.o O$ 相交于 $D$、$D'$, 作 $overline(O X)$, 则 $overline(O X) tack.t overline(D D')$, 所以 $X$ 是 $overline(D D')$ 的中点，这就是说 $wideparen(A O B)$ 上的点都是过 $P$ 点的某条割线被 $dot.o O$ 截下的弦的中点．
 
 ]
 综合以上分析我们可得：过定圆外一定点引圆的割线，割线被圆截下的弦的中点的轨迹是以定点与圆心间的线段为直径的圆被夹在定圆内的一段弧．
@@ -304,7 +304,7 @@ $because quad M$ 是弦 $overline(C C')$ 的中点，作 $overline(O M)$
 
 #noindent;满足第一个条件的点的轨迹是 $dot.o\(B\,2 upright(c m)\)$，满足第二个条件的点的轨迹是 $dot.o\(C\,4 upright(c m)\)$，所以第三个顶点就应该是 $dot.o\(B\,2 upright(c m)\)$ 与 $dot.o\(C\,4 upright(c m)\)$ 的交集中的点．由作图可知：$ dot.o\(B\,2 upright(c m)\)inter dot.o\(C\,4 upright(c m)\)= \{ A\,A' \} $ #noindent;于是，$A$ 点和 $A'$ 点都是我们所要求作的点，$triangle.stroked.t A B C$ 与 $triangle.stroked.t A' B C$ 都是我们所要求作的三角形．像这样应用轨迹的交集来确定点的位置，从而来解作图题的方法，就叫做#strong[轨迹法]．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-05");], caption: []), figure([#fig("5-06");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-05");], caption: []), figure([#fig("5-06");], caption: []))));
 
 #example[
 已知一条定直线和直线外两个定点，求作一个圆，使圆心在这条直线上，并且经过这两个定点．
@@ -432,7 +432,7 @@ $therefore dot.o O$ 为所求作的圆．
 
 + 以 $O$ 为圆心，$r$ 为半径作 $dot.o\(O\,r\)$, $dot.o\(O\,r\)$ 即为所求作的圆．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-09");], caption: []), figure([#fig("5-10");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-09");], caption: []), figure([#fig("5-10");], caption: []))));
 
 #proof[
 作 $overline(O D) tack.t B A$ 于 $D$ 点，$overline(O E) tack.t B C$ 于 $E$ 点．
@@ -450,7 +450,7 @@ $dot.o O$ 与 $B A$ 和 $B C$ 都相切，$dot.o O$ 为所求作的圆．
 ]
 讨论：由于 $angle A B C$ 的平分线 $B F$ 与直线 $ell$ 不会平行，所以它们总有一个唯一的交点，所以此题只有一解．
 
-从例5.5中可以看到，$overparen(D E)$ 把 $angle A B C$ 的两边在切点 $D$、$E$ 处连接起来了，这种连结叫做#strong[直线与圆弧的平滑连接]．
+从例5.5中可以看到，$wideparen(D E)$ 把 $angle A B C$ 的两边在切点 $D$、$E$ 处连接起来了，这种连结叫做#strong[直线与圆弧的平滑连接]．
 
 #example[
 已知：$dot.o\(O_1\,r_1\)$ 和 $dot.o\(O_2\,r_2\)$ 外离，且 $r_1 = 10$⁠mm, $r_2 = 8$⁠mm（图5.11）．
@@ -458,7 +458,7 @@ $dot.o O$ 与 $B A$ 和 $B C$ 都相切，$dot.o O$ 为所求作的圆．
 求作：一圆与 $dot.o\(O_1\,r_1\)$ 外切，与 $dot.o\(O_2\,r_2\)$ 内切，并且半径是20mm.
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-11");], caption: []), figure([#fig("5-12");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-11");], caption: []), figure([#fig("5-12");], caption: []))));
 
 #analyze[
 画一草图（图5.12），设 $dot.o\(O\,20 upright(m m)\)$ 为要求作的圆．由于 $dot.o\(O\,20 upright(m m)\)$ 与 $dot.o\(O_1\,r_1\)$ 外切，并与 $dot.o\(O_2\,r_2\)$ 内切，所以 $ overline(O O_1) & = r_1 + 20 upright(m m) = 30 upright(m m)\
@@ -483,7 +483,7 @@ overline(O O_2) & = 20 upright(m m) - r_2 = 12 upright(m m) $
 
 + 当 $overline(O_1 O_2) > 42 upright(m m)$ 时，问题无解．
 
-从例5.6中的图5.11, 我们可看出 $dot.o O_1$ 的 $overparen(A B)$ 与 $dot.o O$ 的 $overparen(B C)$ 在切点 $B$ 处连接起来了，这种连结叫做#strong[圆弧与圆弧的平滑连接]．
+从例5.6中的图5.11, 我们可看出 $dot.o O_1$ 的 $wideparen(A B)$ 与 $dot.o O$ 的 $wideparen(B C)$ 在切点 $B$ 处连接起来了，这种连结叫做#strong[圆弧与圆弧的平滑连接]．
 
 #exercise[
 + 已知两定点 $A$、$B$, 且直线 $A B$ 与定直线 $ell$ 平行，在 $ell$ 上求作与 $A$、$B$ 两点距离相等的点．
@@ -512,7 +512,7 @@ overline(O O_2) & = 20 upright(m m) - r_2 = 12 upright(m m) $
 求作：一点 $P$ 使 $P in overline(C D)$, 且 $overline(A P) = overline(B C) + overline(C P)$.
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-13");], caption: []), figure([#fig("5-14");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-13");], caption: []), figure([#fig("5-14");], caption: []))));
 
 #analyze[
 画一草图（图5.14），已知正方形 $A B C D$, 假设 $P$ 点是所求作的点，即 $P in overline(C D)$, 且 $overline(A P) = overline(B C) + overline(C P)$, 设 $overline(C P) = x$, $overline(B C) = a$, 故 $overline(A P) = a + x$, $overline(D P) = overline(D C) - overline(C P) = overline(B C) - overline(C P) = a - x$, 又因 $triangle.stroked.t A D P$ 是直角三角形，所以根据勾股定理有：$overline(A P)^2 = overline(A D)^2 + overline(D P)^2$, 即：$\(a + x\)^2 = a^2 +\(a - x\)^2$. 解此方程得 $x = a / 4$；$a$ 为已知，$a / 4$ 可作出，故 $P$ 点也可作出．
@@ -527,7 +527,8 @@ overline(O O_2) & = 20 upright(m m) - r_2 = 12 upright(m m) $
 #proof[
 由作图知 $overline(C P) = a / 4$,
 
-$therefore quad overline(D P) = overline(C D) - overline(C P) = 3 / 4 a$ $ overline(A P) = sqrt(overline(A D)^2 + overline(D P)^2) = sqrt(a^2 + (3 / 4 a)^2) = 5 / 4 a = a + a / 4 $ #noindent;$ overline(A P) = overline(B C) + overline(C P) $
+$therefore quad overline(D P) = overline(C D) - overline(C P) = 3 / 4 a$ $ overline(A P) = sqrt(overline(A D)^2 + overline(D P)^2) = sqrt(a^2 + (3 / 4 a)^2) = 5 / 4 a = a + a / 4\
+overline(A P) = overline(B C) + overline(C P) $
 
 ]
 讨论：由分析知，$overline(D P) : overline(P C) = 3 : 1$, 因为分点 $P$ 是唯一的，所以此题只有一解．
@@ -540,7 +541,7 @@ $therefore quad overline(D P) = overline(C D) - overline(C P) = 3 / 4 a$ $ overl
 求作：$overline(A B)$ 的内分点 $G$, 使 $overline(A G)^2 = overline(A B) dot.op overline(G B)$.
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-15");], caption: []), figure([#fig("5-16");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-15");], caption: []), figure([#fig("5-16");], caption: []))));
 
 #analyze[
 画一草图（图5.16），已知 $overline(A B)$, 假定 $G$ 为所求之点，设 $overline(A G) = x$, 则 $overline(B G) = a - x$, $x$ 满足方程 $ x^2 = a\(a - x\) $ #noindent;即：$x^2 + a x - a^2 = 0$. 解此方程得：$ x_1 = frac(- a + sqrt(4 a^2 + a^2), 2)\,#h(2em) x_2 = frac(- a - sqrt(4 a^2 + a^2), 2) quad upright("舍去") $ #noindent;$therefore quad x = frac(- a + sqrt(4 a^2 + a^2), 2) = sqrt(4 a^2 + a^2) / 2 - a / 2 = sqrt(a^2 + (a / 2)^2) - a / 2$
@@ -582,7 +583,7 @@ overline(G B) & = overline(A B) - overline(A G) = a - (sqrt(a^2 + (a / 2)^2) - a
 求作：$dot.o O$ 的内接正十边形．
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-17");], caption: []), figure([#fig("5-18");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-17");], caption: []), figure([#fig("5-18");], caption: []))));
 
 #analyze[
 画一草图（图5.18），设 $overline(A B)$ 是 $dot.o O$ 的内接正十边形的一边，则 $ angle A O B = 36 degree\,#h(2em) angle O A B = angle O B A = 72 degree $ #noindent;作 $angle O B A$ 的平分线交 $overline(O A)$ 于 $C'$ 点，则 $ angle O B C' = angle A B C' = 1 / 2 angle O B A = 36 degree $ #noindent;又知 $angle B C' A = 180 degree - angle A B C' - angle O A B$,
@@ -683,6 +684,7 @@ $therefore quad overline(O C')^2 = overline(O A) dot.op overline(A C')$
 + 求作过两定点，且在一条定直线上截取定长弦的圆（提示：利用切割线定理）．
 
 #heading(level: 2, numbering: none, outlined: false)[复习题五]
+
 + 连结一定直线上的点和线外一定点的线段，求这线段中点的轨迹．
 
 + 求具有公共底边，且这边上的高相等的三角形顶点的轨迹．

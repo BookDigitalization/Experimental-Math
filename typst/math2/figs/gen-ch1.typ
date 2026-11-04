@@ -111,7 +111,7 @@
     node(M, [$M$], pos: "above")
     node(N, [$N$], pos: "above")
     node(C, [$C$], pos: "below")
-    line((0, -1), (5, -1), stroke: (paint: black, thickness: 0.4pt, dash: (3pt, 3pt,)), mark: (start: "stealth", end: "stealth", fill: black))
+    line((0, -1), (5, -1), stroke: (paint: black, thickness: 0.4pt, dash: (3pt, 3pt,)), mark: (start: ("|", "stealth"), end: ("|", "stealth"), fill: black))
     node((2.5, -1), [24厘米], fill: white)
   })
   ,

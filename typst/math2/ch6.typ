@@ -19,7 +19,7 @@
 
 == 锐角三角比
 === 定义
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-02");], caption: []), figure([#fig("6-03");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-02");], caption: []), figure([#fig("6-03");], caption: []))));
 
 取任意锐角 $angle X A Y$, 在边 $A Y$ 上任取一点 $B$, 作 $overline(B C) tack.t A X$ 于 $C$\(图6.2). 在直角 $triangle.stroked.t A B C$ 中，设 $angle A$、$angle B$、$angle C$ 的对边分别用 $a$、$b$、$c$ 表示，对锐角 $A$ 来说，$a$ 叫做 $angle A$ 的#strong[对边]，$b$ 叫做 $angle A$ 的相邻的直角边（简称#strong[邻边]）我们定义：
 
@@ -39,7 +39,7 @@
 在直角 $triangle.stroked.t A B C$ 中，$angle C = 90 degree$, $overline(B C) = 3$⁠cm, $overline(A C) = 4$⁠cm, 求 $angle A$ 的4个三角比（图6.4）．
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-04");], caption: []), figure([#fig("6-05");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-04");], caption: []), figure([#fig("6-05");], caption: []))));
 
 #solution[
 根据勾股定理，$ overline(A B) = sqrt(overline(B C)^2 + overline(A C)^2) = sqrt(3^2 + 4^2) = 5 upright(\(c m\)) $ #noindent;根据各三角比的定义有，$ sin A = overline(B C) / overline(A B) = 3 / 5\, & #h(2em) cos A = overline(A C) / overline(A B) = 4 / 5\
@@ -51,7 +51,8 @@ tan A = overline(B C) / overline(A C) = 3 / 4\, & #h(2em) cot A = overline(A C) 
 
 ]
 #solution[
-用量角器画 $angle X A Y = 40 degree$\(图6.5). 在边 $A Y$ 上截取 $overline(A B) = 3$⁠cm（为计算方便，我们尽量取整数），作 $overline(B C) tack.t A X$ 于 $C$ 点，量得 $overline(B C) = 1.8$⁠cm, $overline(A C) = 2.1$⁠cm, 在直角 $triangle.stroked.t A B C$ 中，根据三角比的定义可得：$ sin 40 degree = 1.8 / 3 approx 0.6\,#h(2em) cos 40 degree = 2.1 / 3 approx 0.7 $ #noindent;$ tan 40 degree = 1.8 / 2.1 approx 0.8\,#h(2em) cot 40 degree = 2.1 / 1.8 approx 1.1 $
+用量角器画 $angle X A Y = 40 degree$\(图6.5). 在边 $A Y$ 上截取 $overline(A B) = 3$⁠cm（为计算方便，我们尽量取整数），作 $overline(B C) tack.t A X$ 于 $C$ 点，量得 $overline(B C) = 1.8$⁠cm, $overline(A C) = 2.1$⁠cm, 在直角 $triangle.stroked.t A B C$ 中，根据三角比的定义可得：$ sin 40 degree = 1.8 / 3 approx 0.6\,#h(2em) cos 40 degree = 2.1 / 3 approx 0.7\
+tan 40 degree = 1.8 / 2.1 approx 0.8\,#h(2em) cot 40 degree = 2.1 / 1.8 approx 1.1 $
 
 ]
 #example[
@@ -187,14 +188,16 @@ $therefore quad sin alpha = overline(M P) / overline(O P) = overline(M P) uprigh
 我们根据锐角三角比的定义和直角三角形中的一些边角特殊关系，可以计算出 $30 degree$、$45 degree$、$60 degree$ 角的三角比的精确值．
 
 作 $triangle.stroked.t A B C$, 使 $angle C = 90 degree$, $angle A = 30 degree$ (图6.8), 那么 $angle B = 60 degree$, 设 $overline(B C) = a$, 则 $overline(A B) = 2 a$, $overline(A C) = sqrt(overline(A B)^2 - overline(B C)^2) = sqrt(\(2 a\)^2 - a^2) = sqrt(3) a$. 由此得：$ sin 30 degree = frac(a, 2 a) = 1 / 2\, & #h(2em) sin 60 degree = frac(sqrt(3) a, 2 a) = sqrt(3) / 2\
-cos 30 degree = frac(sqrt(3) a, 2 a) = sqrt(3) / 2\, & #h(2em) cos 60 degree = frac(a, 2 a) = 1 / 2 $ #noindent;$ tan 30 degree = frac(a, sqrt(3) a) = 1 / sqrt(3) = sqrt(3) / 3\, & #h(2em) tan 60 degree = frac(sqrt(3) a, a) = sqrt(3)\
+cos 30 degree = frac(sqrt(3) a, 2 a) = sqrt(3) / 2\, & #h(2em) cos 60 degree = frac(a, 2 a) = 1 / 2\
+tan 30 degree = frac(a, sqrt(3) a) = 1 / sqrt(3) = sqrt(3) / 3\, & #h(2em) tan 60 degree = frac(sqrt(3) a, a) = sqrt(3)\
 cot 30 degree = frac(sqrt(3) a, a) = sqrt(3)\, & #h(2em) cot 60 degree = frac(a, sqrt(3) a) = 1 / sqrt(3) = sqrt(3) / 3 $
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-08");], caption: []), figure([#fig("6-09");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-08");], caption: []), figure([#fig("6-09");], caption: []))));
 
 作 $triangle.stroked.t A B C$, 使 $angle C = 90 degree$, $angle A = 45 degree$ (图6.9), 那么，$angle B = 45 degree$, 设 $overline(B C) = a$, 则 $overline(A C) = a$, $overline(A B) = sqrt(a^2 + a^2) = sqrt(2) a$
 
-由此得：$ sin 45 degree = frac(a, sqrt(2) a) = 1 / sqrt(2) = sqrt(2) / 2\,#h(2em) cos 45 degree = frac(a, sqrt(2) a) = 1 / sqrt(2) = sqrt(2) / 2 $ #noindent;$ tan 45 degree = a / a = 1\,#h(2em) cot 45 degree = a / a = 1 $ #noindent;为了便于记忆，我们把 $30 degree\,45 degree\,60 degree$ 的三角比列成表．
+由此得：$ sin 45 degree = frac(a, sqrt(2) a) = 1 / sqrt(2) = sqrt(2) / 2\,#h(2em) cos 45 degree = frac(a, sqrt(2) a) = 1 / sqrt(2) = sqrt(2) / 2\
+tan 45 degree = a / a = 1\,#h(2em) cot 45 degree = a / a = 1 $ #noindent;为了便于记忆，我们把 $30 degree\,45 degree\,60 degree$ 的三角比列成表．
 
 #align(center)[
 #table(
@@ -676,9 +679,11 @@ $  & \(sin alpha + cos alpha\)^2 +\(sin alpha - cos alpha\)^2\
 
 + 两锐角互余：$angle A + angle B = 90 degree$
 
-+ 四个三角比：$ sin A = frac(angle A upright("的对边"), upright("斜边"))\,#h(2em) cos A = frac(angle A upright("的邻边"), upright("斜边")) $ #noindent;$ tan A = frac(angle A upright("的对边"), angle A upright("的邻边"))\,#h(2em) cot A = frac(angle A upright("的邻边"), angle A upright("的对边")) $
++ 四个三角比：$ sin A = frac(angle A upright("的对边"), upright("斜边"))\,#h(2em) cos A = frac(angle A upright("的邻边"), upright("斜边"))\
+  tan A = frac(angle A upright("的对边"), angle A upright("的邻边"))\,#h(2em) cot A = frac(angle A upright("的邻边"), angle A upright("的对边")) $
 
-#noindent;为了应用方便，我们把3中的四个公式写成下面的形式：$ angle A upright("的对边") = upright("斜边") times sin A\,#h(2em) angle A upright("的邻边") = upright("斜边") times cos A $ #noindent;$ angle A upright("的对边") = upright("邻边") times tan A\,#h(2em) angle A upright("的邻边") = upright("对边") times cot A $
+#noindent;为了应用方便，我们把3中的四个公式写成下面的形式：$ angle A upright("的对边") = upright("斜边") times sin A\,#h(2em) angle A upright("的邻边") = upright("斜边") times cos A\
+angle A upright("的对边") = upright("邻边") times tan A\,#h(2em) angle A upright("的邻边") = upright("对边") times cot A $
 
 改用语言叙述，就是：
 
@@ -727,7 +732,7 @@ a & = c sin A = 18 times sin 62 degree 20' = 18 times 0.8857 approx 15.9\
 b & = c cos A = 18 times cos 62 degree 20' = 18 times 0.4643 approx 8.36 $
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-14");], caption: []), figure([#fig("6-15");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-14");], caption: []), figure([#fig("6-15");], caption: []))));
 
 #example[
 已知 $c = 27.5$, $a = 22.6$, 求 $b$、$angle A$、$angle B$ (图6.14).
@@ -748,7 +753,7 @@ b & = a cot A = 3.8 times cot 42 degree approx 4.22\
 c & = frac(a, sin A) = frac(3.8, sin 42 degree) approx 5.68 $
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-16");], caption: []), figure([#fig("6-17");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-16");], caption: []), figure([#fig("6-17");], caption: []))));
 
 #example[
 已知 $a = 3$、$b = 4$, 求 $c$、$angle A$、$angle B$ (图6.16)
@@ -805,7 +810,7 @@ $ overline(A B) = overline(A E) + overline(E B) $ #noindent;已知 $overline(E B
 $therefore quad overline(A B) = a dot.op tan alpha + b$
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#image("/math2/fig/6-17.png", width: 100%);], caption: []), figure([#fig("6-18");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#image("/math2/fig/6-17.png", width: 100%);], caption: []), figure([#fig("6-18");], caption: []))));
 
 #rmk[
 如图6.18(1) 连结测点 $A$ 和目的物 $B$, 并且经过 $A$ 点画和 $A B$ 在同一铅直平面内的水平线 $A C$, 如 $A B$ 在 $A C$ 的上方，那么 $angle B A C$ 叫做仰角；如图6.18(2), 如果 $A B$ 在 $A C$ 的下方，那么 $angle C A B$ 叫做俯角．
@@ -815,7 +820,7 @@ $therefore quad overline(A B) = a dot.op tan alpha + b$
 如图6.19, 已知 $C$、$D$ 两点与物体“$overline(A B)$”的底端 $B$ 点共线，且 $overline(C D) = a$, 仪器 $overline(C C')$、$overline(D D')$ 的高都等于 $b$, 在 $C'$、$D'$ 两点测得物体的顶端 $A$ 的仰角分别是 $alpha$、$beta$, 求物体的高 $overline(A B)$
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#image("/math2/fig/6-19.png", width: 100%);], caption: []), figure([#fig("6-19");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#image("/math2/fig/6-19.png", width: 100%);], caption: []), figure([#fig("6-19");], caption: []))));
 
 #solution[
 在直角 $triangle.stroked.t A E C'$ 与直角 $triangle.stroked.t A E D'$ 中，
@@ -863,7 +868,8 @@ $therefore quad tan alpha = 0.04$. 倒查正切表得：$alpha = 2 degree 17'$.
 )
 
 #solution[
-当吊杆 $overline(A B)$ 的倾角 $A$ 达到最大限度 $80 degree$ 时，这时起重机吊的最高位置如图6. 21中 $overline(A B)$ 的位置．在直角 $triangle.stroked.t A B C$ 中，$angle A = 80 degree$, $overline(A B) = 36$ 米，因此：$ overline(B C) = overline(A B) times sin 80 degree = 36 times sin 80 degree = 36 times 0.9848 approx 35.45 upright(m) $ #noindent;$ upright("起重机的最大高度") = upright("机身高") + overline(B C) = 21 + 35.45 = 56.45 upright(m) $
+当吊杆 $overline(A B)$ 的倾角 $A$ 达到最大限度 $80 degree$ 时，这时起重机吊的最高位置如图6. 21中 $overline(A B)$ 的位置．在直角 $triangle.stroked.t A B C$ 中，$angle A = 80 degree$, $overline(A B) = 36$ 米，因此：$ overline(B C) = overline(A B) times sin 80 degree = 36 times sin 80 degree = 36 times 0.9848 approx 35.45 upright(m)\
+upright("起重机的最大高度") = upright("机身高") + overline(B C) = 21 + 35.45 = 56.45 upright(m) $
 
 当倾角 $A$ 达到最小角时，起吊的水平距离最远，这时，如图6.21中 $overline(A B')$ 的位置．在直角 $triangle.stroked.t A B' C'$ 中，$angle A = 30 degree$, $overline(A B') = 36$ 米．
 
@@ -888,7 +894,7 @@ $therefore quad tan alpha = 0.04$. 倒查正切表得：$alpha = 2 degree 17'$.
 + 如图，在离地面高5米处引拉线固定电线杆，拉线和地面成 $60 degree$ 角，求每根拉线多长，拉线底端离杆底多远．
 
 ]
-#align(center, block(breakable: false, grid(columns: (38%, 58%,), column-gutter: 1em, align: center + bottom, [#image("/math2/fig/6-3ti.PNG", width: 100%);
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (38%, 58%,), column-gutter: 1em, align: center + bottom, [#image("/math2/fig/6-3ti.PNG", width: 100%);
 
 #subcap[
 第3题
@@ -900,7 +906,7 @@ $therefore quad tan alpha = 0.04$. 倒查正切表得：$alpha = 2 degree 17'$.
 
 ]])));
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("6-20");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("6-20");
 
 #subcap[
 第6题
@@ -930,7 +936,7 @@ $therefore quad tan alpha = 0.04$. 倒查正切表得：$alpha = 2 degree 17'$.
 
 + 一架战斗机从3300米高空以每秒150米的速度向轰炸目标俯冲，俯冲角为 $42 degree$, 在离地面1300米时投弹，击中目标，问飞机开始俯冲到投弹共用几秒钟？
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("6-22");
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("6-22");
   
   #subcap[
   第6题
@@ -958,7 +964,7 @@ $because quad angle A' = angle A = alpha$
 
 $therefore quad a = 2 r sin alpha$，因此：#numbered-eq($ frac(a, sin alpha) = 2 r $);
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-24");], caption: []), figure([#fig("6-25");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-24");], caption: []), figure([#fig("6-25");], caption: []))));
 
 假定 $angle A$ 是钝角（图6.23），作 $triangle.stroked.t A B C$ 的外接圆 $dot.o O$, 再作直径 $overline(C A')$, 弦 $overline(B A')$
 
@@ -1069,7 +1075,7 @@ $therefore quad sin angle A P B = sin angle A P C\,#h(2em) overline(B P) / overl
 
 比较(6.5)、(6.6) 两式，为了使它们在形式上得到一致，我们定义钝角 $gamma$ 的余弦为：$ cos gamma = - cos\(180 degree - gamma\)#h(2em) upright("(") gamma upright("为钝角)") $ #noindent;这样，不论 $gamma$ 是锐角还是钝角都有关系式 $ a = c cos beta + b cos gamma $ #noindent;如果 $beta$ 是钝角，由 $cos beta = - cos\(180 degree - beta\)$ 同样可以得到：$ a = c cos beta + b cos gamma $
 
-#align(center, block(breakable: false, grid(columns: (32%, 32%, 32%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-28");], caption: []), figure([#fig("6-29");], caption: []), figure([#fig("6-30");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (32%, 32%, 32%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-28");], caption: []), figure([#fig("6-29");], caption: []), figure([#fig("6-30");], caption: []))));
 
 如果 $beta$、$gamma$ 中有一个是直角，设 $gamma = 90 degree$ (图6.28),
 
@@ -1324,7 +1330,7 @@ $therefore quad c = frac(a sin gamma, sin alpha) = frac(12 times sin 77 degree 1
 
 + 如果已知的 $alpha$ 角是锐角，并且 $a > b$ 或者 $a = b$. 这时从 $sin beta = frac(b sin alpha, a)$ 求 $beta$ 角的时候，也只能取锐角的值，因此都只有一个解（图6.34和图6.35）．
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-36");], caption: []), figure([#fig("6-37");], caption: []))));
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-36");], caption: []), figure([#fig("6-37");], caption: []))));
 
 + 如果已知的 $alpha$ 角是锐角，并且 $a < b$，我们再分下面三种情况来讨论：
 
@@ -1341,7 +1347,7 @@ $therefore quad c = frac(a sin gamma, sin alpha) = frac(12 times sin 77 degree 1
 
   + $a < b sin alpha$, 这时从 $sin beta = frac(b sin alpha, a)$ 求得 $sin beta > 1$, 但是一角的正弦值不能大于1, 因此没有解（图6.38）．
 
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-39");], caption: []), figure([#fig("6-40");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-39");], caption: []), figure([#fig("6-40");], caption: []))));
 
 上面所得的结果可以列成下表：
 
@@ -1396,7 +1402,7 @@ S_triangle.stroked.t & = 1 / 2 a b sin gamma $
 #proof[
 + 当 $alpha$、$beta$ 都为锐角时图（6.39），设 $overline(A B)$ 上的高 $overline(C D) = h$. 那么，$ S_triangle.stroked.t = 1 / 2 c h $ #noindent;在直角 $triangle.stroked.t A C D$ 中，$h = b sin alpha$. 代入上式得 $ S_triangle.stroked.t = 1 / 2 b c sin alpha $
 
-  #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-41");], caption: []), figure([#fig("6-42");], caption: []))));
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-41");], caption: []), figure([#fig("6-42");], caption: []))));
 
 + 当 $alpha$ 为钝角时（图6.40），仍设 $overline(A B)$ 边上的高 $overline(C D) = h$, 那么：$ S_triangle.stroked.t = 1 / 2 c h $ #noindent;在直角 $triangle.stroked.t A C D$ 中，$h = b sin\(180 degree - alpha\)= b sin alpha$
 
@@ -1479,7 +1485,7 @@ $therefore quad overline(A C) = frac(overline(A B) sin beta, sin\(alpha + beta\)
 
 $therefore quad x = frac(overline(A B), cot alpha + cot beta)$
 
-#align(center, block(breakable: false, grid(columns: (40%, 55%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-43");], caption: []), figure([#fig("6-44");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (40%, 55%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-43");], caption: []), figure([#fig("6-44");], caption: []))));
 
 在测量中，基线越长，量得越准确，测的精确度就越高．
 
@@ -1504,7 +1510,7 @@ $therefore quad x = frac(overline(A B), cot alpha + cot beta)$
 + 河对岸有两个目标 $A$、$B$, 若不准过河，如何测量才能算出 $A$、$B$ 两点间的距离？
 
 ]
-#align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#image("/math2/fig/6-ti1.PNG", width: 100%);
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#image("/math2/fig/6-ti1.PNG", width: 100%);
 
 #subcap[
 第1题
@@ -1579,6 +1585,7 @@ $therefore quad x = frac(overline(A B), cot alpha + cot beta)$
 + 已知一四边形的两条对角线的长分别为 $x$、$y$, 夹角为 $theta$, 面积为 $S$, 求证：$ S = 1 / 2 x y sin theta $
 
 #heading(level: 2, numbering: none, outlined: false)[复习题六]
+
 + 用作图法求锐角 $x$.
 
   #cols(2)[
@@ -1618,7 +1625,7 @@ $therefore quad x = frac(overline(A B), cot alpha + cot beta)$
 
 + 在 $triangle.stroked.t A B C$ 中，求证：$ frac(a, sin alpha) = frac(b + c, sin beta + sin gamma) = frac(b - c, sin beta - sin gamma) $
 
-+ 设 $P$ 是等边三角形 $A B C$ 外接圆的 $overparen(B C)$ 上的一点，求证 $ overline(P A)^2 = overline(A B)^2 + overline(P B) dot.op overline(P C) $#noindent;（提示：求 $cos angle A B P$, $cos angle A C P$，利用 $cos angle A B P = - cos angle A C P$ 化简即得）．
++ 设 $P$ 是等边三角形 $A B C$ 外接圆的 $wideparen(B C)$ 上的一点，求证 $ overline(P A)^2 = overline(A B)^2 + overline(P B) dot.op overline(P C) $#noindent;（提示：求 $cos angle A B P$, $cos angle A C P$，利用 $cos angle A B P = - cos angle A C P$ 化简即得）．
 
 + 在 $triangle.stroked.t A B C$ 中，已知 $gamma = 60 degree$, $overline(A C) = 4$, 面积为 $sqrt(3)$, 求 $overline(A B)$ 及 $overline(B C)$ 的长．
 

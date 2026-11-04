@@ -74,8 +74,9 @@
   block(width: 100%, above: 1em, below: 1em, {
     // 同 LaTeX 版的 \noindent：抵消段首缩进
     unindent
-    context strong[例 #chapter-number().#example-counter.display()]
-    h(0.3em)
+    // 标签放进盒子，两端对齐时空隙不会被拉进“例”与编号之间；其后空一字（同 LaTeX 版）
+    context box(strong[例 #chapter-number().#example-counter.display()])
+    h(1em, weak: true)
     trim-start(body)
   })
 }
@@ -110,6 +111,9 @@
     ) }
     // tcolorbox 内的段落不缩进
     set par(first-line-indent: 0pt)
+    // 框内以独立公式开头时，公式的上方间距在框顶被吃掉，公式紧顶着标题条；补上一些
+    let first = if body.has("children") { body.children.find(c => c != [ ] and c.func() != parbreak) } else { body }
+    if has-title and first != none and first.func() == math.equation and first.block { v(0.4em) }
     body
   })
 }
@@ -128,6 +132,10 @@
   let w = measure(label).width + measure[\*].width + 0.6em.to-absolute()
   box(width: 0pt)[#h(-w)\*]
 }
+
+// 弧（\wideparen）：math.overparen 是可伸缩的括号，比字母宽出一截、位置也偏高；
+// 用 ⏜ 作重音，紧贴字母，与 LaTeX 的 \wideparen 相近
+#let wideparen(body) = math.accent(body, "\u{23DC}")
 
 // 抵消段首缩进（独立公式之后接着写的文字，同 LaTeX 不缩进）
 #let noindent = unindent
@@ -151,16 +159,37 @@
   let others = if body.has("children") {
     body.children.filter(c => c.func() != enum.item and c != [ ] and c.func() != parbreak)
   } else { (body,) }
-  if items.len() > 0 and others.len() == 0 {
+  // 若干个短段落（如证明中并排的几行）：同样每栏 ⌈k/n⌉ 段，按列排
+  let paras = if body.has("children") and items.len() == 0 {
+    // 去掉每段首尾的空格（段内的空格要保留）
+    let trim(p) = {
+      while p.len() > 0 and p.first() == [ ] { p = p.slice(1) }
+      while p.len() > 0 and p.last() == [ ] { p = p.slice(0, -1) }
+      p
+    }
+    body.children.split(parbreak()).map(trim).filter(p => p.len() > 0)
+  } else { () }
+  if paras.len() >= n and paras.len() <= 4 * n {
+    let per = calc.ceil(paras.len() / n)
+    let groups = range(n).map(i => paras.slice(calc.min(i * per, paras.len()), calc.min((i + 1) * per, paras.len())))
+    block(breakable: false, grid(
+      columns: (1fr,) * n,
+      column-gutter: gutter,
+      ..groups.map(g => g.map(p => p.join()).join(parbreak())),
+    ))
+  } else if items.len() > 0 and others.len() == 0 {
     let per = calc.ceil(items.len() / n)
     let groups = range(n).map(i => items.slice(calc.min(i * per, items.len()), calc.min((i + 1) * per, items.len())))
-    // 各栏本来就从上一级题目的正文处开始，栏内的列表不再缩进
-    set enum(indent: 0pt)
-    grid(
+    // 栏内的列表与普通列表缩进相同（LaTeX 中 multicols 内的各项与栏外接续的各项标号对齐）。
+    // 但三栏以上时栏很窄，Typst 的标号又比 LaTeX 占地方（缩进 + 标号宽 + 间距 > \leftmargin），
+    // 不少小题会折行，这时不缩进
+    set enum(indent: 0pt) if n >= 3
+    // 整组不跨页（同 multicols 的短内容）
+    block(breakable: false, grid(
       columns: (1fr,) * n,
       column-gutter: gutter,
       ..groups.enumerate().map(((i, g)) => if g.len() == 0 { [] } else { enum(start: i * per + 1, ..g) }),
-    )
+    ))
   } else { cols-by-height(n, body, gutter: gutter) }
 }
 
@@ -172,7 +201,7 @@
 ))
 
 // 不编号的图（LaTeX 中没有 \caption 的 figure）：居中，图与图注“第 n 题”不分在两页
-#let fig-center(body) = block(width: 100%, breakable: false, align(center, body))
+#let fig-center(body) = block(width: 100%, breakable: false, above: 1.1em, below: 1.1em, align(center, body))
 
 // 不编号的图注（LaTeX 的 \caption*），字体同编号图注
 #let subcap(body) = block(above: 0.6em, below: 0.6em, text(font: fonts.sans, weight: "bold", body))
@@ -311,7 +340,9 @@
       let here-secs = query(heading.where(level: 2)).filter(h => h.location().page() == here().page() and in-chap(h))
       let prev-secs = query(heading.where(level: 2).before(here())).filter(in-chap)
       let sec = if here-secs.len() > 0 { here-secs.first() } else if prev-secs.len() > 0 { prev-secs.last() }
-      let sec-name = if sec == none { [] } else {
+      // 前言、目录等不编号的章没有节，奇数页也印章名（同 LaTeX 的 \@mkboth{目录}{目录}）
+      let front = prev.len() > 0 and prev.last().numbering == none
+      let sec-name = if sec == none { if front { name } else { [] } } else {
         [第#chinese-number(counter(heading).at(sec.location()).at(1))节#h(1em)#sec.body]
       }
       set text(size: 9pt)
@@ -357,10 +388,22 @@
   set math.cases(gap: 0.6em)
   // 宽于版心的独立公式缩小到版心宽度（LaTeX 版中这些公式排得下）
   show math.equation.where(block: true): it => fit-width(it)
+  // 短的行内公式不在中间断行。Typst 在关系符、运算符后都可以断行，LaTeX 则因 \relpenalty、\binoppenalty
+  // 很少这样断，Typst 版常出现“AD >”在行末、“CD”在下一行的情况
+  show math.equation.where(block: false): it => context {
+    let w = measure(it).width
+    // 盒子要给定宽度，否则公式在盒子里照样折行
+    if w < 9em.to-absolute() { box(width: w + 0.01pt, it) } else { it }
+  }
   show table: set block(breakable: false)
 
   set enum(indent: 1em, body-indent: 0.6em, spacing: 0.86em, full: true, numbering: latex-enum)
   set list(indent: 1em, body-indent: 0.6em)
+  // 列表（含嵌套的小题）与前后文字的距离同项间距（LaTeX 的 \topsep 与 \itemsep 相当），否则比项间距还小
+  show enum: set block(above: 0.86em, below: 0.86em)
+  show list: set block(above: 0.86em, below: 0.86em)
+  // 图与前后文字之间留出空白（同 LaTeX 的 \intextsep）
+  show figure: set block(above: 1.1em, below: 1.1em)
   set footnote(numbering: "①")
   show footnote.entry: set text(size: 9pt)
   // 独立公式上下的间距（LaTeX 的 \abovedisplayskip 约 10pt）
@@ -416,7 +459,11 @@
   show outline.entry.where(level: 1): set block(above: 1.2em)
   show outline.entry.where(level: 1): set text(font: fonts.sans)
   // “习题 1.1”等不编号的节，LaTeX 版用 \addcontentsline{toc}{subsection} 列入目录，与小节同级缩进
-  show outline.entry.where(level: 2): it => if it.element.supplement == [toc-sub] { pad(left: 2em, it) } else { it }
+  // （缩进到与“一、”等第三级条目对齐：Typst 按上一级编号“第一节”的宽度缩进第三级，约 3.6em）
+  show outline.entry.where(level: 2): it => if it.element.supplement == [toc-sub] { pad(left: 3.6em, it) } else { it }
+  // 章一级的条目同 LaTeX 版：不加点线，页码加粗
+  show outline.entry.where(level: 1): it => link(it.element.location(), it.indented(it.prefix(),
+    it.body() + h(1fr) + text(font: fonts.serif, weight: "bold", it.page())))
 
   // 封面
   page(header: none, footer: none, {

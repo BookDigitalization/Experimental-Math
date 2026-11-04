@@ -94,13 +94,23 @@ end
 function Para(p)
   local out = pandoc.List()
   local after_display = false
+  local last_display = nil
   for _, el in ipairs(p.content) do
+    -- 紧挨着的两个独立公式 \[..\]\[..\] 合成一个多行公式，否则 Typst 中间会多出一个空段落
+    if el.t == "Math" and el.mathtype == "DisplayMath" and after_display and last_display then
+      last_display.text = "\\begin{gathered}" .. last_display.text:gsub("^\\begin{gathered}(.*)\\end{gathered}$", "%1")
+        .. "\\\\" .. el.text .. "\\end{gathered}"
+      while #out > 0 and is_space(out[#out]) do out:remove() end
+      goto continue
+    end
     if after_display and not is_space(el) then
       out:insert(pandoc.RawInline("typst", "#noindent;"))
       after_display = false
     end
     out:insert(el)
-    if el.t == "Math" and el.mathtype == "DisplayMath" then after_display = true end
+    if el.t == "Math" and el.mathtype == "DisplayMath" then after_display = true; last_display = el
+    elseif not is_space(el) then last_display = nil end
+    ::continue::
   end
   p.content = out
   return p
