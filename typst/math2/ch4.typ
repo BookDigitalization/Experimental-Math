@@ -34,7 +34,7 @@
 
 通常我们说的圆面，指的是由圆所围成的平面部分，也就是与圆心的距离小于或等于半径的点所构成的集合．如图4.3中阴影部分．
 
-由上述定义可知，$dot.o\(O\,r\)$ 与平面上任一点P的位置关系，有下述的性质（图4.4）．
+由上述定义可知，$dot.o\(O\,r\)$ 与平面上任一点 $P$ 的位置关系，有下述的性质（图4.4）．
 
 + 点 $P$ 在 $dot.o\(O\,r\)$ 上的充要条件是 $overline(O P) = r$；
 
@@ -381,7 +381,7 @@ $therefore quad overline(A B) = overline(C D)\,quad overline(O E) = overline(O F
 ]
 对于等圆情况的证明，只要使两圆重合就可以了．
 
-这个定理告诉我们，在同圆或等圆中，“弧相等”、“弦相等”、“弦心距相等”它们当中只要有一个是对的，其它两个也一定是对的．这就是说：
+这个定理告诉我们，在同圆或等圆中，“弧相等”、“弦相等”、“弦心距相等”它们当中只要有一个是对的，其他两个也一定是对的．这就是说：
 
 #blk[][
 “弧相等”$arrow.l.r.double$“弦相等”$arrow.l.r.double$“弦心距相等”
@@ -415,7 +415,7 @@ $therefore quad overline(A B) = overline(C D)$.
 #exercise[
 + 把本节定理用“若---则”形式写出互逆的定理．
 
-+ 以 $angle A$ 的平分线上任一点 $O$ 为圆心，大于 $O$ 点到边的距离之长为半径作一个圆，那么这圆在 $A$ 的两边上截出的两条弦相等．
++ 以 $angle A$ 的平分线上任一点 $O$ 为圆心，大于 $O$ 点到边的距离之长为半径作一个圆，那么这圆在 $angle A$ 的两边上截出的两条弦相等．
 
 + 在 $dot.o O$ 中，已知 $overline(A B)$ 是一条直径，$overline(A C)$ 和 $overline(A D)$ 是分属于 $overline(A B)$ 两侧的两条相等的弦，求证：$A B$ 平分 $angle C A D$
 
@@ -441,11 +441,11 @@ $therefore quad overline(A B) = overline(C D)$.
 
 + 一圆在另一圆的外部，这种位置关系叫做#strong[两圆相离]，如图4.21(1).这时，两圆没有公共点．
 
-+ 两圆只有一个公共点且其中一圆上的其它各点都在另一圆的外部，这种位置关系叫做#strong[两圆外切]，如图4.21(2).这个公共点叫做两圆的#strong[切点]．
++ 两圆只有一个公共点且其中一圆上的其他各点都在另一圆的外部，这种位置关系叫做#strong[两圆外切]，如图4.21(2).这个公共点叫做两圆的#strong[切点]．
 
 + 两圆有两个公共点，这种位置关系叫做两圆#strong[相交]．两个公共点叫做两圆的#strong[交点]，如图4.21(3).连结两个交点的线段叫做两圆的#strong[公共弦]．
 
-+ 两圆只有一个公共点且其中一圆上的其它各点都在另一圆的内部，这种位置关系叫做两圆#strong[内切]，这个公共点叫做两圆的#strong[切点]，如图4.21(4).
++ 两圆只有一个公共点且其中一圆上的其他各点都在另一圆的内部，这种位置关系叫做两圆#strong[内切]，这个公共点叫做两圆的#strong[切点]，如图4.21(4).
 
 + 一圆在另一圆的内部，这种位置关系叫做两圆内含，如图4.21(5).这时两圆没有公共点．如果这两圆的圆心重合，这两个圆叫做#strong[同心圆]，如图4.21(6).
 
@@ -470,7 +470,7 @@ $therefore quad overline(A B) = overline(C D)$.
 
 + 若两圆内切时，则 $d = r_1 - r_2$\;
 
-+ 若两圆内含时，则 $d < r_1 - r_2$\;特殊情况，若两圆是同心圆时，则 $d ＝ 0$．
++ 若两圆内含时，则 $d < r_1 - r_2$\;特殊情况，若两圆是同心圆时，则 $d = 0$．
 
 同学们不难用反证法证明上述各命题的逆命题也是正确的，即：
 
@@ -480,7 +480,7 @@ $therefore quad overline(A B) = overline(C D)$.
 
 + 若 $r_1 - r_2 < d < r_1 + r_2$，则两圆相交;
 
-+ 若 $d ＝ r_1 - r_2$，则两圆内切;
++ 若 $d = r_1 - r_2$，则两圆内切;
 
 + 若 $d < r_1 - r_2$，则两圆内含；特殊情况，若 $d = 0$，则两圆是同心圆.
 
@@ -639,7 +639,7 @@ $A$ 点必在 $dot.o\(O\,r\)$ 上．
 
 + 求证：如果两圆外切，切点是两圆的逆位似中心；如果两圆内切，切点是两圆的顺位似中心．
 
-+ 两个同心圆的顺位似中心是那一点，逆位似中心呢？
++ 两个同心圆的顺位似中心是哪一点，逆位似中心呢？
 
 ]
 #align(center)[
@@ -664,7 +664,7 @@ $A$ 点必在 $dot.o\(O\,r\)$ 上．
 
 + 已知 $overline(A B)$ 是 $dot.o O$ 的直径，$overparen(A C)$ 与 $overparen(A D)$ 位于 $overparen(A B)$ 的两侧且 $overparen(A C) = overparen(A D)$.求证：$A B$ 平分 $angle C A D$.
 
-+ 已知 $dot.o O_1$ 和 $dot.o O_2$ 是相离的两个等圆，一条与连心线 $O_1 O_2$ 平行的直线顺次与 $dot.o O_1$、$dot.o O_2$ 相交于 $A$、$B$、$C$、$D$ 各点．求证：$overline(A B) = overline(C D)$, $overline(A B) = overline(C D)$.
++ 已知 $dot.o O_1$ 和 $dot.o O_2$ 是相离的两个等圆，一条与连心线 $O_1 O_2$ 平行的直线顺次与 $dot.o O_1$、$dot.o O_2$ 相交于 $A$、$B$、$C$、$D$ 各点．求证：$overline(A B) = overline(C D)$, $overparen(A B) = overparen(C D)$.
 
 + 已知 $dot.o O_1$ 和 $dot.o O_2$ 是相离的两个等圆，过 $overline(O_1 O_2)$ 的中点，作直线顺次与 $dot.o O_1$、$dot.o O_2$ 相交于 $C$、$D$、$E$、$F$ 各点，求证：$overparen(C D) = overparen(E F)$.
 
@@ -680,7 +680,7 @@ $A$ 点必在 $dot.o\(O\,r\)$ 上．
 
 #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("4-32");], caption: []), figure([#fig("4-33");], caption: [])));
 
-在图4.28中，过 $dot.o\(O\,r\)$ 的任一条半径 $overline(O A)$ 的端点 $A$ 作直线 $A B tack.t overline(O A)$ 于 $A$ 点，$P$ 为直线 $A B$ 上除 $A$ 点外的任一点，则 $overline(O P) > overline(O A)$,于是 $P$ 就在圆外，这就是说，在直线 $A B$ 上，除 $A$ 点外其它的点都在圆外．这时直线 $A B$ 和 $dot.o O$ 只有一个公共点 $A$.
+在图4.28中，过 $dot.o\(O\,r\)$ 的任一条半径 $overline(O A)$ 的端点 $A$ 作直线 $A B tack.t overline(O A)$ 于 $A$ 点，$P$ 为直线 $A B$ 上除 $A$ 点外的任一点，则 $overline(O P) > overline(O A)$,于是 $P$ 就在圆外，这就是说，在直线 $A B$ 上，除 $A$ 点外其他的点都在圆外．这时直线 $A B$ 和 $dot.o O$ 只有一个公共点 $A$.
 
 如果一条直线和一个圆只有一个公共点，我们就说这条直线和这个圆#strong[相切]，这条直线叫做圆的#strong[切线]，这个公共点叫做它们的切点．
 
@@ -716,7 +716,7 @@ $therefore quad A B tack.t overline(O C)$.
 
 如果一条直线和一个圆有两个公共点，我们就说，这条直线和这个圆相交，这条直线叫做这个圆的#strong[割线]，这两个公共点叫做它们的#strong[交点]．
 
-一条直线和一个圆如果有公共点，那么，它们的公共点是不能多于两个的，因此，#strong[直线和圆的位置关系只能有相离、相切和相交三种关系]．
+一条直线和一个圆如果有公共点，那么，它们的公共点是不能多于两个的（为什么？），因此，#strong[直线和圆的位置关系只能有相离、相切和相交三种关系]．
 
 #example[
 求证连结圆的两条平行切线的切点间的弦必是圆的直径．
@@ -845,7 +845,25 @@ $therefore quad triangle.stroked.t P O A tilde.equiv triangle.stroked.t P O B\,q
 
 #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("4-39");], caption: []), figure([#fig("4-40");], caption: [])));
 
-仿此，我们还可证明：三角形一内角平分线和其余两内角的外角平分线交于一点，这一点叫做三角形的#strong[旁心]（图4.36），以旁心为圆心可作一圆和一边及其它两边的延长线相切、所作的圆叫做三角形的#strong[旁切圆]，一个三角形有三个旁心，三个旁切圆，如图4.36所示，$dot.o I_1$、$dot.o I_2$、$dot.o I_3$ 是 $triangle.stroked.t A B C$ 的三个旁切圆．
+如图4.35，设 $triangle.stroked.t A B C$ 中，$angle B$ 与 $angle C$ 的平分线交于一点 $I$，自 $I$ 点作三边的垂线 $I D$、$I E$、$I F$，$D$、$E$、$F$ 是垂足．
+
+$because quad I$ 在 $angle B$ 的平分线上，
+
+$therefore quad overline(I D) = overline(I F)$.
+
+$because quad I$ 又在 $angle C$ 的平分线上，
+
+$therefore quad overline(I D) = overline(I E)$.
+
+$therefore quad overline(I E) = overline(I F)$.
+
+由此可见，$angle A$ 的平分线必通过 $I$ 点．若以 $I$ 为圆心，$overline(I D)$ 为半径作圆，这圆必与 $triangle.stroked.t A B C$ 的三边分别相切于 $D$、$E$、$F$ 三点，即 $dot.o I$ 是 $triangle.stroked.t A B C$ 的内切圆．由于一个角的平分线只有一条，三角形的两内角平分线又必相交于一点（为什么？），且交点是唯一的，所以每个三角形只能作一个内切圆．由此我们得到：
+
+#blk[定理][
+三角形的三个内角平分线交于一点，这点是三角形的内心．
+
+]
+仿此，我们还可证明：三角形一内角平分线和其余两内角的外角平分线交于一点，这一点叫做三角形的#strong[旁心]（图4.36），以旁心为圆心可作一圆和一边及其他两边的延长线相切、所作的圆叫做三角形的#strong[旁切圆]，一个三角形有三个旁心，三个旁切圆，如图4.36所示，$dot.o I_1$、$dot.o I_2$、$dot.o I_3$ 是 $triangle.stroked.t A B C$ 的三个旁切圆．
 
 #example[
 已知 $triangle.stroked.t A B C$，$overline(B C) = a$、$overline(A C) = b$，$overline(A B) = c$，求三个顶点到内切圆的切线长（图4.37）.
@@ -879,6 +897,8 @@ $therefore quad r times overline(A B) + r times overline(B C) + r times overline
 又知：$overline(A B) = 3\,quad overline(A C) = 2\,quad overline(B C) = sqrt(3^2 - 2^2) = sqrt(5)$
 
 $therefore quad r times 3 + r times sqrt(5) + r times 2 = 2 times sqrt(5)$
+
+$r\(3 + sqrt(5) + 2\)= 2 sqrt(5)$
 
 $ r = frac(2 sqrt(5), 5 + sqrt(5)) = frac(10 sqrt(5) - 10, 20) = frac(sqrt(5) - 1, 2) $
 
@@ -989,7 +1009,7 @@ $therefore quad overline(A M) = overline(A N)$.
 下面我们来研究只用圆规和直尺作两圆外公切线的方法．
 
 ==== 作两个圆的外公切线
-已知：$dot.o\(O ， r\)$ 和 $dot.o\(O'\,r'\)$ 且 $r > r'$.
+已知：$dot.o\(O\,r\)$ 和 $dot.o\(O'\,r'\)$ 且 $r > r'$.
 
 求作：$dot.o O$ 和 $dot.o O'$ 的外公切线．
 
@@ -1074,6 +1094,12 @@ $therefore quad overline(A M) = overline(A N)$.
 + 如果两圆外切，只能作一条内公切线，这条内公切线就是过切点并且垂直于连心线的直线（图4.46）.
 
 + 如果两圆相交或内含作图题无解．
+
+#blk[定理][
+两圆的两条外公切线的长相等；两圆的两条内公切线的长也相等．
+
+]
+（由同学们自证）
 
 #exercise[
 + 已知 $dot.o\(A\,4 upright(c m)\)$, $dot.o\(B\,3 upright(c m)\)$,圆心距分别如下，求作公切线（要求只作出图形）．
@@ -1252,7 +1278,7 @@ $therefore quad angle A Q B > angle A P B > angle A R B$.
 
 ]
 #example[
-已知：$triangle.stroked.t A B C$ 内接于 $dot.o O$\(图4.54), $overline(C E)$ 是 $O$ 的直径，$overline(C D)$ 是 $overline(A B)$ 边上的高，$overline(B C)$、$overline(A C)$、$overline(C E)$、$overline(C D)$ 分别用 $a$、$b$、$d$、$h$ 表示．
+已知：$triangle.stroked.t A B C$ 内接于 $dot.o O$\(图4.54), $overline(C E)$ 是 $dot.o O$ 的直径，$overline(C D)$ 是 $overline(A B)$ 边上的高，$overline(B C)$、$overline(A C)$、$overline(C E)$、$overline(C D)$ 分别用 $a$、$b$、$d$、$h$ 表示．
 
 求证：$a b = h d$
 
@@ -1271,7 +1297,7 @@ $because quad C D tack.t A B$,
 
 $therefore quad angle A D C$ 是直角．
 
-$because quad overline(C E)$ 是 $O$ 的直径，
+$because quad overline(C E)$ 是 $dot.o O$ 的直径，
 
 $therefore quad angle E B C$ 也是直角（推论2）.
 
@@ -1375,7 +1401,7 @@ $therefore quad angle A B C$ 的度数 $= 1 / 2 overparen(A m B)$ 的度数．
 #example[
 已知：如图4.56，$overline(A B)$ 是 $dot.o O$ 的一条弦，$A C$ 是一条射线，且 $angle B A C = 1 / 2 overparen(A B)$ 的度数．
 
-求证：AC切 $dot.o O$ 于 $A$．
+求证：$A C$ 切 $dot.o O$ 于 $A$．
 
 ]
 #proof[
@@ -1409,6 +1435,9 @@ $therefore quad A C$ 切 $dot.o O$ 于 $A$ 点（切线判定定理）．
 #analyze[
 假定 $overparen(A m B)$ 是所求作的弧（图4.57），作切线 $A C$，就有 $angle B A C = angle alpha$，因为圆心 $O$ 在 $overline(A B)$ 的垂直平分线 $D E$ 上，又在 $A C$ 的垂线 $A F$ 上，所以圆心 $O$ 是 $D E$ 和 $A F$ 的交点．于是得作法如下：
 
+]
+作法
+
 + 作 $angle B A C = angle alpha$，
 
 + 作 $overline(A B)$ 的垂直平分线 $D E$，
@@ -1417,7 +1446,6 @@ $therefore quad A C$ 切 $dot.o O$ 于 $A$ 点（切线判定定理）．
 
 + 以 $O$ 为圆心，$O A$ 为半径画 $overparen(A m B)$，使 $overparen(A m B)$ 和 $A C$ 在 $overline(A B)$ 的两旁，$overparen(A m B)$ 就是所求作的弧．
 
-]
 #proof[
 $because quad A C tack.t O A$ 于 $A$ 点，
 
@@ -1651,7 +1679,7 @@ $therefore quad angle B < 180 degree$
 
 $A$、$B$、$C$ 三点不在同一条直线上，于是有 $dot.o O$ 通过 $A$、$B$、$C$ 三点（图4.68），如果 $D$ 点不在 $dot.o O$ 上，那么只有下面两种可能：
 
-+ $D$ 点在 $dot.o O$ 内，延长对角线 $overline(B D)$ 与 $dot.o O$ 相交于 $D_1$ 点，于是，$angle A D C > angle A D_1 C$.但 $angle A D_1 C + angle B = 180 degree$
++ $D$ 点在 $dot.o O$ 内，延长对角线 $overline(B D)$ 与 $dot.o O$ 相交于 $D_1$ 点，于是，$angle A D C > angle A D_1 C$（例4.15）．但 $angle A D_1 C + angle B = 180 degree$
 
   $therefore quad angle A D C + angle B > 180 degree$.
 
@@ -1851,7 +1879,7 @@ $therefore quad angle A F G = angle G D B$, $B$、$D$、$G$、$F$ 四点共圆�
 
 + 如果 $triangle.stroked.t A B C$ 内接于 $dot.o O$, $H$ 是它的垂心，求证：$H$ 点分别以 $B C$、$A C$、$A B$ 为轴的对称点是相应边上高的延长线与 $dot.o O$ 的交点．
 
-+ 已知H是 $triangle.stroked.t A B C$ 的垂心，$overline(B C)$ 边上高的延长线与 $triangle.stroked.t A B C$ 的外接圆相交于 $H_1$ 点，求证：$B C$ 平分 $angle H B H_1$ 和 $angle H C H_1$.
++ 已知 $H$ 是 $triangle.stroked.t A B C$ 的垂心，$overline(B C)$ 边上高的延长线与 $triangle.stroked.t A B C$ 的外接圆相交于 $H_1$ 点，求证：$B C$ 平分 $angle H B H_1$ 和 $angle H C H_1$.
 
 + 如果 $triangle.stroked.t A B C$, $angle A$ 的平分线与 $overline(B C)$ 相交于 $D$ 点，与 $triangle.stroked.t A B C$ 的外接圆相交于 $E$ 点，那么 $overline(A B) dot.op overline(A C) = overline(A D) dot.op overline(A E)$
 
@@ -1938,7 +1966,7 @@ $therefore quad angle B O C = 180 degree - angle A O B - angle C O D = 60 degree
 
 同理：$angle E O F = angle D O E = angle A O F = 60 degree$,
 
-$therefore quad overline(A B) = overline(B C) = overline(C D) = overline(D E) = overline(E F) = overline(F A)$, $A B C D E F$ 是 $dot.o O$ 的内接正六边形（本节定理）．
+$therefore quad overparen(A B) = overparen(B C) = overparen(C D) = overparen(D E) = overparen(E F) = overparen(F A)$, $A B C D E F$ 是 $dot.o O$ 的内接正六边形（本节定理）．
 
 ]
 #example[
@@ -1997,7 +2025,7 @@ $therefore quad A B C D$ 为 $dot.o O$ 的内接正方形（本节定理）．
 
 作出了圆的内接正方形 $A C E G$ 以后（图4.77），再分别作直径垂直于每一边，就可以作出圆内接正八边形，一般只要我们作出了圆内接正 $n$ 边形，再分别作直径垂直各边，就很容易作出圆内接正 $2 n$ 边形．
 
-如果一个正 $n$ 边形不容易或者不可能用圆规和直尺作出．我们可用量角器近似地作出一个圆心角等于 $360 degree / n$，这个圆心角所对的弧就约是整个圆周的 $1 / n$,所对的弦就约是圆内接正 $n$ 边形的一边，以这条弦为半径，从圆上一点起在圆上依次截取，就可以近似地把圆分成 $n$ 个等分，依次连结各分点就可以得到所求的圆内接正 $n$ 边形．实际上，用这种方法作图也就可以了．
+如果一个正 $n$ 边形不容易或者不可能用圆规和直尺作出．我们可用量角器近似地作出一个圆心角等于 $360 degree / n$，这个圆心角所对的弧就约是整个圆周的 $1 / n$,所对的弦就约是圆内接正 $n$ 边形的一边，以这条弦为半径，从圆上一点起在圆上依次截取，就可以近似地把圆分成 $n$ 个等分，依次连结各分点就可以得到所求的圆内接正 $n$ 边形．实用上，用这种方法作图也就可以了．
 
 #exercise[
 以下作图只要求作出图形．
@@ -2040,13 +2068,13 @@ $therefore quad A_1 O$ 是 $angle A_n A_1 A_2$ 的平分线．
 
 $therefore quad angle O A_2 A_1 = angle O A_1 A_2 = 1 / 2 angle A_n A_1 A_2 = 1 / 2 angle A_1 A_2 A_3$,
 
-因此：$A_2 O$ 是 $angle A_1 A_2 A_3$ 的平分角线，$angle O A_2 A_1 = angle O A_2 A_3$,
+因此：$A_2 O$ 是 $angle A_1 A_2 A_3$ 的平分线，$angle O A_2 A_1 = angle O A_2 A_3$,
 
 又 $because quad overline(A_1 A_2) = overline(A_2 A_3)\,quad overline(O A_2) = overline(O A_2)$,
 
 $therefore quad triangle.stroked.t O A_1 A_2 tilde.equiv triangle.stroked.t O A_2 A_3$ (SAS), $overline(O A_2) = overline(O A_3)$
 
-这就是说 $A_3$ 在所作的 $dot.o O$ 上．循此下去，同样可证明正多边形 $A_1 A_2 A_3 dots.h.c A_n$ 的其它各顶点也在 $dot.o O$ 上．
+这就是说 $A_3$ 在所作的 $dot.o O$ 上．循此下去，同样可证明正多边形 $A_1 A_2 A_3 dots.h.c A_n$ 的其他各顶点也在 $dot.o O$ 上．
 
 其次，有了外接圆 $dot.o O$，圆心 $O$ 到各边的距离便彼此相等，这就是说，以 $O$ 为圆心，$O$ 到一边的距离为半径必可作一圆和各边都相切，此圆即是正多边形 $A_1 A_2 A_3 dots.h.c A_n$ 的内切圆（图4.78）.
 
@@ -2092,7 +2120,7 @@ $therefore quad S = 1 / 2 p d$.
 已知正三角形的边长为 $a$.求它的外接圆半径 $r$ 和它的内切圆半径 $d$.
 
 ]
-#proof[
+#solution[
 如图4.81,设 $O$ 是正 $triangle.stroked.t A B C$ 的中心，$O M tack.t overline(A B)$ 于 $M$,则 $overline(O A) = r$, $overline(O M) = d$, $angle O A M = 1 / 2 angle C A B = 30 degree$
 
 在直角三角形 $O A M$ 中，$r = 2 d$, $overline(A M) = a / 2$
@@ -2130,7 +2158,7 @@ $therefore quad\(2 d\)^2 = d^2 + (a / 2)^2$
 
 ]
 === 圆的周长和面积
-由于圆被 $n$ 等分后，顺次连结各分点，便得到一个 $n$ 边形，如果再把这 $n$ 段弧的中点取出来，圆上便出现了 $2 n$ 个分点，而顺次连结这个 $2 n$ 分点所得到的正 $2 n$ 边形，便包围着原来的正 $n$ 边形（图4.82），那么，这个正 $2 n$ 边形的周长和面积都比原来的正 $n$ 边形的周长和面积大，如此下去，我们还可继续得出圆内接正 $4 n$ 边形、正 $8 n$ 边形……我们可以看到这样的圆的内接正 $n$、$2 n$、$4 n$、$8 n$、……边形的边数越增长，它们的周长和面积就越逼近圆的周长和面积．这样一来，当已知圆的半径时，我们便可计算它的内接正 $n$、$2 n$、$4 n$、$8 n$、……边形的周长和面积，作为精确度不同的圆周长和圆面积的近似值．
+由于圆被 $n$ 等分后，顺次连结各分点，便得到一个 $n$ 边形，如果再把这 $n$ 段弧的中点取出来，圆上便出现了 $2 n$ 个分点，而顺次连结这个 $2 n$ 分点所得到的正 $2 n$ 边形，便包围着原来的正 $n$ 边形（图4.82），那么，这个正 $2 n$ 边形的周长和面积都比原来的正 $n$ 边形的周长和面积大，如此下去，我们还可继续得出圆内接正 $4 n$ 边形、正 $8 n$ 边形……我们可以看到这样的圆的内接正 $n$、$2 n$、$4 n$、$8 n$、……边形的边数越增，它们的周长和面积就越逼近圆的周长和面积．这样一来，当已知圆的半径时，我们便可计算它的内接正 $n$、$2 n$、$4 n$、$8 n$、……边形的周长和面积，作为精确度不同的圆周长和圆面积的近似值．
 
 现在我们来举例说明，半径是一个单位长的圆内接正4、8、16、32、64边形的周长的计算方法．
 
@@ -2233,12 +2261,14 @@ $therefore quad r = frac(180, 7.2 times pi) times overparen(A S)$
 
   + 用这种方法作边长是30mm的正五边形．
 
-  #figure([#fig("4-105");
+  #align(center)[
+  #fig("4-105");
 
-    ],
-    caption: [
-    ]
-  )
+  #subcap[
+  第3题
+
+  ]
+  ]
 
 + 用全等的正多边形的砖铺地面，要砖与砖之间不留空隙，有哪几种正多边形的砖合用？
 
@@ -2252,13 +2282,23 @@ $therefore quad r = frac(180, 7.2 times pi) times overparen(A S)$
 
 + 有一圆管的外直径是150mm,内直径是100mm,求这圆管的横断面的面积和它的厚度．
 
-+ 已知一圆的半径是200mm, $A B$ 所对的圆心角是 $45 degree$,求 $overparen(A B)$ 长和扇形 $O A B$ 的面积．
++ 已知一圆的半径是200mm, $overparen(A B)$ 所对的圆心角是 $45 degree$,求 $overparen(A B)$ 长和扇形 $O A B$ 的面积．
 
 + 如图：$triangle.stroked.t A B C$ 中，$angle C = 90 degree$, $overparen(A C B)$ 是以 $overline(A B)$ 为直径的半圆，$overparen(A D C)$ 是以 $overline(A C)$ 为直径的半圆，$overparen(C E B)$ 是以 $overline(C B)$ 为直径的半圆．
 
   求证：I的面积 $+$II的面积 $=$III的面积．
 
-  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("4-106");], caption: []), figure([#fig("4-107");], caption: [])));
+  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("4-106");
+  
+  #subcap[
+  第11题
+  
+  ]], [#fig("4-107");
+  
+  #subcap[
+  第12题
+  
+  ]]));
 
 + 为了把半径是3cm和1cm的两根圆柱紧紧地捆扎在一起，绕一圈需要多少铅丝？
 
@@ -2271,7 +2311,7 @@ $therefore quad r = frac(180, 7.2 times pi) times overparen(A S)$
 
 + 已知 $overline(C D)$ 是 $dot.o O$ 的直径，$A$ 为 $dot.o O$ 外一点，$A T$ 切圆于 $T$ 点，如果切点 $T$ 与 $C$ 的连线平行于 $A O$,求证 $A D$ 与 $dot.o O$ 相切．
 
-+ 以 $O$ 为圆心作两个同心圆，已知 $overline(A B)$ 为小圆的直径，过 $A$、$B$ 两点分别作小圆的切线交大圆于 $C$、$D$ 两点：（使 $C$、$D$ 分别在 $overline(A B)$ 的两侧），证明 $C$、$O$、$D$ 三点共线．
++ 以 $O$ 为圆心作两个同心圆，已知 $overline(A B)$ 为小圆的直径，过 $A$、$B$ 两点分别作小圆的切线交大圆于 $C$、$D$ 两点（使 $C$、$D$ 分别在 $overline(A B)$ 的两侧），证明 $C$、$O$、$D$ 三点共线．
 
 + 若一圆的两条切线交成 $60 degree$ 角，圆的半径为 $r$,求交点到圆心的距离．若交角为 $120 degree$,交点到圆心的距离又是多少？
 

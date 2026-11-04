@@ -208,13 +208,13 @@ cot 30 degree = frac(sqrt(3) a, a) = sqrt(3)\, & #h(2em) cot 60 degree = frac(a,
   [$60 degree$],
   table.hline(),
   [$sin alpha$],
-  [$1 / 2$],
+  [$sqrt(1) / 2$],
   [$sqrt(2) / 2$],
   [$sqrt(3) / 2$],
   [$cos alpha$],
   [$sqrt(3) / 2$],
   [$sqrt(2) / 2$],
-  [$1 / 2$],
+  [$sqrt(1) / 2$],
   [$tan alpha$],
   [$sqrt(3) / 3$],
   [1],
@@ -516,10 +516,10 @@ tan A = a / b = cot B = cot\(90 degree - A\)\, & #h(2em) cot A = b / a = tan B =
   $therefore quad tan alpha dot.op cot alpha = a / b dot.op b / a = 1$
 
 ]
-上面的定理，表示了同一锐角的三角比之间的关系，我们可利用定理中的三个公式，由已知锐角的一个三角比，去计算这个角的其它的三个三角比；也可以利用它们来化简含有三角比的式子．
+上面的定理，表示了同一锐角的三角比之间的关系，我们可利用定理中的三个公式，由已知锐角的一个三角比，去计算这个角的其他的三个三角比；也可以利用它们来化简含有三角比的式子．
 
 #example[
-已知：$sin alpha = 3 / 5$,求 $alpha$ 角（$alpha$ 为锐角）的其它的三个三角比．
+已知：$sin alpha = 3 / 5$,求 $alpha$ 角（$alpha$ 为锐角）的其他的三个三角比．
 
 ]
 #solution[
@@ -657,7 +657,7 @@ $  & \(sin alpha + cos alpha\)^2 +\(sin alpha - cos alpha\)^2\
 
   + 当 $0 degree lt.eq alpha lt.eq 90 degree$ 时，$cos alpha$ 的最大值是多少？最小值是多少？
 
-+ 当 $0 degree lt.eq alpha lt.eq 45 degree$, $alpha = 45 degree$, $45 degree < alpha lt.eq 90 degree$ 时，分别比较 $sin alpha$ 与 $cos alpha$ 的大小．
++ 当 $0 degree lt.eq alpha < 45 degree$, $alpha = 45 degree$, $45 degree < alpha lt.eq 90 degree$ 时，分别比较 $sin alpha$ 与 $cos alpha$ 的大小．
 
 == 解直角三角形
 === 直角三角形中的边角关系
@@ -676,7 +676,7 @@ $  & \(sin alpha + cos alpha\)^2 +\(sin alpha - cos alpha\)^2\
 
 + 两锐角互余：$angle A + angle B = 90 degree$
 
-+ 四个三角比：$ sin A = frac(angle A upright("的对边"), angle A upright("斜边"))\,#h(2em) cos A = frac(angle A upright("的邻边"), angle A upright("斜边")) $ #noindent;$ tan A = frac(angle A upright("的对边"), angle A upright("的邻边"))\,#h(2em) cot A = frac(angle A upright("的邻边"), angle A upright("的对边")) $
++ 四个三角比：$ sin A = frac(angle A upright("的对边"), upright("斜边"))\,#h(2em) cos A = frac(angle A upright("的邻边"), upright("斜边")) $ #noindent;$ tan A = frac(angle A upright("的对边"), angle A upright("的邻边"))\,#h(2em) cot A = frac(angle A upright("的邻边"), angle A upright("的对边")) $
 
 为了应用方便，我们把3中的四个公式写成下面的形式：$ angle A upright("的对边") = upright("斜边") times sin A\,#h(2em) angle A upright("的邻边") = upright("斜边") times cos A $ #noindent;$ angle A upright("的对边") = upright("邻边") times tan A\,#h(2em) angle A upright("的邻边") = upright("对边") times cot A $
 
@@ -705,7 +705,7 @@ $  & \(sin alpha + cos alpha\)^2 +\(sin alpha - cos alpha\)^2\
 
 ]
 === 解直角三角形
-根据三角形的某些已知元素求出它的未知元素，这种过程叫做#strong[解三角形]．在直角三角形中，直角总是已知的．除直角外，只要再知道两个元素，其中至少有一边，就可以求出直角三角形的其它各元素．因此，解直角三角形，只有下面四种情况：
+根据三角形的某些已知元素求出它的未知元素，这种过程叫做#strong[解三角形]．在直角三角形中，直角总是已知的．除直角外，只要再知道两个元素，其中至少有一边，就可以求出直角三角形的其他各元素．因此，解直角三角形，只有下面四种情况：
 
 + 已知斜边与一锐角，
 
@@ -715,7 +715,7 @@ $  & \(sin alpha + cos alpha\)^2 +\(sin alpha - cos alpha\)^2\
 
 + 已知两条直角边．
 
-上述四种情况，都可用前面中所列出的关系式，并利用三角比值表来求解．
+上述四种情况，都可用前面所列出的关系式，并利用三角比值表来求解．
 
 #example[
 已知 $c = 18$, $angle A = 62 degree 20'$ (图6.13),求：$angle B\,a\,b$
@@ -952,7 +952,7 @@ $therefore quad tan alpha = 0.04$.倒查正切表得：$alpha = 2 degree 17'$.
 
 我们约定在 $triangle.stroked.t A B C$ 中，$angle A$、$angle B$、$angle C$ 分别用 $alpha$、$beta$、$gamma$ 来表示；$angle A$、$angle B$、$angle C$ 的对边分别用 $a$、$b$、$c$ 来表示；外接圆的半径用 $r$ 来表示．
 
-假定 $alpha$ 是锐角（图6.22），作 $triangle.stroked.t A B C$ 的外接圆 $O$,再作 $dot.o O$ 的直径 $overline(C A')$,弦 $overline(B A')$,在 $triangle.stroked.t A' B C$ 中，$angle A' B C$ 是直角，因此 $a = 2 r sin A'$
+假定 $alpha$ 是锐角（图6.22），作 $triangle.stroked.t A B C$ 的外接圆 $dot.o O$,再作 $dot.o O$ 的直径 $overline(C A')$,弦 $overline(B A')$,在 $triangle.stroked.t A' B C$ 中，$angle A' B C$ 是直角，因此 $a = 2 r sin A'$
 
 $because quad angle A' = angle A = alpha$
 
@@ -1441,7 +1441,7 @@ S_triangle.stroked.t & = frac(c^2 sin alpha dot.op sin beta, 2 sin\(alpha + beta
 
 $therefore quad S_triangle.stroked.t = frac(a^2 sin beta dot.op sin gamma, 2 sin\(beta + gamma\))$
 
-同理可证明其它两个公式．
+同理可证明其他两个公式．
 
 ]
 #exercise[
@@ -1485,7 +1485,7 @@ $therefore quad x = frac(overline(A B), cot alpha + cot beta)$
 
 天文学家曾用了这个方法测出了地球和月亮间的距离．1671年两个法国天文学家拉让德和拉卡伊，一个在柏林，一个在好望角（这两个城市差不多位于同一子午线上），测出了 $alpha$、$beta$ 的大小和 $A B$ 的长度（图6.42）．从而确切地算出了地月平均距离为385400公里．
 
-在地球上，我们可使用的最长基线是地球的直径，由于地球绕太阳按椭圆形轨道运行，当我们要测量其它星球到地球的距离时，可使用的最长基线是地球椭圆轨道的长轴（图6.43）．
+在地球上，我们可使用的最长基线是地球的直径，由于地球绕太阳按椭圆形轨道运行，当我们要测量其他星球到地球的距离时，可使用的最长基线是地球椭圆轨道的长轴（图6.43）．
 
 #figure([#scale(60%, reflow: true, image("/math2/fig/6-43.png"));
 
@@ -1494,7 +1494,7 @@ $therefore quad x = frac(overline(A B), cot alpha + cot beta)$
   ]
 )
 
-从以上的分析我们知道，当我们应用解三角形原理在地球上测量地球与其它星球的距离时，可使用的基线是有限的，所以星球离地球越远、视角也越小，相对基线就越短，测的结果也就越不精确了．
+从以上的分析我们知道，当我们应用解三角形原理在地球上测量地球与其他星球的距离时，可使用的基线是有限的，所以星球离地球越远、视角也越小，相对基线就越短，测的结果也就越不精确了．
 
 #exercise[
 + 要测量一条河两岸的两点 $A$、$B$ 之间的距离，在 $A$ 点所在的岸边选择一条基线 $overline(A C) = 380$ 米，测出 $angle B A C = 75 degree 32'$, $angle B C A = 45 degree 35'$,求 $A$、$B$ 间的距离．
@@ -1532,7 +1532,7 @@ $therefore quad x = frac(overline(A B), cot alpha + cot beta)$
 
   + 已知 $a = 25$、$b = 31$、$gamma = 90 degree$,求 $alpha$、$c$.
 
-  + 已知 $a = 6$、$beta = 40 degree$、$gamma = 80 degree$,求b.
+  + 已知 $a = 6$、$beta = 40 degree$、$gamma = 80 degree$,求 $b$.
 
   + 已知 $a = 8$、$b = 6$、$alpha = 75 degree$,求 $beta$、$c$.
 
@@ -1606,11 +1606,11 @@ $therefore quad x = frac(overline(A B), cot alpha + cot beta)$
 
 + 已知 $triangle.stroked.t A B C$, $angle C = 90 degree$,求证 $ tan A + tan B = frac(c^2, a b) $
 
-+ 已知在 $triangle.stroked.t A B C$ 中，$angle C = 90 degree$, $overline(C E) overline(C B)$,延长 $C A$ 到 $D$ 使 $overline(A D) = overline(A B)$,作 $overline(D B)$,求 $angle D$ 的度数，并根据图形求 $angle D$ 的正弦、余弦、正切和余切的值．
++ 已知在 $triangle.stroked.t A B C$ 中，$angle C = 90 degree$, $overline(C A) = overline(C B)$,延长 $C A$ 到 $D$ 使 $overline(A D) = overline(A B)$,作 $overline(D B)$,求 $angle D$ 的度数，并根据图形求 $angle D$ 的正弦、余弦、正切和余切的值．
 
 + 在正方形 $A B C D$ 中，已知 $E$ 是 $overline(B C)$ 的中点，求 $angle A E C$ 的正弦和余弦．
 
-+ 在四边形 $A B C D$ 中，$overline(A B) = 2 a$, $B C =\(sqrt(3) + 1\)a$, $overline(C D) = sqrt(2) a$, $angle B = 60 degree$, $angle C = 75 degree$,求 $overline(A C)$ 的长和四边形 $A B C D$ 的面积．
++ 在四边形 $A B C D$ 中，$overline(A B) = 2 a$, $overline(B C) =\(sqrt(3) + 1\)a$, $overline(C D) = sqrt(2) a$, $angle B = 60 degree$, $angle C = 75 degree$,求 $overline(A C)$ 的长和四边形 $A B C D$ 的面积．
 
 + 已知在 $triangle.stroked.t A B C$ 中，$a = 4$、$b = 5$、$c = 6$,求 $cos alpha$、$sin gamma$、$sin beta$、$sin alpha$,问 $alpha$、$beta$、$gamma$ 是锐角还是钝角？
 

@@ -1420,7 +1420,6 @@
     node((-1.1088, 1.3214), [$A_n$], pos: "below")
   })
   ,
-  // 点 O 在定义前使用
   "3-76": canvas({
     let A = (1.4095, -0.513)
     let A4 = (0.2605, 1.4772)
@@ -1428,14 +1427,14 @@
     let A1 = (-0.8999, -1.0725)
     let A2 = (-1.4772, 0.2605)
     let A3 = (-0.8035, 0.9576)
-    line((0, 0), A1, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
-    line((0, 0), A2, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
-    line((0, 0), A3, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
-    line((0, 0), A4, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
-    line((0, 0), An, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
-    line((0, 0), A, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
-    line(A1, A2, A3, A4, A, An, stroke: (paint: black, thickness: 0.2pt, cap: "round", join: "round"), close: true)
     let O = (0, 0)
+    line(O, A1, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
+    line(O, A2, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
+    line(O, A3, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
+    line(O, A4, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
+    line(O, An, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
+    line(O, A, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
+    line(A1, A2, A3, A4, A, An, stroke: (paint: black, thickness: 0.2pt, cap: "round", join: "round"), close: true)
     node((-1.0349, -1.2333), [$A_1$], pos: "below")
     node((-1.6988, 0.2995), [$A_2$], pos: "below")
     node((-0.924, 1.1012), [$A_3$], pos: "below")
@@ -3003,6 +3002,7 @@
     node((9, 0), [$C'$], pos: "below")
     node((9, 4), [$A'$], pos: "above")
     node((7.5, 2), [$c$], pos: "left")
+    line((8.7, 0), (8.7, 0.3), (9, 0.3), stroke: (paint: black, thickness: 0.4pt))
   })
   ,
   "3-142": canvas({

@@ -78,6 +78,9 @@ class Converter:
         # \x 是本书定义的 ×；但 \\x 是换行后接字母 x，不能替换
         tex = re.sub(r"(?<!\\)\\x(?![a-zA-Z])", r"\\times ", tex)
         tex = re.sub(r"\\oc(?![a-zA-Z])", "°C", tex)
+        # pifont 的带圈数字：\ding{172}–{181}、\ding{192}–{201} 都是 ①–⑩
+        tex = re.sub(r"\\ding\{(\d+)\}", lambda m: chr(0x2460 + (int(m.group(1)) - 172) % 20)
+                     if 172 <= int(m.group(1)) <= 181 or 192 <= int(m.group(1)) <= 201 else m.group(0), tex)
         tex = re.sub(r"\\vskip\s*[\d.]+\s*(ex|em|pt|mm|cm)", "", tex)
         # \section*：后面跟 \addcontentsline{toc}{subsection} 的（习题）以小节的缩进列入目录，否则不列入目录
         tex = re.sub(r"\\section\*\{([^}]*)\}\s*\\addcontentsline\{toc\}\{subsection\}\{[^}]*\}",

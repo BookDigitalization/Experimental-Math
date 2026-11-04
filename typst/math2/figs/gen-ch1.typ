@@ -231,6 +231,39 @@
     line(B, D, stroke: (paint: black, thickness: 0.4pt))
     node((3.2, 1.8), [$O$], pos: "below")
     line(A, C, stroke: (paint: black, thickness: 0.4pt))
+    node((3, -1.2), [第1题])
+    circle((8.5, 0.3), radius: 0.0703, fill: black, stroke: none)
+    node((8.5, 0.3), [$B$], pos: "left")
+    circle((9.7, 2), radius: 0.0703, fill: black, stroke: none)
+    node((9.7, 2), [$A$], pos: "above right")
+    circle((9.8, 0.2), radius: 0.0703, fill: black, stroke: none)
+    node((9.8, 0.2), [$C$], pos: "below right")
+    node((9.2, -1.2), [第2题])
+    circle((13.4, 2.6), radius: 0.0703, fill: black, stroke: none)
+    node((13.4, 2.6), [$D$], pos: "right")
+    circle((12.5, 1.4), radius: 0.0703, fill: black, stroke: none)
+    node((12.5, 1.4), [$A$], pos: "left")
+    circle((14.6, 1), radius: 0.0703, fill: black, stroke: none)
+    node((14.6, 1), [$C$], pos: "below right")
+    circle((12.8, 0.2), radius: 0.0703, fill: black, stroke: none)
+    node((12.8, 0.2), [$B$], pos: "left")
+    node((13.5, -1.2), [第3题])
+    line((4, -7), (10, -7), (11.2, -3), (5.2, -3), stroke: (paint: black, thickness: 0.4pt), close: true)
+    line((4.45, -5.5), (10.45, -5.5), stroke: (paint: black, thickness: 0.4pt))
+    line((4.66, -4.8), (10.66, -4.8), stroke: (paint: black, thickness: 0.4pt))
+    line((4.84, -4.2), (10.84, -4.2), stroke: (paint: black, thickness: 0.4pt))
+    line((5.02, -3.6), (11.02, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((5.5171, -4.8), (6.0571, -3), stroke: (paint: black, thickness: 0.4pt))
+    line((6.3743, -4.8), (6.9143, -3), stroke: (paint: black, thickness: 0.4pt))
+    line((7.2314, -4.8), (7.7714, -3), stroke: (paint: black, thickness: 0.4pt))
+    line((8.0886, -4.8), (8.6286, -3), stroke: (paint: black, thickness: 0.4pt))
+    line((8.9457, -4.8), (9.4857, -3), stroke: (paint: black, thickness: 0.4pt))
+    line((9.8029, -4.8), (10.3429, -3), stroke: (paint: black, thickness: 0.4pt))
+    line((5.3071, -5.5), (5.5171, -4.8), stroke: (paint: black, thickness: 0.4pt))
+    line((6.1643, -5.5), (6.3743, -4.8), stroke: (paint: black, thickness: 0.4pt))
+    line((4.45, -5.5), (4.45, -4.9), stroke: (paint: black, thickness: 0.4pt))
+    line((10.45, -5.5), (10.45, -4.9), stroke: (paint: black, thickness: 0.4pt))
+    node((7.6, -8), [第6题])
   })
   ,
   "1-12": canvas({
@@ -254,10 +287,21 @@
   })
   ,
   "1-14": canvas({
-    line((0, 0), (4.667, 0), stroke: (paint: black, thickness: 0.4pt), mark: (start: "|", end: "|"))
+    line((0, 0), (7.0005, 0), stroke: (paint: black, thickness: 0.4pt), mark: (start: "|", end: "|"))
     node((0, 0), [$c :$], pos: "left")
-    line((0, 1), (1, 1), stroke: (paint: black, thickness: 0.4pt), mark: (start: "|", end: "|"))
+    node((7.0005, 0), [$D$], pos: "below")
+    line((1.5, 0), (1.5, 0.1), stroke: (paint: black, thickness: 0.4pt))
+    line((3, 0), (3, 0.1), stroke: (paint: black, thickness: 0.4pt))
+    line((4.5, 0), (4.5, 0.1), stroke: (paint: black, thickness: 0.4pt))
+    line((6.4995, 0), (6.4995, 0.1), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 0), (6, 0.1), stroke: (paint: black, thickness: 0.4pt))
+    node((6, 0), [$C_4$], pos: "below")
+    line((0, 1), (1.5, 1), stroke: (paint: black, thickness: 0.4pt), mark: (start: "|", end: "|"))
     node((0, 1), [$u :$], pos: "left")
+    node((1.5, 1), [$V$], pos: "below")
+    line((0.4995, 1), (0.4995, 1.1), stroke: (paint: black, thickness: 0.4pt))
+    line((1.0005, 1), (1.0005, 1.1), stroke: (paint: black, thickness: 0.4pt))
+    node((1.0005, 1), [$U_1$], pos: "below")
   })
   ,
   "1-15": canvas({
@@ -279,13 +323,24 @@
     line((3.68, 1.1), (3.68, 1), stroke: (paint: black, thickness: 0.4pt))
   })
   ,
-  "1-16": canvas({
-    line((0, 0), (5, 0), stroke: (paint: black, thickness: 0.4pt), mark: (start: "|", end: "|"))
-    node((0, 0), [$A$], pos: "below")
-    node((5, 0), [$D$], pos: "below")
-    line((2, 0), (4, 0), stroke: (paint: black, thickness: 0.4pt), mark: (start: "|", end: "|"))
-    node((2, 0), [$B$], pos: "below")
-    node((4, 0), [$C$], pos: "below")
+  "1-16": canvas(length: 0.9cm, {
+    line((0, 0), (1, 0), stroke: (paint: black, thickness: 0.4pt), mark: (start: "|", end: "|"))
+    node((0, 0), [$u :$], pos: "left")
+    line((0, -1), (4.6, -1), stroke: (paint: black, thickness: 0.4pt), mark: (start: "|", end: "|"))
+    node((0, -1), [$a :$], pos: "left")
+    node((2.3, -1.8), [第1题])
+    line((0, -3.2), (1.5, -3.2), stroke: (paint: black, thickness: 0.4pt), mark: (start: "|", end: "|"))
+    node((0, -3.2), [$v :$], pos: "left")
+    line((0, -4.2), (5.1, -4.2), stroke: (paint: black, thickness: 0.4pt), mark: (start: "|", end: "|"))
+    node((0, -4.2), [$b :$], pos: "left")
+    node((2.55, -5), [第2题])
+    line((7, -1.5), (12, -1.5), stroke: (paint: black, thickness: 0.4pt), mark: (start: "|", end: "|"))
+    node((7, -1.5), [$A$], pos: "below")
+    node((12, -1.5), [$D$], pos: "below")
+    line((9, -1.5), (11, -1.5), stroke: (paint: black, thickness: 0.4pt), mark: (start: "|", end: "|"))
+    node((9, -1.5), [$B$], pos: "below")
+    node((11, -1.5), [$C$], pos: "below")
+    node((9.5, -2.7), [第5题])
   })
   ,
   "1-17": canvas({
@@ -322,10 +377,15 @@
     line((0, 3), (0, 4), stroke: (paint: black, thickness: 0.4pt, dash: (3pt, 3pt,)), mark: (end: "stealth", fill: black))
     node((0, 4), [$ell$], pos: "right")
     node((0, 1.5), [门轴], pos: "right")
+    node((2, 1.5), [$P$], pos: "right")
   })
   ,
-  "1-19": canvas({
-  
+  "1-19": canvas(length: 0.8cm, {
+    line((1.2, 3.75), (0.75, 2.1), (2.4, 0.1), (3.05, 1.5), stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((2.45, 3.15), radius: 0.0527, fill: black, stroke: none)
+    node((2.45, 3.15), [$A$], pos: "right")
+    node((2.5, 0.7), [$alpha$])
+    node((1.9, -0.6), [第5题])
   })
   ,
   "1-20": canvas({
@@ -732,7 +792,6 @@
     let C = (5, 2)
     line(A, B, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
     line(C, O, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
-    line(O, (5, 0.3), (4.7, 0.3), (4.7, 0), O, stroke: (paint: black, thickness: 0.4pt))
     line(O, (5.2, 0), (5.2, 0.2), (5, 0.2), O, stroke: (paint: black, thickness: 0.4pt))
     node((5, -0.5), [\(2)])
   })
@@ -1343,6 +1402,10 @@
     line(Ap, Bp, stroke: (paint: black, thickness: 0.2pt, cap: "round"), mark: (end: "stealth", fill: black))
     arc((0.1789, -0.3578), start: -63.4349deg, stop: 0deg, radius: 0.4, stroke: (paint: black, thickness: 0.4pt))
     arc((0.6789, -1.3578), start: -63.4349deg, stop: -17.7447deg, radius: 0.4, stroke: (paint: black, thickness: 0.4pt))
+    let T = (2, -0.75)
+    node(T, text(size: 0.8571em)[同位角], pos: "right", name: "T")
+    line((0.45, -0.25), T, stroke: (paint: black, thickness: 0.4pt, dash: (3pt, 3pt,)), mark: (end: "stealth", fill: black))
+    line((0.8, -1.2), T, stroke: (paint: black, thickness: 0.4pt, dash: (3pt, 3pt,)), mark: (end: "stealth", fill: black))
     node((0.25, -0.5), [$C$], pos: "left")
     node((1, -2), [$C'$], pos: "left")
   })
@@ -1360,6 +1423,10 @@
     node(Ap, [$A'$], pos: "above left")
     arc((1.0643, 0), start: 0deg, stop: 66.8014deg, radius: 0.35, stroke: (paint: black, thickness: 0.4pt))
     arc((1.9214, 2), start: 0deg, stop: 66.8014deg, radius: 0.35, stroke: (paint: black, thickness: 0.4pt))
+    let T = (2.6, 1.3)
+    node(T, text(size: 0.8571em)[同位角], pos: "right", name: "T")
+    line((1, 0.2), T, stroke: (paint: black, thickness: 0.4pt, dash: (3pt, 3pt,)), mark: (end: "stealth", fill: black))
+    line((1.85, 2.15), T, stroke: (paint: black, thickness: 0.4pt, dash: (3pt, 3pt,)), mark: (end: "stealth", fill: black))
     node(Pa, [$ell'$], pos: "left")
     node(ap, [$ell$], pos: "left")
     line(Pa, Pb, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
@@ -1576,7 +1643,7 @@
     let B = (2.5, 0)
     let A = (0, 0)
     let C = (4, 2)
-    let O = (2.5, 1)
+    let O = (1.8, 1.4)
     let D = (1.5, 2)
     line(A, B, C, D, stroke: (paint: black, thickness: 0.2pt, cap: "round", join: "round"), close: true)
     line(B, D, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
@@ -1588,7 +1655,226 @@
     circle(O, radius: 1pt, fill: black, stroke: black + 0.4pt)
   })
   ,
-  "1-72": canvas({
+  "1-72": canvas(length: 0.8cm, {
+    // （被 \clip 裁掉）
+    line((0, 1.8), (0.4, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((0, 1.4), (0.8, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((0, 1), (1.2, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((0, 0.6), (1.6, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((0, 0.2), (2, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((0.2, 0), (2.4, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((0.6, 0), (2.8, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((1, 0), (3.2, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((1.4, 0), (3.6, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((1.8, 0), (4, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((2.2, 0), (4, 1.8), stroke: (paint: black, thickness: 0.4pt))
+    line((2.6, 0), (4, 1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((3, 0), (4, 1), stroke: (paint: black, thickness: 0.4pt))
+    line((3.4, 0), (4, 0.6), stroke: (paint: black, thickness: 0.4pt))
+    line((3.8, 0), (4, 0.2), stroke: (paint: black, thickness: 0.4pt))
+    // （被 \clip 裁掉）
+    line((0, 0), (4, 0), (4, 2.2), (0, 2.2), stroke: (paint: black, thickness: 0.8pt), close: true)
+    line((4, 0), (5, 0), stroke: (paint: black, thickness: 0.4pt))
+    line((4, 0), (4.7071, 0.7071), stroke: (paint: black, thickness: 0.4pt))
+    arc((4.4, 0), start: 0deg, stop: 45deg, radius: 0.4, stroke: (paint: black, thickness: 0.4pt))
+    node((4.6929, 0.287), text(size: 0.6667em)[$45^compose$])
+    node((2, -0.6), [普通砖])
+    // （被 \clip 裁掉）
+    line((6, 2.1), (6.1, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 2), (6.2, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 1.9), (6.3, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 1.8), (6.4, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 1.7), (6.5, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 1.6), (6.6, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 1.5), (6.7, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 1.4), (6.8, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 1.3), (6.9, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 1.2), (7, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 1.1), (7.1, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 1), (7.2, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 0.9), (7.3, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 0.8), (7.4, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 0.7), (7.5, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 0.6), (7.6, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 0.5), (7.7, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 0.4), (7.8, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 0.3), (7.9, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 0.2), (8, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 0.1), (8.1, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6, 0), (8.2, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6.1, 0), (8.3, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6.2, 0), (8.4, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6.3, 0), (8.5, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6.4, 0), (8.6, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6.5, 0), (8.7, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6.6, 0), (8.8, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6.7, 0), (8.9, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6.8, 0), (9, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((6.9, 0), (9.1, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((7, 0), (9.2, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((7.1, 0), (9.3, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((7.2, 0), (9.4, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((7.3, 0), (9.5, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((7.4, 0), (9.6, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((7.5, 0), (9.7, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((7.6, 0), (9.8, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((7.7, 0), (9.9, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((7.8, 0), (10, 2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((7.9, 0), (10, 2.1), stroke: (paint: black, thickness: 0.4pt))
+    line((8, 0), (10, 2), stroke: (paint: black, thickness: 0.4pt))
+    line((8.1, 0), (10, 1.9), stroke: (paint: black, thickness: 0.4pt))
+    line((8.2, 0), (10, 1.8), stroke: (paint: black, thickness: 0.4pt))
+    line((8.3, 0), (10, 1.7), stroke: (paint: black, thickness: 0.4pt))
+    line((8.4, 0), (10, 1.6), stroke: (paint: black, thickness: 0.4pt))
+    line((8.5, 0), (10, 1.5), stroke: (paint: black, thickness: 0.4pt))
+    line((8.6, 0), (10, 1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((8.7, 0), (10, 1.3), stroke: (paint: black, thickness: 0.4pt))
+    line((8.8, 0), (10, 1.2), stroke: (paint: black, thickness: 0.4pt))
+    line((8.9, 0), (10, 1.1), stroke: (paint: black, thickness: 0.4pt))
+    line((9, 0), (10, 1), stroke: (paint: black, thickness: 0.4pt))
+    line((9.1, 0), (10, 0.9), stroke: (paint: black, thickness: 0.4pt))
+    line((9.2, 0), (10, 0.8), stroke: (paint: black, thickness: 0.4pt))
+    line((9.3, 0), (10, 0.7), stroke: (paint: black, thickness: 0.4pt))
+    line((9.4, 0), (10, 0.6), stroke: (paint: black, thickness: 0.4pt))
+    line((9.5, 0), (10, 0.5), stroke: (paint: black, thickness: 0.4pt))
+    line((9.6, 0), (10, 0.4), stroke: (paint: black, thickness: 0.4pt))
+    line((9.7, 0), (10, 0.3), stroke: (paint: black, thickness: 0.4pt))
+    line((9.8, 0), (10, 0.2), stroke: (paint: black, thickness: 0.4pt))
+    line((9.9, 0), (10, 0.1), stroke: (paint: black, thickness: 0.4pt))
+    // （被 \clip 裁掉）
+    line((6, 0), (10, 0), (10, 2.2), (6, 2.2), stroke: (paint: black, thickness: 0.8pt), close: true)
+    line((10, 0), (11, 0), stroke: (paint: black, thickness: 0.4pt))
+    line((10, 0), (10.7071, 0.7071), stroke: (paint: black, thickness: 0.4pt))
+    arc((10.4, 0), start: 0deg, stop: 45deg, radius: 0.4, stroke: (paint: black, thickness: 0.4pt))
+    node((10.6929, 0.287), text(size: 0.6667em)[$45^compose$])
+    node((8, -0.6), [金属])
+    // （被 \clip 裁掉）
+    // （被 \clip 裁掉）
+    line((0, -1.8), (0.4, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -3.2), (0.4, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -2.2), (0.8, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -2.8), (0.8, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -2.6), (1.2, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -2.4), (1.2, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -3), (1.6, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -2), (1.6, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -3.4), (2, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -1.6), (2, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((0.2, -3.6), (2.4, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((0.2, -1.4), (2.4, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((0.6, -3.6), (2.8, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((0.6, -1.4), (2.8, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((1, -3.6), (3.2, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((1, -1.4), (3.2, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((1.4, -3.6), (3.6, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((1.4, -1.4), (3.6, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((1.8, -3.6), (4, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((1.8, -1.4), (4, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((2.2, -3.6), (4, -1.8), stroke: (paint: black, thickness: 0.4pt))
+    line((2.2, -1.4), (4, -3.2), stroke: (paint: black, thickness: 0.4pt))
+    line((2.6, -3.6), (4, -2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((2.6, -1.4), (4, -2.8), stroke: (paint: black, thickness: 0.4pt))
+    line((3, -3.6), (4, -2.6), stroke: (paint: black, thickness: 0.4pt))
+    line((3, -1.4), (4, -2.4), stroke: (paint: black, thickness: 0.4pt))
+    line((3.4, -3.6), (4, -3), stroke: (paint: black, thickness: 0.4pt))
+    line((3.4, -1.4), (4, -2), stroke: (paint: black, thickness: 0.4pt))
+    line((3.8, -3.6), (4, -3.4), stroke: (paint: black, thickness: 0.4pt))
+    line((3.8, -1.4), (4, -1.6), stroke: (paint: black, thickness: 0.4pt))
+    // （被 \clip 裁掉）
+    // （被 \clip 裁掉）
+    line((0, -3.6), (4, -3.6), (4, -1.4), (0, -1.4), stroke: (paint: black, thickness: 0.8pt), close: true)
+    node((2, -4.2), [耐火砖])
+    // （被 \clip 裁掉）
+    // （被 \clip 裁掉）
+    line((6, -1.55), (6.15, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -3.45), (6.15, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -1.7), (6.3, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -3.3), (6.3, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -1.85), (6.45, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -3.15), (6.45, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -2), (6.6, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -3), (6.6, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -2.15), (6.75, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -2.85), (6.75, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -2.3), (6.9, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -2.7), (6.9, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -2.45), (7.05, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -2.55), (7.05, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -2.6), (7.2, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -2.4), (7.2, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -2.75), (7.35, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -2.25), (7.35, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -2.9), (7.5, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -2.1), (7.5, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -3.05), (7.65, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -1.95), (7.65, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -3.2), (7.8, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -1.8), (7.8, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -3.35), (7.95, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -1.65), (7.95, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -3.5), (8.1, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6, -1.5), (8.1, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6.05, -3.6), (8.25, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6.05, -1.4), (8.25, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6.2, -3.6), (8.4, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6.2, -1.4), (8.4, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6.35, -3.6), (8.55, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6.35, -1.4), (8.55, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6.5, -3.6), (8.7, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6.5, -1.4), (8.7, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6.65, -3.6), (8.85, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6.65, -1.4), (8.85, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6.8, -3.6), (9, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6.8, -1.4), (9, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((6.95, -3.6), (9.15, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((6.95, -1.4), (9.15, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((7.1, -3.6), (9.3, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((7.1, -1.4), (9.3, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((7.25, -3.6), (9.45, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((7.25, -1.4), (9.45, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((7.4, -3.6), (9.6, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((7.4, -1.4), (9.6, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((7.55, -3.6), (9.75, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((7.55, -1.4), (9.75, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((7.7, -3.6), (9.9, -1.4), stroke: (paint: black, thickness: 0.4pt))
+    line((7.7, -1.4), (9.9, -3.6), stroke: (paint: black, thickness: 0.4pt))
+    line((7.85, -3.6), (10, -1.45), stroke: (paint: black, thickness: 0.4pt))
+    line((7.85, -1.4), (10, -3.55), stroke: (paint: black, thickness: 0.4pt))
+    line((8, -3.6), (10, -1.6), stroke: (paint: black, thickness: 0.4pt))
+    line((8, -1.4), (10, -3.4), stroke: (paint: black, thickness: 0.4pt))
+    line((8.15, -3.6), (10, -1.75), stroke: (paint: black, thickness: 0.4pt))
+    line((8.15, -1.4), (10, -3.25), stroke: (paint: black, thickness: 0.4pt))
+    line((8.3, -3.6), (10, -1.9), stroke: (paint: black, thickness: 0.4pt))
+    line((8.3, -1.4), (10, -3.1), stroke: (paint: black, thickness: 0.4pt))
+    line((8.45, -3.6), (10, -2.05), stroke: (paint: black, thickness: 0.4pt))
+    line((8.45, -1.4), (10, -2.95), stroke: (paint: black, thickness: 0.4pt))
+    line((8.6, -3.6), (10, -2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((8.6, -1.4), (10, -2.8), stroke: (paint: black, thickness: 0.4pt))
+    line((8.75, -3.6), (10, -2.35), stroke: (paint: black, thickness: 0.4pt))
+    line((8.75, -1.4), (10, -2.65), stroke: (paint: black, thickness: 0.4pt))
+    line((8.9, -3.6), (10, -2.5), stroke: (paint: black, thickness: 0.4pt))
+    line((8.9, -1.4), (10, -2.5), stroke: (paint: black, thickness: 0.4pt))
+    line((9.05, -3.6), (10, -2.65), stroke: (paint: black, thickness: 0.4pt))
+    line((9.05, -1.4), (10, -2.35), stroke: (paint: black, thickness: 0.4pt))
+    line((9.2, -3.6), (10, -2.8), stroke: (paint: black, thickness: 0.4pt))
+    line((9.2, -1.4), (10, -2.2), stroke: (paint: black, thickness: 0.4pt))
+    line((9.35, -3.6), (10, -2.95), stroke: (paint: black, thickness: 0.4pt))
+    line((9.35, -1.4), (10, -2.05), stroke: (paint: black, thickness: 0.4pt))
+    line((9.5, -3.6), (10, -3.1), stroke: (paint: black, thickness: 0.4pt))
+    line((9.5, -1.4), (10, -1.9), stroke: (paint: black, thickness: 0.4pt))
+    line((9.65, -3.6), (10, -3.25), stroke: (paint: black, thickness: 0.4pt))
+    line((9.65, -1.4), (10, -1.75), stroke: (paint: black, thickness: 0.4pt))
+    line((9.8, -3.6), (10, -3.4), stroke: (paint: black, thickness: 0.4pt))
+    line((9.8, -1.4), (10, -1.6), stroke: (paint: black, thickness: 0.4pt))
+    line((9.95, -3.6), (10, -3.55), stroke: (paint: black, thickness: 0.4pt))
+    line((9.95, -1.4), (10, -1.45), stroke: (paint: black, thickness: 0.4pt))
+    // （被 \clip 裁掉）
+    // （被 \clip 裁掉）
+    line((6, -3.6), (10, -3.6), (10, -1.4), (6, -1.4), stroke: (paint: black, thickness: 0.8pt), close: true)
+    node((8, -4.2), [塑料、橡皮、皮革、瓷器])
+  })
+  ,
+  "1-73": canvas({
     let A = (0, 0)
     let B = (2, 0)
     let C = (1.5, 1)
@@ -1650,7 +1936,7 @@
     node((10.1, -2), [$upright(I V)'$])
   })
   ,
-  "1-73": canvas(length: 0.8cm, {
+  "1-74": canvas(length: 0.8cm, {
     let B = (0, 0)
     let C = (3, 0)
     let A = (2, 1.8)
@@ -1674,7 +1960,7 @@
     node(App, [$A''$], pos: "above")
   })
   ,
-  "1-74": canvas({
+  "1-75": canvas({
     let A = (0, 0)
     let B = (3, 0)
     let C = (2, 2)
@@ -1691,7 +1977,7 @@
     node(Ap, [$A'$], pos: "above")
   })
   ,
-  "1-75": canvas({
+  "1-76": canvas({
     let B = (-2, 0)
     let C = (2, 0)
     let A = (-1.5, 2)
@@ -1705,7 +1991,7 @@
     node(D, [$D$], pos: "above")
   })
   ,
-  "1-76": canvas({
+  "1-77": canvas({
     let B = (-1.9696, -0.3473)
     let C = (1.9696, 0.3473)
     let A = (-0.5209, 2.9544)
@@ -1720,7 +2006,7 @@
     node(E, [$E$], pos: "right")
   })
   ,
-  "1-77": canvas({
+  "1-78": canvas({
     let B = (0, 0)
     let C = (3, 0)
     let A = (2, 2.5)
@@ -1730,7 +2016,7 @@
     node(A, [$A$], pos: "above")
   })
   ,
-  "1-78": canvas({
+  "1-79": canvas({
     let B = (0, 0)
     let C = (3, 0)
     let A = (1.5, 2.3)
@@ -1744,7 +2030,7 @@
     line(A, D, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
   })
   ,
-  "1-79": canvas({
+  "1-80": canvas({
     let B = (0, 0)
     let A = (1.607, 1.9151)
     let C = (-2.6817, 2.9679)
@@ -1767,7 +2053,7 @@
     node((4.1965, 2.0424), [5cm], pos: "left")
   })
   ,
-  "1-80": canvas({
+  "1-81": canvas({
     let H = (0, 0)
     let I = (2.5, 0)
     let G = (2, 3.4641)
@@ -1806,7 +2092,7 @@
     node((9.4638, 1.55), [$60^compose$])
   })
   ,
-  "1-81": canvas(length: 0.8cm, {
+  "1-82": canvas(length: 0.8cm, {
     let S = (0, 0)
     let T = (5.2, 3)
     let V = (5.73, 0)
@@ -1837,7 +2123,7 @@
     line(P, R, Q, stroke: (paint: black, thickness: 0.2pt, cap: "round", join: "round"), close: true)
   })
   ,
-  "1-82": canvas(length: 0.8cm, {
+  "1-83": canvas(length: 0.8cm, {
     let X = (0, 0)
     let Z = (0.53, 3)
     let Y = (5.73, 0)
@@ -1854,7 +2140,7 @@
     line(Z, Y, X, stroke: (paint: black, thickness: 0.2pt, cap: "round", join: "round"), close: true)
   })
   ,
-  "1-83": canvas({
+  "1-84": canvas({
     let A = (0, 0)
     let C = (0.684, 1.8794)
     let M = (1.9151, 1.607)
@@ -1875,7 +2161,7 @@
     node((3.3714, 2.5586), [$30^compose$])
   })
   ,
-  "1-84": canvas({
+  "1-85": canvas({
     let B = (-1.5, 0)
     let C = (1.5, 0)
     let A = (-0.8, 2)
@@ -1917,7 +2203,7 @@
     line(N, S, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
   })
   ,
-  "1-85": canvas(length: 0.7cm, {
+  "1-86": canvas(length: 0.7cm, {
     let B = (0, 0)
     let C = (3, 0)
     let A = (0, 3)
@@ -1938,12 +2224,12 @@
     line(Ap, Bp, Cp, Dp, stroke: (paint: black, thickness: 0.2pt, cap: "round", join: "round"), close: true)
   })
   ,
-  "1-86": canvas({
+  "1-87": canvas({
     line((0, 0), (2, 0), (2, 3), (0, 3), stroke: (paint: black, thickness: 0.4pt), close: true)
     line((2.5, 0), (3.75, 0), (3.75, 1.25), (2.5, 1.25), stroke: (paint: black, thickness: 0.4pt), close: true)
   })
   ,
-  "1-87": canvas({
+  "1-88": canvas({
     let A = (-1, 0)
     let B = (1, 0)
     let C = (0, 1.3)
@@ -1952,7 +2238,7 @@
     line((-3.3, -0.8), (-1.5, -0.8), (-1.5, 1), (-3.3, 1), stroke: (paint: black, thickness: 0.4pt), close: true)
   })
   ,
-  "1-88": canvas({
+  "1-89": canvas({
     let A = (0, 0)
     let B = (2, 0)
     let C = (3, 2)
@@ -1964,15 +2250,15 @@
     node(D, [$D$], pos: "above")
   })
   ,
-  "1-89": canvas({
+  "1-90": canvas({
     line((0, 0), (1, 0), (1, 1), (0, 1), stroke: (paint: black, thickness: 0.4pt), close: true)
   })
   ,
-  "1-90": canvas({
+  "1-91": canvas({
     line((0, 0), (2, 0), (2, 1.2), (0, 1.2), stroke: (paint: black, thickness: 0.4pt), close: true)
   })
   ,
-  "1-91": canvas(length: 0.6cm, {
+  "1-92": canvas(length: 0.6cm, {
     let B = (0, 0)
     let C = (3, 0)
     let A = (1.5, 4)
@@ -1989,7 +2275,7 @@
     node(Ap, [$A'$], pos: "above")
   })
   ,
-  "1-92": canvas(length: 0.5cm, {
+  "1-93": canvas(length: 0.5cm, {
     let A = (0, 0)
     let B = (3, 0)
     let C = (2, 2)
@@ -2037,7 +2323,7 @@
     node(Bpp, [$B''$], pos: "below")
   })
   ,
-  "1-93": canvas({
+  "1-94": canvas({
     let B = (0, 0)
     let C = (2.8191, -1.0261)
     let A = (1.74, 3.0138)
@@ -2066,7 +2352,7 @@
     node(Ap, [$A'$], pos: "above")
   })
   ,
-  "1-94": canvas(length: 0.8cm, {
+  "1-95": canvas(length: 0.8cm, {
     let C = (0, 0)
     let B = (3, 0)
     let A = (3, 4)
@@ -2081,7 +2367,7 @@
     node(D, [$D$], pos: "left")
   })
   ,
-  "1-95": canvas({
+  "1-96": canvas({
     let D = (1.9284, 2.2981)
     let A = (-1.5321, 1.2856)
     let B = (1.6087, -1.3499)
@@ -2097,7 +2383,7 @@
     arc((1.3023, -1.0927), start: 140deg, stop: 173.6901deg, radius: 0.4, stroke: (paint: black, thickness: 0.4pt))
   })
   ,
-  "1-96": canvas({
+  "1-97": canvas({
     let C = (0, 0)
     let D = (3, 0)
     let E = (5, 0)
@@ -2140,7 +2426,7 @@
     node(G, [$G$], pos: "below")
   })
   ,
-  "1-97": canvas({
+  "1-98": canvas({
     line((0, 0), (1.5, 0), stroke: (paint: black, thickness: 0.4pt), mark: (start: "|", end: "|"))
     node((0.75, 0), [$a$], pos: "above")
     line((0, -1), (4, -1), stroke: (paint: black, thickness: 0.8pt), mark: (end: "stealth", fill: black))
@@ -2150,7 +2436,7 @@
     node((1.5, -1), [$B$], pos: "below")
   })
   ,
-  "1-98": canvas({
+  "1-99": canvas({
     line((2.2981, 1.9284), (0, 0), (3, 0), stroke: (paint: black, thickness: 0.4pt))
     node((0, 0), [$O$], pos: "left")
     arc((1.9924, -0.1743), start: -5deg, stop: 50deg, radius: 2, stroke: (paint: black, thickness: 0.4pt))
@@ -2169,7 +2455,7 @@
     arc((7.0224, 1.3679), start: 89.0598deg, stop: 130.9402deg, radius: 1.3681, stroke: (paint: black, thickness: 0.2pt))
   })
   ,
-  "1-99": canvas({
+  "1-100": canvas({
     line((0, 0), (3, 0), stroke: (paint: black, thickness: 0.4pt))
     node((1.5, 0), [$c$], pos: "above")
     line((0, 1), (2.5, 1), stroke: (paint: black, thickness: 0.4pt))
@@ -2190,7 +2476,7 @@
     arc((7.749, 2.1642), start: 120.0308deg, stop: 142.9514deg, radius: 2.4997, stroke: (paint: black, thickness: 0.2pt))
   })
   ,
-  "1-100": canvas(length: 0.8cm, {
+  "1-101": canvas(length: 0.8cm, {
     let A = (0, 0)
     let B = (5, 0)
     let C = (3, 0)
@@ -2214,7 +2500,7 @@
     arc((10.9353, 1.9663), start: 118.4349deg, stop: 188.4349deg, radius: 2.2361, stroke: (paint: black, thickness: 0.2pt))
   })
   ,
-  "1-101": canvas({
+  "1-102": canvas({
     line((0, 2), (4, 2), stroke: (paint: black, thickness: 0.4pt))
     node((2, 2), [$a$], pos: "above")
     let A = (0, 0)
@@ -2260,7 +2546,7 @@
     arc((10.212, 0.627), start: 41.3675deg, stop: 101.7626deg, radius: 0.9487, stroke: (paint: black, thickness: 0.2pt))
   })
   ,
-  "1-102": canvas({
+  "1-103": canvas({
     let B = (0, 0)
     let C = (2, 0)
     let X = (1.5, 2)
@@ -2299,7 +2585,7 @@
     node((7.7371, 0.4253), [$beta$])
   })
   ,
-  "1-103": canvas({
+  "1-104": canvas({
     let O = (0, 0)
     let A = (3.0642, 2.5712)
     let B = (3.9392, -0.6946)
@@ -2323,7 +2609,7 @@
     node(C, [$C$], pos: "above right")
   })
   ,
-  "1-104": canvas(length: 1.3cm, {
+  "1-105": canvas(length: 1.3cm, {
     let Ap = (-2, 0)
     let A = (-1.5, 0)
     let B = (1.5, 0)
@@ -2342,7 +2628,7 @@
     line(Ap, Bp, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
   })
   ,
-  "1-105": canvas({
+  "1-106": canvas({
     let Ap = (-1.5, 0)
     let A = (-1, 0)
     let B = (1, 0)
@@ -2365,7 +2651,7 @@
     line((0, 2.2), (0, -2.7), stroke: (paint: black, thickness: 0.2pt, cap: "round"))
   })
   ,
-  "1-106": canvas({
+  "1-107": canvas({
     let A = (-1.5, 0)
     let B = (1.5, 0)
     let P = (0, 1.5)
@@ -2384,7 +2670,7 @@
     node(Q, [$Q$], pos: "right")
   })
   ,
-  "1-107": canvas({
+  "1-108": canvas({
     let Pp = (0, 0)
     let Mp = (2, 0)
     let P = (1, 1.5)
@@ -2408,7 +2694,7 @@
     node((0.3527, 0.1887), [$alpha$])
   })
   ,
-  "1-108": canvas({
+  "1-109": canvas({
     let B = (0, 0)
     let C = (2, 0)
     let A = (3.5, 2.5)
@@ -2420,7 +2706,7 @@
     node(A, [$A$], pos: "right")
   })
   ,
-  "1-109": canvas({
+  "1-110": canvas({
     let A = (0, 0)
     let B = (2, 0)
     let C = (1.5, 1.2)
@@ -2439,7 +2725,7 @@
     node((4.5622, 0.2097), [$beta$])
   })
   ,
-  "1-110": canvas({
+  "1-111": canvas({
     let A = (0, 0)
     let B = (2, 0)
     let C = (1.5, 1.2)
@@ -2460,7 +2746,7 @@
     node((1.25, 2), [$a$], pos: "above")
   })
   ,
-  "1-111": canvas(length: 0.7cm, {
+  "1-112": canvas(length: 0.7cm, {
     line((0, 0), (2, 0), (2, 2), (0, 2), stroke: (paint: black, thickness: 0.4pt), close: true)
     line((2, 0), (4, 0), (4, 2), (2, 2), stroke: (paint: black, thickness: 0.4pt), close: true)
     line((4, 0), (6, 0), (6, 2), (4, 2), stroke: (paint: black, thickness: 0.4pt), close: true)
@@ -2518,7 +2804,7 @@
     arc((14, -2), start: 90deg, stop: -90deg, radius: 0.5, stroke: (paint: black, thickness: 0.4pt))
   })
   ,
-  "1-112": canvas({
+  "1-113": canvas({
     let B = (0, 0)
     let C = (2.5, -0.2)
     let D = (3, 1)
@@ -2530,7 +2816,7 @@
     node(A, [$A$], pos: "above")
   })
   ,
-  "1-113": canvas({
+  "1-114": canvas({
     let B = (0, 0)
     let C = (3, 0)
     let A = (1.5, 2)
@@ -2546,7 +2832,7 @@
     circle(P2, radius: 1pt, fill: black, stroke: black + 0.4pt)
   })
   ,
-  "1-114": canvas({
+  "1-115": canvas({
     let A = (-1, 0)
     let B = (0, 0)
     let D = (3, 0)
@@ -2566,7 +2852,7 @@
     node(E, [$E$], pos: "left")
   })
   ,
-  "1-115": canvas({
+  "1-116": canvas({
     let A = (-2, 0)
     let O = (0, 0)
     let B = (2, 0)
@@ -2587,7 +2873,7 @@
     line(E, O, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
   })
   ,
-  "1-116": canvas(length: 1.4cm, {
+  "1-117": canvas(length: 1.4cm, {
     let B = (0, 0)
     let C = (4, 0)
     let A = (1, 1.732)
@@ -2613,7 +2899,7 @@
     node((1.2, 1.3856), [$x$])
   })
   ,
-  "1-117": canvas({
+  "1-118": canvas({
     let A = (0, 0)
     let B = (2, 0)
     let Ap = (-1, 0)
@@ -2657,7 +2943,7 @@
     node((6.2958, 2.0077), [$88^compose$])
   })
   ,
-  "1-118": canvas({
+  "1-119": canvas({
     let B = (0, 0)
     let C = (3, 0)
     let A = (0, 4)
@@ -2672,7 +2958,7 @@
     node(A, [$A$], pos: "above")
   })
   ,
-  "1-119": canvas({
+  "1-120": canvas({
     let G = (-1, 1)
     let H = (3, 1)
     let E = (-1, 2.5)
@@ -2702,7 +2988,7 @@
     node(D, [$D$], pos: "right")
   })
   ,
-  "1-120": canvas({
+  "1-121": canvas({
     let G = (-1, 1)
     let H = (3, 1)
     let E = (-1, 2.5)
@@ -2727,7 +3013,7 @@
     node((1.3534, 1.9752), [1])
   })
   ,
-  "1-121": canvas({
+  "1-122": canvas({
     let A = (0, 3.5)
     let D = (-1.5, 0)
     let E = (1.5, 0)
@@ -2742,7 +3028,7 @@
     line(A, B, E, stroke: (paint: black, thickness: 0.2pt, cap: "round", join: "round"), close: true)
   })
   ,
-  "1-122": canvas({
+  "1-123": canvas({
     let B = (0, 0.8)
     let C = (0, -0.8)
     let A = (2.5, 1.5)
@@ -2755,7 +3041,7 @@
     node(D, [$D$], pos: "right")
   })
   ,
-  "1-123": canvas({
+  "1-124": canvas({
     let A = (0, 3)
     let B = (-1.5, 0)
     let C = (1.5, 0)
@@ -2782,7 +3068,7 @@
     node((0.7585, 0.3052), [4])
   })
   ,
-  "1-124": canvas({
+  "1-125": canvas({
     let B = (0, 0)
     let C = (4, 0)
     let A = (4, 3)
@@ -2802,7 +3088,7 @@
     node(A, [$A$], pos: "right")
   })
   ,
-  "1-125": canvas(length: 1.3cm, {
+  "1-126": canvas(length: 1.3cm, {
     let B = (0, 0)
     let C = (4, 0)
     let A = (1, 1.732)
@@ -2817,7 +3103,7 @@
     node(A, [$A$], pos: "above")
   })
   ,
-  "1-126": canvas(length: 1.3cm, {
+  "1-127": canvas(length: 1.3cm, {
     node((1, -0.5), [\(1)])
     let A = (0.2, 0)
     let B = (1.2, 0)
@@ -2862,7 +3148,7 @@
     line(D, F, stroke: (paint: black, thickness: 0.2pt, cap: "round"))
   })
   ,
-  "1-127": canvas(length: 1.3cm, {
+  "1-128": canvas(length: 1.3cm, {
     node((1, -0.5), [\(1)])
     let A = (0.8, 0)
     let B = (1.2, 1.5)

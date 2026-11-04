@@ -236,6 +236,10 @@
     node((3.4, 1.2), [$b$], pos: "right")
     node((1.8, 2.4), [$C$], pos: "above")
     node((0.9, 1.2), [$a$], pos: "left")
+    let B = (0, 0)
+    let A = (5, 0)
+    let C = (1.8, 2.4)
+    line(C, (1.68, 2.24), (1.84, 2.12), (1.96, 2.28), C, stroke: (paint: black, thickness: 0.4pt))
   })
   ,
   "6-18": canvas({
@@ -336,16 +340,15 @@
     node((1.9924, 0.1743), [$a$], pos: "left")
   })
   ,
-  // 点 O 在定义前使用
   "6-25": canvas({
     circle((0, 0), radius: 2, stroke: (paint: black, thickness: 0.8pt))
     let B = (-1, 1.7321)
     let C = (-1, -1.7321)
     let A = (-2, 0)
     let Ap = (1, 1.7321)
-    node((0, 0), [$O$], pos: "right")
-    circle((0, 0), radius: 1pt, fill: black, stroke: black + 0.4pt)
     let O = (0, 0)
+    node(O, [$O$], pos: "right")
+    circle(O, radius: 1pt, fill: black, stroke: black + 0.4pt)
     line(A, B, C, stroke: (paint: black, thickness: 0.2pt, cap: "round", join: "round"), close: true)
     line(Ap, B, C, stroke: (paint: black, thickness: 0.2pt, dash: (3pt, 3pt,), cap: "round", join: "round"), close: true)
     node((-2.3, 0), [$A$], pos: "below")
@@ -689,7 +692,7 @@
     node(A, [$A$], pos: "above")
     node(Ic, [$I_c$], pos: "above")
     node(I, [$I$], pos: "above")
-    let X = (2.7061, 0.9797)
-    circle(Ib, radius: 1.4889, stroke: (paint: luma(50%), thickness: 0.2pt))
+    let X = (2.6822, 1.0594)
+    circle(Ib, radius: 1.4866, stroke: (paint: luma(50%), thickness: 0.2pt))
   }),
 )

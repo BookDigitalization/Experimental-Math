@@ -347,6 +347,7 @@ class Picture:
         self.result: list[tuple[float, float]] = []   # tkzPointResult 等
         self.notes: list[str] = []
         self.lookahead: dict[str, tuple[float, float]] = {}
+        self.clip_rect = None   # 当前 scope 中 \clip 的轴对齐矩形 (x0, y0, x1, y1)，只用于裁剪直线段
         self.label_points: dict[str, tuple[float, float]] = {}
         self.text_nodes: dict[str, tuple[float, float]] = {}   # 有文字、有名字的节点
 
@@ -443,7 +444,11 @@ class Picture:
             if s[i] != "(":
                 raise TikzError("无法识别的 calc 表达式：" + s)
             inner, i = read_group(s, i, "(", ")")
-            p = self.coord(inner)
+            if terms and inner.strip() not in self.points and not inner.strip().startswith("$"):
+                # 第二项起的数值坐标当作位移（只做线性变换，不再加 scope 的平移），同 TikZ
+                p = self.tf.vec(self.coord_raw(inner))
+            else:
+                p = self.coord(inner)
             # 修饰：!t!(B)、!t!角:(B)、!(C)!(B)
             while True:
                 j = skip_ws(s, i)
@@ -672,14 +677,14 @@ class Picture:
             m = re.match(r"\\begin\{scope\}\s*(\[)?", body[i:])
             if m:
                 i += m.end()
-                self.stack.append((self.tf, self.style))
+                self.stack.append((self.tf, self.style, self.clip_rect))
                 self.style = self.style.copy()
                 if m.group(1):
                     opts, i = read_group(body, i - 1, "[", "]")
                     self.apply_options(parse_options(opts), self.style)
                 continue
             if body.startswith(r"\end{scope}", i):
-                self.tf, self.style = self.stack.pop()
+                self.tf, self.style, self.clip_rect = self.stack.pop()
                 i += len(r"\end{scope}")
                 continue
             m = re.match(r"\\([A-Za-z]+)\*?", body[i:])
@@ -1238,7 +1243,19 @@ class PathBuilder:
             args.append("stroke: none")
         marks = pic.marks(st) if self.draw else None
         if self.clip:
-            pic.notes.append("忽略 \\clip")
+            # 只支持轴对齐的矩形：之后同一 scope 中的直线段按矩形裁短（CeTZ 没有裁剪）
+            rect = None
+            if len(self.subpaths) == 1:
+                pieces, closed = self.subpaths[0]
+                pts = [pieces[0][1]] + [pc[-1] for pc in pieces if pc[0] == "line"]
+                if closed and len(pts) == 4 and all(pc[0] == "line" for pc in pieces):
+                    xs_, ys_ = [q[0] for q in pts], [q[1] for q in pts]
+                    if len({round(x, 9) for x in xs_}) == 2 and len({round(y, 9) for y in ys_}) == 2:
+                        rect = (min(xs_), min(ys_), max(xs_), max(ys_))
+            if rect is None:
+                pic.notes.append("忽略 \\clip")
+            else:
+                pic.clip_rect = rect
             return
         if self.draw or self.fill:
             for k, (pieces, closed) in enumerate(self.subpaths):
@@ -1262,6 +1279,13 @@ class PathBuilder:
                 a.append("close: true")
             elif marks:
                 a.append("mark: %s" % marks)
+            if pic.clip_rect and not closed and not self.fill:
+                segs = []
+                for p0, p1 in zip(pts, pts[1:]):
+                    cl = clip_segment(p0, p1, pic.clip_rect)
+                    if cl:
+                        segs.append("line(%s, %s, %s)" % (pic.xy(cl[0]), pic.xy(cl[1]), ", ".join(args)))
+                return "\n".join(segs) if segs else "// （被 \\clip 裁掉）"
             xs = [pic.xy(p) for p in pts]
             if not closed and len(pts) >= 2:
                 # TikZ 中连到节点的线止于节点边框：用 CeTZ 的边框锚点（从节点中心朝另一端的方向）
@@ -1315,6 +1339,26 @@ class PathBuilder:
             return "arc(%s, start: %sdeg, stop: %sdeg, radius: (%s, %s))" % (
                 pic.xy(start), fmt(a0), fmt(a1), fmt(rx * sx), fmt(ry * sy))
         raise TikzError("未知路径段 " + kind)
+
+
+def clip_segment(p, q, rect):
+    """Liang–Barsky：线段 pq 在矩形内的部分，没有则为 None"""
+    x0, y0, x1, y1 = rect
+    dx, dy = q[0] - p[0], q[1] - p[1]
+    t0, t1 = 0.0, 1.0
+    for pk, qk in ((-dx, p[0] - x0), (dx, x1 - p[0]), (-dy, p[1] - y0), (dy, y1 - p[1])):
+        if abs(pk) < 1e-12:
+            if qk < -1e-9:
+                return None
+            continue
+        t = qk / pk
+        if pk < 0:
+            t0 = max(t0, t)
+        else:
+            t1 = min(t1, t)
+    if t0 > t1 - 1e-9:
+        return None
+    return (p[0] + t0 * dx, p[1] + t0 * dy), (p[0] + t1 * dx, p[1] + t1 * dy)
 
 
 def point_on(seg, t):

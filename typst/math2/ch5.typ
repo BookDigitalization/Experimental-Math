@@ -4,7 +4,7 @@
 #import "defs.typ": *
 
 = 轨迹与作图
-在前面的几章中，我们学习了直线形和圆的有关性质．学习的途径主要是根据图形的定义和已知性质去推演图形的其它性质．这一章，我们将把图形看成点的集合（点集），研究如何根据点所具有的某种性质来求出点集在平面上的形状和位置．
+在前面的几章中，我们学习了直线形和圆的有关性质．学习的途径主要是根据图形的定义和已知性质去推演图形的其他性质．这一章，我们将把图形看成点的集合（点集），研究如何根据点所具有的某种性质来求出点集在平面上的形状和位置．
 
 == 轨迹
 === 轨迹的概念
@@ -35,7 +35,7 @@
 
 ]
 === 基本轨迹
-这一小节，我们来学习六个平面上的点的基本轨迹，我们只证了1和4,其它四个由同学们自证．
+这一小节，我们来学习六个平面上的点的基本轨迹，我们只证了1和4,其他四个由同学们自证．
 
 #blk[基本轨迹1][
 与两个已知点距离相等的点的轨迹是连结这两点的线段的垂直平分线．
@@ -123,7 +123,7 @@
 与一条定线段的两端连线所夹的角等于定角的点的轨迹，是以这条定线段为弦，所含的圆周角等于定角的两条弧．
 
 ]
-以上六个基本轨迹是研究其它轨迹问题的基础，同学们一定要熟记．
+以上六个基本轨迹是研究其他轨迹问题的基础，同学们一定要熟记．
 
 #example[
 求已知圆内等于定长的弦的中点的轨迹．
@@ -196,9 +196,9 @@ $because quad M$ 是弦 $overline(C C')$ 的中点，作 $overline(O M)$
 
 + 与定点 $A$ 的距离等于2cm的点的轨迹．
 
-+ 和一条长是3cm的 $A B$ 的两端连线所夹的角是直角的点的轨迹．
++ 和一条长是3cm的 $overline(A B)$ 的两端连线所夹的角是直角的点的轨迹．
 
-+ 和一条长是4cm的已知线段 $A B$ 的两端连线所夹的角等于60$"" degree$ 的点的轨迹．
++ 和一条长是4cm的已知线段 $overline(A B)$ 的两端连线所夹的角等于60$"" degree$ 的点的轨迹．
 
 ]
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题5.1]
@@ -231,7 +231,7 @@ $because quad M$ 是弦 $overline(C C')$ 的中点，作 $overline(O M)$
 
 + 求通过 $dot.o\(O\,r\)$ 内一定点 $P$ 的弦的中点的轨迹．
 
-+ 求到 $dot.o\(O\,3 upright(c m)\)$ 的圆面等于4cm的点的轨迹．
++ 求到 $dot.o\(O\,3 upright(c m)\)$ 的圆幂等于4cm的点的轨迹．
 
 == 作图
 === 基本作图
@@ -284,11 +284,11 @@ $because quad M$ 是弦 $overline(C C')$ 的中点，作 $overline(O M)$
 + 过已知直线外的一个已知点，作这条直线的平行线．
 
 #exercise[
-+ 作一直角三角形 $A B C$,使 $angle C = 90 degree$, $A B = 3$cm, $B C = 2$cm.你能想出几种作法？
++ 作一直角三角形 $A B C$,使 $angle C = 90 degree$, $overline(A B) = 3$cm, $overline(B C) = 2$cm.你能想出几种作法？
 
 + 已知线段 $a$、$b$，你能用几种方法作线段 $x = sqrt(a b)$．
 
-+ 已知线段 $a$,作线段 $x = sqrt(2 / 3 a)$
++ 已知线段 $a$,作线段 $x = sqrt(2 / 3) a$
 
 + 过圆外一点，你能用几种方法作这个圆的切线．
 
@@ -310,7 +310,7 @@ $because quad M$ 是弦 $overline(C C')$ 的中点，作 $overline(O M)$
 已知一条定直线和直线外两个定点，求作一个圆，使圆心在这条直线上，并且经过这两个定点．
 
 ]
-已知：定直线 $ell$ 和两定点 $A B$,且 $A in.not ell$, $B in.not ell$（图5.6）．
+已知：定直线 $ell$ 和两定点 $A$、$B$,且 $A in.not ell$, $B in.not ell$（图5.6）．
 
 求作：一圆使圆心在 $ell$ 上，且经过 $A$、$B$ 两点．
 
@@ -328,7 +328,7 @@ $because quad M$ 是弦 $overline(C C')$ 的中点，作 $overline(O M)$
 
 + 作 $overline(A B)$ 的垂直平分线 $m$ 与 $ell$ 相交于 $O$ 点，
 
-+ 以 $O$ 为圆心，$O A$ 为半径作 $dot.o O$,则 $dot.o O$ 即为所求作的圆．
++ 以 $O$ 为圆心，$overline(O A)$ 为半径作 $dot.o O$,则 $dot.o O$ 即为所求作的圆．
 
 #proof[
 作 $overline(O A)$、$overline(O B)$,
@@ -422,7 +422,7 @@ $therefore dot.o O$ 为所求作的圆．
 
 + 与边 $B A$ 或 $B C$ 的距离等于 $r$．
 
-满足1或2的轨迹都可作，故所求的圆的圆心可以作出．
+但满足1或2的轨迹都可作，故所求的圆的圆心可以作出．
 
 作法：（图5.9）
 
@@ -483,7 +483,7 @@ overline(O O_2) & = 20 upright(m m) - r_2 = 12 upright(m m) $
 
 + 当 $overline(O_1 O_2) > 42 upright(m m)$ 时，问题无解．
 
-从例5.6中的图5.11,我们可看出 $dot.o O_1$ 的 $overparen(A B)$ 与 $dot.o O_2$ 的 $overparen(B C)$ 在切点 $B$ 处连接起来了，这种连结叫做#strong[圆弧与圆弧的平滑连接]．
+从例5.6中的图5.11,我们可看出 $dot.o O_1$ 的 $overparen(A B)$ 与 $dot.o O$ 的 $overparen(B C)$ 在切点 $B$ 处连接起来了，这种连结叫做#strong[圆弧与圆弧的平滑连接]．
 
 #exercise[
 + 已知两定点 $A$、$B$,且直线 $A B$ 与定直线 $ell$ 平行，在 $ell$ 上求作与 $A$、$B$ 两点距离相等的点．
@@ -543,7 +543,7 @@ $therefore quad overline(D P) = overline(C D) - overline(C P) = 3 / 4 a$ $ overl
 #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("5-15");], caption: []), figure([#fig("5-16");], caption: [])));
 
 #analyze[
-画一草图（图5.16），已知 $overline(A B)$,假定 $G$ 为所求之点，设 $overline(A G) = x$,则 $overline(B G) = a - x$, $x$ 满足方程 $ x^2 = a\(a - x\) $ #noindent;即：$x^2 + a x - a^2 = 0$.解此方程得：$ x_1 = frac(- a + sqrt(4 a^2 + a^2), 2)\,#h(2em) x_2 = frac(- a - sqrt(4 a^2 + a^2), 2) quad upright("舍去") $ #noindent;$therefore quad x = frac(- a + sqrt(4 a^2 + a^2), 2) = sqrt(a^2 + (a / 2)^2) - a / 2$
+画一草图（图5.16），已知 $overline(A B)$,假定 $G$ 为所求之点，设 $overline(A G) = x$,则 $overline(B G) = a - x$, $x$ 满足方程 $ x^2 = a\(a - x\) $ #noindent;即：$x^2 + a x - a^2 = 0$.解此方程得：$ x_1 = frac(- a + sqrt(4 a^2 + a^2), 2)\,#h(2em) x_2 = frac(- a - sqrt(4 a^2 + a^2), 2) quad upright("舍去") $ #noindent;$therefore quad x = frac(- a + sqrt(4 a^2 + a^2), 2) = sqrt(4 a^2 + a^2) / 2 - a / 2 = sqrt(a^2 + (a / 2)^2) - a / 2$
 
 此线段 $x$ 可作，故 $G$ 点也可作出来．
 
@@ -707,7 +707,7 @@ $therefore quad overline(O C')^2 = overline(O A) dot.op overline(A C')$
 
 + 已知 $dot.o\(O_1\,1.4 upright(c m)\)$, $dot.o\(O_2\,1 upright(c m)\)$, $overline(O_1 O_2) = 3 upright(c m)$,求作一个圆，使它的半径为3.2cm,并且和 $dot.o O_1$ 与 $dot.o O_2$ 都相内切．
 
-+ 已知线段 $a$,求作线 $x = sqrt(3 a)$, $y = sqrt(12 a)$.
++ 已知线段 $a$,求作线段 $x = sqrt(3) a$, $y = sqrt(12) a$.
 
 + 已知线段 $x$ 与 $y$ 满足方程组：$ display(cases(frac(x + y, 2) = a, sqrt(x y) = b)) #h(2em)\(a > b\) $ #noindent;求作线段 $x$ 和 $y$.
 

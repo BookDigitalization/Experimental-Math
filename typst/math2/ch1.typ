@@ -13,15 +13,15 @@
   ]
 )
 
-自古以来，人们经过实践、观察、分析，已总结出一系列的有关空间方面的知识，例如，从中国、埃及、巴比伦、玛雅等古文明中，可以看出对空间的知识都已掌握得相当丰富了．对于空间知识有系统的研究，从西方的古文明中可知，起始于古埃及和巴比仑，而在古希腊得到蓬勃的发展，获得较辉煌的成就．大体说来，古希腊在空间知识方面的成就，由欧几里得集其大成于他所著的《几何原本》#footnote[欧几里得（Euclid约公元前300年左右）所著此书原名Elements,我国明代数学家徐光启（公元1562---1633)把书中部分几何内容译成中文定名为“几何原本”．“几何学”这个中文的名称即来源于此．]这部书中．在这部书里，欧几里得把当时所知道的几何知识经过整理，建立起一个初步完整的理论体系，使这部书反映出几何学是一门偏重于推理、论证的高度理论性的科学．但是，和任何其它科学一样，几何学的理论基础也是建立在实验所得的一些基本事实之上的．在这一章里，我们就通过实验、观察、归纳来研究所得到的知识，为以后进一步学习论证几何作准备．
+自古以来，人们经过实践、观察、分析，已总结出一系列的有关空间方面的知识，例如，从中国、埃及、巴比伦、玛雅等古文明中，可以看出对空间的知识都已掌握得相当丰富了．对于空间知识有系统的研究，从西方的古文明中可知，起始于古埃及和巴比伦，而在古希腊得到蓬勃的发展，获得较辉煌的成就．大体说来，古希腊在空间知识方面的成就，由欧几里得集其大成于他所著的《几何原本》#footnote[欧几里得（Euclid约公元前300年左右）所著此书原名Elements,我国明代数学家徐光启（公元1562---1633)把书中部分几何内容译成中文定名为“几何原本”．“几何学”这个中文的名称即来源于此．]这部书中．在这部书里，欧几里得把当时所知道的几何知识经过整理，建立起一个初步完整的理论体系，使这部书反映出几何学是一门偏重于推理、论证的高度理论性的科学．但是，和任何其他科学一样，几何学的理论基础也是建立在实验所得的一些基本事实之上的．在这一章里，我们就通过实验、观察、归纳来研究所得到的知识，为以后进一步学习论证几何作准备．
 
 == 点、直线和平面
 点、直线和平面是空间最简单的，也是最基本的图形．同学们在日常生活中，对它们早已有直观的认识了．在这一节里，我们再对它们的本质和相互关系作进一步的分析，确立点、直线和平面这三个基本的几何概念，并总结点、直线和平面之间相互关系方面的一些基本性质．
 
 === 点和直线
-在空间，最原始的，也是最基本的概念就是“位置”．通常，我们就用“点”来标记“位置”．例如在一张地图上，我们就以小圆点来标记各地的位置（见图1.2).你可能发现，在地图上北京用“$star.filled$”，南京用“$circle.stroked$”印制的，这只是为了把首都和地方城市区别开来．其实，北京、南京的“位置”与地图上印制的图形“$star.filled$”或“$circle.stroked$”的形状和大小是没有关系的．这样，仅仅考虑“位置”的图形就是点．在天象图上也是以小圆点来标记各星体的位置的（见图1.3）
+在空间，最原始的，也是最基本的概念就是“位置”．通常，我们就用“点”来标记“位置”．例如在一张地图上，我们就以小圆点来标记各地的位置（见图1.2).你可能发现，在地图上北京用“$star.filled$”，南京用“$circle.stroked$”印制的，这只是为了把首都和地方城市区别开来．其实，北京、南京的“位置”与地图上印制的图形“$star.filled$”或“$circle.stroked$”的形状和大小是没有关系的．这样，仅仅考虑“位置”的图形就是点．在天象图上也是以小圆点来标记各星体的位置的（见图1.3）．
 
-#align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#image("/math2/fig/1-2.png", width: 100%);], caption: []), figure([#image("/math2/fig/1-3.png", width: 100%);], caption: [])));
+#align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#image("/math2/fig/1-2.png", width: 100%);], caption: []), figure([#image("/math2/fig/1-3.png", width: 100%);], caption: [北斗七星])));
 
 在几何学的讨论中，我们用不同的大写字母 $A\,B\,C\,dots.h$ 表示不同的点，如图1.4中的五个点，就在点旁分别标记以 $A$、$B$、$C$、$D$、$E$,并分别读作点 $A$、点 $B$、点 $C$、点 $D$、点 $E$．
 
@@ -35,7 +35,7 @@
 
 光线的存在，直截了当地显示给我们下述空间的基本性质：
 
-“连结A、B两点的最短通路唯一存在，它就是连结 $A$、$B$ 两点的#strong[直线段]”（在均匀介质中，光走直线#footnote[由光学实验，我们知道光线其实走着最省时间的通路，而并不是走着最短的通路，再者，光的速度是随着“介质”而定的，例如在真空中走的最快，在空气中速度则稍慢（愈稀薄则其速度愈近于真空者），在水中则速度更慢，因为通常我们总是在均匀介质中观察光线，所以光线的速度是个不变的常数．这样，最省时间的通路也就是最短的通路．这就是我们常见常用的事实：光线在均匀介质中走直线．]）．
+“连结 $A$、$B$ 两点的最短通路唯一存在，它就是连结 $A$、$B$ 两点的#strong[直线段]”（在均匀介质中，光走直线#footnote[由光学实验，我们知道光线其实走着最省时间的通路，而并不是走着最短的通路．再者，光的速度是随着“介质”而定的，例如在真空中走的最快，在空气中速度则稍慢（愈稀薄则其速度愈近于真空者），在水中则速度更慢，因为通常我们总是在均匀介质中观察光线，所以光线的速度是个不变的常数．这样，最省时间的通路也就是最短的通路．这就是我们常见常用的事实：光线在均匀介质中走直线．]）．
 
 #figure([#fig("1-03");
 
@@ -44,7 +44,7 @@
   ]
 )
 
-如图1.6所示，由 $A$ 点射向 $B$ 点的光线可以由 $A$ 向 $B$ 的方向无限延伸；而由 $B$ 点射向 $A$ 点的光线也可以由 $B$ 向 $A$ 的方向无限延伸，所以对于空间任意两点 $A$、$B$,不但存在着唯一的最短通路“直线段 $A B$”，而且也唯一地确定了一条把直线段 $A B$ 两端无限延长的直线，这条直线就叫做由 $A$、$B$ 两点所确定的#strong[直线]，通常称为“直线 $A B$”，而直线段 $A B$ 是直线 $A B$ 介于A、B两点之间的那一段．
+如图1.6所示，由 $A$ 点射向 $B$ 点的光线可以由 $A$ 向 $B$ 的方向无限延伸；而由 $B$ 点射向 $A$ 点的光线也可以由 $B$ 向 $A$ 的方向无限延伸，所以对于空间任意两点 $A$、$B$,不但存在着唯一的最短通路“直线段 $A B$”，而且也唯一地确定了一条把直线段 $A B$ 两端无限延长的直线，这条直线就叫做由 $A$、$B$ 两点所确定的#strong[直线]，通常称为“直线 $A B$”，而直线段 $A B$ 是直线 $A B$ 介于 $A$、$B$ 两点之间的那一段．
 
 归纳上面的讨论，我们可以作出如下的总结：
 
@@ -98,10 +98,10 @@ $ overline(M N) & = overline(M C) + overline(C N) = 1 / 2 overline(A C) + 1 / 2 
   ]
 )
 
-根据上述性质，我们可以说明其它有关的性质和问题．
+根据上述性质，我们可以说明其他有关的性质和问题．
 
 #example[
-如果两条直线 $ell$ 和 $m$ 有一个公共点（交点）$A$（图1.11），它们还能有其它的公共点吗？为什么？
+如果两条直线 $ell$ 和 $m$ 有一个公共点（交点）$A$（图1.11），它们还能有其他的公共点吗？为什么？
 
 ]
 #figure([#fig("1-08");
@@ -112,15 +112,15 @@ $ overline(M N) & = overline(M C) + overline(C N) = 1 / 2 overline(A C) + 1 / 2 
 )
 
 #solution[
-除 $A$ 点外，直线 $ell$ 和 $m$ 不能再有其它的公共点了．
+除 $A$ 点外，直线 $ell$ 和 $m$ 不能再有其他的公共点了．
 
-因为，如果还有另一个公共点 $B$,那么，$ell$ 和 $m$ 就都是通过 $A$、$B$ 两点的直线．但是通过 $A$、$B$ 两点只有唯一的一条直线，于是，$ell$ 和 $m$ 就是通过 $A$、$B$ 两点的那条唯一的直线，它们就不是两条不同的直线了．所以，它们除了 $A$ 点外，不可能再有其它的公共点了．
+因为，如果还有另一个公共点 $B$,那么，$ell$ 和 $m$ 就都是通过 $A$、$B$ 两点的直线．但是通过 $A$、$B$ 两点只有唯一的一条直线，于是，$ell$ 和 $m$ 就是通过 $A$、$B$ 两点的那条唯一的直线，它们就不是两条不同的直线了．所以，它们除了 $A$ 点外，不可能再有其他的公共点了．
 
 这件事实可以简述为：#strong[两条相交直线确定一交点]．
 
 ]
 #example[
-图1.12表示人和物之间放一隔板，使人不能直接看到物的示意图，$A$ 表示物，$E$ 表示人眼，$overline(B C)$ 表示隔板．为了能看见物的形象，放置一面镜子，图中 $g$ 表示镜面，这时按图1.12(1)中隔板 $overline(B C)$ 的位置来说，人眼 $E$ 便能看见物A的形象，这是为什么？但按图1.12(2)隔板 $overline(B C)$ 的位置来说，人眼 $E$ 便不能看到物 $A$ 的形象，这又是为什么？
+图1.12表示人和物之间放一隔板，使人不能直接看到物的示意图，$A$ 表示物，$E$ 表示人眼，$overline(B C)$ 表示隔板．为了能看见物的形象，放置一面镜子，图中 $g$ 表示镜面，这时按图1.12(1)中隔板 $overline(B C)$ 的位置来说，人眼 $E$ 便能看见物 $A$ 的形象，这是为什么？但按图1.12(2)隔板 $overline(B C)$ 的位置来说，人眼 $E$ 便不能看到物 $A$ 的形象，这又是为什么？
 
 ]
 #figure([#fig("1-09");
@@ -131,7 +131,7 @@ $ overline(M N) & = overline(M C) + overline(C N) = 1 / 2 overline(A C) + 1 / 2 
 )
 
 #solution[
-按照镜面映象的道理，人眼 $E$ 是从入射线 $A D$ 和反射线 $D E$ 看见 $A$ 的形象的，而点 $D$ 是点 $E$ 和点 $A$ 的象 $A'$ 的连线 $E A'$ 和 $g$ 的交点，所以 $A$ 的象 $A'$ 是沿着直线 $A' E$ 映入人眼 $E$ 的．因为通过 $A'$ 和 $E$ 只有唯一的一条直线，于是 $A' E$ 和隔板 $overline(B C)$ 不交（图1.12(1)）时，在 $E$ 处就看得见 $A$ 的象 $A'$, $A' E$ 和 $overline(B C)$ 相交，也就是被隔板 $overline(B C)$ 挡住（图1.12(2)）时，在 $E$ 处便看不见 $A$ 的象 $A'$ 了．
+按照镜面映像的道理，人眼 $E$ 是从入射线 $A D$ 和反射线 $D E$ 看见 $A$ 的形象的，而点 $D$ 是点 $E$ 和点 $A$ 的像 $A'$ 的连线 $E A'$ 和 $g$ 的交点，所以 $A$ 的像 $A'$ 是沿着直线 $A' E$ 映入人眼 $E$ 的．因为通过 $A'$ 和 $E$ 只有唯一的一条直线，于是 $A' E$ 和隔板 $overline(B C)$ 不交（图1.12(1)）时，在 $E$ 处就看得见 $A$ 的像 $A'$, $A' E$ 和 $overline(B C)$ 相交，也就是被隔板 $overline(B C)$ 挡住（图1.12(2)）时，在 $E$ 处便看不见 $A$ 的像 $A'$ 了．
 
 ]
 #example[
@@ -192,22 +192,20 @@ $ overline(M N) & = overline(M C) + overline(C N) = 1 / 2 overline(A C) + 1 / 2 
 
 第三，归纳、计算
 
-如果在 $overline(A B)$ 上取99个点，设这时 $overline(A B)$ 上的线段总数为 $S$，由在第二中发现的规律，不难得出：$ S = 1 + 2 + 3 + 4 dots.h.c +\(99 + 1\)= 1 + 2 + 3 + 4 dots.h.c + 100 $
+如果在 $overline(A B)$ 上取99个点，设这时 $overline(A B)$ 上的线段总数为 $S$，由在第二中发现的规律，不难得出：$ S = 1 + 2 + 3 + 4 + dots.h.c +\(99 + 1\)= 1 + 2 + 3 + 4 + dots.h.c + 100 $
 
 这是一个很有趣的计算题，如果按顺序加起来，计算是很麻烦的，我们动动脑筋能否有简便的计算方法呢？
 
-由于 $S = 1 + 2 + 3 + dots.h.c + 98 + 99 + 100$，也就是：$ S = 100 + 99 + 98 + dots.h.c + 3 + 2 + 1 $ #noindent;$therefore quad 2 S = underbrace(101 + 101 + 101 dots.h.c + 101 + 101 + 101, 100 upright("项")) = 100 times 101$
+由于 $S = 1 + 2 + 3 + dots.h.c + 98 + 99 + 100$，也就是：$ S = 100 + 99 + 98 + dots.h.c + 3 + 2 + 1 $ #noindent;$therefore quad 2 S = underbrace(101 + 101 + 101 + dots.h.c + 101 + 101 + 101, 100 upright("项")) = 100 times 101$
 
 $therefore quad S = frac(100 times 101, 2) = 5050$
+
+这就是本题的答案．
 
 ]
 #align(center)[
 #fig("1-11");
 
-#subcap[
-第1题
-
-]
 ]
 #exercise[
 + 图中有几条线段，把它们都写出来．
@@ -220,7 +218,7 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 
 + 如果有100个点，其中任何三点都不在一条直线上，通过其中任何两点画一条直线，那么一共能画多少条直线？
 
-+ 工人师付在用方砖铺地时，常常打两个木桩，拉线来铺砖，这样砖就铺得整齐，这是根据了什么道理？
++ 工人师傅在用方砖铺地时，常常打两个木桩，拉线来铺砖，这样砖就铺得整齐，这是根据了什么道理？
 
 + 如果有两个小孩甲、乙在对话，甲问乙：“你的家住在哪里？”乙回答说：“我的家住在直线 $A B$ 的尽头．”试问你能沿着直线 $A B$ 找到乙的家吗？为什么？
 
@@ -232,7 +230,7 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 
 ]
 === 长度的度量
-在给定两点 $A$、$B$ 之间的所有通路之中，以 $A B$ 为最短，它的“长度”就叫做 $A$、$B$ #strong[两点间的距离]．所以，两点间的距离是连结这两点的线段的长．
+在给定两点 $A$、$B$ 之间的所有通路之中，以 $overline(A B)$ 为最短，它的“长度”就叫做 $A$、$B$ #strong[两点间的距离]．所以，两点间的距离是连结这两点的线段的长．
 
 长度是我们经常用的一种几何量，现在让我们分别从实用和数学的观点稍微细致地分析一下“长度”这种几何量的直观含义，并且谈一谈长度的度量．
 
@@ -243,19 +241,19 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 #example[
 设长度单位是 $u$,所要度量的线段是 $a$ (图1.14).线段 $a$ 恰好可以分割成5段和 $u$ 等长的线段，那么所求的比值是5, $a$ 的长度就是 $5 u$.
 
-一般地说，如果所要度量的线段 $a$ 恰好可以分割成 $m$ 段和 $u$ 等长的线段，那末所求的比值就是整数 $m$, $a$ 的长度就是 $m u$.
+一般地说，如果所要度量的线段 $a$ 恰好可以分割成 $m$ 段和 $u$ 等长的线段，那么所求的比值就是整数 $m$, $a$ 的长度就是 $m u$.
 
 ]
 #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("1-12");], caption: []), figure([#fig("1-13");], caption: [])));
 
 #example[
-设长度单位是 $u$,所要度量的线段是 $b$ (图1.15)单位长 $u$ 恰好可以分割成3段和 $b$ 等长的线段，那么所求的比值是 $1 / 3$, $b$ 的长度就是 $1 / 3 u$.
+设长度单位是 $u$,所要度量的线段是 $b$ (图1.15)．单位长 $u$ 恰好可以分割成3段和 $b$ 等长的线段，那么所求的比值是 $1 / 3$, $b$ 的长度就是 $1 / 3 u$.
 
-一般地说，如果长度单位 $u$ 恰好可以分割成 $n$ 段和 $b$ 等长的线段，那么所求的比值是 $1 / n$，$b$ 的长度就是 $1 / n u$
+一般地说，如果长度单位 $u$ 恰好可以分割成 $n$ 段和 $b$ 等长的线段，那么所求的比值是 $1 / n$，$b$ 的长度就是 $1 / n u$．
 
 ]
 #example[
-设长度单位是 $u$,所要度量的线段是 $c$ (图1.16). $c$ 比 $4 u$ 长些，但又比 $5 u$ 短些，如果我们把 $u$ 三等分，线段 $c$ 截取4段 $u$ 后所余的一段恰好是 $1 / 3 u$ 的2倍，那么c的长度就是 $4 2 / 3 u$.
+设长度单位是 $u$,所要度量的线段是 $c$ (图1.16). $c$ 比 $4 u$ 长些，但又比 $5 u$ 短些，如果我们把 $u$ 三等分，线段 $c$ 截取4段 $u$ 后所余的一段恰好是 $1 / 3 u$ 的2倍，那么 $c$ 的长度就是 $4 2 / 3 u$.
 
 #figure([#fig("1-14");
 
@@ -287,13 +285,21 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 ]
 由例1.7和例1.8可以看出，当被度量线段（$c$ 和 $d$）不能恰好被分割而成为长度单位的整数倍，也就是它们不能被长度单位量尽时，都是求出另一条线段（例1.7中是 $overline(U_1 V)$,例1.8中是 $overline(F_2 E)$），使得它能量尽长度单位和被量线段．再按例1.6的方法求出以长度单位为单位的这条线段的长度，然后便可求出原来被量线段的长度了．
 
-能够量尽两条线段 $a$ 和 $b$ 的线段，我们叫它做线段 $a$ 和 $b$ 的#strong[公度]．两条线段的公度中最长的，叫做#strong[这两条线段的最大公度]．$overline(U_1 V)$ 和 $overline(F_2 E)$ 就分别是线段 $u$ 和 $c$, $u$ 和 $d$ 的最大公度．在例1.5中线段 $u$ 就是线段 $u$ 和 $a$ 的最大公度；例1.6中的线段 $b$ 就是线段 $u$ 和 $b$ 的最大公度，象例1.7、例1.8中求线段 $u$ 和 $c$、$u$ 和 $d$ 的最大公度的方法，叫做#strong[辗转相截法]．
+能够量尽两条线段 $a$ 和 $b$ 的线段，我们叫它做线段 $a$ 和 $b$ 的#strong[公度]．两条线段的公度中最长的，叫做#strong[这两条线段的最大公度]．$overline(U_1 V)$ 和 $overline(F_2 E)$ 就分别是线段 $u$ 和 $c$, $u$ 和 $d$ 的最大公度．在例1.5中线段 $u$ 就是线段 $u$ 和 $a$ 的最大公度；例1.6中的线段 $b$ 就是线段 $u$ 和 $b$ 的最大公度，像例1.7、例1.8中求线段 $u$ 和 $c$、$u$ 和 $d$ 的最大公度的方法，叫做#strong[辗转相截法]．
 
 通过上面各例，我们很自然地会想到：任何两条线段 $a\,b$,它们的长度比值是否总是一个分数（整数也可看作分数）？换句话说，对于任何两条线段 $a$、$b$,是否存在着它们的公度？
 
 这个问题从正、反两面来分析它的重要性．首先，如果任何两条线段的长度的比值总是一个分数，那么分数全体（即代数开始所讲的有理数）就足以处理长度的度量问题了．其次，反过来说，如果两条线段的长度的比值不一定是分数，那么有理数就不足以处理长度的度量问题．因而我们就得学会一种含有“非分数”的数系才能充分解决度量问题．这个问题是整个数学发展史上的一件大事，我们以后再详细讨论．
 
+#align(center)[
+#fig("1-16");
+
+]
 #exercise[
++ 已知长度单位 $u$,求 $a$ 的长度．
+
++ 已知长度单位是 $v$,求 $b$ 的长度．
+
 + 已知线段 $a$、$b$、$u$,其中线段 $a = 9 u$, $b = 3 u$,问线段 $a$、$b$ 的最大公度是线段 $u$ 的几倍？
 
 + 已知线段 $a = 48$ 毫米，$b = 18$ 毫米．先用辗转相截法求出 $a$、$b$ 的最大公度，并量它等于多少毫米；再用求最大公约数的辗转相除法求出48、18的最大公约数．比较前后所得的结果．
@@ -306,16 +312,11 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 
   + $overline(A C) + overline(C D) =\(#h(2em)\)+ overline(B D)$
 
-  #align(center)[
-  #fig("1-16");
-
-  ]
-
 ]
 === 直线和平面
-在空间，另一种常见的形象就是各种各样的面．例如地球的表面，它的整体看起来是一个略为扁平的球面，而局部的形象又随着当地的地貌而不同．有的地方是一片原，有的地方是起伏的丘陵，有的地方是一片湖面，也有的地方是崇山峻岭和深谷．又如教室的一面墙壁，上课用的黑板，以及桌面等，看起来又都是“平直”的面．
+在空间，另一种常见的形象就是各种各样的面．例如地球的表面，它的整体看起来是一个略为扁平的球面，而局部的形象又随着当地的地貌而不同．有的地方是一片平原，有的地方是起伏的丘陵，有的地方是一片湖面，也有的地方是崇山峻岭和深谷．又如教室的一面墙壁，上课用的黑板，以及桌面等，看起来又都是“平直”的面．
 
-通常检查一个桌面是否“平直”，最简单的方法就是用一根直尺放在桌面上（图1.18），如果放在任何位置上，直尺的边都和桌面密合，那么桌面就是“平直”的．我们就说桌面是平面．但是象图1.19的面上，虽然直尺放在 $ell_1\,ell_2\,dots.h\,ell_n$ 等位置时，直尺边和这个面密合，而在 $A B$ 位置上直尺边和面就不密合了．这就是说并不是在任何位置上直尺的边总和这个面密合，这个面不是一个平面，实际上是一个曲面．
+通常检查一个桌面是否“平直”，最简单的方法就是用一根直尺放在桌面上（图1.18），如果放在任何位置上，直尺的边都和桌面密合，那么桌面就是“平直”的．我们就说桌面是平面．但是像图1.19的面上，虽然直尺放在 $ell_1\,ell_2\,dots.h\,ell_n$ 等位置时，直尺边和这个面密合，而在 $A B$ 位置上直尺边和面就不密合了．这就是说并不是在任何位置上直尺的边总和这个面密合，这个面不是一个平面，实际上是一个曲面．
 
 #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#image("/math2/fig/1-18.png", width: 100%);], caption: []), figure([#image("/math2/fig/1-19.png", width: 100%);], caption: [])));
 
@@ -328,7 +329,7 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 #exercise[
 + 举出一条直线和一个平面没有公共点的实例，以及一条直线和一个平面只有一个公共点的实例．
 
-+ 一点在一平面内，而其它的点都不在这个平面内，这种实例有吗？
++ 一条直线如果有两个点在一平面内，而其他的点都不在这个平面内，这种实例有吗？
 
 + 举出两个平面没有公共点的实例．
 
@@ -409,7 +410,7 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 
 + 把一条32cm的线段分成三段，中间的一段长为8cm,问第一段中点到第二段中点的距离等于多少cm?
 
-+ 图中表明四个点可以确定一条、四条或者六条直线．试划图说明五个点可以确定1、5、6、8或10条直线（其它情况不存在）．
++ 图中表明四个点可以确定一条、四条或者六条直线．试画图说明五个点可以确定1、5、6、8或10条直线（其他情况不存在）．
 
   #align(center)[
   #fig("1-21");
@@ -448,7 +449,7 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 
 现在让我们就上面的实例，对于所涉及的“方向”这个概念的直观含义，稍加分析．
 
-假如我们从操场的 $A$ 点走向 $B$ 点去（图1.23），最省事的“通路”当然就是 $overline(A B)$（因为它是最短的通路）．所以我们先站在 $A$ 点，向 $B$ 点望一望，头脑中抽象地计画了所要走的路线应该是直线段（图中虚线所示）．然后便一步步地沿着设想的路线 $overline(A B)$ 向 $B$ 点一直走．从几何的观点看，每跨一步就沿着某一个方向做了一个和自己步幅等长的“有向线段”．所以说，“由 $A$ 点朝向 $B$ 点一直走的走法”就是每一步都是沿着 $overline(A B)$ 这个固定的方向走的那种走法．
+假如我们从操场的 $A$ 点走向 $B$ 点去（图1.23），最省事的“通路”当然就是 $overline(A B)$（因为它是最短的通路）．所以我们先站在 $A$ 点，向 $B$ 点望一望，头脑中抽象地计划了所要走的路线应该是直线段（图中虚线所示）．然后便一步步地沿着设想的路线 $overline(A B)$ 向 $B$ 点一直走．从几何的观点看，每跨一步就沿着某一个方向做了一个和自己步幅等长的“有向线段”．所以说，“由 $A$ 点朝向 $B$ 点一直走的走法”就是每一步都是沿着 $overline(A B)$ 这个固定的方向走的那种走法．
 
 #figure([#fig("1-24");
 
@@ -484,7 +485,7 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 
 + 自定点 $A$ 出发的所有方向和以 $A$ 点为端点的所有射线之间一一地相对应．换句话说，对应于自 $A$ 点出发的一个方向，就有唯一的一条射线（它就是自 $A$ 点出发沿着这个固定方向一直走的路线）；反之任何一条以 $A$ 点为端点的射线也就唯一地表示了一个确定的方向．所以在几何学中，我们以一条射线表示一个方向．
 
-+ 一条以 $A$ 为端点的射线，由起始的任何一小段唯一确定（因为整个射线只是那一小段沿着那个方向的无限延伸），所以自 $A$ 点出发的一个方向实可以用它所对应的那条射线开头的任何一小段所表示．
++ 一条以 $A$ 为端点的射线，由起始的任何一小段唯一确定（因为整个射线只是那一小段沿着那个方向的无限延伸），所以自 $A$ 点出发的一个方向其实可以用它所对应的那条射线开头的任何一小段所表示．
 
 + 设射线 $A B$ 和 $A C$ 分别表示由 $A$ 点出发的两个方向，那么 $angle B A C$ 的直观含义就是射线 $A B$ 和 $A C$ 所表示的那两个方向的差．
 
@@ -542,7 +543,7 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 ]]));
 
 === 角度和旋转
-在前面我们说明了可以用以 $A$ 点为端点的一条射线来表示一个由 $A$ 点出发的方向．设射线 $A B$ 和 $A C$ 分别表示一个由 $A$ 点出发的两个方向，那么这两条射线所成的角也可以看作是一条以 $A$ 点为端点的射线，从 $A B$ 的位置沿着平面旋转到 $A C$ 的位置而成的图形．象度量线段 $overline(P Q)$ 的长度就是度量表示 $P$、$Q$ 这两个位置之间的距离一样；度量射线 $A B$ 和 $A C$ 所表示的这两个方向之间的差别也就是度量这两条射线之间所夹的“角度”．而角度也就可以看成是旋转量了．下面采用旋转的观点对于角度的度量再作一初步的探讨：
+在前面我们说明了可以用以 $A$ 点为端点的一条射线来表示一个由 $A$ 点出发的方向．设射线 $A B$ 和 $A C$ 分别表示一个由 $A$ 点出发的两个方向，那么这两条射线所成的角也可以看作是一条以 $A$ 点为端点的射线，从 $A B$ 的位置沿着平面旋转到 $A C$ 的位置而成的图形．像度量线段 $overline(P Q)$ 的长度就是度量表示 $P$、$Q$ 这两个位置之间的距离一样；度量射线 $A B$ 和 $A C$ 所表示的这两个方向之间的差别也就是度量这两条射线之间所夹的“角度”．而角度也就可以看成是旋转量了．下面采用旋转的观点对于角度的度量再作一初步的探讨：
 
 ==== 角度的大小
 #figure([#fig("1-35");
@@ -630,7 +631,7 @@ $ 30 degree 19' 21'' + 18 degree 40' 42'' = 48 degree 59' 63'' = 49 degree 3'' $
 #solution[
 $because quad 1 degree = 60'\,#h(2em) therefore quad 0.62 degree = 60' times 0.62 = 37.2'$
 
-$because quad 1' = 60''\,#h(2em) therefore quad 0.2' = 60'' times 0.2 = 12''$
+又 $because quad 1' = 60''\,#h(2em) therefore quad 0.2' = 60'' times 0.2 = 12''$
 
 $therefore quad 3.62 degree = 3 degree 37' 12''$
 
@@ -644,7 +645,7 @@ $therefore quad 3.62 degree = 3 degree 37' 12''$
 
 ]
 ==== 对顶角相等和两条直线互相垂直
-如图1.37所示直线 $A B$ 和 $C D$ 相交于 $O$ 点，这时，$angle A O C$ 和 $angle B O D$ 中 $O A$ 和 $O B$, $O C$ 和 $O D$ 都互为反向延长线．象这样，一个角的两边分别是另一个角的两边的反向延长线时，我们就称这两个角为#strong[对顶角]．
+如图1.37所示，直线 $A B$ 和 $C D$ 相交于 $O$ 点，这时，$angle A O C$ 和 $angle B O D$ 中 $O A$ 和 $O B$, $O C$ 和 $O D$ 都互为反向延长线．像这样，一个角的两边分别是另一个角的两边的反向延长线时，我们就称这两个角为#strong[对顶角]．
 
 如果两个角是对顶角，那么它们之间有什么关系呢？由图1.37可知，$angle A O C$ 和 $angle A O D$ 互为补角，即 $angle A O C + angle A O D = 180 degree$\; $angle B O D$ 和 $angle A O D$ 也互为补角，即 $angle B O D + angle A O D = 180 degree$,因而 $angle A O C + angle A O D = angle B O D + angle A O D$,所以，$angle A O C = angle B O D$.
 
@@ -670,7 +671,7 @@ $because quad angle A O C = 40 degree$
 
 $therefore quad angle B O D = 40 degree$.
 
-又：$angle A O C + angle A O D = 180 degree$,
+又 $because quad angle A O C + angle A O D = 180 degree$,
 
 $therefore quad angle A O D = 180 degree - angle A O C = 180 degree - 40 degree = 140 degree$.
 
@@ -706,12 +707,12 @@ $therefore quad angle C O B = 140 degree$
 #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#scale(60%, reflow: true, image("/math2/fig/1-39-1.png"));
 
 #subcap[
-过直线 $ell$ 上一点 $A$ 划 $ell$ 的垂线
+过直线 $ell$ 上一点 $A$ 画 $ell$ 的垂线
 
 ]], [#scale(60%, reflow: true, image("/math2/fig/1-39-2.png"));
 
 #subcap[
-过直线 $ell$ 外一点 $A$ 划 $ell$ 的垂线
+过直线 $ell$ 外一点 $A$ 画 $ell$ 的垂线
 
 ]]));
 
@@ -768,6 +769,8 @@ $therefore quad angle C O B = 140 degree$
 三角形的三个角的和是 $180 degree$.
 
 ]
+今后我们用符号“$triangle.stroked.t$”表示三角形．
+
 #example[
 已知如图1.44, $triangle.stroked.t A B C$ 中，$angle A = 55 degree$, $angle B = 48 degree$. $B D tack.t A C$ 于 $D$ 点．求 $angle D B C$ 的度数．
 
@@ -934,9 +937,9 @@ $therefore quad angle D B C = 180 degree - angle C - angle B D C = 180 degree - 
 
 + 怎样从“三角形三个内角和等于 $180 degree$”推算出四边形的四个内角的和，五边形五个内角的和，六边形六个内角的和各等于多少度？
 
-+ 如果分别延长 $triangle.stroked.t A B C$ 的三边 $A B$、$B C$、$C A$ 得到 $angle 1$、$angle 2$ 和 $angle 3$,那么 $angle 1 + angle 2 + angle 3 = ?$
++ 如果分别延长 $triangle.stroked.t A B C$ 的三边 $overline(A B)$、$overline(B C)$、$overline(C A)$ 得到 $angle 1$、$angle 2$ 和 $angle 3$,那么 $angle 1 + angle 2 + angle 3 = ?$
 
-+ 如果顺次延长四边形ABCD的各边，得到 $angle 1$、$angle 2$、$angle 3$ 和 $angle 4$,那么，请你根据21题的计算结果猜想一下这四个角之和可能是多少度？然后再计算一下 $angle 1 + angle 2 + angle 3 + angle 4 = ?$ 来验证一下你的猜想是否正确．
++ 如果顺次延长四边形 $A B C D$ 的各边，得到 $angle 1$、$angle 2$、$angle 3$ 和 $angle 4$,那么，请你根据21题的计算结果猜想一下这四个角之和可能是多少度？然后再计算一下 $angle 1 + angle 2 + angle 3 + angle 4 = ?$ 来验证一下你的猜想是否正确．
 
   #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-58");
   
@@ -1115,7 +1118,7 @@ $therefore quad angle D B C = 180 degree - angle C - angle B D C = 180 degree - 
 
 + 一个角的余角是它的3倍，求这个角的度数．
 
-+ 一个角是它的补角的4,求这个角是多少度？
++ 一个角是它的补角的 $1 / 4$,求这个角是多少度？
 
 + 两个角的度数比为7:2,它们的差是 $50 degree$,求这两个角的度数．
 
@@ -1153,11 +1156,22 @@ $therefore quad angle D B C = 180 degree - angle C - angle B D C = 180 degree - 
 
   + 可能有一个角是钝角，其余两个角都是锐角的三角形．
 
++ 在制图中，经常用平行线表示材料的截面，用直尺、三角板画下列材料的截面图．
+
+  #align(center)[
+  #fig("1-72");
+
+  #subcap[
+  第15题
+
+  ]
+  ]
+
 == 全等和叠合
 === 全等形
 两个形状和大小完全相同的图形，叫做全等形．如图1.51(1)中，三角形II和I面积的大小相等但形状不同；III和I的形状相同但大小又不等；IV和I的形状和大小都不一样，只有V和I的形状和大小完全相同．三角形I和V是全等的．又如图1.51(2)中，三棱锥 $upright(I)'$ 和 $upright(I I)'$ 形状相同但大小不等；$upright(I I I)'$ 和 $upright(I I)'$ 体积的大小相等但形状又不同．只有 $upright(I V)'$ 和 $upright(I I)'$ 的形状和大小完全相同．三棱锥 $upright(I I)'$ 和 $upright(I V)'$ 是全等的．
 
-#figure([#fig("1-72");
+#figure([#fig("1-73");
 
   ],
   caption: [
@@ -1176,9 +1190,9 @@ $therefore quad angle D B C = 180 degree - angle C - angle B D C = 180 degree - 
 
 在角的度量的讨论中，我们实际就是用叠合来说明两个角的大小相等的意义的，这也就是说两个角 $angle A$ 和 $angle A'$ 能叠合的唯一条件就是它们的大小相等：$angle A = angle A'$.
 
-如果 $triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$ 全等（图1.52），这就是说它们能叠合．因而他们的边和角便分别相等（也说全等形的对应边相等、对应角相等）：
+如果 $triangle.stroked.t A B C$ 和 $triangle.stroked.t A'' B'' C''$ 全等（图1.52），这就是说它们能叠合．因而他们的边和角便分别相等（也说全等形的对应边相等、对应角相等）：
 
-#figure([#fig("1-73");
+#figure([#fig("1-74");
 
   ],
   caption: [
@@ -1195,7 +1209,7 @@ angle A = angle A''\, & quad angle B = angle C''\,quad angle C = angle B'' $
 
 + 如图1.53中，$angle A = angle A'$, $overline(A B) = overline(A' B')$, $overline(A C) = overline(A' C')$.那么可以使 $overline(A' B')$ 叠合在 $overline(A B)$ 上，从而 $angle A'$ 可以和 $angle A$ 叠合，同时 $overline(A' C')$ 也就叠合在 $overline(A C)$ 上了．这样一来，由于点 $B'$ 落在点 $B$ 上，点 $C'$ 落在点 $C$ 上，那么根据“两点只确定一条直线”这个基本性质，直线 $B' C'$ 便叠合在直线 $B C$ 上，自然 $overline(B' C')$ 和 $overline(B C)$ 也就叠合在一起，于是 $triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$ 便完全叠合，它们也就全等了．
 
-  #figure([#fig("1-74");
+  #figure([#fig("1-75");
 
     ],
     caption: [
@@ -1229,7 +1243,7 @@ angle A = angle A''\, & quad angle B = angle C''\,quad angle C = angle B'' $
 $therefore quad triangle.stroked.t A B C tilde.equiv triangle.stroked.t D C B$ (SSS).
 
 ]
-#align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("1-75");], caption: []), figure([#fig("1-76");], caption: [])));
+#align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("1-76");], caption: []), figure([#fig("1-77");], caption: [])));
 
 #example[
 在图1.56中已知 $overline(A D) = overline(A E)$, $overline(A B) = overline(A C)$,那么 $triangle.stroked.t A B E$ 和 $triangle.stroked.t A C D$ 全等吗？为什么？
@@ -1269,12 +1283,12 @@ $therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t A C D$ (
   + $overline(A C) = 50 upright(m m)\,quad angle A = 95 degree\,quad angle B = 40 degree$
 
 ]
-#align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-77");
+#align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-78");
 
 #subcap[
 第1题
 
-]], [#fig("1-78");
+]], [#fig("1-79");
 
 #subcap[
 第3题
@@ -1286,10 +1300,6 @@ $therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t A C D$ (
 + 写出下列各三角形中的全等三角形．
 
   #align(center)[
-  #fig("1-79");
-
-  ]
-  #align(center)[
   #fig("1-80");
 
   ]
@@ -1297,7 +1307,11 @@ $therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t A C D$ (
   #fig("1-81");
 
   ]
+  #align(center)[
   #fig("1-82");
+
+  ]
+  #fig("1-83");
 
 + 指出下列哪些情况 $triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$ 是全等的．
 
@@ -1315,7 +1329,7 @@ $therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t A C D$ (
 
 + 如图，画一条线段 $overline(A B) = 5$cm,画 $angle B A C = 30 degree$, $angle A B D = 30 degree$ 连 $C D$ 交 $A B$ 于 $M$ 点，如果 $M$ 点恰好是 $A B$ 的中点，那么 $triangle.stroked.t A M C$ 和 $triangle.stroked.t B M D$ 全等吗？为什么？
 
-  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-83");
+  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-84");
   
   #subcap[
   第3题
@@ -1334,7 +1348,7 @@ $therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t A C D$ (
 + 通过度量，指出下列各图中全等的三角形．
 
   #align(center)[
-  #fig("1-84");
+  #fig("1-85");
 
   #subcap[
   第6题
@@ -1344,9 +1358,9 @@ $therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t A C D$ (
 
 == 相似和相似比
 === 相似形
-在日常生活和生产实践中，我们经常看到和用到形状相同但大小不一定相同的图形、例如地图、测量图、放大和缩小的照片等，虽然图形的大小有了变化，但都保持原来的形状．我们把这一类形状相同，大小不一定相同的图形叫做#strong[相似形]．下面以多边形为例，来研究一下相似图形的一些重要性质．
+在日常生活和生产实践中，我们经常看到和用到形状相同但大小不一定相同的图形．例如地图、测量图、放大和缩小的照片等，虽然图形的大小有了变化，但都保持原来的形状．我们把这一类形状相同，大小不一定相同的图形叫做#strong[相似形]．下面以多边形为例，来研究一下相似图形的一些重要性质．
 
-#figure([#fig("1-85");
+#figure([#fig("1-86");
 
   ],
   caption: [
@@ -1359,7 +1373,7 @@ $therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t A C D$ (
 
 在图1.59中，让两个四边形边长的比都是1:1,但各角不对应地相等，形状也就不同．
 
-#align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("1-86");], caption: []), figure([#fig("1-87");], caption: [])));
+#align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("1-87");], caption: []), figure([#fig("1-88");], caption: [])));
 
 通过以上的观察分析，我们可推测，两个多边形相似的特征是：#strong[对应角相等，对应边成比例]．
 
@@ -1378,14 +1392,14 @@ $therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t A C D$ (
 #solution[
 $because quad upright("图距") / upright("实距") = upright("比例尺")$
 
-$therefore quad upright("实距") = upright("图距") / upright("比例尺") = frac(12 upright(c m), 1 / 50000) = 12 times 50000 upright(c m) = 6 upright(k m)$
+$therefore quad upright("实距") = upright("图距") / upright("比例尺") = frac(12 upright(c m), 1 / 50000) = 12 times 50000 upright(c m) = 600000 upright(c m) = 6 upright(k m)$
 
 ]
 #example[
 在比例尺为1:500000的地图上有四个点 $A$、$B$、$C$、$D$, $overline(A B) = 2 upright(c m)$, $overline(B C) = 3 upright(c m)$, $overline(C D) = 4 upright(c m)$, $overline(D A) = 5 upright(c m)$.求四边形 $A B C D$ 在地面上的实际周长是多少公里？
 
 ]
-#figure([#fig("1-88");
+#figure([#fig("1-89");
 
   ],
   caption: [
@@ -1412,12 +1426,12 @@ $therefore quad overline(A' B') = 500000 overline(A B)\,quad overline(B' C') = 5
 + 把下面的长方形各边长缩小到原长的 $1 / 3$，画在作业纸上.
 
 ]
-#align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-89");
+#align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-90");
 
 #subcap[
 第2题
 
-]], [#fig("1-90");
+]], [#fig("1-91");
 
 #subcap[
 第3题
@@ -1425,13 +1439,13 @@ $therefore quad overline(A' B') = 500000 overline(A B)\,quad overline(B' C') = 5
 ]]));
 
 === 相似三角形
-由多边形相似的特征性质可知，如果两个三角形的各角对应相等，且对应边成比例，那么这两个三角形相似．但实际上，当我们要判定两个三角形是否相似时，并不要求对上条件一一验证．例如，我们作 $triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$,使 $angle A = angle A'$, $angle B = angle B'$,于是 $angle C = angle C'$.这时我们就看到两个三角形的形状就完全相同了，我们还可以多画几组三角形，使每组三角形的两个角对应地相等（第三个角自然也相等），不难看出每组三角形的形状也都是相同的，这就使我们猜测：是否有下面的结论：
+由多边形相似的特征性质可知，如果两个三角形的各角对应相等，且对应边成比例，那么这两个三角形相似．但实际上，当我们要判定两个三角形是否相似时，并不要求对上述条件一一验证．例如，我们作 $triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$,使 $angle A = angle A'$, $angle B = angle B'$,于是 $angle C = angle C'$.这时我们就看到两个三角形的形状就完全相同了，我们还可以多画几组三角形，使每组三角形的两个角对应地相等（第三个角自然也相等），不难看出每组三角形的形状也都是相同的，这就使我们猜测：是否有下面的结论：
 
 #blk[][
 如果一个三角形的两个角和另一个三角形的两个角对应相等，那么这两个三角形相似．
 
 ]
-#figure([#fig("1-91");
+#figure([#fig("1-92");
 
   ],
   caption: [
@@ -1440,7 +1454,7 @@ $therefore quad overline(A' B') = 500000 overline(A B)\,quad overline(B' C') = 5
 
 在这里，让我们来做些实验，对于上面的观察所得到的结论的正确性作进一步的检验．
 
-#figure([#fig("1-92");
+#figure([#fig("1-93");
 
   ],
   caption: [
@@ -1453,11 +1467,11 @@ $therefore quad overline(A' B') = 500000 overline(A B)\,quad overline(B' C') = 5
 overline(M_1 M'_1) & = overline(M_2 O) = overline(O M'_2) = overline(B' M''_2)\
 overline(M_2 M''_2) & = overline(M_1 O) = overline(O M''_1) = overline(A' M'_1) $ #noindent;这样，由两个三角形的全等条件（SSS）可知 $triangle.stroked.t A' B' C'$ 被分割成的九个小三角形全等．这就说明了 $overline(A' C') = 3 overline(A C)$, $overline(B' C') = 3 overline(B C)$.这就是说 $triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$.
 
-假如 $triangle.stroked.t A' B' C'$ 和 $triangle.stroked.t A'' B'' C''$ 有两个角对应地相等．（$angle A' = angle A''$, $angle B' = angle B''$）且 $overline(A' B') / overline(A'' B'') = 3 / 2$，即 $overline(A' B') = 3 / 2 overline(A'' B'')$，这时我们是否能够推断：$overline(A' C') = 3 / 2 overline(A'' C'')$, $overline(B' C') = 3 / 2 overline(B'' C'')$ 呢？
+假如 $triangle.stroked.t A'' B'' C''$ 和 $triangle.stroked.t A' B' C'$ 有两个角对应地相等．（$angle A' = angle A''$, $angle B' = angle B''$）且 $overline(A' B') / overline(A'' B'') = 3 / 2$，即 $overline(A' B') = 3 / 2 overline(A'' B'')$，这时我们是否能够推断：$overline(A' C') = 3 / 2 overline(A'' C'')$, $overline(B' C') = 3 / 2 overline(B'' C'')$ 呢？
 
 由于 $triangle.stroked.t A'' B'' C''$ 和 $triangle.stroked.t A B C$ 的三个角对应地相等（$angle A = angle A''$, $angle B = angle B''$, $angle C = angle C''$），而且 $overline(A'' B'') = 2 overline(A B)$，那么由上面的说明，就有 $overline(A'' C'') = 2 overline(A C)$, $overline(B'' C'') = 2 overline(B C)$.即：$ overline(A' B') & = 3 overline(A B) = 3 / 2 overline(A'' B'')\
 overline(A' C') & = 3 overline(A C) = 3 / 2 overline(A'' C'')\
-overline(B' C') & = 3 overline(B C) = 3 / 2 overline(B'' C'') $ #noindent;这就说明了 $triangle.stroked.t A' B' C' tilde.rev triangle.stroked.t A'' B'' C''$.
+overline(B' C') & = 3 overline(B C) = 3 / 2 overline(B'' C'') $ #noindent;这就说明了 $triangle.stroked.t A'' B'' C'' tilde.rev triangle.stroked.t A' B' C'$.
 
 在两个相似三角形中，相等的角叫做#strong[对应角]，相等的角所对的边叫做#strong[对应边]．两个相似三角形的#strong[对应角相等，对应边成比例]．
 
@@ -1468,7 +1482,7 @@ frac(triangle.stroked.t A' B' C' upright("的面积"), triangle.stroked.t A'' B'
 在图1.63中的两个三角形相似吗？
 
 ]
-#figure([#fig("1-93");
+#figure([#fig("1-94");
 
   ],
   caption: [
@@ -1540,12 +1554,12 @@ $therefore quad h = 2 times 4 div 1.5 approx 5.33 upright(m)$
 
 + 如图，$A B$、$C D$ 交于 $E$ 点，$angle D = angle B$, $triangle.stroked.t A E D$ 与 $triangle.stroked.t C E B$ 是否相似？如果相似，试指出它们的对应边和对应角．
 
-  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-94");
+  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-95");
   
   #subcap[
   第1题
   
-  ]], [#fig("1-95");
+  ]], [#fig("1-96");
   
   #subcap[
   第2题
@@ -1554,7 +1568,7 @@ $therefore quad h = 2 times 4 div 1.5 approx 5.33 upright(m)$
 
 + 如图，试找出图中的所有相似三角形．
 
-  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-96");
+  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-97");
   
   #subcap[
   第3题
@@ -1578,7 +1592,7 @@ $therefore quad h = 2 times 4 div 1.5 approx 5.33 upright(m)$
 
 求作：一段线等于 $a$.
 
-#figure([#fig("1-97");
+#figure([#fig("1-98");
 
   ],
   caption: [
@@ -1596,7 +1610,7 @@ $therefore quad h = 2 times 4 div 1.5 approx 5.33 upright(m)$
 
 求作：一角等于 $angle O$.
 
-#figure([#fig("1-98");
+#figure([#fig("1-99");
 
   ],
   caption: [
@@ -1628,7 +1642,7 @@ $therefore quad angle A' O' B' = angle O$.
 
 求作：一三角形使其三边长分别等于 $a$、$b$、$c$.
 
-#figure([#fig("1-99");
+#figure([#fig("1-100");
 
   ],
   caption: [
@@ -1647,7 +1661,7 @@ $therefore quad angle A' O' B' = angle O$.
 如果已知条件中，$b + c lt.eq a$ 或 $a + b lt.eq c$ 或 $a + c lt.eq b$,则作不成三角形．图1.68是 $b + c lt.eq a$ 的情况．
 
 ]
-#figure([#fig("1-100");
+#figure([#fig("1-101");
 
   ],
   caption: [
@@ -1659,7 +1673,7 @@ $therefore quad angle A' O' B' = angle O$.
 
 求作：$triangle.stroked.t A B C$,使 $angle B = angle alpha$, $angle C = angle beta$, $overline(B C) = a$.
 
-#figure([#fig("1-101");
+#figure([#fig("1-102");
 
   ],
   caption: [
@@ -1684,7 +1698,7 @@ $therefore quad angle A' O' B' = angle O$.
 如果已知条件中的 $angle alpha$ 与 $angle beta$ 的大小不适当（$angle alpha + angle beta gt.eq 180 degree$）,射线 $B X$ 与射线 $C Y$ 不相交，这时就作不出三角形．如图1.70所示．
 
 ]
-#figure([#fig("1-102");
+#figure([#fig("1-103");
 
   ],
   caption: [
@@ -1696,7 +1710,7 @@ $therefore quad angle A' O' B' = angle O$.
 
 求作：$angle A O B$ 的平分线．（在 $angle A O B$ 内部，以 $O$ 为端点作一条射线，使它把 $angle A O B$ 分成相等的两个角，这条射线就是 $angle A O B$ 的平分线．）
 
-#figure([#fig("1-103");
+#figure([#fig("1-104");
 
   ],
   caption: [
@@ -1707,7 +1721,7 @@ $therefore quad angle A' O' B' = angle O$.
 
 + 以点 $O$ 为圆心，任意长为半径作弧，交 $angle A O B$ 的两边于 $A'$、$B'$ 两点．
 
-+ 再分别以 $A'$、$B'$ 为圆心，以 $O A'$ 为半径作两条弧交于 $C$ 点．
++ 再分别以 $A'$、$B'$ 为圆心，以 $overline(O A')$ 为半径作两条弧交于 $C$ 点．
 
 + 作射线 $O C$,则射线 $O C$ 即为所求的 $angle A O B$ 的平分线．
 
@@ -1738,7 +1752,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
 理由：请同学们自己说明．
 
-#align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("1-104");], caption: []), figure([#fig("1-105");], caption: [])));
+#align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("1-105");], caption: []), figure([#fig("1-106");], caption: [])));
 
 === 过已知直线外一点作已知直线的垂线
 已知：直线 $ell$ 和 $ell$ 外一点 $P$\(图1.73),
@@ -1767,13 +1781,13 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 + 过 $P$、$Q$ 两点作直线交 $overline(A B)$ 于 $M$ 点，则 $M$ 点就是 $overline(A B)$ 的中点．
 
 #rmk[
-这种作法和作 $overline(A B)$ 的垂线的作法一致，因而直线 $overline(P Q)$ 不仅平分 $overline(A B)$,还垂直 $overline(A B)$,因此我们把 $overline(P Q)$ 叫做 $overline(A B)$ 的垂直平分线．线段的垂直平分线的一般意义可表述为：垂直且平分一条线段的直线叫做这条#strong[线段的垂直平分线]．
+这种作法和作 $overline(A B)$ 的垂线的作法一致，因而直线 $P Q$ 不仅平分 $overline(A B)$,还垂直 $overline(A B)$,因此我们把 $P Q$ 叫做 $overline(A B)$ 的垂直平分线．线段的垂直平分线的一般意义可表述为：垂直且平分一条线段的直线叫做这条#strong[线段的垂直平分线]．
 
 ]
-#align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("1-106");], caption: []), figure([#fig("1-107");], caption: [])));
+#align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("1-107");], caption: []), figure([#fig("1-108");], caption: [])));
 
 === 过已知直线外一点作已知直线的平行线
-已知；直线 $ell$ 和 $ell$ 外一点 $P$\(图1.75).
+已知：直线 $ell$ 和 $ell$ 外一点 $P$\(图1.75).
 
 求作：过 $P$ 点作一直线和 $ell$ 平行．
 
@@ -1812,7 +1826,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
 ]
 #align(center)[
-#fig("1-108");
+#fig("1-109");
 
 #subcap[
 第7题
@@ -1821,10 +1835,10 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 ]
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题1.5]
 
-+ 作一个角等于：$angle alpha + angle beta$；$angle alpha - angle beta$.
++ 作一个角等于：(1) $angle alpha + angle beta$；(2) $angle alpha - angle beta$.
 
   #align(center)[
-  #fig("1-109");
+  #fig("1-110");
 
   #subcap[
   第1题
@@ -1835,7 +1849,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 + 作一个三角形，使其两个角分别等于 $angle alpha$、$angle beta$, $angle alpha$ 的对边等于已知线段 $a$.
 
   #align(center)[
-  #fig("1-110");
+  #fig("1-111");
 
   #subcap[
   第2题
@@ -1853,7 +1867,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 + 试作下列花纹图形：
 
   #align(center)[
-  #fig("1-111");
+  #fig("1-112");
 
   #subcap[
   第6题
@@ -1931,12 +1945,12 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
   + 比较一下(a)与(b)所得的结果，你能作出什么猜想？
 
-  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-112");
+  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-113");
   
   #subcap[
   第4题
   
-  ]], [#fig("1-113");
+  ]], [#fig("1-114");
   
   #subcap[
   第5题
@@ -1965,16 +1979,16 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
 + 五个点 $A$、$B$、$C$、$D$、$E$ 排列在一条直线上，而且 $D$ 点在 $A$ 点右边4m的地方，$C$ 点在 $E$ 点右边5m的地方，又 $B$ 点在 $E$ 点左边5m的地方，$B$ 点在 $A$ 点左边4m的地方，问：
 
-  + 正好在中间的是那个点？
+  + 正好在中间的是哪个点？
 
   + $D$ 点在 $E$ 点右边多少米远的地方？
 
-  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-114");
+  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-115");
   
   #subcap[
   第10题
   
-  ]], [#fig("1-115");
+  ]], [#fig("1-116");
   
   #subcap[
   第13题
@@ -1996,7 +2010,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 + 已知如图，在 $triangle.stroked.t A B C$ 中，$overline(B A) tack.t overline(A C)$, $overline(A D) tack.t overline(B C)$, $angle B A D = 30 degree$,求 $angle x$, $angle y$, $angle z$ 的度数？
 
   #align(center)[
-  #fig("1-116");
+  #fig("1-117");
 
   #subcap[
   第17题
@@ -2007,7 +2021,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 + 求图中 $angle alpha$, $angle beta$ 的大小．
 
   #align(center)[
-  #fig("1-117");
+  #fig("1-118");
 
   #subcap[
   第18题
@@ -2023,12 +2037,12 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
   + $A C$ 与 $B D$ 是否平行？为什么？
 
-  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-118");
+  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-119");
   
   #subcap[
   第19题
   
-  ]], [#fig("1-119");
+  ]], [#fig("1-120");
   
   #subcap[
   第20题
@@ -2039,7 +2053,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
 + 已知：
 
-  + $overline(A B) = 5$cm, $overline(A C) = 38$cm, $angle A = 54 degree$
+  + $overline(A B) = 5$cm, $overline(A C) = 3.8$cm, $angle A = 54 degree$
 
   + $overline(A B) = 4$cm, $angle A = 42 degree$, $angle B = 58 degree$
 
@@ -2049,12 +2063,12 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
   求作 $triangle.stroked.t A B C$.
 
-  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-120");
+  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-121");
   
   #subcap[
   第21题
   
-  ]], [#fig("1-121");
+  ]], [#fig("1-122");
   
   #subcap[
   第23题
@@ -2065,12 +2079,12 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
 + 已知如图，如果 $overline(A B) = overline(D C)$, $overline(A C) = overline(D B)$,那么 $triangle.stroked.t A B C$ 与 $triangle.stroked.t D C B$ 是否全等？为什么？
 
-  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-122");
+  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-123");
   
   #subcap[
   第24题
   
-  ]], [#fig("1-123");
+  ]], [#fig("1-124");
   
   #subcap[
   第25题
@@ -2097,12 +2111,12 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 
   + $triangle.stroked.t A C D$ 与 $triangle.stroked.t B C A$ 是否相似？为什么？
 
-  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-124");
+  #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, [#fig("1-125");
   
   #subcap[
   第28题
   
-  ]], [#fig("1-125");
+  ]], [#fig("1-126");
   
   #subcap[
   第29题
@@ -2114,7 +2128,7 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 + 观察下列各图，归纳出 $n$ 边形对角线条数的公式．（提示：注意 $n$ 边形边数与每一个顶点所引出的对角线数的关系）
 
   #align(center)[
-  #fig("1-126");
+  #fig("1-127");
 
   #subcap[
   第31题
@@ -2128,11 +2142,13 @@ $therefore quad angle A' O C = angle B' O C$.（全等三角形对应角相等�
 + 今有 $n$ 个球队参加比赛，规定每两队各赛一场，求比赛总场数的公式．（参看下图，可以利用31题的结果）
 
   #align(center)[
-  #fig("1-127");
+  #fig("1-128");
 
   #subcap[
   第32题
 
   ]
   ]
-  参加比赛的队数 $n : thick 2\,3\,4\,5\,dots.h$ 比赛的总场数 $ell : thick 1\,3\,6\,10\,dots.h$
+  参加比赛的队数 $n : thick 2\,3\,4\,5\,dots.h$
+
+  比赛的总场数 $ell : thick 1\,3\,6\,10\,dots.h$

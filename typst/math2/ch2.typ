@@ -61,7 +61,7 @@
 ==== 特征性质描述法
 当集合的元素稍多一些时，如小于100的质数所构成的集合：$ { 2\,3\,5\,7\,11\,13\,17\,19\,23\,29\,31\,37\,41\,43\,47\,53\,59\,61\,67\,71\,73\,79\,83\,89\,97 } $ #noindent;逐一列举已是很麻烦的了，而对于含有无穷多个元素的集合，例如全体整数所构成的集合，逐一列举它的元素更是不可能的，这时我们可用某集合所含的元素的“特征性质”去描述这个集合，这种方法叫做#strong[特征性质描述法]．如：
 
-+ 集合元素为 $plus.minus 2\,plus.minus 4\,plus.minus 6\,plus.minus 8\,dots.h\,plus.minus 2 n dots.h$ 的集合，可描述为{偶数｝或{能被2整除的数｝．
++ 集合元素为 $plus.minus 2\,plus.minus 4\,plus.minus 6\,plus.minus 8\,dots.h\,plus.minus 2 n dots.h$ 的集合，可描述为{偶数}或{能被2整除的数}．
 
 + 集合元素为 $plus.minus 1\,plus.minus 3\,plus.minus 5\,plus.minus 7\,dots.h\,plus.minus\(2 n + 1\)dots.h$ 的集合，可描述为{奇数}或{被2除余1的数}．
 
@@ -212,7 +212,7 @@ B & = { 2 n + 1\|n upright("为任意整数") } = { 2 n + 1\|n in bb(Z) } $
 
 在代数中，当我们讨论有理数运算时，全体有理数就是基集．
 
-如果 $A subset.eq I$,在基集 $I$ 中所有不属于 $A$ 的元素所构成的集合叫做 $A$ 的补集，以符号“$A^c$”表示，读为 $A$ 补．因此，$ A inter A^c = nothing\,#h(2em) A union A^c = I $
+如果 $A subset.eq I$,在基集 $I$ 中所有不属于 $A$ 的元素所构成的集合叫做 $A$ 的#strong[补集]，以符号“$A^c$”表示，读为 $A$ 补．因此，$ A inter A^c = nothing\,#h(2em) A union A^c = I $
 
 基集在图示时，常常用一矩形所包围的点表示．图2.12中的阴影部分示意 $A^c$．
 
@@ -220,13 +220,13 @@ B & = { 2 n + 1\|n upright("为任意整数") } = { 2 n + 1\|n in bb(Z) } $
 
 如果以实数全体为基集 $I$，$A = { upright("有理数") }$，$B = { upright("无理数") }$，那么 $A^c = B$, $B^c = A$, $A union B = I$, $A$ 和 $B$ 互为补集．
 
-如果以实数的全体为基集 $I$, $A = { x\|x gt.eq 5 }$, $B = { x\|x < 5 }$, $那 么 A^c = B$, $B^c = A$, $A$ 和 $B$ 互为补集．
+如果以实数的全体为基集 $I$, $A = { x\|x gt.eq 5 }$, $B = { x\|x < 5 }$,那么 $A^c = B$, $B^c = A$, $A$ 和 $B$ 互为补集．
 
-如果以平面 $P$ 上的所有点的集合为基集 $I$, $O$ 是 $P$ 上一个定点，$A = { X\|O X lt.eq 3 upright(c m)\,thick X in P }$, $B = { X\|O X > 3 upright(c m)\,thick X in P }$,那么 $A^c = B$, $B^c = A$, $A$ 和 $B$ 互为补集（图2.13）．
+如果以平面 $P$ 上的所有点的集合为基集 $I$, $O$ 是 $P$ 上一个定点，$A = { X\|O X lt.eq 3 upright(c m)\,thick upright("且") X in P }$, $B = { X\|O X > 3 upright(c m)\,thick upright("且") X in P }$,那么 $A^c = B$, $B^c = A$, $A$ 和 $B$ 互为补集（图2.13）．
 
 对于基集 $I$ 的任何子集合 $A$,都有 $I supset.eq A supset.eq nothing$.
 
-$A inter B = A$ 和 $A inter B^c = nothing$ 是同一件事的两种说法（图2.14）．$A subset.eq B$ 和 $B^c subset.eq A^c$ 是同一件事的两种说法（图2.15）．
+$A inter B = A$ 和 $A inter B^c = nothing$ 是同一件事的两种说法（图2.14）．$A subset.eq B$ 和 $B^c subset.eq A^c$ 也是同一事件的两种说法（图2.15）．
 
 #align(center, grid(columns: (48%, 48%,), column-gutter: 0.35em, align: center + bottom, figure([#fig("2-14");], caption: []), figure([#fig("2-15");], caption: [])));
 
@@ -244,7 +244,7 @@ $A inter B = A$ 和 $A inter B^c = nothing$ 是同一件事的两种说法（图
 
   + 存在一个既是 $A$ 的元素又是 $A$ 的子集的对象吗？
 
-+ 设 $A = { x\|x upright("是一位的奇数") }$，指出在下列集合中，哪个是空集？哪个是只有一个元素的集合？$ B = { x\|x in A\,thick x > 2 }\;#h(2em) C = { x\|x in A\,thick x > 9 } $ #noindent;$ D = { x\|x in A\,thick x upright("除以3余2") } $
++ 设 $A = { x\|x upright("是一位的奇数") }$，指出在下列集合中，哪个是空集？哪个是只有一个元素的集合？$ B = { x\|x in A upright("且") x > 2 }\;#h(2em) C = { x\|x in A upright("且") x > 9 } $ #noindent;$ D = { x\|x in A upright("且") x upright("除以3余2") } $
 
 + 指出下列各题中集合 $A$ 与集合 $B$ 的关系．
 
@@ -254,9 +254,11 @@ $A inter B = A$ 和 $A inter B^c = nothing$ 是同一件事的两种说法（图
 
   + $A = { 2\,3 }\,#h(2em) B = { x\|x^2 - 5 x + 6 = 0 }$
 
+  + $A = { upright("周一")\,upright("周二") }\,#h(2em) B = { x\|x upright("是一周的名称") }$
+
 + 写出 ${ 0\,1 }$ 的所有子集．
 
-+ 写出 ${ upright("黄")\,upright("红")\,upright("兰") }$ 的所有真子集．
++ 写出 ${ upright("黄")\,upright("红")\,upright("蓝") }$ 的所有真子集．
 
 + 用列举法表示 $A inter B$.
 
@@ -268,7 +270,7 @@ $A inter B = A$ 和 $A inter B^c = nothing$ 是同一件事的两种说法（图
 
 + 若基集选定为实数集，$A = { x\|x < 5 }$，求 $A^c$．
 
-+ 若基集定为平面 $P$, $O$ 是 $P$ 上一定点，设平面 $P$ 上的一个子集 $A = { X\|O X < 2\,thick X in upright("平面") P }$,求 $A^c$．
++ 若基集定为平面 $P$, $O$ 是 $P$ 上一定点，设平面 $P$ 上的一个子集 $A = { X\|overline(O X) < 2 upright("且") X in upright("平面") P }$,求 $A^c$．
 
 + 某小组共有学生18人，其中有12人喜欢排球，有15人喜欢篮球，这两种运动都喜欢的有10人，试问：
 
@@ -306,9 +308,9 @@ C & = { X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
 如果 $alpha :\|x\|> 2$, $beta : x > 1$.设 $A = { x\|thick\|x\|> 2 }$, $B = { x\|x > 1 }$,因为 $A = { x\|thick\|x\|> 2 } = { x\|x > 2 } union { x\|x < - 2 }$,由此，我们可以看到一个绝对值大于2的数，并不一定大于1,所以 $A$ 不含于 $B$,即 $alpha arrow.r.double beta$ 不成立，反之，$beta arrow.r.double alpha$ 也不成立．
 
-如果 $alpha arrow.r.double beta$,且 $beta arrow.r.double alpha$,我们便表示为：$alpha arrow.l.r beta$.
+如果 $alpha arrow.r.double beta$,且 $beta arrow.r.double alpha$,我们便表示为：$alpha arrow.l.r.double beta$.
 
-设 $alpha arrow.l.r A$, $beta arrow.l.r B$,若 $alpha arrow.l.r beta$,从集合的观点看就是 $A subset.eq B$ 且 $B subset.eq A$,即 $A = B$.
+设 $alpha arrow.l.r A$, $beta arrow.l.r B$,若 $alpha arrow.l.r.double beta$,从集合的观点看就是 $A subset.eq B$ 且 $B subset.eq A$,即 $A = B$.
 
 设 $alpha arrow.l.r A$, $beta arrow.l.r B$, $gamma arrow.l.r C$,如果 $alpha arrow.r.double beta$,且 $beta arrow.r.double gamma$,由集合与性质之间的对应关系可知 $A subset.eq B$, $B subset.eq C$.再由包含关系的传递性我们就得到 $A subset.eq C$.所以 $alpha arrow.r.double gamma$.这就说明了推出关系的一个基本特性：
 
@@ -392,7 +394,7 @@ C & = { X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
 + 若 $x > y$,则 $frac(x + 2 y, 3) > frac(x + y, 2)$．（假）
 
-这些语句都是命题．从上面这些命题中我们可以看到，命题不一定为数学所独有，如1就不是数学命题，另外我们还看到一个命题是可以判断真假的，有的容易判断如1、2、3．有的就较难判断一些，如4是个假命题，但一眼不容易看出来，实际上如果设 $x = 1$, $y = 0\,thick\(x > y\)$ 那么 $frac(1 + 2 times 0, 3) gt.not frac(1 + 0, 2)$．这就说明4是个假命题了．所谓“判断真假”是对事物的本质说的，并不要求现在就要，“决定”，也不要求最近的将来便可决定．例如：
+这些语句都是命题．从上面这些命题中我们可以看到，命题不一定为数学所独有，如1就不是数学命题，另外我们还看到一个命题是可以判断真假的，有的容易判断如1、2、3．有的就较难判断一些，如4是个假命题，但一眼不容易看出来，实际上如果设 $x = 1$, $y = 0\,thick\(x > y\)$ 那么 $frac(1 + 2 times 0, 3) gt.not frac(1 + 0, 2)$．这就说明4是个假命题了．所谓“判断真假”是对事物的本质说的，并不要求现在就要“决定”，也不要求最近的将来便可决定．例如：
 
 - 别的星球上有生物．
 
@@ -418,7 +420,7 @@ C & = { X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
 把“若 $alpha$,则 $beta$”中的 $beta$ 的反性质：非 $beta$, $alpha$ 的反性质：非 $alpha$,分别作为条件和结论，又可得到一个新命题：若 $macron(beta)$,则 $macron(alpha)$.这个命题叫做“若 $alpha$,则 $beta$”的#strong[逆否命题]．
 
-若“$alpha$,则 $beta$”则叫做上述逆命题，否命题、逆否命题的#strong[原命题]．这就是说，逆命题，否命题，逆否命题都是对原命题而说的，在四种命题中任何一个命题都可作为原命题．如：
+“若 $alpha$,则 $beta$”则叫做上述逆命题，否命题、逆否命题的#strong[原命题]．这就是说，逆命题，否命题，逆否命题都是对原命题而说的，在四种命题中任何一个命题都可作为原命题．如：
 
 - 原命题#h(1em);若 $macron(alpha)$，则 $macron(beta)$
 
@@ -428,7 +430,7 @@ C & = { X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
 - 逆否命题#h(1em);若 $beta$，则 $alpha$
 
-我们把上述四种命题之间的关系，列成下图：
+我们把上述四种命题之间的关系，列成下表：
 
 #align(center)[
 #fig("2-17");
@@ -551,7 +553,7 @@ C & = { X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
 “若 $alpha$,则 $beta$”与它的逆命题“若 $beta$,则 $alpha$”都是真命题，即 $alpha arrow.r.double beta$, $beta arrow.r.double alpha$ 或 $alpha arrow.l.r.double beta$.这时我们说 $alpha$ 是 $beta$ 的充分、必要条件，同时 $beta$ 也是 $alpha$ 的充分、必要条件，充分、必要条件简称#strong[充要条件]．
 
-例如，$triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'$ 且 $overline(B C)$ 与 $overline(B' C')$ 是对应边，则 $triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'$ 是 $angle B = angle B'$，$angle C = angle C'$，$overline(B C) = overline(B' C')$ 的充分必要条件：$x - 2 = 0$ 是 $x = 2$ 的充要条件；两圆能够重合是两个圆半径相等的充要条件．
+例如，$triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'$ 且 $overline(B C)$ 与 $overline(B' C')$ 是对应边，则 $triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'$ 是 $angle B = angle B'$，$angle C = angle C'$，$overline(B C) = overline(B' C')$ 的充分必要条件；$x - 2 = 0$ 是 $x = 2$ 的充要条件；两圆能够重合是两个圆半径相等的充要条件．
 
 #exercise[
 + 下面四句话是否都是表达的同一逻辑关系？
@@ -604,7 +606,7 @@ C & = { X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
 从第一、第二两个含义可以看出：“两个图形的形状和大小完全相同”这个条件是全等形的充分、必要条件．因此，一个概念的定义是这个概念的充要条件．通常我们给一个概念下定义，也就是寻求这个概念的充要条件．这个充要条件，也就是这个概念的特征性质．
 
-在数学中，有些概念是很原始也是很根本的，很难再用别的词来说明它，也就是说，这些概念很难再给它们下定义．例如；点、直线、平面、集合等，我们仅对这些概念加以描述，以帮助大家理解．
+在数学中，有些概念是很原始也是很根本的，很难再用别的词来说明它，也就是说，这些概念很难再给它们下定义．例如：点、直线、平面、集合等，我们仅对这些概念加以描述，以帮助大家理解．
 
 在前面我们已经给很多概念和使用的符号下了定义，请复习和记忆下列各概念和符号的意义，以作为今后学习的依据．
 
@@ -626,7 +628,7 @@ $angle$, $triangle.stroked.t$, $dot.o$, $tack.t$, $pll$, $tilde.equiv$, $tilde.r
 
 + 过已知直线外一点有且只有一条直线和已知直线平行（平行公理）．
 
-+ 一个图形可以移动到任何其它位置而不改变它的形状和大小（移形公理）．
++ 一个图形可以移动到任何其他位置而不改变它的形状和大小（移形公理）．
 
 + 任何一个图形都可以翻转而不改变它的形状和大小（翻转公理）．
 
@@ -665,7 +667,7 @@ $angle$, $triangle.stroked.t$, $dot.o$, $tack.t$, $pll$, $tilde.equiv$, $tilde.r
 
 ]
 ==== 定理和证明
-我们要说明．“若 $alpha$ 则 $beta$”是真命题时，以什么方式来推证呢？最常用的基本推理格式就是推出关系的传递性．即：
+我们要说明“若 $alpha$ 则 $beta$”是真命题时，以什么方式来推证呢？最常用的基本推理格式就是推出关系的传递性．即：
 
 #numbered-align(($upright("如果")$, $zws quad alpha arrow.r.double beta$, [(1)]), ($$, $quad beta arrow.r.double gamma upright("成立")$, [(2)]), ($upright("那么")$, $zws quad alpha arrow.r.double gamma upright("成立")$, [(3)]));
 
@@ -673,7 +675,7 @@ $angle$, $triangle.stroked.t$, $dot.o$, $tack.t$, $pll$, $tilde.equiv$, $tilde.r
 
 #numbered-align(($upright("若")$, $zws quad angle 1 upright("和") angle 2 upright("是对顶角")$, [(1)]), ($$, $quad upright("对顶角相等")$, [(2)]), ($upright("则")$, $zws quad angle 1 = angle 2$, [(3)]));
 
-在几何论证中，使用上述推理格式，在书写上常常由(1)直接得到(3),而把(2)作为由(1)推出(3)的理由写在(3)后边的括号里．因此，上例又可以写为：$ because & quad angle 1 upright("和") angle 2 upright("是对顶角")\
+在几何论证中，使用上述推理格式，在书写上常常由(1)直接得到(3),而把(2)作为由(1)推出(3)的理由写在(3)后边的括号里．因此，上例又可以写为：$ because & quad angle 1 upright("与") angle 2 upright("是对顶角")\
 therefore & quad angle 1 = angle 2 #h(2em) upright("（对顶角相等）") $
 
 在数学中要证明一个命题的正确性，往往要连续使用若干次上述基本推理格式．为此，我们重新回忆一下“对顶角相等”的证明过程．
@@ -807,9 +809,9 @@ $therefore quad angle 1 = angle E P B$
 已知 $angle 1 = angle 2$,由等量代换，就有 $angle 2 = angle E P B$．由平行线定义，可知 $A B pll C D$.
 
 ]
-通过以上三例，我们初步体会了一下证明定理的步骤．值得注意的是在推理时，每推一步都要有可靠的根据，都要有充分的理由．定义、基本性质、已经证明过的定理和已知条件都可作为推理的根据．推理的根据可以象例2.4、例2.5那样写在结论后面的（#h(2em);）之中，也可以象例2.6那样写在结论的前面．总之，不管怎样叙述，都要“出言有本”，“推理有据”把论证的理由说清楚．
+通过以上三例，我们初步体会了一下证明定理的步骤．值得注意的是在推理时，每推一步都要有可靠的根据，都要有充分的理由．定义、基本性质、已经证明过的定理和已知条件都可作为推理的根据．推理的根据可以像例2.4、例2.5那样写在结论后面的（#h(2em);）之中，也可以像例2.6那样写在结论的前面．总之，不管怎样叙述，都要“出言有本”，“推理有据”把论证的理由说清楚．
 
-#heading(level: 2, numbering: none, supplement: [toc-sub])[习题2.2]
+#heading(level: 2, numbering: none, outlined: false)[练习]
 
 + 写出下列各命题的已知和求证．
 
@@ -1025,7 +1027,7 @@ $therefore quad angle 1 = angle E P B$
 
 + 去掉下列各题中推理的多余步骤．
 
-  + 已知；如图，$overline(A C) = overline(A B)$, $overline(A D) = overline(A E)$.
+  + 已知：如图，$overline(A C) = overline(A B)$, $overline(A D) = overline(A E)$.
 
     求证：$angle A D C = angle A E B$.
 
@@ -1073,7 +1075,7 @@ $therefore quad angle 1 = angle E P B$
 
 + 补上下列各题推理中所缺少的必要步骤．
 
-  + 已知；如图，$overline(A B)$, $overline(C D)$ 相交于 $O$ 点，并且 $overline(A O) = overline(O C)$，$overline(O D) = overline(O B)$.
+  + 已知：如图，$overline(A B)$, $overline(C D)$ 相交于 $O$ 点，并且 $overline(A O) = overline(O C)$，$overline(O D) = overline(O B)$.
 
     求证：$angle D = angle B$, $overline(A D) = overline(B C)$.
 
@@ -1141,7 +1143,7 @@ $therefore quad angle 1 = angle E P B$
 
   求证：$triangle.stroked.t A B O tilde.equiv triangle.stroked.t C D O$.
 
-+ 已知；如图，$B D$ 平分 $angle A B C$,并且 $overline(A B) = overline(B C)$,
++ 已知：如图，$B D$ 平分 $angle A B C$,并且 $overline(A B) = overline(B C)$,
 
   求证：$triangle.stroked.t A B D tilde.equiv triangle.stroked.t C B D$.
 
