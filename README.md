@@ -20,7 +20,7 @@
 每册目录下：
 
 - `main.tex`：合订本主文件；
-- `main - nA.tex` / `main - nB.tex`：拆分后的上、下册主文件；
+- `main - nA.tex` / `main - nB.tex`：拆分后的上、下册主文件（不随 Release 发布，需要时自行编译）；
 - `1.tex`、`2.tex`……：各章正文；`preface.tex`：前言；
 - `fig/`：从扫描版中截取的点阵图（矢量图均直接以 TikZ / tkz-euclide / CircuiTikZ 绘制在正文中）。
 
@@ -71,13 +71,9 @@ macOS 下若 ctex 默认字体不可用，可在主文件导言区加入（参�
 
 仓库只保存源码，不提交编译生成的 PDF（已在 `.gitignore` 中排除）。成品 PDF 请在 [Releases](https://github.com/BookDigitalization/Experimental-Math/releases) 中下载，或按上文自行编译。
 
-发布新的 Release 时，[`release-pdf`](.github/workflows/release-pdf.yml) 工作流会自动编译全部 6 册，并把以下文件上传到该 Release（`n` 为册号 1~6）：
+发布新的 Release 时，[`release-pdf`](.github/workflows/release-pdf.yml) 工作流会自动编译全部 6 册合订本，上传为 `Experimental-Math-n.pdf`（`n` 为册号 1~6）。
 
-| 文件 | 内容 |
-|---|---|
-| `Experimental-Math-n.pdf` | 第 n 册合订本 |
-| `Experimental-Math-nA.pdf` | 第 n 册（上） |
-| `Experimental-Math-nB.pdf` | 第 n 册（下） |
+Release 中不提供上、下册拆分版。需要时请用源码自行编译，例如 `just split 3` 会生成 `math3/main - 3A.pdf` 和 `math3/main - 3B.pdf`。
 
 CI 在 Linux 上编译，中文字体使用 ctex 的 `ubuntu` 字体集（Noto CJK），与在 Windows 本机编译（宋体等）的字形略有不同。本地也可以用环境变量 `CTEX_FONTSET` 指定字体集，例如 `CTEX_FONTSET=fandol just book 3`。
 
