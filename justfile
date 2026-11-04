@@ -18,6 +18,15 @@ flags := "-interaction=nonstopmode -halt-on-error -file-line-error"
 # 可选：通过环境变量 CTEX_FONTSET 指定 ctex 字体集（如 ubuntu、fandol、windows、mac），
 # 不修改源码。留空则由 ctex 按操作系统自动选择。CI 中使用 ubuntu。
 fontset := env("CTEX_FONTSET", "")
+
+# 可选：通过环境变量 PAPER 指定纸张（geometry 的纸张名，如 a4paper、letterpaper），
+# 不修改源码。留空则用主文件中的 B5。指定后输出文件名带纸张后缀，如 main-a4paper.pdf。
+# 注意：书中不少 TikZ 图是固定尺寸，比 B5 小的纸（如 a5paper）会有大量插图超出版心。
+paper := env("PAPER", "")
+
+# 编译前注入的导言区选项，以及输出文件名后缀
+_inject := (if fontset == "" { "" } else { '\PassOptionsToClass{fontset=' + fontset + '}{ctexbook}' }) + (if paper == "" { "" } else { '\PassOptionsToPackage{' + paper + '}{geometry}' })
+_suffix := if paper == "" { "" } else { "-" + paper }
 _just := "just --justfile " + quote(justfile())
 
 # 列出所有任务
@@ -49,7 +58,7 @@ distclean:
     git clean -fX
 
 # 在目录 dir 中编译主文件 file（两遍）。
-# 指定了字体集时，先向 ctexbook 传入 fontset 选项再 \input 主文件（用 -jobname 保持输出文件名不变）
+# 指定了字体集或纸张时，先注入相应选项再 \input 主文件，并用 -jobname 设定输出文件名
 [private]
 _tex dir file:
-    cd {{ quote(dir) }} && {{ engine }} {{ flags }} {{ if fontset == "" { quote(file) } else { "-jobname=" + quote(without_extension(file)) + " " + quote('\PassOptionsToClass{fontset=' + fontset + '}{ctexbook}\input{' + file + '}') } }} && {{ engine }} {{ flags }} {{ if fontset == "" { quote(file) } else { "-jobname=" + quote(without_extension(file)) + " " + quote('\PassOptionsToClass{fontset=' + fontset + '}{ctexbook}\input{' + file + '}') } }}
+    cd {{ quote(dir) }} && {{ engine }} {{ flags }} {{ if _inject == "" { quote(file) } else { "-jobname=" + quote(without_extension(file) + _suffix) + " " + quote(_inject + '\input{' + file + '}') } }} && {{ engine }} {{ flags }} {{ if _inject == "" { quote(file) } else { "-jobname=" + quote(without_extension(file) + _suffix) + " " + quote(_inject + '\input{' + file + '}') } }}

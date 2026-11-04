@@ -46,6 +46,19 @@ just clean        # 清理编译中间文件（保留 PDF）
 just distclean    # 清理全部编译产物（含 PDF）
 ```
 
+默认纸张为 B5。可用环境变量 `PAPER` 改为其他纸张（取值为 `geometry` 宏包的纸张名），不需要修改源码。输出文件名会带上纸张后缀：
+
+```sh
+PAPER=a4paper just book 3              # 生成 math3/main-a4paper.pdf
+PAPER=letterpaper just split 3         # 上、下册也适用
+```
+
+```powershell
+$env:PAPER = "a4paper"; just book 3    # Windows PowerShell
+```
+
+书中不少 TikZ 插图是固定尺寸。B5 和 A4 都检查过；比 B5 小的纸（如 `a5paper`）会有大量插图超出版心，不建议使用。
+
 ### 手动编译
 
 在对应目录下执行两遍（第二遍生成目录）：
@@ -71,7 +84,12 @@ macOS 下若 ctex 默认字体不可用，可在主文件导言区加入（参�
 
 仓库只保存源码，不提交编译生成的 PDF（已在 `.gitignore` 中排除）。成品 PDF 请在 [Releases](https://github.com/BookDigitalization/Experimental-Math/releases) 中下载，或按上文自行编译。
 
-发布新的 Release 时，[`release-pdf`](.github/workflows/release-pdf.yml) 工作流会自动编译全部 6 册合订本，上传为 `Experimental-Math-n.pdf`（`n` 为册号 1~6）。
+发布新的 Release 时，[`release-pdf`](.github/workflows/release-pdf.yml) 工作流会自动编译全部 6 册合订本，并把以下文件上传到该 Release（`n` 为册号 1~6）：
+
+| 文件 | 内容 |
+|---|---|
+| `Experimental-Math-n.pdf` | 第 n 册，B5 纸 |
+| `Experimental-Math-n-A4.pdf` | 第 n 册，A4 纸 |
 
 Release 中不提供上、下册拆分版。需要时请用源码自行编译，例如 `just split 3` 会生成 `math3/main - 3A.pdf` 和 `math3/main - 3B.pdf`。
 

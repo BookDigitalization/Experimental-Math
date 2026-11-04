@@ -1,4 +1,4 @@
-# 发布 Release 时，自动编译全部 6 册合订本并把 PDF 上传到该 Release。
+# 发布 Release 时，自动编译全部 6 册合订本（B5 与 A4 两种纸张）并把 PDF 上传到该 Release。
 # 上、下册拆分版不再发布，需要时可用 `just split n` 自行编译。
 # 也可在 Actions 页面手动运行：不填标签时只编译并保存为构件（用于测试），
 # 填写已有 Release 的标签时会把 PDF 上传（覆盖同名文件）到该 Release。
@@ -49,15 +49,21 @@ jobs:
         with:
           tool: just
 
-      - name: 编译合订本
+      - name: 编译合订本（B5）
         run: just book ${{ matrix.vol }}
+
+      - name: 编译合订本（A4）
+        run: just book ${{ matrix.vol }}
+        env:
+          PAPER: a4paper
 
       - name: 整理文件名
         shell: bash
         run: |
           v=${{ matrix.vol }}
           mkdir -p dist
-          cp "math$v/main.pdf" "dist/Experimental-Math-$v.pdf"
+          cp "math$v/main.pdf"          "dist/Experimental-Math-$v.pdf"
+          cp "math$v/main-a4paper.pdf" "dist/Experimental-Math-$v-A4.pdf"
           ls -l dist
 
       - name: 上传日志（失败时）
