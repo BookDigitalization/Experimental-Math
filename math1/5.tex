@@ -14,7 +14,7 @@
 
 在代数中，对于多项式来说，也有类似的概念．如果多项式$f(x)$能够被非零多项式$g(x)$整除，也就是，可以找到一个多项式$Q(x)$，使$f(x)=Q(x)\cdot g(x)$成立，那么，$f(x)$就叫做$g(x)$的倍式，而$g(x)$叫做$f(x)$的因式．当然，这种情况下，$f(x)$也是$Q(x)$的倍式，$Q(x)$也是$f(x)$的因式．显然，这里的$Q(x)$, $g(x)$的次数都不会大于$f(x)$的次数．
 
-例如：$\because\quad x-1=(x+1)(x-1)$,
+例如：$\because\quad x^2-1=(x+1)(x-1)$,
 
 $\therefore\quad $ $x^2-1$就是$(x+1)$，$(x-1)$的倍式；而$(x+1)$，
 $(x-1)$又都是$(x^2-1)$的因式．
@@ -35,21 +35,21 @@ x^2-1&= 1\cdot (x^2-1)\\
 &=\frac{1}{5}\cdot (5x+5)(x-1)\\
 &=\cdots \cdots \cdots \\
 &=a\left(\frac{x^2}{a}-\frac{1}{a}\right)=a(x+1)\left(\frac{x}{a}-\frac{1}{a}\right)\\
-&=a\left(\frac{a}{x}+\frac{1}{a}\right)(x-1)
+&=a\left(\frac{x}{a}+\frac{1}{a}\right)(x-1)
 \end{split}\]
 $\therefore\quad x^2-1$的因式还可以有：
 \[1,\; x^2-1;\quad 2,\; \frac{x^2}{2}-\frac{1}{2},\; \frac{x}{2}+\frac{1}{2},\; \frac{x}{2}-\frac{1}{2};\quad \frac{1}{5},\; 5x^2-5,\; 5x+5,\; 5x-5; \ldots \]
 一般地可以有因式：
 \[a,\quad \frac{1}{a}x^2-\frac{1}{a},\quad \frac{1}{a}x+\frac{1}{a},\quad \frac{1}{a}x-\frac{1}{a},\ldots\]
 
-今后，我们所说多项式的因式，一律不考虑它们之间零次因式（一个非零常数）的差别，这样一来，在上例中，我们就认为：$(x-1)$的因式有：$a,\; x+1,\; x-1,\; x^2-1$．
+今后，我们所说多项式的因式，一律不考虑它们之间零次因式（一个非零常数）的差别，这样一来，在上例中，我们就认为：$(x^2-1)$的因式有：$a,\; x+1,\; x-1,\; x^2-1$．
 
 同样，由于$x^3-1=(x-1)(x^2+x+1)$，因而它有因式$a,\; x-1,\; x^2+x+1,\; x^3-1$．
 
 如果一个多项式$f(x)$，除了有零次因式和它
 本身$f(x)$以外，再也没有其它因式，那么，$f(x)$就叫做\textbf{不可约多项式}．
 
-如果一个多项式$f(x)$，除有零次因式和它本身$f(x)$外，还有次数较低（但大于1次）的其它因式$Q(x)$, $g(x)$, 那么，$f(x)$就叫做\textbf{可约多项式}．
+如果一个多项式$f(x)$，除有零次因式和它本身$f(x)$外，还有次数较低（但不低于1次）的其它因式$Q(x)$, $g(x)$, 那么，$f(x)$就叫做\textbf{可约多项式}．
 
 例如：多项式$f(x)=ax+b\; (a\ne 0)$就是不可约多项式；
 多项式$g(x)=x^2+1$, 在实数范围内是不可约多项式；多项式$R(x)=x^2-2$ 在有理数范围内，是不可约多项式；但在实数范围内，由于$x^2-2=(x+\sqrt{2})\cdot (x-\sqrt{2})$，因此，它又是一个可约多项式．
@@ -133,7 +133,7 @@ $\therefore\quad x^2-1$的因式还可以有：
 \begin{ex}
 \begin{enumerate}
     \item 填空：
-\[36x^2y^2z=-4x^2y(\qquad\quad),\quad x(y-z)=(\qquad\quad)(x-y)  \]
+\[36x^2y^2z=-4x^2y(\qquad\quad),\quad x(y-z)=(\qquad\quad)(z-y)  \]
 \[2x(x-y)^2=(\qquad\quad)(y-x)^2,\quad 7y(y-x)^3=(\qquad\quad)(x-y)^3\]
 \[-x-x^2-x^3=-x(\quad\qquad),\quad 6a^2b+12ab-18ab^2=6ab(\quad\qquad)\]
 
@@ -362,10 +362,10 @@ $\therefore\quad x^2-1$的因式还可以有：
 \[x^3+1=(x+1)(x^2-x+1)\]
 \[a^6-125b^3=(a^2-5b)(a^4+5a^2b+25b^2)\]
 \[\begin{split}
-    16x^6-\frac{1}{4}&=\frac{1}{4}(64a^6-1)\\
-    &=\frac{1}{4}\left[(8a^3)^2-1\right]\\
-    &=\frac{1}{4}(8a^3+1)(8a^3-1)\\
-    &=\frac{1}{4}(2a+1)(4a^2-2a+1)(2a-1)(4a^2+2a+1)
+    16x^6-\frac{1}{4}&=\frac{1}{4}(64x^6-1)\\
+    &=\frac{1}{4}\left[(8x^3)^2-1\right]\\
+    &=\frac{1}{4}(8x^3+1)(8x^3-1)\\
+    &=\frac{1}{4}(2x+1)(4x^2-2x+1)(2x-1)(4x^2+2x+1)
 \end{split}\]
 \end{solution}
 
@@ -380,12 +380,12 @@ $\therefore\quad x^2-1$的因式还可以有：
 对于二次三项式，可以应用在第三章中学习过的配方法和二项平方差公式进行因式分解．
 \begin{example}
     分解因式：
-\[x^2+3x+40,\qquad 2x^2+x-3\]
+\[x^2+3x-40,\qquad 2x^2+x-3\]
 \end{example}
 
 \begin{solution}
 \[\begin{split}
-    x^2+3x+40&=x^2+3x+\left(\frac{3}{2}\right)^2-\left(\frac{3}{2}\right)^2-40\\
+    x^2+3x-40&=x^2+3x+\left(\frac{3}{2}\right)^2-\left(\frac{3}{2}\right)^2-40\\
     &=\left(x+\frac{3}{2}\right)^2-\left(\frac{13}{2}\right)^2\\
     &=\left(x+\frac{3}{2}+\frac{13}{2}\right)\left(x+\frac{3}{2}-\frac{13}{2}\right)\\
     &=(x+8)(x-5)
@@ -538,7 +538,7 @@ $\therefore\quad x^2-1$的因式还可以有：
     \begin{tikzpicture}
  \begin{scope}
 \node (A) at (-.6,1.2) {$1$};
-\node (B) at (.6,1.2) {$3$};
+\node (B) at (.6,1.2) {$-3$};
 \node (C) at (-.6,0) {$1$};
 \node (D) at (.6,0) {$4$};
 \draw[very thick] (A)--(D);
@@ -817,7 +817,7 @@ $\therefore\quad $可设$2x^2-3xy-2y^2+3x+4y-2=(2x+y+n)(x-2y+m)$，即：
         m\cdot n=-2
 \end{align}
 
-由(5.1), (5.2)可解出$m=2$, $n=-1$．代入(1.3)满足．
+由(5.1), (5.2)可解出$m=2$, $n=-1$．代入(5.3)满足．
 
 $\therefore\quad 2x^2-3xy-2y^2+3x+4y-2=(2x+y-1) (x-2y+2)$
 \end{solution}
@@ -1070,8 +1070,8 @@ $\therefore\quad f(x)$除以$x-2$，所得余式为一常数$12$．
 \begin{center}
     \begin{tikzpicture}
     \node at (0,0.5) [right] {$1\;\quad +3\;\qquad  -1\;\;\quad\quad\quad  -6$};
-    \node at (0,0) [right] {$\qquad  a\; \quad \quad a^3+3a\;\quad\quad  a^3+3a^2-a$};
-    \node at (0,-0.6) [right] {$1\quad  a+3\;\; a^3+3a-1\;\; \boxed{a^3+3a^2-a-6}$};
+    \node at (0,0) [right] {$\qquad  a\; \quad \quad a^2+3a\;\quad\quad  a^3+3a^2-a$};
+    \node at (0,-0.6) [right] {$1\quad  a+3\;\; a^2+3a-1\;\; \boxed{a^3+3a^2-a-6}$};
     \draw (-.5,-.25)--(6,-.25)--(6,1);
     \draw (6,.25)--(6.5,.25);
     \node at (6.25,.5){$a$};
@@ -1089,7 +1089,7 @@ f(a)&= a^3+3a^2-a-6
 
 由此看来，真是巧极了，$f(x)$除以$x-2$的余式正好等于$f(2)$，而$f(x)$除以$x-a$所得的余式，也恰好等于$f(a)$．我们不禁会问：
 
-一般地多项式$f(x)=a_n x^n +a_{n-1}x^{n-1}+cdots+a_1x+a_0$除以$x-a$时，所得的余式是否也等于$f(a)$呢？
+一般地多项式$f(x)=a_n x^n +a_{n-1}x^{n-1}+\cdots+a_1x+a_0$除以$x-a$时，所得的余式是否也等于$f(a)$呢？
 以下定理可以做出肯定回答．
 
 \begin{blk}{余式定理}
@@ -1210,7 +1210,7 @@ $f(x)=\poly{3,10,-15,-9,8,-7}$．求$f\left(-\frac{1}{3}\right)$的值．
 
 \begin{ex}
 \begin{enumerate}
-    \item 设$\poly{1,-3,-5,20,-8}$，试分别求出$f(x)$除以下列各式的余数：
+    \item 设$f(x)=\poly{1,-3,-5,20,-8}$，试分别求出$f(x)$除以下列各式的余数：
     \[x-1,\quad x+1,\quad x-2,\quad x+2,\quad 3x+1,\quad 3x-2 \]
     \item 用适当方法求值：
     \begin{enumerate}
@@ -1274,7 +1274,7 @@ $\therefore\quad x-y$是$x^n-y^n$的因式．
 
 $\because\quad \varphi(y) =y^n +y^n\ne 0$
 
-$\therefore\quad x-y$是$x^n+y^n$的因式．
+$\therefore\quad x-y$不是$x^n+y^n$的因式．
 \end{proof}
 
 \begin{blk}{推论2}
@@ -1364,7 +1364,7 @@ $\therefore\quad x=-1,\; x=1$是$f(x)$的两个根．
 \begin{enumerate}
     \item 证明：$f(x)=x^3-4x^2+9$含有因式$x-3$．你能找出$f(x)$的另一个因式来吗？
     \item 已知$\pm 1$是$f(x)=\poly{2,3,-2,-3}$的两个根，试用除法求出$f(x)$的第三个根来．
-    \item 证明$f(x)=\poly{1,-2,0,-1,-2}$能被$x^2-3x+2$整除．
+    \item 证明$f(x)=\poly{1,-2,0,-1,2}$能被$x^2-3x+2$整除．
     \item 如果$x-3$能整除$g(x)=x^3+ax^2-20x+6$，求$a$．
     \item 如果$(x+2)(x-4)$能整除$f(x)=2x^3-x^2+mx+n$．试求$m$及$n$的值．
 \end{enumerate}
@@ -1433,7 +1433,7 @@ $\because\quad f(0)=0,\quad f(1)=0$
 
 $\therefore\quad f(x)$一定可被$x(x-1)$整除．
 
-因而，可设$f(ax)=kx(x-1)$．
+因而，可设$f(x)=kx(x-1)$．
 
 又$\because\quad f(2)=1$，代入上式得
 \[1=k\x2 (2-1) \]
@@ -1500,7 +1500,7 @@ $F (x) =x (x-1) (ax^2+bx+c)$．将条件$F(-1)=2,\quad F(2)=20,\quad F(-2)=12$�
 \[\begin{cases}
     F (-1) =2=-1 (-1-1) (a-b+c),\\
     F (2) =20=2 (2-1) (4a+2b+c),\\
-    F (-2) =12=-2 (-2-1) (4a-26+c). 
+    F (-2) =12=-2 (-2-1) (4a-2b+c). 
 \end{cases}\]
 即：\[\begin{cases}
     a-b+c=1\\
@@ -1545,7 +1545,7 @@ $F (x) =x (x-1) (ax^2+bx+c)$．将条件$F(-1)=2,\quad F(2)=20,\quad F(-2)=12$�
 
 
 \begin{example}
-    将$f(x)=\poly{3,-4,1,6}$分解因式．
+    将$f(x)=\poly{1,-4,1,6}$分解因式．
 \end{example}
 
 \begin{analyze}
@@ -1576,7 +1576,7 @@ $\because\quad f(3)= 0,\qquad \therefore\quad x-3$是$f(x)$的因式．
 
 以下不必尝试，$f(x)$不会再有一次因式．因此：
 \[\begin{split}
- f(x)&=\poly{3,-4,1,6}\\
+ f(x)&=\poly{1,-4,1,6}\\
  &=(x+1)(x-2)(x-3)   
 \end{split}\]
 \end{solution}
@@ -1847,7 +1847,7 @@ $a_nx^n+a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\cdots+a_1x+a_0\quad (a_n\ne 0)$
     \frac{a_{n-2}}{a_n}$；
     \item $n$个根的所有三个根乘积之和$(x_1x_2x_3+\cdots+x_{n-2}x_{n-1}x_n)$等于$x^{n-3}$的系数除以首项系数的相反数，即：$-\frac{a_{n-3}}{a_n}$；
     \item …………
-    \item $n$个根的所有$(n-1)$个根乘积之和$(x_1x_2\cdots x_{n-1} +\cdots+ x_2x_3\cdots x_n)$等于$x$的系数除以首项系数再乘以$(-1)^{n-1}$，即：$ (-1)^{n-1}\frac{a_{n-1}}{a_n}$；
+    \item $n$个根的所有$(n-1)$个根乘积之和$(x_1x_2\cdots x_{n-1} +\cdots+ x_2x_3\cdots x_n)$等于$x$的系数除以首项系数再乘以$(-1)^{n-1}$，即：$ (-1)^{n-1}\frac{a_{1}}{a_n}$；
     \item $n$个根的乘积$x_1x_2\cdots x_n$就等于常数项除以首项系数再乘以$(-1)^{n}$，即：$ (-1)^{n}\frac{a_{0}}{a_n}$．
 \end{itemize}
 \end{blk}
@@ -1857,7 +1857,7 @@ $a_nx^n+a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\cdots+a_1x+a_0\quad (a_n\ne 0)$
 其中，$x_1$、$x_2$是一元二次方程的两个根．
 
 同样，一元三次方程，也可以写成：
-\[x^3- (x1+x2+x3) x+ (x_1x_2+x_1x_3+x_2x_3) x
+\[x^3-(x_1+x_2+x_3)x^2+(x_1x_2+x_1x_3+x_2x_3)x
 -x_1\cdot x_2\cdot x_3=0\]
 
 这样一来，如果已知方程的根，就可以反求出这个方程．
@@ -2156,10 +2156,10 @@ $g (x) =3x^2-3=3 (x+1) (x-1)$
     f(x)&=2x^3y^2 (x^2-6xy+9y^2)=2x^3y^2(x-3y)^2\\
     g(x)&=4x^2y(x^2-9y^2)=4x^2y(x+3y)(x-3y)
 \end{split}\]
-\end{solution}
 且$\because\quad $最高公因式不考虑零次式
 
 $\therefore\quad (f(x),g(x))=x^2y(x-3y)$
+\end{solution}
 
 由例5.48、例5.49可见，求两个多项式的最高公因式，只要先分解因式，选各公因式的最低次方连乘即可．
 
@@ -2215,12 +2215,12 @@ $$a=q_1\cdot b+r_1,\qquad \text{其中: }0\le r_1<b$$
 
 所以，当$r_1\ne 0$时，我们可以把求$a,b$的最大公约数化为求较小的数$b,r_1$的最大公约数．
 
-如果还嫌$b,r_1$数目太大，当然还可以重复以上的做法，用$r$，除$b$，得商$q_2$，余$r_2$，因而就又有：
+如果还嫌$b,r_1$数目太大，当然还可以重复以上的做法，用$r_1$除$b$，得商$q_2$，余$r_2$，因而就又有：
 \[b=q_2r_1 +r_2,\qquad  0\le r_2<r_1\]
 
 这时，若$r_2=0$，则$(b,r_1)=r_1$；从而$(a,b)= (b,r_1) =r_1$．
 
-若$r_2\ne 0$，则与前边做法同理就有$(b,r_1)=(r_1, r_2)$；从而$(a,b)=(b,r_2)=(r_1,r_2)$．其中$r_1,r_2$又比$b,r_1$要小了．
+若$r_2\ne 0$，则与前边做法同理就有$(b,r_1)=(r_1, r_2)$；从而$(a,b)=(b,r_1)=(r_1,r_2)$．其中$r_1,r_2$又比$b,r_1$要小了．
 
 这样逐步重复地用除法把所要求最大公约数的一对数，换成愈来愈小的另一对数．最后自然可以求得$a,b$的最大公约数了．
 
@@ -2421,7 +2421,7 @@ $\therefore\quad (1547,3135)=1\quad $ 可见，1547与3135是互质的．
 
 
     \begin{scope}[xshift=7cm]
-\foreach \y/\ytext in {0/{},1/{},2/\boxed{29},3/348,4/435}
+\foreach \y/\ytext in {0/{},1/{},2/\boxed{29},3/58,4/87}
 {
     \node at (-1, \y)[left]{$\ytext$};
 }    
@@ -2529,7 +2529,7 @@ $$(r_1 (x), r_2(x))=(g(x),r_1(x))$$
 % \end{center}
 \polylongdiv{x^4+x^3+0+0-2}{x^3+0+0-1}
 
-$\therefore\quad f(x)=(x+1)\cdot g(x)+(x+1)$，并且
+$\therefore\quad f(x)=(x+1)\cdot g(x)+(x-1)$，并且
 $(f(x),g(x))=(g(x), (x-1))$．
 
 再求$g(x)$除以$x-1$的商及余．
@@ -3203,7 +3203,7 @@ $\therefore\quad [f(x),\; g(x)]=x^2(x+1)(x-1)$
 \begin{multicols}{2}
     \begin{enumerate}
     \item $\left(x^{2}+3 x\right)^{2}-(2 x+6)^{2}$
-    \item $2 a^{8}-7 a^{2} b+3 a b^{2} ;$
+    \item $2 a^{3}-7 a^{2} b+3 a b^{2} ;$
     \item  $x^{3}+x^{2} y-x y^{2}-y^{3}$
     \item  $x^{6}-3 x^{4}+2 x^{2}$
     \item  $\left(a^{2}-b^{2}+1\right)^{2}-4 a^{2} b^{2}$
@@ -3246,7 +3246,7 @@ $\therefore\quad [f(x),\; g(x)]=x^2(x+1)(x-1)$
 \item 先将被除式分解因式, 再求商．
 \begin{enumerate}
     \item $\left[(a+b)^{3}-c^{3}\right]\div (a+b-c)$
-\item $\left(a^{3}+6 a^{2} b+12 a b^{2}+8 b^{8}\right)\div (a+2 b)$
+\item $\left(a^{3}+6 a^{2} b+12 a b^{2}+8 b^{3}\right)\div (a+2 b)$
 \end{enumerate}
 
 \item 分解因式：
@@ -3262,7 +3262,7 @@ $\therefore\quad [f(x),\; g(x)]=x^2(x+1)(x-1)$
 \begin{enumerate}
 \item $2 x^{2}-5 x y-3 y^{2}+x+11 y-6$
 \item $x^{2}-5 x y+6 y^{2}-x+y-2 $
-\item $x^{2}+3 x y+2 y^{2}+3 z x+5 y^{3}+2 z^{2}$
+\item $x^{2}+3 x y+2 y^{2}+3 z x+5 yz+2 z^{2}$
 \end{enumerate}
 
 
