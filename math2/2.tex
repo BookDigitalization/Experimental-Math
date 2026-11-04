@@ -16,7 +16,7 @@
 
 第一，一个集合完全被它所含的元素所确定．至于集合
 的元素之间是否具有某种相互关系，怎样排列，以及这些元
-素所构成的集合是具有某种功效，单从集合的观点来看，
+素所构成的集合是否具有某种功效，单从集合的观点来看，
 是一样的．例如，“一堆还没有组装的手表另件”和用“这
 些另件组装好了的手表”是同一个集合．因为两者包含同样
 的元素．因此，集合这个概念的要素是：\textbf{一个集合完全被它
@@ -534,7 +534,7 @@ $A\cap B=A$和$A\cap B^c=\emptyset$是同一件事的两种说法（图2.14）�
 
 如果$\alpha :x>2$, $\beta :x>3$, 因为一个大于3的数也一定大于2, 所以$\beta \Rightarrow\alpha$, 若$A=\{ x|x>2\}$, $B=\{ x|x>3\}$, 则有$B\subseteq A$．
 
-如果$\alpha :|x|>2$, $\beta :x>1$. 设$A=\{x|\; |x|>2\}$, $B=\{ x| x>1\}$, 因为$A=\{ x|\; |x|>2\}=\{x|x>2\}\cup\{x|<-2\}$, 由此，我们可以看到一个绝对值大于2
+如果$\alpha :|x|>2$, $\beta :x>1$. 设$A=\{x|\; |x|>2\}$, $B=\{ x| x>1\}$, 因为$A=\{ x|\; |x|>2\}=\{x|x>2\}\cup\{x|x<-2\}$, 由此，我们可以看到一个绝对值大于2
 的数，并不一定大于1, 所以$A$不含于$B$,即$\alpha \Rightarrow\beta$ 不成立，反之，$\beta \Rightarrow \alpha$也不成立．
 
 如果$\alpha \Rightarrow\beta$, 且$\beta \Rightarrow\alpha$, 我们便表示为：$\alpha\longleftrightarrow \beta$.
@@ -553,7 +553,7 @@ $A\cap B=A$和$A\cap B^c=\emptyset$是同一件事的两种说法（图2.14）�
 	合．“具有性质$\alpha$ 且具有性质$\beta$ ”，记作$\alpha \wedge\beta$， 读作$\alpha$ 且$\beta$；
 	\item  $A\cup B$就是具有性质$\alpha$或具有性质$\beta$ 的元素所构成的集
 	合．“具有性质$\alpha$ 或具有性质$\beta$ ”，记作$\alpha \vee\beta$. 读作$\alpha$ 或$\beta$． 
-	\item $A^c$就是哪些不具有性质$\alpha$ 的元素所构成的集合．我
+	\item $A^c$就是那些不具有性质$\alpha$ 的元素所构成的集合．我
 	们用$\bar{\alpha}$表示“不具有性质$\alpha$”，读作非$\alpha$, 也叫$\alpha$的反性质．
 \end{itemize}
 
@@ -590,7 +590,7 @@ $A\cap B=A$和$A\cap B^c=\emptyset$是同一件事的两种说法（图2.14）�
 		$A^c$ & $\bar\alpha$ & $B^c$ & $\bar\beta$\\
 		$A\cap B$ & $\alpha\wedge \beta$ & $A\cup B$ & $\alpha\vee\beta$\\
 		$A\subseteq B$ & $\alpha\Rightarrow\beta $& $A=B$&$\alpha\Leftrightarrow \beta$\\
-		\multicolumn{2}{c|}{$A\subseteq B$与$B\subseteq A^c$同义}& \multicolumn{2}{|c}{$\alpha\Rightarrow\beta$与$\bar\beta\Rightarrow\bar\alpha$同义}\\
+		\multicolumn{2}{c|}{$A\subseteq B$与$B^c\subseteq A^c$同义}& \multicolumn{2}{|c}{$\alpha\Rightarrow\beta$与$\bar\beta\Rightarrow\bar\alpha$同义}\\
 		\hline
 	\end{tabular}
 \end{center}
@@ -636,7 +636,7 @@ $\frac{1+2\x 0}{3}\not>\frac{1+0}{2}$．这就说明4是个假命题了．所谓
 若“$\alpha$, 则$\beta$”则叫做上述逆命题，否命题、逆否命题的\textbf{原命题}．这就是说，逆命题，否命题，逆否命题都是对原命题而说的，在四种命题中任何一个命题都可作为原命题．如：
 \begin{itemize}
 	\item 原命题\quad 若$\bar\alpha$，则$\bar\beta$
-	\item 逆命题\quad 若$\bar\beta$，则$\alpha$
+	\item 逆命题\quad 若$\bar\beta$，则$\bar\alpha$
 	\item 否命题\quad 若$\alpha$，则$\beta$（$\bar\alpha$的非是$\alpha$，$\bar\beta$的非是$\beta$）
 	\item 逆否命题\quad 若$\beta$，则$\alpha$
 \end{itemize}
@@ -700,7 +700,7 @@ $\frac{1+2\x 0}{3}\not>\frac{1+0}{2}$．这就说明4是个假命题了．所谓
 
 从以上的例子，我们看到原命题和逆否命题同真假，逆命题和否命题同真假．
 
-前面我们已经知道，$\alpha\Rightarrow \beta$ ($A\subseteq B$) 与$\beta\Rightarrow\alpha$ ($B^c\subseteq A^c$)
+前面我们已经知道，$\alpha\Rightarrow \beta$ ($A\subseteq B$) 与$\bar\beta\Rightarrow\bar\alpha$ ($B^c\subseteq A^c$)
 同义．这就是说，两个互为逆否的命题是同真假的，而$\alpha\Rightarrow\beta$ ($A\subseteq B$)成立并不能保证$\beta\Rightarrow \alpha$ ($B\subseteq A$)
 也成立．这就是说，两个互逆命题不一定同真假．
 
@@ -737,8 +737,8 @@ $\frac{1+2\x 0}{3}\not>\frac{1+0}{2}$．这就说明4是个假命题了．所谓
 			\item 如果$|a|=|b|$, 则$a=b$.
 			\item 如果$\triangle ABC\cong \triangle A'B'C'$, 则$\overline{AB}=\overline{A'B'}$.
 			\item 等角的余角相等．
-			\item 若$a\ne b$, 则$a^2\ne c^2$.
-			\item 若$(x-a)(x-b)=0$, $x=a$.
+			\item 若$a\ne b$, 则$a^2\ne b^2$.
+			\item 若$(x-a)(x-b)=0$, 则$x=a$.
 			\item 如果$x_1$、$x_2$是方程$ax^2+bx+c=0$的两个根，那么$x_1+x_2=-\frac{b}{a}$, $x_1x_2=\frac{c}{a}$.
 			\item 多项式$f(x)$除以$(x-a)$所得的余式等于$f(a)$.
 		\end{enumerate}
@@ -755,14 +755,14 @@ $\frac{1+2\x 0}{3}\not>\frac{1+0}{2}$．这就说明4是个假命题了．所谓
 
 例如，如果李华是北京人，那么他是中国人．这个命题显然是个真命题．这时，我们也说，“李华是北京人”是“李华是中国人”的充分条件，而“李华是中国人”是“李华是北京人”的必要条件，这就是说由“李华是北京人”就能充分说明“李华是中国人”，但“李华是中国人”只是“李华是北京人”必定有的条件．如果李华不是中国人，更谈不上他是北京人了．
 
-又如若$\triangle {\rm I}\cong \triangle {\rm II}$, 则$\triangle {\rm I}$与$\triangle {\rm II}$的三个角分别相等．我们知道这也是个真命题，即可由$\triangle {\rm I}\cong \triangle {\rm II}\Rightarrow \triangle {\rm I}$与$\triangle {\rm II}$的三个角分别相等．这时我们说$\triangle {\rm I}\cong \triangle {\rm II}$是$\triangle {\rm I}$与$\triangle {\rm II}$的三个角分别相等的充分条件．这就是说，若有$\triangle {\rm I}\cong\triangle {\rm II}$, II就能充分保证$\triangle {\rm I}$与$\triangle {\rm II}$的三个角分别相等．但$\triangle {\rm I}$与$\triangle {\rm II}$的三个角分别相等是$\triangle {\rm I}\cong \triangle {\rm II}$的必要条件，如果$\triangle {\rm I}$与$\triangle {\rm II}$的三个角不分别相等，则$\triangle {\rm I}$和$\triangle {\rm II}$绝不会全等．
+又如若$\triangle {\rm I}\cong \triangle {\rm II}$, 则$\triangle {\rm I}$与$\triangle {\rm II}$的三个角分别相等．我们知道这也是个真命题，即可由$\triangle {\rm I}\cong \triangle {\rm II}\Rightarrow \triangle {\rm I}$与$\triangle {\rm II}$的三个角分别相等．这时我们说$\triangle {\rm I}\cong \triangle {\rm II}$是$\triangle {\rm I}$与$\triangle {\rm II}$的三个角分别相等的充分条件．这就是说，若有$\triangle {\rm I}\cong\triangle {\rm II}$, 就能充分保证$\triangle {\rm I}$与$\triangle {\rm II}$的三个角分别相等．但$\triangle {\rm I}$与$\triangle {\rm II}$的三个角分别相等是$\triangle {\rm I}\cong \triangle {\rm II}$的必要条件，如果$\triangle {\rm I}$与$\triangle {\rm II}$的三个角不分别相等，则$\triangle {\rm I}$和$\triangle {\rm II}$绝不会全等．
 
 “若$\alpha$, 则$\beta$”与它的逆命题“若$\beta$, 则$\alpha$”都是
 真命题，即$\alpha\Rightarrow\beta$, $\beta\Rightarrow\alpha$或$\alpha\Leftrightarrow\beta$. 这时我们说$\alpha$是$\beta$的充分、必要条件，同时$\beta$也是$\alpha$的充分、必要条件，充分、必要条件简称\textbf{充要条件}．
 
 例如，$\triangle ABC\cong \triangle A'B'C'$且$\overline{BC}$与$\overline{B'C'}$是对应边，则$\triangle ABC\cong \triangle A'B'C'$是
 $\angle B=\angle B'$，$\angle C=\angle C'$，
-$\overline{BC}=\overline{B'C'}$的充分必要条件：$x-2=0$是$x=0$的充要条件；两圆能够重合是两个圆半径相等的充要条件．
+$\overline{BC}=\overline{B'C'}$的充分必要条件：$x-2=0$是$x=2$的充要条件；两圆能够重合是两个圆半径相等的充要条件．
 
 \begin{ex}
 	\begin{enumerate}
@@ -791,7 +791,7 @@ $\overline{BC}=\overline{B'C'}$的充分必要条件：$x-2=0$是$x=0$的充要�
 
 \subsubsection{定义和基本性质}
 \paragraph{定义}
-在数学中，我们使用的“概念”和“符号”，如果它们的意义不明确，人们可以自由理解，那就无法研究问题了．以必须对“概念”和“符号”的意义作确切的规定．这种又“概念”和“符号”的意义作规定的工作就叫做给“概念”
+在数学中，我们使用的“概念”和“符号”，如果它们的意义不明确，人们可以自由理解，那就无法研究问题了．所以必须对“概念”和“符号”的意义作确切的规定．这种对“概念”和“符号”的意义作规定的工作就叫做给“概念”
 和“符号”下定义．
 
 例如，“两个形状和大小完全相同的图形叫做全等形．”这就是全等形的定义．
@@ -804,7 +804,7 @@ $\overline{BC}=\overline{B'C'}$的充分必要条件：$x-2=0$是$x=0$的充要�
 
 从第一、第二两个含义可以看出：“两个图形的形状和大小完全相同”这个条件是全等形的充分、必要条件．因此，一个概念的定义是这个概念的充要条件．通常我们给一个概念下定义，也就是寻求这个概念的充要条件．这个充要条件，也就是这个概念的特征性质．
 
-在数学中，有些概念是很原始也是很根本的，很难再用别的词来说明它，也就是说，这些概念很难再给它们下定义．例如；点、直线、平面、集合等，我们仅对这些概念加以描述，以邦助大家理解．
+在数学中，有些概念是很原始也是很根本的，很难再用别的词来说明它，也就是说，这些概念很难再给它们下定义．例如；点、直线、平面、集合等，我们仅对这些概念加以描述，以帮助大家理解．
 
 在前面我们已经给很多概念和使用的符号下了定义，请复习和记忆下列各概念和符号的意义，以作为今后学习的依据．
 
@@ -1154,7 +1154,7 @@ $\therefore\quad 2\overline{AC}=2\overline{DF}$ （\qquad）
 
 又$\because\quad C$点，$F$点分别是$\overline{AB}$, $\overline{DE}$的中点（\qquad）
 
-$\therefore\quad 2\overline{AC}=2\overline{AB}$ （\qquad），
+$\therefore\quad 2\overline{AC}=\overline{AB}$ （\qquad），
 $2\overline{DF}=\overline{DE}$（\qquad）．
 
 $\therefore\quad \overline{AB}=\overline{DE}$（\qquad）．
@@ -1186,7 +1186,7 @@ $\therefore\quad \overline{AB}=\overline{DE}$（\qquad）．
 
 
 \item 已知：如图，$\angle ABC=\angle EFG$, $BD$, $FH$分别是
-$\angle ABC$，$\angle FFG$的平分线．
+$\angle ABC$，$\angle EFG$的平分线．
 
 求证：$\angle ABD=\angle HFG$.
 
@@ -1507,7 +1507,7 @@ $\overline{AD}=\overline{BC}$（全等三角形的对应边相等）．
 
 $\because\quad \overline{AD}=\overline{BC},\quad \overline{AB}=\overline{CD}$（已知）
 
-$\therefore\quad \triangle ABC\triangle CDA$（SSS）
+$\therefore\quad \triangle ABC\cong\triangle CDA$（SSS）
 
 $\therefore\quad \angle B=\angle D$（全等三角形的对应角相等）．
 
@@ -1727,7 +1727,7 @@ $C=\{2,6,8,9\}$．求：
 \end{enumerate}	
 \end{multicols}
 
-\item 写出列各命题中的“已知”部分和“求证”部分．
+\item 写出下列各命题中的“已知”部分和“求证”部分．
 \begin{enumerate}
 	\item 三角形三个角的和等于$180^{\circ}$.
 	\item 角平分线上任一点到角的两边距离相等．
