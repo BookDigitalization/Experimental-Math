@@ -58,7 +58,9 @@ class Converter:
     def preprocess(self, tex: str) -> str:
         tex = strip_comments(tex)
         tex = self.replace_tikz(tex)
+        tex = split_item_multicols(tex)
         tex = re.sub(r"\\staritem\b\s*", lambda m: r"\item " + self.slot("#staritem;"), tex)
+        tex = re.sub(r"``(.*?)''", "“\\1”", tex, flags=re.S)  # TeX 的 ``…'' 引号
         tex = re.sub(r"\\x(?![a-zA-Z])", r"\\times ", tex)
         tex = re.sub(r"\\oc(?![a-zA-Z])", "°C", tex)
         tex = re.sub(r"\\vskip\s*[\d.]+\s*(ex|em|pt|mm|cm)", "", tex)
@@ -91,6 +93,9 @@ class Converter:
         tex = self.replace_inline_envs(tex)
         tex = self.replace_text_spaces(tex)
         tex = self.replace_tabular(tex)
+        # \resizebox{\textwidth}{!}{表格}：pandoc 会连内容一起丢掉。表格此时已是占位符，套上 fit-width
+        tex = replace_command(tex, "resizebox", 3, lambda a: self.slot(
+            "#fit-width[%s]" % re.sub(r"\\textsc\{(PH\d+)\}", r"#smallcaps[\1]", a[2].strip())))
         return tex
 
     def replace_text_spaces(self, tex: str) -> str:
@@ -222,24 +227,14 @@ class Converter:
         return self.math_slot("tfrac(%s, %s)" % (a, b))
 
     def replace_nested_cases(self, tex: str) -> str:
-        """cases 里套 cases 时 pandoc 会转错，先把内层单独转换"""
-        pat = re.compile(r"\\(begin|end)\{cases\}")
+        """cases 与其他内容同在一个公式中、或 cases 里套 cases 时，pandoc 会转错。
+        所以每个 cases 都单独转换（先内层后外层），在公式中留下占位符"""
+        pat = re.compile(r"\\begin\{cases\}((?:(?!\\begin\{cases\}).)*?)\\end\{cases\}", re.S)
         while True:
-            depth, start, target = 0, None, None
-            for m in pat.finditer(tex):
-                if m.group(1) == "begin":
-                    depth += 1
-                    start = m
-                else:
-                    if depth >= 2 and start is not None:
-                        target = (start.start(), m.end())
-                        break
-                    depth -= 1
-                    start = None
-            if target is None:
+            m = pat.search(tex)
+            if not m:
                 return tex
-            a, b = target
-            tex = tex[:a] + self.math_slot(tex_math_to_typst(tex[a:b])) + tex[b:]
+            tex = tex[: m.start()] + self.math_slot(cases_to_typst(m.group(1))) + tex[m.end():]
 
     def replace_tags(self, tex: str) -> str:
         """\\tag{X}：对齐环境中改为右侧一栏的说明，其他公式中改为隔开一段的说明"""
@@ -269,11 +264,14 @@ class Converter:
     def postprocess(self, typ: str) -> str:
         # 占位符里可能还套着占位符，反复替换到没有为止
         while True:
-            new = re.sub(r'upright\("PHM(\d+)"\)', lambda m: self.slots[int(m.group(1))], typ)
+            new = re.sub(r'upright\(\s*"?P\s*H\s*M\s*(\d+)"?\s*\)', lambda m: self.slots[int(m.group(1))], typ)
             new = re.sub(r"#smallcaps\[PH(\d+)\]", lambda m: code_slot(self.slots[int(m.group(1))]), new)
             if new == typ:
                 break
             typ = new
+        left = re.findall(r"PHM?\s*\d+|P H M", typ)
+        if left:
+            raise RuntimeError("占位符没有替换干净：%s" % left[:5])
         typ = fix_math(typ)
         typ = re.sub(r'^( *)#set enum\(numbering: "([^"]*)"', enum_at, typ, flags=re.M)
         typ = escape_after_calls(typ)
@@ -303,10 +301,57 @@ def escape_after_calls(typ: str) -> str:
     return "".join(out)
 
 
+def split_item_multicols(tex: str) -> str:
+    """列表中用 multicols 把其中几项排成多栏时（\\begin{multicols}{2}\\item …），pandoc 会丢掉这几项。
+    改写为：结束原列表 → 在 multicols 中另起一个列表（编号接续）→ multicols 之后再接续原列表"""
+    tok = re.compile(r"\\begin\{(enumerate|itemize)\}(\[[^\]]*\])?|\\end\{(enumerate|itemize)\}"
+                     r"|\\begin\{multicols\}\{(\d+)\}(?=\s*\\item)|\\begin\{multicols\}|\\end\{multicols\}|\\item(?![a-zA-Z])")
+    out, pos = [], 0
+    lists = []      # [类型, 可选参数, 已有项数]
+    cols = []       # 每个 multicols 是否为“包住若干项”的那种
+    for m in tok.finditer(tex):
+        out.append(tex[pos : m.start()])
+        pos = m.end()
+        s = m.group(0)
+        if m.group(1):
+            lists.append([m.group(1), m.group(2) or "", 0])
+            out.append(s)
+        elif m.group(3):
+            if lists:
+                lists.pop()
+            out.append(s)
+        elif s == r"\item":
+            if lists:
+                lists[-1][2] += 1
+            out.append(s)
+        elif s.startswith(r"\begin{multicols}"):
+            item_level = bool(m.group(4)) and bool(lists)
+            cols.append(item_level)
+            if item_level:
+                kind, opt, n = lists[-1]
+                depth = sum(1 for l in lists if l[0] == "enumerate")
+                restart = r"\setcounter{enum%s}{%d}" % ("i" * depth, n) if kind == "enumerate" else ""
+                out.append(r"\end{%s}%s\begin{%s}%s%s" % (kind, s, kind, opt, restart))
+            else:
+                out.append(s)
+        else:  # \end{multicols}
+            if cols and cols.pop() and lists:
+                kind, opt, n = lists[-1]
+                depth = sum(1 for l in lists if l[0] == "enumerate")
+                restart = r"\setcounter{enum%s}{%d}" % ("i" * depth, n) if kind == "enumerate" else ""
+                out.append(r"\end{%s}%s\begin{%s}%s%s" % (kind, s, kind, opt, restart))
+            else:
+                out.append(s)
+    out.append(tex[pos:])
+    return "".join(out)
+
+
 def enum_at(m: re.Match) -> str:
     """pandoc 的 #set enum(numbering: "(1)") 会作用到嵌套的各层，改为只作用于本层。
     pandoc 每嵌套一层列表缩进 2 格，由此得出层数"""
     depth = len(m.group(1)) // 2 + 1
+    if m.group(2) == "1.":  # pandoc 对默认格式也会写出 "1."（如 \setcounter 之后），保留各层默认格式
+        return '%s#set enum(numbering: latex-enum' % m.group(1)
     return '%s#set enum(numbering: enum-at(%d, "%s")' % (m.group(1), depth, m.group(2))
 
 
@@ -487,6 +532,16 @@ def pandoc(tex: str) -> str:
     if r.stderr.strip():
         print(r.stderr.strip(), file=sys.stderr)
     return r.stdout
+
+
+def cases_to_typst(body: str) -> str:
+    """cases 环境的内容 → Typst 的 cases(…)。pandoc 只能正确转换带 & 的 cases，所以自己拆行、拆列"""
+    rows = [r for r in split_top(body, "\\\\") if r.strip()]
+    cells = [split_top(r, "&") for r in rows]
+    flat = [c for row in cells for c in row]
+    conv = iter(tex_math_to_typst(c) if c.strip() else "" for c in flat)
+    out_rows = [" & ".join(next(conv) for _ in row) for row in cells]
+    return "cases(%s)" % ", ".join(out_rows)
 
 
 def tex_math_to_typst(math: str) -> str:

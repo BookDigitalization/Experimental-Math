@@ -247,7 +247,7 @@ g\(a\) & = 4 a^2 + 3 a + 1 $
 #solution[
 $ f\(0\) & = 0^n + 0^(n - 1) + dots.h.c + 0 + 1 = 1\
 f\(1\) & = 1^n + 1^(n - 1) + dots.h.c + 1 + 1 = n + 1\
-f\(- 1\) & =\(- 1\)^n +\(- 1\)^(n - 1) + dots.h.c +\(- 1\)+ 1 = cases(delim: "{", 1 & upright("当") n upright("为偶数时"), 0 & upright("当") n upright("为奇数时"))\
+f\(- 1\) & =\(- 1\)^n +\(- 1\)^(n - 1) + dots.h.c +\(- 1\)+ 1 = cases(1 & upright("当") n upright("为偶数时"), 0 & upright("当") n upright("为奇数时"))\
 f\(10\) & = 10^n + 10^(n - 1) + dots.h.c + 10 + 1 = underbrace(11 dots.h.c 11, \(n + 1\)upright("位")) $
 
 ]
@@ -272,11 +272,9 @@ $therefore quad h\(y\)= y - 1$
 
 $because quad f (1 / 2) = 0 quad upright("及") quad f\(1\)= 1$
 
-$therefore quad {(1 / 2)^2 + m times (1 / 2) + n = 0\
-1^2 + m + n = 1$
+$therefore quad cases((1 / 2)^2 + m times (1 / 2) + n = 0, 1^2 + m + n = 1)$
 
-即：$ {1 / 4 + 1 / 2 m + n = 0\
-m + n = 0 $ 解这个方程组，可得：$n = - 1 / 2$，$m = 1 / 2$．
+即：$ cases(1 / 4 + 1 / 2 m + n = 0, m + n = 0) $ 解这个方程组，可得：$n = - 1 / 2$，$m = 1 / 2$．
 
 因而，$f\(x\)= x^2 + 1 / 2 x - 1 / 2$，所以 $ f\(0\) & = - 1 / 2\
 f\(2\) & = 2^2 + 1 / 2 times 2 - 1 / 2 = 4 1 / 2\
@@ -634,8 +632,7 @@ $therefore quad$ 当 $a = 3$ 或 $a = 7 / 2$ 时，$f\(a\)= 0$．
 $because quad$ 已知 $f\(x\)+ g\(x\)= x^2 + 6 x + 9$
 
 又 $because quad$ $ f\(x\)+ g\(x\) & =\(a x + 7\)+\(x^2 + 4 x + b^2\)\
- & = x^2 +\(a + 4\)x + 7 + b^2 $ 由恒等式 $x^2 + 6 x + 9 equiv x^2 +\(a + 4\)x + 7 + b^2$ 比较它们两边各同类项系数，可以得出：$ {6 = a + 4\
-9 = 7 + b^2 $ $therefore quad a = 2\,quad b = plus.minus sqrt(2)$
+ & = x^2 +\(a + 4\)x + 7 + b^2 $ 由恒等式 $x^2 + 6 x + 9 equiv x^2 +\(a + 4\)x + 7 + b^2$ 比较它们两边各同类项系数，可以得出：$ cases(6 = a + 4, 9 = 7 + b^2) $ $therefore quad a = 2\,quad b = plus.minus sqrt(2)$
 
 因而：$f\(x\)= 2 x + 7\,quad g\(x\)= x^2 + 4 x + 2$
 
@@ -1765,15 +1762,7 @@ $because quad f\(x\)= Q\(x\)dot.op g\(x\)+ R\(x\)$
 $therefore quad 3 x^4 + x^3 - 4 x^2 - 17 x + 5 =\(a x^2 + b x + c\)\(x^2 + x + 1\)+ d x + e$
 
 即：$  & quad 3 x^4 + x^3 - 4 x^2 - 17 x + 5\
- & = a x^4 +\(a + b\)x^3 +\(a + b + c\)x^2 +\(b + c + d\)x +\(c + e\)\; $ 比较等式两边对应同类项的系数，得 $ {3 = a\
-1 = a + b\
-- 4 = a + b + c\
-- 17 = b + c + d\
-+ 5 = c + e arrow.r.double quad {a = 3\
-b = - 2\
-c = - 5\
-d = - 10\
-e = 10 $ 所以，商式 $Q\(x\)= 3 x^2 - 2 x - 5$，余式 $R\(x\)= - 10 x + 10$．
+ & = a x^4 +\(a + b\)x^3 +\(a + b + c\)x^2 +\(b + c + d\)x +\(c + e\)\; $ 比较等式两边对应同类项的系数，得 $ cases(3 = a, 1 = a + b, - 4 = a + b + c, - 17 = b + c + d, + 5 = c + e) arrow.r.double quad cases(a = 3, b = - 2, c = - 5, d = - 10, e = 10) $ 所以，商式 $Q\(x\)= 3 x^2 - 2 x - 5$，余式 $R\(x\)= - 10 x + 10$．
 
 ]
 #example[
@@ -1781,13 +1770,7 @@ e = 10 $ 所以，商式 $Q\(x\)= 3 x^2 - 2 x - 5$，余式 $R\(x\)= - 10 x + 10
 
 ]
 #solution[
-$because quad$ 被除式是3次式，除式是2次式，$therefore quad$ 可设商式 $Q\(x\)= a x + b$，余式 $R\(x\)= c x + d$．由于 $ x^3 + x^2 + 1 =\(a x + b\)\(2 x^2 + 3 x + 1\)+\(c x + d\) $ 即：$ x^3 + x^2 + 1 = 2 a x^3 +\(3 a + 2 b\)x^2 +\(a + 3 b + c\)x +\(b + d\) $ 比较两边同类项系数可得：$ {1 = 2 a\
-1 = 3 a + 2 b\
-0 = a + 3 b + c\
-1 = b + d arrow.r.double quad {a = 1 / 2\
-b = - 1 / 4\
-c = 1 / 4\
-d = 5 / 4 $ $therefore quad$ 商式 $Q\(x\)= 1 / 2 x - 1 / 4$，余式 $R\(x\)= 1 / 4 x + 5 / 4$．
+$because quad$ 被除式是3次式，除式是2次式，$therefore quad$ 可设商式 $Q\(x\)= a x + b$，余式 $R\(x\)= c x + d$．由于 $ x^3 + x^2 + 1 =\(a x + b\)\(2 x^2 + 3 x + 1\)+\(c x + d\) $ 即：$ x^3 + x^2 + 1 = 2 a x^3 +\(3 a + 2 b\)x^2 +\(a + 3 b + c\)x +\(b + d\) $ 比较两边同类项系数可得：$ cases(1 = 2 a, 1 = 3 a + 2 b, 0 = a + 3 b + c, 1 = b + d) arrow.r.double quad cases(a = 1 / 2, b = - 1 / 4, c = 1 / 4, d = 5 / 4) $ $therefore quad$ 商式 $Q\(x\)= 1 / 2 x - 1 / 4$，余式 $R\(x\)= 1 / 4 x + 5 / 4$．
 
 ]
 从以上两例可以看出，用待定系数法求多项式相除的商式及余式，其要点和原理是：

@@ -115,6 +115,12 @@
   if n.pos().len() == depth { numbering(pattern, n.pos().last()) } else { latex-enum(..n) }
 }
 
+// 宽于版心时缩小到版心宽度（对应 \resizebox{\textwidth}{!}{…}，但不放大）
+#let fit-width(body) = layout(size => {
+  let w = measure(body).width
+  if w > size.width { scale(size.width / w * 100%, reflow: true, body) } else { body }
+})
+
 // 尚未转换的 LaTeX 结构（如竖式除法），原样显示源码以便查找
 #let todo-raw(s) = text(fill: red, raw(s))
 

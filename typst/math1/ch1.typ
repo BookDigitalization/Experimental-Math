@@ -920,9 +920,9 @@ $ upright("原式") & = 3 / 5 (1 / 7 + 6 / 7) times (1 - 2 / 5)^2 &  & upright("
 
 ]
 === 有理数、数轴
-引进负数以后，扩大了数的范围#footnote[我国古代数学家刘徽，对正、负数下的定义是“今两算得失相反，要令正负以名之”．这是世界上最早的正、负数定义．]．因而，当我们说到整数时，就应该包括：正整数(自然数)、负整数和零；当我们说到#strong[分数]时，就应该包括：正分数、负分数．即：$ upright("整数") cases(delim: "{", upright("正整数（自然数）") & upright("例如：") 1\,med 2\,med 3\,med dots.h.c, upright("零") & 0, upright("负整数") & upright("例如：") - 1\,med - 2\,med - 3\,med dots.h.c) $ $ upright("分数") cases(delim: "{", upright("正分数") & upright("例如：") 1 / 2\,med 2 / 3\,med 1 3 / 7\,med dots.h.c, upright("负分数") & upright("例如：") - 1 / 2\,med - 2 / 3\,med - 1 3 / 7\,med dots.h.c) $
+引进负数以后，扩大了数的范围#footnote[我国古代数学家刘徽，对正、负数下的定义是“今两算得失相反，要令正负以名之”．这是世界上最早的正、负数定义．]．因而，当我们说到整数时，就应该包括：正整数(自然数)、负整数和零；当我们说到#strong[分数]时，就应该包括：正分数、负分数．即：$ upright("整数") cases(upright("正整数（自然数）") & upright("例如：") 1\,med 2\,med 3\,med dots.h.c, upright("零") & 0, upright("负整数") & upright("例如：") - 1\,med - 2\,med - 3\,med dots.h.c) $ $ upright("分数") cases(upright("正分数") & upright("例如：") 1 / 2\,med 2 / 3\,med 1 3 / 7\,med dots.h.c, upright("负分数") & upright("例如：") - 1 / 2\,med - 2 / 3\,med - 1 3 / 7\,med dots.h.c) $
 
-#strong[整数和分数，统称为有理数]#footnote[“有理数”是\`\`Rational number”的译名．比较确切的词，应称为“比数”，因为有理数都可以表示成 $a / b$ 的分数形式．今后，还会学习“非比数”．]．
+#strong[整数和分数，统称为有理数]#footnote[“有理数”是“Rational number”的译名．比较确切的词，应称为“比数”，因为有理数都可以表示成 $a / b$ 的分数形式．今后，还会学习“非比数”．]．
 
 全体有理数组成的集合，称为#strong[有理数集合]，或称#strong[有理数系]．记作集合 $bb(Q)$．
 
@@ -940,9 +940,7 @@ $ upright("原式") & = 3 / 5 (1 / 7 + 6 / 7) times (1 - 2 / 5)^2 &  & upright("
 
 这种关系也可以表示成：$ bb(Q) supset bb(Z) supset bb(N) $ 读作：“$bb(Q)$ 包含 $bb(Z)$，$bb(Z)$ 又包含 $bb(N)$”，显然，$bb(Q)$ 也包含 $bb(N)$．
 
-有理数集合，有时还可以这样叙述：$ upright("有理数集") supset {upright("正有理数集")\
-{ 0 }\
-upright("负有理数集") $
+有理数集合，有时还可以这样叙述：$ upright("有理数集") supset cases(upright("正有理数集"), { 0 }, upright("负有理数集")) $
 
 有理数可以用一条直线上的点表示出来，具体方法是：
 
@@ -1031,7 +1029,7 @@ upright("负有理数集") $
 ]
 例如：$lr(|+ 2 1 / 2|) = 2 1 / 2$，$\|0\|= 0$，$\|- 5\|= 5$，$\|- 0.7\|= 0.7$ 等．
 
-一般地，对任一个有理数 $a$，其绝对值可以表示成：$ \|a\|= cases(delim: "{", a\, & upright("当") a upright("是正数时"), 0\, & upright("当") a upright("是0时"), - a\, & upright("当") a upright("是负 数时")) $
+一般地，对任一个有理数 $a$，其绝对值可以表示成：$ \|a\|= cases(a\, & upright("当") a upright("是正数时"), 0\, & upright("当") a upright("是0时"), - a\, & upright("当") a upright("是负 数时")) $
 
 #exercise[
 + （口答）填写下表：
@@ -1090,9 +1088,7 @@ upright("负有理数集") $
 
   + $-\[-\(- m\)\]= underline(#h(2em) #h(2em))$．
 
-+ 把下列各数填入应属的集合内：$ - 5\,quad - 1 / 3\,quad 0.34\,quad 0\,quad - 1\,quad - 3 2 / 5\,quad 1 / 5\,quad 20 1 / 2\,quad - 0.001\,quad 10^10 $ $ upright("有理数集合") {upright("正有理数集合：") underline(#h(2em) #h(2em) #h(2em) #h(2em) #h(2em))\
-  { 0 } ： underline(#h(2em) #h(2em) #h(2em) #h(2em) #h(2em))\
-  upright("负有理数集合：") underline(#h(2em) #h(2em) #h(2em) #h(2em) #h(2em)) $
++ 把下列各数填入应属的集合内：$ - 5\,quad - 1 / 3\,quad 0.34\,quad 0\,quad - 1\,quad - 3 2 / 5\,quad 1 / 5\,quad 20 1 / 2\,quad - 0.001\,quad 10^10 $ $ upright("有理数集合") cases(upright("正有理数集合：") underline(#h(2em) #h(2em) #h(2em) #h(2em) #h(2em)), { 0 } ： underline(#h(2em) #h(2em) #h(2em) #h(2em) #h(2em)), upright("负有理数集合：") underline(#h(2em) #h(2em) #h(2em) #h(2em) #h(2em))) $
 
 + 在数轴上将下列有理数用点表示出来：
 
@@ -1247,7 +1243,7 @@ upright("负有理数集") $
 
 所以，在 $a$ 小于 $b$ 时，我们规定：$ \(+ a\)+\(- b\)= -\(b - a\)\,#h(2em)\(a upright("小于") b upright("时")\) $ 这样规定，同样是符合实际的，比如：气温上升10.5°C，接着又下降12°C，其结果自然应该是下降1.5°C，即 $ \(+ 10.5\)+\(- 12\)= -\(12 - 10.5\)= - 1.5 $
 
-综合对情形3的讨论，可以得出：$ \(+ a\)+\(- b\)= cases(delim: "{", +\(a - b\)\, & \(a upright("大于") b upright("时")\), -\(b - a\)\, & \(a upright("小于") b upright("时")\)) $ 这就是说：
+综合对情形3的讨论，可以得出：$ \(+ a\)+\(- b\)= cases(+\(a - b\)\, & \(a upright("大于") b upright("时")\), -\(b - a\)\, & \(a upright("小于") b upright("时")\)) $ 这就是说：
 
 #blk[][
 两个符号相反的有理数相加，只要将较大的绝对值减去较小的绝对值，符号取绝对值较大的加数的符号就行了．
@@ -1334,7 +1330,7 @@ $ \(- a\)+\(- a\) & =\(- 1\)a +\(- 1\)a &  & upright("(相反数的意义)")\
 + 同号相加：$ \(+ a\)+\(+ b\) & = +\(a + b\)\
   \(- a\)+\(- b\) & = -\(a + b\) $
 
-+ 异号相加：$ \(+ a\)+\(- b\)= cases(delim: "{", +\(a - b\)\, & a > b, -\(b - a\)\, & a < b) $
++ 异号相加：$ \(+ a\)+\(- b\)= cases(+\(a - b\)\, & a > b, -\(b - a\)\, & a < b) $
 
 + 相反数相加：$ \(+ a\)+\(- a\)= 0 $
 
@@ -2914,7 +2910,7 @@ a / 2 + a / 2 & > a / 2 + b / 2 &  & upright("(不等式两边同加") a / 2 upr
 
 + 加法法则：设 $a\,b$ 是正有理数．$ \(+ a\)+\(+ b\) & = +\(a + b\)\
   \(- a\)+\(- b\) & = -\(a + b\)\
-  \(+ a\)+\(- b\) & = cases(delim: "{", +\(a - b\) & \(a > b\), -\(b - a\) & \(a < b\))\
+  \(+ a\)+\(- b\) & = cases(+\(a - b\) & \(a > b\), -\(b - a\) & \(a < b\))\
   \(+ a\)+ 0 & = 0 +\(+ a\)= + a\
   \(- a\)+ 0 & = 0 +\(- a\)= - a\
   0 + 0 & = 0 $

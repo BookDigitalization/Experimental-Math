@@ -162,10 +162,69 @@ frac(3 y, x^3 + y^3) & = frac(3 y\(x - y\), \(x - y\)\(x + y\)\(x^2 - x y + y^2\
 
 + 约简下列各分式：
 
+  #cols(2)[
+  + $frac(8 x^5 y^7, - 12 x^3 y^2)$
+
+  + $frac(32 p^4 q^3, 16 p^3 q^4)$
+
+  + $frac(- 6 a^2 b^4, - 3 a^4 b^5)$
+
+  + $frac(15 m^3 n^4\(a + b\)^3, 18 m^2 n^3\(a + b\)^4)$
+
+  + $frac(2\(3 x - 2 y\), 3\(2 y - 3 x\))$
+
+  + $frac(- a b\(x + y\)^3\(x - y\), b\(x + y\)^2\(y - x\)^2)$
+
+  + $frac(3 a\(x - y\)^3, 15\(y - x\)^3)$
+
+  + $frac(\(a - b\)\(b - c\)\(c - a\), \(b - a\)\(a - c\)\(c - b\))$
+
+  ]
+  #block[
+  #set enum(numbering: latex-enum, start: 9)
   + $frac(-\(x + y - z\)\(x - y + z\)\(x - y - z\), \(y + z - x\)\(y - z + x\)\(y - z - x\))$
+  ]
+
+  #cols(2)[
+  #block[
+  #set enum(numbering: latex-enum, start: 10)
+  + $frac(x^2 - y^2, x^2 - 2 x y + y^2)$
+
+  + $frac(1 - x^3, x^2 - 1)$
+
+  + $frac(x^2 + 9 x + 14, x^2 + 8 x + 7)$,
+
+  + $frac(9 a^4 - 1, 6 a^2 b^2 + 2 b^2)$
+
+  + $frac(a^2 + b^2 - c^2 + 2 a b, a^2 - b^2 + c^2 - 2 a c)$
+
+  + $frac(1 + 3 a^2 - 3 a - a^3, (a^2 - 2 a + 1) (2 a^2 - 3 a + 1))$
+
+  + $frac(6 x^3 + 11 x^2 - x - 6, 12 x^3 - 8 x^2 - 27 x + 18)$
+
+  + $frac(x^4 - 2 x^2 - 3 x - 2, 2 x^4 - 4 x^3 + 2 x - 4)$
+
+  + $frac(x^3 + x^2 - 5 x - 2, x^3 + 2 x^2 - 2 x - 1)$
+  ]
+
+  ]
+  #block[
+  ]
 
 + 通分
 
+  #cols(2)[
+  + $frac(z, 10 x^2 y^3)\,quad frac(y, 10 x^3 z^2)$
+
+  + $frac(c, - 2 a b)\,quad frac(b, 3 a c)\,quad frac(a, 5 b c)$
+
+  + $frac(4, 3 y)\,quad frac(y - 1, - 2 y^2)\,quad frac(y^2 - 1, 4 y^3)$
+
+  + $frac(3 b, 5 a)\,quad frac(- 2 c, 3 b)\,quad frac(5 a, - 2 c)$
+
+  ]
+  #block[
+  #set enum(numbering: latex-enum, start: 5)
   + $frac(1, \(a - b\)\(a - c\))\,quad frac(1, \(b - c\)\(b - a\))\,quad frac(1, \(c - a\)\(c - b\))$
 
   + $frac(x, x - y)\,quad frac(y, x + y)\,quad frac(2, y^2 - x^2)$
@@ -177,6 +236,7 @@ frac(3 y, x^3 + y^3) & = frac(3 y\(x - y\), \(x - y\)\(x + y\)\(x^2 - x y + y^2\
   + $frac(1, x^3 - 3 x^2 + 2 x)\,quad frac(2, x^4 - x^2)\,quad frac(- 1, x^2 + x - 2)$
 
   + $frac(1, x^3 - 6 x^2 + 11 x - 6)\,quad frac(1, 2 x^3 - 7 x^2 + 7 x - 2)$
+  ]
 
 + 约简 $F\(x\)= frac(6 x^2 - 12 x + 6, x^3 - 3 x^2 + 3 x - 1)$ 又 $x$ 取何整数值，能使 $F\(x\)$ 的值得正整数．
 
@@ -276,6 +336,28 @@ frac(1, a^2 + b^2 - c^2) & = frac(1, a^2 + b^2 -\(a + b\)^2) = - frac(1, 2 a b) 
 
   + $frac(a^2 - 2 a + 1, a^2 + a + 1) - frac(a^2 + 3 a - 3, a^2 + a + 1) + frac(5 a - 4, a^2 + a + 1)$
 
+  #cols(2)[
+  #block[
+  #set enum(numbering: latex-enum, start: 2)
+  + $frac(1, m^4 n^3) + frac(2, m^3 n^4)$
+
+  + $frac(5 a, 6 b^2 c) - frac(7 b, 12 a c^2) + frac(11 c, 8 a^2 b)$
+
+  + $frac(1, 2 a - b) + frac(1, 2 a + b)$
+
+  + $frac(2 x, a - b) - frac(x, b - a)$
+
+  + $frac(2, x - y) - frac(x + y, \(y - x\)^2)$
+
+  + $a - b + frac(2 b^2, a + b)$
+
+  + $frac(y^3, x - y) + x^2 + x y + y^2$
+  ]
+
+  ]
+  #block[
+  ]
+
 + 计算下列各式：
 
   + $frac(1, \(x - 3\)\(2 - x\)) + frac(1, \(x - 2\)\(3 - x\))$
@@ -371,9 +453,26 @@ $ upright("原式") & = frac(2\(1 - x\)\(1 + x\)+\(1 - x\)^2 +\(1 + x\)^2, \(1 +
 #exercise[
 + 计算下列各式
 
+  #cols(2)[
+  + $frac(3 a b, 4 x y) div frac(10 x^2 y, 21 a^2 b)$
+
+  + $8 a^2 b^4 dot.op (- frac(3 a, 4 b^3))$
+
+  + $frac(\(a - b\)^2, a b) div\(a - b\)$,
+
+  + $(frac(3 a^2 b, - 2 c^3))^3$
+
+  + $frac(a^2 - x^2, 4 a x) div frac(x - a, 8 x)$
+
+  + $frac(x^2 - x, x - 3) div frac(x^2 - x^3, 3 - x)$
+
+  ]
+  #block[
+  #set enum(numbering: latex-enum, start: 7)
   + $(x^2 - 6 x + 9) div frac(x^2 - 9 x + 18, x + 3)$
 
   + $frac(a + x, \(m + n\)^2) dot.op frac(x^2 - y^2, 12) dot.op frac(m + n, n - m) dot.op frac(6 (m^2 - n^2), x + y)$
+  ]
 
 + 化简：
 
@@ -617,11 +716,11 @@ $therefore quad$ 原方程的解集是 ${ a b }$．
   [原计划工作情况],
   [960亩],
   [$x$ 亩],
-  [$upright(P H M 6)$],
+  [$tfrac(960, x)$],
   [实际工作情况],
   [960亩],
   [$\(x + 40\)$ 亩],
-  [$upright(P H M 7)$],
+  [$tfrac(960, x + 40)$],
   table.hline(),
 );
 
@@ -667,11 +766,11 @@ $A$、$B$ 两地相距87公里，甲骑自行车从 $A$ 出发向 $B$ 驶去，�
   [甲],
   [$\(87 - 45\)$ 公里],
   [$x$ 公里/小时],
-  [$upright(P H M 8)$],
+  [$tfrac(87 - 45, x)$],
   [乙],
   [45公里],
   [$\(x + 4\)$ 公里/小时],
-  [$upright(P H M 9)$],
+  [$tfrac(45, x + 4)$],
   table.hline(),
 );
 
@@ -694,9 +793,9 @@ x^2 + 10 x - 336 & = 0 $ $therefore quad x_1 = 14\,#h(2em) x_2 = - 24$
 
 ]
 #solution[
-设甲队独做 $x$ 天完成，乙队独做 $3 / 2 x$ 天完成，则甲每天工作量是 $1 / x$，乙每天工作量是 $frac(1, upright(P H M 10) x)$，甲、乙两队合做一天的工作量是 $1 / x + frac(1, upright(P H M 11) x)$；合做两天的工作量是 $2 (1 / x + frac(1, upright(P H M 12) x))$．
+设甲队独做 $x$ 天完成，乙队独做 $3 / 2 x$ 天完成，则甲每天工作量是 $1 / x$，乙每天工作量是 $frac(1, tfrac(3, 2) x)$，甲、乙两队合做一天的工作量是 $1 / x + frac(1, tfrac(3, 2) x)$；合做两天的工作量是 $2 (1 / x + frac(1, tfrac(3, 2) x))$．
 
-按题意得：$ 2 (1 / x + frac(1, upright(P H M 13) x)) + frac(1, upright(P H M 14) x) = 1 $ 就是 $2 / x + frac(4, 3 x) + frac(2, 3 x) = 1$
+按题意得：$ 2 (1 / x + frac(1, tfrac(3, 2) x)) + frac(1, tfrac(3, 2) x) = 1 $ 就是 $2 / x + frac(4, 3 x) + frac(2, 3 x) = 1$
 
 方程两边乘以 $3 x$ 得：$ 6 + 4 + 2 & = 3 x\
 3 x & = 12\
@@ -826,7 +925,7 @@ x & = 4 $
 #blk[][
 + $(sqrt(a))^2 = a quad\(a gt.eq 0\)$
 
-+ $sqrt(a^2) =\|a\|= cases(delim: "{", a\, & a gt.eq 0, - a\, & a < 0)$
++ $sqrt(a^2) =\|a\|= cases(a\, & a gt.eq 0, - a\, & a < 0)$
 
 + $sqrt(a dot.op b) = sqrt(a) dot.op sqrt(b) quad\(a gt.eq 0\,thick b gt.eq 0\)$
 
@@ -840,7 +939,7 @@ x & = 4 $
 
 ]
 #solution[
-$ sqrt(\(x - 2\)^2) =\|x - 2\|= cases(delim: "{", x - 2\, & x gt.eq 2, 2 - x\, & x < 2) $
+$ sqrt(\(x - 2\)^2) =\|x - 2\|= cases(x - 2\, & x gt.eq 2, 2 - x\, & x < 2) $
 
 ]
 #example[
@@ -849,7 +948,7 @@ $ sqrt(\(x - 2\)^2) =\|x - 2\|= cases(delim: "{", x - 2\, & x gt.eq 2, 2 - x\, &
 ]
 #solution[
 $ sqrt(x^2 - 2 x y + y^2) & = sqrt(\(x - y\)^2) =\|x - y\|\
- & = cases(delim: "{", x - y\, & x gt.eq y, y - x\, & x < y) $
+ & = cases(x - y\, & x gt.eq y, y - x\, & x < y) $
 
 ]
 #example[
@@ -1725,6 +1824,28 @@ $therefore quad$ 原方程的解集是 ${1 / 2 \, thick - 1 / 2}$
 
   + $(frac(3 x, 2) sqrt(x / y) - 0.4 sqrt(frac(3, x y)) + 1 / 3 sqrt(frac(x y, 2))) div 4 / 15 sqrt(frac(3 y, 2 x))$
 
+  #cols(2)[
+  #block[
+  #set enum(numbering: latex-enum, start: 2)
+  + $frac(3 sqrt(5) + sqrt(32), 3 sqrt(5) - sqrt(32))$
+
+  + $frac(a + sqrt(a^2 - 1), a - sqrt(a^2 - 1)) quad\(a > 1\)$
+
+  + $frac(x + y + 2 sqrt(x y), \(sqrt(x) - sqrt(y)\)^2)$
+
+  + $frac(sqrt(x^2 + a^2) + sqrt(x^2 - a^2), sqrt(x^2 + a^2) - sqrt(x^2 - a^2)) quad\(x > a\)$
+
+  + $frac(sqrt(3), sqrt(8) - sqrt(12) - 3 sqrt(2))$
+
+  + $frac(1, sqrt(2) + sqrt(5) - sqrt(7))$
+
+  + $frac(1 - sqrt(2) + sqrt(3), 1 + sqrt(2) - sqrt(3))$
+  ]
+
+  ]
+  #block[
+  ]
+
 + 计算下列各式:
 
   #cols(2)[
@@ -1780,7 +1901,7 @@ $therefore quad$ 原方程的解集是 ${1 / 2 \, thick - 1 / 2}$
 
 凡涉及字母或数字的开方运算的式子叫做根式，根号内含有字母的根式，又称为关于这个字母的无理式．如 $sqrt(2)$ 是根式，但不是无理式，$sqrt(x)$，$sqrt(x - 1)$，$x / sqrt(x - 2)$ 等都是无理式．
 
-关于代数式的概念，可以列表如下：$ upright("代数式") cases(delim: "{", upright("有理式") & upright(P H M 15), upright("无理式")) $
+关于代数式的概念，可以列表如下：$ upright("代数式") cases(upright("有理式") & cases(upright("多项式（即整式）"), upright("分式")), upright("无理式")) $
 
 二、如果有多项式 $f\(x\)\,g\(x\)$ 且 $g\(x\)$ 的次数大于零次，那么分式 $frac(f\(x\), g\(x\))$ 有以下基本性质：$ frac(f\(x\)dot.op h\(x\), g\(x\)dot.op h\(x\)) = frac(f\(x\), g\(x\)) = frac(f\(x\)div h\(x\), g\(x\)div h\(x\)) $ 其中，$h\(x\)$ 是非零多项式．
 
@@ -1848,6 +1969,18 @@ $therefore quad$ 原方程的解集是 ${1 / 2 \, thick - 1 / 2}$
   + $(x / y - y / x) div\(x + y\)+ x (1 / y - 1 / x)$
 
   + $frac(m^2 + n^2, m^2 + 2 m n + n^2) + frac(2, m n) div (1 / m + 1 / n)^2$
+
+  #cols(2)[
+  #block[
+  #set enum(numbering: latex-enum, start: 3)
+  + $frac(1, 1 - frac(1, 1 - 1 / x))$
+
+  + $1 + frac(1, 2 + frac(1, 3 + 1 / x))$
+  ]
+
+  ]
+  #block[
+  ]
 
 + + 已知 $a = - 2\,b = - 1$.求 $(a - frac(a^2, a + b)) (frac(a, a - b) - 1) div frac(b^2, a + b)$ 的值．
 
