@@ -48,7 +48,7 @@ $because quad$ 第 $n$ 项为 $a_n = a_1 +\(n - 1\)d$
 这里 $a_1 = 5$, $d = 2$, $n = 10\,15$．
 
 $therefore quad$ 第10项应为：$ a_10 & = a_1 +\(10 - 1\)d\
- & = 5 + 9 times 2 = 23 $ 同样，第15项应为：$ a_15 = 5 +\(15 - 1\)times 2 = 33 $
+ & = 5 + 9 times 2 = 23 $ #noindent;同样，第15项应为：$ a_15 = 5 +\(15 - 1\)times 2 = 33 $
 
 ]
 #exercise[
@@ -72,7 +72,7 @@ $therefore quad$ 第10项应为：$ a_10 & = a_1 +\(10 - 1\)d\
 
 ]
 #solution[
-设#numbered-eq($ 1 + 2 + 3 + dots.h.c + n = S $);则利用交换律，可以改写为#numbered-eq($ n + dots.h.c + 3 + 2 + 1 = S $);将等式(7.1)，(7.2)相加，得 $ underbrace(\(1 + n\)+ dots.h.c +\[\(n - 2\)+ 3\]+\[\(n - 1\)+ 2\]+\(n + 1\), n upright("项")) = 2 S $ 即：$n\(n + 1\)= 2 S$，$#h(2em) therefore quad S = frac(n\(n + 1\), 2)$
+设#numbered-eq($ 1 + 2 + 3 + dots.h.c + n = S $);则利用交换律，可以改写为#numbered-eq($ n + dots.h.c + 3 + 2 + 1 = S $);将等式(7.1)，(7.2)相加，得 $ underbrace(\(1 + n\)+ dots.h.c +\[\(n - 2\)+ 3\]+\[\(n - 1\)+ 2\]+\(n + 1\), n upright("项")) = 2 S $ #noindent;即：$n\(n + 1\)= 2 S$，$#h(2em) therefore quad S = frac(n\(n + 1\), 2)$
 
 ]
 因此：$ 1 + 2 + 3 + dots.h.c + n = frac(n\(n + 1\), 2) $
@@ -81,7 +81,7 @@ $therefore quad$ 第10项应为：$ a_10 & = a_1 +\(10 - 1\)d\
 
 一般地，对于等差数列 $a_1\,a_1 + d\,a_1 + 2 d\,dots.h\,a_1 +\(n - 1\)d\,dots.h$ 的前 $n$ 项求和公式，可作如下推导：
 
-设 $S = a_1 +\(a_1 + d\)+\(a_1 + 2 d\)+ dots.h.c +\[a_1 +\(n - 1\)d\]$，又 $S =\[a_1 +\(n - 1\)d\]+\[a_1 +\(n - 2\)d\]+\[a_1 +\(n - 3\)d\]+ dots.h.c + a_1$，两式相加，可得：$ 2 S = underbrace(\[2 a_1 +\(n - 1\)d\]+\[2 a_1 +\(n - 1\)d\]+ dots.h.c +\[2 a_1 +\(n - 1\)d\], n upright("项")) $ 即：$2 S = n\[2 a_1 +\(n - 1\)d\]$，$#h(2em) therefore quad S = frac(n\[2 a_1 +\(n - 1\)d\], 2)$
+设 $S = a_1 +\(a_1 + d\)+\(a_1 + 2 d\)+ dots.h.c +\[a_1 +\(n - 1\)d\]$，又 $S =\[a_1 +\(n - 1\)d\]+\[a_1 +\(n - 2\)d\]+\[a_1 +\(n - 3\)d\]+ dots.h.c + a_1$，两式相加，可得：$ 2 S = underbrace(\[2 a_1 +\(n - 1\)d\]+\[2 a_1 +\(n - 1\)d\]+ dots.h.c +\[2 a_1 +\(n - 1\)d\], n upright("项")) $ #noindent;即：$2 S = n\[2 a_1 +\(n - 1\)d\]$，$#h(2em) therefore quad S = frac(n\[2 a_1 +\(n - 1\)d\], 2)$
 
 这就是#strong[等差数列前 $n$ 项和的公式]．
 
@@ -92,7 +92,7 @@ $therefore quad$ 第10项应为：$ a_10 & = a_1 +\(10 - 1\)d\
 
 ]
 #solution[
-这里 $a_1 = 1$, $d = 2$,共 $n$ 项，因此：$ S = frac(n\[2 +\(n - 1\)times 2\], 2) = n^2 $ 即：$1 + 3 + 5 + dots.h.c +\(2 n - 1\)= n^2$．
+这里 $a_1 = 1$, $d = 2$,共 $n$ 项，因此：$ S = frac(n\[2 +\(n - 1\)times 2\], 2) = n^2 $ #noindent;即：$1 + 3 + 5 + dots.h.c +\(2 n - 1\)= n^2$．
 
 ]
 #example[
@@ -100,7 +100,7 @@ $therefore quad$ 第10项应为：$ a_10 & = a_1 +\(10 - 1\)d\
 
 ]
 #solution[
-将 $a_1 = 3$, $n = 25$, $S = 1000$,都代入求和公式：$ S = frac(n\[2 a_1 +\(n - 1\)d\], 2) $ 可得：$1000 = frac(25\(6 + 24 d\), 2)$．
+将 $a_1 = 3$, $n = 25$, $S = 1000$,都代入求和公式：$ S = frac(n\[2 a_1 +\(n - 1\)d\], 2) $ #noindent;可得：$1000 = frac(25\(6 + 24 d\), 2)$．
 
 $therefore quad d = 74 / 24 = 37 / 12$
 
@@ -114,7 +114,7 @@ $therefore quad d = 74 / 24 = 37 / 12$
 
 ]
 #solution[
-将首项 $a_1 = 1 / 2$ 公差 $d = 1 / 2$ 以及末项 $a_n = 100$ 都代入公式 $a_n = a_1 +\(n - 1\)d$ 中，得 $ 100 = 1 / 2 +\(n - 1\)times 1 / 2 $ 解出 $n = 200$，这就是说，和式中共有200项．因此：$ S & = frac(n\[2 a_1 +\(n - 1\)d\], 2)\
+将首项 $a_1 = 1 / 2$ 公差 $d = 1 / 2$ 以及末项 $a_n = 100$ 都代入公式 $a_n = a_1 +\(n - 1\)d$ 中，得 $ 100 = 1 / 2 +\(n - 1\)times 1 / 2 $ #noindent;解出 $n = 200$，这就是说，和式中共有200项．因此：$ S & = frac(n\[2 a_1 +\(n - 1\)d\], 2)\
  & = frac(200 [2 times 1 / 2 + 199 times 1 / 2], 2)\
  & = 100 + 199 times 50 = 10050 $
 
@@ -128,7 +128,7 @@ $therefore quad d = 74 / 24 = 37 / 12$
 
 ]
 如果把等差数列前 $n$ 项和的公式变形，又可以得出：$ S & = frac(n\[2 a_1 +\(n - 1\)d\], 2)\
- & = frac(n\[a_1 + a_1 +\(n - 1\)d\], 2) $ $therefore quad S = frac(n\(a_1 + a_n\), 2)$
+ & = frac(n\[a_1 + a_1 +\(n - 1\)d\], 2) $ #noindent;$therefore quad S = frac(n\(a_1 + a_n\), 2)$
 
 因此，等差数列的求和公式，又可以叙述为：等差数列前 $n$ 项和，等于首项加末项，乘以项数，再除以2．
 
@@ -150,7 +150,7 @@ $therefore quad d = 74 / 24 = 37 / 12$
 
 ]
 #solution[
-首项是2,公比是2的等比数列是：$ 2\,4\,8\,dots.h\,2^n\,dots.h $ 首项是2,公比是 $- 1$ 的等比数列是：$ 2\,- 2\,2\,dots.h\,\(- 1\)^(n - 1) dot.op 2\,dots.h $
+首项是2,公比是2的等比数列是：$ 2\,4\,8\,dots.h\,2^n\,dots.h $ #noindent;首项是2,公比是 $- 1$ 的等比数列是：$ 2\,- 2\,2\,dots.h\,\(- 1\)^(n - 1) dot.op 2\,dots.h $
 
 ]
 #example[
@@ -182,15 +182,15 @@ $because quad a_n = a_1 q^(n - 1)$.
 
 ]
 #solution[
-这是一个等比数列的前 $n$ 项求和的问题，可设：$ S = 3 + 3 times 4 + 3 times 4^2 + dots.h.c + 3 times 4^(n - 1) $ 则有 $ 4 S = 3 times 4 + 3 times 4^2 + dots.h.c + 3 times 4^(n - 1) + 3 times 4^n $ 两式相减得：$ \(4 - 1\)S & = 3 times 4^n - 3\
+这是一个等比数列的前 $n$ 项求和的问题，可设：$ S = 3 + 3 times 4 + 3 times 4^2 + dots.h.c + 3 times 4^(n - 1) $ #noindent;则有 $ 4 S = 3 times 4 + 3 times 4^2 + dots.h.c + 3 times 4^(n - 1) + 3 times 4^n $ #noindent;两式相减得：$ \(4 - 1\)S & = 3 times 4^n - 3\
 S & = frac(3\(4^n - 1\), 4 - 1) = 4^n - 1 $
 
 ]
 一般地，对于等比数列 $a_1\,a_1 q\,a_1 q^2\,dots.h\,a_1 q^(n - 1)\,dots.h$ 的前 $n$ 项求和，我们可作如下推导：
 
-设 $S = a_1 + a_1 q + a_1 q^2 + dots.h.c + a_1 q^(n - 1)$，则：$ q S = a_1 q + a_1 q^2 + dots.h.c + a_1 q^(n - 1) + a_1 q^n $ 两式相减：$\(1 - q\)S = a_1 - a_1 q^n$．
+设 $S = a_1 + a_1 q + a_1 q^2 + dots.h.c + a_1 q^(n - 1)$，则：$ q S = a_1 q + a_1 q^2 + dots.h.c + a_1 q^(n - 1) + a_1 q^n $ #noindent;两式相减：$\(1 - q\)S = a_1 - a_1 q^n$．
 
-当 $q eq.not 1$ 时，$ S = frac(a_1 - a_1 q^n, 1 - q) = frac(a_1\(1 - q^n\), 1 - q) $ 这就是等比数列的前 $n$ 项求和公式．
+当 $q eq.not 1$ 时，$ S = frac(a_1 - a_1 q^n, 1 - q) = frac(a_1\(1 - q^n\), 1 - q) $ #noindent;这就是等比数列的前 $n$ 项求和公式．
 
 而当 $q = 1$ 时，这个等比数列为：$a_1\,a_1\,a_1\,dots.h\,a_1\,dots.h$
 
@@ -211,7 +211,7 @@ $therefore quad S = frac(a_1\(1 - q^n\), 1 - q) = frac(1 - 1 / 3^4, 1 - 1 / 3) =
 
 ]
 #solution[
-设等比数列的首项为 $a_1$，第二项为 $a_1 q$，则由已知得：$ cases(a_1 + a_1 q = 1 1 / 2, a_1 - a_1 q = 1 / 2) $ 两式相加得：$2 a_1 = 2\,#h(2em) therefore quad a_1 = 1$
+设等比数列的首项为 $a_1$，第二项为 $a_1 q$，则由已知得：$ display(cases(a_1 + a_1 q = 1 1 / 2, a_1 - a_1 q = 1 / 2)) $ #noindent;两式相加得：$2 a_1 = 2\,#h(2em) therefore quad a_1 = 1$
 
 两式相减得：$2 a_1 q = 1\,#h(2em)$ 即 $quad a_1 q = 1 / 2$
 
@@ -231,7 +231,8 @@ $therefore quad S = frac(a_1\(1 - q^n\), 1 - q) = frac(1 - 1 / 3^4, 1 - 1 / 3) =
 + $1 + x + x^2 + dots.h.c + x^(n - 1) #h(2em)\(x eq.not 1\)$
 
 ]
-#heading(level: 2, numbering: none)[习题7.1]
+#heading(level: 2, numbering: none, supplement: [toc-sub])[习题7.1]
+
 + 求下列等差数列的公差及第10项、第 $n$ 项．
 
   + $5\,thick 11\,thick 17\,thick 23\,dots.h$
@@ -313,9 +314,9 @@ $therefore quad S = frac(a_1\(1 - q^n\), 1 - q) = frac(1 - 1 / 3^4, 1 - 1 / 3) =
 
 ]
 #solution[
-由多项式除法可知，其商式必定是一次式，其余式至多是一次式．因而可设商式 $Q\(x\)= a x + b$,余式 $R\(x\)= c x + d$．由除法恒等式，可得 $ 4 x^3 + 7 x^2 + 6 x + 2 =\(a x + b\)\(x^2 + 1\)+\(c x + d\) $ 即：$4 x^3 + 7 x^2 + 6 x + 2 = a x^3 + b x^2 +\(a + c\)x + b + d$
+由多项式除法可知，其商式必定是一次式，其余式至多是一次式．因而可设商式 $Q\(x\)= a x + b$,余式 $R\(x\)= c x + d$．由除法恒等式，可得 $ 4 x^3 + 7 x^2 + 6 x + 2 =\(a x + b\)\(x^2 + 1\)+\(c x + d\) $ #noindent;即：$4 x^3 + 7 x^2 + 6 x + 2 = a x^3 + b x^2 +\(a + c\)x + b + d$
 
-比较两边同类项系数，得 $ cases(a = 4, b = 7, a + c = 6, b + d = 2) $ 解这个方程组，得 $ a = 4\,quad b = 7\,quad c = 2\,quad d = - 5 $
+比较两边同类项系数，得 $ display(cases(a = 4, b = 7, a + c = 6, b + d = 2)) $ #noindent;解这个方程组，得 $ a = 4\,quad b = 7\,quad c = 2\,quad d = - 5 $
 
 因此，$f\(x\)$ 除以 $g\(x\)$ 的商式 $Q\(x\)$、余式 $R\(x\)$ 分别为：$ Q\(x\)= 4 x + 7\,#h(2em) R\(x\)= 2 x - 5 $
 
@@ -329,7 +330,7 @@ $therefore quad S = frac(a_1\(1 - q^n\), 1 - q) = frac(1 - 1 / 3^4, 1 - 1 / 3) =
 
 ]
 #proof[
-#emph[Proof.]由于三次多项式 $a x^3 + b x^2 + c x + d$,能被二次式 $x^2 + p$ 整除，因而，其商式必为一次式，不妨设商式为 $m x + n$ ($m\,n$ 为待定系数）．这样，可以得出恒等式：$ a x^3 + b x^2 + c x + d =\(m x + n\)\(x^2 + p\) $ 即：$a x^3 + b x^2 + c x + d = m x^3 + n x^2 + p m x + p n$
+由于三次多项式 $a x^3 + b x^2 + c x + d$,能被二次式 $x^2 + p$ 整除，因而，其商式必为一次式，不妨设商式为 $m x + n$ ($m\,n$ 为待定系数）．这样，可以得出恒等式：$ a x^3 + b x^2 + c x + d =\(m x + n\)\(x^2 + p\) $ #noindent;即：$a x^3 + b x^2 + c x + d = m x^3 + n x^2 + p m x + p n$
 
 比较等式两边同类项的系数，得
 
@@ -337,9 +338,9 @@ $therefore quad S = frac(a_1\(1 - q^n\), 1 - q) = frac(1 - 1 / 3^4, 1 - 1 / 3) =
 
 利用这个方程组，消去待定系数 $m\,n$ 和已知系数 $p$,就可以找出 $a\,b\,c\,d$ 的关系．
 
-将(7.3), (7.4)分别代入(7.5), (7.6)；再由(7.5), (7.6)可得：$ c / a = p = d / b $ $therefore quad c / a = d / b$
+将(7.3), (7.4)分别代入(7.5), (7.6)；再由(7.5), (7.6)可得：$ c / a = p = d / b $ #noindent;$therefore quad c / a = d / b$
 
-$therefore quad a d = b c$~◻
+$therefore quad a d = b c$
 
 ]
 像以上例题的解题方法，叫做待定系数法（或叫未定系数法），这个方法的特点是引进待定系数（未知的），列出一个含有待定系数的恒等式，然后根据多项式恒等的性质，比较等式两边的同类项系数，得出一个方程组．解这个方程组，求出待定系数，或消去待定系数而找出原来已知系数之间所存在的关系，使问题得以解决．
@@ -350,12 +351,12 @@ $therefore quad a d = b c$~◻
 如果两个多项式恒等，那么，这两个多项式的同类项系数都一定对应相等．
 
 ]
-也就是说，如果 $ a_n x^n + a_(n - 1) x^(n - 1) + dots.h.c + a_1 x + a_0 equiv b_n x^n + b_(n - 1) x^(n - 1) + dots.h.c + b_1 x + b_0 $ 那么，$a_n = b_n\,thick a_(n - 1) = b_(n - 1)\,dots.h\,a_1 = b_1\,thick a_0 = b_0$
+也就是说，如果 $ a_n x^n + a_(n - 1) x^(n - 1) + dots.h.c + a_1 x + a_0 equiv b_n x^n + b_(n - 1) x^(n - 1) + dots.h.c + b_1 x + b_0 $ #noindent;那么，$a_n = b_n\,thick a_(n - 1) = b_(n - 1)\,dots.h\,a_1 = b_1\,thick a_0 = b_0$
 
 #proof[
-#emph[Proof.]由于 $a_n x^n + a_(n - 1) x^(n - 1) + dots.h.c + a_1 x + a_0 equiv b_n x^n + b_(n - 1) x^(n - 1) + dots.h.c + b_1 x + b_0$
+由于 $a_n x^n + a_(n - 1) x^(n - 1) + dots.h.c + a_1 x + a_0 equiv b_n x^n + b_(n - 1) x^(n - 1) + dots.h.c + b_1 x + b_0$
 
-移项，合并同类项可得：$ \(a_n - b_n\)x^n +\(a_(n - 1) - b_(n - 1)\)x^(n - 1) + dots.h.c +\(a_1 - b_1\)x +\(a_0 - b_0\)equiv 0 $ 这就是说，$x$ 取任何值时，左边多项式的值都是零．因此，各项系数应全为零．即 $ a_n - b_n = a_(n - 1) - b_(n - 1) = dots.h.c = a_1 - b_1 = a_0 - b_0 = 0 $ 所以，$a_n = b_n\,thick a_(n - 1) = b_(n - 1)\,dots.h\,a_1 = b_1\,thick a_0 = b_0$~◻
+移项，合并同类项可得：$ \(a_n - b_n\)x^n +\(a_(n - 1) - b_(n - 1)\)x^(n - 1) + dots.h.c +\(a_1 - b_1\)x +\(a_0 - b_0\)equiv 0 $ #noindent;这就是说，$x$ 取任何值时，左边多项式的值都是零．因此，各项系数应全为零．即 $ a_n - b_n = a_(n - 1) - b_(n - 1) = dots.h.c = a_1 - b_1 = a_0 - b_0 = 0 $ #noindent;所以，$a_n = b_n\,thick a_(n - 1) = b_(n - 1)\,dots.h\,a_1 = b_1\,thick a_0 = b_0$
 
 ]
 #exercise[
@@ -368,7 +369,7 @@ $therefore quad a d = b c$~◻
 待定系数法在代数上有许多应用，除我们已经学习过的“求商式及余式、分解因式、寻求方程的根与系数的关系”等内容外，以下将学习另外一些应用．从中进一步领会这个方法的要点和重要．
 
 ==== 把多项式表示成另一个多项式的各次幂的形式
-在代数中，有时需要将一个多项式，表示成次数较低的另一个多项式的各次幂的形式．例如，在习题4.3第9题中，就是把多项式 $3 x^3 - 10 x^2 + 13$ 表示成 $x - 2$ 的各次幂的形式的：$ 3 x^3 - 10 x^2 + 13 = A\(x - 2\)^3 + B\(x - 2\)^2 + C\(x - 2\)+ D $ 当时，采用的是逐次使用综合除法的方法，其实这类问题也可以用待定系数法解决．
+在代数中，有时需要将一个多项式，表示成次数较低的另一个多项式的各次幂的形式．例如，在习题4.3第9题中，就是把多项式 $3 x^3 - 10 x^2 + 13$ 表示成 $x - 2$ 的各次幂的形式的：$ 3 x^3 - 10 x^2 + 13 = A\(x - 2\)^3 + B\(x - 2\)^2 + C\(x - 2\)+ D $ #noindent;当时，采用的是逐次使用综合除法的方法，其实这类问题也可以用待定系数法解决．
 
 #example[
 试用 $\(x - 1\)$ 的各次幂表示出多项式 $2 x^3 - x^2 + 2 x + 3$
@@ -376,9 +377,9 @@ $therefore quad a d = b c$~◻
 ]
 #solution[
 设 $2 x^3 - x^2 + 2 x + 3 = a\(x - 1\)^3 + b\(x - 1\)^2 + c\(x - 1\)+ d$ 因此：$  & 2 x^3 - x^2 + 2 x + 3\
- & #h(2em) = a x^3 - 3 a x^2 + 3 a x - a + b x^2 - 2 b x + b + c x - c + d $ 即：$2 x^3 - x^2 + 2 x + 3 = a x^3 +\(b - 3 a\)x^2 +\(3 a - 2 b + c\)x - a + b - c + d$
+ & #h(2em) = a x^3 - 3 a x^2 + 3 a x - a + b x^2 - 2 b x + b + c x - c + d $ #noindent;即：$2 x^3 - x^2 + 2 x + 3 = a x^3 +\(b - 3 a\)x^2 +\(3 a - 2 b + c\)x - a + b - c + d$
 
-比较两边同类项系数，得 $ cases(a = 2, b - 3 a = - 1, 3 a - 2 b + c = 2, - a + b - c + d = 3) $ 解这个方程组，得 $ a = 2\,quad b = 5\,quad c = 6\,quad d = 6 $ 因此，$2 x^3 - x^2 + 2 x + 3 = 2\(x - 1\)^3 + 5\(x - 1\)^2 + 6\(x - 1\)+ 6$
+比较两边同类项系数，得 $ display(cases(a = 2, b - 3 a = - 1, 3 a - 2 b + c = 2, - a + b - c + d = 3)) $ #noindent;解这个方程组，得 $ a = 2\,quad b = 5\,quad c = 6\,quad d = 6 $ #noindent;因此，$2 x^3 - x^2 + 2 x + 3 = 2\(x - 1\)^3 + 5\(x - 1\)^2 + 6\(x - 1\)+ 6$
 
 ]
 应该指出，待定系数法在解以上这种问题时，并不是最简便的．使用习题4.3第9题所提示的综合除法要简便一些．
@@ -387,7 +388,7 @@ $therefore quad a d = b c$~◻
 
 设 $x - 1 = y$,则 $x = y + 1$,代入原多项式中，得 $ 2 x^3 - x^2 + 2 x + 3 & = 2\(y + 1\)^3 -\(y + 1\)^2 + 2\(y + 1\)+ 3\
  & = 2 y^3 + 6 y^2 + 6 y + 2 - y^2 - 2 y - 1 + 2 y + 2 + 3\
- & = 2 y^3 + 5 y^2 + 6 y + 6 $ 再将原设 $x - 1 = y$ 代入上式右边，得：$ 2 x^3 - x^2 + 2 x + 3 = 2\(x - 1\)^3 + 5\(x - 1\)^2 + 6\(x - 1\)+ 6 $
+ & = 2 y^3 + 5 y^2 + 6 y + 6 $ #noindent;再将原设 $x - 1 = y$ 代入上式右边，得：$ 2 x^3 - x^2 + 2 x + 3 = 2\(x - 1\)^3 + 5\(x - 1\)^2 + 6\(x - 1\)+ 6 $
 
 #exercise[
 用三种方法解下列各题：
@@ -405,7 +406,7 @@ $therefore quad a d = b c$~◻
 
 ]
 #solution[
-设 $f\(x\)= a x^2 + b x + c$,则由已知条件可知：$ cases(f\(1\)= a + b + c = - 1\,, f\(2\)= 4 a + 2 b + c = 4\,, f\(3\)= 9 a + 3 b + c = - 3 .) $ 解这个方程组，得 $a = - 6\,quad b = 23\,quad c = - 18$．
+设 $f\(x\)= a x^2 + b x + c$,则由已知条件可知：$ display(cases(f\(1\)= a + b + c = - 1\,, f\(2\)= 4 a + 2 b + c = 4\,, f\(3\)= 9 a + 3 b + c = - 3 .)) $ #noindent;解这个方程组，得 $a = - 6\,quad b = 23\,quad c = - 18$．
 
 因此，所求二次多项式为 $ f\(x\) & = - 6 x^2 + 23 x - 18\
 f\(10\) & = - 388 $
@@ -424,7 +425,7 @@ f\(10\) & = - 388 $
 #solution[
 由已知可设 $x^4 - 9 x^2 + 12 x - 4 =\(x - 1\)\(x - 2\)\(x^2 + a x + b\)$
 
-在以上恒等式中，分别取 $x = 0\,- 1$,得：$ cases(- 4 = 2 b, - 24 = 6\(1 - a + b\)) $
+在以上恒等式中，分别取 $x = 0\,- 1$,得：$ display(cases(- 4 = 2 b, - 24 = 6\(1 - a + b\))) $
 
 解这个方程组，得 $b = - 2\,quad a = 3$．
 
@@ -441,7 +442,7 @@ f\(10\) & = - 388 $
 ]
 #solution[
 由已知，可设所给方程的根为：$a\,- a\,b$．根据余式定理推论，则有 $ 2 x^3 - 3 x^2 - 8 x + 12 & = 2\(x - a\)\(x + a\)\(x - b\)\
- & = 2 x^3 - 2 b x^2 - 2 a^2 x + 2 a^2 b $ 比较等式两边同类项的系数，得
+ & = 2 x^3 - 2 b x^2 - 2 a^2 x + 2 a^2 b $ #noindent;比较等式两边同类项的系数，得
 
 #numcases($$, $- 3 = - 2 b$, $- 8 = - 2 a^2$, $12 = 2 a^2 b$);
 
@@ -461,7 +462,7 @@ f\(10\) & = - 388 $
 
 ]
 ==== 把一个分式化为部分分式
-在分式的运算和变形中，有时需要把一个真分式化为另外几个真分式的代数和的形式，例如：$ frac(5 x - 4, \(x - 1\)\(2 x - 1\)) = frac(1, x - 1) + frac(3, 2 x - 1) $ 其中，两个比较简单的真分式 $frac(1, x - 1)$，$frac(3, 2 x - 1)$ 就叫做原真分式 $frac(5 x - 4, \(x - 1\)\(2 x - 1\))$ 的#strong[部分分式]．
+在分式的运算和变形中，有时需要把一个真分式化为另外几个真分式的代数和的形式，例如：$ frac(5 x - 4, \(x - 1\)\(2 x - 1\)) = frac(1, x - 1) + frac(3, 2 x - 1) $ #noindent;其中，两个比较简单的真分式 $frac(1, x - 1)$，$frac(3, 2 x - 1)$ 就叫做原真分式 $frac(5 x - 4, \(x - 1\)\(2 x - 1\))$ 的#strong[部分分式]．
 
 把一个分式化成部分分式的代数和，对今后学习高等数学很有用途．以下将举例说明如何用待定系数法，化分式为部分分式的和．
 
@@ -477,7 +478,7 @@ f\(10\) & = - 388 $
 
 由于两个相等的分式的分母相等，因此它们的分子也一定相等．
 
-$therefore quad 5 x - 4 = a\(2 x - 1\)+ b\(x - 1\)$，即：$ 5 x - 4 =\(2 a + b\)x -\(a + b\) $ 比较等式两边同类项的系数，得到：$ cases(2 a + b = 5, a + b = 4) $ 解得：$a = 1$, $b = 3$．代入等式(7.10)得到 $ frac(5 x - 4, \(x - 1\)\(2 x - 1\)) = frac(1, x - 1) + frac(3, 2 x - 1) $
+$therefore quad 5 x - 4 = a\(2 x - 1\)+ b\(x - 1\)$，即：$ 5 x - 4 =\(2 a + b\)x -\(a + b\) $ #noindent;比较等式两边同类项的系数，得到：$ display(cases(2 a + b = 5, a + b = 4)) $ #noindent;解得：$a = 1$, $b = 3$．代入等式(7.10)得到 $ frac(5 x - 4, \(x - 1\)\(2 x - 1\)) = frac(1, x - 1) + frac(3, 2 x - 1) $
 
 一般地说，如果 $P$、$Q$ 是互质的两个因式，那么真分式 $frac(A, P Q)$ 可以化为形如 $B / P$ 与 $C / Q$ 两个真分式的和，即 $B / P$ 与 $C / Q$ 为 $frac(A, P Q)$ 的部分分式．
 
@@ -486,7 +487,7 @@ $therefore quad 5 x - 4 = a\(2 x - 1\)+ b\(x - 1\)$，即：$ 5 x - 4 =\(2 a + b
 
 ]
 #analyze[
-因为原分式分母中的因式 $2 x - 1$ 与 $\(3 + x\)\(3 - x\)$ 是互质的因式．所以，原分式可以化成下面两个真分式的和，即 $ frac(a, 2 x - 1) + frac(e x + f, \(3 + x\)\(3 - x\)) $ 这里 $a\,e\,f$ 都是待定系数．
+因为原分式分母中的因式 $2 x - 1$ 与 $\(3 + x\)\(3 - x\)$ 是互质的因式．所以，原分式可以化成下面两个真分式的和，即 $ frac(a, 2 x - 1) + frac(e x + f, \(3 + x\)\(3 - x\)) $ #noindent;这里 $a\,e\,f$ 都是待定系数．
 
 这两个分式都是真分式，也就是分子的次数小于分母的次数．第一个分式的分母是一次，所以分子可以用常数 $a$ 表示，第二个分式的分母是二次，所以分子应用一次式 $e x + f$ 表示．
 
@@ -590,7 +591,7 @@ $therefore quad 42 - 19 x = a\(x^2 + 1\)+\(b x + c\)\(x - 4\)$ 是一个恒等�
 
 令 $x = 4$，得 $a = - 2$．
 
-再把 $a = - 2$ 代入上式，整理得到：$ 42 - 19 x =\(b - 2\)x^2 +\(c - 4 b\)x -\(4 c + 2\) $ 比较等式两边同类项的系数，得
+再把 $a = - 2$ 代入上式，整理得到：$ 42 - 19 x =\(b - 2\)x^2 +\(c - 4 b\)x -\(4 c + 2\) $ #noindent;比较等式两边同类项的系数，得
 
 #numcases($$, $b - 2 = 0$, $c - 4 b = - 19$, $-\(4 c + 2\)= 42$);
 
@@ -607,11 +608,11 @@ $therefore quad 42 - 19 x = a\(x^2 + 1\)+\(b x + c\)\(x - 4\)$ 是一个恒等�
 
 + 分母中如果含有因式 $a x + b$ 的一次幂，那么，原真分式就对应有一个部分分式 $frac(A, a x + b)$（$A$ 是常数，$a eq.not 0$）；
 
-+ 分母中如果含有因式 $\(a x + b\)^n quad\(n > 1\)$,那么，原真分式就对应有 $n$ 个部分分式的代数和，即 $ frac(A_1, a x + b) + frac(A_2, \(a x + b\)^2) + dots.h.c + frac(A_n, \(a x + b\)^n) $（$A_1\,A_2\,dots.h\,A_n$ 都是常数）；
++ 分母中如果含有因式 $\(a x + b\)^n quad\(n > 1\)$,那么，原真分式就对应有 $n$ 个部分分式的代数和，即 $ frac(A_1, a x + b) + frac(A_2, \(a x + b\)^2) + dots.h.c + frac(A_n, \(a x + b\)^n) $#noindent;（$A_1\,A_2\,dots.h\,A_n$ 都是常数）；
 
 + 分母中如果含有因式 $a x^2 + b x + c$ 的一次幂，且 $b^2 - 4 a c < 0$,那么，原真分式就对应有一个部分分式 $frac(m x + n, a x^2 + b x + c)$（$m\,n$ 都是常数，$a eq.not 0$）．
 
-另外，还有一种类型，就是“分母中如果含有因式 $\(a x^2 + b x + c\)^n quad\(n > 1\)$,且 $b^2 - 4 a c < 0$,那么，原真分式就对应有 $n$ 个部分分式的代数和，即 $ frac(m_1 x + n_1, a x^2 + b x + c) + frac(m_2 x + n_2, \(a x^2 + b x + c\)^2) + dots.h.c + frac(m_n x + n_n, \(a x^2 + b x + c\)^n) $ 其中，$m_1\,n_1\,m_2\,n_2\,dots.h\,m_n\,n_n$ 都是常数（$a eq.not 0$）”．但运算较繁，这里就略去了．
+另外，还有一种类型，就是“分母中如果含有因式 $\(a x^2 + b x + c\)^n quad\(n > 1\)$,且 $b^2 - 4 a c < 0$,那么，原真分式就对应有 $n$ 个部分分式的代数和，即 $ frac(m_1 x + n_1, a x^2 + b x + c) + frac(m_2 x + n_2, \(a x^2 + b x + c\)^2) + dots.h.c + frac(m_n x + n_n, \(a x^2 + b x + c\)^n) $ #noindent;其中，$m_1\,n_1\,m_2\,n_2\,dots.h\,m_n\,n_n$ 都是常数（$a eq.not 0$）”．但运算较繁，这里就略去了．
 
 #exercise[
 + 已知下列各恒等式，求 $A$、$B$、$C$ 的值．
@@ -654,7 +655,7 @@ $therefore quad 42 - 19 x = a\(x^2 + 1\)+\(b x + c\)\(x - 4\)$ 是一个恒等�
 #solution[
 设 $sqrt(8 + 2 sqrt(12)) = sqrt(x) + sqrt(y)$（$x\,y$ 都是正整数）．
 
-则两边平方后可得：$ 8 + 2 sqrt(12) = (sqrt(x) + sqrt(y))^2 =\(x + y\)+ 2 sqrt(x y) $ 以上恒等式要成立，必须满足：
+则两边平方后可得：$ 8 + 2 sqrt(12) = (sqrt(x) + sqrt(y))^2 =\(x + y\)+ 2 sqrt(x y) $ #noindent;以上恒等式要成立，必须满足：
 
 #numcases($$, $x + y = 8$, $x y = 12$);
 
@@ -675,7 +676,7 @@ $therefore quad sqrt(8 + 2 sqrt(12)) = sqrt(2) + sqrt(6)\(= sqrt(6) + sqrt(2)\)$
 
 #numcases($$, $a = x + y$, $b = x y$);
 
-解这个含有未定数 $x\,y$ 的方程组，得 $ cases(x = frac(a + sqrt(a^2 - 4 b), 2), y = frac(a - sqrt(a^2 - 4 b), 2)) $
+解这个含有未定数 $x\,y$ 的方程组，得 $ display(cases(x = frac(a + sqrt(a^2 - 4 b), 2), y = frac(a - sqrt(a^2 - 4 b), 2))) $
 
 由这里还可以看出，形如 $a plus.minus 2 sqrt(b)$ 的数，只有当 $a^2 - 4 b > 0$,且是一个完全平方数时，才能有形如 $sqrt(x) plus.minus sqrt(y)$ 的算术平方根．
 
@@ -698,7 +699,7 @@ $therefore quad sqrt(8 + 2 sqrt(12)) = sqrt(2) + sqrt(6)\(= sqrt(6) + sqrt(2)\)$
 
 + $because quad 9 + 4 sqrt(5) = 9 + 2 sqrt(20)$
 
-  $therefore quad$ 设 $sqrt(9 + 2 sqrt(20)) = sqrt(x) + sqrt(y)$，两边平方，得：$ 9 + 2 sqrt(20) =\(x + y\)+ 2 sqrt(x y) $ 比较两边相应部分，得 $ cases(x + y = 9, x y = 20) $ 解这个方程组，得：$x = 5\,quad y = 4$
+  $therefore quad$ 设 $sqrt(9 + 2 sqrt(20)) = sqrt(x) + sqrt(y)$，两边平方，得：$ 9 + 2 sqrt(20) =\(x + y\)+ 2 sqrt(x y) $ #noindent;比较两边相应部分，得 $ display(cases(x + y = 9, x y = 20)) $ #noindent;解这个方程组，得：$x = 5\,quad y = 4$
 
   $therefore quad sqrt(9 + 4 sqrt(5)) = sqrt(5) + sqrt(4) approx 2.24 + 2 = 4.24$
 
@@ -732,11 +733,10 @@ $therefore quad sqrt(8 + 2 sqrt(12)) = sqrt(2) + sqrt(6)\(= sqrt(6) + sqrt(2)\)$
 某仓库中，存放的罐头堆成锥形垛．顶上放一桶，第二层有四桶，以下各层，每个桶均由四个桶顶着（如图）一垛共有五层．问这一垛共有多少桶？
 
 ]
-#figure(image("/math1/1.png"),
-  caption: [
-  ]
-)
+#align(center)[
+#scale(70%, reflow: true, image("/math1/1.png"));
 
+]
 #solution[
 显然，这一垛共有：$\(1 + 4 + 9 + 16 + 25\)$ 桶．即：$1^2 + 2^2 + 3^2 + 4^2 + 5^2 = 55$ 桶．
 
@@ -754,7 +754,7 @@ dots.h.c dots.h.c & dots.h.c dots.h.c\
 S\(n\) & = 1^2 + 2^2 + dots.h.c + n^2\
 S\(n + 1\) & = 1^2 + 2^2 + dots.h.c + n^2 +\(n + 1\)^2 $
 
-而且还可以看出：无论项数 $n$ 取几，总有 $ S\(n + 1\)- S\(n\)=\(n + 1\)^2 = n^2 + 2 n + 1 $ 可见，$S\(n\)$ 很可能是一个关于项数 $n$ 的多项式，它只要满足两个性质：
+而且还可以看出：无论项数 $n$ 取几，总有 $ S\(n + 1\)- S\(n\)=\(n + 1\)^2 = n^2 + 2 n + 1 $ #noindent;可见，$S\(n\)$ 很可能是一个关于项数 $n$ 的多项式，它只要满足两个性质：
 
 + $S\(0\)= 0$
 
@@ -765,9 +765,9 @@ S\(n + 1\) & = 1^2 + 2^2 + dots.h.c + n^2 +\(n + 1\)^2 $
 
 但是，满足以上两条性质的多项式 $S\(x\)$ 应该是几次多项式呢？
 
-我们不妨设 $S\(x\)$ 是 $m$ 次多项式，即 $ S\(x\)= a x^m + b x^(m - 1) + dots.h.c + c x + d quad\(a eq.not 0\) $ 则：$S\(x + 1\)= a\(x + 1\)^m + b\(x + 1\)^(m - 1) + dots.h.c + c\(x + 1\)+ d$ 由乘法公式，不难知道：$ S\(x + 1\) & = a\(x^m + m x^(m - 1) + dots.h.c + 1\)+ b\[x^(m - 1) +\(m - 1\)x^(m - 2) + dots.h.c + 1\]\
+我们不妨设 $S\(x\)$ 是 $m$ 次多项式，即 $ S\(x\)= a x^m + b x^(m - 1) + dots.h.c + c x + d quad\(a eq.not 0\) $ #noindent;则：$S\(x + 1\)= a\(x + 1\)^m + b\(x + 1\)^(m - 1) + dots.h.c + c\(x + 1\)+ d$ 由乘法公式，不难知道：$ S\(x + 1\) & = a\(x^m + m x^(m - 1) + dots.h.c + 1\)+ b\[x^(m - 1) +\(m - 1\)x^(m - 2) + dots.h.c + 1\]\
 + dots.h.c + c\(x + 1\)+ d\
- & = a x^m +\(b + a m\)x^(m - 1) + dots.h.c +\(c + dots.h.c\)x +\(a + b + dots.h.c + c + d\) $ $therefore quad S\(x + 1\)- S\(x\)=\(b + a m - b\)x^(m - 1) + dots.h.c = a m x^(m - 1) + dots.h.c$
+ & = a x^m +\(b + a m\)x^(m - 1) + dots.h.c +\(c + dots.h.c\)x +\(a + b + dots.h.c + c + d\) $ #noindent;$therefore quad S\(x + 1\)- S\(x\)=\(b + a m - b\)x^(m - 1) + dots.h.c = a m x^(m - 1) + dots.h.c$
 
 由于 $a m eq.not 0$,显然 $S\(x + 1\)- S\(x\)$ 是 $m - 1$ 次多项式，因此，我们可以得出：
 
@@ -790,9 +790,9 @@ S\(n + 1\) & = 1^2 + 2^2 + dots.h.c + n^2 +\(n + 1\)^2 $
 
 由分析知 $S\(n\)$ 是一个关于项数 $n$ 的三次式，且 $S\(0\)= 0$, $S\(1\)= 1$, $S\(2\)= 5$, $S\(3\)= 14$．其中，0是 $S\(n\)$ 的一个根．
 
-$therefore quad$ 由余式定理的推论，得：$ S\(n\)= n\(a n^2 + b n + c\) $ 这里 $a$、$b$、$c$ 都是待定系数．
+$therefore quad$ 由余式定理的推论，得：$ S\(n\)= n\(a n^2 + b n + c\) $ #noindent;这里 $a$、$b$、$c$ 都是待定系数．
 
-将 $S\(1\)= 1$, $S\(2\)= 5$, $S\(3\)= 14$ 分别代入上式，即可得出 $ cases(1 = a + b + c, 5 = 2\(4 a + 2 b + c\), 14 = 3\(9 a + 3 b + c\)) arrow.r.double quad cases(a + b + c = 1, 4 a + 2 b + c = 5 / 2, 9 a + 3 b + c = 14 / 3) $ 解这个方程组，得 $a = 1 / 3\,quad b = 1 / 2\,quad c = 1 / 6$ 因此：$ S\(n\) & = n (1 / 3 n^2 + 1 / 2 n + 1 / 6)\
+将 $S\(1\)= 1$, $S\(2\)= 5$, $S\(3\)= 14$ 分别代入上式，即可得出 $ display(cases(1 = a + b + c, 5 = 2\(4 a + 2 b + c\), 14 = 3\(9 a + 3 b + c\))) arrow.r.double quad display(cases(a + b + c = 1, 4 a + 2 b + c = 5 / 2, 9 a + 3 b + c = 14 / 3)) $ #noindent;解这个方程组，得 $a = 1 / 3\,quad b = 1 / 2\,quad c = 1 / 6$ 因此：$ S\(n\) & = n (1 / 3 n^2 + 1 / 2 n + 1 / 6)\
  & = n / 6\(2 n^2 + 3 n + 1\)\
  & = 1 / 6 n\(n + 1\)\(2 n + 1\) $
 
@@ -801,7 +801,8 @@ $therefore quad$ 由余式定理的推论，得：$ S\(n\)= n\(a n^2 + b n + c\)
 试用待定系数法求 $1^3 + 2^3 + dots.h.c + n^3$．
 
 ]
-#heading(level: 2, numbering: none)[习题7.2]
+#heading(level: 2, numbering: none, supplement: [toc-sub])[习题7.2]
+
 + 已知 $x^4 + 4 x^3 + 6 p x^2 + 4 q x + r$ 能被 $x^3 + 3 x^2 + 9 x + 3$ 整除，试求 $p$、$q$、$r$ 的值．
 
 + 已知 $f\(x\)= a x^2 + b x + c$ 是一个完全平方式，试用待定系数法证明：$b^2 - 4 a c = 0$．
@@ -852,7 +853,8 @@ $therefore quad$ 由余式定理的推论，得：$ S\(n\)= n\(a n^2 + b n + c\)
 
 + #staritem;求下列数列的前 $n$ 项和：$1^4\,2^4\,3^4\,dots.h\,n^4\,dots.h$
 
-#heading(level: 2, numbering: none)[本章内容要点]
+#heading(level: 2, numbering: none, outlined: false)[本章内容要点]
+
 本章的主要内容是两种常见数列的求和及待定系数法与它的应用．
 
 一、等差数列
@@ -938,6 +940,6 @@ S_n & = frac(a_1\(1 - q^n\), 1 - q) $
 
 + 将分式 $frac(6 x^3 + 5 x^2 - 7, 3 x^2 - 2 x - 1)$ 化成部分分式．
 
-+ 证明：如果 $a\,b\,c$ 成等比数列，那么方程 $ \(a^2 + b^2\)x^2 - 2 b\(a + c\)x + b^2 + c^2 = 0 $ 有两个相等的实数根，且这个实数根正好等于公比．
++ 证明：如果 $a\,b\,c$ 成等比数列，那么方程 $ \(a^2 + b^2\)x^2 - 2 b\(a + c\)x + b^2 + c^2 = 0 $ #noindent;有两个相等的实数根，且这个实数根正好等于公比．
 
   提示：$a\,b\,c$ 之间有关系 $b^2 = a c$

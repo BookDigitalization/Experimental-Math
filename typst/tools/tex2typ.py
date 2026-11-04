@@ -58,13 +58,31 @@ class Converter:
     def preprocess(self, tex: str) -> str:
         tex = strip_comments(tex)
         tex = self.replace_tikz(tex)
+        # 没有 \caption 的 figure 在 LaTeX 中不编号；pandoc 会给它图号，所以改成居中的普通内容
+        tex = re.sub(r"\\begin\{figure\}(?:\[[^\]]*\])?((?:(?!\\end\{figure\}).)*?)\\end\{figure\}",
+                     lambda m: m.group(0) if r"\caption" in m.group(1) else r"\begin{center}%s\end{center}" % m.group(1).replace(r"\centering", ""),
+                     tex, flags=re.S)
+        tex = self.replace_figure_pairs(tex)
+        # pandoc 把显式的 [1.] 当作默认格式丢掉（嵌套时 LaTeX 仍印 1.），借本书未用的 [i)] 传过去，enum_at 中再换回
+        tex = re.sub(r"\\begin\{enumerate\}\[1\.\]", r"\\begin{enumerate}[i)]", tex)
         tex = split_item_multicols(tex)
         tex = re.sub(r"\\staritem\b\s*", lambda m: r"\item " + self.slot("#staritem;"), tex)
         tex = re.sub(r"``(.*?)''", "“\\1”", tex, flags=re.S)  # TeX 的 ``…'' 引号
-        tex = re.sub(r"\\x(?![a-zA-Z])", r"\\times ", tex)
+        # \x 是本书定义的 ×；但 \\x 是换行后接字母 x，不能替换
+        tex = re.sub(r"(?<!\\)\\x(?![a-zA-Z])", r"\\times ", tex)
         tex = re.sub(r"\\oc(?![a-zA-Z])", "°C", tex)
         tex = re.sub(r"\\vskip\s*[\d.]+\s*(ex|em|pt|mm|cm)", "", tex)
+        # \section*：后面跟 \addcontentsline{toc}{subsection} 的（习题）以小节的缩进列入目录，否则不列入目录
+        tex = re.sub(r"\\section\*\{([^}]*)\}\s*\\addcontentsline\{toc\}\{subsection\}\{[^}]*\}",
+                     lambda m: "\n\n" + self.slot("#heading(level: 2, numbering: none, supplement: [toc-sub])[%s]" % m.group(1)) + "\n\n", tex)
+        tex = re.sub(r"\\section\*\{([^}]*)\}(?!\s*\\addcontentsline)",
+                     lambda m: "\n\n" + self.slot("#heading(level: 2, numbering: none, outlined: false)[%s]" % m.group(1)) + "\n\n", tex)
         tex = re.sub(r"\\addcontentsline\{[^}]*\}\{[^}]*\}\{[^}]*\}", "", tex)
+        # proof 是本书自定义的环境（只印“证明：”），换个名字，免得 pandoc 按 amsthm 加上 Proof. 和 ◻
+        tex = re.sub(r"\\(begin|end)\{proof\}", r"\\\1{bookproof}", tex)
+        # 单独的 \includegraphics[scale=s]{f}：pandoc 会套上带图号的 figure，LaTeX 版没有图号
+        tex = re.sub(r"\\includegraphics\[scale=([\d.]+)\]\{([^}]*)\}",
+                     lambda m: self.slot('#scale(%g%%, reflow: true, image("%s"))' % (float(m.group(1)) * 100, m.group(2))), tex)
         # 多行环境末尾多余的 \\ 会让 pandoc 转错（LaTeX 中只是多一个空行）
         tex = re.sub(r"\\\\\s*(\\end\{(cases|array|aligned|align\*?|split|gathered|matrix|pmatrix)\})", r"\1", tex)
         tex = re.sub(r"\{\\rm\s+([^{}]*)\}", r"\\mathrm{\1}", tex)
@@ -86,13 +104,24 @@ class Converter:
         tex = re.sub(r"\\left\\\{\s*\\begin\{array\}\{[^}]*\}(.*?)\\end\{array\}\s*\\right\.",
                      r"\\begin{cases}\1\\end{cases}", tex, flags=re.S)
         tex = self.replace_nested_cases(tex)
+        tex = self.replace_arrays(tex)
         tex = self.replace_tags(tex)
         tex = self.replace_numcases(tex)
+        tex = re.sub(r"\\begin\{align\}(.*?)\\end\{align\}", lambda m: "\n\n" + self.slot(aligned_rows(m.group(1), numbered=True)) + "\n\n",
+                     tex, flags=re.S)
         tex = re.sub(r"\\begin\{equation\}(.*?)\\end\{equation\}",
                      lambda m: self.slot("#numbered-eq($ %s $)" % tex_math_to_typst(m.group(1))), tex, flags=re.S)
         tex = self.replace_inline_envs(tex)
         tex = self.replace_text_spaces(tex)
         tex = self.replace_tabular(tex)
+        # table 环境中的表格：pandoc 不认得已换成占位符的表格，图注会丢掉。改为 #figure(kind: table)
+        def table_env(m: re.Match) -> str:
+            cap = re.search(r"\\caption\{([^}]*)\}", m.group(1))
+            body = re.sub(r"\\caption\{[^}]*\}|\\centering|\\label\{[^}]*\}", "", m.group(1)).strip()
+            body = re.sub(r"\\textsc\{(PH\d+)\}", r"#smallcaps[\1]", body)
+            caption = convert_fragments([cap.group(1)])[0] if cap and cap.group(1).strip() else ""
+            return "\n\n" + self.slot("#figure(kind: table, caption: [%s], [%s])" % (caption, body)) + "\n\n"
+        tex = re.sub(r"\\begin\{table\}(?:\[[^\]]*\])?(.*?)\\end\{table\}", table_env, tex, flags=re.S)
         # \resizebox{\textwidth}{!}{表格}：pandoc 会连内容一起丢掉。表格此时已是占位符，套上 fit-width
         tex = replace_command(tex, "resizebox", 3, lambda a: self.slot(
             "#fit-width[%s]" % re.sub(r"\\textsc\{(PH\d+)\}", r"#smallcaps[\1]", a[2].strip())))
@@ -104,6 +133,13 @@ class Converter:
         out, i, depth_math = [], 0, 0
         n = len(tex)
         while i < n:
+            # 公式不能跨段落：遇到空行就回到正文状态，免得前面某处计数出错一直错下去
+            m = re.match(r"\n[ \t]*\n", tex[i:])
+            if m:
+                depth_math = 0
+                out.append(m.group(0))
+                i += m.end()
+                continue
             if tex.startswith("\\$", i):
                 out.append("\\$")
                 i += 2
@@ -183,6 +219,7 @@ class Converter:
                 r = r[m.end():].strip()
             if not r:
                 continue
+            width = 0
             for c in split_top(r, "&"):
                 mc = re.match(r"\\multicolumn\{(\d+)\}\{([^}]*)\}", c)
                 if mc:
@@ -190,9 +227,15 @@ class Converter:
                     al = parse_colspec(mc.group(2))[0]
                     layout.append(("cell", len(cells), int(mc.group(1)), al[0][0] if al else "center"))
                     cells.append(content)
+                    width += int(mc.group(1))
                 else:
                     layout.append(("cell", len(cells), 1, None))
                     cells.append(c)
+                    width += 1
+            # 只填了前几格的行补上空格，否则 Typst 会把下一行的内容接着排进来
+            for _ in range(len(cols) - width):
+                layout.append(("cell", len(cells), 1, None))
+                cells.append("")
         converted = convert_fragments(cells)
         for v in vlines:
             items.append("table.vline(x: %d)," % v)
@@ -206,9 +249,26 @@ class Converter:
                     items.append("table.cell(colspan: %d%s)%s," % (span, ", align: " + al if al else "", content))
                 else:
                     items.append(content + ",")
-        widths = ", ".join(w for _, w in cols)
+        # p{宽度} 是内容宽度，LaTeX 另在两侧各加 \tabcolsep（6pt）；Typst 的列宽含内边距
+        widths = ", ".join(w if w == "auto" else w + " + 12pt" for _, w in cols)
         aligns = ", ".join(a for a, _ in cols)
         return "#table(\n  columns: (%s,),\n  align: (%s,),\n  %s\n)" % (widths, aligns, "\n  ".join(items))
+
+    def replace_figure_pairs(self, tex: str) -> str:
+        """figure 中用两个 minipage 并排、各带 \\caption 的两幅图：pandoc 会合成一幅图、一个图号。
+        改为并排的两个 #figure，各占一个图号"""
+        def repl(m: re.Match) -> str:
+            parts = re.findall(r"\\begin\{minipage\}(?:\[[^\]]*\])?\{[^}]*\}(.*?)\\end\{minipage\}", m.group(0), flags=re.S)
+            figs = []
+            for p in parts:
+                cap = re.search(r"\\caption\{([^}]*)\}", p)
+                body = re.sub(r"\\caption\{[^}]*\}|\\centering", "", p).strip()
+                body = re.sub(r"\\textsc\{(PH\d+)\}", r"#smallcaps[\1]", body)
+                caption = convert_fragments([cap.group(1)])[0] if cap and cap.group(1).strip() else ""
+                figs.append("figure([%s], caption: [%s])" % (body, caption) if cap else "[%s]" % body)
+            return "\n\n" + self.slot("#grid(columns: (1fr,) * %d, align: center + bottom, %s)" % (len(figs), ", ".join(figs))) + "\n\n"
+        return re.sub(r"\\begin\{figure\}(?:\[[^\]]*\])?(?:(?!\\end\{figure\}).)*?\\begin\{minipage\}.*?\\end\{figure\}",
+                      repl, tex, flags=re.S)
 
     def replace_tikz(self, tex: str) -> str:
         def repl(m: re.Match) -> str:
@@ -236,11 +296,29 @@ class Converter:
                 return tex
             tex = tex[: m.start()] + self.math_slot(cases_to_typst(m.group(1))) + tex[m.end():]
 
+    def replace_arrays(self, tex: str) -> str:
+        """array 环境：pandoc 把各列变成 Typst 的对齐点，列与列之间没有间隔。改为无括号的 mat"""
+        pat = re.compile(r"\\begin\{array\}\{([^}]*)\}((?:(?!\\begin\{array\}).)*?)\\end\{array\}", re.S)
+        while True:
+            m = pat.search(tex)
+            if not m:
+                return tex
+            aligns = set(re.sub(r"[^lcr]", "", m.group(1)))
+            align = {"l": "left", "r": "right"}.get(aligns.pop(), "center") if len(aligns) == 1 else "center"
+            rows = [r for r in split_top(m.group(2), "\\\\") if r.strip() and r.strip() != r"\hline"]
+            conv = ["; ".join([", ".join(tex_math_to_typst(c) if c.strip() else "" for c in split_top(r, "&"))]) for r in rows]
+            typ = "mat(delim: #none, align: #%s, column-gap: #1.5em, %s)" % (align, "; ".join(conv))
+            tex = tex[: m.start()] + self.math_slot(typ) + tex[m.end():]
+
     def replace_tags(self, tex: str) -> str:
-        """\\tag{X}：对齐环境中改为右侧一栏的说明，其他公式中改为隔开一段的说明"""
-        def in_align(m: re.Match) -> str:
-            return replace_command(m.group(0), "tag", 1, lambda a: r"&&\text{(%s)}" % a[0])
-        tex = re.sub(r"\\begin\{(align\*?|aligned|split|eqnarray\*?)\}.*?\\end\{\1\}", in_align, tex, flags=re.S)
+        """带 \\tag{X} 的独立公式（align*、\\[…\\]、$$…$$、equation*）改为 #numbered-align，
+        说明“(X)”靠右排，与 LaTeX 一致。其余位置的 \\tag 改为隔开一段的说明"""
+        def repl(m: re.Match) -> str:
+            body = m.group(2) if m.group(2) is not None else (m.group(3) if m.group(3) is not None else m.group(4))
+            if r"\tag" not in body:
+                return m.group(0)
+            return "\n\n" + self.slot(aligned_rows(body, numbered=False)) + "\n\n"
+        tex = re.sub(r"\\begin\{(align\*|equation\*)\}(.*?)\\end\{\1\}|\\\[(.*?)\\\]|\$\$(.*?)\$\$", repl, tex, flags=re.S)
         return replace_command(tex, "tag", 1, lambda a: r"\qquad\text{(%s)}" % a[0])
 
     def replace_numcases(self, tex: str) -> str:
@@ -273,7 +351,10 @@ class Converter:
         if left:
             raise RuntimeError("占位符没有替换干净：%s" % left[:5])
         typ = fix_math(typ)
-        typ = re.sub(r'^( *)#set enum\(numbering: "([^"]*)"', enum_at, typ, flags=re.M)
+        typ = fix_strings(typ)
+        # 列表项以独立公式开头时，LaTeX 的题号单独占一行、公式排在下一行
+        typ = re.sub(r"^( *)\+ \$ ", lambda m: "%s+ #h(0pt)\n%s  $ " % (m.group(1), m.group(1)), typ, flags=re.M)
+        typ = re.sub(r'^( *)#set enum\(numbering: "([^"]*)", start: (\d+)\)', enum_at, typ, flags=re.M)
         typ = escape_after_calls(typ)
         typ = re.sub(r"\n{3,}", "\n\n", typ)
         return typ
@@ -347,17 +428,33 @@ def split_item_multicols(tex: str) -> str:
 
 
 def enum_at(m: re.Match) -> str:
-    """pandoc 的 #set enum(numbering: "(1)") 会作用到嵌套的各层，改为只作用于本层。
-    pandoc 每嵌套一层列表缩进 2 格，由此得出层数"""
-    depth = len(m.group(1)) // 2 + 1
-    if m.group(2) == "1.":  # pandoc 对默认格式也会写出 "1."（如 \setcounter 之后），保留各层默认格式
-        return '%s#set enum(numbering: latex-enum' % m.group(1)
-    return '%s#set enum(numbering: enum-at(%d, "%s")' % (m.group(1), depth, m.group(2))
+    """pandoc 的 #set enum(numbering: "(1)", start: n) 会作用到嵌套的各层，改为只作用于本层。
+    pandoc 每嵌套一层列表缩进 2 格，由此得出层数。pandoc 对默认格式也写出 "1."（如 \\setcounter 之后），
+    这时保留各层的默认格式"""
+    indent, pattern, start = m.group(1), m.group(2), int(m.group(3))
+    if pattern == "i)":
+        pattern = "1."
+    depth = len(indent) // 2 + 1
+    # 显式的 [1.] 从 1 开始；pandoc 对 \setcounter 接续编号的默认格式列表也写 "1."，但起始编号大于 1
+    pat = "none" if pattern == "1." and start > 1 else '"%s"' % pattern
+    opt = ", start: %d" % start if start != 1 else ""
+    return "%s#set enum(numbering: enum-at(%d, %s%s))" % (indent, depth, pat, opt)
 
 
 def code_slot(s: str) -> str:
     """正文中的 #f(…) 后面紧跟 ( [ . 时会被当成继续调用，统一加分号结束表达式"""
     return s + ";" if s.startswith("#") and s.endswith(")") else s
+
+
+def fix_strings(typ: str) -> str:
+    """公式中的文字 upright("…")：去掉换行，去掉汉字之间的空格（xeCJK 会忽略它们），去掉紧接 & 之前的尾随空格"""
+    def clean(m: re.Match) -> str:
+        s = re.sub(r"\s*\n\s*", "", m.group(1))
+        s = re.sub(r"(?<=[\u3400-\u9fff\uff00-\uffef\u3000-\u303f]) +(?=[\u3400-\u9fff\uff00-\uffef\u3000-\u303f])", "", s)
+        return 'upright("%s")' % s
+    typ = re.sub(r'upright\("((?:[^"\\]|\\.)*)"\)', clean, typ, flags=re.S)
+    typ = re.sub(r'upright\("((?:[^"\\]|\\.)*?) +"\)(\s*&)', r'upright("\1")\2', typ)
+    return typ
 
 
 def fix_math(typ: str) -> str:
@@ -534,14 +631,39 @@ def pandoc(tex: str) -> str:
     return r.stdout
 
 
+def aligned_rows(body: str, numbered: bool) -> str:
+    """多行对齐公式 → #numbered-align：在第一个 & 处左右对齐。
+    numbered 为真时（align 环境）每行编号，\\nonumber 的行除外；有 \\tag 的行以说明代替编号"""
+    rows = []
+    for r in split_top(body, "\\\\"):
+        if not r.strip():
+            continue
+        tags = []
+        r = replace_command(r, "tag", 1, lambda a: tags.append(a[0]) or "")
+        if tags:
+            mark = "[(%s)]" % convert_fragments([tags[0]])[0]
+        elif numbered and not re.search(r"\\(nonumber|notag)\b", r):
+            mark = "true"
+        else:
+            mark = "false"
+        r = re.sub(r"\\(nonumber|notag)\b", "", r)
+        left, _, right = r.partition("&")
+        rows.append("($%s$, $%s$, %s)" % (tex_math_to_typst(left) if left.strip() else "",
+                                         # 右半以 = 开头时前面补 zws，否则 Typst 会去掉 = 左侧的间距
+                                         ("zws " if left.strip() else "") + tex_math_to_typst(right) if right.strip() else "",
+                                         mark))
+    return "#numbered-align(%s)" % ", ".join(rows)
+
+
 def cases_to_typst(body: str) -> str:
     """cases 环境的内容 → Typst 的 cases(…)。pandoc 只能正确转换带 & 的 cases，所以自己拆行、拆列"""
     rows = [r for r in split_top(body, "\\\\") if r.strip()]
     cells = [split_top(r, "&") for r in rows]
     flat = [c for row in cells for c in row]
     conv = iter(tex_math_to_typst(c) if c.strip() else "" for c in flat)
-    out_rows = [" & ".join(next(conv) for _ in row) for row in cells]
-    return "cases(%s)" % ", ".join(out_rows)
+    # LaTeX 的 cases 两栏之间隔 1em
+    out_rows = [" & quad ".join(next(conv) for _ in row) for row in cells]
+    return "display(cases(%s))" % ", ".join(out_rows)
 
 
 def tex_math_to_typst(math: str) -> str:

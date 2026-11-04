@@ -220,7 +220,9 @@
     node((0, 0), $quad + a_2 b wide wide + (a_2 b + a_1) b$, pos: "right")
     node((-.5, 0), $+)$, pos: "left")
     line((-1, -.25), (6, -.25))
-    node((0, -.75), $a_2 + (a_2 b + a_1) quad #uwave($+(a_2 b^2 + a_1 b + a_0)$)$, pos: "right")
+    // 正文版心较窄时 CeTZ 会让节点里的公式折行，所以给这一行定为它的自然宽度
+    let last = [$a_2 + (a_2 b + a_1)$#h(1em)#uwave($+(a_2 b^2 + a_1 b + a_0)$)]
+    node((0, -.75), context box(width: measure(last).width + 1pt, last), pos: "right")
     line((6, -.25), (6, 1))
     line((6, .25), (7, .25))
   }),

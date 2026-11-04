@@ -9,17 +9,19 @@
 // 在 Linux（CI）上用 Noto CJK 与文鼎楷体，与 LaTeX 版 ctex 的 windows / ubuntu 字体集一致。
 // 用 `--input fontset=ubuntu` 切换，对应 LaTeX 版的环境变量 CTEX_FONTSET。
 #let fontset = sys.inputs.at("fontset", default: "windows")
+// 西文字体只用于拉丁字母（covers: "latin-in-cjk"），中文引号、省略号等标点用中文字体，与 xeCJK 一致
+#let latin = (name: "New Computer Modern", covers: "latin-in-cjk")
 #let fonts = if fontset == "ubuntu" {
   (
-    serif: ("New Computer Modern", "Noto Serif CJK SC"),
-    sans: ("New Computer Modern", "Noto Sans CJK SC"),
-    kai: ("New Computer Modern", "AR PL KaitiM GB"),
+    serif: (latin, "Noto Serif CJK SC"),
+    sans: (latin, "Noto Sans CJK SC"),
+    kai: (latin, "AR PL KaitiM GB"),
   )
 } else {
   (
-    serif: ("New Computer Modern", "SimSun"),
-    sans: ("New Computer Modern", "SimHei"),
-    kai: ("New Computer Modern", "KaiTi"),
+    serif: (latin, "SimSun"),
+    sans: (latin, "SimHei"),
+    kai: (latin, "KaiTi"),
   )
 }
 
@@ -64,7 +66,7 @@
 #let proof = labeled[证明：]
 
 // ---- “练习”框与带标题的框（对应 tcolorbox 的 ex、blk） ----
-#let titled-box(title, color, title-align, body) = block(
+#let titled-box(title, color, title-align, body) = block.with(
   width: 100%,
   above: 1.4em,
   below: 1em,
@@ -72,30 +74,38 @@
   stroke: 0.8pt + color,
   radius: 4pt,
   inset: (x: 10pt, top: 12pt, bottom: 8pt),
-  {
-    if title != [] and title != [ ] { place(
-      top + title-align,
-      dx: if title-align == left { 5mm } else { 0pt },
-      dy: -12pt - 0.6em,
-      box(
-        fill: color,
-        radius: 3pt,
-        inset: (x: 8pt, y: 3pt),
-        text(fill: white, font: fonts.sans, title),
-      ),
-    ) }
-    body
-  },
-)
+)({
+  if title != [] and title != [ ] { place(
+    top + title-align,
+    dx: if title-align == left { 5mm } else { 0pt },
+    dy: -12pt - 0.6em,
+    box(fill: color, radius: 3pt, inset: (x: 8pt, y: 3pt), text(fill: white, font: fonts.sans, title)),
+  ) }
+  body
+})
 
 #let exercise(title: [练习], body) = titled-box(title, cyan-frame, center, body)
 #let blk(title, body) = titled-box(title, magenta-frame, left, body)
 
 // 选做题：在 enum 项目开头调用，题号左侧加“*”（同原书）
-#let staritem = place(left, dx: -2.6em, [\*])
+// 放在题号左侧、与题号同一基线（零宽盒子里向左伸出）
+#let staritem = box(width: 0pt)[#h(-2.4em)\*]
 
-// 分栏（对应 multicols）
-#let cols(n, body) = columns(n, gutter: 1.5em, body)
+// 抵消段首缩进（独立公式之后接着写的文字，同 LaTeX 不缩进）
+#let noindent = h(-2em)
+
+// 分栏（对应 multicols）。Typst 的 columns 不会像 multicols 那样把各栏排得一样高，
+// 所以先量出排成一栏时的高度，再放进高度约为其 1/n 的盒子里分栏。
+// 太高（超过半页）时改用普通分栏，以便跨页。
+#let cols(n, body, gutter: 1.5em) = layout(size => {
+  let w = (size.width - gutter * (n - 1)) / n
+  let h = measure(block(width: w, body)).height
+  if h / n > 12cm {
+    columns(n, gutter: gutter, body)
+  } else {
+    block(width: 100%, height: h / n + 1.2em, breakable: false, columns(n, gutter: gutter, body))
+  }
+})
 
 // 插图占位：CeTZ 图尚未画好时显示原 TikZ 图的编号
 #let todo-fig(id) = align(center, block(
@@ -105,14 +115,22 @@
 ))
 
 // ---- 编号列表 ----
+// 列表的层数（与 LaTeX 一样，练习框等 tcolorbox 内的列表接着框外的层数算）
+#let latex-level(n) = n.len()
+
 // LaTeX 各层的默认编号：1.  (a)  i.  A.
-#let latex-enum(..n) = {
+#let latex-pattern(level) = ("1.", "(a)", "i.", "A.").at(calc.clamp(level, 1, 4) - 1)
+#let latex-enum(..n) = context numbering(latex-pattern(latex-level(n.pos())), n.pos().last())
+
+// 第 depth 层列表改用指定格式（对应 \begin{enumerate}[(1)]），pattern 为 none 时用默认格式；
+// start 为本层的起始编号（不用 enum 的 start 参数，因为它会传给嵌套的各层）
+#let enum-at(depth, pattern, start: 1) = (..n) => context {
   let n = n.pos()
-  numbering(("1.", "(a)", "i.", "A.").at(calc.min(n.len(), 4) - 1), n.last())
-}
-// 第 depth 层列表改用指定格式（对应 enumerate 宏包的 \begin{enumerate}[(1)]），其余各层不变
-#let enum-at(depth, pattern) = (..n) => {
-  if n.pos().len() == depth { numbering(pattern, n.pos().last()) } else { latex-enum(..n) }
+  if latex-level(n) == depth {
+    numbering(if pattern == none { latex-pattern(depth) } else { pattern }, n.last() + start - 1)
+  } else {
+    numbering(latex-pattern(latex-level(n)), n.last())
+  }
 }
 
 // 宽于版心时缩小到版心宽度（对应 \resizebox{\textwidth}{!}{…}，但不放大）
@@ -128,6 +146,27 @@
 #let eq-numbering = n => "(" + str(chapter-number()) + "." + str(n) + ")"
 #let numbered-eq(body) = math.equation(block: true, numbering: eq-numbering, body)
 
+// 带编号或带 \tag 说明的多行对齐公式（对应 align 环境，以及带 \tag 的 align*、\[…\]）。
+// 每行为 (左半, 右半, 编号)，左半右对齐、右半左对齐，相当于 LaTeX 中 & 两侧；
+// 编号为 true（自动编号）、false（不编号）或内容（\tag 的说明，靠右排）
+#let numbered-align(..rows) = {
+  let number = {
+    counter(math.equation).step()
+    context "(" + str(chapter-number()) + "." + str(counter(math.equation).get().first()) + ")"
+  }
+  block(width: 100%, above: 1em, below: 1em, grid(
+    columns: (1fr, auto, auto, 1fr),
+    row-gutter: 0.8em,
+    align: (right, right, left, right),
+    ..rows.pos().map(((l, r, n)) => (
+      [],
+      math.equation(block: false, numbering: none, math.display(l)),
+      math.equation(block: false, numbering: none, math.display(r)),
+      if n == true { number } else if n == false { [] } else { box(n) },
+    )).flatten(),
+  ))
+}
+
 // 不按 display 样式排的分数（对应 \tfrac）
 // 用标签 <tfrac> 让下面 book() 中“分数一律 display”的 show 规则跳过它
 #let tfrac(a, b) = math.inline([#math.frac(a, b)<tfrac>])
@@ -140,14 +179,20 @@
     counter(math.equation).step()
     context "(" + str(chapter-number()) + "." + str(counter(math.equation).get().first()) + ")"
   }
-  block(width: 100%, above: 1em, below: 1em, grid(
-    columns: (1fr, auto, auto, 1fr),
-    row-gutter: 0.7em,
-    align: (x, y) => (right, right + horizon, left + horizon, right + horizon).at(x),
-    grid.cell(rowspan: n, []),
-    grid.cell(rowspan: n, $lhs lr(\{ #block(height: n * 1.9em) #h(0pt))$),
-    ..rows.map(r => (math.equation(block: false, numbering: none, math.display(r)), number)).flatten(),
-  ))
+  let gutter = 0.7em
+  let cells = rows.map(r => math.equation(block: false, numbering: none, math.display(r)))
+  // 大括号的高度取各行实际高度之和，整组不跨页
+  block(width: 100%, above: 1em, below: 1em, breakable: false, context {
+    let height = cells.map(c => measure(c).height).sum() + gutter * (n - 1)
+    grid(
+      columns: (1fr, auto, auto, 1fr),
+      row-gutter: gutter,
+      align: (x, y) => (right, right + horizon, left + horizon, right + horizon).at(x),
+      grid.cell(rowspan: n, []),
+      grid.cell(rowspan: n, $lhs lr(\{ #block(height: height) #h(0pt))$),
+      ..cells.map(c => (c, number)).flatten(),
+    )
+  })
 }
 
 // ---- 书的整体版式 ----
@@ -187,10 +232,17 @@
     },
   )
 
-  set text(font: fonts.serif, size: 10.5pt, lang: "zh", region: "cn")
-  set par(justify: true, first-line-indent: (amount: 2em, all: true), leading: 0.9em, spacing: 0.9em)
+  // 行的上下边界按实际字形（bounds）计算：默认的 cap-height/baseline 不计入分母等伸到基线以下的部分，
+  // 行内的高分式会与上下行重叠。LaTeX 遇到这种情况会自动加大行距。
+  set text(font: fonts.serif, size: 10.5pt, lang: "zh", region: "cn", top-edge: "bounds", bottom-edge: "bounds")
   // 与 LaTeX 版一致：段落之间不额外加距离（spacing 与行距相同）
+  set par(justify: true, first-line-indent: (amount: 2em, all: true), leading: 0.56em, spacing: 0.56em)
+  // 列表项中的后续段落不缩进（同 LaTeX 的 \listparindent = 0）
+  show enum: set par(first-line-indent: 0pt)
+  show list: set par(first-line-indent: 0pt)
   show strong: set text(font: fonts.sans, weight: "regular")
+  // 加粗文字中的公式不加粗（同 LaTeX 的 \textbf 不影响数学）
+  show strong: it => { show math.equation: set text(weight: "regular"); it }
   show emph: set text(font: fonts.kai, style: "normal")
 
   // 原书的 \frac 一律按 \dfrac 排
@@ -198,8 +250,15 @@
   // 公式中的中文（如 \text{个}）回落到正文的中文字体
   show math.equation: set text(font: ("New Computer Modern Math",) + fonts.serif.slice(1))
   set table(stroke: none)
+  // 表格的图注（“表 4.1”）在上方，同 LaTeX 版
+  show figure.where(kind: table): set figure.caption(position: top)
+  // 方程组各行的间距（LaTeX 的 cases 比 Typst 默认宽松）
+  set math.cases(gap: 0.6em)
+  // 宽于版心的独立公式缩小到版心宽度（LaTeX 版中这些公式排得下）
+  show math.equation.where(block: true): it => fit-width(it)
+  show table: set block(breakable: false)
 
-  set enum(indent: 1em, body-indent: 0.6em, spacing: 1.2em, full: true, numbering: latex-enum)
+  set enum(indent: 1em, body-indent: 0.6em, spacing: 0.86em, full: true, numbering: latex-enum)
   set list(indent: 1em, body-indent: 0.6em)
   set footnote(numbering: "①")
   // 图注：“图 1.1”加粗，编号带章号；LaTeX 版多为空的 \caption{}，此时只印编号
@@ -253,6 +312,8 @@
   // 目录
   show outline.entry.where(level: 1): set block(above: 1.2em)
   show outline.entry.where(level: 1): set text(font: fonts.sans)
+  // “习题 1.1”等不编号的节，LaTeX 版用 \addcontentsline{toc}{subsection} 列入目录，与小节同级缩进
+  show outline.entry.where(level: 2): it => if it.element.supplement == [toc-sub] { pad(left: 2em, it) } else { it }
 
   // 封面
   page(header: none, footer: none, {

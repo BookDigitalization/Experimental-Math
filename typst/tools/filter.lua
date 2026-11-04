@@ -68,6 +68,22 @@ function Inlines(inlines)
   return out
 end
 
+-- 独立公式后接着写的文字属于同一段，LaTeX 不缩进；Typst 会把它当作新段落缩进，所以加 #noindent
+function Para(p)
+  local out = pandoc.List()
+  local after_display = false
+  for _, el in ipairs(p.content) do
+    if after_display and not is_space(el) then
+      out:insert(pandoc.RawInline("typst", "#noindent;"))
+      after_display = false
+    end
+    out:insert(el)
+    if el.t == "Math" and el.mathtype == "DisplayMath" then after_display = true end
+  end
+  p.content = out
+  return p
+end
+
 function Header(h)
   h.identifier = ""
   return h
@@ -105,6 +121,7 @@ local simple = {
   rmk = "#rmk",
   note = "#note",
   proof = "#proof",
+  bookproof = "#proof",
   center = "#align(center)",
   flushright = "#align(right)",
 }

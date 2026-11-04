@@ -15,29 +15,18 @@
 
 这就告诉我们：一个正数的二次方，是与正方形的面积密切相关的，这也正是 $a^2$ 读作“$a$ 的平方”的道理．
 
-在实际问题的计算中，我们还可以有效的运用数系运算通性(尤其是分配律)，使计算达到迅速、简捷．例如：计算边长为100.1米的正方形的面积．可以这样进行 $ S = 100.1^2 & =\(100 + 0.1\)^2\
- & =\(100 + 0.1\)\(100 + 0.1\) &  & upright("(乘方定义)")\
- & = 10000 + 10 + 10 + 0.01 &  & upright("(分配律)")\
- & = 10020.01 thick\(upright(m)^2\) $
+在实际问题的计算中，我们还可以有效的运用数系运算通性(尤其是分配律)，使计算达到迅速、简捷．例如：计算边长为100.1米的正方形的面积．可以这样进行
 
-一般地，如果正方形的一边长是 $\(a + b\)$,那么，它的面积就可以这样计算出来：$ S =\(a + b\)^2 & =\(a + b\)dot.op\(a + b\) &  & upright("(乘方定义)")\
- & = a^2 + a b + a b + b^2 &  & upright("(分配律)")\
- & = a^2 + 2 a b + b^2 &  & upright("(合并同类项)") $
+#numbered-align(($S = 100.1^2$, $zws =\(100 + 0.1\)^2$, false), ($$, $=\(100 + 0.1\)\(100 + 0.1\)$, [(乘方定义)]), ($$, $= 10000 + 10 + 10 + 0.01$, [(分配律)]), ($$, $= 10020.01 thick\(upright(m)^2\)$, false));
+
+一般地，如果正方形的一边长是 $\(a + b\)$,那么，它的面积就可以这样计算出来：
+
+#numbered-align(($S =\(a + b\)^2$, $zws =\(a + b\)dot.op\(a + b\)$, [(乘方定义)]), ($$, $= a^2 + a b + a b + b^2$, [(分配律)]), ($$, $= a^2 + 2 a b + b^2$, [(合并同类项)]));
 
 这个结果，还可以用图3.1说明：$  & quad upright("大正方形") A B C D upright("的面积") S\
  & =\(upright("正方形") A E M H + upright("矩形") B F M E + upright("矩形") D H M G + upright("正方形") M F C G\)upright("的面积") $
 
-#figure([#block[
-  #fig("3-01");
-
-  ]
-  #block[
-  #fig("3-02");
-
-  ]],
-  caption: [
-  ]
-)
+#grid(columns: (1fr,) * 2, align: center + bottom, figure([#fig("3-01");], caption: []), figure([#fig("3-02");], caption: []));
 
 由图形也能说明：#numbered-eq($ \(a + b\)^2 = a^2 + 2 a b + b^2 $);
 
@@ -72,7 +61,7 @@
  & = 249001 $
 
 ]
-不难验证，在公式(3.1)与(3.2)中，当 $a\,b$ 取任意的两个有理数时，结论仍然是正确的．也就是说：#strong[任意两个有理数的和（或差）的平方，等于这两个数的平方和，再加上（或减去）这两个数乘积的2倍]．两公式可以合并写成：$ \(x plus.minus y\)^2 = x^2 plus.minus 2 x y + y^2 $ 并分别叫做两数和（或差）的平方公式．
+不难验证，在公式(3.1)与(3.2)中，当 $a\,b$ 取任意的两个有理数时，结论仍然是正确的．也就是说：#strong[任意两个有理数的和（或差）的平方，等于这两个数的平方和，再加上（或减去）这两个数乘积的2倍]．两公式可以合并写成：$ \(x plus.minus y\)^2 = x^2 plus.minus 2 x y + y^2 $ #noindent;并分别叫做两数和（或差）的平方公式．
 
 #example[
 计算：$(1 1 / 2)^2\,quad\(- 1.99\)^2\,quad (9 7 / 9)^2\,quad (1 - a / 2)^2$
@@ -80,10 +69,10 @@
 ]
 #solution[
 $ (1 1 / 2)^2 & = (1 + 1 / 2)^2\
- & = 1 + 2 times 1 times 1 / 2 + 1 / 4 = 2 1 / 4 $ $ \(- 1.99\)^2 & =\(- 2 + 0.01\)^2\
- & = 4 - 2 times 2 times 0.01 + 0.0001 = 3.9601 $ $ (9 7 / 9)^2 & = (10 - 2 / 9)^2\
+ & = 1 + 2 times 1 times 1 / 2 + 1 / 4 = 2 1 / 4 $ #noindent;$ \(- 1.99\)^2 & =\(- 2 + 0.01\)^2\
+ & = 4 - 2 times 2 times 0.01 + 0.0001 = 3.9601 $ #noindent;$ (9 7 / 9)^2 & = (10 - 2 / 9)^2\
  & = 100 - 2 times 10 times 2 / 9 + 4 / 81 = 7744 / 81\
- & = 95 49 / 81 $ $ (1 - a / 2)^2 & = 1 - 2 times 1 times a / 2 + a^2 / 4\
+ & = 95 49 / 81 $ #noindent;$ (1 - a / 2)^2 & = 1 - 2 times 1 times a / 2 + a^2 / 4\
  & = 1 - a + a^2 / 4 $
 
 ]
@@ -107,7 +96,7 @@ $ (1 1 / 2)^2 & = (1 + 1 / 2)^2\
 ]
 #solution[
 $ (3 a - 1 / 3)^2 & =\(3 a\)^2 - 2 times\(3 a\)times 1 / 3 + (1 / 3)^2\
- & = 9 a^2 - 2 a + 1 / 9 $ $ (- b / 2 - a / 2)^2 & = (- b / 2)^2 - 2 times (- b / 2) times a / 2 + (a / 2)^2\
+ & = 9 a^2 - 2 a + 1 / 9 $ #noindent;$ (- b / 2 - a / 2)^2 & = (- b / 2)^2 - 2 times (- b / 2) times a / 2 + (a / 2)^2\
  & = b^2 / 4 + 1 / 2 a b + a^2 / 4 $
 
 ]
@@ -153,11 +142,11 @@ $ (3 a - 1 / 3)^2 & =\(3 a\)^2 - 2 times\(3 a\)times 1 / 3 + (1 / 3)^2\
 所以，所求正方形一边是3cm．（$- 3$ 不符合题意，舍去）．在数学上，这个问题就是：如何由一个数的二次幂，反求出这一个数．
 
 #example[
-如果已知某些数的平方，分别为：$ 4\,quad 9\,quad 16\,quad 25\,quad 0.25\,quad 0.81\,quad 64 / 81\,quad 0 $ 试求出相应的这些数．
+如果已知某些数的平方，分别为：$ 4\,quad 9\,quad 16\,quad 25\,quad 0.25\,quad 0.81\,quad 64 / 81\,quad 0 $ #noindent;试求出相应的这些数．
 
 ]
 #solution[
-由于：$ \(plus.minus 2\)^2 = 4\,quad\(plus.minus 3\)^2 = 9\,quad\(plus.minus 4\)^2 = 16\,quad\(plus.minus 5\)^2 = 25 $ $ \(plus.minus 0.5\)^2 = 0.25\,quad\(plus.minus 0.9\)^2 = 0.81\,quad (plus.minus 8 / 9)^2 = 64 / 81\,quad 0^2 = 0 $ 因此，平方分别为 $4\,thick 9\,thick 16\,thick 25\,thick 0.25\,thick 0.81\,thick 64 / 81\,thick 0$ 的数各是 $ plus.minus 2\,quad plus.minus 3\,quad plus.minus 4\,quad plus.minus 5\,quad plus.minus 0.5\,quad plus.minus 0.9\,quad plus.minus 8 / 9\,quad 0 $
+由于：$ \(plus.minus 2\)^2 = 4\,quad\(plus.minus 3\)^2 = 9\,quad\(plus.minus 4\)^2 = 16\,quad\(plus.minus 5\)^2 = 25 $ #noindent;$ \(plus.minus 0.5\)^2 = 0.25\,quad\(plus.minus 0.9\)^2 = 0.81\,quad (plus.minus 8 / 9)^2 = 64 / 81\,quad 0^2 = 0 $ #noindent;因此，平方分别为 $4\,thick 9\,thick 16\,thick 25\,thick 0.25\,thick 0.81\,thick 64 / 81\,thick 0$ 的数各是 $ plus.minus 2\,quad plus.minus 3\,quad plus.minus 4\,quad plus.minus 5\,quad plus.minus 0.5\,quad plus.minus 0.9\,quad plus.minus 8 / 9\,quad 0 $
 
 ]
 一般地说：#strong[如果一个数 $x$ 的平方等于 $a thick\(a gt.eq 0\)$,即 $x^2 = a$．那么，$x$ 就叫做 $a$ 的平方根]．例如：在上面例题中，$plus.minus 2\,thick plus.minus 3\,thick plus.minus 4\,thick plus.minus 5\,thick plus.minus 0.5\,thick plus.minus 0.9\,thick plus.minus 8 / 9$ 以及0就分别叫做 $4\,thick 9\,thick 16\,thick 25\,thick 0.25\,thick 0.81\,thick 64 / 81$ 以及0的平方根．
@@ -224,28 +213,17 @@ $therefore quad - 25$ 的平方根是无意义的．
 
 + 取 $A B C D$ 各边的中点 $E$、$F$、$G$、$H$,并且连接 $E F\,F G\,G H\,H E$．
 
-可以证明 $E F G H$ 也是一个正方形，这个小正方形正是面积等于2的正方形．因为：$ upright("小正方形") E F G H upright("的面积") = upright("大正方形") A B C D upright("
-的面积") - 4 times upright("三角形") A E H upright("的面积") $ 即：$ E F G H upright("的面积") = 4 - 4 times 1 / 2 = 2 $
+可以证明 $E F G H$ 也是一个正方形，这个小正方形正是面积等于2的正方形．因为：$ upright("小正方形") E F G H upright("的面积") = upright("大正方形") A B C D upright("的面积") - 4 times upright("三角形") A E H upright("的面积") $ #noindent;即：$ E F G H upright("的面积") = 4 - 4 times 1 / 2 = 2 $
 
 由此可知，面积为2的正方形的实际存在，正说明了2的平方根是存在的．
 
-同学们还可以进行一个实验：把图中四个小三角形剪下来，拼在一起正好又是一个小正方形，且与图中原有的小正方形完全相等．因而可以得出：$ 2 times upright("小正方形面积") = upright("大正方形面积") $ 因此：$ upright("小正方形面积") = 1 / 2 times upright("大正方形面积") = 1 / 2 times 4 = 2 $ 这又说明了，图中所作出来的小正方形正是面积为2．因而，它的一边长就是2的一个平方根 $sqrt(2)$．
+同学们还可以进行一个实验：把图中四个小三角形剪下来，拼在一起正好又是一个小正方形，且与图中原有的小正方形完全相等．因而可以得出：$ 2 times upright("小正方形面积") = upright("大正方形面积") $ #noindent;因此：$ upright("小正方形面积") = 1 / 2 times upright("大正方形面积") = 1 / 2 times 4 = 2 $ #noindent;这又说明了，图中所作出来的小正方形正是面积为2．因而，它的一边长就是2的一个平方根 $sqrt(2)$．
 
 既然 $sqrt(2)$ 是存在的，它能使 $\(sqrt(2)\)^2 = 2$．显然，$\(- sqrt(2)\)^2 = 2$．所以，2的平方根也应有两个 $plus.minus sqrt(2)$．
 
 用类似的办法，可以说明：任一个正有理数的平方根都是存在的．而且都有两个．同学们可以从图3.4, 3.5中，练习说明 $sqrt(3)$，$sqrt(7)$ 都是存在的．从而 $- sqrt(3)$，$- sqrt(7)$ 也应存在．因此，$3\,7$ 同样各有两个平方根：$plus.minus sqrt(3)$，$plus.minus sqrt(7)$ 等等．
 
-#figure([#block[
-  #fig("3-04");
-
-  ]
-  #block[
-  #fig("3-05");
-
-  ]],
-  caption: [
-  ]
-)
+#grid(columns: (1fr,) * 2, align: center + bottom, figure([#fig("3-04");], caption: []), figure([#fig("3-05");], caption: []));
 
 综合以上讨论，可以得出结论：
 
@@ -262,7 +240,7 @@ $therefore quad - 25$ 的平方根是无意义的．
 #exercise[
 + 求下列各数的平方根：$900\,quad 196 / 225\,quad 0.0121\,quad 4 9 / 4$
 
-+ 求下列各值：$ - sqrt(81)\,quad sqrt(4 / 9)\,quad sqrt(1)\,quad sqrt(0)\,quad - sqrt(0.000016) $ $ sqrt(1 / 25)\,quad - sqrt(7^2)\,quad sqrt(\(- 7\)^2)\,quad (sqrt(4))^2\,quad (sqrt(- 9))^2 $
++ 求下列各值：$ - sqrt(81)\,quad sqrt(4 / 9)\,quad sqrt(1)\,quad sqrt(0)\,quad - sqrt(0.000016) $ #noindent;$ sqrt(1 / 25)\,quad - sqrt(7^2)\,quad sqrt(\(- 7\)^2)\,quad (sqrt(4))^2\,quad (sqrt(- 9))^2 $
 
 + 利用所画的图3.6，说明 $sqrt(5 / 2)$ 是存在的．
 
@@ -409,12 +387,15 @@ $therefore quad - 25$ 的平方根是无意义的．
 
 因此，如果把给出的被开方数，从个位起自右向左每两位数字分为一段，用“'”号分开，则所分成的“段数”，就是所求平方根应有的整数的位数．把2809分段，得28'09．可以确定它开方后，所得平方根是两位整数．
 
-其次，应确定平方根最高位的数字，因为 $ 50^2 < 2809 < 60^2 $ 所以，$sqrt(2809)$ 的最高位数字应是5(实际是50)．
+其次，应确定平方根最高位的数字，因为 $ 50^2 < 2809 < 60^2 $ #noindent;所以，$sqrt(2809)$ 的最高位数字应是5(实际是50)．
 
 第三步，应确定平方根最高位数字的下一位数字．
 
-我们可以设为 $b$,这时，理应有：$ sqrt(2809) = 50 + b quad arrow.r.double quad 2809 =\(50 + b\)^2 $ $therefore quad 2809 = 50^2 + 2 times 50 times b + b^2$ $ 2809 - 50^2 & = 2 times 50 times b + b^2\
-309 & =\(2 times 50 + b\)dot.op b $ 用这个等式关系，可以试商确定 $b$：只要把其中的 $\(2 times 50 + b\)dot.op b$,近似地看作 $2 times 50 times b$，就可以得出 $ 309 approx 2 times 50 times b $ 从而可以试算出 $b approx 3$．然后，再把 $b approx 3$ 代入关系式(3.3)进行正式计算：$ \(2 times 50 + b\)dot.op b =\(2 times 50 + 3\)times 3 = 309 $ 正好符合要求，$therefore quad b = 3$ 是正确的．
+我们可以设为 $b$,这时，理应有：$ sqrt(2809) = 50 + b quad arrow.r.double quad 2809 =\(50 + b\)^2 $ #noindent;$therefore quad 2809 = 50^2 + 2 times 50 times b + b^2$
+
+#numbered-align(($2809 - 50^2$, $zws = 2 times 50 times b + b^2$, false), ($309$, $zws =\(2 times 50 + b\)dot.op b$, true));
+
+用这个等式关系，可以试商确定 $b$：只要把其中的 $\(2 times 50 + b\)dot.op b$,近似地看作 $2 times 50 times b$，就可以得出 $ 309 approx 2 times 50 times b $ #noindent;从而可以试算出 $b approx 3$．然后，再把 $b approx 3$ 代入关系式(3.3)进行正式计算：$ \(2 times 50 + b\)dot.op b =\(2 times 50 + 3\)times 3 = 309 $ #noindent;正好符合要求，$therefore quad b = 3$ 是正确的．
 
 归纳以上各步，可以将整个过程写成以下竖式的形式：
 
@@ -462,7 +443,7 @@ $therefore quad - 25$ 的平方根是无意义的．
 
 ]
 #exercise[
-求下列各算术平方根：$ sqrt(676)\,#h(2em) sqrt(1521)\,#h(2em) sqrt(82369)\,#h(2em) sqrt(10309)\,#h(2em) sqrt(4.9284) $ $ sqrt(9.0601)\,#h(2em) sqrt(4901.4001)\,#h(2em) sqrt(144.7)\,#h(2em) sqrt(3) $ (要求求出两位小数）．试总结一下开平方方法的步骤．
+求下列各算术平方根：$ sqrt(676)\,#h(2em) sqrt(1521)\,#h(2em) sqrt(82369)\,#h(2em) sqrt(10309)\,#h(2em) sqrt(4.9284) $ #noindent;$ sqrt(9.0601)\,#h(2em) sqrt(4901.4001)\,#h(2em) sqrt(144.7)\,#h(2em) sqrt(3) $ #noindent;\(要求求出两位小数）．试总结一下开平方方法的步骤．
 
 ]
 ==== 平方根表
@@ -651,7 +632,7 @@ $therefore quad - 25$ 的平方根是无意义的．
 
 I．表中可以直接查出由1到99.99间的每一个数的算术平方根．
 
-例如，要查 $sqrt(3.887)$，只要首先在表里 $N$ 所在的列中找到被开方数的左边两位数3.8，然后再在 $N$ 所在的行中找到被开方数的左边第三位数字8，从第一次找到的3.8所在的行横着看，从第二次找到的8所在的列竖直看，交叉地方的数，就是 $sqrt(3.880)$ 的值．再加上被开方数最末一位数字7所在列的修正值，就可得到：$ sqrt(3.887) = 1.970 + 0.002 = 1.972 $ 又如，查 $sqrt(81.13) = 9.006 + 0.002 = 9.008$．
+例如，要查 $sqrt(3.887)$，只要首先在表里 $N$ 所在的列中找到被开方数的左边两位数3.8，然后再在 $N$ 所在的行中找到被开方数的左边第三位数字8，从第一次找到的3.8所在的行横着看，从第二次找到的8所在的列竖直看，交叉地方的数，就是 $sqrt(3.880)$ 的值．再加上被开方数最末一位数字7所在列的修正值，就可得到：$ sqrt(3.887) = 1.970 + 0.002 = 1.972 $ #noindent;又如，查 $sqrt(81.13) = 9.006 + 0.002 = 9.008$．
 
 #exercise[
 查平方根表，求下列算术平方根．$ sqrt(1.28)\,#h(2em) sqrt(7.320)\,#h(2em) sqrt(66.71)\,#h(2em) sqrt(8.247)\,#h(2em) sqrt(91.15) $
@@ -668,11 +649,7 @@ II．小于1或大于100的被开方数，它的算术平方根从表里不能�
 
 ]
 #solution[
-$ sqrt(0.0036) = 0.06 #h(2em) #h(2em) & sqrt(0.0009) = 0.03\
-sqrt(0.36) = 0.6 & sqrt(0.09) = 0.3\
-sqrt(36) = 6 & sqrt(9) = 3\
-sqrt(3600) = 60 & sqrt(900) = 30\
-sqrt(360000) = 600 & sqrt(90000) = 300 $
+$ mat(delim: #none, align: #left, column-gap: #1.5em, sqrt(0.0036) = 0.06 #h(2em) #h(2em), sqrt(0.0009) = 0.03; sqrt(0.36) = 0.6, sqrt(0.09) = 0.3; sqrt(36) = 6, sqrt(9) = 3; sqrt(3600) = 60, sqrt(900) = 30; sqrt(360000) = 600, sqrt(90000) = 300) $
 
 ]
 从中我们发现：当被开方数扩大（或缩小）100倍时，它的算术平方根就相应地扩大（或缩小）10倍．由此可以得出：#strong[当被开方数的小数点每向右（或向左）移动两位时，它的平方根的小数点就相应地向右（或向左）移动一位]．
@@ -718,7 +695,7 @@ $because$ 查 $sqrt(40) = 6.325$,#h(2em);$therefore thick sqrt(0.00004) = 0.0063
 要注意，四位数学用表，只能查四个数码的数．因此，若是遇到有5位以上的数字，如：$sqrt(3.7896)$,就要首先用四舍五入法，将它改写为 $sqrt(3.790)$,再去查表．
 
 #exercise[
-查平方根表，求出下列各值：$ sqrt(144)\,quad sqrt(297)\,quad sqrt(3756)\,quad sqrt(4444)\,quad sqrt(54542)\,quad sqrt(70107) $ $ sqrt(1981000)\,quad sqrt(23060000)\,quad sqrt(0.1)\,quad sqrt(0.142)\,quad sqrt(0.0787) $ $ sqrt(0.4333)\,quad sqrt(0.5555)\,quad sqrt(0.00063)\,quad sqrt(0.00007)\,quad sqrt(0.0000041) $
+查平方根表，求出下列各值：$ sqrt(144)\,quad sqrt(297)\,quad sqrt(3756)\,quad sqrt(4444)\,quad sqrt(54542)\,quad sqrt(70107) $ #noindent;$ sqrt(1981000)\,quad sqrt(23060000)\,quad sqrt(0.1)\,quad sqrt(0.142)\,quad sqrt(0.0787) $ #noindent;$ sqrt(0.4333)\,quad sqrt(0.5555)\,quad sqrt(0.00063)\,quad sqrt(0.00007)\,quad sqrt(0.0000041) $
 
 ]
 === 实数
@@ -744,7 +721,7 @@ $because$ 查 $sqrt(40) = 6.325$,#h(2em);$therefore thick sqrt(0.00004) = 0.0063
 
 如果字母 $b$ 表示任一个非零实数，则 $1 / b$ 就是它的倒数，即 $b times 1 / b = 1$ 例如：$sqrt(3)$ 与 $1 / sqrt(3)$ 互为倒数，即 $sqrt(3) times 1 / sqrt(3) = 1$．
 
-任一实数 $x$ 的绝对值的意义，与有理数时的意义相同．即 $ \|x\|= cases(x\, & x > 0, 0\, & x = 0, - x\, & x < 0) $
+任一实数 $x$ 的绝对值的意义，与有理数时的意义相同．即 $ \|x\|= display(cases(x\, & quad x > 0, 0\, & quad x = 0, - x\, & quad x < 0)) $
 
 例如：$\|sqrt(3)\|= sqrt(3)$, $\|0\|= 0$, $\|- e\|= e$．
 
@@ -762,7 +739,8 @@ $because$ 查 $sqrt(40) = 6.325$,#h(2em);$therefore thick sqrt(0.00004) = 0.0063
 + 指出下列各实数的相反数，倒数及绝对值都是什么：$ - 1.41\,quad sqrt(3)\,quad - pi\,quad - sqrt(5)\,quad 0\,quad 1 / sqrt(2)\,quad - 0 . dot(2) dot(3)\,quad 2.40 dot(1)\,quad - sqrt(16) $
 
 ]
-#heading(level: 2, numbering: none)[习题3.1]
+#heading(level: 2, numbering: none, supplement: [toc-sub])[习题3.1]
+
 + 试用两数和或差的平方公式，计算：$ (2 1 / 2)^2\,#h(2em) 9.997^2\,#h(2em) 401^2 $
 
 + 利用公式，把下列各式展开：
@@ -804,7 +782,7 @@ $because$ 查 $sqrt(40) = 6.325$,#h(2em);$therefore thick sqrt(0.00004) = 0.0063
 
 + 由 $m^2 = n^2$ 而得出 $m = n$ 正确吗？为什么？
 
-+ 求下列各平方根：$ sqrt(36)\,quad - sqrt(81)\,quad sqrt(9 / 16)\,quad sqrt(1)\,quad - sqrt(7^2)\,quad - sqrt(\(- 4\)^2) $ $ sqrt(0)\,quad sqrt(\(- sqrt(4)\)^2)\,quad - sqrt((- 1 / 361)^2) $
++ 求下列各平方根：$ sqrt(36)\,quad - sqrt(81)\,quad sqrt(9 / 16)\,quad sqrt(1)\,quad - sqrt(7^2)\,quad - sqrt(\(- 4\)^2) $ #noindent;$ sqrt(0)\,quad sqrt(\(- sqrt(4)\)^2)\,quad - sqrt((- 1 / 361)^2) $
 
 + 求下列各数的算术平方根．$ 900\,quad 121\,quad 1\,quad 0\,quad 196 / 256\,quad\(- 25\)^2 $
 
@@ -820,9 +798,9 @@ $because$ 查 $sqrt(40) = 6.325$,#h(2em);$therefore thick sqrt(0.00004) = 0.0063
 
 + 七块同样大小的正方形面积之和是343平方米，求每块正方形的一边长是多少？
 
-+ 用开平方方法，求下列各算术根：$ sqrt(9025)\,#h(2em) sqrt(2116)\,#h(2em) sqrt(3969)\,#h(2em) sqrt(50625)\,#h(2em) sqrt(269361) $ $ sqrt(0.4489)\,#h(2em) sqrt(0.00080089)\,#h(2em) sqrt(8114.4064) $
++ 用开平方方法，求下列各算术根：$ sqrt(9025)\,#h(2em) sqrt(2116)\,#h(2em) sqrt(3969)\,#h(2em) sqrt(50625)\,#h(2em) sqrt(269361) $ #noindent;$ sqrt(0.4489)\,#h(2em) sqrt(0.00080089)\,#h(2em) sqrt(8114.4064) $
 
-+ 查平方根表，求下列各数的算术平方根：$ 99.23\,quad 9.123\,quad 4.017\,quad 17.536\,quad 174\,quad 1981\,quad 2006\,quad 75693\,quad 1001230 $ $ 0.101\,quad 0.07864\,quad 0.00043\,quad 0.000801\,quad 0.000006123 $
++ 查平方根表，求下列各数的算术平方根：$ 99.23\,quad 9.123\,quad 4.017\,quad 17.536\,quad 174\,quad 1981\,quad 2006\,quad 75693\,quad 1001230 $ #noindent;$ 0.101\,quad 0.07864\,quad 0.00043\,quad 0.000801\,quad 0.000006123 $
 
 + 什么是无理数？什么是实数？
 
@@ -841,7 +819,7 @@ $because$ 查 $sqrt(40) = 6.325$,#h(2em);$therefore thick sqrt(0.00004) = 0.0063
 例如：$\(sqrt(3)\)^2 = 3\,quad\(sqrt(7)\)^2 = 7\,quad (sqrt(2 / 5))^2 = 2 / 5$ 等．
 
 #blk[性质2][
-一个数的平方的算术平方根，等于这个数的绝对值．即 $ sqrt(x^2) =\|x\|= cases(x\, & x > 0, 0\, & x = 0, - x & x < 0) $
+一个数的平方的算术平方根，等于这个数的绝对值．即 $ sqrt(x^2) =\|x\|= display(cases(x\, & quad x > 0, 0\, & quad x = 0, - x & quad x < 0)) $
 
 ]
 这个性质可以这样来分析、说明：
@@ -858,7 +836,7 @@ $because$ 查 $sqrt(40) = 6.325$,#h(2em);$therefore thick sqrt(0.00004) = 0.0063
 
 综合以上，可以断定：
 
-对任一数 $x$ 来说，都有下式成立：$ sqrt(x^2) =\|x\|= cases(x\, & x > 0, 0\, & x = 0, - x & x < 0) $
+对任一数 $x$ 来说，都有下式成立：$ sqrt(x^2) =\|x\|= display(cases(x\, & quad x > 0, 0\, & quad x = 0, - x & quad x < 0)) $
 
 #example[
 求出下列算术平方根：$ sqrt(\(- 0.12\)^2)\,#h(2em) sqrt(6 times 14 times 21)\,#h(2em) sqrt(\(- 3\)^6) $
@@ -899,7 +877,7 @@ $because$ 查 $sqrt(40) = 6.325$,#h(2em);$therefore thick sqrt(0.00004) = 0.0063
 
   $therefore quad sqrt(\(c - 7\)^2) =\|c - 7\|= 0$.
 
-+ $because x$ 是任意数, $therefore 10 - x$ 就可能为正或0或负,因此：$ sqrt(\(10 - x\)^2) =\|10 - x\|= cases(10 - x\, & upright("当") 10 - x > 0 upright(" 即") x < 10 upright("时"), 0\, & upright("当") 10 - x = 0 upright(" 即") x = 10 upright("时"), x - 10\, & upright("当") 10 - x < 0 upright(" 即") x > 10 upright("时")) $
++ $because x$ 是任意数, $therefore 10 - x$ 就可能为正或0或负,因此：$ sqrt(\(10 - x\)^2) =\|10 - x\|= display(cases(10 - x\, & quad upright("当") 10 - x > 0 upright(" 即") x < 10 upright("时"), 0\, & quad upright("当") 10 - x = 0 upright(" 即") x = 10 upright("时"), x - 10\, & quad upright("当") 10 - x < 0 upright(" 即") x > 10 upright("时"))) $
 
 ]
 #exercise[
@@ -917,7 +895,7 @@ $because$ 查 $sqrt(40) = 6.325$,#h(2em);$therefore thick sqrt(0.00004) = 0.0063
 
 ]
 === 算术平方根的乘、除运算
-首先来计算平方根 $sqrt(25) dot.op sqrt(9)$ 与 $sqrt(25 times 9)$ 的值：$ sqrt(25) dot.op sqrt(9) = 5 times 3 = 15 #h(2em) sqrt(25 times 9) = sqrt(225) = 15 $ 可见，$sqrt(25) dot.op sqrt(9) = sqrt(25 times 9)$．
+首先来计算平方根 $sqrt(25) dot.op sqrt(9)$ 与 $sqrt(25 times 9)$ 的值：$ sqrt(25) dot.op sqrt(9) = 5 times 3 = 15 #h(2em) sqrt(25 times 9) = sqrt(225) = 15 $ #noindent;可见，$sqrt(25) dot.op sqrt(9) = sqrt(25 times 9)$．
 
 一般地说：如果 $a gt.eq 0$, $b gt.eq 0$,那么，就有 $sqrt(a) dot.op sqrt(b) = sqrt(a b)$ 成立．
 
@@ -926,8 +904,11 @@ $because$ 查 $sqrt(40) = 6.325$,#h(2em);$therefore thick sqrt(0.00004) = 0.0063
 #note[
 $because quad$ 已知 $a gt.eq 0$, $b gt.eq 0$，应有 $a b gt.eq 0$．$therefore quad sqrt(a)\,sqrt(b)$ 都是算术平方根，应有 $sqrt(a) gt.eq 0$, $sqrt(b) gt.eq 0$．因而 $\(sqrt(a) dot.op sqrt(b)\)gt.eq 0$．
 
-根据乘积的乘方运算律可知：$ \(sqrt(a) dot.op sqrt(b)\)^2 & =\(sqrt(a)\)^2 dot.op\(sqrt(b)\)^2\
- & = a dot.op b = a b &  & upright("(算术平方根的性质)") $ $therefore quad (sqrt(a) dot.op sqrt(b))^2 = a b$
+根据乘积的乘方运算律可知：
+
+#numbered-align(($\(sqrt(a) dot.op sqrt(b)\)^2$, $zws =\(sqrt(a)\)^2 dot.op\(sqrt(b)\)^2$, false), ($$, $= a dot.op b = a b$, [(算术平方根的性质)]));
+
+$therefore quad (sqrt(a) dot.op sqrt(b))^2 = a b$
 
 又由于 $sqrt(a) dot.op sqrt(b) gt.eq 0$, $a b gt.eq 0$,因此，利用平方根的定义就可以得出：$ sqrt(a) dot.op sqrt(b) = sqrt(a b) $
 
@@ -1004,7 +985,7 @@ $because quad$ 已知 $a gt.eq 0$, $b gt.eq 0$，应有 $a b gt.eq 0$．$therefo
 + 计算：$sqrt(10) dot.op sqrt(125)\,#h(2em) sqrt(7) dot.op sqrt(14)\,#h(2em) a sqrt(a) dot.op b sqrt(a)$
 
 ]
-再来计算 $sqrt(16) / sqrt(49)$ 与 $sqrt(16 / 49)$ 的值：$ sqrt(16) / sqrt(49) = 4 / 7\,#h(2em) sqrt(16 / 49) = 4 / 7 $ 可见，$sqrt(16) / sqrt(49) = sqrt(16 / 49)$．
+再来计算 $sqrt(16) / sqrt(49)$ 与 $sqrt(16 / 49)$ 的值：$ sqrt(16) / sqrt(49) = 4 / 7\,#h(2em) sqrt(16 / 49) = 4 / 7 $ #noindent;可见，$sqrt(16) / sqrt(49) = sqrt(16 / 49)$．
 
 一般地说，如果 $a gt.eq 0$, $b > 0$,那么，就有 $sqrt(a) / sqrt(b) = sqrt(a / b)$ 成立．
 
@@ -1015,8 +996,11 @@ $because quad a gt.eq 0\,thick b > 0$，因而 $a / b gt.eq 0$
 
 $therefore quad sqrt(a)\,thick sqrt(b)$ 都是算术平方根，应有：$sqrt(a) gt.eq 0\,thick sqrt(b) > 0$，因而：$sqrt(a) / sqrt(b) gt.eq 0$．
 
-根据商的乘方运算律可知：$ (sqrt(a) / sqrt(b))^2 & = frac(\(sqrt(a)\)^2, \(sqrt(b)\)^2)\
- & = a / b &  & upright("(算术平方根的性质)") $ $therefore quad (sqrt(a) / sqrt(b))^2 = a / b$
+根据商的乘方运算律可知：
+
+#numbered-align(($(sqrt(a) / sqrt(b))^2$, $zws = frac(\(sqrt(a)\)^2, \(sqrt(b)\)^2)$, false), ($$, $= a / b$, [(算术平方根的性质)]));
+
+$therefore quad (sqrt(a) / sqrt(b))^2 = a / b$
 
 又由于 $sqrt(a) / sqrt(b) gt.eq 0$，$a / b gt.eq 0$，因此，由平方根的定义就可以得出：$ sqrt(a) / sqrt(b) = sqrt(a / b) $
 
@@ -1038,9 +1022,9 @@ $sqrt(8 / 49) = sqrt(8) / sqrt(49) = frac(2 sqrt(2), 7)$
 
 ]
 #solution[
-$ sqrt(5 / 7) & = sqrt(frac(5 times 7, 7 times 7)) &  & upright("(分数的基本性质)")\
- & = sqrt(35) / 7 $ $ 2 / sqrt(3) & = frac(2 times sqrt(3), sqrt(3) dot.op sqrt(3)) &  & upright("(分数的基本性质)")\
- & = frac(2 sqrt(3), 3) $
+#numbered-align(($sqrt(5 / 7)$, $zws = sqrt(frac(5 times 7, 7 times 7))$, [(分数的基本性质)]), ($$, $= sqrt(35) / 7$, false));
+
+#numbered-align(($2 / sqrt(3)$, $zws = frac(2 times sqrt(3), sqrt(3) dot.op sqrt(3))$, [(分数的基本性质)]), ($$, $= frac(2 sqrt(3), 3)$, false));
 
 ]
 一般地：
@@ -1063,7 +1047,7 @@ frac(1, sqrt(2) dot.op sqrt(3)) & = 1 / sqrt(6) = sqrt(6) / 6 $
 
 ]
 #exercise[
-+ 将下列各平方根的分母有理化：$ sqrt(7 / 36)\,#h(2em) sqrt(frac(25, 4 a^2)) thick\(a > 0\)\,#h(2em) sqrt(frac(2, 9 a))\,#h(2em) 2 sqrt(1 / 8) $ $ 6 sqrt(1 / 3)\,#h(2em) frac(sqrt(3), sqrt(2) dot.op sqrt(6))\,#h(2em) frac(sqrt(2), sqrt(5) dot.op sqrt(6)) $
++ 将下列各平方根的分母有理化：$ sqrt(7 / 36)\,#h(2em) sqrt(frac(25, 4 a^2)) thick\(a > 0\)\,#h(2em) sqrt(frac(2, 9 a))\,#h(2em) 2 sqrt(1 / 8) $ #noindent;$ 6 sqrt(1 / 3)\,#h(2em) frac(sqrt(3), sqrt(2) dot.op sqrt(6))\,#h(2em) frac(sqrt(2), sqrt(5) dot.op sqrt(6)) $
 
 + 化简：（就是使被开方数的每一个因数的指数都小于2，使分母有理化）$ sqrt(75)\,quad 7 sqrt(5 / 7)\,quad 4 sqrt(1 / 3)\,quad sqrt(45)\,quad sqrt(0.2)\,quad sqrt(2 1 / 8)\,quad sqrt(1 / 2) $
 
@@ -1090,10 +1074,7 @@ frac(1, sqrt(2) dot.op sqrt(3)) & = 1 / sqrt(6) = sqrt(6) / 6 $
 
 ]
 #solution[
-$  & quad sqrt(12) + sqrt(75) - sqrt(48) - 1 / sqrt(3) - frac(1, 2 sqrt(3))\
- & = 2 sqrt(3) + 5 sqrt(3) - 4 sqrt(3) - sqrt(3) / 3 - sqrt(3) / 6 &  & upright("(化简)")\
- & = (2 + 5 - 4 - 1 / 3 - 1 / 6) sqrt(3) &  & upright("(分配律)")\
- & = 2 1 / 2 times sqrt(3) = frac(5 sqrt(3), 2) $
+#numbered-align(($$, $quad sqrt(12) + sqrt(75) - sqrt(48) - 1 / sqrt(3) - frac(1, 2 sqrt(3))$, false), ($$, $= 2 sqrt(3) + 5 sqrt(3) - 4 sqrt(3) - sqrt(3) / 3 - sqrt(3) / 6$, [(化简)]), ($$, $= (2 + 5 - 4 - 1 / 3 - 1 / 6) sqrt(3)$, [(分配律)]), ($$, $= 2 1 / 2 times sqrt(3) = frac(5 sqrt(3), 2)$, false));
 
 ]
 #example[
@@ -1101,11 +1082,7 @@ $  & quad sqrt(12) + sqrt(75) - sqrt(48) - 1 / sqrt(3) - frac(1, 2 sqrt(3))\
 
 ]
 #solution[
-$  & quad sqrt(27) + sqrt(2) + 5 sqrt(5) + 4 sqrt(3) - sqrt(3) - sqrt(20)\
- & = 3 sqrt(3) + sqrt(2) + 5 sqrt(5) + 4 sqrt(3) - sqrt(3) - 2 sqrt(5) &  & upright("(化简)")\
- & = (3 sqrt(3) + 4 sqrt(3) - sqrt(3)) + sqrt(2) + (5 sqrt(5) - 2 sqrt(5)) &  & upright("(交换、结合律)")\
- & =\(3 + 4 - 1\)sqrt(3) + sqrt(2) +\(5 - 2\)sqrt(5) &  & upright("(分配律)")\
- & = 6 sqrt(3) + sqrt(2) + 3 sqrt(5) $
+#numbered-align(($$, $quad sqrt(27) + sqrt(2) + 5 sqrt(5) + 4 sqrt(3) - sqrt(3) - sqrt(20)$, false), ($$, $= 3 sqrt(3) + sqrt(2) + 5 sqrt(5) + 4 sqrt(3) - sqrt(3) - 2 sqrt(5)$, [(化简)]), ($$, $= (3 sqrt(3) + 4 sqrt(3) - sqrt(3)) + sqrt(2) + (5 sqrt(5) - 2 sqrt(5))$, [(交换、结合律)]), ($$, $=\(3 + 4 - 1\)sqrt(3) + sqrt(2) +\(5 - 2\)sqrt(5)$, [(分配律)]), ($$, $= 6 sqrt(3) + sqrt(2) + 3 sqrt(5)$, false));
 
 ]
 #example[
@@ -1124,14 +1101,13 @@ $  & quad sqrt(0.5) - 2 sqrt(1 / 3) - sqrt(1 / 8) + sqrt(48)\
 
 ]
 #solution[
-解法1：$ (5 sqrt(12) - 12 sqrt(3)) dot.op sqrt(6) & = (5 times 2 sqrt(3) - 12 sqrt(3)) dot.op sqrt(6) &  & upright("(化简根式)")\
- & = (10 sqrt(3) - 12 sqrt(3)) dot.op sqrt(6)\
- & = - 2 sqrt(3) dot.op sqrt(6) &  & upright("(平方根减法)")\
- & = - 2 sqrt(3 times 6) = - 2 times 3 sqrt(2)\
- & = - 6 sqrt(2) &  & upright("(平方根乘法)") $ 解法2：$ (5 sqrt(12) - 12 sqrt(3)) dot.op sqrt(6) & = 5 sqrt(12) times sqrt(6) - 12 sqrt(3) times sqrt(6) &  & upright("(分配律)")\
- & = 5 sqrt(12 times 6) - 12 sqrt(3 times 6) &  & upright("(平方根乘法)")\
- & = 30 sqrt(2) - 36 sqrt(2) &  & upright("(化简)")\
- & = - 6 sqrt(2) &  & upright("(平方根减法)") $
+解法1：
+
+#numbered-align(($(5 sqrt(12) - 12 sqrt(3)) dot.op sqrt(6)$, $zws = (5 times 2 sqrt(3) - 12 sqrt(3)) dot.op sqrt(6)$, [(化简根式)]), ($$, $= (10 sqrt(3) - 12 sqrt(3)) dot.op sqrt(6)$, false), ($$, $= - 2 sqrt(3) dot.op sqrt(6)$, [(平方根减法)]), ($$, $= - 2 sqrt(3 times 6) = - 2 times 3 sqrt(2)$, false), ($$, $= - 6 sqrt(2)$, [(平方根乘法)]));
+
+解法2：
+
+#numbered-align(($(5 sqrt(12) - 12 sqrt(3)) dot.op sqrt(6)$, $zws = 5 sqrt(12) times sqrt(6) - 12 sqrt(3) times sqrt(6)$, [(分配律)]), ($$, $= 5 sqrt(12 times 6) - 12 sqrt(3 times 6)$, [(平方根乘法)]), ($$, $= 30 sqrt(2) - 36 sqrt(2)$, [(化简)]), ($$, $= - 6 sqrt(2)$, [(平方根减法)]));
 
 ]
 #exercise[
@@ -1150,8 +1126,9 @@ $  & quad sqrt(0.5) - 2 sqrt(1 / 3) - sqrt(1 / 8) + sqrt(48)\
   + $(sqrt(1 / 2) - 3 sqrt(1 / 8) + 2 sqrt(0.5)) times sqrt(8)$
 
 ]
-#heading(level: 2, numbering: none)[习题3.2]
-+ 求下列各式的值：$ (sqrt(1 / 2))^2\,#h(2em) sqrt(\(- 5\)^2)\,#h(2em) sqrt(9 / 16)\,#h(2em) - sqrt(17^2 times 8^2) $ $ sqrt(17^2 - 8^2)\,#h(2em) sqrt(121 times 169)\,#h(2em) sqrt(256 times 225)\,#h(2em) sqrt(17^2) - sqrt(8^2) $
+#heading(level: 2, numbering: none, supplement: [toc-sub])[习题3.2]
+
++ 求下列各式的值：$ (sqrt(1 / 2))^2\,#h(2em) sqrt(\(- 5\)^2)\,#h(2em) sqrt(9 / 16)\,#h(2em) - sqrt(17^2 times 8^2) $ #noindent;$ sqrt(17^2 - 8^2)\,#h(2em) sqrt(121 times 169)\,#h(2em) sqrt(256 times 225)\,#h(2em) sqrt(17^2) - sqrt(8^2) $
 
 + 计算下列各式：
 
@@ -1287,7 +1264,7 @@ $  & quad sqrt(0.5) - 2 sqrt(1 / 3) - sqrt(1 / 8) + sqrt(48)\
 
 例如：$x^2 - 9 = 0$, $2 y^2 - 3 y + 1 = 0$, $3 x^2 - 2 x = 0$, $x^2 + 2 x = 5$, $- x^2 - 2 = 5 x$ 等都是一元二次方程．
 
-显然，任何一个一元二次方程，经过变形、整理，都可以化成下面的标准形式：$ a x^2 + b x + c = 0 quad\(a eq.not 0\) $ 其中，$a x^2$ 叫#strong[二次项]，$a\(eq.not 0\)$ 是#strong[二次项系数]；$b x$ 叫#strong[一次项]，$b$\(可取任何实数）是#strong[一次项系数]；$c$\(可取任意实数）是#strong[常数项]．
+显然，任何一个一元二次方程，经过变形、整理，都可以化成下面的标准形式：$ a x^2 + b x + c = 0 quad\(a eq.not 0\) $ #noindent;其中，$a x^2$ 叫#strong[二次项]，$a\(eq.not 0\)$ 是#strong[二次项系数]；$b x$ 叫#strong[一次项]，$b$\(可取任何实数）是#strong[一次项系数]；$c$\(可取任意实数）是#strong[常数项]．
 
 - 当 $b eq.not 0\,thick c eq.not 0$ 时，方程 $a x^2 + b x + c = 0 quad\(a eq.not 0\)$ 叫做#strong[一般的]一元二次方程；
 
@@ -1358,7 +1335,7 @@ $  & quad sqrt(0.5) - 2 sqrt(1 / 3) - sqrt(1 / 8) + sqrt(48)\
 显然，这一方程的解（或根）就是0,我们写成 $x = 0$,即解集为 ${ 0 }$．
 
 ==== $a x^2 + c = 0 thick\(a eq.not 0\)$ 的解法
-对于特殊的一元二次方程 $a x^2 + c = 0 thick\(a eq.not 0\)$,可以首先进行移项，除以 $a$,变形为：$ x^2 = - c / a $ 然后利用平方根的意义就可以求出这个方程的解（或根）来．
+对于特殊的一元二次方程 $a x^2 + c = 0 thick\(a eq.not 0\)$,可以首先进行移项，除以 $a$,变形为：$ x^2 = - c / a $ #noindent;然后利用平方根的意义就可以求出这个方程的解（或根）来．
 
 #example[
 解下列各方程：
@@ -1375,26 +1352,23 @@ $  & quad sqrt(0.5) - 2 sqrt(1 / 3) - sqrt(1 / 8) + sqrt(48)\
 ]
 ]
 #solution[
-+ $ 5 x^2 - 4 & = 0\
-  5 x^2 & = 4 &  & upright("(移项)")\
-  x^2 & = 4 / 5 &  & upright("(两边除以5)") $
++ #numbered-align(($5 x^2 - 4$, $zws = 0$, false), ($5 x^2$, $zws = 4$, [(移项)]), ($x^2$, $zws = 4 / 5$, [(两边除以5)]));
 
-  由平方根的意义可知：$x = plus.minus sqrt(4 / 5)$，即：$ x_1 = 2 / 5 sqrt(5)\,#h(2em) x_2 = - 2 / 5 sqrt(5) $ 所以，原方程的解集是 ${2 / 5 sqrt(5) \, thick - 2 / 5 sqrt(5)}$．
+  由平方根的意义可知：$x = plus.minus sqrt(4 / 5)$，即：$ x_1 = 2 / 5 sqrt(5)\,#h(2em) x_2 = - 2 / 5 sqrt(5) $ #noindent;所以，原方程的解集是 ${2 / 5 sqrt(5) \, thick - 2 / 5 sqrt(5)}$．
 
-+ $ - 7 x^2 + 7 & = 0\
-  - 7 x^2 & = - 7 &  & upright("(移项变号)")\
-  x^2 & = 1 &  & upright("(两边除以") - 7 upright(")")\
-  x & = plus.minus 1 &  & upright("(平方根的意义)") $ 即：$x_1 = 1\,quad x_2 = - 1$
++ #numbered-align(($- 7 x^2 + 7$, $zws = 0$, false), ($- 7 x^2$, $zws = - 7$, [(移项变号)]), ($x^2$, $zws = 1$, [(两边除以 $- 7$)]), ($x$, $zws = plus.minus 1$, [(平方根的意义)]));
+
+  即：$x_1 = 1\,quad x_2 = - 1$
 
   所以，原方程的解集是 ${ 1\,- 1 }$．
 
-+ $ - 3 x^2 & = 0\
-  x^2 & = 0 &  & upright("(两边除以") - 3 upright(")")\
-  x & = 0 $ 所以，原方程的解集是 ${ 0 }$．
++ #numbered-align(($- 3 x^2$, $zws = 0$, false), ($x^2$, $zws = 0$, [(两边除以 $- 3$)]), ($x$, $zws = 0$, false));
 
-+ $ 2 x^2 + 5 & = 0\
-  2 x^2 & = - 5 &  & upright("(移项变号)")\
-  x^2 & = - 5 / 2 &  & upright("(两边除以2)") $ 由于任何实数的平方，都不可能是负数，所以，原方程没有实数根，这时，我们就说，这个方程的解集是空集，记作 $nothing$．
+  所以，原方程的解集是 ${ 0 }$．
+
++ #numbered-align(($2 x^2 + 5$, $zws = 0$, false), ($2 x^2$, $zws = - 5$, [(移项变号)]), ($x^2$, $zws = - 5 / 2$, [(两边除以2)]));
+
+  由于任何实数的平方，都不可能是负数，所以，原方程没有实数根，这时，我们就说，这个方程的解集是空集，记作 $nothing$．
 
 ]
 #rmk[
@@ -1405,11 +1379,13 @@ $  & quad sqrt(0.5) - 2 sqrt(1 / 3) - sqrt(1 / 8) + sqrt(48)\
 
 #blk[][
 #block[
-#set enum(numbering: enum-at(1, "I."), start: 1)
+#set enum(numbering: enum-at(1, "I."))
 + 把原方程变形为：$ x^2 = - c / a $
 
 + 根据平方根的意义，得出：
 
+  #block[
+  #set enum(numbering: enum-at(2, "1."))
   + 当 $- c / a > 0$ 时，$x = plus.minus sqrt(- c / a)$
 
     原方程的解集是 ${sqrt(- c / a) \, thick - sqrt(- c / a)}$
@@ -1417,6 +1393,7 @@ $  & quad sqrt(0.5) - 2 sqrt(1 / 3) - sqrt(1 / 8) + sqrt(48)\
   + 当 $- c / a = 0$ 时，$x = 0$.原方程的解集是 ${ 0 }$．
 
   + 当 $- c / a < 0$ 时，原方程没有实数根，即解集是空集 $nothing$．
+  ]
 ]
 
 ]
@@ -1453,16 +1430,17 @@ $  & quad sqrt(0.5) - 2 sqrt(1 / 3) - sqrt(1 / 8) + sqrt(48)\
 
 ]
 #solution[
-+ $ \(1 - x\)^2 & = 9\
-  \(1 - x\) & = plus.minus 3 &  & upright("(平方根的意义)") $ 即：$1 - x = + 3$ 或 $1 - x = - 3$
++ #numbered-align(($\(1 - x\)^2$, $zws = 9$, false), ($\(1 - x\)$, $zws = plus.minus 3$, [(平方根的意义)]));
+
+  即：$1 - x = + 3$ 或 $1 - x = - 3$
 
   因而，$x = - 2$ 或 $x = 4$
 
   $therefore quad$ 原方程的解集是 ${ - 2\,4 }$．
 
-+ $ 4\(1 + 2 x\)^2 & = 49\
-  \(1 + 2 x\)^2 & = 49 / 4 &  & upright("(两边除以4)")\
-  1 + 2 x & = plus.minus 7 / 2 &  & upright("(平方根的意义)") $ 即：$1 + 2 x = + 7 / 2$ 或 $1 + 2 x = - 7 / 2$
++ #numbered-align(($4\(1 + 2 x\)^2$, $zws = 49$, false), ($\(1 + 2 x\)^2$, $zws = 49 / 4$, [(两边除以4)]), ($1 + 2 x$, $zws = plus.minus 7 / 2$, [(平方根的意义)]));
+
+  即：$1 + 2 x = + 7 / 2$ 或 $1 + 2 x = - 7 / 2$
 
   因而，$x = 5 / 4$ 或 $x = - 9 / 4$
 
@@ -1490,7 +1468,7 @@ $  & quad sqrt(0.5) - 2 sqrt(1 / 3) - sqrt(1 / 8) + sqrt(48)\
 ]
 ]
 ==== $a x^2 + b x = 0 thick\(a eq.not 0\)$ 的解法
-对于方程 $a x^2 + b x = 0 thick\(a eq.not 0\)$,可以先运用数系运算通性中的分配律，把它变形为 $ \(a x + b\)x = 0 $ 然后，再利用零的运算特性，就可以得出：$ a x + b = 0 #h(2em) upright("或") #h(2em) x = 0 $ 这是因为：如果两个因数的乘积为0,那么，这两个因数中至少有一个是0．
+对于方程 $a x^2 + b x = 0 thick\(a eq.not 0\)$,可以先运用数系运算通性中的分配律，把它变形为 $ \(a x + b\)x = 0 $ #noindent;然后，再利用零的运算特性，就可以得出：$ a x + b = 0 #h(2em) upright("或") #h(2em) x = 0 $ #noindent;这是因为：如果两个因数的乘积为0,那么，这两个因数中至少有一个是0．
 
 因而，就可以进一步解出 $x$ 的值来．
 
@@ -1499,8 +1477,9 @@ $  & quad sqrt(0.5) - 2 sqrt(1 / 3) - sqrt(1 / 8) + sqrt(48)\
 
 ]
 #solution[
-$ x^2 - 4 x & = 0\
-\(x - 4\)x & = 0 &  & upright("(分配律)") $ $ x - 4 = 0 #h(2em) upright("或") #h(2em) x = 0 $ 即：$x_1 = 4\,quad x_2 = 0$．
+#numbered-align(($x^2 - 4 x$, $zws = 0$, false), ($\(x - 4\)x$, $zws = 0$, [(分配律)]));
+
+$ x - 4 = 0 #h(2em) upright("或") #h(2em) x = 0 $ #noindent;即：$x_1 = 4\,quad x_2 = 0$．
 
 $therefore quad$ 原方程的解集是 ${ 4\,thick 0 }$．
 
@@ -1511,7 +1490,7 @@ $therefore quad$ 原方程的解集是 ${ 4\,thick 0 }$．
 ]
 #solution[
 $ 5 x^2 + 3 x & = 0\
-\(5 x + 3\)x & = 0 $ 因而，$5 x + 3 = 0 #h(2em) upright("或") #h(2em) x = 0$
+\(5 x + 3\)x & = 0 $ #noindent;因而，$5 x + 3 = 0 #h(2em) upright("或") #h(2em) x = 0$
 
 即：$x_1 = - 3 / 5\,#h(2em) x_2 = 0$
 
@@ -1522,12 +1501,12 @@ $therefore quad$ 原方程的解集是 ${- 3 / 5 \, thick 0}$．
 
 #blk[][
 #block[
-#set enum(numbering: enum-at(1, "I."), start: 1)
+#set enum(numbering: enum-at(1, "I."))
 + 利用分配律变形为 $ \(a x + b\)x = 0 $
 
 + 由零的运算特性可知 $ a x + b = 0 #h(2em) upright("或") #h(2em) x = 0 $
 
-+ 原方程的解为 $ x_1 = - b / a\,#h(2em) x_2 = 0 $ 即解集是 ${- b / a \, thick 0}$．
++ 原方程的解为 $ x_1 = - b / a\,#h(2em) x_2 = 0 $ #noindent;即解集是 ${- b / a \, thick 0}$．
 ]
 
 ]
@@ -1582,10 +1561,9 @@ $therefore quad$ 原方程的解集是 ${- 3 / 5 \, thick 0}$．
 
 ]
 #solution[
-$ x^2 - 6 x & = 0\
-x^2 - 6 x + 9 & = 9 &  & upright("(两边加上9)")\
-\(x - 3\)^2 & = 9\
-x - 3 & = plus.minus 3 &  & upright("(平方根的意义)") $ 即：$x - 3 = + 3 quad upright("或") quad x - 3 = - 3$
+#numbered-align(($x^2 - 6 x$, $zws = 0$, false), ($x^2 - 6 x + 9$, $zws = 9$, [(两边加上9)]), ($\(x - 3\)^2$, $zws = 9$, false), ($x - 3$, $zws = plus.minus 3$, [(平方根的意义)]));
+
+即：$x - 3 = + 3 quad upright("或") quad x - 3 = - 3$
 
 $therefore quad x_1 = 6\,#h(2em) x_2 = 0$
 
@@ -1613,17 +1591,7 @@ $therefore quad x_1 = 6\,#h(2em) x_2 = 0$
 
 这时，我们可以如图3.9所示，把 $4 times x$ 的小长方形平分为两个 $2 times x$ 的更小长方形，再把其中带阴影的一个移至正方形 $x times x$ 的下方．这样，原来长方形就变成了⿸形，但面积仍为32$upright(m)^2$．
 
-#figure([#block[
-  #fig("3-14");
-
-  ]
-  #block[
-  #fig("3-15");
-
-  ]],
-  caption: [
-  ]
-)
+#grid(columns: (1fr,) * 2, align: center + bottom, figure([#fig("3-14");], caption: []), figure([#fig("3-15");], caption: []));
 
 如果我们把右下方补上一个边长为2的小正方形，如图3.10所示，那么，就可以得到一个边长为 $\(x + 2\)$ 的大正方形．这个正方形的面积比原来的长方形面积多了 $2^2 = 4$.
 
@@ -1636,7 +1604,7 @@ $therefore quad x_1 = 6\,#h(2em) x_2 = 0$
 
 也就是说，由原来所列的方程式 $x^2 + 4 x = 32$,就变形成为：$ x^2 + 4 x + 2^2 & = 32 + 2^2\
 \(x + 2\)^2 & = 36\
-x + 2 & = plus.minus 6 $ 即 $x + 2 = + 6 quad upright("或") quad x + 2 = - 6$
+x + 2 & = plus.minus 6 $ #noindent;即 $x + 2 = + 6 quad upright("或") quad x + 2 = - 6$
 
 $therefore quad x_1 = 4\,quad x_2 = - 8$
 
@@ -1651,18 +1619,21 @@ $therefore quad x_1 = 4\,quad x_2 = - 8$
 
 ]
 #solution[
-+ $x^2 + 3 x = 40$ 的两边同加一次项系数3的一半的平方数 $(3 / 2)^2$，就得到：$ x^2 + 3 x + (3 / 2)^2 & = 40 + (3 / 2)^2\
-  (x + 3 / 2)^2 & = 169 / 4\
-  x + 3 / 2 & = plus.minus 13 / 2 &  & upright("(平方根的定义)") $ 即：$x + 3 / 2 = + 13 / 2 quad upright("或") quad x + 3 / 2 = - 13 / 2$
++ $x^2 + 3 x = 40$ 的两边同加一次项系数3的一半的平方数 $(3 / 2)^2$，就得到：
+
+  #numbered-align(($x^2 + 3 x + (3 / 2)^2$, $zws = 40 + (3 / 2)^2$, false), ($(x + 3 / 2)^2$, $zws = 169 / 4$, false), ($x + 3 / 2$, $zws = plus.minus 13 / 2$, [(平方根的定义)]));
+
+  即：$x + 3 / 2 = + 13 / 2 quad upright("或") quad x + 3 / 2 = - 13 / 2$
 
   $therefore quad x_1 = 5\,#h(2em) x_2 = - 8$
 
   $therefore quad$ 原方程的解集是 ${ 5\,thick - 8 }$．
 
-+ 先将二次项系数化简成为1,并将方程写成 $x^2 + p x + q = 0$ 的形式．两边同除以2,得 $ x^2 + 3 / 2 x - 5 / 2 = 0 $ 其次，就可按1题的解法去求解：$ x^2 + 3 / 2 x & = 5 / 2 &  & upright("(移项)")\
-  x^2 + 3 / 2 x + (3 / 4)^2 & = 5 / 2 + (3 / 4)^2 &  & upright("(配方)")\
-  (x + 3 / 4)^2 & = 49 / 16\
-  x + 3 / 4 & = plus.minus 7 / 4 &  & upright("(平方根意义)") $ 即：$x + 3 / 4 = + 7 / 4 quad upright("或") quad x + 3 / 4 = - 7 / 4$
++ 先将二次项系数化简成为1,并将方程写成 $x^2 + p x + q = 0$ 的形式．两边同除以2,得 $ x^2 + 3 / 2 x - 5 / 2 = 0 $ #noindent;其次，就可按1题的解法去求解：
+
+  #numbered-align(($x^2 + 3 / 2 x$, $zws = 5 / 2$, [(移项)]), ($x^2 + 3 / 2 x + (3 / 4)^2$, $zws = 5 / 2 + (3 / 4)^2$, [(配方)]), ($(x + 3 / 4)^2$, $zws = 49 / 16$, false), ($x + 3 / 4$, $zws = plus.minus 7 / 4$, [(平方根意义)]));
+
+  即：$x + 3 / 4 = + 7 / 4 quad upright("或") quad x + 3 / 4 = - 7 / 4$
 
   $therefore quad x_1 = 1\,#h(2em) x_2 = - 5 / 2$
 
@@ -1686,31 +1657,32 @@ $therefore quad x_1 = 4\,quad x_2 = - 8$
 ]
 ]
 #solution[
-+ $ x^2 - 8 x + 9 & = 0\
-  x^2 - 8 x & = - 9 &  & upright("(移项)")\
-  x^2 - 8 x +\(- 4\)^2 & = - 9 +\(- 4\)^2 &  & upright("(配方)")\
-  \(x - 4\)^2 & = 7\
-  x - 4 & = plus.minus sqrt(7) &  & upright("(平方根的意义)") $ $therefore quad x_1 = 4 + sqrt(7)\,#h(2em) x_2 = 4 - sqrt(7)$
++ #numbered-align(($x^2 - 8 x + 9$, $zws = 0$, false), ($x^2 - 8 x$, $zws = - 9$, [(移项)]), ($x^2 - 8 x +\(- 4\)^2$, $zws = - 9 +\(- 4\)^2$, [(配方)]), ($\(x - 4\)^2$, $zws = 7$, false), ($x - 4$, $zws = plus.minus sqrt(7)$, [(平方根的意义)]));
+
+  $therefore quad x_1 = 4 + sqrt(7)\,#h(2em) x_2 = 4 - sqrt(7)$
 
   $therefore quad$ 原方程的解集是 ${4 + sqrt(7) \, thick 4 - sqrt(7)}$
 
-+ $ 2 x^2 + 3 x - 6 & = 0\
++ #h(0pt)
+  $ 2 x^2 + 3 x - 6 & = 0\
   x^2 + 3 / 2 x & = 6 / 2\
   x^2 + 3 / 2 x + (3 / 4)^2 & = 3 + (3 / 4)^2\
   (x + 3 / 4)^2 & = 57 / 16\
-  x + 3 / 4 & = plus.minus sqrt(57) / 4 $ $therefore quad x_(1\,2) = - 3 / 4 plus.minus sqrt(57) / 4$
+  x + 3 / 4 & = plus.minus sqrt(57) / 4 $ #noindent;$therefore quad x_(1\,2) = - 3 / 4 plus.minus sqrt(57) / 4$
 
   $therefore quad$ 原方程的解集是 ${frac(- 3 + sqrt(57), 4) \, thick frac(- 3 - sqrt(57), 4)}$
 
-+ $ 4 x^2 + 4 x + 1 & = 0\
++ #h(0pt)
+  $ 4 x^2 + 4 x + 1 & = 0\
   \(2 x + 1\)^2 & = 0\
-  2 x + 1 & = 0 $ $therefore quad x_1 = x_2 = - 1 / 2$ (二重根)
+  2 x + 1 & = 0 $ #noindent;$therefore quad x_1 = x_2 = - 1 / 2$ (二重根)
 
   $therefore quad$ 原方程的解集是 ${- 1 / 2}$
 
-+ $ x^2 + 4 x + 7 & = 0\
++ #h(0pt)
+  $ x^2 + 4 x + 7 & = 0\
   x^2 + 4 x + 2^2 & = - 7 + 2^2\
-  \(x + 2\)^2 & = - 3 $ 显然，$x$ 取任何实数时，都不可能使 $\(x + 2\)^2$ 的值等于 $- 3$.因此，这个方程无实数根．
+  \(x + 2\)^2 & = - 3 $ #noindent;显然，$x$ 取任何实数时，都不可能使 $\(x + 2\)^2$ 的值等于 $- 3$.因此，这个方程无实数根．
 
   $therefore quad$ 原方程的解集是空集 $nothing$．
 
@@ -1719,20 +1691,23 @@ $therefore quad x_1 = 4\,quad x_2 = - 8$
 
 #blk[][
 #block[
-#set enum(numbering: enum-at(1, "I."), start: 1)
+#set enum(numbering: enum-at(1, "I."))
 + 用二次项系数去除方程两边，使二次项系数变成1.并将原方程化为 $x^2 + p x + q = 0$ 的形式．
 
 + 移项，把方程进一步化为 $x^2 + p x = - q$ 的形式．
 
-+ 配方，方程两边同加上“一次项系数一半的平方数”，使方程左边成为完全平方形式：$ x^2 + p x + (p / 2)^2 = - q + (p / 2)^2 $ 即 $ (x + p / 2)^2 = p^2 / 4 - q $
++ 配方，方程两边同加上“一次项系数一半的平方数”，使方程左边成为完全平方形式：$ x^2 + p x + (p / 2)^2 = - q + (p / 2)^2 $ #noindent;即 $ (x + p / 2)^2 = p^2 / 4 - q $
 
 + 由平方根的意义，可知
 
+  #block[
+  #set enum(numbering: enum-at(2, "1."))
   + 当 $p^2 / 4 - q > 0$ 时，原方程有两个实数根：$x_1 = - p / 2 + sqrt(p^2 / 4 - q)$，$x_2 = - p / 2 - sqrt(p^2 / 4 - q)$．
 
   + 当 $p^2 / 4 - q = 0$ 时，原方程就有一个二重根：$x_1 = x_2 = - p / 2$．
 
   + 当 $p^2 / 4 - q < 0$ 时，原方程无实数根．
+  ]
 ]
 
 ]
@@ -1790,12 +1765,9 @@ $therefore quad x_1 = 4\,quad x_2 = - 8$
 
 ]
 #solution[
-$ \(2 x + 1\)\(x + 2\)+ 2 x - 18 & = 0\
-2 x^2 + 4 x + x + 2 + 2 x - 18 & = 0 &  & upright("(去括号)")\
-2 x^2 + 7 x - 16 & = 0 &  & upright("(合并)")\
-x^2 + 7 / 2 x & = 8 &  & upright("(两边除以2)")\
-x^2 + 7 / 2 x + (7 / 4)^2 & = 8 + 49 / 16 &  & upright("(配方)")\
-(x + 7 / 4)^2 & = 177 / 16 $ $therefore quad x + 7 / 4 = plus.minus sqrt(177) / 4$
+#numbered-align(($\(2 x + 1\)\(x + 2\)+ 2 x - 18$, $zws = 0$, false), ($2 x^2 + 4 x + x + 2 + 2 x - 18$, $zws = 0$, [(去括号)]), ($2 x^2 + 7 x - 16$, $zws = 0$, [(合并)]), ($x^2 + 7 / 2 x$, $zws = 8$, [(两边除以2)]), ($x^2 + 7 / 2 x + (7 / 4)^2$, $zws = 8 + 49 / 16$, [(配方)]), ($(x + 7 / 4)^2$, $zws = 177 / 16$, false));
+
+$therefore quad x + 7 / 4 = plus.minus sqrt(177) / 4$
 
 $therefore quad x_(1\,2) = - 7 / 4 plus.minus sqrt(177) / 4$
 
@@ -1807,13 +1779,13 @@ $therefore quad$ 原方程的解集是 ${frac(- 7 + sqrt(177), 4) \, thick frac(
 
 ]
 #proof[
-#emph[Proof.]把原方程变形为 $x^2 - 5 / 2 x = - 7 / 2$
+把原方程变形为 $x^2 - 5 / 2 x = - 7 / 2$
 
 配方后，得 $(x - 5 / 4)^2 = - 7 / 2 + 25 / 16$ 即：$ (x - 5 / 4)^2 = - 31 / 16 $
 
 $because quad - 31 / 16 < 0 #h(2em) therefore quad$ 任何实数都不能使上边的等式成立．
 
-$therefore quad$ 原方程没有实数根．~◻
+$therefore quad$ 原方程没有实数根．
 
 ]
 #exercise[
@@ -1825,15 +1797,15 @@ $therefore quad$ 原方程没有实数根．~◻
 
 ]
 === 一元二次方程的求根公式
-用配方法，同样可以求出一般的一元二次方程 $a x^2 + b x + c = 0 quad\(a eq.not 0\)$ 的根．具体作法如下：$ a x^2 + b x + c = 0 #h(2em)\(a eq.not 0\) $ 方程两边同除以二次项系数 $a$,得 $ x^2 + b / a x + c / a = 0 $ 把常数项 $c / a$ 改变符号后，移到方程右边，得 $ x^2 + b / a x = - c / a $
+用配方法，同样可以求出一般的一元二次方程 $a x^2 + b x + c = 0 quad\(a eq.not 0\)$ 的根．具体作法如下：$ a x^2 + b x + c = 0 #h(2em)\(a eq.not 0\) $ #noindent;方程两边同除以二次项系数 $a$,得 $ x^2 + b / a x + c / a = 0 $ #noindent;把常数项 $c / a$ 改变符号后，移到方程右边，得 $ x^2 + b / a x = - c / a $
 
-配方：两边同加上“一次项系数一半的平方数”，得 $ x^2 + b / a x + (frac(b, 2 a))^2 = - c / a + (frac(b, 2 a))^2 $ 整理后，得 $(x + frac(b, 2 a))^2 = frac(b^2 - 4 a c, 4 a^2)$
+配方：两边同加上“一次项系数一半的平方数”，得 $ x^2 + b / a x + (frac(b, 2 a))^2 = - c / a + (frac(b, 2 a))^2 $ #noindent;整理后，得 $(x + frac(b, 2 a))^2 = frac(b^2 - 4 a c, 4 a^2)$
 
 $because quad a eq.not 0\,#h(2em) therefore quad 4 a^2 > 0$
 
 $therefore quad frac(b^2 - 4 a c, 4 a^2)$ 就与 $b^2 - 4 a c$ 取相同符号．
 
-当 $b^2 - 4 a c gt.eq 0$ 时，$frac(b^2 - 4 a c, 4 a^2) gt.eq 0$,这时，由平方根的意义，不难得出 $ x + frac(b, 2 a) = plus.minus sqrt(frac(b^2 - 4 a c, 4 a^2)) $ $therefore quad$ 原方程的根就是：$ x_(1\,2) = - frac(b, 2 a) plus.minus frac(sqrt(b^2 - 4 a c), 2 a) = frac(- b plus.minus sqrt(b^2 - 4 a c), 2 a) $
+当 $b^2 - 4 a c gt.eq 0$ 时，$frac(b^2 - 4 a c, 4 a^2) gt.eq 0$,这时，由平方根的意义，不难得出 $ x + frac(b, 2 a) = plus.minus sqrt(frac(b^2 - 4 a c, 4 a^2)) $ #noindent;$therefore quad$ 原方程的根就是：$ x_(1\,2) = - frac(b, 2 a) plus.minus frac(sqrt(b^2 - 4 a c), 2 a) = frac(- b plus.minus sqrt(b^2 - 4 a c), 2 a) $
 
 当 $b^2 - 4 a c < 0$ 时，$frac(b^2 - 4 a c, 4 a^2) < 0$,这时，就没有一个实数能使 $(x + frac(b, 2 a))^2 = frac(b^2 - 4 a c, 4 a^2)$ 成立．
 
@@ -1862,11 +1834,11 @@ $therefore quad$ 原方程没有实数根．
 ]
 ]
 #solution[
-+ $x^2 - 7 x + 6 = 0$ 这里 $a = 1\,thick b = - 7\,thick c = 6$ $ b^2 - 4 a c = 49 - 24 = 25 > 0 $ 代入求根公式，得 $ x = frac(- b plus.minus sqrt(b^2 - 4 a c), 2 a) = frac(7 plus.minus sqrt(25), 2) = frac(7 plus.minus 5, 2) $ $therefore quad x_1 = 6\,#h(2em) x_2 = 1$．
++ $x^2 - 7 x + 6 = 0$ 这里 $a = 1\,thick b = - 7\,thick c = 6$ $ b^2 - 4 a c = 49 - 24 = 25 > 0 $ #noindent;代入求根公式，得 $ x = frac(- b plus.minus sqrt(b^2 - 4 a c), 2 a) = frac(7 plus.minus sqrt(25), 2) = frac(7 plus.minus 5, 2) $ #noindent;$therefore quad x_1 = 6\,#h(2em) x_2 = 1$．
 
   $therefore quad$ 原方程的解集是 ${ 6\,thick 1 }$
 
-+ $2 x^2 + 3 x - 7 = 0$ 这里 $a = 2\,thick b = 3\,thick c = - 7$ $ b^2 - 4 a c = 9 + 56 = 65 > 0 $ 代入求根公式，得 $ x = frac(- b plus.minus sqrt(b^2 - 4 a c), 2 a) = frac(- 3 plus.minus sqrt(65), 4) $ $therefore quad x_1 = frac(- 3 + sqrt(65), 4)\,#h(2em) x_2 = frac(- 3 - sqrt(65), 4)$．
++ $2 x^2 + 3 x - 7 = 0$ 这里 $a = 2\,thick b = 3\,thick c = - 7$ $ b^2 - 4 a c = 9 + 56 = 65 > 0 $ #noindent;代入求根公式，得 $ x = frac(- b plus.minus sqrt(b^2 - 4 a c), 2 a) = frac(- 3 plus.minus sqrt(65), 4) $ #noindent;$therefore quad x_1 = frac(- 3 + sqrt(65), 4)\,#h(2em) x_2 = frac(- 3 - sqrt(65), 4)$．
 
   $therefore quad$ 原方程的解集是 ${frac(- 3 + sqrt(65), 4) \, thick frac(- 3 - sqrt(65), 4)}$
 
@@ -1880,7 +1852,7 @@ $therefore quad$ 原方程没有实数根．
 
 + $1 / 2 x - 1 = 2 x^2$ 整理得 $2 x^2 - 1 / 2 x + 1 = 0$
 
-  去分母，得：$4 x^2 - x + 2 = 0$ 这里 $a = 4\,thick b = - 1\,thick c = 2$ $ b^2 - 4 a c = 1 - 32 = - 31 < 0 $ $therefore quad$ 原方程无实数根，解集是空集 $nothing$．
+  去分母，得：$4 x^2 - x + 2 = 0$ 这里 $a = 4\,thick b = - 1\,thick c = 2$ $ b^2 - 4 a c = 1 - 32 = - 31 < 0 $ #noindent;$therefore quad$ 原方程无实数根，解集是空集 $nothing$．
 
 ]
 #exercise[
@@ -1916,7 +1888,7 @@ $therefore quad$ 原方程没有实数根．
 #solution[
 + $y\(10 + 3 y\)= - 3$，去括号、整理得：$3 y^2 + 10 y + 3 = 0$
 
-  由求根公式，得：$ y = frac(- b plus.minus sqrt(b^2 - 4 a c), 2 a) = frac(- 10 plus.minus sqrt(100 - 36), 6) = frac(- 10 plus.minus 8, 6) $ $therefore quad y_1 = - 1 / 3\,quad y_2 = - 3$
+  由求根公式，得：$ y = frac(- b plus.minus sqrt(b^2 - 4 a c), 2 a) = frac(- 10 plus.minus sqrt(100 - 36), 6) = frac(- 10 plus.minus 8, 6) $ #noindent;$therefore quad y_1 = - 1 / 3\,quad y_2 = - 3$
 
   $therefore quad$ 原方程的解集是 ${- 1 / 3 \, thick - 3}$
 
@@ -1962,17 +1934,17 @@ $therefore quad$ 原方程没有实数根．
 #solution[
 + $3\(x + 1\)^2 - 5\(x + 1\)= 2$ 把 $\(x + 1\)$ 看作一个整体．原方程可以看作是 $\(x + 1\)$ 的二次方程．整理以后，得 $ 3\(x + 1\)^2 - 5\(x + 1\)- 2 = 0 $
 
-  可以利用求根公式，先求 $\(x + 1\)$ $ x + 1 = frac(5 plus.minus sqrt(25 + 24), 6) = frac(5 plus.minus 7, 6) $ 即：$x + 1 = 2 quad upright("或") quad x + 1 = - 1 / 3$
+  可以利用求根公式，先求 $\(x + 1\)$ $ x + 1 = frac(5 plus.minus sqrt(25 + 24), 6) = frac(5 plus.minus 7, 6) $ #noindent;即：$x + 1 = 2 quad upright("或") quad x + 1 = - 1 / 3$
 
   $therefore quad x_1 = 1\,#h(2em) x_2 = - 1 1 / 3$
 
   $therefore quad$ 原方程的解集是 ${1 \, thick - 1 1 / 3}$
 
-+ $y^2 -\(m + n\)y + m n = 0 quad\(m > n\)$ 这里 $m\,n$ 是已知数，因此可以看作：$ a = 1\,quad b = -\(m + n\)\,quad c = m n $ 代入求根公式，得 $ y & = frac(\(m + n\)plus.minus sqrt(\(m + n\)^2 - 4 m n), 2)\
++ $y^2 -\(m + n\)y + m n = 0 quad\(m > n\)$ 这里 $m\,n$ 是已知数，因此可以看作：$ a = 1\,quad b = -\(m + n\)\,quad c = m n $ #noindent;代入求根公式，得 $ y & = frac(\(m + n\)plus.minus sqrt(\(m + n\)^2 - 4 m n), 2)\
    & = frac(\(m + n\)plus.minus sqrt(m^2 + 2 m n + n^2 - 4 m n), 2)\
    & = frac(\(m + n\)plus.minus sqrt(m^2 - 2 m n + n^2), 2)\
    & = frac(\(m + n\)plus.minus sqrt(\(m - n\)^2), 2)\
-   & = frac(\(m + n\)plus.minus\(m - n\), 2) #h(2em)\(m > n\) $ $therefore quad y_1 = frac(m + n + m - n, 2) = m\,quad y_2 = frac(m + n - m + n, 2) = n$
+   & = frac(\(m + n\)plus.minus\(m - n\), 2) #h(2em)\(m > n\) $ #noindent;$therefore quad y_1 = frac(m + n + m - n, 2) = m\,quad y_2 = frac(m + n - m + n, 2) = n$
 
   $therefore quad$ 原方程的解集是 ${ m\,n }$．
 
@@ -1998,8 +1970,8 @@ $therefore quad$ 原方程没有实数根．
 
   设 $x^2 = y$,则 $x^4 = y^2$，原方程就化为：$y^2 - 13 y + 36 = 0$．
 
-  解这个一元二次方程，得 $ y = frac(13 plus.minus sqrt(169 - 144), 2) = frac(13 plus.minus 5, 2) $ $therefore quad y_1 = 9\,#h(2em) y_2 = 4$ 把 $y_1\,y_2$ 分别代入原设，得：$ x^2 & = 9 quad arrow.r.double quad x = plus.minus 3\
-  x^2 & = 4 quad arrow.r.double quad x = plus.minus 2 $ $therefore quad$ 原方程的解集是 ${ 2\,3\,- 2\,- 3 }$．
+  解这个一元二次方程，得 $ y = frac(13 plus.minus sqrt(169 - 144), 2) = frac(13 plus.minus 5, 2) $ #noindent;$therefore quad y_1 = 9\,#h(2em) y_2 = 4$ 把 $y_1\,y_2$ 分别代入原设，得：$ x^2 & = 9 quad arrow.r.double quad x = plus.minus 3\
+  x^2 & = 4 quad arrow.r.double quad x = plus.minus 2 $ #noindent;$therefore quad$ 原方程的解集是 ${ 2\,3\,- 2\,- 3 }$．
 
 + $\(x^2 + 2\)^2 - 8\(x^2 + 2\)+ 15 = 0$
 
@@ -2008,7 +1980,7 @@ $therefore quad$ 原方程没有实数根．
   $therefore quad y = frac(8 plus.minus sqrt(64 - 60), 2) = frac(8 plus.minus 2, 2)$ $ y_1 = 5\,#h(2em) y_2 = 3 $
 
   代入原设：$ x^2 + 2 & = 5 quad arrow.r.double quad x = plus.minus sqrt(3)\
-  x^2 + 2 & = 3 quad arrow.r.double quad x = plus.minus 1 $ $therefore quad$ 原方程的解集是 ${ 1\,sqrt(3)\,- 1\,- sqrt(3) }$．
+  x^2 + 2 & = 3 quad arrow.r.double quad x = plus.minus 1 $ #noindent;$therefore quad$ 原方程的解集是 ${ 1\,sqrt(3)\,- 1\,- sqrt(3) }$．
 
 ]
 在以上例题的解法中，所设的未知数 $y$ 叫做#strong[辅助未知数]，借助辅助未知数，可以把某些特殊的高次方程变成较低次的方程．这种方法，称为#strong[设辅助未知数法]．也叫#strong[换元法]．
@@ -2027,7 +1999,7 @@ $therefore quad$ 原方程没有实数根．
 
 ]
 #block[
-#set enum(numbering: latex-enum, start: 5)
+#set enum(numbering: enum-at(1, none, start: 5))
 + $\(x^2 + 2 x\)^2 - 14\(x^2 + 2 x\)- 15 = 0$
 
 + $\(x^2 - x\)^2 - 4\(x^2 - x\)- 12 = 0$
@@ -2043,7 +2015,7 @@ $therefore quad$ 原方程没有实数根．
 
 ]
 #solution[
-由分配律，可把原方程化为：$ \(3 x^2 - 4 x + 1\)dot.op x = 0 $ $therefore quad 3 x^2 - 4 x + 1 = 0 quad upright("或") quad x = 0$
+由分配律，可把原方程化为：$ \(3 x^2 - 4 x + 1\)dot.op x = 0 $ #noindent;$therefore quad 3 x^2 - 4 x + 1 = 0 quad upright("或") quad x = 0$
 
 解方程 $3 x^2 - 4 x + 1 = 0$，得：$x_1 = 1\,quad x_2 = 1 / 3$
 
@@ -2080,7 +2052,7 @@ $therefore quad$ 原方程的解集是 ${0 \, thick 1 \, thick 1 / 3}$
 利用交换律、分配律进行变形，设法使两个二次式中含未知数的项相同，便于设辅助未知数．
 
 由于 $ \(x - 1\)\(x - 4\) & = x^2 - 5 x + 4\
-\(x - 2\)\(x - 3\) & = x^2 - 5 x + 6 $ 因此，可设辅助未知数 $y = x^2 - 5 x$．这样一来，就可以把原方程降为二次方程求解．
+\(x - 2\)\(x - 3\) & = x^2 - 5 x + 6 $ #noindent;因此，可设辅助未知数 $y = x^2 - 5 x$．这样一来，就可以把原方程降为二次方程求解．
 
 ]
 #solution[
@@ -2092,7 +2064,7 @@ $\(x - 1\)\(x - 2\)\(x - 3\)\(x - 4\)= 24$
 设 $y = x^2 - 5 x$,则方程可化为 $ \(y + 4\)\(y + 6\) & = 24\
 y^2 + 10 y + 24 - 24 & = 0\
 y^2 + 10 y & = 0\
-y\(y + 10\) & = 0 $ $therefore quad y_1 = 0\,#h(2em) y_2 = - 10$
+y\(y + 10\) & = 0 $ #noindent;$therefore quad y_1 = 0\,#h(2em) y_2 = - 10$
 
 代入原设，得 $x^2 - 5 x = 0 quad upright("或") quad x^2 - 5 x = - 10$
 
@@ -2183,7 +2155,7 @@ $k$ 取什么值时，方程 $4 x^2 -\(k + 2\)x +\(k - 1\)= 0$
 
 + $because quad$ 当 $Delta = 0$ 时，原方程才能有两个相等的实数根，而在这里 $ Delta & =\[-\(k + 2\)\]^2 - 4 dot.op 4\(k - 1\)\
    & = k^2 + 4 k + 4 - 16 k + 16\
-   & = k^2 - 12 k + 20 $ $therefore quad$ 令 $Delta = 0$,即 $k^2 - 12 k + 20 = 0$．
+   & = k^2 - 12 k + 20 $ #noindent;$therefore quad$ 令 $Delta = 0$,即 $k^2 - 12 k + 20 = 0$．
 
   从中就可以解出 $k$ 的取值，$k_1 = 2\,#h(2em) k_2 = 10$．
 
@@ -2216,7 +2188,7 @@ $k$ 取什么值时，方程 $4 x^2 -\(k + 2\)x +\(k - 1\)= 0$
 
 ]
 #proof[
-#emph[Proof.]当 $Delta = b^2 - 4 a c > 0$ 时，方程 $a x^2 + b x + c = 0 quad\(a eq.not 0\)$ 才能有两个不相等的实数根．
+当 $Delta = b^2 - 4 a c > 0$ 时，方程 $a x^2 + b x + c = 0 quad\(a eq.not 0\)$ 才能有两个不相等的实数根．
 
 而这里的 $a = 1$, $b = - m$, $c = m - 4$,且 $ Delta & =\(- m\)^2 - 4 times 1 times\(m - 4\)\
  & = m^2 - 4 m + 16\
@@ -2227,7 +2199,7 @@ $k$ 取什么值时，方程 $4 x^2 -\(k + 2\)x +\(k - 1\)= 0$
 
 $therefore quad\(m - 2\)^2 + 12$ 一定是正数，即：$Delta =\(m - 2\)^2 + 12 > 0$
 
-因此，当 $m$ 取任何实数时，$Delta > 0$,方程 $x^2 - m x + m - 4 = 0$ 一定有两个不相等的实数根．~◻
+因此，当 $m$ 取任何实数时，$Delta > 0$,方程 $x^2 - m x + m - 4 = 0$ 一定有两个不相等的实数根．
 
 ]
 #exercise[
@@ -2238,7 +2210,8 @@ $therefore quad\(m - 2\)^2 + 12$ 一定是正数，即：$Delta =\(m - 2\)^2 + 1
 + 方程 $\(2 m^2 + 1\)x^2 - 2 m x + 1 = 0$ 没有实数根．
 
 ]
-#heading(level: 2, numbering: none)[习题3.3]
+#heading(level: 2, numbering: none, supplement: [toc-sub])[习题3.3]
+
 + 解下列方程
 
   #cols(2)[
@@ -2489,7 +2462,7 @@ $therefore quad\(m - 2\)^2 + 12$ 一定是正数，即：$Delta =\(m - 2\)^2 + 1
 
   ]
   #block[
-  #set enum(numbering: latex-enum, start: 5)
+  #set enum(numbering: enum-at(2, none, start: 5))
   + $10\(x + 2\)+ 19 =\(5 x - 1\)\(1 + 5 x\)$
 
   + $\(x - 7\)\(x + 3\)+\(x - 1\)\(x + 5\)= 102$
@@ -2605,7 +2578,7 @@ $therefore quad\(m - 2\)^2 + 12$ 一定是正数，即：$Delta =\(m - 2\)^2 + 1
 依题意可知：$ x\(x - 3\) & = 108\
 x^2 - 3 x - 108 & = 0 $
 
-再由求根公式可以知道，$ x = frac(3 plus.minus sqrt(9 + 432), 2) = frac(3 plus.minus 21, 2) $ $therefore quad x_1 = 12\,quad x_2 = - 6$
+再由求根公式可以知道，$ x = frac(3 plus.minus sqrt(9 + 432), 2) = frac(3 plus.minus 21, 2) $ #noindent;$therefore quad x_1 = 12\,quad x_2 = - 6$
 
 $x$ 是儿童人数，不能为负值，所以 $x = - 6$ 不合题意，应舍去，只取 $x = 12$；$x - 3 = 9$．
 
@@ -2694,7 +2667,7 @@ $x$ 是儿童人数，不能为负值，所以 $x = - 6$ 不合题意，应舍�
 )
 
 #solution[
-设 $P$、$Q$ 同时移动到 $x$ 秒时，$triangle.stroked.t P C Q$ 的面积是8$upright(c m^2)$．由题意可知：$ 1 / 2 times 2 x\(6 - x\)= 8 quad arrow.r.double quad x^2 - 6 x + 8 = 0 $ $therefore quad x = frac(6 plus.minus sqrt(36 - 32), 2) = frac(6 plus.minus 2, 2) quad arrow.r.double quad x_1 = 4\,quad x_2 = 2$
+设 $P$、$Q$ 同时移动到 $x$ 秒时，$triangle.stroked.t P C Q$ 的面积是8$upright(c m^2)$．由题意可知：$ 1 / 2 times 2 x\(6 - x\)= 8 quad arrow.r.double quad x^2 - 6 x + 8 = 0 $ #noindent;$therefore quad x = frac(6 plus.minus sqrt(36 - 32), 2) = frac(6 plus.minus 2, 2) quad arrow.r.double quad x_1 = 4\,quad x_2 = 2$
 
 经检验，两个解都符合题意．
 
@@ -2713,7 +2686,7 @@ $x$ 是儿童人数，不能为负值，所以 $x = - 6$ 不合题意，应舍�
 \(1 + x %\)^2 & = 1.3225\
 1 + x % & = plus.minus 1.15\
 x / 100 & = plus.minus 1.15 - 1\
-x & = 100\(plus.minus 1.15 - 1\) $ $therefore quad x_1 = 15\,quad x_2 = - 215$
+x & = 100\(plus.minus 1.15 - 1\) $ #noindent;$therefore quad x_1 = 15\,quad x_2 = - 215$
 
 显然，$x_2$ 不符合题意，应舍去．
 
@@ -2733,7 +2706,7 @@ x & = 100\(plus.minus 1.15 - 1\) $ $therefore quad x_1 = 15\,quad x_2 = - 215$
 #solution[
 设第一次倒出纯酒精 $x$ 升．则，加水以后，第二次倒出 $x$ 升混合溶液中，应含有纯酒精 $(frac(20 - x, 20)) dot.op x$ 升．
 
-依题意可以列出方程：$ 20 - x - (frac(20 - x, 20)) x = 5 $ 整理后，得 $x^2 - 40 x + 300 = 0$
+依题意可以列出方程：$ 20 - x - (frac(20 - x, 20)) x = 5 $ #noindent;整理后，得 $x^2 - 40 x + 300 = 0$
 
 $therefore quad x = frac(40 plus.minus sqrt(1600 - 1200), 2) = frac(40 plus.minus 20, 2) quad arrow.r.double quad x_1 = 30\,quad x_2 = 10$
 
@@ -2746,7 +2719,8 @@ $therefore quad x = frac(40 plus.minus sqrt(1600 - 1200), 2) = frac(40 plus.minu
 试求例3.48中，第二次应倒出多少纯酒精？照这样倒下去，再求一下第三次倒出多少纯酒精？
 
 ]
-#heading(level: 2, numbering: none)[习题3.4]
+#heading(level: 2, numbering: none, supplement: [toc-sub])[习题3.4]
+
 + 一个数与自身的一半之积等于8,求这数．
 
 + 两个连续的奇数之积等于323,求这两奇数．
@@ -2780,7 +2754,8 @@ $therefore quad x = frac(40 plus.minus sqrt(1600 - 1200), 2) = frac(40 plus.minu
 
 + 一个容积为64升的容器，装满了纯酒精，第一次倒出若干升以后，用水加满；第二次又倒出同样多的混合液后，用水再加满．这时，经过鉴定，容器中含有水15升．试求：第一次比第二次多倒出去多少纯酒精？
 
-#heading(level: 2, numbering: none)[本章内容要点]
+#heading(level: 2, numbering: none, outlined: false)[本章内容要点]
+
 一、学习一元二次方程所必要的预备知识和概念：
 
 + 完全平方公式：$\(x plus.minus y\)^2 = x^2 plus.minus 2 x y + y^2$ 或称为二数和（或差）的平方公式．当 $x\,y$ 取正数时，这两个公式都可以用“画正方形”的方法加以验证．
@@ -2797,7 +2772,7 @@ $therefore quad x = frac(40 plus.minus sqrt(1600 - 1200), 2) = frac(40 plus.minu
 
   + $\(sqrt(a)\)^2 = a #h(2em)\(a gt.eq 0\)$
 
-  + $sqrt(x^2) =\|x\|= cases(x & x gt.eq 0, - x & x < 0)$
+  + $sqrt(x^2) =\|x\|= display(cases(x & quad x gt.eq 0, - x & quad x < 0))$
 
   算术平方根的运算法则：
 
@@ -2823,15 +2798,15 @@ $therefore quad x = frac(40 plus.minus sqrt(1600 - 1200), 2) = frac(40 plus.minu
 
   实数的运算，同样具有运算通性．
 
-二、一元二次方程的标准式是 $ a x^2 + b x + c = 0 #h(2em)\(a eq.not 0\) $ 它的解法有：
+二、一元二次方程的标准式是 $ a x^2 + b x + c = 0 #h(2em)\(a eq.not 0\) $ #noindent;它的解法有：
 
 + 配方法：关键是先化为二次项系数为1的形式，然后将方程“两边加上一次项系数一半的平方数”，使方程一边成为完全平方形式．$ x^2 + b / a x + c / a & = 0\
   x^2 + b / a x + (frac(b, 2 a))^2 & = (frac(b, 2 a))^2 - c / a\
-  (x + frac(b, 2 a))^2 & = frac(b^2 - 4 a c, 4 a^2) $ #numbered-eq($ x = frac(- b plus.minus sqrt(b^2 - 4 a c), 2 a) $);
+  (x + frac(b, 2 a))^2 & = frac(b^2 - 4 a c, 4 a^2) $ #noindent;#numbered-eq($ x = frac(- b plus.minus sqrt(b^2 - 4 a c), 2 a) $);
 
 + 公式法------把方程化为标准式，找出各项系数 $a\,b\,c$，代入(3.4)就可以求出根．
 
-+ 换元法------如果能把方程整理成如下形式 $ a\(x + m\)^2 + b\(x + m\)+ c = 0 #h(2em)\(a eq.not 0\) $ 那么，可以设 $\(x + m\)= y$,原方程化为 $ a y^2 + b y + c = 0 #h(2em)\(a eq.not 0\) $ 用求根公式先求出 $y$ 的值，然后再代入原设：$\(x + m\)= y$,进而求出原方程的根．
++ 换元法------如果能把方程整理成如下形式 $ a\(x + m\)^2 + b\(x + m\)+ c = 0 #h(2em)\(a eq.not 0\) $ #noindent;那么，可以设 $\(x + m\)= y$,原方程化为 $ a y^2 + b y + c = 0 #h(2em)\(a eq.not 0\) $ #noindent;用求根公式先求出 $y$ 的值，然后再代入原设：$\(x + m\)= y$,进而求出原方程的根．
 
 + 对于 $b = 0$,或 $c = 0$,或 $b = c = 0$ 时的特殊一元二次方程，除以上一般解法外，还可以直接运用数系运算通性（特别是分配律）、平方根的意义等方法，求出方程的根．
 
@@ -2853,7 +2828,7 @@ $therefore quad x = frac(40 plus.minus sqrt(1600 - 1200), 2) = frac(40 plus.minu
 
   用分配律：$\(a x^2 + b x + c\)x = 0$，把原方程可以化为两个低次方程求解，即：$a x^2 + b x + c = 0$ 或 $x = 0$
 
-四、一元二次方程根的判别式：$ Delta = b^2 - 4 a c $ 这是判别任一个一元二次方程的根是否存在以及存在什么样的实数根的准绳．即
+四、一元二次方程根的判别式：$ Delta = b^2 - 4 a c $ #noindent;这是判别任一个一元二次方程的根是否存在以及存在什么样的实数根的准绳．即
 
 + 当 $Delta > 0$ 时，$a x^2 + b x + c = 0$ 有两不等实根．
 
@@ -3039,7 +3014,7 @@ $therefore quad x = frac(40 plus.minus sqrt(1600 - 1200), 2) = frac(40 plus.minu
 
 + #staritem;试求 $p\,q$ 为何值时，一元二次方程 $x^2 + p x + q = 0$ 的根也等于 $p$ 和 $q$？
 
-  提示：由于 $ cases(p^2 + p^2 + q = 0, q^2 + p q + q = 0) $ 即：
+  提示：由于 $ display(cases(p^2 + p^2 + q = 0, q^2 + p q + q = 0)) $ #noindent;即：
 
   #numcases($$, $q = - 2 p^2$, $q\(q + p + 1\)= 0$);
 

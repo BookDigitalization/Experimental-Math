@@ -69,18 +69,20 @@
   if c < 0 and first { $-#b$ } else if first { b } else if c < 0 { [$-$#h(.22em)#b] } else { [$+$#h(.22em)#b] }
 }
 
-// 整个多项式写成一个公式
+// 整个多项式写成一个公式（整体排版，运算符两侧的间距才一致）
 #let poly-text(coeffs, var) = {
   let n = coeffs.len() - 1
-  let first = true
-  let parts = ()
+  let s = ""
   for (k, c) in coeffs.enumerate() {
-    if c != 0 {
-      parts.push(poly-term(c, n - k, var, first))
-      first = false
+    if c == 0 { continue }
+    let d = n - k
+    let a = calc.abs(c)
+    let body = if d == 0 { str(a) } else {
+      (if a == 1 { "" } else { str(a) }) + var + (if d == 1 { "" } else { "^" + str(d) })
     }
+    s += (if c < 0 { " - " } else if s == "" { "" } else { " + " }) + body
   }
-  if parts.len() == 0 { $0$ } else { parts.join() }
+  if s == "" { $0$ } else { eval(s, mode: "math") }
 }
 
 #let polylongdiv(dividend, divisor, var: "x", style: "A") = {
@@ -141,7 +143,7 @@
   for (k, c) in quotient.enumerate() { quotient-terms.insert(str(N - M - k), c) }
 
   // 列间不留空隙，靠单元格内边距隔开，这样上、下划线才连续
-  let common = (column-gutter: 0pt, row-gutter: 0.3em, align: right + bottom, inset: (x: 0.13em, y: 0.2em))
+  let common = (column-gutter: 0pt, row-gutter: 0pt, align: right + bottom, inset: (x: 0.13em, y: 0.35em))
   if style == "D" {
     let body-rows = ()
     for (i, (product, remainder)) in steps.enumerate() {
@@ -149,8 +151,8 @@
       body-rows.push(row-cells(remainder))
     }
     let right = (
-      grid.cell(align: left, stroke: (left: rule, bottom: rule), inset: (left: 0.3em, y: 0.2em), poly-text(divisor, var)),
-      grid.cell(align: left, stroke: (left: rule), inset: (left: 0.3em, y: 0.2em), poly-text(quotient, var)),
+      grid.cell(align: left, stroke: (left: rule, bottom: rule), inset: (left: 0.3em, y: 0.35em), poly-text(divisor, var)),
+      grid.cell(align: left, stroke: (left: rule), inset: (left: 0.3em, y: 0.35em), poly-text(quotient, var)),
     )
     box(grid(
       columns: (auto,) * (N + 1) + (1em, auto),
@@ -169,7 +171,7 @@
       columns: (auto,) * (N + 2),
       ..common,
       [], ..row-cells(quotient-terms),
-      grid.cell(align: right, inset: (right: 0.2em, y: 0.2em))[#poly-text(divisor, var)$)$], ..row-cells(dividend-terms, overline: true),
+      grid.cell(align: right, inset: (right: 0.2em, y: 0.35em))[#poly-text(divisor, var)$)$], ..row-cells(dividend-terms, overline: true),
       ..body-rows.flatten(),
     ))
   }

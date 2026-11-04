@@ -56,13 +56,14 @@
 
   #align(center)[
   #table(
-  columns: (20%, 20%, 20%,),
+  columns: (20% + 12pt, 20% + 12pt, 20% + 12pt,),
   align: (left, left, left,),
   [$a + 1$ 与 $b$],
   [$a + 1$ 与 $b - 2$],
   [$a - 3$ 与 $b + 1$],
   [$a - 4$ 与 $b + 1$],
   [$a - 4$ 与 $b + 3$],
+  [],
 );
 
   ]
@@ -75,7 +76,7 @@
 设 $a\,b$ 是两个自然数，
 
 #block[
-#set enum(numbering: enum-at(1, "I."), start: 1)
+#set enum(numbering: enum-at(1, "I."))
 + 加法
 
   例如：$5 + 3 = 5 + 1 + 1 + 1 = 8$．
@@ -108,7 +109,7 @@
 
   #align(center)[
   #table(
-  columns: (30%, 30%,),
+  columns: (30% + 12pt, 30% + 12pt,),
   align: (left, left,),
   [$a + 0 = a$],
   [$a dot.op 0 = 0$],
@@ -163,7 +164,7 @@ $ a dot.op b = b dot.op a $
 
 ]
 #note[
-现有参加团体操的少先队员，排成 $a$ 行 $b$ 列的方阵队形．可以这样来统计总人数：“$a$ 行中，每行都有 $b$ 人”，所以 $ upright("总人数") = underbrace(b + b + dots.h.c + b, a upright("个")) = b dot.op a thick upright("(个)") $ 也可以按“$b$ 列中，每列都有 $a$ 人”的方法统计，所以 $ upright("总人数") = underbrace(a + a + dots.h.c + a, b upright("个")) = a dot.op b thick upright("(个)") $
+现有参加团体操的少先队员，排成 $a$ 行 $b$ 列的方阵队形．可以这样来统计总人数：“$a$ 行中，每行都有 $b$ 人”，所以 $ upright("总人数") = underbrace(b + b + dots.h.c + b, a upright("个")) = b dot.op a thick upright("(个)") $ #noindent;也可以按“$b$ 列中，每列都有 $a$ 人”的方法统计，所以 $ upright("总人数") = underbrace(a + a + dots.h.c + a, b upright("个")) = a dot.op b thick upright("(个)") $
 
 这里两种统计方法，结果应该是相同的，即 $b dot.op a = a dot.op b$．
 
@@ -175,9 +176,11 @@ $ \(a + b\)dot.op c = a dot.op c + b dot.op c $
 
 ]
 #note[
-因为 $ \(a + b\)dot.op c & = underbrace(\(a + b\)+\(a + b\)+ dots.h.c +\(a + b\), upright("共") c upright("个括号")) &  & upright("(乘法的意义)")\
- & =\(underbrace(a + a + dots.h.c + a, c upright("个"))\)+\(underbrace(b + b + dots.h.c + b, c upright("个"))\) &  & upright("(加法结合律与交换律)")\
- & = a dot.op c + b dot.op c &  & upright("(乘法的意义)") $ 所以 $\(a + b\)dot.op c = a dot.op c + b dot.op c$
+因为
+
+#numbered-align(($\(a + b\)dot.op c$, $zws = underbrace(\(a + b\)+\(a + b\)+ dots.h.c +\(a + b\), upright("共") c upright("个括号"))$, [(乘法的意义)]), ($$, $=\(underbrace(a + a + dots.h.c + a, c upright("个"))\)+\(underbrace(b + b + dots.h.c + b, c upright("个"))\)$, [(加法结合律与交换律)]), ($$, $= a dot.op c + b dot.op c$, [(乘法的意义)]));
+
+所以 $\(a + b\)dot.op c = a dot.op c + b dot.op c$
 
 ]
 #blk[乘法结合律][
@@ -185,11 +188,9 @@ $ \(a dot.op b\)dot.op c = a dot.op\(b dot.op c\) $
 
 ]
 #note[
-因为 $ \(a dot.op b\)dot.op c & =\(b dot.op a\)dot.op c &  & upright("(乘法交换律)")\
- & =\(underbrace(b + b + dots.h.c + b, a upright("个"))\)dot.op c &  & upright("(乘法的意义)")\
- & =\(underbrace(b dot.op c + b dot.op c + dots.h.c + b dot.op c, a upright("个"))\) &  & upright("(分配律)")\
- & =\(b dot.op c\)dot.op a &  & upright("(乘法的意义)")\
- & = a dot.op\(b dot.op c\) &  & upright("(乘法交换律)") $
+因为
+
+#numbered-align(($\(a dot.op b\)dot.op c$, $zws =\(b dot.op a\)dot.op c$, [(乘法交换律)]), ($$, $=\(underbrace(b + b + dots.h.c + b, a upright("个"))\)dot.op c$, [(乘法的意义)]), ($$, $=\(underbrace(b dot.op c + b dot.op c + dots.h.c + b dot.op c, a upright("个"))\)$, [(分配律)]), ($$, $=\(b dot.op c\)dot.op a$, [(乘法的意义)]), ($$, $= a dot.op\(b dot.op c\)$, [(乘法交换律)]));
 
 所以 $\(a dot.op b\)dot.op c = a dot.op\(b dot.op c\)$．
 
@@ -226,14 +227,11 @@ $ \(a dot.op b\)dot.op c = a dot.op\(b dot.op c\) $
 
 ]
 #analyze[
-如果一个个的顺次相加，显得太繁了．我们仔细分析这100个连续的自然数的规律和特点，运用加法的运算律，是可以大大化简计算提高速度的．因为：$ 1 + 100 = 2 + 99 = dots.h.c = 50 + 51 = 101 $ 所以，将所给算式中的各个加数，经过交换、结合以后，就可以很快求出结果．
+如果一个个的顺次相加，显得太繁了．我们仔细分析这100个连续的自然数的规律和特点，运用加法的运算律，是可以大大化简计算提高速度的．因为：$ 1 + 100 = 2 + 99 = dots.h.c = 50 + 51 = 101 $ #noindent;所以，将所给算式中的各个加数，经过交换、结合以后，就可以很快求出结果．
 
 ]
 #solution[
-$ 1 + 2 + 3 + & dots.h.c + 50 + 51 + dots.h.c + 100\
- & = underbrace(\(1 + 100\)+\(2 + 99\)+ dots.h.c +\(50 + 51\), upright("共50个括号")) &  & upright("(加法交换结合律)")\
- & = 101 times 50 &  & upright("(乘法的意义)")\
- & = 5050 $
+#numbered-align(($1 + 2 + 3 +$, $zws dots.h.c + 50 + 51 + dots.h.c + 100$, false), ($$, $= underbrace(\(1 + 100\)+\(2 + 99\)+ dots.h.c +\(50 + 51\), upright("共50个括号"))$, [(加法交换结合律)]), ($$, $= 101 times 50$, [(乘法的意义)]), ($$, $= 5050$, false));
 
 ]
 #example[
@@ -245,13 +243,7 @@ $ 1 + 2 + 3 + & dots.h.c + 50 + 51 + dots.h.c + 100\
 
 ]
 #solution[
-$  & a +\(a + d\)+\(a + 2 d\)+ dots.h.c +\(a + 99 d\)\
- & = underbrace(\(a + a + dots.h.c + a\), upright("100个")) +\(d + 2 d + dots.h.c + 99 d\) &  & upright("(加法交换、结合律)")\
- & = 100 a +\(d + 2 d + dots.h.c + 99 d\) &  & upright("(乘法的意义)")\
- & = 100 a + d\(1 + 2 + dots.h.c + 99\) &  & upright("(分配律)")\
- & = 100 a + d\[underbrace(\(1 + 99\)+\(2 + 98\)+ dots.h.c +\(49 + 51\), upright("49个括号")) + 50\] &  & upright("(加法交换、结合律)")\
- & = 100 a +\(4900 + 50\)d &  & upright("(乘法的意义、交换律)")\
- & = 100 a + 4950 d &  & upright("(加法法则)") $
+#numbered-align(($$, $a +\(a + d\)+\(a + 2 d\)+ dots.h.c +\(a + 99 d\)$, false), ($$, $= underbrace(\(a + a + dots.h.c + a\), upright("100个")) +\(d + 2 d + dots.h.c + 99 d\)$, [(加法交换、结合律)]), ($$, $= 100 a +\(d + 2 d + dots.h.c + 99 d\)$, [(乘法的意义)]), ($$, $= 100 a + d\(1 + 2 + dots.h.c + 99\)$, [(分配律)]), ($$, $= 100 a + d\[underbrace(\(1 + 99\)+\(2 + 98\)+ dots.h.c +\(49 + 51\), upright("49个括号")) + 50\]$, [(加法交换、结合律)]), ($$, $= 100 a +\(4900 + 50\)d$, [(乘法的意义、交换律)]), ($$, $= 100 a + 4950 d$, [(加法法则)]));
 
 ]
 #exercise[
@@ -265,7 +257,7 @@ $  & a +\(a + d\)+\(a + 2 d\)+ dots.h.c +\(a + 99 d\)\
 
 ]
 === 乘方运算及指数运算律
-前面已经知道，乘法运算就是#strong[同一个数的连加]运算．由于乘法满足交换律，我们可以将乘法用公式表示它的含义是：$ n times a = underbrace(a + a + dots.h.c + a, n upright("个")) #h(2em) upright("（当然也就是") a times n upright("）") $ 这就是说：#strong[$n times a$ 就是 $n$ 个 $a$ 的连加]．
+前面已经知道，乘法运算就是#strong[同一个数的连加]运算．由于乘法满足交换律，我们可以将乘法用公式表示它的含义是：$ n times a = underbrace(a + a + dots.h.c + a, n upright("个")) #h(2em) upright("（当然也就是") a times n upright("）") $ #noindent;这就是说：#strong[$n times a$ 就是 $n$ 个 $a$ 的连加]．
 
 也许有人会问：要是 $n$ 个 $a$ 连乘，会不会又是一种新的运算呢？答案是肯定的．这就是下面要引进的乘方运算．
 
@@ -281,7 +273,7 @@ $underbrace(3 times 3 times dots.h.c times 3, n upright("个3"))$ 记作 $3^n$�
 
 为了方便，显然可以把3也记作 $3^1$，即 $3^1 = 3$．
 
-一般地，同一个数 $a$ 的 $n$ 次连乘，记作 $a^n$，即 $ underbrace(a times a times a times dots.h.c times a, n upright("个")) = a^n $ 其中 $a$ 叫做#strong[底数]，自然数 $n$ 叫做#strong[指数]，其结果 $a^n$ 叫做#strong[幂]．（读成“$a$ 的 $n$ 次幂”或“$a$ 的 $n$ 次方”）．
+一般地，同一个数 $a$ 的 $n$ 次连乘，记作 $a^n$，即 $ underbrace(a times a times a times dots.h.c times a, n upright("个")) = a^n $ #noindent;其中 $a$ 叫做#strong[底数]，自然数 $n$ 叫做#strong[指数]，其结果 $a^n$ 叫做#strong[幂]．（读成“$a$ 的 $n$ 次幂”或“$a$ 的 $n$ 次方”）．
 
 #align(center)[
 #fig("1-01");
@@ -369,13 +361,11 @@ $ 2^3 & = 2 times 2 times 2 = 8\
 
 ]
 #note[
-+ 由乘方的意义可知 $ 9^4 = 9 times 9 times 9 times 9\,#h(2em) 9^3 = 9 times 9 times 9 $ 所以 $ 9^4 times 9^3 & =\(9 times 9 times 9 times 9\)times\(9 times 9 times 9\) &  & upright("(乘方的意义)")\
-   & = 9 times 9 times 9 times 9 times 9 times 9 times 9 &  & upright("(乘法结合律)")\
-   & = 9^7 &  & upright("(乘方的意义)") $
++ 由乘方的意义可知 $ 9^4 = 9 times 9 times 9 times 9\,#h(2em) 9^3 = 9 times 9 times 9 $ #noindent;所以
 
-+ $ a^11 times a^7 & =\(underbrace(a times a times dots.h.c times a, upright("11个") a)\)times\(underbrace(a times a times dots.h.c times a, upright("7个") a)\) &  & upright("(乘方的意义)")\
-   & = underbrace(a times a times dots.h.c times a, upright("18个") a) &  & upright("(乘法结合律)")\
-   & = a^18 &  & upright("(乘方的意义)") $
+  #numbered-align(($9^4 times 9^3$, $zws =\(9 times 9 times 9 times 9\)times\(9 times 9 times 9\)$, [(乘方的意义)]), ($$, $= 9 times 9 times 9 times 9 times 9 times 9 times 9$, [(乘法结合律)]), ($$, $= 9^7$, [(乘方的意义)]));
+
++ #numbered-align(($a^11 times a^7$, $zws =\(underbrace(a times a times dots.h.c times a, upright("11个") a)\)times\(underbrace(a times a times dots.h.c times a, upright("7个") a)\)$, [(乘方的意义)]), ($$, $= underbrace(a times a times dots.h.c times a, upright("18个") a)$, [(乘法结合律)]), ($$, $= a^18$, [(乘方的意义)]));
 
 ]
 这个例子告诉我们：底数相同的幂相乘时，要点在于#strong[指数相加]，计算结果的底数是不会改变的．这一事实是否普遍成立呢？有待进一步说明．
@@ -397,9 +387,9 @@ $ 2^3 & = 2 times 2 times 2 = 8\
 
 ]
 #note[
-由于 $ a^m dot.op a^n & =\(underbrace(a dot.op a dots.h.c a, m upright("个"))\)dot.op\(underbrace(a dot.op a dots.h.c a, n upright("个"))\) &  & upright("(乘方的意义)")\
- & = underbrace(a dot.op a dots.h.c a dot.op a dot.op a dots.h.c a, m + n upright("个")) &  & upright("(乘法结合律)")\
- & = a^(m + n) &  & upright("(乘方的意义)") $
+由于
+
+#numbered-align(($a^m dot.op a^n$, $zws =\(underbrace(a dot.op a dots.h.c a, m upright("个"))\)dot.op\(underbrace(a dot.op a dots.h.c a, n upright("个"))\)$, [(乘方的意义)]), ($$, $= underbrace(a dot.op a dots.h.c a dot.op a dot.op a dots.h.c a, m + n upright("个"))$, [(乘法结合律)]), ($$, $= a^(m + n)$, [(乘方的意义)]));
 
 所以，对于任意底数 $a$ 和任意自然数指数 $m\,n$，都有：$ a^m dot.op a^n = a^(m + n) $
 
@@ -409,9 +399,11 @@ $ 2^3 & = 2 times 2 times 2 = 8\
 
 ]
 #solution[
-$ 9 times 9^2 = 9^3 = 729 $ $ 2^2 times 2 times 2^3 & =\(2^2 times 2\)times 2^3 &  & upright("(乘法结合律)")\
- & = 2^3 times 2^3 &  & upright("(指数运算律)")\
- & = 2^6 = 64 $ $ a^5 dot.op a^11 = a^16 $ $ 3^3 dot.op 3 + 2 dot.op 2^2 = 3^4 + 2^3 = 81 + 8 = 89 $
+$ 9 times 9^2 = 9^3 = 729 $
+
+#numbered-align(($2^2 times 2 times 2^3$, $zws =\(2^2 times 2\)times 2^3$, [(乘法结合律)]), ($$, $= 2^3 times 2^3$, [(指数运算律)]), ($$, $= 2^6 = 64$, false));
+
+$ a^5 dot.op a^11 = a^16 $ #noindent;$ 3^3 dot.op 3 + 2 dot.op 2^2 = 3^4 + 2^3 = 81 + 8 = 89 $
 
 ]
 #example[
@@ -419,7 +411,7 @@ $ 9 times 9^2 = 9^3 = 729 $ $ 2^2 times 2 times 2^3 & =\(2^2 times 2\)times 2^3 
 
 ]
 #solution[
-要利用指数运算律进行计算，必须使两相乘部分成为#strong[同底数幂]．因此，$ 2^3 dot.op 4 = 2^3 dot.op 2^2 = 2^5 = 32 $ $ 3 times 81 = 3 times 3^4 = 3^5 = 243 $
+要利用指数运算律进行计算，必须使两相乘部分成为#strong[同底数幂]．因此，$ 2^3 dot.op 4 = 2^3 dot.op 2^2 = 2^5 = 32 $ #noindent;$ 3 times 81 = 3 times 3^4 = 3^5 = 243 $
 
 ]
 #exercise[
@@ -433,9 +425,11 @@ $ 9 times 9^2 = 9^3 = 729 $ $ 2^2 times 2 times 2^3 & =\(2^2 times 2\)times 2^3 
 
 ]
 #note[
-由于 $ \(a dot.op b\)^n & = underbrace(\(a dot.op b\)dot.op\(a dot.op b\)dots.h.c\(a dot.op b\), n upright("个括号")) &  & upright("(乘方的意义)")\
- & = underbrace(\(a dot.op a dots.h.c a\), n upright("个")) dot.op underbrace(\(b dot.op b dots.h.c b\), n upright("个")) &  & upright("(乘法交换、结合律)")\
- & = a^n dot.op b^n &  & upright("(乘方的意义)") $ 所以 $\(a dot.op b\)^n = a^n dot.op b^n$．
+由于
+
+#numbered-align(($\(a dot.op b\)^n$, $zws = underbrace(\(a dot.op b\)dot.op\(a dot.op b\)dots.h.c\(a dot.op b\), n upright("个括号"))$, [(乘方的意义)]), ($$, $= underbrace(\(a dot.op a dots.h.c a\), n upright("个")) dot.op underbrace(\(b dot.op b dots.h.c b\), n upright("个"))$, [(乘法交换、结合律)]), ($$, $= a^n dot.op b^n$, [(乘方的意义)]));
+
+所以 $\(a dot.op b\)^n = a^n dot.op b^n$．
 
 ]
 #example[
@@ -448,20 +442,15 @@ $ 9 times 9^2 = 9^3 = 729 $ $ 2^2 times 2 times 2^3 & =\(2^2 times 2\)times 2^3 
 ]
 #solution[
 + $21^2 =\(3 times 7\)^2 = 3^2 times 7^2 = 9 times 49 = 441$ $ 15^3 & =\(3 times 5\)^3 = 3^3 times 5^3\
-   & = 27 times 125 = 3375 $ $ 18^2 =\(2 times 9\)^2 = 2^2 times 9^2 = 4 times 81 = 324 $
+   & = 27 times 125 = 3375 $ #noindent;$ 18^2 =\(2 times 9\)^2 = 2^2 times 9^2 = 4 times 81 = 324 $
 
-+ $ 15^2 times 6^3 & =\(3 times 5\)^2 times\(2 times 3\)^3\
-   & = 3^2 times 5^2 times 2^3 times 3^3 &  & upright("(指数运算律（二）)")\
-   & =\(3^2 times 3^3\)times 5^2 times 2^3 &  & upright("(乘法交换律、结合律)")\
-   & = 3^5 times 5^2 times 2^3 &  & upright("(指数运算律（一）)")\
-   & = 243 times 25 times 8 = 48600 $ $ 45 times 15^3 & = 5 times 9 times\(3 times 5\)^3\
-   & = 5 times 9 times 3^3 times 5^3 &  & upright("(指数运算律（二）)")\
-   & =\(5 times 5^3\)times\(3^2 times 3^3\) &  & upright("(乘法交换律、结合律)")\
-   & = 5^4 times 3^5 &  & upright("(指数运算律（一）)")\
-   & = 625 times 243 = 151875 $ $ \(a dot.op b\)^2 dot.op\(a dot.op c\)^3 & = a^2 dot.op b^2 dot.op a^3 dot.op c^3 &  & upright("(指数运算律（二）)")\
-   & =\(a^2 dot.op a^3\)dot.op b^2 dot.op c^3 &  & upright("(乘法交换律、结合律)")\
-   & = a^5 dot.op b^2 dot.op c^3 &  & upright("(指数运算律（一）)") $ $ 125^3 times 8^3 & =\(125 times 8\)^3 &  & upright("(指数运算律（二）)")\
-   & = 1000^3 = 1000000000 $
++ #numbered-align(($15^2 times 6^3$, $zws =\(3 times 5\)^2 times\(2 times 3\)^3$, false), ($$, $= 3^2 times 5^2 times 2^3 times 3^3$, [(指数运算律（二）)]), ($$, $=\(3^2 times 3^3\)times 5^2 times 2^3$, [(乘法交换律、结合律)]), ($$, $= 3^5 times 5^2 times 2^3$, [(指数运算律（一）)]), ($$, $= 243 times 25 times 8 = 48600$, false));
+
+  #numbered-align(($45 times 15^3$, $zws = 5 times 9 times\(3 times 5\)^3$, false), ($$, $= 5 times 9 times 3^3 times 5^3$, [(指数运算律（二）)]), ($$, $=\(5 times 5^3\)times\(3^2 times 3^3\)$, [(乘法交换律、结合律)]), ($$, $= 5^4 times 3^5$, [(指数运算律（一）)]), ($$, $= 625 times 243 = 151875$, false));
+
+  #numbered-align(($\(a dot.op b\)^2 dot.op\(a dot.op c\)^3$, $zws = a^2 dot.op b^2 dot.op a^3 dot.op c^3$, [(指数运算律（二）)]), ($$, $=\(a^2 dot.op a^3\)dot.op b^2 dot.op c^3$, [(乘法交换律、结合律)]), ($$, $= a^5 dot.op b^2 dot.op c^3$, [(指数运算律（一）)]));
+
+  #numbered-align(($125^3 times 8^3$, $zws =\(125 times 8\)^3$, [(指数运算律（二）)]), ($$, $= 1000^3 = 1000000000$, false));
 
 ]
 #exercise[
@@ -475,10 +464,9 @@ $ 9 times 9^2 = 9^3 = 729 $ $ 2^2 times 2 times 2^3 & =\(2^2 times 2\)times 2^3 
 
 ]
 #note[
-$ \(a^m\)^n & = underbrace(a^m dot.op a^m dots.h.c a^m, n upright("个")) &  & upright("(乘方的意义)")\
- & = overbrace(underbrace(\(a dot.op a dots.h.c a\), m upright("个") a) dot.op underbrace(\(a dot.op a dots.h.c a\), m upright("个") a) dots.h.c underbrace(\(a dot.op a dots.h.c a\), m upright("个") a), n upright("个括号"))\
- & = underbrace(a dot.op a dot.op a dots.h.c a, m n upright("个") a) &  & upright("(乘法结合律)")\
- & = a^(m n) &  & upright("(乘方的意义)") $ 所以 $\(a^m\)^n = a^(m n)$．
+#numbered-align(($\(a^m\)^n$, $zws = underbrace(a^m dot.op a^m dots.h.c a^m, n upright("个"))$, [(乘方的意义)]), ($$, $= overbrace(underbrace(\(a dot.op a dots.h.c a\), m upright("个") a) dot.op underbrace(\(a dot.op a dots.h.c a\), m upright("个") a) dots.h.c underbrace(\(a dot.op a dots.h.c a\), m upright("个") a), n upright("个括号"))$, false), ($$, $= underbrace(a dot.op a dot.op a dots.h.c a, m n upright("个") a)$, [(乘法结合律)]), ($$, $= a^(m n)$, [(乘方的意义)]));
+
+所以 $\(a^m\)^n = a^(m n)$．
 
 ]
 #example[
@@ -486,26 +474,26 @@ $ \(a^m\)^n & = underbrace(a^m dot.op a^m dots.h.c a^m, n upright("个")) &  & u
 
 ]
 #solution[
-$ 2^3 times 4^2 = 2^3 times\(2^2\)^2 = 2^3 times 2^4 = 2^7 = 128 $ $ 40 times 100^3 & = 2^2 times 10 times\(10^2\)^3\
+$ 2^3 times 4^2 = 2^3 times\(2^2\)^2 = 2^3 times 2^4 = 2^7 = 128 $ #noindent;$ 40 times 100^3 & = 2^2 times 10 times\(10^2\)^3\
  & = 2^2 times 10 times 10^6 = 4 times 10^7\
- & = 40000000 $ $ 12 times 45^2 & = 3 times 4 times\(5 times 3^2\)^2 = 2^2 times 5^2 times 3^5\
+ & = 40000000 $ #noindent;$ 12 times 45^2 & = 3 times 4 times\(5 times 3^2\)^2 = 2^2 times 5^2 times 3^5\
  & =\(2 times 5\)^2 times 3^5 = 24300 $
 
 ]
 #example[
-计算：$ a^2 dot.op\(a^7\)^3\,#h(2em) b dot.op\(b^2\)^n\,#h(2em)\(a c\)^2 dot.op\(a^m c\)^3 $ 并说明每一步的理由．
+计算：$ a^2 dot.op\(a^7\)^3\,#h(2em) b dot.op\(b^2\)^n\,#h(2em)\(a c\)^2 dot.op\(a^m c\)^3 $ #noindent;并说明每一步的理由．
 
 ]
 #solution[
-$ a^2 dot.op\(a^7\)^3 & = a^2 dot.op a^21 &  & upright("(指数运算律（三）)")\
- & = a^23 &  & upright("(指数运算律（一）)") $ $ b dot.op\(b^2\)^n & = b dot.op b^(2 n) &  & upright("(指数运算律（三）)")\
- & = b^(1 + 2 n) &  & upright("(指数运算律（一）)") $ $ \(a c\)^2 dot.op\(a^m c\)^3 & = a^2 dot.op c^2 dot.op a^(3 m) dot.op c^3 &  & upright("(指数运算律（三）)")\
- & =\(a^2 dot.op a^(3 m)\)dot.op\(c^2 dot.op c^3\) &  & upright("(乘法交换、结合律)")\
- & = a^(2 + 3 m) dot.op c^5 &  & upright("(指数运算律（一）)") $
+#numbered-align(($a^2 dot.op\(a^7\)^3$, $zws = a^2 dot.op a^21$, [(指数运算律（三）)]), ($$, $= a^23$, [(指数运算律（一）)]));
+
+#numbered-align(($b dot.op\(b^2\)^n$, $zws = b dot.op b^(2 n)$, [(指数运算律（三）)]), ($$, $= b^(1 + 2 n)$, [(指数运算律（一）)]));
+
+#numbered-align(($\(a c\)^2 dot.op\(a^m c\)^3$, $zws = a^2 dot.op c^2 dot.op a^(3 m) dot.op c^3$, [(指数运算律（三）)]), ($$, $=\(a^2 dot.op a^(3 m)\)dot.op\(c^2 dot.op c^3\)$, [(乘法交换、结合律)]), ($$, $= a^(2 + 3 m) dot.op c^5$, [(指数运算律（一）)]));
 
 ]
 #exercise[
-+ 计算：$ \(4^2\)^3\,#h(2em) 2 times\(2^2\)^3\,#h(2em) a^2 dot.op\(a^2\)^2\,#h(2em) b^n dot.op\(b^2\)^m $ $ \(2^3\)^2 dot.op\(8 - 7\)\,#h(2em) 15^4 times\[12^2 -\(2^2 times 3\)^2\] $
++ 计算：$ \(4^2\)^3\,#h(2em) 2 times\(2^2\)^3\,#h(2em) a^2 dot.op\(a^2\)^2\,#h(2em) b^n dot.op\(b^2\)^m $ #noindent;$ \(2^3\)^2 dot.op\(8 - 7\)\,#h(2em) 15^4 times\[12^2 -\(2^2 times 3\)^2\] $
 
 + 利用运算通性及指数运算律，说明以下等式是正确的：
 
@@ -517,13 +505,15 @@ $ a^2 dot.op\(a^7\)^3 & = a^2 dot.op a^21 &  & upright("(指数运算律（三�
 
 ]
 #blk[指数运算律(四)][
-同底数幂相除，指数相减，底数不变．即：$ a^m div a^n = a^(m - n) $ 其中 $m > n$, $a eq.not 0$
+同底数幂相除，指数相减，底数不变．即：$ a^m div a^n = a^(m - n) $ #noindent;其中 $m > n$, $a eq.not 0$
 
 ]
 #rmk[
-因为 $a eq.not 0$, $m > n$ $ a^m div a^n & = overbrace(a dot.op a dots.h.c a, m upright("个") a) / underbrace(a dot.op a dots.h.c a, n upright("个") a) &  & upright("(乘方的意义)")\
- & = overbrace(a dot.op a dots.h.c a, \(m - n\) upright("个") a) / 1 &  & upright("(除法的性质)")\
- & = a^(m - n) &  & upright("(乘方的意义)") $ 所以，当 $a eq.not 0$，$m > n$ 时，就有 $ a^m div a^n = a^(m - n) $
+因为 $a eq.not 0$, $m > n$
+
+#numbered-align(($a^m div a^n$, $zws = overbrace(a dot.op a dots.h.c a, m upright("个") a) / underbrace(a dot.op a dots.h.c a, n upright("个") a)$, [(乘方的意义)]), ($$, $= overbrace(a dot.op a dots.h.c a, \(m - n\) upright("个") a) / 1$, [(除法的性质)]), ($$, $= a^(m - n)$, [(乘方的意义)]));
+
+所以，当 $a eq.not 0$，$m > n$ 时，就有 $ a^m div a^n = a^(m - n) $
 
 ]
 #example[
@@ -531,7 +521,7 @@ $ a^2 dot.op\(a^7\)^3 & = a^2 dot.op a^21 &  & upright("(指数运算律（三�
 
 ]
 #solution[
-$ 3^6 div 3^4 = 3^(6 - 4) = 3^2 = 9 $ $ 15^3 div 15^2 = 15^1 = 15 $ $ a^10 div a^8 = a^2 #h(2em)\(a eq.not 0\) $
+$ 3^6 div 3^4 = 3^(6 - 4) = 3^2 = 9 $ #noindent;$ 15^3 div 15^2 = 15^1 = 15 $ #noindent;$ a^10 div a^8 = a^2 #h(2em)\(a eq.not 0\) $
 
 ]
 #example[
@@ -539,13 +529,11 @@ $ 3^6 div 3^4 = 3^(6 - 4) = 3^2 = 9 $ $ 15^3 div 15^2 = 15^1 = 15 $ $ a^10 div a
 
 ]
 #solution[
-$ 64^2 div 2^10 & =\(2^6\)^2 div 2^10 &  & upright("(乘方的意义)")\
- & = 2^12 div 2^10 &  & upright("(指数运算律（三）)")\
- & = 2^2 &  & upright("(指数运算律（四）)")\
- & = 4 &  & upright("(乘方的意义)") $ $ \(b^2\)^3 div b & = b^6 div b &  & upright("(指数运算律（三）)")\
- & = b^5 thick\(b eq.not 0\) &  & upright("(指数运算律（四）)") $ $ \(b^m\)^2 div b^m & = b^(2 m) div b^m &  & upright("(指数运算律（三）)")\
- & = b^(2 m - m) &  & upright("(指数运算律（四）)")\
- & = b^m thick\(b eq.not 0\) $
+#numbered-align(($64^2 div 2^10$, $zws =\(2^6\)^2 div 2^10$, [(乘方的意义)]), ($$, $= 2^12 div 2^10$, [(指数运算律（三）)]), ($$, $= 2^2$, [(指数运算律（四）)]), ($$, $= 4$, [(乘方的意义)]));
+
+#numbered-align(($\(b^2\)^3 div b$, $zws = b^6 div b$, [(指数运算律（三）)]), ($$, $= b^5 thick\(b eq.not 0\)$, [(指数运算律（四）)]));
+
+#numbered-align(($\(b^m\)^2 div b^m$, $zws = b^(2 m) div b^m$, [(指数运算律（三）)]), ($$, $= b^(2 m - m)$, [(指数运算律（四）)]), ($$, $= b^m thick\(b eq.not 0\)$, false));
 
 ]
 #example[
@@ -553,10 +541,10 @@ $ 64^2 div 2^10 & =\(2^6\)^2 div 2^10 &  & upright("(乘方的意义)")\
 
 ]
 #solution[
-直接由乘方和除法的意义可知：$ 7^5 div 7^5 = 7^5 / 7^5 = frac(7 times 7 times 7 times 7 times 7, 7 times 7 times 7 times 7 times 7) = 1 $ $ a^4 div a^4 = a^4 / a^4 = frac(a dot.op a dot.op a dot.op a, a dot.op a dot.op a dot.op a) = 1 thick\(a eq.not 0\) $
+直接由乘方和除法的意义可知：$ 7^5 div 7^5 = 7^5 / 7^5 = frac(7 times 7 times 7 times 7 times 7, 7 times 7 times 7 times 7 times 7) = 1 $ #noindent;$ a^4 div a^4 = a^4 / a^4 = frac(a dot.op a dot.op a dot.op a, a dot.op a dot.op a dot.op a) = 1 thick\(a eq.not 0\) $
 
 ]
-这个例题告诉我们，#strong[两个同底数(不为0)、同指数的幂相除，其商等于1．]这个事实也就启示我们，只要规定：$ a^0 = 1 quad\(a eq.not 0\) $ 指数运算法则(四)：$a^m div a^n = a^(m - n) thick\(a eq.not 0\)$ 就对 $m = n$ 的情形仍然有效．例如：$7^5 div 7^5 = 7^(5 - 5) = 7^0 = 1$；$a^4 div a^4 = a^(4 - 4) = a^0 = 1 thick\(a eq.not 0\)$；$27^2 div 3^6 = 3^6 div 3^6 = 3^0 = 1$ 等等．
+这个例题告诉我们，#strong[两个同底数(不为0)、同指数的幂相除，其商等于1．]这个事实也就启示我们，只要规定：$ a^0 = 1 quad\(a eq.not 0\) $ #noindent;指数运算法则(四)：$a^m div a^n = a^(m - n) thick\(a eq.not 0\)$ 就对 $m = n$ 的情形仍然有效．例如：$7^5 div 7^5 = 7^(5 - 5) = 7^0 = 1$；$a^4 div a^4 = a^(4 - 4) = a^0 = 1 thick\(a eq.not 0\)$；$27^2 div 3^6 = 3^6 div 3^6 = 3^0 = 1$ 等等．
 
 #exercise[
 利用指数运算律计算：
@@ -577,7 +565,7 @@ $ 64^2 div 2^10 & =\(2^6\)^2 div 2^10 &  & upright("(乘方的意义)")\
 
 在小学学习分数与小数时，我们已经知道：小数都可以化成分数，而且遇到两个自然数相除但除不尽时，商数就可以用一个分数表示出来，比如：$6.5 = 65 / 10$；$4.25 = 4 25 / 100$；$3 div 5 = 3 / 5$ 等等．
 
-应该指出，#strong[任一个分数，如 $3 / 5$，$22 / 7$，$355 / 113$ 等，都可以看成是两个自然数的比]．因此，任一个分数，我们都可以用字母的形式表示为：$ a / b\,quad upright("或") quad c / d\,quad upright("或") quad m / n upright("等") $ 其中，字母 $a\,b\,c\,d\,m\,n$ 等都表示任一自然数．
+应该指出，#strong[任一个分数，如 $3 / 5$，$22 / 7$，$355 / 113$ 等，都可以看成是两个自然数的比]．因此，任一个分数，我们都可以用字母的形式表示为：$ a / b\,quad upright("或") quad c / d\,quad upright("或") quad m / n upright("等") $ #noindent;其中，字母 $a\,b\,c\,d\,m\,n$ 等都表示任一自然数．
 
 还应该指出，在今后的学习中，我们还可以把自然数和零都看成是分数的特例，即：
 
@@ -602,9 +590,9 @@ $ 64^2 div 2^10 & =\(2^6\)^2 div 2^10 &  & upright("(乘方的意义)")\
 分数的这个基本性质，是通分、约分及分数运算的主要根据，必须很好掌握．
 
 #exercise[
-+ 填空：$ \(#h(2em)\)times 1 / 7 = 1 $$ 4 times frac(\(#h(2em)\), \(#h(2em)\)) = 5 $$ m dot.op frac(\(#h(2em)\), \(#h(2em)\)) = n\,thick\(m eq.not 0\) $
++ 填空：$ \(#h(2em)\)times 1 / 7 = 1 $#noindent;$ 4 times frac(\(#h(2em)\), \(#h(2em)\)) = 5 $#noindent;$ m dot.op frac(\(#h(2em)\), \(#h(2em)\)) = n\,thick\(m eq.not 0\) $
 
-+ 填空：$ 6 / 9 = frac(2, \(#h(2em)\)) = frac(\(#h(2em)\), 126) $$ frac(\(#h(2em)\), b dot.op c) = a / b = frac(a^2, \(#h(2em)\)) quad\(a\,b\,c eq.not 0\) $
++ 填空：$ 6 / 9 = frac(2, \(#h(2em)\)) = frac(\(#h(2em)\), 126) $#noindent;$ frac(\(#h(2em)\), b dot.op c) = a / b = frac(a^2, \(#h(2em)\)) quad\(a\,b\,c eq.not 0\) $
 
 ]
 #blk[分数的运算及其性质][
@@ -638,21 +626,24 @@ $ (a / b)^m = underbrace((a / b) dot.op (a / b) dots.h.c (a / b), m upright("个
 这就是说：#strong[分数的乘方，等于分子、分母各自同次乘方]．这个运算法则，我们作如下说明：
 
 #note[
-因为 $m$ 为自然数，$ (a / b)^m & = underbrace((a / b) dot.op (a / b) dots.h.c (a / b), m upright("个")) &  & upright("(乘方的意义)")\
- & = overbrace(a dot.op a dots.h.c a, m upright("个")) / underbrace(b dot.op b dots.h.c b, m upright("个")) &  & upright("(分数乘法法则)")\
- & = a^m / b^m &  & upright("(乘方的意义)") $ 所以 $(a / b)^m = a^m / b^m$
+因为 $m$ 为自然数，
+
+#numbered-align(($(a / b)^m$, $zws = underbrace((a / b) dot.op (a / b) dots.h.c (a / b), m upright("个"))$, [(乘方的意义)]), ($$, $= overbrace(a dot.op a dots.h.c a, m upright("个")) / underbrace(b dot.op b dots.h.c b, m upright("个"))$, [(分数乘法法则)]), ($$, $= a^m / b^m$, [(乘方的意义)]));
+
+所以 $(a / b)^m = a^m / b^m$
 
 ]
 例如：$ (3 / 5)^3 & = (3 / 5) times (3 / 5) times (3 / 5)\
- & = 3^3 / 5^3 = 27 / 125 $ $ (c / d)^4 = c^4 / d^4 $
+ & = 3^3 / 5^3 = 27 / 125 $ #noindent;$ (c / d)^4 = c^4 / d^4 $
 
 分数运算，既然都是归结为自然数的运算，因此，不难说明分数运算也是满足运算律的．例如：分数加法的#strong[交换律]是 $a / b + c / d = c / d + a / b$．
 
 #note[
-因为 $ a / b + c / d & = frac(a d + b c, b d) &  & upright("(分数加法法则)")\
- & = frac(b c + a d, b d) &  & upright("(自然数加法交换律)")\
- & = frac(b c, b d) + frac(a d, b d)\
- & = c / d + a / b &  & upright("(分数的基本性质)") $ 所以，$a / b + c / d = c / d + a / b$．
+因为
+
+#numbered-align(($a / b + c / d$, $zws = frac(a d + b c, b d)$, [(分数加法法则)]), ($$, $= frac(b c + a d, b d)$, [(自然数加法交换律)]), ($$, $= frac(b c, b d) + frac(a d, b d)$, false), ($$, $= c / d + a / b$, [(分数的基本性质)]));
+
+所以，$a / b + c / d = c / d + a / b$．
 
 ]
 同样，分数运算中，加法结合律、乘法结合律，交换律以及分配律、指数运算律都是正确的．
@@ -670,10 +661,7 @@ $ (a / b)^m = underbrace((a / b) dot.op (a / b) dots.h.c (a / b), m upright("个
 
 ]
 #solution[
-$ upright("原式") & = 3 / 5 (1 / 7 + 6 / 7) times (1 - 2 / 5)^2 &  & upright("(分配律、分数乘法法则)")\
- & = 3 / 5 times (3 / 5)^2 &  & upright("(分数加、减法法则)")\
- & = (3 / 5)^(1 + 2) = (3 / 5)^3 &  & upright("(指数运算律（一）)")\
- & = 3^3 / 5^3 = 27 / 125 &  & upright("(分数的乘方运算律)") $
+#numbered-align(($upright("原式")$, $zws = 3 / 5 (1 / 7 + 6 / 7) times (1 - 2 / 5)^2$, [(分配律、分数乘法法则)]), ($$, $= 3 / 5 times (3 / 5)^2$, [(分数加、减法法则)]), ($$, $= (3 / 5)^(1 + 2) = (3 / 5)^3$, [(指数运算律（一）)]), ($$, $= 3^3 / 5^3 = 27 / 125$, [(分数的乘方运算律)]));
 
 ]
 #exercise[
@@ -690,7 +678,8 @@ $ upright("原式") & = 3 / 5 (1 / 7 + 6 / 7) times (1 - 2 / 5)^2 &  & upright("
 ]
 在分数(包括其特例的自然数和零)范围内，加法、乘法(包括乘方)、除法运算的结果都能保证是分数(包括自然数和零)．就是说，有了分数以后，“除不尽”的矛盾就能解决了．但在作减法时仍然存在着“不够减”的矛盾，如：$3 - 5 = ?$，$1 / 3 - 1 / 2 = ?$ 等．这个矛盾我们将在下一节解决它．
 
-#heading(level: 2, numbering: none)[习题1.1]
+#heading(level: 2, numbering: none, supplement: [toc-sub])[习题1.1]
+
 + 如果字母 $a$ 表示任一个自然数，试完成下列各题：
 
   + 写出包括 $a$ 在内的三个连续自然数.
@@ -771,7 +760,27 @@ $ upright("原式") & = 3 / 5 (1 / 7 + 6 / 7) times (1 - 2 / 5)^2 &  & upright("
   [20],
   table.hline(),
   [$n^2$],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
   [$n^3$],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
   table.hline(),
 );
 
@@ -920,7 +929,7 @@ $ upright("原式") & = 3 / 5 (1 / 7 + 6 / 7) times (1 - 2 / 5)^2 &  & upright("
 
 ]
 === 有理数、数轴
-引进负数以后，扩大了数的范围#footnote[我国古代数学家刘徽，对正、负数下的定义是“今两算得失相反，要令正负以名之”．这是世界上最早的正、负数定义．]．因而，当我们说到整数时，就应该包括：正整数(自然数)、负整数和零；当我们说到#strong[分数]时，就应该包括：正分数、负分数．即：$ upright("整数") cases(upright("正整数（自然数）") & upright("例如：") 1\,med 2\,med 3\,med dots.h.c, upright("零") & 0, upright("负整数") & upright("例如：") - 1\,med - 2\,med - 3\,med dots.h.c) $ $ upright("分数") cases(upright("正分数") & upright("例如：") 1 / 2\,med 2 / 3\,med 1 3 / 7\,med dots.h.c, upright("负分数") & upright("例如：") - 1 / 2\,med - 2 / 3\,med - 1 3 / 7\,med dots.h.c) $
+引进负数以后，扩大了数的范围#footnote[我国古代数学家刘徽，对正、负数下的定义是“今两算得失相反，要令正负以名之”．这是世界上最早的正、负数定义．]．因而，当我们说到整数时，就应该包括：正整数(自然数)、负整数和零；当我们说到#strong[分数]时，就应该包括：正分数、负分数．即：$ upright("整数") display(cases(upright("正整数（自然数）") & quad upright("例如：") 1\,med 2\,med 3\,med dots.h.c, upright("零") & quad 0, upright("负整数") & quad upright("例如：") - 1\,med - 2\,med - 3\,med dots.h.c)) $ #noindent;$ upright("分数") display(cases(upright("正分数") & quad upright("例如：") 1 / 2\,med 2 / 3\,med 1 3 / 7\,med dots.h.c, upright("负分数") & quad upright("例如：") - 1 / 2\,med - 2 / 3\,med - 1 3 / 7\,med dots.h.c)) $
 
 #strong[整数和分数，统称为有理数]#footnote[“有理数”是“Rational number”的译名．比较确切的词，应称为“比数”，因为有理数都可以表示成 $a / b$ 的分数形式．今后，还会学习“非比数”．]．
 
@@ -936,11 +945,11 @@ $ upright("原式") & = 3 / 5 (1 / 7 + 6 / 7) times (1 - 2 / 5)^2 &  & upright("
 
 比较以上三个数的集合，可以知道：
 
-集合 $bb(N)$ 中所有的数，都被包含在集合 $bb(Z)$ 中;而集合 $bb(Z)$ 中所有的数，又被包含在集合 $bb(Q)$ 中．这种关系，可以表示为：$ bb(N) subset bb(Z) subset bb(Q) $ 读作：“集合 $bb(N)$ 被包含在集合 $bb(Z)$ 中，集合 $bb(Z)$ 又被包含在集合 $bb(Q)$ 中，”显然，$bb(N)$ 当然也被包含在 $bb(Q)$ 中．
+集合 $bb(N)$ 中所有的数，都被包含在集合 $bb(Z)$ 中;而集合 $bb(Z)$ 中所有的数，又被包含在集合 $bb(Q)$ 中．这种关系，可以表示为：$ bb(N) subset bb(Z) subset bb(Q) $ #noindent;读作：“集合 $bb(N)$ 被包含在集合 $bb(Z)$ 中，集合 $bb(Z)$ 又被包含在集合 $bb(Q)$ 中，”显然，$bb(N)$ 当然也被包含在 $bb(Q)$ 中．
 
-这种关系也可以表示成：$ bb(Q) supset bb(Z) supset bb(N) $ 读作：“$bb(Q)$ 包含 $bb(Z)$，$bb(Z)$ 又包含 $bb(N)$”，显然，$bb(Q)$ 也包含 $bb(N)$．
+这种关系也可以表示成：$ bb(Q) supset bb(Z) supset bb(N) $ #noindent;读作：“$bb(Q)$ 包含 $bb(Z)$，$bb(Z)$ 又包含 $bb(N)$”，显然，$bb(Q)$ 也包含 $bb(N)$．
 
-有理数集合，有时还可以这样叙述：$ upright("有理数集") supset cases(upright("正有理数集"), { 0 }, upright("负有理数集")) $
+有理数集合，有时还可以这样叙述：$ upright("有理数集") supset display(cases(upright("正有理数集"), { 0 }, upright("负有理数集"))) $
 
 有理数可以用一条直线上的点表示出来，具体方法是：
 
@@ -981,7 +990,7 @@ $ upright("原式") & = 3 / 5 (1 / 7 + 6 / 7) times (1 - 2 / 5)^2 &  & upright("
 
 ]
 #solution[
-所给各数的相反数分别是：$ - 3.5\,quad + 2 1 / 2\,quad 0\,quad + 1\,quad - 0.5\,quad - 1 1 / 2 $ 把它们分别用数轴上的点表示为：
+所给各数的相反数分别是：$ - 3.5\,quad + 2 1 / 2\,quad 0\,quad + 1\,quad - 0.5\,quad - 1 1 / 2 $ #noindent;把它们分别用数轴上的点表示为：
 
 #figure([#fig("1-05");
 
@@ -990,7 +999,7 @@ $ upright("原式") & = 3 / 5 (1 / 7 + 6 / 7) times (1 - 2 / 5)^2 &  & upright("
   ]
 )
 
-显然，它们在数轴上从左到右的顺序是：$ - 3.5\,quad - 2 1 / 2\,quad - 1 1 / 2\,quad - 1\,quad - 0.5\,quad 0\, $ $ + 0.5\,quad + 1\,quad + 1 1 / 2\,quad + 2 1 / 2\,quad + 3.5 $
+显然，它们在数轴上从左到右的顺序是：$ - 3.5\,quad - 2 1 / 2\,quad - 1 1 / 2\,quad - 1\,quad - 0.5\,quad 0\, $ #noindent;$ + 0.5\,quad + 1\,quad + 1 1 / 2\,quad + 2 1 / 2\,quad + 3.5 $
 
 ]
 从这两个例子可以看出：
@@ -1029,7 +1038,7 @@ $ upright("原式") & = 3 / 5 (1 / 7 + 6 / 7) times (1 - 2 / 5)^2 &  & upright("
 ]
 例如：$lr(|+ 2 1 / 2|) = 2 1 / 2$，$\|0\|= 0$，$\|- 5\|= 5$，$\|- 0.7\|= 0.7$ 等．
 
-一般地，对任一个有理数 $a$，其绝对值可以表示成：$ \|a\|= cases(a\, & upright("当") a upright("是正数时"), 0\, & upright("当") a upright("是0时"), - a\, & upright("当") a upright("是负 数时")) $
+一般地，对任一个有理数 $a$，其绝对值可以表示成：$ \|a\|= display(cases(a\, & quad upright("当") a upright("是正数时"), 0\, & quad upright("当") a upright("是0时"), - a\, & quad upright("当") a upright("是负数时"))) $
 
 #exercise[
 + （口答）填写下表：
@@ -1049,6 +1058,12 @@ $ upright("原式") & = 3 / 5 (1 / 7 + 6 / 7) times (1 - 2 / 5)^2 &  & upright("
   [$- 1 2 / 11$],
   table.hline(),
   [$\|a\|$],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
   table.hline(),
 );
 
@@ -1059,7 +1074,8 @@ $ upright("原式") & = 3 / 5 (1 / 7 + 6 / 7) times (1 - 2 / 5)^2 &  & upright("
 + 你能说出“任一对相反数”的绝对值有什么关系吗？并举出两例．
 
 ]
-#heading(level: 2, numbering: none)[习题1.2]
+#heading(level: 2, numbering: none, supplement: [toc-sub])[习题1.2]
+
 + 用正、负数表示下列各量：
 
   + 珠穆朗玛峰高出海面8848.13米.
@@ -1088,7 +1104,7 @@ $ upright("原式") & = 3 / 5 (1 / 7 + 6 / 7) times (1 - 2 / 5)^2 &  & upright("
 
   + $-\[-\(- m\)\]= underline(#h(2em) #h(2em))$．
 
-+ 把下列各数填入应属的集合内：$ - 5\,quad - 1 / 3\,quad 0.34\,quad 0\,quad - 1\,quad - 3 2 / 5\,quad 1 / 5\,quad 20 1 / 2\,quad - 0.001\,quad 10^10 $ $ upright("有理数集合") cases(upright("正有理数集合：") underline(#h(2em) #h(2em) #h(2em) #h(2em) #h(2em)), { 0 } ： underline(#h(2em) #h(2em) #h(2em) #h(2em) #h(2em)), upright("负有理数集合：") underline(#h(2em) #h(2em) #h(2em) #h(2em) #h(2em))) $
++ 把下列各数填入应属的集合内：$ - 5\,quad - 1 / 3\,quad 0.34\,quad 0\,quad - 1\,quad - 3 2 / 5\,quad 1 / 5\,quad 20 1 / 2\,quad - 0.001\,quad 10^10 $ #noindent;$ upright("有理数集合") display(cases(upright("正有理数集合：") underline(#h(2em) #h(2em) #h(2em) #h(2em) #h(2em)), { 0 } ： underline(#h(2em) #h(2em) #h(2em) #h(2em) #h(2em)), upright("负有理数集合：") underline(#h(2em) #h(2em) #h(2em) #h(2em) #h(2em)))) $
 
 + 在数轴上将下列有理数用点表示出来：
 
@@ -1205,16 +1221,17 @@ $ upright("原式") & = 3 / 5 (1 / 7 + 6 / 7) times (1 - 2 / 5)^2 &  & upright("
 
 例如：某单位收入五万元，后又收入2万元；显然一共收入应是7万元，即：$\(+ 5\)+\(+ 2\)= + 7$
 
-在情形2，我们可以根据相反数的特性及运算通性继续有效来讨论：由于 $  & quad\(- a\)+\(- b\)+\(+ a\)+\(+ b\)\
- & =\[\(- a\)+\(+ a\)\]+\[\(- b\)+\(+ b\)\] &  & upright("(加法交换、结合律)")\
- & = 0 + 0 &  & upright("(相反数的特性)")\
- & = 0 &  & upright("(零的运算)") $ 而且，由加法运算的情形1知道，$ \(+ a\)+\(+ b\)= +\(a + b\) $
+在情形2，我们可以根据相反数的特性及运算通性继续有效来讨论：由于
+
+#numbered-align(($$, $quad\(- a\)+\(- b\)+\(+ a\)+\(+ b\)$, false), ($$, $=\[\(- a\)+\(+ a\)\]+\[\(- b\)+\(+ b\)\]$, [(加法交换、结合律)]), ($$, $= 0 + 0$, [(相反数的特性)]), ($$, $= 0$, [(零的运算)]));
+
+而且，由加法运算的情形1知道，$ \(+ a\)+\(+ b\)= +\(a + b\) $
 
 所以 $\(- a\)+\(- b\)+\(a + b\)= 0$．这就是说，$\(- a\)$ 与 $\(- b\)$ 的和，应等于 $\(a + b\)$ 的相反数．
 
 因此，我们规定：$ \(- a\)+\(- b\)= -\(a + b\) $
 
-这样规定，既是合理的，也是符合实际的，例如：某家公司，今年亏损2.5万元，而去年已经亏损3万元，两年共亏损5.5万元．即：$ \(- 2 . 5\)+\(- 3\)= -\(2.5 + 3\)= - 5.5 thick\(upright("万元")\) $ 综合情形1、2，可以得出：
+这样规定，既是合理的，也是符合实际的，例如：某家公司，今年亏损2.5万元，而去年已经亏损3万元，两年共亏损5.5万元．即：$ \(- 2 . 5\)+\(- 3\)= -\(2.5 + 3\)= - 5.5 thick\(upright("万元")\) $ #noindent;综合情形1、2，可以得出：
 
 #blk[][
 符号相同的两个有理数相加，只要将两数的绝对值相加，符号仍取原来的符号就行了．
@@ -1222,28 +1239,23 @@ $ upright("原式") & = 3 / 5 (1 / 7 + 6 / 7) times (1 - 2 / 5)^2 &  & upright("
 ]
 对于情形3：$\(+ a\)+\(- b\)$，我们还需要根据 $a\,b$（实际上就是 $+ a$，$- b$ 的绝对值）的大小分别讨论．
 
-例如：$ \(+ 5\)+\(- 3\) & =\(+ 2 + 3\)+\(- 3\)\
- & =\(5 - 3 + 3\)+\(- 3\)\
- & = +\(5 - 3\)+\[\(+ 3\)+\(- 3\)\] &  & upright("(加法结合律)")\
- & = +\(5 - 3\)+ 0 &  & upright("(相反数的性质)")\
- & = +\(5 - 3\) &  & upright("(零的特性)") $
+例如：
 
-一般地：当 $a$ 大于 $b$ 时，$ \(+ a\)+\(- b\) & = +\(a - b + b\)+\(- b\)\
- & = +\(a - b\)+\[\(+ b\)+\(- b\)\] &  & upright("(加法结合律)")\
- & = +\(a - b\)+ 0 &  & upright("(相反数的性质)")\
- & = +\(a - b\) &  & upright("(零的特性)") $
+#numbered-align(($\(+ 5\)+\(- 3\)$, $zws =\(+ 2 + 3\)+\(- 3\)$, false), ($$, $=\(5 - 3 + 3\)+\(- 3\)$, false), ($$, $= +\(5 - 3\)+\[\(+ 3\)+\(- 3\)\]$, [(加法结合律)]), ($$, $= +\(5 - 3\)+ 0$, [(相反数的性质)]), ($$, $= +\(5 - 3\)$, [(零的特性)]));
 
-所以，在 $a$ 大于 $b$ 时，我们规定：$ \(+ a\)+\(- b\)= +\(a - b\)\,#h(2em)\(a upright("大于") b upright("时")\) $ 这个规定也是符合实际的，比如：温度计上升10°C，又下降8°C，其结果显然是上升2°C，即：$ \(+ 10\)+\(- 8\)= +\(10 - 8\)= + 2 $
+一般地：当 $a$ 大于 $b$ 时，
 
-同样，当 $a$ 小于 $b$ 时，我们可以作类似讨论：$ \(+ a\)+\(- b\) & =\(+ a\)+\[-\(b - a + a\)\]\
- & =\(+ a\)+\[-\(b - a\)+\(- a\)\] &  & upright("(情形2加法法则)")\
- & =\[\(+ a\)+\(- a\)\]+\[-\(b - a\)\] &  & upright("(加法交换、结合律)")\
- & = 0 +\[-\(b - a\)\] &  & upright("(相反数的特性)")\
- & = -\(b - a\) &  & upright("(零的特性)") $
+#numbered-align(($\(+ a\)+\(- b\)$, $zws = +\(a - b + b\)+\(- b\)$, false), ($$, $= +\(a - b\)+\[\(+ b\)+\(- b\)\]$, [(加法结合律)]), ($$, $= +\(a - b\)+ 0$, [(相反数的性质)]), ($$, $= +\(a - b\)$, [(零的特性)]));
 
-所以，在 $a$ 小于 $b$ 时，我们规定：$ \(+ a\)+\(- b\)= -\(b - a\)\,#h(2em)\(a upright("小于") b upright("时")\) $ 这样规定，同样是符合实际的，比如：气温上升10.5°C，接着又下降12°C，其结果自然应该是下降1.5°C，即 $ \(+ 10.5\)+\(- 12\)= -\(12 - 10.5\)= - 1.5 $
+所以，在 $a$ 大于 $b$ 时，我们规定：$ \(+ a\)+\(- b\)= +\(a - b\)\,#h(2em)\(a upright("大于") b upright("时")\) $ #noindent;这个规定也是符合实际的，比如：温度计上升10°C，又下降8°C，其结果显然是上升2°C，即：$ \(+ 10\)+\(- 8\)= +\(10 - 8\)= + 2 $
 
-综合对情形3的讨论，可以得出：$ \(+ a\)+\(- b\)= cases(+\(a - b\)\, & \(a upright("大于") b upright("时")\), -\(b - a\)\, & \(a upright("小于") b upright("时")\)) $ 这就是说：
+同样，当 $a$ 小于 $b$ 时，我们可以作类似讨论：
+
+#numbered-align(($\(+ a\)+\(- b\)$, $zws =\(+ a\)+\[-\(b - a + a\)\]$, false), ($$, $=\(+ a\)+\[-\(b - a\)+\(- a\)\]$, [(情形2加法法则)]), ($$, $=\[\(+ a\)+\(- a\)\]+\[-\(b - a\)\]$, [(加法交换、结合律)]), ($$, $= 0 +\[-\(b - a\)\]$, [(相反数的特性)]), ($$, $= -\(b - a\)$, [(零的特性)]));
+
+所以，在 $a$ 小于 $b$ 时，我们规定：$ \(+ a\)+\(- b\)= -\(b - a\)\,#h(2em)\(a upright("小于") b upright("时")\) $ #noindent;这样规定，同样是符合实际的，比如：气温上升10.5°C，接着又下降12°C，其结果自然应该是下降1.5°C，即 $ \(+ 10.5\)+\(- 12\)= -\(12 - 10.5\)= - 1.5 $
+
+综合对情形3的讨论，可以得出：$ \(+ a\)+\(- b\)= display(cases(+\(a - b\)\, & quad \(a upright("大于") b upright("时")\), -\(b - a\)\, & quad \(a upright("小于") b upright("时")\))) $ #noindent;这就是说：
 
 #blk[][
 两个符号相反的有理数相加，只要将较大的绝对值减去较小的绝对值，符号取绝对值较大的加数的符号就行了．
@@ -1306,22 +1318,13 @@ $ upright("原式") & = 3 / 5 (1 / 7 + 6 / 7) times (1 - 2 / 5)^2 &  & upright("
 
 ]
 #solution[
-$ \(+ 2\)+\(- 4\)+\(- 8\) & =\[\(+ 2\)+\(- 4\)\]+\(- 8\) &  & upright("(结合律)")\
- & =\(- 2\)+\(- 8\) &  & upright("(异号相加法则)")\
- & = - 10 &  & upright("(同号相加法则)") $
+#numbered-align(($\(+ 2\)+\(- 4\)+\(- 8\)$, $zws =\[\(+ 2\)+\(- 4\)\]+\(- 8\)$, [(结合律)]), ($$, $=\(- 2\)+\(- 8\)$, [(异号相加法则)]), ($$, $= - 10$, [(同号相加法则)]));
 
-$  & quad (- 2 / 3) + (+ 4 / 5) + (- 1 / 3) + (+ 1 1 / 5)\
- & = [(- 2 / 3) + (- 1 / 3)] + [(+ 4 / 5) + (+ 1 1 / 5)] &  & upright("(交换、结合律)")\
- & = - (2 / 3 + 1 / 3) + [+ (4 / 5 + 1 1 / 5)] &  & upright("(同号加法法则)")\
- & =\(- 1\)+\(+ 2\)= + 1 &  & upright("(异号加法法则)") $
+#numbered-align(($$, $quad (- 2 / 3) + (+ 4 / 5) + (- 1 / 3) + (+ 1 1 / 5)$, false), ($$, $= [(- 2 / 3) + (- 1 / 3)] + [(+ 4 / 5) + (+ 1 1 / 5)]$, [(交换、结合律)]), ($$, $= - (2 / 3 + 1 / 3) + [+ (4 / 5 + 1 1 / 5)]$, [(同号加法法则)]), ($$, $=\(- 1\)+\(+ 2\)= + 1$, [(异号加法法则)]));
 
-$ \(- x\)+\(- y\)+ x & =\[\(- x\)+ x\]+\(- y\) &  & upright("(交换、结合律)")\
- & = 0 +\(- y\) &  & upright("(相反数的性质)")\
- & = - y &  & upright("(零的特性)") $
+#numbered-align(($\(- x\)+\(- y\)+ x$, $zws =\[\(- x\)+ x\]+\(- y\)$, [(交换、结合律)]), ($$, $= 0 +\(- y\)$, [(相反数的性质)]), ($$, $= - y$, [(零的特性)]));
 
-$ \(- a\)+\(- a\) & =\(- 1\)a +\(- 1\)a &  & upright("(相反数的意义)")\
- & =\[\(- 1\)+\(- 1\)\]a &  & upright("(分配律)")\
- & = - 2 a &  & upright("(同号加法法则)") $
+#numbered-align(($\(- a\)+\(- a\)$, $zws =\(- 1\)a +\(- 1\)a$, [(相反数的意义)]), ($$, $=\[\(- 1\)+\(- 1\)\]a$, [(分配律)]), ($$, $= - 2 a$, [(同号加法法则)]));
 
 ]
 总起来说，有理数加法法则是：
@@ -1330,7 +1333,7 @@ $ \(- a\)+\(- a\) & =\(- 1\)a +\(- 1\)a &  & upright("(相反数的意义)")\
 + 同号相加：$ \(+ a\)+\(+ b\) & = +\(a + b\)\
   \(- a\)+\(- b\) & = -\(a + b\) $
 
-+ 异号相加：$ \(+ a\)+\(- b\)= cases(+\(a - b\)\, & a > b, -\(b - a\)\, & a < b) $
++ 异号相加：$ \(+ a\)+\(- b\)= display(cases(+\(a - b\)\, & quad a > b, -\(b - a\)\, & quad a < b)) $
 
 + 相反数相加：$ \(+ a\)+\(- a\)= 0 $
 
@@ -1342,21 +1345,21 @@ $ \(- a\)+\(- a\) & =\(- 1\)a +\(- 1\)a &  & upright("(相反数的意义)")\
 
 ]
 #exercise[
-+ （口答）计算：$ \(+ 7\)+\(- 5\)\,#h(2em)\(- 7\)+\(+ 5\)\,#h(2em)\(- 7\)+\(- 5\) $ $ (+ 1 / 3) + (+ 1 / 2)\,thick (+ 1 / 3) + (- 1 / 2)\,thick (- 1 / 3) + (+ 1 / 2)\,thick (- 1 / 3) + (- 1 / 2) $ $ \(+ 0.8\)+\(- 1.6\)\,thick\(- 0.8\)+\(- 1.6\)\,thick\(- 0.8\)+\(+ 1.6\)\,thick\(+ 0.8\)+\(+ 1.6\) $ $ 2 + (- 1 1 / 5)\,thick thick\(- 2\)+ (- 1 1 / 5)\,thick thick\(- 2\)+ (+ 1 1 / 5)\,thick thick 0 + (- 1 1 / 5) $
++ （口答）计算：$ \(+ 7\)+\(- 5\)\,#h(2em)\(- 7\)+\(+ 5\)\,#h(2em)\(- 7\)+\(- 5\) $ #noindent;$ (+ 1 / 3) + (+ 1 / 2)\,thick (+ 1 / 3) + (- 1 / 2)\,thick (- 1 / 3) + (+ 1 / 2)\,thick (- 1 / 3) + (- 1 / 2) $ #noindent;$ \(+ 0.8\)+\(- 1.6\)\,thick\(- 0.8\)+\(- 1.6\)\,thick\(- 0.8\)+\(+ 1.6\)\,thick\(+ 0.8\)+\(+ 1.6\) $ #noindent;$ 2 + (- 1 1 / 5)\,thick thick\(- 2\)+ (- 1 1 / 5)\,thick thick\(- 2\)+ (+ 1 1 / 5)\,thick thick 0 + (- 1 1 / 5) $
 
-+ 计算：$ 1 + (- 1 / 2) + (- 1 / 3) + (- 1 / 6)\,#h(2em) (- 1 / 5) + 0 + (+ 8 / 15) + (- 4 / 15) $ $ (- 1 1 / 3) + (+ 2 / 3) + 0 + (- 2 / 3) + (+ 4 / 3)\,#h(2em) a + a +\(- a\) $
++ 计算：$ 1 + (- 1 / 2) + (- 1 / 3) + (- 1 / 6)\,#h(2em) (- 1 / 5) + 0 + (+ 8 / 15) + (- 4 / 15) $ #noindent;$ (- 1 1 / 3) + (+ 2 / 3) + 0 + (- 2 / 3) + (+ 4 / 3)\,#h(2em) a + a +\(- a\) $
 
 ]
 ==== 减法
 减法是加法的#strong[逆运算]．比如 $\(- 5\)-\(+ 3\)$ 的问题，就是要求一个数 $\[?\]$，使得 $\[?\]+\(+ 3\)=\(- 5\)$．也就是说，$\(- 5\)-\(+ 3\)$ 是一个数 $\[?\]$，这个数能够使得 $\[?\]+\(+ 3\)=\(- 5\)$ 成立．即 $ \[\(- 5\)-\(+ 3\)\]+\(+ 3\)=\(- 5\) $
 
-但我们由有理数加法法则可以知道，只有 $ \(- 8\)+\(+ 3\)= - 5 $ 显然得出：#numbered-eq($ \(- 5\)-\(+ 3\)= - 8 $);
+但我们由有理数加法法则可以知道，只有 $ \(- 8\)+\(+ 3\)= - 5 $ #noindent;显然得出：#numbered-eq($ \(- 5\)-\(+ 3\)= - 8 $);
 
 又由加法可知：#numbered-eq($ \(- 5\)+\(- 3\)= - 8 $);
 
-比较(1.1)、(1.2)两式，不难得出：$ \(- 5\)-\(+ 3\)=\(- 5\)+\(- 3\)= - 8 $ 这就是说：有理数 $\(- 5\)$ 减去 $\(+ 3\)$，就等于 $\(- 5\)$ 加上 $\(+ 3\)$ 的#strong[相反数] $\(- 3\)$．减法就转化成了加法计算．
+比较(1.1)、(1.2)两式，不难得出：$ \(- 5\)-\(+ 3\)=\(- 5\)+\(- 3\)= - 8 $ #noindent;这就是说：有理数 $\(- 5\)$ 减去 $\(+ 3\)$，就等于 $\(- 5\)$ 加上 $\(+ 3\)$ 的#strong[相反数] $\(- 3\)$．减法就转化成了加法计算．
 
-同样地#footnote[$because$，$therefore$ 是数学中常用的符号，分别读成“因为”、“所以”．]，$because quad\(+ 3\)+\(- 7\)= - 4$ #numbered-eq($ therefore quad\(- 4\)-\(- 7\)= + 3 $);又由加法可知：#numbered-eq($ \(- 4\)+\(+ 7\)= + 3 $);比较(1.3)、(1.4)两式，又可以得出：$ \(- 4\)-\(- 7\)=\(- 4\)+\(+ 7\)= + 3 $ 即，$\(- 4\)$ #strong[减]去 $\(- 7\)$ 就等于 $\(- 4\)$ #strong[加]上 $\(- 7\)$ 的#strong[相反数] $\(+ 7\)$．这里又把减法转化为加法了．
+同样地#footnote[$because$，$therefore$ 是数学中常用的符号，分别读成“因为”、“所以”．]，$because quad\(+ 3\)+\(- 7\)= - 4$ #numbered-eq($ therefore quad\(- 4\)-\(- 7\)= + 3 $);又由加法可知：#numbered-eq($ \(- 4\)+\(+ 7\)= + 3 $);比较(1.3)、(1.4)两式，又可以得出：$ \(- 4\)-\(- 7\)=\(- 4\)+\(+ 7\)= + 3 $ #noindent;即，$\(- 4\)$ #strong[减]去 $\(- 7\)$ 就等于 $\(- 4\)$ #strong[加]上 $\(- 7\)$ 的#strong[相反数] $\(+ 7\)$．这里又把减法转化为加法了．
 
 由此，可以归纳出#strong[有理数减法的法则是：]
 
@@ -1421,26 +1424,17 @@ $ \(- a\)+\(- a\) & =\(- 1\)a +\(- 1\)a &  & upright("(相反数的意义)")\
 
 ]
 #solution[
-$  & quad\(+ 1\)- (- 1 / 2) - (- 1 / 3) - (- 1 / 6)\
- & =\(+ 1\)+ (+ 1 / 2) + (+ 1 / 3) + (+ 1 / 6) &  & upright("(减法法则)")\
- & =\(+ 1\)+ (1 / 2 + 1 / 3 + 1 / 6) &  & upright("(同号相加法则)")\
- & = + 2 $
+#numbered-align(($$, $quad\(+ 1\)- (- 1 / 2) - (- 1 / 3) - (- 1 / 6)$, false), ($$, $=\(+ 1\)+ (+ 1 / 2) + (+ 1 / 3) + (+ 1 / 6)$, [(减法法则)]), ($$, $=\(+ 1\)+ (1 / 2 + 1 / 3 + 1 / 6)$, [(同号相加法则)]), ($$, $= + 2$, false));
 
-$  & quad\(+ 1\)- (+ 1 / 2) - (+ 1 / 3) - (+ 1 / 6)\
- & =\(+ 1\)+ (- 1 / 2) + (- 1 / 3) + (- 1 / 6) &  & upright("(减法法则)")\
- & =\(+ 1\)+ [(- 1 / 2) + (- 1 / 3) + (- 1 / 6)] &  & upright("(加法结合律)")\
- & =\(+ 1\)+ [- (1 / 2 + 1 / 3 + 1 / 6)] &  & upright("(同号相加法则)")\
- & =\(+ 1\)+\(- 1\)= 0 &  & upright("(相反数性质)") $
+#numbered-align(($$, $quad\(+ 1\)- (+ 1 / 2) - (+ 1 / 3) - (+ 1 / 6)$, false), ($$, $=\(+ 1\)+ (- 1 / 2) + (- 1 / 3) + (- 1 / 6)$, [(减法法则)]), ($$, $=\(+ 1\)+ [(- 1 / 2) + (- 1 / 3) + (- 1 / 6)]$, [(加法结合律)]), ($$, $=\(+ 1\)+ [- (1 / 2 + 1 / 3 + 1 / 6)]$, [(同号相加法则)]), ($$, $=\(+ 1\)+\(- 1\)= 0$, [(相反数性质)]));
 
-$ \(- b\)-\(+ b\)-\(- b\)-\(+ a\) & =\(- b\)+\(- b\)+\(+ b\)+\(- a\) &  & upright("(减法法则)")\
- & =\(- b\)+\[\(- b\)+\(+ b\)\]+\(- a\) &  & upright("(加法结合律)")\
- & =\(- b\)+ 0 +\(- a\) &  & upright("(相反数意义)")\
- & =\(- b\)+\(- a\) &  & upright("(零的特征)")\
- & = -\(a + b\) &  & upright("(同号相加法则)") $#footnote[由相反数的意义可知，$-\(a + b\)$ 就是 $\(a + b\)$ 的相反数．]
+#numbered-align(($\(- b\)-\(+ b\)-\(- b\)-\(+ a\)$, $zws =\(- b\)+\(- b\)+\(+ b\)+\(- a\)$, [(减法法则)]), ($$, $=\(- b\)+\[\(- b\)+\(+ b\)\]+\(- a\)$, [(加法结合律)]), ($$, $=\(- b\)+ 0 +\(- a\)$, [(相反数意义)]), ($$, $=\(- b\)+\(- a\)$, [(零的特征)]), ($$, $= -\(a + b\)$, [(同号相加法则)]));
+
+#footnote[由相反数的意义可知，$-\(a + b\)$ 就是 $\(a + b\)$ 的相反数．]
 
 ]
 #exercise[
-+ 口答下列各题：$ \(+ 3\)-\(+ 5\)\,quad\(+ 3\)-\(- 5\)\,quad\(- 3\)-\(+ 5\)\,quad\(- 3\)-\(- 5\) $ $ \(+ 5\)-\(+ 2.5\)\,quad\(+ 5\)-\(- 2.5\)\,quad\(- 5\)-\(- 2.5\)\,quad\(- 5\)-\(+ 2.5\) $ $ (- 7 1 / 2) - (- 7 1 / 2)\,thick thick (- 7 1 / 2) - (+ 7 1 / 2)\,thick thick (- 7 1 / 2) - 0\,thick thick 0 - (- 7 1 / 2) $ $ \(- a\)-\(+ a\)\,quad\(- a\)-\(- a\)\,quad\(+ a\)-\(- a\)\,quad 0 -\(- a\) $
++ 口答下列各题：$ \(+ 3\)-\(+ 5\)\,quad\(+ 3\)-\(- 5\)\,quad\(- 3\)-\(+ 5\)\,quad\(- 3\)-\(- 5\) $ #noindent;$ \(+ 5\)-\(+ 2.5\)\,quad\(+ 5\)-\(- 2.5\)\,quad\(- 5\)-\(- 2.5\)\,quad\(- 5\)-\(+ 2.5\) $ #noindent;$ (- 7 1 / 2) - (- 7 1 / 2)\,thick thick (- 7 1 / 2) - (+ 7 1 / 2)\,thick thick (- 7 1 / 2) - 0\,thick thick 0 - (- 7 1 / 2) $ #noindent;$ \(- a\)-\(+ a\)\,quad\(- a\)-\(- a\)\,quad\(+ a\)-\(- a\)\,quad 0 -\(- a\) $
 
 + 计算：
 
@@ -1473,9 +1467,7 @@ $ \(- b\)-\(+ b\)-\(- b\)-\(+ a\) & =\(- b\)+\(- b\)+\(+ b\)+\(- a\) &  & uprigh
 
 ]
 #solution[
-$ upright("原式") & =\[\(+ 3\)+\(+ 5\)+\(+ 9\)\]+\[\(- 7\)+\(- 2\)+\(- 8\)\] &  & upright("(交换、结合律)")\
- & =\(+ 17\)+\(- 17\) &  & upright("(同号加法法则)")\
- & = 0 &  & upright("(相反数的特性)") $
+#numbered-align(($upright("原式")$, $zws =\[\(+ 3\)+\(+ 5\)+\(+ 9\)\]+\[\(- 7\)+\(- 2\)+\(- 8\)\]$, [(交换、结合律)]), ($$, $=\(+ 17\)+\(- 17\)$, [(同号加法法则)]), ($$, $= 0$, [(相反数的特性)]));
 
 ]
 #example[
@@ -1483,10 +1475,7 @@ $ upright("原式") & =\[\(+ 3\)+\(+ 5\)+\(+ 9\)\]+\[\(- 7\)+\(- 2\)+\(- 8\)\] &
 
 ]
 #solution[
-$ upright("原式") & =\(- 6.5\)+\(+ 7.3\)+\(+ 3.7\)+\(- 12.5\)+ (+ 1 / 2) &  & upright("(减法法则)")\
- & =\[\(- 6.5\)+\(- 12.5\)\]+ [\( + 7.3 \) + \( + 3.7 \) + (+ 1 / 2)] &  & upright("(交换、结合律)")\
- & =\(- 19\)+ (+ 11 1 / 2) &  & upright("(同号相加法则)")\
- & = - 7 1 / 2 &  & upright("(异号相加法则)") $
+#numbered-align(($upright("原式")$, $zws =\(- 6.5\)+\(+ 7.3\)+\(+ 3.7\)+\(- 12.5\)+ (+ 1 / 2)$, [(减法法则)]), ($$, $=\[\(- 6.5\)+\(- 12.5\)\]+ [\( + 7.3 \) + \( + 3.7 \) + (+ 1 / 2)]$, [(交换、结合律)]), ($$, $=\(- 19\)+ (+ 11 1 / 2)$, [(同号相加法则)]), ($$, $= - 7 1 / 2$, [(异号相加法则)]));
 
 ]
 在代数和式子中，经常省去各项之间的加号“$+$”及第一项前的正号“$+$”．比如式(1.5)中的代数和，可以写成：$3 - 7 + 5 + 9 - 2$．读作：“正3负7正5正9负2的和．”或者读成：“3减7加5加9减2”．
@@ -1498,9 +1487,7 @@ $ upright("原式") & =\(- 6.5\)+\(+ 7.3\)+\(+ 3.7\)+\(- 12.5\)+ (+ 1 / 2) &  & 
 
 ]
 #solution[
-$ upright("原式") & = 3 / 4 + 1 / 2 - 3 / 8 - 1 / 4 - 1 / 8 &  & upright("(简化代数和)")\
- & = (3 / 4 + 1 / 2) - (3 / 8 + 1 / 4 + 1 / 8)\
- & = 5 / 4 - 6 / 8 = 2 / 4 = 1 / 2 $
+#numbered-align(($upright("原式")$, $zws = 3 / 4 + 1 / 2 - 3 / 8 - 1 / 4 - 1 / 8$, [(简化代数和)]), ($$, $= (3 / 4 + 1 / 2) - (3 / 8 + 1 / 4 + 1 / 8)$, false), ($$, $= 5 / 4 - 6 / 8 = 2 / 4 = 1 / 2$, false));
 
 ]
 #exercise[
@@ -1520,10 +1507,9 @@ $ upright("原式") & = 3 / 4 + 1 / 2 - 3 / 8 - 1 / 4 - 1 / 8 &  & upright("(简
 
 ]
 #solution[
-$ a - b + c - d & = a +\(- b\)+ c +\(- d\) &  & upright("(代数和原意)")\
- & = a +\(- 1\)dot.op b +\(- 1\)dot.op\(- c\)+\(- 1\)dot.op d &  & upright("(相反数意义)")\
- & = a +\(- 1\)\(b - c + d\) &  & upright("(分配律)")\
- & = a -\(b - c + d\) &  & upright("(相反数意义)") $ $therefore quad a - b + c - d = a -\(b - c + d\)$
+#numbered-align(($a - b + c - d$, $zws = a +\(- b\)+ c +\(- d\)$, [(代数和原意)]), ($$, $= a +\(- 1\)dot.op b +\(- 1\)dot.op\(- c\)+\(- 1\)dot.op d$, [(相反数意义)]), ($$, $= a +\(- 1\)\(b - c + d\)$, [(分配律)]), ($$, $= a -\(b - c + d\)$, [(相反数意义)]));
+
+$therefore quad a - b + c - d = a -\(b - c + d\)$
 
 ]
 这就告诉我们：在计算代数和，遇到需要添加或去掉括号时，要遵守这样的规则：
@@ -1542,7 +1528,7 @@ $ a - b + c - d & = a +\(- b\)+ c +\(- d\) &  & upright("(代数和原意)")\
 ]
 #solution[
 可以灵活运用添、去括号的规则进行计算．$ 2 - 1 / 2 - 1 / 3 - 1 / 6 & = 2 - (1 / 2 + 1 / 3 + 1 / 6)\
- & = 2 - 1 = 1 $ $  & quad - 1 3 / 4 - [1 / 2 - (3 / 4 + 1 / 2 - 1 3 / 8) + 5 / 8]\
+ & = 2 - 1 = 1 $ #noindent;$  & quad - 1 3 / 4 - [1 / 2 - (3 / 4 + 1 / 2 - 1 3 / 8) + 5 / 8]\
  & = - 1 3 / 4 - [1 / 2 - 3 / 4 - 1 / 2 + 1 3 / 8 + 5 / 8]\
  & = - 7 / 4 - cancel(1 / 2, inverted: #true) + 3 / 4 + cancel(1 / 2, inverted: #true) - 11 / 8 - 5 / 8\
  & = - 4 / 4 - 16 / 8\
@@ -1562,7 +1548,7 @@ $ a - b + c - d & = a +\(- b\)+ c +\(- d\) &  & upright("(代数和原意)")\
 
   + $- 1.5 -\[1.4 -\(- 3.6\)- 4.3 +\(- 5.2\)\]$．
 
-+ 在括号内填上适当的项，使等式成立：$ a + b - c + d = a + b -\(#h(2em) #h(2em)\) $ $ a - b + c + d = a -\(#h(2em) #h(2em)\) $
++ 在括号内填上适当的项，使等式成立：$ a + b - c + d = a + b -\(#h(2em) #h(2em)\) $ #noindent;$ a - b + c + d = a -\(#h(2em) #h(2em)\) $
 
 ]
 === 有理数的乘法与除法
@@ -1577,13 +1563,13 @@ $ a - b + c - d & = a +\(- b\)+ c +\(- d\) &  & upright("(代数和原意)")\
 
 + 两个负有理数相乘，即 $\(- a\)times\(- b\)$．
 
-对于情形1，很显然，两个正有理数相乘，就是与小学算术中所学乘法是一样的，即 $ \(+ a\)times\(+ b\)= a b $ 例如：$(+ 1 / 3) times (+ 2 / 5) = 1 / 3 times 2 / 5 = 2 / 15$
+对于情形1，很显然，两个正有理数相乘，就是与小学算术中所学乘法是一样的，即 $ \(+ a\)times\(+ b\)= a b $ #noindent;例如：$(+ 1 / 3) times (+ 2 / 5) = 1 / 3 times 2 / 5 = 2 / 15$
 
 对于情形2，我们作以下的讨论：
 
-由于 $\(+ b\)+\(- b\)= 0$ 以及 $\(+ a\)times\(+ b\)= a b$ 已经知道，再利用我们约定应该继续有效的“数系运算通性”，就可以得出：$ \(+ a\)times\(+ b\)+\(+ a\)times\(- b\) & =\(+ a\)\[\(+ b\)+\(- b\)\] &  & upright("(分配律)")\
- & =\(+ a\)times 0 &  & upright("(相反数的特性)")\
- & = 0 &  & upright("(零的特性)") $
+由于 $\(+ b\)+\(- b\)= 0$ 以及 $\(+ a\)times\(+ b\)= a b$ 已经知道，再利用我们约定应该继续有效的“数系运算通性”，就可以得出：
+
+#numbered-align(($\(+ a\)times\(+ b\)+\(+ a\)times\(- b\)$, $zws =\(+ a\)\[\(+ b\)+\(- b\)\]$, [(分配律)]), ($$, $=\(+ a\)times 0$, [(相反数的特性)]), ($$, $= 0$, [(零的特性)]));
 
 这就是说，$a b +\(+ a\)times\(- b\)= 0$．
 
@@ -1597,12 +1583,13 @@ $ a - b + c - d & = a +\(- b\)+ c +\(- d\) &  & upright("(代数和原意)")\
 
 所以，#strong[两异号(一负一正)有理数相乘，将绝对值相乘，符号取负．]
 
-例如：$\(+ 5\)times (- 3 / 5) = - (5 times 3 / 5) = - 3$ $ \(- 2\)times (+ 1 / 3) = 2 times (- 1 / 3) = - 2 / 3 $ $ a times\(- 2\)= - 2 a $
+例如：$\(+ 5\)times (- 3 / 5) = - (5 times 3 / 5) = - 3$ $ \(- 2\)times (+ 1 / 3) = 2 times (- 1 / 3) = - 2 / 3 $ #noindent;$ a times\(- 2\)= - 2 a $
 
-对于情形3，两个负有理数相乘，我们也可以作类似讨论：$  & quad\(+ a\)times\(- b\)+\(- a\)times\(- b\)\
- & =\[\(+ a\)+\(- a\)\]times\(- b\) &  & upright("(分配律)")\
- & = 0 times\(- b\) &  & upright("(相反数的特性)")\
- & = 0 &  & upright("(零的特性)") $ 即：$\(+ a\)times\(- b\)+\(- a\)times\(- b\)= 0$．
+对于情形3，两个负有理数相乘，我们也可以作类似讨论：
+
+#numbered-align(($$, $quad\(+ a\)times\(- b\)+\(- a\)times\(- b\)$, false), ($$, $=\[\(+ a\)+\(- a\)\]times\(- b\)$, [(分配律)]), ($$, $= 0 times\(- b\)$, [(相反数的特性)]), ($$, $= 0$, [(零的特性)]));
+
+即：$\(+ a\)times\(- b\)+\(- a\)times\(- b\)= 0$．
 
 也就是说，$- a b$ 与 $\(- a\)times\(- b\)$ 应是互为相反数，因而乘积 $\(- a\)times\(- b\)$ 就是 $-\(- a b\)= + a b$．
 
@@ -1614,7 +1601,7 @@ $ a - b + c - d & = a +\(- b\)+ c +\(- d\) &  & upright("(代数和原意)")\
 
 综合情形1、2、3，可得到两个非零有理数的乘法法则：#strong[将绝对值相乘，而积的符号是：同号得正，异号得负．]再加上我们一开始就约定继续有效的“零的运算特性”：$ \(+ a\)times 0 & = 0 times\(+ a\)= 0\
 \(- a\)times 0 & = 0 times\(- a\)= 0\
-0 times 0 & = 0 $ 这样，对任意两个有理数都可以进行乘法运算了．
+0 times 0 & = 0 $ #noindent;这样，对任意两个有理数都可以进行乘法运算了．
 
 #example[
 计算下列各题：
@@ -1655,18 +1642,16 @@ $ a - b + c - d & = a +\(- b\)+ c +\(- d\) &  & upright("(代数和原意)")\
 
 ]
 #solution[
-$  & quad\(- 7\)dot.op\(+ 3\)dot.op\(+ 5\)dot.op\(- 2\)dot.op (- 1 / 21)\
- & = [\( - 7 \) dot.op \( + 3 \) dot.op (- 1 / 21)] dot.op\[\(+ 5\)dot.op\(- 2\)\] &  & upright("(交换、结合律)")\
- & = [\( - 21 \) dot.op (- 1 / 21)] dot.op\[\(- 10\)\] &  & upright("(异号相乘法则)")\
- & =\(+ 1\)dot.op\(- 10\) &  & upright("(同号相乘法则)")\
- & = - 10 &  & upright("(1的特性)") $ $  & quad\(+ 0.1\)dot.op\(- 2.5\)dot.op\(+ 4\)dot.op\(- 9\)dot.op\(+ 100\)\
+#numbered-align(($$, $quad\(- 7\)dot.op\(+ 3\)dot.op\(+ 5\)dot.op\(- 2\)dot.op (- 1 / 21)$, false), ($$, $= [\( - 7 \) dot.op \( + 3 \) dot.op (- 1 / 21)] dot.op\[\(+ 5\)dot.op\(- 2\)\]$, [(交换、结合律)]), ($$, $= [\( - 21 \) dot.op (- 1 / 21)] dot.op\[\(- 10\)\]$, [(异号相乘法则)]), ($$, $=\(+ 1\)dot.op\(- 10\)$, [(同号相乘法则)]), ($$, $= - 10$, [(1的特性)]));
+
+$  & quad\(+ 0.1\)dot.op\(- 2.5\)dot.op\(+ 4\)dot.op\(- 9\)dot.op\(+ 100\)\
  & =\[\(+ 0.1\)dot.op\(+ 100\)dot.op\(- 9\)\]dot.op\[\(- 2.5\)dot.op\(+ 4\)\]\
  & =\(- 90\)dot.op\(- 10\)= + 900 $
 
 ]
 从例1.27两题的计算结果中，你能发现“几个非零有理数连乘时，乘积的符号与负乘数的个数之间”有什么规律吗？
 
-再观察两个例子：$ \(- 1\)dot.op\(- 2\)dot.op\(+ 3\)dot.op (- 1 / 2) dot.op (- 1 / 3) = + 1 $ $ \(- 1\)dot.op\(- 2\)dot.op\(- 3\)dot.op (- 1 / 2) dot.op (- 1 / 3) = - 1 $
+再观察两个例子：$ \(- 1\)dot.op\(- 2\)dot.op\(+ 3\)dot.op (- 1 / 2) dot.op (- 1 / 3) = + 1 $ #noindent;$ \(- 1\)dot.op\(- 2\)dot.op\(- 3\)dot.op (- 1 / 2) dot.op (- 1 / 3) = - 1 $
 
 可见，在计算若干个非零有理数的连乘积时，只要将绝对值相乘，而乘积的符号，可以直接由“负乘数的个数”来确定，即：
 
@@ -1700,7 +1685,7 @@ $  & quad\(- 7\)dot.op\(+ 3\)dot.op\(+ 5\)dot.op\(- 2\)dot.op (- 1 / 21)\
 这里要指出，对于含有字母的算式，计算中只要#strong[注意字母前所带的正、负号就可以，不必去讨论字母本身是正数还是负数]．
 
 #exercise[
-+ 口答：$ \(- 2\)dot.op\(+ 15\)\,quad\(- 2\)dot.op\(- 15\)\,quad -\(- 2\)dot.op\(- 15\)\,quad -\(+ 2\)dot.op\(- 15\) $ $ \(- 0.25\)dot.op\(+ 8\)\,quad\(- 0.25\)dot.op\(- 8\)\,quad -\(+ 0.25\)dot.op\(- 8\)\,quad\(- 0.25\)dot.op\[-\(- 8\)\] $ $ \(- 1981\)dot.op 0\,#h(2em) 0 dot.op (+ 11 1 / 22) $ $ (- 4 / 7) dot.op (+ 1 3 / 4)\,quad (- 1 3 / 4) dot.op (- 4 / 7)\,quad - (- 1 3 / 4) dot.op (+ 4 / 7) $
++ 口答：$ \(- 2\)dot.op\(+ 15\)\,quad\(- 2\)dot.op\(- 15\)\,quad -\(- 2\)dot.op\(- 15\)\,quad -\(+ 2\)dot.op\(- 15\) $ #noindent;$ \(- 0.25\)dot.op\(+ 8\)\,quad\(- 0.25\)dot.op\(- 8\)\,quad -\(+ 0.25\)dot.op\(- 8\)\,quad\(- 0.25\)dot.op\[-\(- 8\)\] $ #noindent;$ \(- 1981\)dot.op 0\,#h(2em) 0 dot.op (+ 11 1 / 22) $ #noindent;$ (- 4 / 7) dot.op (+ 1 3 / 4)\,quad (- 1 3 / 4) dot.op (- 4 / 7)\,quad - (- 1 3 / 4) dot.op (+ 4 / 7) $
 
 + 计算：
 
@@ -1756,14 +1741,14 @@ $ \(+ a\)div\(- b\)= - a / b\,#h(2em)\(- a\)div\(+ b\)= - a / b $
 ]
 #solution[
 $ \(- 82\)div\(+ 4\) & = - 20 1 / 2\
-\(- 82\)div\(- 4\) & = + 20 1 / 2 $ $ \(+ 0.08\)div\(- 0.2\) & = - 0.08 / 0.2 = - 0.4\
+\(- 82\)div\(- 4\) & = + 20 1 / 2 $ #noindent;$ \(+ 0.08\)div\(- 0.2\) & = - 0.08 / 0.2 = - 0.4\
 \(- 0.08\)div\(- 0.2\) & = 0.4\
--\(- 0.08\)div\(+ 0.2\) & =\(+ 0.08\)div\(+ 0.2\)= + 0.4 $ $ (- 3 / 7) dot.op (+ 1 1 / 3) div (- 2 / 7) & = (- 3 / 7 times 4 / 3) div (- 2 / 7)\
+-\(- 0.08\)div\(+ 0.2\) & =\(+ 0.08\)div\(+ 0.2\)= + 0.4 $ #noindent;$ (- 3 / 7) dot.op (+ 1 1 / 3) div (- 2 / 7) & = (- 3 / 7 times 4 / 3) div (- 2 / 7)\
  & = (- 4 / 7) div (- 2 / 7)\
- & = + (4 / 7 times 7 / 2) = + 2 $ $ - 4 / 5 div 4 = (- 4 / 5) div\(+ 4\)= - (4 / 5 times 1 / 4) = - 1 / 5 $
+ & = + (4 / 7 times 7 / 2) = + 2 $ #noindent;$ - 4 / 5 div 4 = (- 4 / 5) div\(+ 4\)= - (4 / 5 times 1 / 4) = - 1 / 5 $
 
 ]
-又由于任一个非零有理数 $y$ 与零的乘积为零，即 $y dot.op 0 = 0 dot.op y = 0\,thick\(y eq.not 0\)$，所以，可得：$ 0 div y = 0 quad\(y eq.not 0\) $ 这就是说：#strong[零除以任一个非零有理数，其商仍为零]．但特别注意：#strong[零不能作除数]．
+又由于任一个非零有理数 $y$ 与零的乘积为零，即 $y dot.op 0 = 0 dot.op y = 0\,thick\(y eq.not 0\)$，所以，可得：$ 0 div y = 0 quad\(y eq.not 0\) $ #noindent;这就是说：#strong[零除以任一个非零有理数，其商仍为零]．但特别注意：#strong[零不能作除数]．
 
 #exercise[
 计算下列各题：
@@ -1816,9 +1801,9 @@ $ \(- 82\)div\(+ 4\) & = - 20 1 / 2\
 
 ]
 #solution[
-$ - 2.5 div 5 / 6 times (- 1 / 3) & = - 2.5 times 6 / 5 times (- 1 / 3) &  & upright("(除法转化为乘法)")\
- & = + (5 / 2 times 6 / 5 times 1 / 3) &  & upright("(乘法法则)")\
- & = 1 $ $ \[\(- 56\)div\(- 7\)\]+ [\( - 2 \) div (+ 1 / 2)] & =\(- 56\)times (- 1 / 7) +\(- 2\)times\(+ 2\)\
+#numbered-align(($- 2.5 div 5 / 6 times (- 1 / 3)$, $zws = - 2.5 times 6 / 5 times (- 1 / 3)$, [(除法转化为乘法)]), ($$, $= + (5 / 2 times 6 / 5 times 1 / 3)$, [(乘法法则)]), ($$, $= 1$, false));
+
+$ \[\(- 56\)div\(- 7\)\]+ [\( - 2 \) div (+ 1 / 2)] & =\(- 56\)times (- 1 / 7) +\(- 2\)times\(+ 2\)\
  & =\(+ 8\)+\(- 4\)= 4 $
 
 ]
@@ -1842,7 +1827,7 @@ $ - 2.5 div 5 / 6 times (- 1 / 3) & = - 2.5 times 6 / 5 times (- 1 / 3) &  & upr
 
 ]
 === 有理数的乘方
-乘方运算就是相同乘数(因数)的连乘运算．当底数 $a$ 为任一有理数时，同样可以记作：$ underbrace(a dot.op a dots.h.c a, n upright("个")) = a^n\,#h(2em) upright("（") n upright("是大于1的自然数）") $ $a^n$ 读作“$a$ 的 $n$ 次方”或“$a$ 的 $n$ 次幂”．
+乘方运算就是相同乘数(因数)的连乘运算．当底数 $a$ 为任一有理数时，同样可以记作：$ underbrace(a dot.op a dots.h.c a, n upright("个")) = a^n\,#h(2em) upright("（") n upright("是大于1的自然数）") $ #noindent;$a^n$ 读作“$a$ 的 $n$ 次方”或“$a$ 的 $n$ 次幂”．
 
 同时，仍然规定：$ a = a^1\,#h(2em) a^0 = 1 quad\(a eq.not 0\) $
 
@@ -1914,15 +1899,11 @@ a^m div a^n & = a^(m - n) #h(2em)\(a eq.not 0\,thick m gt.eq n\)\
 
 ]
 #solution[
-$ upright("原式") & =\[\(- 2\)^2 dot.op\(- 5\)^2\]dot.op [\( - 5 \)^3 dot.op (+ 3 / 5)^3] &  & upright("(交换律、结合律)")\
- & =\[\(- 2\)dot.op\(- 5\)\]^2 dot.op [\( - 5 \) dot.op 3 / 5]^3 &  & upright("(指数运算律)")\
- & =\(+ 10\)^2 dot.op\(- 3\)^3 &  & upright("(乘法法则)")\
- & = 100 times\(- 27\) &  & upright("(乘方运算法则)")\
- & = - 2700 $
+#numbered-align(($upright("原式")$, $zws =\[\(- 2\)^2 dot.op\(- 5\)^2\]dot.op [\( - 5 \)^3 dot.op (+ 3 / 5)^3]$, [(交换律、结合律)]), ($$, $=\[\(- 2\)dot.op\(- 5\)\]^2 dot.op [\( - 5 \) dot.op 3 / 5]^3$, [(指数运算律)]), ($$, $=\(+ 10\)^2 dot.op\(- 3\)^3$, [(乘法法则)]), ($$, $= 100 times\(- 27\)$, [(乘方运算法则)]), ($$, $= - 2700$, false));
 
 ]
 #example[
-利用10的幂形式，记出下列各数：$ 1000000\,#h(2em) 30000\,#h(2em) - 5700000\,#h(2em) 849000 $ (要求：一律写成 $a times 10^n$，且 $\|a\|$ 是一个比10小而比1大或等于1的正数)
+利用10的幂形式，记出下列各数：$ 1000000\,#h(2em) 30000\,#h(2em) - 5700000\,#h(2em) 849000 $ #noindent;\(要求：一律写成 $a times 10^n$，且 $\|a\|$ 是一个比10小而比1大或等于1的正数)
 
 ]
 #solution[
@@ -1968,10 +1949,7 @@ $ 1000000 & = 1 times 10^6 = 10^6\
 
 ]
 #solution[
-$ upright("原式") & = 25 times 3 - 27 times 6 div\(- 2\) &  & upright("(先乘方)")\
- & = 75 - 162 div\(- 2\) &  & upright("(再乘)")\
- & = 75 -\(- 81\) &  & upright("(再除)")\
- & = 75 + 81 = 156 &  & upright("(后加、减)") $
+#numbered-align(($upright("原式")$, $zws = 25 times 3 - 27 times 6 div\(- 2\)$, [(先乘方)]), ($$, $= 75 - 162 div\(- 2\)$, [(再乘)]), ($$, $= 75 -\(- 81\)$, [(再除)]), ($$, $= 75 + 81 = 156$, [(后加、减)]));
 
 ]
 #example[
@@ -1979,11 +1957,7 @@ $ upright("原式") & = 25 times 3 - 27 times 6 div\(- 2\) &  & upright("(先乘
 
 ]
 #solution[
-$ upright("原式") & = (9 / 4 + 1 / 8) div (- 3 / 8) + (- 3 / 5) times 25 / 9 &  & upright("(先里、乘方)")\
- & = (+ 19 / 8) times (- 8 / 3) + (- 3 / 5) times 25 / 9 &  & upright("(再乘、除)")\
- & = (- 19 / 3) + (- 15 / 9)\
- & = (- 19 / 3) + (- 5 / 3)\
- & = - (frac(19 + 5, 3)) = - 8 &  & upright("(后加、减)") $
+#numbered-align(($upright("原式")$, $zws = (9 / 4 + 1 / 8) div (- 3 / 8) + (- 3 / 5) times 25 / 9$, [(先里、乘方)]), ($$, $= (+ 19 / 8) times (- 8 / 3) + (- 3 / 5) times 25 / 9$, [(再乘、除)]), ($$, $= (- 19 / 3) + (- 15 / 9)$, false), ($$, $= (- 19 / 3) + (- 5 / 3)$, false), ($$, $= - (frac(19 + 5, 3)) = - 8$, [(后加、减)]));
 
 ]
 #exercise[
@@ -2009,15 +1983,9 @@ $ upright("原式") & = (9 / 4 + 1 / 8) div (- 3 / 8) + (- 3 / 5) times 25 / 9 &
 #solution[
 利用分配律可使计算简化．
 
-+ $ upright("原式") & = (7 / 4 - 7 / 8 - 7 / 12) times (- 8 / 7) &  & upright("(除法化为乘法)")\
-   & = 7 / 4 times (- 8 / 7) - 7 / 8 times (- 8 / 7) - 7 / 12 times (- 8 / 7) &  & upright("(分配律)")\
-   & = - 2 + 1 + 2 / 3 &  & upright("(乘法法则)")\
-   & = - 1 / 3 &  & upright("(求代数和)") $
++ #numbered-align(($upright("原式")$, $zws = (7 / 4 - 7 / 8 - 7 / 12) times (- 8 / 7)$, [(除法化为乘法)]), ($$, $= 7 / 4 times (- 8 / 7) - 7 / 8 times (- 8 / 7) - 7 / 12 times (- 8 / 7)$, [(分配律)]), ($$, $= - 2 + 1 + 2 / 3$, [(乘法法则)]), ($$, $= - 1 / 3$, [(求代数和)]));
 
-+ $ upright("原式") & = (- 3 / 2)^3 dot.op\(- 0.6\)^2 - (1 / 7)^0 dot.op (- 3 / 2)^3 +\(- 0.8\)^2 dot.op (- 3 / 2)^3 + 2^3 times (- 3 / 2)^3\
-   & = (- 3 / 2)^3 dot.op [\( - 0.6 \)^2 - (1 / 7)^0 + \( - 0.8 \)^2 + 2^3] &  & upright("(分配律)")\
-   & = - 27 / 8 dot.op\(0.36 - 1 + 0.64 + 8\)\
-   & = - 27 / 8 times 8 = - 27 $
++ #numbered-align(($upright("原式")$, $zws = (- 3 / 2)^3 dot.op\(- 0.6\)^2 - (1 / 7)^0 dot.op (- 3 / 2)^3 +\(- 0.8\)^2 dot.op (- 3 / 2)^3 + 2^3 times (- 3 / 2)^3$, false), ($$, $= (- 3 / 2)^3 dot.op [\( - 0.6 \)^2 - (1 / 7)^0 + \( - 0.8 \)^2 + 2^3]$, [(分配律)]), ($$, $= - 27 / 8 dot.op\(0.36 - 1 + 0.64 + 8\)$, false), ($$, $= - 27 / 8 times 8 = - 27$, false));
 
 ]
 #exercise[
@@ -2032,8 +2000,9 @@ $ upright("原式") & = (9 / 4 + 1 / 8) div (- 3 / 8) + (- 3 / 5) times 25 / 9 &
 + $(- 2 / 5) dot.op [\( - 1 \)^0 - (- 5 / 8) times \( - 2 \)^2 + 1 1 / 4 div (- 1 / 9)^0]$
 
 ]
-#heading(level: 2, numbering: none)[习题1.3]
-+ 直接利用加法法则，写出下列各结果：$ \(- 7\)+ 2\,#h(2em) (- 9 1 / 2) + (- 7 1 / 2)\,#h(2em)\(- 7\)+\(+ 7\)\,#h(2em) 3 +\(- 8\) $ $ (- 9 1 / 2) + (- 5 1 / 4)\,quad 10 1 / 10 + (- 10 1 / 10)\,quad\(- 2\)+\(- 5\)\,quad (- 7 1 / 2) + 5 $ $ a +\(- a\)\,#h(2em) 7 + 23\,#h(2em)\(- 8\)+ (+ 1 1 / 4)\,#h(2em)\(- 3.2\)+\(- 2.3\) $ $ \(- 41\)+ 38\,#h(2em) 0 + (- 8 1 / 3)\,#h(2em)\(- 2.5\)+\(+ 3.6\)\,#h(2em) 41 +\(- 38\) $ $ 6 1 / 2 + 0\,#h(2em)\(+ 8.7\)+\(- 9.5\) $
+#heading(level: 2, numbering: none, supplement: [toc-sub])[习题1.3]
+
++ 直接利用加法法则，写出下列各结果：$ \(- 7\)+ 2\,#h(2em) (- 9 1 / 2) + (- 7 1 / 2)\,#h(2em)\(- 7\)+\(+ 7\)\,#h(2em) 3 +\(- 8\) $ #noindent;$ (- 9 1 / 2) + (- 5 1 / 4)\,quad 10 1 / 10 + (- 10 1 / 10)\,quad\(- 2\)+\(- 5\)\,quad (- 7 1 / 2) + 5 $ #noindent;$ a +\(- a\)\,#h(2em) 7 + 23\,#h(2em)\(- 8\)+ (+ 1 1 / 4)\,#h(2em)\(- 3.2\)+\(- 2.3\) $ #noindent;$ \(- 41\)+ 38\,#h(2em) 0 + (- 8 1 / 3)\,#h(2em)\(- 2.5\)+\(+ 3.6\)\,#h(2em) 41 +\(- 38\) $ #noindent;$ 6 1 / 2 + 0\,#h(2em)\(+ 8.7\)+\(- 9.5\) $
 
 + 利用加法法则，填出下表各栏：
 
@@ -2062,12 +2031,28 @@ $ upright("原式") & = (9 / 4 + 1 / 8) div (- 3 / 8) + (- 3 / 5) times 25 / 9 &
   [$- 6$],
   [$- 5$],
   [$- 1$],
+  [],
+  [],
+  [],
+  [],
   [$1 1 / 4$],
   [$- 2 3 / 4$],
+  [],
+  [],
+  [],
+  [],
   [$- 3 1 / 2$],
   [$- 7 1 / 4$],
+  [],
+  [],
+  [],
+  [],
   [$- 1 / 9$],
   [$0$],
+  [],
+  [],
+  [],
+  [],
   table.hline(),
 );
 
@@ -2110,7 +2095,7 @@ $ upright("原式") & = (9 / 4 + 1 / 8) div (- 3 / 8) + (- 3 / 5) times 25 / 9 &
 
   ]
 
-+ 利用减法法则，计算下列各题．$ \(+ 2\)-\(+ 5\)\,quad (- 7 1 / 2) - (+ 1 1 / 2)\,quad (- 12 1 / 3) - 10\,quad\(+ 2\)-\(- 5\) $ $ (- 7 1 / 2) - (- 3 1 / 2)\,quad\(- 2.75\)-\(- 1.95\)\,quad 0 -\(+ 8\)\,quad (- 8 1 / 3) - (+ 8 1 / 3) $ $ \(+ 5\)-\(- 2.9\)\,quad\(- 5\)-\(- 8\)\,quad (+ 4 3 / 4) - 5\,quad\(+ 1.06\)-\(- 1.06\) $ $ (- 2 1 / 2) -\(+ 7\)\,quad 7 - (- 2 1 / 5)\,quad\(- 7.6\)-\(- 9\)\,quad\(- 2.5\)-\(- 7\) $ $ 0 - (- 9 1 / 2)\,#h(2em) 11 1 / 101 - 0 $
++ 利用减法法则，计算下列各题．$ \(+ 2\)-\(+ 5\)\,quad (- 7 1 / 2) - (+ 1 1 / 2)\,quad (- 12 1 / 3) - 10\,quad\(+ 2\)-\(- 5\) $ #noindent;$ (- 7 1 / 2) - (- 3 1 / 2)\,quad\(- 2.75\)-\(- 1.95\)\,quad 0 -\(+ 8\)\,quad (- 8 1 / 3) - (+ 8 1 / 3) $ #noindent;$ \(+ 5\)-\(- 2.9\)\,quad\(- 5\)-\(- 8\)\,quad (+ 4 3 / 4) - 5\,quad\(+ 1.06\)-\(- 1.06\) $ #noindent;$ (- 2 1 / 2) -\(+ 7\)\,quad 7 - (- 2 1 / 5)\,quad\(- 7.6\)-\(- 9\)\,quad\(- 2.5\)-\(- 7\) $ #noindent;$ 0 - (- 9 1 / 2)\,#h(2em) 11 1 / 101 - 0 $
 
 + 填出下列表中的空白：
 
@@ -2185,7 +2170,7 @@ $ upright("原式") & = (9 / 4 + 1 / 8) div (- 3 / 8) + (- 3 / 5) times 25 / 9 &
 
   + $2^3 dot.op (4 - 1 / 24) - (frac(- 1, 3) - 2^0 - 5^2 - 6)$
 
-+ 利用乘法法则计算：$ \(- 7\)times\(+ 9\)\,quad 3 times (- 2 1 / 2)\,quad\(- 3.5\)times\(+ 3.5\)\,quad\(- 7\)times\(- 10\) $ $ (- 3 1 / 2) times\(- 2\)\,quad\(- 7\)times (+ 1 / 7)\,quad\(- 7\)times (- 1 / 7)\,quad (- 1 1 / 7) times (+ 1 3 / 4) $ $ (- 1 1 / 6) times (- 6 / 7)\,quad 5 times\(- 2.4\)\,quad (- 1 1 / 4) times (- 1 1 / 5)\,quad (+ 2 2 / 3) times (- 3 / 8) $ $ \(- 8\)times\(- 1.25\)\,quad 0 times (- 1921 / 1981)\,quad\(- 6.2\)times\(- 7.1\)\,quad 0 times\(- 1919\) $ $ \(- a\)times 0\,#h(2em)\(+ 0.002\)times (- 1 / 500) $
++ 利用乘法法则计算：$ \(- 7\)times\(+ 9\)\,quad 3 times (- 2 1 / 2)\,quad\(- 3.5\)times\(+ 3.5\)\,quad\(- 7\)times\(- 10\) $ #noindent;$ (- 3 1 / 2) times\(- 2\)\,quad\(- 7\)times (+ 1 / 7)\,quad\(- 7\)times (- 1 / 7)\,quad (- 1 1 / 7) times (+ 1 3 / 4) $ #noindent;$ (- 1 1 / 6) times (- 6 / 7)\,quad 5 times\(- 2.4\)\,quad (- 1 1 / 4) times (- 1 1 / 5)\,quad (+ 2 2 / 3) times (- 3 / 8) $ #noindent;$ \(- 8\)times\(- 1.25\)\,quad 0 times (- 1921 / 1981)\,quad\(- 6.2\)times\(- 7.1\)\,quad 0 times\(- 1919\) $ #noindent;$ \(- a\)times 0\,#h(2em)\(+ 0.002\)times (- 1 / 500) $
 
 + 填满下列表格中的空白：
 
@@ -2269,7 +2254,7 @@ $ upright("原式") & = (9 / 4 + 1 / 8) div (- 3 / 8) + (- 3 / 5) times 25 / 9 &
 
   + $\(1 + x\)^2 = 1 + 2 x + x^2$
 
-+ 利用除法法则，计算下列各题：$ \(+ 48\)div\(- 6\)\,quad 2 / 3 div (- 1 / 2)\,quad (- 1 1 / 3) div (- 3 / 4)\,quad\(- 45\)div\(+ 9\) $ $ (- 3 / 5) div (- 3 / 5)\,quad\(- 0.25\)div\(- 4\)\,quad\(- 36\)div\(- 3\)\,quad (- 2 / 5) div (+ 1 / 2) $ $ \(+ 1.84\)div\(- 0.5\)\,quad frac(- 16, + 12)\,quad (- 1 1 / 3) div (+ 3 / 4)\,quad\(- 76\)div 1 1 / 3 $ $ frac(- 18, - 12)\,quad 2 1 / 2 div (- 1 1 / 4)\,quad\(- 83325\)div\(- 75\)\,quad 0 div\(- 1850\) $ $ (- 5 5 / 8) div (- 3 3 / 4)\,quad\(- 0.75\)div 5 5 / 8 $
++ 利用除法法则，计算下列各题：$ \(+ 48\)div\(- 6\)\,quad 2 / 3 div (- 1 / 2)\,quad (- 1 1 / 3) div (- 3 / 4)\,quad\(- 45\)div\(+ 9\) $ #noindent;$ (- 3 / 5) div (- 3 / 5)\,quad\(- 0.25\)div\(- 4\)\,quad\(- 36\)div\(- 3\)\,quad (- 2 / 5) div (+ 1 / 2) $ #noindent;$ \(+ 1.84\)div\(- 0.5\)\,quad frac(- 16, + 12)\,quad (- 1 1 / 3) div (+ 3 / 4)\,quad\(- 76\)div 1 1 / 3 $ #noindent;$ frac(- 18, - 12)\,quad 2 1 / 2 div (- 1 1 / 4)\,quad\(- 83325\)div\(- 75\)\,quad 0 div\(- 1850\) $ #noindent;$ (- 5 5 / 8) div (- 3 3 / 4)\,quad\(- 0.75\)div 5 5 / 8 $
 
 + 按表格的要求，填写各空格：
 
@@ -2336,7 +2321,7 @@ $ upright("原式") & = (9 / 4 + 1 / 8) div (- 3 / 8) + (- 3 / 5) times 25 / 9 &
 
   + 说明：如果 $a eq.not 0$,那么 $\(b + c + d\)div a = b div a + c div a + d div a$
 
-+ 写出下列各乘方的结果：$ \(- 2\)^5\,quad\(- 1.5\)^2 dot.op (1 1 / 2)^3\,quad (- 3 1 / 2)^2 div (2 / 7)^2\,quad (- 1 1 / 2)^4 $ $ \(- 5\)^2 dot.op\(- 5\)^0\,quad\(- 7\)^9 div 7^7\,quad\(+ 0.01\)^2\,quad\(- 0.01\)^2 dot.op\(- 0.1\)^3 $ $ \(- 0.2\)^4 div\(- 2\)^3\,quad (- 2 / 3)^3\,quad\(- 12\)^3 dot.op\(+ 18\)^3\,quad\(- 0.031\)^2 div\(- 0.031\)^2 $ $ - 2^2 / 5\,#h(2em) - 0.5^2 dot.op\(- 1\)^7\,#h(2em) (8 1 / 9)^2 div (- 8 1 / 9)^0 $ $ frac(- 3^3, 7)\,#h(2em) - 7^2 dot.op\(- 7\)^2 dot.op\(- 7\)\,#h(2em)\(- 0.25\)^4 div (1 / 4)^4 $
++ 写出下列各乘方的结果：$ \(- 2\)^5\,quad\(- 1.5\)^2 dot.op (1 1 / 2)^3\,quad (- 3 1 / 2)^2 div (2 / 7)^2\,quad (- 1 1 / 2)^4 $ #noindent;$ \(- 5\)^2 dot.op\(- 5\)^0\,quad\(- 7\)^9 div 7^7\,quad\(+ 0.01\)^2\,quad\(- 0.01\)^2 dot.op\(- 0.1\)^3 $ #noindent;$ \(- 0.2\)^4 div\(- 2\)^3\,quad (- 2 / 3)^3\,quad\(- 12\)^3 dot.op\(+ 18\)^3\,quad\(- 0.031\)^2 div\(- 0.031\)^2 $ #noindent;$ - 2^2 / 5\,#h(2em) - 0.5^2 dot.op\(- 1\)^7\,#h(2em) (8 1 / 9)^2 div (- 8 1 / 9)^0 $ #noindent;$ frac(- 3^3, 7)\,#h(2em) - 7^2 dot.op\(- 7\)^2 dot.op\(- 7\)\,#h(2em)\(- 0.25\)^4 div (1 / 4)^4 $
 
 + 计算，并用科学记数法表示结果：
 
@@ -2494,7 +2479,7 @@ $ upright("原式") & = (9 / 4 + 1 / 8) div (- 3 / 8) + (- 3 / 5) times 25 / 9 &
 \(a^m\)^n & = a^(m dot.op n)\
 (a / b)^m & = a^m / b^m #h(2em)\(b eq.not 0\)\
 a^0 & = 1 #h(2em)\(a eq.not 0\)\
-a^m div a^n & = a^(m - n) #h(2em)\(a eq.not 0\,thick m gt.eq n\) $ 其中，$m\,n$ 均为正整数．
+a^m div a^n & = a^(m - n) #h(2em)\(a eq.not 0\,thick m gt.eq n\) $ #noindent;其中，$m\,n$ 均为正整数．
 
 ]
 #exercise[
@@ -2512,7 +2497,7 @@ a^m div a^n & = a^(m - n) #h(2em)\(a eq.not 0\,thick m gt.eq n\) $ 其中，$m\,
 === 有理数的大小顺序
 在小学算术中已经知道：#strong[0比任何正数都小]；引进负数以后，显然应该约定：#strong[0比任何负数都大]．因而，在有理数中，我们约定：
 
-#strong[负数比0小，0比正数小]；显然，#strong[负数也就小于正数了]．这个结论可以记作：$ upright("负数") < upright("零") < upright("正数") $ 读作：负数小于零小于正数．符号“$<$”称为小于号．当然，我们也可以将这个结论记为：$ upright("正数") > upright("零") > upright("负数") $ 读作：“正数大于零大于负数”．符号“$>$”称为大于号．例如：$- 54 < 0 < + 0.01$，或 $+ 0.01 > 0 > - 54$.
+#strong[负数比0小，0比正数小]；显然，#strong[负数也就小于正数了]．这个结论可以记作：$ upright("负数") < upright("零") < upright("正数") $ #noindent;读作：负数小于零小于正数．符号“$<$”称为小于号．当然，我们也可以将这个结论记为：$ upright("正数") > upright("零") > upright("负数") $ #noindent;读作：“正数大于零大于负数”．符号“$>$”称为大于号．例如：$- 54 < 0 < + 0.01$，或 $+ 0.01 > 0 > - 54$.
 
 这样一来，在今后的学习中，对任一个正有理数 $a$，就可以用 $a > 0$ 表示；对任一个负有理数 $b$，就可以用 $b < 0$ 表示．
 
@@ -2534,7 +2519,7 @@ a^m div a^n & = a^(m - n) #h(2em)\(a eq.not 0\,thick m gt.eq n\) $ 其中，$m\,
 
 - 当 $a - b < 0$ 时，则有 $a < b$．
 
-例如：$5 - 3 = 2 > 0 quad arrow.r.double quad 5 > 3$ $ \(- 5\)-\(+ 3\)= - 8 < 0 quad arrow.r.double quad - 5 < + 3 $ $ \(- 5\)- (- 8 1 / 2) = + 3 1 / 2 > 0 quad arrow.r.double quad - 5 > - 8 1 / 2 $ $ 0 -\(- 7\)= + 7 > 0 quad arrow.r.double quad 0 > - 7 $ $ 0 - 0.01 = - 0.01 < 0 quad arrow.r.double quad 0 < 0.01 $
+例如：$5 - 3 = 2 > 0 quad arrow.r.double quad 5 > 3$ $ \(- 5\)-\(+ 3\)= - 8 < 0 quad arrow.r.double quad - 5 < + 3 $ #noindent;$ \(- 5\)- (- 8 1 / 2) = + 3 1 / 2 > 0 quad arrow.r.double quad - 5 > - 8 1 / 2 $ #noindent;$ 0 -\(- 7\)= + 7 > 0 quad arrow.r.double quad 0 > - 7 $ #noindent;$ 0 - 0.01 = - 0.01 < 0 quad arrow.r.double quad 0 < 0.01 $
 
 显然，以上约定，反过来也是成立的，即：
 
@@ -2629,7 +2614,7 @@ $therefore quad - 3 < - 1 / 4$
 
 ]
 #solution[
-可以两两比较大小，不过，还可以按上面所说，按绝对值大小排列的规律，把所给七个数排列为：$ - 9\,quad - 7\,quad - 1.4\,quad 0\,quad 1 / 2\,quad 1.4\,quad 3 $ 用小于号“$<$”连接：$ - 9 < - 7 < - 1.4 < 0 < 1 / 2 < 1.4 < 3 $ 显然，也可以写成：$ 3 > 1.4 > 1 / 2 > 0 > - 1.4 > - 7 > - 9 $ 把这些数，可以表示成数轴上的点：
+可以两两比较大小，不过，还可以按上面所说，按绝对值大小排列的规律，把所给七个数排列为：$ - 9\,quad - 7\,quad - 1.4\,quad 0\,quad 1 / 2\,quad 1.4\,quad 3 $ #noindent;用小于号“$<$”连接：$ - 9 < - 7 < - 1.4 < 0 < 1 / 2 < 1.4 < 3 $ #noindent;显然，也可以写成：$ 3 > 1.4 > 1 / 2 > 0 > - 1.4 > - 7 > - 9 $ #noindent;把这些数，可以表示成数轴上的点：
 
 #figure([#fig("1-07");
 
@@ -2683,9 +2668,9 @@ $therefore quad - 3 < - 1 / 4$
 
 ]
 #solution[
-由等式 $a - 5 = b - 2$，利用等式基本性质3，两边可以加上同一个数5，就变形为：$ a - 5 + 5 = b - 2 + 5 ， upright("即 ") a = b + 3 $ 这时已经可以知道，$a$ 比 $b$ 大3．
+由等式 $a - 5 = b - 2$，利用等式基本性质3，两边可以加上同一个数5，就变形为：$ a - 5 + 5 = b - 2 + 5 ， upright("即 ") a = b + 3 $ #noindent;这时已经可以知道，$a$ 比 $b$ 大3．
 
-为了应用“比较大小的约定”，还可以将等式 $a = b + 3$ 再进一步变形为：$ a - b = 3 #h(2em) upright("(由性质3，两边同减") b upright(")") $ 因此，$a > b$，且 $a$ 比 $b$ 大3．
+为了应用“比较大小的约定”，还可以将等式 $a = b + 3$ 再进一步变形为：$ a - b = 3 #h(2em) upright("(由性质3，两边同减") b upright(")") $ #noindent;因此，$a > b$，且 $a$ 比 $b$ 大3．
 
 ]
 #example[
@@ -2711,9 +2696,9 @@ $therefore quad (a / b) = 6 / 5$（由性质4，两边同乘以 $1 / 5$）
 
 ]
 #solution[
-利用基本性质，将等式 $- 4 = 7 + 11 x$ 进行以下变形，可得出等式：$ - 11 & = 11 x &  & upright("(两边同减去7)")\
-- 1 & = x &  & upright("(两边同除以11)")\
-x & = - 1 &  & upright("(两边对调位置)") $
+利用基本性质，将等式 $- 4 = 7 + 11 x$ 进行以下变形，可得出等式：
+
+#numbered-align(($- 11$, $zws = 11 x$, [(两边同减去7)]), ($- 1$, $zws = x$, [(两边同除以11)]), ($x$, $zws = - 1$, [(两边对调位置)]));
 
 ]
 #exercise[
@@ -2768,11 +2753,11 @@ x & = - 1 &  & upright("(两边对调位置)") $
 
 ]
 #solution[
-利用不等式的基本性质，可以作以下变形：$ because quad & 5 a - b > 1 / 2\(a + 7 b\) &  & upright("(已知)")\
-therefore quad & 10 a - 2 b > a + 7 b &  & upright("(不等式两边乘以2)")\
- & 9 a - 2 b > 7 b &  & upright("(不等式两边加")\(- a\) upright(")")\
- & 9 a > 9 b &  & upright("(不等式两边加") 2 b upright(")")\
-therefore quad & a > b &  & upright("(不等式两边同乘以") 1 / 9 > 0 upright(")") $ 因此可知，$a$ 大于 $b$．
+利用不等式的基本性质，可以作以下变形：
+
+#numbered-align(($because quad$, $zws 5 a - b > 1 / 2\(a + 7 b\)$, [(已知)]), ($therefore quad$, $zws 10 a - 2 b > a + 7 b$, [(不等式两边乘以2)]), ($$, $9 a - 2 b > 7 b$, [(不等式两边加 $\(- a\)$)]), ($$, $9 a > 9 b$, [(不等式两边加 $2 b$)]), ($therefore quad$, $zws a > b$, [(不等式两边同乘以 $1 / 9 > 0$)]));
+
+因此可知，$a$ 大于 $b$．
 
 ]
 #example[
@@ -2780,8 +2765,11 @@ therefore quad & a > b &  & upright("(不等式两边同乘以") 1 / 9 > 0 uprig
 
 ]
 #note[
-由 $a > b$，可作如下变形：$ a / 2 & > b / 2 &  & upright("(不等式两边同乘以") 1 / 2 > 0 upright(")")\
-a / 2 + a / 2 & > a / 2 + b / 2 &  & upright("(不等式两边同加") a / 2 upright(")") $ 所以，#numbered-eq($ a > frac(a + b, 2) $);同样可以类似地说明：#numbered-eq($ frac(a + b, 2) > b $);因此，由(1.6)(1.7)可得出：$ a > frac(a + b, 2) > b $
+由 $a > b$，可作如下变形：
+
+#numbered-align(($a / 2$, $zws > b / 2$, [(不等式两边同乘以 $1 / 2 > 0$)]), ($a / 2 + a / 2$, $zws > a / 2 + b / 2$, [(不等式两边同加 $a / 2$)]));
+
+所以，#numbered-eq($ a > frac(a + b, 2) $);同样可以类似地说明：#numbered-eq($ frac(a + b, 2) > b $);因此，由(1.6)(1.7)可得出：$ a > frac(a + b, 2) > b $
 
 ]
 这个例题的事实，告诉我们：#strong[任意两个有理数 $a\,b$ 之间，至少可以有一个有理数 $frac(a + b, 2)$]．也就是说，即便是相差很小的两个有理数之间，总还有另外的有理数．这也是有理数系区别于自然数系、整数系的一个重要特性．我们称它为有理数的#strong[稠密性]．
@@ -2798,7 +2786,8 @@ a / 2 + a / 2 & > a / 2 + b / 2 &  & upright("(不等式两边同加") a / 2 upr
 + 再想想：“如果 $A > B$, $C < D$,那么 $A - C > B - D$”对吗？举例说明．
 
 ]
-#heading(level: 2, numbering: none)[习题1.4]
+#heading(level: 2, numbering: none, supplement: [toc-sub])[习题1.4]
+
 + 利用运算通性，计算下列各题：
 
   + $- 1 2 / 3 times (0.5 - 2 / 3) div 1 1 / 9$
@@ -2889,12 +2878,13 @@ a / 2 + a / 2 & > a / 2 + b / 2 &  & upright("(不等式两边同加") a / 2 upr
 
 + #staritem;说明在有理数 $a\,b$ 之间，一定有一个有理数 $frac(a + 2 b, 3)$
 
-#heading(level: 2, numbering: none)[本章内容要点]
+#heading(level: 2, numbering: none, outlined: false)[本章内容要点]
+
 一、复习和总结了小学算术中所学的数(自然数，零及正分数)和四则运算，并进一步明确了自然数的意义，系统说明了运算中的普遍性质(通性)这就是：加法交换、结合律；乘法交换、结合律；分配律及0、1的运算特性，还引进了乘方运算和指数运算律：
 
 乘方运算：相同因数的连乘积．$ a^n = underbrace(a dot.op a dot.op a dots.h.c a, n upright("个") a)\,#h(2em) a^1 = a $
 
-指数运算律及零指数的意义：$ a^m dot.op a^n = a^(m + n)\,#h(2em)\(a dot.op b\)^n = a^n dot.op b^n\,#h(2em)\(a^m\)^n = a^(m dot.op n) $ $ (a / b)^n = a^n / b^n thick\(b eq.not 0\)\,#h(2em) a^m div a^n = a^(m - n) thick\(a eq.not 0\,thick m gt.eq n\)\,#h(2em) a^0 = 1 thick\(a eq.not 0\) $
+指数运算律及零指数的意义：$ a^m dot.op a^n = a^(m + n)\,#h(2em)\(a dot.op b\)^n = a^n dot.op b^n\,#h(2em)\(a^m\)^n = a^(m dot.op n) $ #noindent;$ (a / b)^n = a^n / b^n thick\(b eq.not 0\)\,#h(2em) a^m div a^n = a^(m - n) thick\(a eq.not 0\,thick m gt.eq n\)\,#h(2em) a^0 = 1 thick\(a eq.not 0\) $
 
 二、由相反意义的量，引进了意义相反的正数与负数，其特征就是“合并时，可以相消或部分相消”．特别地，$\(- a\)+\(+ a\)= 0$ 时，$- a$ 与 $a$ 叫做互为相反的数．$+ 1$ 与 $- 1$ 是相反意义的单位.因而将数的范围就扩大到有理数．
 
@@ -2910,7 +2900,7 @@ a / 2 + a / 2 & > a / 2 + b / 2 &  & upright("(不等式两边同加") a / 2 upr
 
 + 加法法则：设 $a\,b$ 是正有理数．$ \(+ a\)+\(+ b\) & = +\(a + b\)\
   \(- a\)+\(- b\) & = -\(a + b\)\
-  \(+ a\)+\(- b\) & = cases(+\(a - b\) & \(a > b\), -\(b - a\) & \(a < b\))\
+  \(+ a\)+\(- b\) & = display(cases(+\(a - b\) & quad \(a > b\), -\(b - a\) & quad \(a < b\)))\
   \(+ a\)+ 0 & = 0 +\(+ a\)= + a\
   \(- a\)+ 0 & = 0 +\(- a\)= - a\
   0 + 0 & = 0 $

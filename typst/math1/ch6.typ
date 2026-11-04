@@ -56,7 +56,8 @@
 
 + $frac(32\(x - 2 y\)^2\(- x + y\), 24\(2 y - x\)^2\(x - y\)) = frac(- 4\(x - 2 y\)^2\(x - y\), 3\(x - 2 y\)^2\(x - y\)) = - 4 / 3$
 
-+ $ frac(m^2 - 4 n^2, - m^2 - 4 m n - 4 n^2) & = frac(m^2 - 4 n^2, - (m^2 + 4 m n + 4 n^2))\
++ #h(0pt)
+  $ frac(m^2 - 4 n^2, - m^2 - 4 m n - 4 n^2) & = frac(m^2 - 4 n^2, - (m^2 + 4 m n + 4 n^2))\
    & = - frac(\(m - 2 n\)\(m + 2 n\), \(m + 2 n\)^2)\
    & = - frac(m - 2 n, m + 2 n) $
 
@@ -66,8 +67,8 @@
 
 ]
 #solution[
-用辗转相除法求得：$ \(x^4 - 2 x^3 + x - 2\,x^4 + x^2 + 1\)= x^2 - x + 1 $ 用除法求得 $ x^4 - 2 x^3 + x - 2 & =\(x^2 - x + 1\)\(x^2 - x - 2\)\
-x^4 + x^2 + 1 & =\(x^2 - x + 1\)\(x^2 + x + 1\) $ $therefore quad frac(x^4 - 2 x^3 + x - 2, x^4 + x^2 + 1) = frac(x^2 - x - 2, x^2 + x + 1)$
+用辗转相除法求得：$ \(x^4 - 2 x^3 + x - 2\,x^4 + x^2 + 1\)= x^2 - x + 1 $ #noindent;用除法求得 $ x^4 - 2 x^3 + x - 2 & =\(x^2 - x + 1\)\(x^2 - x - 2\)\
+x^4 + x^2 + 1 & =\(x^2 - x + 1\)\(x^2 + x + 1\) $ #noindent;$therefore quad frac(x^4 - 2 x^3 + x - 2, x^4 + x^2 + 1) = frac(x^2 - x - 2, x^2 + x + 1)$
 
 ]
 #example[
@@ -76,7 +77,7 @@ x^4 + x^2 + 1 & =\(x^2 - x + 1\)\(x^2 + x + 1\) $ $therefore quad frac(x^4 - 2 x
 ]
 #solution[
 用余式定理和综合除法求得：$ x^3 - 6 x^2 + 11 x - 6 & =\(x - 1\)\(x - 3\)\(x - 2\)\
-x^3 - 8 x^2 + 19 x - 12 & =\(x - 1\)\(x - 3\)\(x - 4\) $ $therefore quad frac(x^3 - 6 x^2 + 11 x - 6, x^3 - 8 x^2 + 19 x - 12) = frac(x - 2, x - 4)$
+x^3 - 8 x^2 + 19 x - 12 & =\(x - 1\)\(x - 3\)\(x - 4\) $ #noindent;$therefore quad frac(x^3 - 6 x^2 + 11 x - 6, x^3 - 8 x^2 + 19 x - 12) = frac(x - 2, x - 4)$
 
 ]
 下面我们和多项式一样，引入一个分式的符号：$F\(x\)$，它表示关于 $x$ 的一个分式；同样，$G\(x\)$、$T\(x\)$ 可以分别表示 $x$ 的另外的分式，例如：$F\(x\)= 1 / x$, $G\(x\)= frac(2 x, x^2 - 3)$ $T\(x\)= frac(7 x, 9 - x)$ 等．很自然，在一个分式 $F\(x\)$ 中，当 $x = a$ 时，分式的值可以表示为 $F\(a\)$．
@@ -181,13 +182,13 @@ frac(3 y, x^3 + y^3) & = frac(3 y\(x - y\), \(x - y\)\(x + y\)\(x^2 - x y + y^2\
 
   ]
   #block[
-  #set enum(numbering: latex-enum, start: 9)
+  #set enum(numbering: enum-at(2, none, start: 9))
   + $frac(-\(x + y - z\)\(x - y + z\)\(x - y - z\), \(y + z - x\)\(y - z + x\)\(y - z - x\))$
   ]
 
   #cols(2)[
   #block[
-  #set enum(numbering: latex-enum, start: 10)
+  #set enum(numbering: enum-at(2, none, start: 10))
   + $frac(x^2 - y^2, x^2 - 2 x y + y^2)$
 
   + $frac(1 - x^3, x^2 - 1)$
@@ -224,7 +225,7 @@ frac(3 y, x^3 + y^3) & = frac(3 y\(x - y\), \(x - y\)\(x + y\)\(x^2 - x y + y^2\
 
   ]
   #block[
-  #set enum(numbering: latex-enum, start: 5)
+  #set enum(numbering: enum-at(2, none, start: 5))
   + $frac(1, \(a - b\)\(a - c\))\,quad frac(1, \(b - c\)\(b - a\))\,quad frac(1, \(c - a\)\(c - b\))$
 
   + $frac(x, x - y)\,quad frac(y, x + y)\,quad frac(2, y^2 - x^2)$
@@ -305,7 +306,7 @@ $ upright("原式") & = frac(a^3, a - 1) - frac(a^2 + a + 1, 1)\
 
 ]
 #analyze[
-由余式定理得 $x - 1$ 是第一个分式的分子、分母的公因式，将此分式约简：$ frac(x^2 - 1, x^4 + x^2 - 2 x) = frac(\(x + 1\)\(x - 1\), \(x - 1\)\(x^3 + x^2 + 2 x\)) = frac(x + 1, x^3 + x^2 + 2 x) $ 由余式定理得 $2 x - 1$ 是第二个分式的分子、分母的公因式，将此分式约简：$ frac(2 x^2 + 3 x - 2, 2 x^3 + x^2 + 3 x - 2) = frac(\(x + 2\)\(2 x - 1\), \(2 x - 1\)\(x^2 + x + 2\)) = frac(x + 2, x^2 + x + 2) $
+由余式定理得 $x - 1$ 是第一个分式的分子、分母的公因式，将此分式约简：$ frac(x^2 - 1, x^4 + x^2 - 2 x) = frac(\(x + 1\)\(x - 1\), \(x - 1\)\(x^3 + x^2 + 2 x\)) = frac(x + 1, x^3 + x^2 + 2 x) $ #noindent;由余式定理得 $2 x - 1$ 是第二个分式的分子、分母的公因式，将此分式约简：$ frac(2 x^2 + 3 x - 2, 2 x^3 + x^2 + 3 x - 2) = frac(\(x + 2\)\(2 x - 1\), \(2 x - 1\)\(x^2 + x + 2\)) = frac(x + 2, x^2 + x + 2) $
 
 ]
 #solution[
@@ -324,11 +325,11 @@ $ upright("原式") & = frac(\(x + 1\)\(x - 1\), \(x - 1\)\(x^3 + x^2 + 2 x\)) +
 
 ]
 #proof[
-#emph[Proof.]由于：$ frac(1, b^2 + c^2 - a^2) & = frac(1, b^2 + c^2 -\(b + c\)^2) = - frac(1, 2 b c)\
+由于：$ frac(1, b^2 + c^2 - a^2) & = frac(1, b^2 + c^2 -\(b + c\)^2) = - frac(1, 2 b c)\
 frac(1, c^2 + a^2 - b^2) & = frac(1, c^2 + a^2 -\(c + a\)^2) = - frac(1, 2 a c)\
-frac(1, a^2 + b^2 - c^2) & = frac(1, a^2 + b^2 -\(a + b\)^2) = - frac(1, 2 a b) $ 因此：$  & quad frac(1, b^2 + c^2 - a^2) + frac(1, c^2 + a^2 - b^2) + frac(1, a^2 + b^2 - c^2)\
+frac(1, a^2 + b^2 - c^2) & = frac(1, a^2 + b^2 -\(a + b\)^2) = - frac(1, 2 a b) $ #noindent;因此：$  & quad frac(1, b^2 + c^2 - a^2) + frac(1, c^2 + a^2 - b^2) + frac(1, a^2 + b^2 - c^2)\
  & = - frac(1, 2 b c) - frac(1, 2 a c) - frac(1, 2 a b)\
- & = - frac(a + b + c, 2 a b c) = 0 quad\(because med a + b + c = 0\) $~◻
+ & = - frac(a + b + c, 2 a b c) = 0 quad\(because med a + b + c = 0\) $
 
 ]
 #exercise[
@@ -338,7 +339,7 @@ frac(1, a^2 + b^2 - c^2) & = frac(1, a^2 + b^2 -\(a + b\)^2) = - frac(1, 2 a b) 
 
   #cols(2)[
   #block[
-  #set enum(numbering: latex-enum, start: 2)
+  #set enum(numbering: enum-at(2, none, start: 2))
   + $frac(1, m^4 n^3) + frac(2, m^3 n^4)$
 
   + $frac(5 a, 6 b^2 c) - frac(7 b, 12 a c^2) + frac(11 c, 8 a^2 b)$
@@ -468,7 +469,7 @@ $ upright("原式") & = frac(2\(1 - x\)\(1 + x\)+\(1 - x\)^2 +\(1 + x\)^2, \(1 +
 
   ]
   #block[
-  #set enum(numbering: latex-enum, start: 7)
+  #set enum(numbering: enum-at(2, none, start: 7))
   + $(x^2 - 6 x + 9) div frac(x^2 - 9 x + 18, x + 3)$
 
   + $frac(a + x, \(m + n\)^2) dot.op frac(x^2 - y^2, 12) dot.op frac(m + n, n - m) dot.op frac(6 (m^2 - n^2), x + y)$
@@ -519,10 +520,10 @@ $therefore quad$ 原方程的解集是：${ - 4 }$．
 #solution[
 原方程就是：$frac(1, x + 2) + frac(4 x, \(x + 2\)\(x - 2\)) = 1 + frac(2, x - 2)$
 
-两边乘以分母的最低公倍式 $\(x + 2\)\(x - 2\)$,并约简得：$ \(x - 2\)+ 4 x =\(x + 2\)\(x - 2\)+ 2\(x + 2\) $ 解整式方程 $x^2 - 3 x + 2 = 0\,#h(2em) therefore quad x_1 = 1\,thick x_2 = 2$
+两边乘以分母的最低公倍式 $\(x + 2\)\(x - 2\)$,并约简得：$ \(x - 2\)+ 4 x =\(x + 2\)\(x - 2\)+ 2\(x + 2\) $ #noindent;解整式方程 $x^2 - 3 x + 2 = 0\,#h(2em) therefore quad x_1 = 1\,thick x_2 = 2$
 
 验根：把 $x = 1$ 代入原方程两边：$ upright("左式") & = frac(1, 1 + 2) + frac(4, 1 - 4) = 1 / 3 - 4 / 3 = - 1\
-upright("右式") & = 1 + frac(2, 1 - 2) = 1 - 2 = - 1 $ $therefore quad x = 1$ 是原方程的根．
+upright("右式") & = 1 + frac(2, 1 - 2) = 1 - 2 = - 1 $ #noindent;$therefore quad x = 1$ 是原方程的根．
 
 把 $x = 2$ 代入原方程时，由于分母 $x - 2 = 0$, $x^2 - 4 = 0$，就是说：当 $x = 2$ 时原方程没有意义，所以 $x = 2$ 不是原方程的根，应舍去它．
 
@@ -590,7 +591,7 @@ $therefore quad$ 所求正实数是：$1 / 2 + sqrt(5) / 2$．
 #solution[
 原方程就是 $frac(2, x + 1) + frac(3, x - 1) = frac(6, \(x + 1\)\(x - 1\))$
 
-方程两边乘以 $\(x + 1\)dot.op\(x - 1\)$，并约简得：$ 2\(x - 1\)+ 3\(x + 1\)= 6 $ 解整式方程 $ 2 x - 2 + 3 x + 3 & = 6\
+方程两边乘以 $\(x + 1\)dot.op\(x - 1\)$，并约简得：$ 2\(x - 1\)+ 3\(x + 1\)= 6 $ #noindent;解整式方程 $ 2 x - 2 + 3 x + 3 & = 6\
 5 x & = 5\
 x & = 1 $
 
@@ -651,7 +652,7 @@ $therefore quad$ 原方程的解集是 ${5 \, 5 / 2}$．
 #solution[
 设 $frac(\(x - 1\)^2, x) = y$，则 $frac(x, \(x - 1\)^2) = 1 / y$
 
-代入原方程就是 $y + 1 / y = 2$，两边乘以 $y$，并约简得 $ y^2 + 1 = 2 y quad arrow.r.double quad y^2 - 2 y + 1 = 0 $ 解这个方程，得：$y = 1$．
+代入原方程就是 $y + 1 / y = 2$，两边乘以 $y$，并约简得 $ y^2 + 1 = 2 y quad arrow.r.double quad y^2 - 2 y + 1 = 0 $ #noindent;解这个方程，得：$y = 1$．
 
 把 $y = 1$ 代入 $frac(\(x - 1\)^2, x) = y$，得：#numbered-eq($ frac(\(x - 1\)^2, x) = 1 $);两边乘以 $x$，并约简得：#numbered-eq($ \(x - 1\)^2 = x $);即：$x^2 - 3 x + 1 = 0$
 
@@ -671,7 +672,7 @@ $therefore quad$ 原方程的解集是 ${3 / 2 + sqrt(5) / 2 \, thick 3 / 2 - sq
 
 ]
 #solution[
-方程两边乘以 $a b x$ 得：$ b x + a^2 b = a x + a b^2 $ 解整式方程 $\(b - a\)x = a b\(b - a\)$
+方程两边乘以 $a b x$ 得：$ b x + a^2 b = a x + a b^2 $ #noindent;解整式方程 $\(b - a\)x = a b\(b - a\)$
 
 $because quad a eq.not b\,#h(2em) therefore quad b - a eq.not 0$
 
@@ -733,7 +734,7 @@ $ upright("原计划需要的天数") = upright("实际需要天数") + 4 uprigh
 
 按题意得：$960 / x = frac(960, x + 40) + 4$
 
-两边乘以 $x\(x + 40\)$,得：$ 960\(x + 40\)= 960 x + 4 x\(x + 40\) $ 整理得：$x^2 + 40 x - 9600 = 0$
+两边乘以 $x\(x + 40\)$,得：$ 960\(x + 40\)= 960 x + 4 x\(x + 40\) $ #noindent;整理得：$x^2 + 40 x - 9600 = 0$
 
 $therefore quad x_1 = 80\,quad x_2 = - 120$
 
@@ -775,13 +776,12 @@ $A$、$B$ 两地相距87公里，甲骑自行车从 $A$ 出发向 $B$ 驶去，�
 );
 
 ]
-$ upright("甲自") A upright("到") C upright("所需要时间") = upright("乙由") B upright("到") C upright("所需
-要时间") + 30 / 60 upright("小时") $
+$ upright("甲自") A upright("到") C upright("所需要时间") = upright("乙由") B upright("到") C upright("所需要时间") + 30 / 60 upright("小时") $
 
 ]
 #solution[
-设甲每小时行 $x$ 公里，则乙每小时行 $\(x + 4\)$ 公里，按题意：$ frac(87 - 45, x) = frac(45, x + 4) + 30 / 60 $ 两边乘以 $2 x\(x + 4\)$ 得：$ 2 times 42\(x + 4\) & = 2 times 45 x + x\(x + 4\)\
-x^2 + 10 x - 336 & = 0 $ $therefore quad x_1 = 14\,#h(2em) x_2 = - 24$
+设甲每小时行 $x$ 公里，则乙每小时行 $\(x + 4\)$ 公里，按题意：$ frac(87 - 45, x) = frac(45, x + 4) + 30 / 60 $ #noindent;两边乘以 $2 x\(x + 4\)$ 得：$ 2 times 42\(x + 4\) & = 2 times 45 x + x\(x + 4\)\
+x^2 + 10 x - 336 & = 0 $ #noindent;$therefore quad x_1 = 14\,#h(2em) x_2 = - 24$
 
 检验：$x = 14$ 是原方程根，$x = - 24$ 是原方程根，但不合题意，舍去．$ x + 4 = 14 + 4 = 18 $
 
@@ -795,7 +795,7 @@ x^2 + 10 x - 336 & = 0 $ $therefore quad x_1 = 14\,#h(2em) x_2 = - 24$
 #solution[
 设甲队独做 $x$ 天完成，乙队独做 $3 / 2 x$ 天完成，则甲每天工作量是 $1 / x$，乙每天工作量是 $frac(1, tfrac(3, 2) x)$，甲、乙两队合做一天的工作量是 $1 / x + frac(1, tfrac(3, 2) x)$；合做两天的工作量是 $2 (1 / x + frac(1, tfrac(3, 2) x))$．
 
-按题意得：$ 2 (1 / x + frac(1, tfrac(3, 2) x)) + frac(1, tfrac(3, 2) x) = 1 $ 就是 $2 / x + frac(4, 3 x) + frac(2, 3 x) = 1$
+按题意得：$ 2 (1 / x + frac(1, tfrac(3, 2) x)) + frac(1, tfrac(3, 2) x) = 1 $ #noindent;就是 $2 / x + frac(4, 3 x) + frac(2, 3 x) = 1$
 
 方程两边乘以 $3 x$ 得：$ 6 + 4 + 2 & = 3 x\
 3 x & = 12\
@@ -814,7 +814,8 @@ x & = 4 $
 + 甲、乙、丙三人合做一件工作12天完成，已知甲1天完成的工作，乙须要2天，丙须要3天，问三人单独完成这件工作，各需要多少天？
 
 ]
-#heading(level: 2, numbering: none)[习题6.1]
+#heading(level: 2, numbering: none, supplement: [toc-sub])[习题6.1]
+
 + 下列各分式在什么条件下无意义：
 
   #cols(2)[
@@ -925,7 +926,7 @@ x & = 4 $
 #blk[][
 + $(sqrt(a))^2 = a quad\(a gt.eq 0\)$
 
-+ $sqrt(a^2) =\|a\|= cases(a\, & a gt.eq 0, - a\, & a < 0)$
++ $sqrt(a^2) =\|a\|= display(cases(a\, & quad a gt.eq 0, - a\, & quad a < 0))$
 
 + $sqrt(a dot.op b) = sqrt(a) dot.op sqrt(b) quad\(a gt.eq 0\,thick b gt.eq 0\)$
 
@@ -939,7 +940,7 @@ x & = 4 $
 
 ]
 #solution[
-$ sqrt(\(x - 2\)^2) =\|x - 2\|= cases(x - 2\, & x gt.eq 2, 2 - x\, & x < 2) $
+$ sqrt(\(x - 2\)^2) =\|x - 2\|= display(cases(x - 2\, & quad x gt.eq 2, 2 - x\, & quad x < 2)) $
 
 ]
 #example[
@@ -948,7 +949,7 @@ $ sqrt(\(x - 2\)^2) =\|x - 2\|= cases(x - 2\, & x gt.eq 2, 2 - x\, & x < 2) $
 ]
 #solution[
 $ sqrt(x^2 - 2 x y + y^2) & = sqrt(\(x - y\)^2) =\|x - y\|\
- & = cases(x - y\, & x gt.eq y, y - x\, & x < y) $
+ & = display(cases(x - y\, & quad x gt.eq y, y - x\, & quad x < y)) $
 
 ]
 #example[
@@ -960,7 +961,7 @@ $sqrt(\(x^2 + 1\)^2) = x^2 + 1$
 
 ]
 #example[
-如果 $a$、$b$ 为非负实数，试化简下列各式：$ sqrt(a^4)\,#h(2em) sqrt(0.01 a^2 b^6)\,#h(2em) sqrt(a^(2 n)) $（n是自然数）．
+如果 $a$、$b$ 为非负实数，试化简下列各式：$ sqrt(a^4)\,#h(2em) sqrt(0.01 a^2 b^6)\,#h(2em) sqrt(a^(2 n)) $#noindent;（n是自然数）．
 
 ]
 #solution[
@@ -1088,7 +1089,8 @@ $sqrt(\(x^2 + 1\)^2) = x^2 + 1$
 
 + $sqrt(frac(c, a^2 b)) = 1 / a sqrt(frac(b c, b^2)) = frac(1, a b) sqrt(b c)$
 
-+ $ sqrt(frac(\(a + b\)^2, a^2 - b^2)) & = sqrt(frac(\(a + b\)^2, \(a + b\)\(a - b\)))\
++ #h(0pt)
+  $ sqrt(frac(\(a + b\)^2, a^2 - b^2)) & = sqrt(frac(\(a + b\)^2, \(a + b\)\(a - b\)))\
    & = sqrt(frac(a + b, a - b))\
    & = sqrt(frac(\(a + b\)\(a - b\), \(a - b\)^2))\
    & = sqrt(a^2 - b^2) / sqrt(\(a - b\)^2)\
@@ -1177,7 +1179,8 @@ $sqrt(\(x^2 + 1\)^2) = x^2 + 1$
 
 + $sqrt(8 x^3 y^4) = 2 x y^2 sqrt(2 x)$
 
-+ $ x y sqrt((1 / x + 1 / y)\(x + y\)) & = x y sqrt(frac(\(x + y\)^2, x y))\
++ #h(0pt)
+  $ x y sqrt((1 / x + 1 / y)\(x + y\)) & = x y sqrt(frac(\(x + y\)^2, x y))\
    & = x y sqrt(frac(\(x + y\)^2 x y, x^2 y^2))\
    & =\(x + y\)sqrt(x y) $
 
@@ -1187,7 +1190,7 @@ $sqrt(\(x^2 + 1\)^2) = x^2 + 1$
 例如：$2 sqrt(5)$、$1 / 3 sqrt(5)$、$a sqrt(5)$ 等都是同类根式；而 $sqrt(2)$ 与 $sqrt(3)$、$sqrt(x)$ 与 $sqrt(y)$、$sqrt(a)$ 与 $sqrt(7 a)$ 等都不是同类根式．
 
 #example[
-把下列各根式化为最简根式，并指出哪些是同类根式？$ sqrt(2)\,#h(2em) sqrt(75)\,#h(2em) sqrt(1 / 50)\,#h(2em) sqrt(1 / 27)\,#h(2em) sqrt(3) $ $ 2 / 3 sqrt(8 a b^3) quad\(b > 0\)\,#h(2em) 6 b sqrt(frac(a, 2 b)) quad\(b > 0\) $
+把下列各根式化为最简根式，并指出哪些是同类根式？$ sqrt(2)\,#h(2em) sqrt(75)\,#h(2em) sqrt(1 / 50)\,#h(2em) sqrt(1 / 27)\,#h(2em) sqrt(3) $ #noindent;$ 2 / 3 sqrt(8 a b^3) quad\(b > 0\)\,#h(2em) 6 b sqrt(frac(a, 2 b)) quad\(b > 0\) $
 
 ]
 #solution[
@@ -1195,7 +1198,7 @@ $sqrt(\(x^2 + 1\)^2) = x^2 + 1$
 sqrt(1 / 50) & = 1 / 50 sqrt(25 times 2) = 1 / 10 sqrt(2)\
 sqrt(1 / 27) & = 1 / 27 sqrt(9 times 3) = 1 / 9 sqrt(3)\
 2 / 3 sqrt(8 a b^3) & = 2 / 3 times 2 b sqrt(2 a b) = frac(4 b, 3) sqrt(2 a b)\
-6 b sqrt(frac(a, 2 b)) & = frac(6 b, 2 b) sqrt(2 a b) = 3 sqrt(2 a b) $ 因此：$sqrt(2)$ 与 $sqrt(1 / 50)$、$sqrt(75)$ 与 $sqrt(1 / 27)$ 与 $sqrt(3)$、$2 / 3 sqrt(8 a b^3)$ 与 $6 b sqrt(frac(a, 2 b))$ 分别是同类根式．
+6 b sqrt(frac(a, 2 b)) & = frac(6 b, 2 b) sqrt(2 a b) = 3 sqrt(2 a b) $ #noindent;因此：$sqrt(2)$ 与 $sqrt(1 / 50)$、$sqrt(75)$ 与 $sqrt(1 / 27)$ 与 $sqrt(3)$、$2 / 3 sqrt(8 a b^3)$ 与 $6 b sqrt(frac(a, 2 b))$ 分别是同类根式．
 
 ]
 同类根式与同类项一样，可以进行合并，通常称为#strong[合并同类根式]．其方法也与合并同类项类似，只要先化为最简根式，再运用分配律把同类根式各根号前的因式相加即可．
@@ -1211,14 +1214,17 @@ sqrt(1 / 27) & = 1 / 27 sqrt(9 times 3) = 1 / 9 sqrt(3)\
 
 ]
 #solution[
-+ $ upright("原式") & = (1 + 1 / 2 + 1 / 3 + 1 / 6) sqrt(5)\
++ #h(0pt)
+  $ upright("原式") & = (1 + 1 / 2 + 1 / 3 + 1 / 6) sqrt(5)\
    & = 2 sqrt(5) $
 
-+ $ upright("原式") & = 2 sqrt(3) - 1 / 2 sqrt(3) - 1 / 3 sqrt(3) + 3 sqrt(2)\
++ #h(0pt)
+  $ upright("原式") & = 2 sqrt(3) - 1 / 2 sqrt(3) - 1 / 3 sqrt(3) + 3 sqrt(2)\
    & = (2 - 1 / 2 - 1 / 3) sqrt(3) + 3 sqrt(2)\
    & = 7 / 6 sqrt(3) + 3 sqrt(2) $
 
-+ $ upright("原式") =\(5 - x + y\)sqrt(a b) $
++ #h(0pt)
+  $ upright("原式") =\(5 - x + y\)sqrt(a b) $
 
 ]
 #exercise[
@@ -1318,8 +1324,8 @@ $ upright("原式") & = 2 x sqrt(2 x) + 3 x sqrt(2 x) - sqrt(2 x)\
 由二次根式的基本性质3、4，反过来运用，就可以得到二次根式的乘、除法法则．
 
 ==== 乘法和除法法则
-$ sqrt(a) dot.op sqrt(b) = sqrt(a b) quad\(a gt.eq 0\,thick b gt.eq 0\)\,#h(2em) sqrt(a) / sqrt(b) = sqrt(a / b) quad\(a gt.eq 0\,thick b > 0\) $ 并化为最简根式．一般地，还可以写成以下公式：$ m sqrt(a) dot.op n sqrt(b) & = m n sqrt(a b)\
-m sqrt(a) div n sqrt(b) & = frac(m sqrt(a), n sqrt(b)) = m / n sqrt(a / b) $ 并将结果化为最简二次根式．
+$ sqrt(a) dot.op sqrt(b) = sqrt(a b) quad\(a gt.eq 0\,thick b gt.eq 0\)\,#h(2em) sqrt(a) / sqrt(b) = sqrt(a / b) quad\(a gt.eq 0\,thick b > 0\) $ #noindent;并化为最简根式．一般地，还可以写成以下公式：$ m sqrt(a) dot.op n sqrt(b) & = m n sqrt(a b)\
+m sqrt(a) div n sqrt(b) & = frac(m sqrt(a), n sqrt(b)) = m / n sqrt(a / b) $ #noindent;并将结果化为最简二次根式．
 
 #example[
 计算下列各式：
@@ -1419,7 +1425,7 @@ m sqrt(a) div n sqrt(b) & = frac(m sqrt(a), n sqrt(b)) = m / n sqrt(a / b) $ 并
 
   + $(1 + sqrt(x) - sqrt(y)) dot.op (1 - sqrt(x) + sqrt(y))$
 
-+ 写出以下各根式的有理化因式：$ 3 sqrt(7)\,quad 7 - sqrt(11)\,quad 5 sqrt(3) + sqrt(10)\,quad sqrt(2 x^2 - 1)\,quad x + x sqrt(y) $ $ a^2 - b sqrt(a + 1)\,#h(2em) sqrt(x + 2) - sqrt(x) $
++ 写出以下各根式的有理化因式：$ 3 sqrt(7)\,quad 7 - sqrt(11)\,quad 5 sqrt(3) + sqrt(10)\,quad sqrt(2 x^2 - 1)\,quad x + x sqrt(y) $ #noindent;$ a^2 - b sqrt(a + 1)\,#h(2em) sqrt(x + 2) - sqrt(x) $
 
 ]
 #example[
@@ -1475,24 +1481,29 @@ m sqrt(a) div n sqrt(b) & = frac(m sqrt(a), n sqrt(b)) = m / n sqrt(a / b) $ 并
 ]
 ]
 #solution[
-+ $ upright("原式 ") & = frac((sqrt(a^3 b) + sqrt(a b^3) - a b) dot.op sqrt(a b), sqrt(a b) dot.op sqrt(a b))\
++ #h(0pt)
+  $ upright("原式") & = frac((sqrt(a^3 b) + sqrt(a b^3) - a b) dot.op sqrt(a b), sqrt(a b) dot.op sqrt(a b))\
    & = frac(1, a b) (a^2 b + a b^2 - a b sqrt(a b))\
    & = a + b - sqrt(a b) $
 
-+ $ upright("原式 ") & = frac(\(a^2 - b^2\)sqrt(a + b), sqrt(a + b) dot.op sqrt(a + b))\
++ #h(0pt)
+  $ upright("原式") & = frac(\(a^2 - b^2\)sqrt(a + b), sqrt(a + b) dot.op sqrt(a + b))\
    & = frac(a^2 - b^2, a + b) dot.op sqrt(a + b)\
    & =\(a - b\)sqrt(a + b) $
 
-+ $ upright("原式 ") & = frac(4 sqrt(3) + 5 sqrt(2), sqrt(3) - sqrt(2))\
++ #h(0pt)
+  $ upright("原式") & = frac(4 sqrt(3) + 5 sqrt(2), sqrt(3) - sqrt(2))\
    & = frac((4 sqrt(3) + 5 sqrt(2)) (sqrt(3) + sqrt(2)), (sqrt(3) - sqrt(2)) (sqrt(3) + sqrt(2)))\
    & = frac(12 + 4 sqrt(6) + 5 sqrt(6) + 10, \(sqrt(3)\)^2 -\(sqrt(2)\)^2)\
    & = 22 + 9 sqrt(6) $
 
-+ $ upright("原式 ") & = frac(2 dot.op\(3 - 2 sqrt(2)\), \(3 + 2 sqrt(2)\)\(3 - 2 sqrt(2)\))\
++ #h(0pt)
+  $ upright("原式") & = frac(2 dot.op\(3 - 2 sqrt(2)\), \(3 + 2 sqrt(2)\)\(3 - 2 sqrt(2)\))\
    & = frac(6 - 4 sqrt(2), 3^2 -\(2 sqrt(2)\)^2)\
    & = frac(6 - 4 sqrt(2), 9 - 8) = 6 - 4 sqrt(2) $
 
-+ $ upright("原式 ") & = frac(\(sqrt(a + b) + sqrt(a - b)\)^2, \(sqrt(a + b) - sqrt(a - b)\)\(sqrt(a + b) + sqrt(a - b)\))\
++ #h(0pt)
+  $ upright("原式") & = frac(\(sqrt(a + b) + sqrt(a - b)\)^2, \(sqrt(a + b) - sqrt(a - b)\)\(sqrt(a + b) + sqrt(a - b)\))\
    & = frac(a + b + 2 sqrt(a + b) dot.op sqrt(a - b) + a - b, \(sqrt(a + b)\)^2 -\(sqrt(a - b)\)^2)\
    & = frac(2 a + 2 sqrt(a + b) dot.op sqrt(a - b), 2 b)\
    & = frac(a + sqrt(a^2 - b^2), b) $
@@ -1509,14 +1520,16 @@ m sqrt(a) div n sqrt(b) & = frac(m sqrt(a), n sqrt(b)) = m / n sqrt(a / b) $ 并
 ]
 ]
 #solution[
-+ $ upright("原式 ") & = frac(sqrt(3)\(sqrt(2) + sqrt(3) - sqrt(5)\), [\( sqrt(2) + sqrt(3) \) + sqrt(5)] [\( sqrt(2) + sqrt(3) \) - sqrt(5)])\
++ #h(0pt)
+  $ upright("原式") & = frac(sqrt(3)\(sqrt(2) + sqrt(3) - sqrt(5)\), [\( sqrt(2) + sqrt(3) \) + sqrt(5)] [\( sqrt(2) + sqrt(3) \) - sqrt(5)])\
    & = frac(sqrt(3)\(sqrt(2) + sqrt(3) - sqrt(5)\), \(sqrt(2) + sqrt(3)\)^2 -\(sqrt(5)\)^2)\
    & = frac(sqrt(6) + 3 - sqrt(15), 2 sqrt(6))\
    & = frac(\(3 + sqrt(6) - sqrt(15)\)dot.op sqrt(6), 2 sqrt(6) dot.op sqrt(6))\
    & = frac(3 sqrt(6) + 6 - sqrt(90), 12) = 1 / 4 (2 + sqrt(6) - sqrt(10))\
    & approx 1 / 4\(2 + 2.449 - 3.162\)approx 0.32 $
 
-+ $ upright("原式 ") & = frac(2 [\( 1 - sqrt(2) \) - sqrt(3)], [\( 1 - sqrt(2) \) + sqrt(3)] dot.op [\( 1 - sqrt(2) \) - sqrt(3)])\
++ #h(0pt)
+  $ upright("原式") & = frac(2 [\( 1 - sqrt(2) \) - sqrt(3)], [\( 1 - sqrt(2) \) + sqrt(3)] dot.op [\( 1 - sqrt(2) \) - sqrt(3)])\
    & = frac(2 - 2 sqrt(2) - 2 sqrt(3), \(1 - sqrt(2)\)^2 -\(sqrt(3)\)^2)\
    & = frac(2 - 2 sqrt(2) - 2 sqrt(3), - 2 sqrt(2))\
    & = frac(1 - sqrt(2) - sqrt(3), - sqrt(2)) = frac(\(1 - sqrt(2) - sqrt(3)\)dot.op sqrt(2), - sqrt(2) dot.op sqrt(2))\
@@ -1589,13 +1602,13 @@ m sqrt(a) div n sqrt(b) & = frac(m sqrt(a), n sqrt(b)) = m / n sqrt(a / b) $ 并
 
 ]
 #solution[
-两边平方得：$ \(sqrt(x + 7)\)^2 =\(x - 5\)^2 $ 整理后，得方程：$x^2 - 11 x + 18 = 0$ 解出：$x_1 = 9\,#h(2em) x_2 = 2$
+两边平方得：$ \(sqrt(x + 7)\)^2 =\(x - 5\)^2 $ #noindent;整理后，得方程：$x^2 - 11 x + 18 = 0$ 解出：$x_1 = 9\,#h(2em) x_2 = 2$
 
 验根：把 $x = 9$ 代入原方程两边．$ upright("左式") & = sqrt(9 + 7) = 4\
-upright("右式") & = 9 - 5 = 4 $ $therefore quad x = 9$ 是原方程的根．
+upright("右式") & = 9 - 5 = 4 $ #noindent;$therefore quad x = 9$ 是原方程的根．
 
 把 $x = 2$ 代入原方程两边．$ upright("左式") & = sqrt(2 + 7) = 3\
-upright("右式") & = 2 - 5 = - 3 $ 两边的值不等．
+upright("右式") & = 2 - 5 = - 3 $ #noindent;两边的值不等．
 
 $therefore quad x = 2$ 是原方程的增根（舍去）．
 
@@ -1607,7 +1620,7 @@ $therefore quad$ 原方程的解集是：${ 9 }$．
 
 但是，在原方程两边平方后所得的新方程 $\(sqrt(x + 7)\)^2 =\(x - 5\)^2$ 中，未知数 $x$ 的取值范围，只要求使 $x + 7 gt.eq 0$ 就能使新方程有意义．这就是说，新方程中未知数的取值范围扩大了．
 
-事实上，方程两边平方 $\(sqrt(x + 7)\)^2 =\(x - 5\)^2$ 可以变形为：$ \(sqrt(x + 7)\)^2 -\(x - 5\)^2 = 0 $ 即：$ [sqrt(x + 7) - \( x - 5 \)] [sqrt(x + 7) + \( x - 5 \)] = 0 $ 这就相当于得到以下两个方程：$ sqrt(x + 7) -\(x - 5\)= 0\,#h(2em) sqrt(x + 7) +\(x - 5\)= 0 $ 这样一来，解整式方程：$x + 7 =\(x - 5\)^2$,就相当于解以上两个根式方程，但原题所给出的根式方程只是其中的一个．因此，解的过程中就可能产生增根．
+事实上，方程两边平方 $\(sqrt(x + 7)\)^2 =\(x - 5\)^2$ 可以变形为：$ \(sqrt(x + 7)\)^2 -\(x - 5\)^2 = 0 $ #noindent;即：$ [sqrt(x + 7) - \( x - 5 \)] [sqrt(x + 7) + \( x - 5 \)] = 0 $ #noindent;这就相当于得到以下两个方程：$ sqrt(x + 7) -\(x - 5\)= 0\,#h(2em) sqrt(x + 7) +\(x - 5\)= 0 $ #noindent;这样一来，解整式方程：$x + 7 =\(x - 5\)^2$,就相当于解以上两个根式方程，但原题所给出的根式方程只是其中的一个．因此，解的过程中就可能产生增根．
 
 ]
 很明显，在例6.49中，原方程的增根 $x = 2$ 就是方程 $sqrt(x + 7) = -\(x - 5\)$ 的根．
@@ -1627,12 +1640,10 @@ $therefore quad$ 原方程的解集是：${ 9 }$．
 
 ]
 #solution[
-$ sqrt(x + 10) & = 7 - sqrt(x - 11) &  & upright("(移项)")\
-x + 10 & = 49 - 14 sqrt(x - 11) + x - 11 &  & upright("(两边平方)")\
-sqrt(x - 11) & = 2\
-x - 11 & = 4 &  & upright("(两边平方)")\
-x & = 15 $ 验根：把 $x = 15$ 代入原方程：$ upright("左式") & = sqrt(15 + 10) + sqrt(15 - 11) = 5 + 2 = 7\
-upright("右式") & = 7 $ $therefore quad$ 原方程的解集是 ${ 15 }$．
+#numbered-align(($sqrt(x + 10)$, $zws = 7 - sqrt(x - 11)$, [(移项)]), ($x + 10$, $zws = 49 - 14 sqrt(x - 11) + x - 11$, [(两边平方)]), ($sqrt(x - 11)$, $zws = 2$, false), ($x - 11$, $zws = 4$, [(两边平方)]), ($x$, $zws = 15$, false));
+
+验根：把 $x = 15$ 代入原方程：$ upright("左式") & = sqrt(15 + 10) + sqrt(15 - 11) = 5 + 2 = 7\
+upright("右式") & = 7 $ #noindent;$therefore quad$ 原方程的解集是 ${ 15 }$．
 
 ]
 #example[
@@ -1640,14 +1651,12 @@ upright("右式") & = 7 $ $therefore quad$ 原方程的解集是 ${ 15 }$．
 
 ]
 #solution[
-$ sqrt(2 x - 3) + sqrt(3 x - 5) & = sqrt(5 x - 6) &  & upright("(移项)")\
-2 x - 3 + 2 sqrt(2 x - 3) dot.op sqrt(3 x - 5) + 3 x - 5 & = 5 x - 6 &  & upright("(两边平方)")\
-sqrt(2 x - 3) dot.op sqrt(3 x - 5) & = 1\
-\(2 x - 3\)\(3 x - 5\) & = 1 &  & upright("(两边平方)")\
-6 x^2 - 19 x + 14 & = 0 $ $therefore quad x_1 = 2\,quad x_2 = 7 / 6$
+#numbered-align(($sqrt(2 x - 3) + sqrt(3 x - 5)$, $zws = sqrt(5 x - 6)$, [(移项)]), ($2 x - 3 + 2 sqrt(2 x - 3) dot.op sqrt(3 x - 5) + 3 x - 5$, $zws = 5 x - 6$, [(两边平方)]), ($sqrt(2 x - 3) dot.op sqrt(3 x - 5)$, $zws = 1$, false), ($\(2 x - 3\)\(3 x - 5\)$, $zws = 1$, [(两边平方)]), ($6 x^2 - 19 x + 14$, $zws = 0$, false));
+
+$therefore quad x_1 = 2\,quad x_2 = 7 / 6$
 
 把 $x = 2$ 代入原方程：$ upright("左式") & = 1 + 1 - 2 = 0\
-upright("右式") & = 0 $ $therefore quad x = 2$ 是原方程的根．
+upright("右式") & = 0 $ #noindent;$therefore quad x = 2$ 是原方程的根．
 
 把 $x = 7 / 6$ 代入原方程，因为 $sqrt(2 x - 3) = sqrt(- 2 / 3)$，被开方数是负数，使原方程无意义，所以 $x = 7 / 6$ 是增根（舍去）．
 
@@ -1726,7 +1735,7 @@ $therefore quad$ 原方程的解集是：${ 3\,thick - 1 }$．
 
 ]
 #solution[
-方程两边乘以 $sqrt(3 x - 1)$ 得：$ 3 x - 1 + 2 = sqrt(5 x + 3) dot.op sqrt(3 x - 1) $ 即：$ 3 x + 1 = sqrt(\(5 x + 3\)dot.op\(3 x - 1\)) $ 两边平方：$\(3 x + 1\)^2 =\(5 x + 3\)\(3 x - 1\)$，整理得：$ 3 x^2 - x - 2 = 0 $ $therefore quad x_1 = 1\,quad x_2 = - 2 / 3$
+方程两边乘以 $sqrt(3 x - 1)$ 得：$ 3 x - 1 + 2 = sqrt(5 x + 3) dot.op sqrt(3 x - 1) $ #noindent;即：$ 3 x + 1 = sqrt(\(5 x + 3\)dot.op\(3 x - 1\)) $ #noindent;两边平方：$\(3 x + 1\)^2 =\(5 x + 3\)\(3 x - 1\)$，整理得：$ 3 x^2 - x - 2 = 0 $ #noindent;$therefore quad x_1 = 1\,quad x_2 = - 2 / 3$
 
 经检验，当 $x = - 2 / 3$ 时，原方程所含的根号内都是负数，因而 $x = - 2 / 3$ 是增根，应舍去．
 
@@ -1740,9 +1749,9 @@ $therefore quad$ 原方程的解集是：${ 1 }$．
 
 ]
 #solution[
-分母有理化得：$ frac(1 + sqrt(1 - x^2), 1 -\(1 - x^2\)) - frac(1 - sqrt(1 - x^2), 1 -\(1 - x^2\)) = sqrt(3) / x^2 $ 就是 $ frac(1 + sqrt(1 - x^2), x^2) - frac(1 - sqrt(1 - x^2), x^2) = sqrt(3) / x^2 $ 去分母：$ 2 sqrt(1 - x^2) & = sqrt(3)\
+分母有理化得：$ frac(1 + sqrt(1 - x^2), 1 -\(1 - x^2\)) - frac(1 - sqrt(1 - x^2), 1 -\(1 - x^2\)) = sqrt(3) / x^2 $ #noindent;就是 $ frac(1 + sqrt(1 - x^2), x^2) - frac(1 - sqrt(1 - x^2), x^2) = sqrt(3) / x^2 $ #noindent;去分母：$ 2 sqrt(1 - x^2) & = sqrt(3)\
 4\(1 - x^2\) & = 3\
-4 x^2 & = 1 $ $therefore quad x_1 = 1 / 2\,quad x_2 = - 1 / 2$
+4 x^2 & = 1 $ #noindent;$therefore quad x_1 = 1 / 2\,quad x_2 = - 1 / 2$
 
 经检验知，$x_1 = 1 / 2$ 和 $x_2 = - 1 / 2$ 都是原方程的根．
 
@@ -1757,7 +1766,8 @@ $therefore quad$ 原方程的解集是 ${1 / 2 \, thick - 1 / 2}$
 + $frac(1, x + sqrt(1 + x^2)) + frac(1, x - sqrt(1 + x^2)) + 2 = 0$
 
 ]
-#heading(level: 2, numbering: none)[习题6.2]
+#heading(level: 2, numbering: none, supplement: [toc-sub])[习题6.2]
+
 + 求下列各式的值:
 
   + $sqrt(\(a - b\)^2)$,当 $a = 15\,thick b = 9$
@@ -1826,7 +1836,7 @@ $therefore quad$ 原方程的解集是 ${1 / 2 \, thick - 1 / 2}$
 
   #cols(2)[
   #block[
-  #set enum(numbering: latex-enum, start: 2)
+  #set enum(numbering: enum-at(2, none, start: 2))
   + $frac(3 sqrt(5) + sqrt(32), 3 sqrt(5) - sqrt(32))$
 
   + $frac(a + sqrt(a^2 - 1), a - sqrt(a^2 - 1)) quad\(a > 1\)$
@@ -1894,16 +1904,17 @@ $therefore quad$ 原方程的解集是 ${1 / 2 \, thick - 1 / 2}$
 
   + $sqrt(frac(x - 1, x + 1)) + sqrt(frac(x + 1, x - 1)) = 3 1 / 3$
 
-#heading(level: 2, numbering: none)[本章内容要点]
+#heading(level: 2, numbering: none, outlined: false)[本章内容要点]
+
 本章是在学习多项式（整式）的基础上，进一步学习了分式及其运算、根式及其运算和分式方程、根式方程．
 
 一、多项式，分式，根式等，都是含有数字和字母并涉及加、减、乘、除、乘方、开平方六种代数运算的式子，这些式子统称为代数式．其中，凡只涉及字母的加、减、乘、乘方运算的式子，叫做多项式（整式）；凡涉及字母的除法运算且字母含在除式中的式子，叫做分式；分式与整式，又统称为有理式．
 
 凡涉及字母或数字的开方运算的式子叫做根式，根号内含有字母的根式，又称为关于这个字母的无理式．如 $sqrt(2)$ 是根式，但不是无理式，$sqrt(x)$，$sqrt(x - 1)$，$x / sqrt(x - 2)$ 等都是无理式．
 
-关于代数式的概念，可以列表如下：$ upright("代数式") cases(upright("有理式") & cases(upright("多项式（即整式）"), upright("分式")), upright("无理式")) $
+关于代数式的概念，可以列表如下：$ upright("代数式") display(cases(upright("有理式") & quad display(cases(upright("多项式（即整式）"), upright("分式"))), upright("无理式"))) $
 
-二、如果有多项式 $f\(x\)\,g\(x\)$ 且 $g\(x\)$ 的次数大于零次，那么分式 $frac(f\(x\), g\(x\))$ 有以下基本性质：$ frac(f\(x\)dot.op h\(x\), g\(x\)dot.op h\(x\)) = frac(f\(x\), g\(x\)) = frac(f\(x\)div h\(x\), g\(x\)div h\(x\)) $ 其中，$h\(x\)$ 是非零多项式．
+二、如果有多项式 $f\(x\)\,g\(x\)$ 且 $g\(x\)$ 的次数大于零次，那么分式 $frac(f\(x\), g\(x\))$ 有以下基本性质：$ frac(f\(x\)dot.op h\(x\), g\(x\)dot.op h\(x\)) = frac(f\(x\), g\(x\)) = frac(f\(x\)div h\(x\), g\(x\)div h\(x\)) $ #noindent;其中，$h\(x\)$ 是非零多项式．
 
 利用基本性质，可以进行分式的通分和约分．分式的四则运算和分数的四则运算是一样的．
 
@@ -1924,7 +1935,7 @@ $therefore quad$ 原方程的解集是 ${1 / 2 \, thick - 1 / 2}$
 + 因式的内移与外移，即 $ m sqrt(a) & = sqrt(a m^2) quad\(m > 0\)\
   sqrt(a^2 m) & = a sqrt(m) quad\(a > 0\) $
 
-+ 化去根号内的分母或化去分母中的根号------都是有理化分母的内容，即 $ sqrt(a / b) = sqrt(frac(a times b, b times b)) = sqrt(a b) / b #h(2em)\(b > 0\) $ 或 $ sqrt(a / b) = sqrt(a) / sqrt(b) = frac(sqrt(a) dot.op sqrt(b), sqrt(b) dot.op sqrt(b)) = sqrt(a b) / b #h(2em)\(b > 0\) $
++ 化去根号内的分母或化去分母中的根号------都是有理化分母的内容，即 $ sqrt(a / b) = sqrt(frac(a times b, b times b)) = sqrt(a b) / b #h(2em)\(b > 0\) $ #noindent;或 $ sqrt(a / b) = sqrt(a) / sqrt(b) = frac(sqrt(a) dot.op sqrt(b), sqrt(b) dot.op sqrt(b)) = sqrt(a b) / b #h(2em)\(b > 0\) $
 
 如果一个二次根式符合条件：
 
@@ -1972,7 +1983,7 @@ $therefore quad$ 原方程的解集是 ${1 / 2 \, thick - 1 / 2}$
 
   #cols(2)[
   #block[
-  #set enum(numbering: latex-enum, start: 3)
+  #set enum(numbering: enum-at(2, none, start: 3))
   + $frac(1, 1 - frac(1, 1 - 1 / x))$
 
   + $1 + frac(1, 2 + frac(1, 3 + 1 / x))$

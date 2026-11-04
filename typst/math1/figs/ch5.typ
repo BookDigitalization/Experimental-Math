@@ -115,7 +115,7 @@
   "5-07": canvas({
     node((0, .5), $1 thick #bp 3 thick #bm 1 thick thick #bm 6$, pos: "right")
     node((0, 0), $quad +2 thick #bp 10 thick #bp 18$, pos: "right")
-    node((0, -.5), $1 thick #bp 5 thick #bp 9 thick #bx($+12$)$, pos: "right")
+    node((0, -.6), $1 thick #bp 5 thick #bp 9 thick #bx($+12$)$, pos: "right")
     line((-.5, -.25), (3, -.25), (3, 1))
     line((3, .25), (3.5, .25))
     node((3.25, .5), $2$)
