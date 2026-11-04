@@ -89,7 +89,7 @@
 就是与圆心的距离小于或等于半径的点所构成的集合．如图
 4.3中阴影部分．
 
-由上述定义可知，$\odot(O,r)$与平面上任一点P的位置关
+由上述定义可知，$\odot(O,r)$与平面上任一点$P$的位置关
 系，有下述的性质（图4.4）．
 \begin{enumerate}
     \item 点$P$在$\odot(O,r)$上的充要条件是$\overline{OP}=r$；
@@ -782,7 +782,7 @@ $\therefore\quad \overline{AB}=\overline{CD},\quad \overline{OE}=\overline{OF}$.
 
 这个定理告诉我们，在同圆或等圆中，“弧相等”、
 “弦相等”、“弦心距相等”它们当中只要有一个是对的，
-其它两个也一定是对的．这就是说：
+其他两个也一定是对的．这就是说：
 
 \begin{blk}{}
    “弧相等”$\Longleftrightarrow$“弦相等”$\Longleftrightarrow$“弦心距相等” 
@@ -837,7 +837,7 @@ $\therefore\quad \overline{AB}=\overline{CD}$.
 \begin{enumerate}
     \item 把本节定理用“若—则”形式写出互逆的定理．
     \item 以$\angle A$的平分线上任一点$O$为圆心，大于$O$点到边的距
-    离之长为半径作一个圆，那么这圆在$A$的两边上截出
+    离之长为半径作一个圆，那么这圆在$\angle A$的两边上截出
     的两条弦相等．
     \item 在$\odot O$中，已知$\overline{AB}$是一条直径，$\overline{AC}$和$\overline{AD}$是分属于
     $\overline{AB}$两侧的两条相等的弦，
@@ -875,13 +875,13 @@ $\therefore\quad \overline{AB}=\overline{CD}$.
 \begin{enumerate}
 \item 一圆在另一圆的外部，这种位置关系叫做\textbf{两圆相
 离}，如图4.21(1).这时，两圆没有公共点．
-\item 两圆只有一个公共点且其中一圆上的其它各点都
+\item 两圆只有一个公共点且其中一圆上的其他各点都
 在另一圆的外部，这种位置关系叫做\textbf{两圆外切}，如图
 4.21(2). 这个公共点叫做两圆的\textbf{切点}．
 \item 两圆有两个公共点，这种位置关系叫做两圆\textbf{相交}．
 两个公共点叫做两圆的\textbf{交点}，如图4.21(3). 连结两个交点的
 线段叫做两圆的\textbf{公共弦}．
-\item 两圆只有一个公共点且其中一圆上的其它各点都
+\item 两圆只有一个公共点且其中一圆上的其他各点都
 在另一圆的内部，这种位置关系叫做两圆\textbf{内切}，这个公共点
 叫做两圆的\textbf{切点}，如图4.21(4).
 \item 一圆在另一圆的内部，这种位置关系叫做两圆内
@@ -963,7 +963,7 @@ $\therefore\quad \overline{AB}=\overline{CD}$.
 \item 若两圆相交时，则$r_1-r_2<d<r_1+r_2$;
 \item 若两圆内切时，则$d=r_1-r_2$;
 \item 若两圆内含时，则$d<r_1-r_2$; 特殊情况，若两圆
-是同心圆时，则$d＝0$．
+是同心圆时，则$d=0$．
 \end{enumerate}
 
 同学们不难用反证法证明上述各命题的逆命题也是正确的，即：
@@ -972,7 +972,7 @@ $\therefore\quad \overline{AB}=\overline{CD}$.
 \item 若$d=r_1+r_2$，则两圆外切;
 \item 若$r_1-r_2<d<r_1+r_2$，则两圆
 相交;
-\item  若$d＝r_1-r_2$，则两圆内切;
+\item  若$d=r_1-r_2$，则两圆内切;
 \item 若$d<r_1-r_2$，则两圆内含；特殊情况，若$d=0$，则两圆是同心圆.
 \end{enumerate}
 
@@ -1235,7 +1235,7 @@ $\odot (O',r'')$就是$\odot (O',r')$.
     \item 求作相交两圆的逆位似中心．
     \item 求证：如果两圆外切，切点是两圆的逆位似中心；如果
     两圆内切，切点是两圆的顺位似中心．
-    \item 两个同心圆的顺位似中心是那一点，逆位似中心呢？
+    \item 两个同心圆的顺位似中心是哪一点，逆位似中心呢？
 \end{enumerate}
 \end{ex}
 
@@ -1245,21 +1245,22 @@ $\odot (O',r'')$就是$\odot (O',r')$.
 \tkzDefPoints{-1/0/S, 2/0/a, 3/0/O, 5/0/b, 7/0/O'}
 \tkzDrawCircles[thick](O,a O',b)
 \tkzDrawLines[add=0 and .3](S,O')
-\tkzDefPoint(20:1){c}
-\tkzDefPoint(8:1){d}
-\tkzDefPoint(-20:1){e}
-\tkzInterLC(S,c)(O,a)  \tkzGetPoints{A}{B}
-\tkzInterLC(S,c)(O',b)  \tkzGetPoints{P}{Q}
-\tkzInterLC(S,d)(O,a)  \tkzGetPoints{C}{D}
-\tkzInterLC(S,d)(O',b)  \tkzGetPoints{R}{S'}
-\tkzInterLC(S,e)(O,a)  \tkzGetPoints{F}{E}
-\tkzInterLC(S,e)(O',b)  \tkzGetPoints{H}{G}
-\tkzAutoLabelPoints[center=O](C,D)
-\tkzAutoLabelPoints[center=O'](R,S')
-\tkzLabelPoints[below](O,O',E,F,G,H)
+% 过 S 的三条割线（倾角 10°、3°、-10°）与两圆的交点，按离 S 由近到远命名
+\tkzDefPoints{2.171/0.559/A, 3.588/0.809/B, 5.342/1.118/P, 8.176/1.618/Q}
+\tkzDefPoints{2.013/0.158/C, 3.966/0.26/D, 5.025/0.316/R, 8.931/0.52/S'}
+\tkzDefPoints{2.171/-0.559/E, 3.588/-0.809/F, 5.342/-1.118/G, 8.176/-1.618/H}
+\tkzDrawLines[add=0 and .05](S,Q S,S' S,H)
+\tkzLabelPoints[above left](A,P)
+\tkzLabelPoints[above](B)
+\tkzLabelPoints[above right](Q)
+\tkzLabelPoints[above left](C,R)
+\tkzLabelPoints[above right](D)
+\tkzLabelPoints[right](S')
+\tkzLabelPoints[below left](E,G)
+\tkzLabelPoints[below](F)
+\tkzLabelPoints[below right](H)
+\tkzLabelPoints[below](O,O')
 \tkzLabelPoints[left](S)
-\tkzDrawSegments(S,Q S,S' S,H)
-\tkzLabelPoints[above](A,B,P,Q)
 \tkzDrawPoints(O,O')
 \end{tikzpicture}
     \caption*{第1题}
@@ -1284,7 +1285,7 @@ $\wideparen{AD}$
 $\wideparen{AC}=\wideparen{AD}$. 求证：$AB$平分$\angle CAD$.
 \item 已知$\odot O_1$和$\odot O_2$是相离的两个等圆，一条与连心线$O_1O_2$
 平行的直线顺次与$\odot O_1$、$\odot O_2$相交于$A$、$B$、$C$、$D$各
-点．求证：$\overline{AB}=\overline{CD}$, $\overline{AB}=\overline{CD}$.
+点．求证：$\overline{AB}=\overline{CD}$, $\wideparen{AB}=\wideparen{CD}$.
 \item 已知$\odot O_1$和$\odot O_2$是相离的两个等圆，过$\overline{O_1O_2}$的中点，作直线顺次与$\odot O_1$、$\odot O_2$相交于$C$、$D$、$E$、$F$各点，求证：
 $\wideparen{CD}=\wideparen{EF}$.
 \item 在第7题、第8题中，如果条件是相交的两个等圆，结
@@ -1341,7 +1342,7 @@ $AB$上任何一点都在圆外，于是$\odot O$和直线$AB$便没有公共
 
 在图4.28中，过$\odot (O,r)$的任一条半径$\overline{OA}$的端点$A$作直
 线$AB\bot \overline{OA}$于$A$点，$P$为直线$AB$上除$A$点外的任一点，则
-$\overline{OP}>\overline{OA}$, 于是$P$就在圆外，这就是说，在直线$AB$上，除$A$点外其它的点都在圆外．这时直线$AB$和$\odot O$只有一个公共
+$\overline{OP}>\overline{OA}$, 于是$P$就在圆外，这就是说，在直线$AB$上，除$A$点外其他的点都在圆外．这时直线$AB$和$\odot O$只有一个公共
 点$A$.
 
 如果一条直线和一个圆只有一个公共点，我们就说这条
@@ -1422,7 +1423,7 @@ $\therefore\quad AB\bot \overline{OC}$.
 共点叫做它们的\textbf{交点}．
 
 一条直线和一个圆如果有公共点，那么，它们的公共点
-是不能多于两个的，因此，\textbf{直线和圆的位置关
+是不能多于两个的（为什么？），因此，\textbf{直线和圆的位置关
 系只能有相离、相切和相交三种关系}．
 
 
@@ -1733,9 +1734,33 @@ $\triangle ABC$的三个内角的平分线上．
     \end{minipage}
     \end{figure}
 
+如图4.35，设$\triangle ABC$中，$\angle B$与$\angle C$的平分线交于一点
+$I$，自$I$点作三边的垂线$ID$、$IE$、$IF$，$D$、$E$、$F$是垂足．
+
+$\because\quad I$在$\angle B$的平分线上，
+
+$\therefore\quad \overline{ID}=\overline{IF}$.
+
+$\because\quad I$又在$\angle C$的平分线上，
+
+$\therefore\quad \overline{ID}=\overline{IE}$.
+
+$\therefore\quad \overline{IE}=\overline{IF}$.
+
+由此可见，$\angle A$的平分线必通过$I$点．若以$I$为圆心，
+$\overline{ID}$为半径作圆，这圆必与$\triangle ABC$的三边分别相切于$D$、$E$、
+$F$三点，即$\odot I$是$\triangle ABC$的内切圆．由于一个角的平分线
+只有一条，三角形的两内角平分线又必相交于一点（为什
+么？），且交点是唯一的，所以每个三角形只能作一个内切
+圆．由此我们得到：
+
+\begin{blk}
+    {定理} 三角形的三个内角平分线交于一点，这点是三角
+形的内心．
+\end{blk}
 
   仿此，我们还可证明：
-  三角形一内角平分线和其余两内角的外角平分线交于一点，这一点叫做三角形的\textbf{旁心}（图4.36），以旁心为圆心可作一圆和一边及其它两边的延长线相切、所作的圆叫做三角形的\textbf{旁切圆}，一个三角形有三个旁心，三个旁切圆，如图4.36所示，$\odot I_1$、$\odot I_2$、$\odot I_3$是$\triangle ABC$的三个旁切圆．
+  三角形一内角平分线和其余两内角的外角平分线交于一点，这一点叫做三角形的\textbf{旁心}（图4.36），以旁心为圆心可作一圆和一边及其他两边的延长线相切、所作的圆叫做三角形的\textbf{旁切圆}，一个三角形有三个旁心，三个旁切圆，如图4.36所示，$\odot I_1$、$\odot I_2$、$\odot I_3$是$\triangle ABC$的三个旁切圆．
   
   \begin{example}
   已知$\triangle ABC$，$\overline{BC}=a$、$\overline{AC}=b$，$\overline{AB}=c$，求三个顶点到内切圆的切线长（图4.37）.
@@ -1838,7 +1863,9 @@ $\triangle ABC$的三个内角的平分线上．
   又知：$\overline{AB}=3,\quad \overline{AC}=2,\quad \overline{BC}=\sqrt{3^2-2^2}=\sqrt{5}$
   
   $\therefore\quad r\x 3+r\x \sqrt{5}+r\x 2=2\x \sqrt{5}$
-  
+
+  $r(3+\sqrt{5}+2)=2\sqrt{5}$
+
   \[r=\frac{2\sqrt{5}}{5+\sqrt{5}}=\frac{10\sqrt{5}-10}{20}=\frac{\sqrt{5}-1}{2}\]
   
   答：内切圆半径等于$\frac{\sqrt{5}-1}{2}$cm.
@@ -2067,7 +2094,7 @@ $\odot I$.
 
 \subsubsection{作两个圆的外公切线}
 
-已知：$\odot(O，r)$和$\odot (O',r')$且$r>r'$.
+已知：$\odot(O,r)$和$\odot (O',r')$且$r>r'$.
 
 求作：$\odot O$和$\odot O'$的外公切线．
 
@@ -2235,6 +2262,13 @@ $\odot I$.
 切线就是过切点并且垂直于连心线的直线（图4.46）.
 \item 如果两圆相交或内含作图题无解．
 \end{enumerate}
+
+\begin{blk}
+    {定理} 两圆的两条外公切线的长相等；两圆的两条内公
+切线的长也相等．
+\end{blk}
+
+（由同学们自证）
 
 
 
@@ -2616,7 +2650,7 @@ $\therefore\quad \angle AQB>\angle APB>\angle ARB$.
 \end{proof}
     
 \begin{example}
-    已知：$\triangle ABC$内接于$\odot O$(图4.54), $\overline{CE}$是$O$的直
+    已知：$\triangle ABC$内接于$\odot O$(图4.54), $\overline{CE}$是$\odot O$的直
 径，$\overline{CD}$是$\overline{AB}$边上的高，$\overline{BC}$、$\overline{AC}$、$\overline{CE}$、$\overline{CD}$分别用$a$、$b$、$d$、$h$
 表示．
 
@@ -2656,7 +2690,7 @@ $\because\quad CD\bot AB$,
 
 $\therefore\quad \angle ADC$是直角．
 
-$\because\quad \overline{CE}$是$O$的直径，
+$\because\quad \overline{CE}$是$\odot O$的直径，
 
 $\therefore\quad \angle EBC$也是直角（推论2）.
 
@@ -2835,7 +2869,7 @@ $BC$与圆相切于$B$点，另一边还与圆相交于$A$点，$\wideparen{AmB}
     已知：如图4.56，$\overline{AB}$是$\odot O$的一条弦，$AC$是一条
     射线，且$\angle BAC=\frac{1}{2}\wideparen{AB}$的度数．
   
-    求证：AC切$\odot O$于$A$．
+    求证：$AC$切$\odot O$于$A$．
   \end{example}
   
   \begin{proof}
@@ -2925,6 +2959,9 @@ $BC$与圆相切于$B$点，另一边还与圆相交于$A$点，$\wideparen{AmB}
   
   \begin{analyze}
   假定$\wideparen{AmB}$是所求作的弧（图4.57），作切线${AC}$，就有$\angle BAC=\angle \alpha$，因为圆心$O$在$\overline{AB}$的垂直平分线$DE$上，又在$AC$的垂线$AF$上，所以圆心$O$是$DE$和$AF$的交点．于是得作法如下：
+  \end{analyze}
+
+  作法
   \begin{enumerate}
     \item 作$\angle BAC=\angle \alpha$，
     \item 作$\overline{AB}$的垂直平分线$DE$，
@@ -2932,7 +2969,7 @@ $BC$与圆相切于$B$点，另一边还与圆相交于$A$点，$\wideparen{AmB}
     \item 以$O$为圆心，$OA$为半径画$\wideparen{AmB}$，使$\wideparen{AmB}$和$AC$在
     $\overline{AB}$的两旁，$\wideparen{AmB}$就是所求作的弧．
   \end{enumerate}
-  \end{analyze}
+
   
   \begin{proof}
   $\because\quad AC\bot OA$于$A$点，
@@ -2975,8 +3012,8 @@ $BC$与圆相切于$B$点，另一边还与圆相交于$A$点，$\wideparen{AmB}
   \tkzDrawSegments[thick](M,N)
   \tkzDefPoint(110:1.2){C}
   \tkzDefPoint(-80:1.2){E}
-  \tkzInterLC(C,A)(O',A)\tkzGetPoints{D}{t1}
-  \tkzInterLC(E,A)(O',A)\tkzGetPoints{t2}{F}
+  \tkzInterLC(C,A)(O',A)\tkzGetPoints{t1}{D}
+  \tkzInterLC(E,A)(O',A)\tkzGetPoints{F}{t2}
   \tkzDrawPolygon[thick](C,E,A,F,D)
   \tkzAutoLabelPoints[center=O](C,E)
   \tkzAutoLabelPoints[center=O'](F,D)
@@ -3326,8 +3363,8 @@ $b$的比例中项，即$x^2=a\cdot b$.
     \centering
 \begin{tikzpicture}[scale=1.3]
 \begin{scope}
-    \draw(0,0)--node[above]{$b$}(1.5,0);
-    \draw(0,1)--node[above]{$a$}(1,1);
+    \draw(0,0)--node[above]{$b$}(1,0);
+    \draw(0,1)--node[above]{$a$}(1.5,1);
 
 \end{scope}
 \begin{scope}[xshift=3cm]
@@ -3485,7 +3522,7 @@ $A$、$B$、$C$三点不在同一条直线上，于是有$\odot O$通过$A$、$B
 \begin{enumerate}
   \item $D$点在$\odot O$内，延长
   对角线$\overline{BD}$与$\odot O$相交于$D_1$点，于是，
-  $\angle ADC>\angle AD_1C$. 
+  $\angle ADC>\angle AD_1C$（例4.15）．
   但$\angle AD_1C+\angle B=180^{\circ}$
  
 $\therefore\quad \angle ADC+\angle B>180^{\circ}$. 
@@ -3906,7 +3943,7 @@ $C$、$E$、$F$共圆）．
   \item 如果$\triangle ABC$内接于$\odot O$, $H$是它的垂心，求证：$H$点分
   别以$BC$、$AC$、$AB$为轴的对称点是相应边上高的延长
   线与$\odot O$的交点．
-  \item 已知H是$\triangle ABC$的垂心，$\overline{BC}$边上高的延长线与$\triangle ABC$
+  \item 已知$H$是$\triangle ABC$的垂心，$\overline{BC}$边上高的延长线与$\triangle ABC$
   的外接圆相交于$H_1$点，求证：$BC$平分$\angle HBH_1$和
   $\angle HCH_1$.
   \item 如果$\triangle ABC$, $\angle A$的平分线与
@@ -4088,7 +4125,7 @@ $\therefore\quad \angle BOC=180^{\circ}-\angle AOB-\angle COD=60^{\circ}$.
 
 同理：$\angle EOF=\angle DOE=\angle AOF=60^{\circ}$, 
 
-$\therefore\quad \overline{AB}=\overline{BC}=\overline{CD}=\overline{DE}=\overline{EF}=\overline{FA}$,
+$\therefore\quad \wideparen{AB}=\wideparen{BC}=\wideparen{CD}=\wideparen{DE}=\wideparen{EF}=\wideparen{FA}$,
 $ABCDEF$是$\odot O$的内接正六边形（本节定理）．
 \end{proof}
 
@@ -4195,7 +4232,7 @@ $\therefore\quad \angle AOB=\angle BOC=\angle COD=\angle DOA,\quad
   $\frac{1}{n}$, 所对的弦就约是
   圆内接正$n$边形的一边，以这条弦为半径，从圆上一点起在
   圆上依次截取，就可以近似地把圆分成$n$个等分，依次连结
-  各分点就可以得到所求的圆内接正$n$边形．实际上，用这种
+  各分点就可以得到所求的圆内接正$n$边形．实用上，用这种
   方法作图也就可以了．
 
 \begin{ex}
@@ -4232,12 +4269,12 @@ $\therefore\quad \angle AOB=\angle BOC=\angle COD=\angle DOA,\quad
 \tkzDefPoints{0/0/O, 0/1.5/G, 0/-1.5/A_3, -1.5/0/A_1, 1.5/0/A_5}
 \tkzDefPoint(45:1.5){F}
 \tkzDefPoint(-45:1.5){A_4}
-\tkzDefPoint(45*3:1.5){A_0}
+\tkzDefPoint(45*3:1.5){A_n}
 \tkzDefPoint(-45*3:1.5){A_2}
-\tkzDrawPolygon[thick](A_0,A_1,A_2,A_3,A_4,A_5,F,G)
-\tkzDrawCircle[thick](O,A_0)
-\tkzDrawSegments[thick](O,A_1 O,A_2 O,A_3 O,A_0)
-\tkzAutoLabelPoints[center=O](A_0,A_1,A_2,A_3,A_4,A_5)
+\tkzDrawPolygon[thick](A_n,A_1,A_2,A_3,A_4,A_5,F,G)
+\tkzDrawCircle[thick](O,A_n)
+\tkzDrawSegments[thick](O,A_1 O,A_2 O,A_3 O,A_n)
+\tkzAutoLabelPoints[center=O](A_n,A_1,A_2,A_3,A_4,A_5)
 \tkzDefMidPoint(A_1,A_2) \tkzGetPoint{H}
 \tkzDrawCircle[thick](O,H)
 \tkzLabelPoints[right](O)
@@ -4258,14 +4295,14 @@ $\therefore\quad A_1O$是$\angle A_nA_1A_2$的平分线．
 
 $\therefore\quad \angle OA_2A_1=\angle OA_1A_2=\frac{1}{2}\angle A_nA_1A_2=\frac{1}{2}\angle A_1A_2A_3$,
 
-因此：$A_2O$是$\angle A_1A_2A_3$的平分角线，$\angle OA_2A_1=\angle OA_2A_3$,
+因此：$A_2O$是$\angle A_1A_2A_3$的平分线，$\angle OA_2A_1=\angle OA_2A_3$,
 
 又$\because\quad \overline{A_1A_2}=\overline{A_2A_3},\quad \overline{OA_2}=\overline{OA_2}$,
 
 $\therefore\quad \triangle OA_1A_2\cong \triangle OA_2A_3$ (SAS), $\overline{OA_2}=\overline{OA_3}$
 
 这就是说$A_3$在所作的$\odot O$上．循此下去，同样可证明
-正多边形$A_1A_2A_3\cdots A_n$的其它各顶点也在$\odot O$上．
+正多边形$A_1A_2A_3\cdots A_n$的其他各顶点也在$\odot O$上．
 
 其次，有了外接圆$\odot O$，圆心$O$到各边的距离便彼此相
 等，这就是说，以$O$为圆心，$O$到一边的距离为半径必可作
@@ -4284,16 +4321,16 @@ $\therefore\quad \triangle OA_1A_2\cong \triangle OA_2A_3$ (SAS), $\overline{OA_
 \begin{figure}[htp]
   \centering
   \begin{tikzpicture}[>=latex, scale=1.5]
-\tkzDefPoints{0/0/O, -1.5/0/A_0, 1.5/0/A_3}
+\tkzDefPoints{0/0/O, -1.5/0/A_n, 1.5/0/A_3}
 \tkzDefPoint(60:1.5){F}
 \tkzDefPoint(-60:1.5){A_2}
 \tkzDefPoint(120:1.5){G}
 \tkzDefPoint(-120:1.5){A_1}
-\tkzDrawPolygon[thick](A_0,A_1,A_2,A_3,F,G)
-\tkzDrawCircle[thick](O,A_0)
+\tkzDrawPolygon[thick](A_n,A_1,A_2,A_3,F,G)
+\tkzDrawCircle[thick](O,A_n)
 \tkzDefMidPoint(A_1,A_2) \tkzGetPoint{D}
 \tkzDrawSegments[thick](O,A_2 O,D)
-\tkzAutoLabelPoints[center=O](A_0,A_1,A_2,A_3)
+\tkzAutoLabelPoints[center=O](A_n,A_1,A_2,A_3)
 \tkzDrawCircle[thick](O,D)
 \tkzLabelPoints[above](O)
 \tkzLabelPoints[above left](D)
@@ -4381,7 +4418,7 @@ $\therefore\quad S=\frac{1}{2}pd$.
   和它的内切圆半径$d$.
 \end{example}
 
-\begin{proof}
+\begin{solution}
   如图4.81,设$O$是正$\triangle ABC$的中心，$OM\bot \overline{AB}$于
 $M$, 则$\overline{OA}=r$, $\overline{OM}=d$, $\angle OAM=\frac{1}{2}\angle CAB=30^{\circ}$
 
@@ -4395,7 +4432,7 @@ $\therefore\quad (2d)^2=d^2+\left(\frac{a}{2}\right)^2$
 
 答：内切圆半径是$\frac{\sqrt{3}}{6}a$，
 外接圆半径是$\frac{\sqrt{3}}{3}a$.
-\end{proof}
+\end{solution}
 
 \begin{ex}
 \begin{enumerate}
@@ -4426,7 +4463,7 @@ $\therefore\quad (2d)^2=d^2+\left(\frac{a}{2}\right)^2$
 长和面积都比原来的正$n$边形的周长和面积大，如此下去，
 我们还可继续得出圆内接正$4n$边形、正$8n$边形…… 我们可
 以看到这样的圆的内接正$n$、$2n$、$4n$、$8n$、……边形的边数
-越增长，它们的周长和面积就越逼近圆的周长和面积．这样一
+越增，它们的周长和面积就越逼近圆的周长和面积．这样一
 来，当已知圆的半径时，我们便可计算它的内接正$n$、$2n$、
 $4n$、$8n$、……边形的周长和面积，作为精确度不同的圆周长
 和圆面积的近似值．
@@ -4673,7 +4710,7 @@ $\therefore\quad $扇形的周长$=2r+\ell=2\x4.8+3.5=13.1$(cm).
 \draw[<->](E)--node[fill=white]{5.9寸}(0,0);
 \draw[<->](0,-9.5)--node[fill=white]{9.5寸}(0,0);
     \end{tikzpicture}
-    \caption{}
+    \caption*{第3题}
 \end{figure}
 
 \item 用全等的正多边形的砖铺地面，要砖与砖之间不留空隙，有哪几种正多边形的砖合用？
@@ -4686,7 +4723,7 @@ $8\sqrt{2-\sqrt{2}}r$, 面积是$2\sqrt{2}r^2$.
 圆面积．
 \item 有一圆管的外直径是150mm, 内直径是100mm, 求这圆
 管的横断面的面积和它的厚度．
-\item 已知一圆的半径是200mm, $AB$所对的圆心角是$45^{\circ}$, 求
+\item 已知一圆的半径是200mm, $\wideparen{AB}$所对的圆心角是$45^{\circ}$, 求
 $\wideparen{AB}$长和扇形$OAB$的面积．
 \item 如图：$\triangle ABC$中，$\angle C=90^{\circ}$, $\wideparen{ACB}$是以$\overline{AB}$为直径的半
 圆，$\wideparen{ADC}$是以$\overline{AC}$为直径的半圆，$\wideparen{CEB}$是以$\overline{CB}$为直径
@@ -4708,10 +4745,11 @@ $\wideparen{AB}$长和扇形$OAB$的面积．
 \node at (3,1)[fill=white]{III};
 \node at (1,2.6)[fill=white]{I};
 \node at (5,1.5)[fill=white]{II};
-
+\node at (.6,2.93)[above left]{$D$};
+\node at (4.85,2.5)[above right]{$E$};
 
     \end{tikzpicture}
-    \caption{}
+    \caption*{第11题}
     \end{minipage}
     \begin{minipage}[t]{0.48\textwidth}
     \centering
@@ -4724,7 +4762,7 @@ $\wideparen{AB}$长和扇形$OAB$的面积．
 \tkzDrawSegments(A,B A',B')
 
     \end{tikzpicture}
-    \caption{}
+    \caption*{第12题}
     \end{minipage}
     \end{figure}
 
@@ -4748,7 +4786,7 @@ $\wideparen{AB}$长和扇形$OAB$的面积．
 \item 已知$\overline{CD}$是$\odot O$的直径，$A$为$\odot O$外一点，$AT$切圆于$T$
 点，如果切点$T$与$C$的连线平行于$AO$, 求证$AD$与$\odot O$相切．
 \item 以$O$为圆心作两个同心圆，已知$\overline{AB}$为小圆的直径，过
-$A$、$B$两点分别作小圆的切线交大圆于$C$、$D$两点：（使
+$A$、$B$两点分别作小圆的切线交大圆于$C$、$D$两点（使
 $C$、$D$分别在$\overline{AB}$的两侧），证明$C$、$O$、$D$三点共线．
 \item 若一圆的两条切线交成$60^{\circ}$角，圆的半径为$r$, 求交点到
 圆心的距离．若交角为$120^{\circ}$, 交点到圆心的距离又是多 

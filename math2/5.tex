@@ -1,7 +1,7 @@
 \chapter{轨迹与作图}
 在前面的几章中，我们学习了直线形和圆的有关性质．
 学习的途径主要是根据图形的定义和已知性质去推演图形的
-其它性质．这一章，我们将把图形看成点的集合（点集），
+其他性质．这一章，我们将把图形看成点的集合（点集），
 研究如何根据点所具有的某种性质来求出点集在平面上的形
 状和位置．
 
@@ -69,7 +69,7 @@ $B$两
 
 \subsection{基本轨迹}
 这一小节，我们来学习六个平面上的点的基本轨迹，我
-们只证了1和4, 其它四个由同学们自证．
+们只证了1和4, 其他四个由同学们自证．
 
 \begin{blk}{基本轨迹1}
 与两个已知点距离相等的点的轨迹是连结
@@ -196,7 +196,7 @@ $\therefore\quad \overline{P'L'}\ne d$
     角的两条弧．
 \end{blk}
 
-以上六个基本轨迹是研究其它轨迹问题的基础，同学们
+以上六个基本轨迹是研究其他轨迹问题的基础，同学们
 一定要熟记．
 
 \begin{example}
@@ -217,6 +217,7 @@ $\therefore\quad \overline{P'L'}\ne d$
 \draw [thick] (0,0)--node[right]{$r'$}(0,-1)node[below]{$M$};
 \draw (80:1.414)node[above]{$C$}--(-10:1.414)node[below]{$D$};
 \draw [thick] (0,0)--(35:1)node[right]{$P$};
+\node at (0,0)[above left]{$O$};
 
 \draw[|-|](-4,1)--node[above]{$a$}(-2,1);
 \end{tikzpicture}
@@ -256,8 +257,8 @@ $\overline{OP}$, 再作弦$\overline{CD}\bot\overline{OP}$于$P$点，则$P$点�
 \draw[dashed] (P)--(-2,0)node[left]{$E'$};
 \draw (0,0) circle (2);
 \draw[dashed] (O') circle (2.5);
-\tkzDefTangent[from with R=P](O, 2cm)
-\tkzGetPoints{A}{B}
+\tkzDefTangent[from with R=P](O, 2)
+\tkzGetPoints{B}{A}
 \tkzDrawSegments[add=0 and .2](P,A  P,B)
 \node at (-.25,-.25){$O$};\node at (.25+2.5,.25){$O'$};
 \node at (2.2,0)[above]{$E$};
@@ -266,12 +267,12 @@ $\overline{OP}$, 再作弦$\overline{CD}\bot\overline{OP}$于$P$点，则$P$点�
 \tkzDefShiftPoint[O'](-142:2.5){N}
 \tkzDefShiftPoint[O'](-155:2.5){X}
 \tkzAutoLabelPoints[center=O'](M,N,X,A,B,P)
-\tkzInterLC(P,M)(O,A) \tkzGetPoints{C'}{C}
-\tkzInterLC(P,X)(O,A)\tkzGetPoints{D}{D'}
-\tkzInterLC(P,N)(O,A)\tkzGetPoints{F}{F'}
+\tkzInterLC(P,M)(O,A) \tkzGetPoints{C}{C'}
+\tkzInterLC(P,X)(O,A)\tkzGetPoints{D'}{D}
+\tkzInterLC(P,N)(O,A)\tkzGetPoints{F'}{F}
 \tkzAutoLabelPoints[center=O](D,F,C,C',D',F')
-\draw(C')--(P)--(F');
-\draw(D')--(P);
+\draw(C)--(P)--(F) (C')--(P)--(F');
+\draw(D)--(P)--(D');
 \draw[dashed](M)--(O)--(X);
 \draw[dashed](A)--(O);
 \end{tikzpicture}
@@ -328,9 +329,9 @@ $D'$, 作$\overline{OX}$, 则$\overline{OX}\bot \overline{DD'}$,所以$X$是$\ov
 的轨迹．
    \item 和一条已知直线切于已知点的圆的圆心的轨迹．
 \item 与定点$A$的距离等于2cm的点的轨迹．
-\item 和一条长是3cm的$AB$的两端连线所夹的角是直角的点
+\item 和一条长是3cm的$\overline{AB}$的两端连线所夹的角是直角的点
 的轨迹．
-\item 和一条长是4cm的已知线段$AB$的两端连线所夹的角等
+\item 和一条长是4cm的已知线段$\overline{AB}$的两端连线所夹的角等
 于60$^{\circ}$的点的轨迹．
 
 \end{enumerate}
@@ -372,7 +373,7 @@ $r'$的圆的圆心的轨迹．
 
 
 \item 求通过$\odot (O,r)$内一定点$P$的弦的中点的轨迹．
-\item 求到$\odot(O,3{\rm cm})$的圆面等于4cm的点的轨迹．
+\item 求到$\odot(O,3{\rm cm})$的圆幂等于4cm的点的轨迹．
 \end{enumerate}
 
 \section{作图}
@@ -417,10 +418,10 @@ $r'$的圆的圆心的轨迹．
 
 \begin{ex}
 \begin{enumerate}
-    \item 作一直角三角形$ABC$, 使$\angle C=90^{\circ}$, $AB=3$cm, $BC=
+    \item 作一直角三角形$ABC$, 使$\angle C=90^{\circ}$, $\overline{AB}=3$cm, $\overline{BC}=
     2$cm. 你能想出几种作法？
     \item 已知线段$a$、$b$，你能用几种方法作线段$x=\sqrt{ab}$．
-    \item 已知线段$a$, 作线段$x=\sqrt{\frac{2}{3}a}$
+    \item 已知线段$a$, 作线段$x=\sqrt{\frac{2}{3}}a$
         \item 过圆外一点，你能用几种方法作这个圆的切线．
 \end{enumerate}
 \end{ex}
@@ -491,7 +492,7 @@ $B$、$C$为两个顶点，求作一三角形，使第三个顶点与$B$的距
 圆，使圆心在这条直线上，并且经过这两个定点．
 \end{example}
 
-已知：定直线$\ell$和两定点$AB$, 且$A\notin \ell$, $B\notin \ell$（图5.6）．
+已知：定直线$\ell$和两定点$A$、$B$, 且$A\notin \ell$, $B\notin \ell$（图5.6）．
 
 求作：一圆使圆心在$\ell$上，且经过$A$、$B$两点．
 
@@ -509,7 +510,7 @@ $B$、$C$为两个顶点，求作一三角形，使第三个顶点与$B$的距
 \begin{enumerate}
 \item 作$\overline{AB}$;
 \item 作$\overline{AB}$的垂直平分线$m$与$\ell$相交于$O$点，
-\item 以$O$为圆心，$OA$为半径作$\odot O$, 则$\odot O$即为所求
+\item 以$O$为圆心，$\overline{OA}$为半径作$\odot O$, 则$\odot O$即为所求
 作的圆．
 \end{enumerate}
 
@@ -558,14 +559,14 @@ $\therefore \odot O$为所求作的圆．
 \begin{scope}[xshift=3cm]
     
 
-\draw(0,0)node[left]{$B$}--node[below]{$a$}(2,0)node[right]{$C$};
+\draw(0,0)node[left]{$B$}--node[pos=.32,below]{$a$}(2,0)node[right]{$C$};
 \draw(-.5,1.4)--(1.8,1.4);
-\tkzDefPoints{1/0/M, 0.23/1.4/A}
+\tkzDefPoints{1/0/M, 0.23/1.4/A, 2/0/C, 0.23/0/D}
 \tkzCompass(M,A)
 \draw(M)--node[right]{$m$}(A)--(2,0);
 \draw(0,0)--(A)--node[right]{$h$}(0.23,0)node[below]{$D$};
-\tkzLabelPoints[above](M,A)
-\node (D) at (0.23,0){};
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below](M)
 \tkzMarkRightAngle[size=.1](C,D,A)
 \end{scope}
 \end{tikzpicture}
@@ -592,13 +593,12 @@ $C$两个顶点由条件$\overline{BC}=a$, 很容易确定；$A$点的位置应�
 \begin{tikzpicture}[scale=1.7]
     \draw(0,0)node[left]{$B$}--(2,0)node[right]{$C$};
 \draw(-.5,1.4)--(2,1.4)node[right]{$\ell$};
-\tkzDefPoints{1/0/M, 0.23/1.4/A}
+\tkzDefPoints{1/0/M, 0.23/1.4/A, 2/0/C, 0.23/0/D}
 \tkzCompass(M,A)
 \draw(M)node[below]{$M$}--node[right]{$m$}(A)--(2,0);
 \draw(0,0)--(A)--(0.23,0)node[below]{$D$};
 \draw[dashed](1.5,0)--node[right]{$h$}(1.5,1.4);
 \tkzLabelPoints[above](A)
-\node (D) at (0.23,0){};
 \tkzMarkRightAngle[size=.1](C,D,A)
 \end{tikzpicture}
     \caption{}
@@ -652,7 +652,7 @@ $r$的圆．
     \item 与$\angle ABC$的两边等距离；
     \item 与边$BA$或$BC$的距离等于$r$．
 \end{enumerate}
-满足1或2的轨迹都可作，故所求的圆的圆心可以作出．
+但满足1或2的轨迹都可作，故所求的圆的圆心可以作出．
 
 作法：（图5.9）
 \begin{enumerate}
@@ -796,7 +796,7 @@ $\odot O$与$BA$和$BC$都相切，$\odot O$为所求作的圆．
 \end{enumerate}
 
 从例5.6中的图5.11, 我们可看出$\odot O_1$的
-$\wideparen{AB}$与$\odot O_2$的$\wideparen{BC}$
+$\wideparen{AB}$与$\odot O$的$\wideparen{BC}$
 在切点$B$处连接起来了，这种连结叫做\textbf{圆弧与圆弧的平
 滑连接}．
 
@@ -852,7 +852,6 @@ $\wideparen{AB}$与$\odot O_2$的$\wideparen{BC}$
 \tkzLabelPoints[right](B,C)
 \tkzLabelPoints[above](P)
 \draw(A)--(P);
-\tkzDrawPoints(E)
     \end{tikzpicture}
     \caption{}
     \end{minipage}
@@ -937,7 +936,7 @@ $\therefore\quad \overline{DP}=\overline{CD}-\overline{CP}=\frac{3}{4}a$
 \[    x^2=a(a-x)\]
     即：$x^2+ax-a^2=0$. 解此方程得：
 \[x_1=\frac{-a+\sqrt{4a^2+a^2}}{2},\qquad x_2=\frac{-a-\sqrt{4a^2+a^2}}{2}\quad \text{舍去}\]
-$\therefore\quad x=\frac{-a+\sqrt{4a^2+a^2}}{2}=\sqrt{a^2+\left(\frac{a}{2}\right)^2}-\frac{a}{2}$
+$\therefore\quad x=\frac{-a+\sqrt{4a^2+a^2}}{2}=\frac{\sqrt{4a^2+a^2}}{2}-\frac{a}{2}=\sqrt{a^2+\left(\frac{a}{2}\right)^2}-\frac{a}{2}$
 
 此线段$x$可作，故$G$点也可作出来．
 \end{analyze}
@@ -1213,7 +1212,7 @@ $\overline{DE}$、$\overline{EF}$、$\overline{FG}$、$\overline{GH}$、$\overli
     和$\odot O_1$与$\odot O_2$都外切．
     \item 已知$\odot(O_1,1.4{\rm cm})$, $\odot(O_2,1{\rm cm})$, $\overline{O_1O_2}=3{\rm cm}$, 求
     作一个圆，使它的半径为3.2cm, 并且和$\odot O_1$与$\odot O_2$都相内切．
-    \item 已知线段$a$, 求作线$x=\sqrt{3a}$, $y=\sqrt{12a}$.
+    \item 已知线段$a$, 求作线段$x=\sqrt{3}a$, $y=\sqrt{12}a$.
     \item 已知线段$x$与$y$满足方程组：
     \[\begin{cases}
         \frac{x+y}{2}=a\\
