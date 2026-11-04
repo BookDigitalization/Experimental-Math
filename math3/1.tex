@@ -49,7 +49,7 @@ $a^n=\overbrace{a\cdot a\cdots a}^{\text{$n$个}}$ （$n$是大于1的正整数�
 \begin{itemize}
     \item 幂的\textbf{乘法}可以转化为指数\textbf{加法}，(性质1)
     \item 幂的\textbf{除法}可以转化为指数\textbf{减法}，(性质2)
-    \item 幂的\textbf{乘方}可以转化指数\textbf{相乘}．(性质3)
+    \item 幂的\textbf{乘方}可以转化为指数\textbf{相乘}．(性质3)
 \end{itemize}
 
 要使正整数的加、减、乘、除，尤其是减、除通行无阻，
@@ -60,7 +60,7 @@ a^{3-2}=a^1=a$, 这个转化是没有问题的，但是
 
 要使指数的减法通行无阻，就会出现零指数和负整数指
 数，而零指数和负整数指数是什么，过去从未见过，这就有
-必要将指数的概念加以推广，给零指数和负整数下定义．
+必要将指数的概念加以推广，给零指数和负整数指数下定义．
 
 【II】探索零指数和负整数指数如何定义．
 
@@ -80,7 +80,7 @@ n$的条件取消，这样$m$可以等于$n$. 在$m=n$的时候，上面的公
 
 当$m<n$时，$a^m\div a^n=a^{m-n}=a^{-(n-m)}$，这里$-(n-m)$是个负整数，我们还没有规定$a^{-(n-m)}$的意
 义．但另一方面，在$m<n$的条件下，$a^m\div a^n$的实际意义是：
-\[a^m\div a^n=\frac{a^m}{a^n}=\frac{a^m\div a^n}{a^n\div a^n}=\frac{1}{a^{n-m}}\qquad (a\ne 0)\]
+\[a^m\div a^n=\frac{a^m}{a^n}=\frac{a^m\div a^m}{a^n\div a^m}=\frac{1}{a^{n-m}}\qquad (a\ne 0)\]
 这样看来，为了使公式$a^m\div a^n=a^{m-n}$在$m<n$时也适用，规
 定：
 \[a^{-(n-m)}=\frac{1}{a^{n-m}}\quad (a\ne 0)  \]
@@ -253,7 +253,7 @@ $\therefore\quad a^m\cdot a^n=a^{m+n}$成立．
     \begin{enumerate}
         \item 1吨(t)$=1000$公斤(kg)$=10^3$公斤(kg)
         \item  1毫米(mm)$=0.001$米(m)$=10^{-3}$米(m)
-        \item  1年$=31,556,925,975$秒(s)=$3.1556925975\x10^7$(s)$\approx 3.156\x10^7$(s)
+        \item  1年$=31,556,925.975$秒(s)=$3.1556925975\x10^7$(s)$\approx 3.156\x10^7$(s)
         \item   地球到太阳的距离$=149,640,000$公里(km)
         $=1.4964\x10^8$(km)
         \item    地球的质量$=5,970,000,000,000,000,000,000$(t)
@@ -399,7 +399,7 @@ $$x^n=a$$
  
 由方根的定义推知：
 \begin{enumerate}
-    \item 如果$x_1$是正数$a$的偶次方根，那么$x_1$也是$a$的偶次
+    \item 如果$x_1$是正数$a$的偶次方根，那么$-x_1$也是$a$的偶次
     方根．
 
     因为如果存在$x_1$使得$x_1^n=a\; (>0)$, 那么，$(-x_1)^n=(x_1)^n=a$ ($n$为偶数），即$x_1$和$-x_1$都是正数$a$的偶次方根．比如，
@@ -430,10 +430,10 @@ $x^4=16$, 则$x=\pm 2$都是16的四次方根．
 \begin{blk}{定义}
     如果$a$是正实数，那么$a$的正的$n$次方根叫做\textbf{$a$的$n$次
 算术根}，而零也叫零的$n$次算术根，记为$\sqrt[n]{a}$．$a$的算术平方根
-用不带根指数的符号$\sqrt{n}$表示．$\sqrt[1]{a}$这个表示$a$的符号，我们不用．
+用不带根指数的符号$\sqrt{a}$表示．$\sqrt[1]{a}$这个表示$a$的符号，我们不用．
 \end{blk}
 
-例如：$2^6=32$, 2叫做32的5次方根，也是32的5次算术根，
+例如：$2^5=32$, 2叫做32的5次方根，也是32的5次算术根，
 因此$\sqrt[5]{32}=2$; $(\pm 2)^4=16$，$2$和$(-2)$都是16的4次方根，其中2是16的4次算术根，因此$\sqrt[4]{16}=2$; $(-2)$不是16的4次算术根．因此$\sqrt[4]{16}\ne -2$, 但$-2$可写成$-\sqrt[4]{16}$．$(-3)^3=-27$, $-3$
 叫做$-27$的3次方根，但不是算术根．有的课本也用符号$\sqrt[n]{a}$
 （$a<0$, $n$是奇数）表示负数的奇次方根，例如$\sqrt[3]{-27}=-3$．
@@ -460,7 +460,7 @@ $\sqrt[n]{a}$（$a>0$）只代表算术根，因此，正数$a$的偶次方根�
 
 在$a<0$的场合，可以验知：当$n$是奇数时，等式(1.1)、
 (1.2)对于负数的奇次方根仍保持；而当$n$是偶数时，等式(1.1)
-无意义，而(1.2)的右端是$|a|$, 不是$a$, 即$a=|a|$, 这是因
+无意义，而(1.2)的右端是$|a|$, 不是$a$, 即$\sqrt[n]{a^n}=|a|$, 这是因
 为算术根只代表非负数的缘故．
 
 例如：$\sqrt{(-2)^2}+\sqrt[3]{-27}+\sqrt[5]{243}=\sqrt{(-2)^2}+\sqrt[3]{(-3)^3}+\sqrt[5]{3^5}=2-3+3=2$
@@ -539,7 +539,7 @@ $\therefore\quad \sqrt[n]{\frac{a}{b}}=\frac{\sqrt[n]{a}}{\sqrt[n]{b}}$
 
     又$\because\quad a>0,\quad \sqrt[m]{\sqrt[n]{a}}>0 $
     
-    $\therefore\quad \sqrt[n]{a}$是$a$的$mn$次算术根，
+    $\therefore\quad \sqrt[m]{\sqrt[n]{a}}$是$a$的$mn$次算术根，
 
     $\therefore\quad \sqrt[m]{\sqrt[n]{a}}=\sqrt[mn]{a}$
 \end{proof}
@@ -573,9 +573,9 @@ $\sqrt[6]{(-8)^2}=\sqrt[6]{64}=2$, 而$\sqrt[3]{-8}=\sqrt[3]{(-2)^3}=-2$，
 \begin{example}
     化简下列各式：
 \begin{enumerate}
-\item $\sqrt[4]{25 x^{2} y^{2}} \quad(x, y \ge 0)$
+\item $\sqrt[4]{25 x^{2} y^{4}} \quad(x, y \ge 0)$
 \item  $\sqrt[6]{5^{4} a^{4} b^{2}}\quad (a, b \ge 0)$
-\item $\sqrt{3 x^{2 a+2}}\quad (x \ge 0)$
+\item $\sqrt{3 x^{2 n+2}}\quad (x \ge 0)$
 \item $\sqrt[6]{27(u+v)^{18}}\quad (u,v\ge 0)$
 \item $(a-b) \sqrt{\frac{a^{2}+a b}{a^{2}-2 a b+b^{2}}}\quad (a, b>0)$
 \item $\sqrt[3]{16 \sqrt{2}}$
@@ -748,7 +748,7 @@ $\therefore\quad $只需要考虑将$\sqrt{2}$, $\sqrt[3]{3}$化成同次根式
     \item $$5\sqrt[4]{2a}\cdot \sqrt[4]{8a^3}=5\sqrt[4]{16a^4}=5\sqrt[4]{(2a)^4}=5\x 2a=10a\qquad (a\ge 0)$$
     \item \[\begin{split}
         \sqrt{\frac{3}{4}} \cdot \sqrt[4]{\frac{4}{3}}&=\sqrt[4]{\left(\frac{3}{4}\right)^{2}} \cdot \sqrt[4]{\frac{4}{3}}=\sqrt[4]{\left(\frac{3}{4}\right)^{2} \cdot \frac{4}{3}}\\
-&=\sqrt[4]{\frac{3}{4}}=\sqrt{\frac{3}{2^{2}}}=\sqrt[4]{\frac{3 \times 2^{2}}{2^{4}}}=\frac{\sqrt[4]{12}}{2}
+&=\sqrt[4]{\frac{3}{4}}=\sqrt[4]{\frac{3}{2^{2}}}=\sqrt[4]{\frac{3 \times 2^{2}}{2^{4}}}=\frac{\sqrt[4]{12}}{2}
     \end{split}\]
     \item $\frac{16 \sqrt{3}}{\sqrt{2}}=\frac{16 \sqrt{3} \cdot \sqrt{2}}{\sqrt{2} \cdot \sqrt{2}}=8 \sqrt{6}$
     \item $\frac{5}{\sqrt[3]{4}}=\frac{5 \sqrt[3]{2}}{\sqrt[3]{2^2} \sqrt[3]{2}}=\frac{5 \sqrt[3]{2}}{\sqrt[3]{2^{3}}}=\frac{5}{2} \sqrt[3]{2}$
@@ -769,7 +769,7 @@ $\therefore\quad $只需要考虑将$\sqrt{2}$, $\sqrt[3]{3}$化成同次根式
     \sqrt[3]{8ax^3}&=2x\sqrt[3]{a}\\
     \sqrt[6]{64a^2y^{12}}&=2y^2\sqrt[6]{a^2}=2y^2\sqrt[3]{a}\qquad (x\ge 0,\;\; a\ge 0)
 \end{split}\]    
-    $\therefore\quad \sqrt[3]{8ax^3}$和$\sqrt[6]{64a^2y^{12}}$同类根式．
+    $\therefore\quad \sqrt[3]{8ax^3}$和$\sqrt[6]{64a^2y^{12}}$是同类根式．
 \end{solution}
 
 
@@ -858,7 +858,7 @@ $\therefore\quad $只需要考虑将$\sqrt{2}$, $\sqrt[3]{3}$化成同次根式
 那么对于$a^{\tfrac{1}{4}}$，$a^{\tfrac{3}{4}}$
 应用这个法则就得到
 $\left(a^{\tfrac{1}{4}}\right)^4=a$和$\left(a^{\tfrac{3}{4}}\right)^4=a^3$．这就是说，可以把$a^{\tfrac{1}{4}}$，$a^{\tfrac{3}{4}}$
-看作方程$x^4=a,\; x^4=a^3$的根．实际上这两个方程的唯一正实数解分别是$\sqrt[4]{a}$和$\sqrt[4]{a^8}$, 即有等式$\left(\sqrt[4]{a}\right)^4=a$, $\left(\sqrt[4]{a^3}\right)^4=a^3$成
+看作方程$x^4=a,\; x^4=a^3$的根．实际上这两个方程的唯一正实数解分别是$\sqrt[4]{a}$和$\sqrt[4]{a^3}$, 即有等式$\left(\sqrt[4]{a}\right)^4=a$, $\left(\sqrt[4]{a^3}\right)^4=a^3$成
 立．因此，我们定义$a^{\tfrac{1}{4}}=\sqrt[4]{a}$，$a^{\tfrac{3}{4}}=\sqrt[4]{a^3}$是合理的．
 
 下面给出一般的定义：
@@ -868,7 +868,7 @@ $\left(a^{\tfrac{1}{4}}\right)^4=a$和$\left(a^{\tfrac{3}{4}}\right)^4=a^3$．�
 \end{blk}
 
 例如：
-\[5^{\tfrac{3}{4}}=\sqrt[4]{5^3},\quad 2^{\tfrac{3}{2}}=\sqrt{a^3},\quad 4^{\tfrac{1}{3}}=\sqrt[3]{4},\quad a^{-\tfrac{4}{3}}=\frac{1}{a^{\tfrac{4}{3}}}=\frac{1}{\sqrt[3]{a^4}} \]
+\[5^{\tfrac{3}{4}}=\sqrt[4]{5^3},\quad 2^{\tfrac{3}{2}}=\sqrt{2^3},\quad 4^{\tfrac{1}{3}}=\sqrt[3]{4},\quad a^{-\tfrac{4}{3}}=\frac{1}{a^{\tfrac{4}{3}}}=\frac{1}{\sqrt[3]{a^4}} \]
 
 有了定义4, 我们的指数就推广到了有理数了．
 
@@ -921,7 +921,7 @@ $\therefore\quad \sqrt[nn_1]{a^{mn_1}}=\sqrt[nn_1]{a^{m_1n}}$，即：
 围内就可叙述为：
 \begin{blk}{性质}
 \begin{enumerate}
-    \item  $a^r\cdot a'^s=a^{r+s}$\quad ($r,s$是有理数，$a>0$);
+    \item  $a^r\cdot a^s=a^{r+s}$\quad ($r,s$是有理数，$a>0$);
     \item  $(a^r)^s=a^{rs}$\quad ($r,s$是有理数，$a>0$);
     \item  $(ab)^r=a^r\cdot b^r$\quad ($r$是有理数，$a,b>0$)．
 \end{enumerate}  
@@ -941,7 +941,7 @@ a^r a^s&= a^{\tfrac{m}{n}}\cdot a^{\tfrac{\ell}{k}} =\sqrt[n]{a^m}\cdot \sqrt[k]
 &=\sqrt[nk]{a^{mk}}\cdot \sqrt[nk]{a^{\ell n}}\\
 &=\sqrt[nk]{a^{mk}\cdot a^{n\ell}}=\sqrt[nk]{a^{mk+n\ell}}\\
 &=a^{\tfrac{mk+n\ell}{nk}}=a^{\tfrac{mk}{nk}+\tfrac{n\ell}{nk}}\\
-&=a^{\tfrac{m}{n}+\tfrac{1}{k}}=a^{r+s}
+&=a^{\tfrac{m}{n}+\tfrac{\ell}{k}}=a^{r+s}
 \end{split}\]
 $\therefore\quad a^r a^s=a^{r+s}$
 
@@ -967,7 +967,7 @@ a^r a^s&=a^r\cdot  a^{-|s|}=\frac{a^r}{a^{|s|}}\\
 \end{split}\]
 $\therefore\quad a^r\cdot  a^s=a^{r+s}$
 
-（若$r<0$, $s<0$则根据交换律也是成立的）
+（若$r<0$, $s>0$则根据交换律也是成立的）
 
 此外，$r,s$有一个为零的情形，性质1显然成立，故
 $a^ra^s=a^{r+s}$对任意有理数$r,s$成立．
@@ -1009,7 +1009,7 @@ $a^ra^s=a^{r+s}$对任意有理数$r,s$成立．
 \item \[\begin{split}
  &\quad   \frac{m-n}{m^{\tfrac{1}{2}}-n^{\tfrac{1}{2}}}-\frac{m^{\tfrac{3}{4}}+n^{\tfrac{3}{4}}}{m^{\tfrac{1}{4}}+n^{\tfrac{1}{4}}} \\
 &=\frac{\left(m^{\tfrac{1}{2}}\right)^2-\left(n^{\tfrac{1}{2}}\right)^2}{m^{\tfrac{1}{2}}-n^{\tfrac{1}{2}}}-\frac{\left(m^{\tfrac{1}{4}}\right)^3+\left(n^{\tfrac{1}{4}}\right)^3}{m^{\tfrac{1}{4}}+n^{\tfrac{1}{4}}} \\
-&=m^{\tfrac{1}{2}}+n^{\tfrac{1}{2}}-\left[\left(^{\tfrac{1}{4}}\right)^2- m^{\tfrac{1}{4}}n^{\tfrac{1}{4}}+\left(n^{\tfrac{1}{4}}\right)^2\right]\\
+&=m^{\tfrac{1}{2}}+n^{\tfrac{1}{2}}-\left[\left(m^{\tfrac{1}{4}}\right)^2- m^{\tfrac{1}{4}}n^{\tfrac{1}{4}}+\left(n^{\tfrac{1}{4}}\right)^2\right]\\
 &=m^{\tfrac{1}{4}}n^{\tfrac{1}{4}}=\sqrt[4]{mn}
 \end{split}\]
 \end{enumerate}
@@ -1186,7 +1186,7 @@ $a$与任意实数$\alpha$, $a^{\alpha}$都有明确的意义；在学习指数�
     a^{m}\cdot a^n&=a^{m+n}\\
     a^{m}\div a^n&=a^{m-n}\\
     (a^m)^n&=a^{mn}\\
-    \sqrt[n]{a}&=a^{\tfrac{m}{n}}
+    \sqrt[n]{a^m}&=a^{\tfrac{m}{n}}
 \end{split}\]
 这里幂指数$m,n$为任意实数，根指数$n$是大于1的自然数，
 $a$为正实数．
@@ -1219,9 +1219,9 @@ $M=\frac{512^2\x 64}{32^3\x 256}$的值．
 
 要把任意正数的乘法转化为同底的幂的乘法，从而用指
 数相加来完成，关键在于任意一个正数$N$能否写成一个已知
-数$a$ ($a>0$且$a\ne1$)的幂$a$的形式，换句话说，就是给了一个
+数$a$ ($a>0$且$a\ne1$)的幂$a^b$的形式，换句话说，就是给了一个
 不等于1的正实数$a$作为底数，那么对于任意给定的正实数
-$N$, 是否有唯一的实数$b$存在，使得$N=a$, 只要这个问题解
+$N$, 是否有唯一的实数$b$存在，使得$N=a^b$, 只要这个问题解
 决了，上述的想法就可实现，回答是肯定的，这就是：
 
 \begin{blk}{定理}
@@ -1263,7 +1263,7 @@ $a$和指数$b$就是求方幂$N$, 反过来，若给出底数$a$和方幂$N$,
     \item $10^2=100\quad \Longleftrightarrow \quad \log_{10}100= 2$
     \item $3^5=243\quad \Longleftrightarrow \quad\log_3 243=5$
     \item $4^{\tfrac{1}{4}}=\sqrt{2}\quad \Longleftrightarrow \quad \log_4\sqrt{2}=\frac{1}{4}$
-    \item $2^10=1024\quad \Longleftrightarrow \quad \log_2 1024=10$
+    \item $2^{10}=1024\quad \Longleftrightarrow \quad \log_2 1024=10$
     \item $3^{-1}=\frac{1}{3}\quad \Longleftrightarrow \quad \log_3\frac{1}{3}=-1$
 \end{enumerate}
 \end{example}
@@ -1283,9 +1283,9 @@ $a$和指数$b$就是求方幂$N$, 反过来，若给出底数$a$和方幂$N$,
 
 同学们想一想怎样证明下面两个对数的重要性
 质：
-\[\log a=1\qquad (a>0,\; a\ne 1)\]
+\[\log_a a=1\qquad (a>0,\; a\ne 1)\]
 即底的对数恒等于1;
-\[\log 1=0\qquad (a>0,\; a\ne 1)\]
+\[\log_a 1=0\qquad (a>0,\; a\ne 1)\]
 即1的对数，对于任何底恒等于0．
 
 对某数连续地完成两个互逆的运算得到的数就是原来这
@@ -1503,7 +1503,7 @@ $\log_a N=b$代入指数式$a^b=N$中的$b$得到下面的恒等式：
 应用到(1.5), 得到：
 \[\frac{M}{N}=\frac{a^{\log_a M}}{a^{\log_a N}}=a^{\log_a M-\log_a N}\]
 根据对数定义得到：
-\[\log\frac{M}{N}=\log_a M -\log_a N\]
+\[\log_a\frac{M}{N}=\log_a M -\log_a N\]
 \end{proof}    
 
 对应于指数法则$(a^m)^n=a^{mn}$就有对数法则： 
@@ -1719,7 +1719,7 @@ $(\log_23+\log_49)(\log_34 +\log_92)$
 \subsubsection{近似数计算常识}
 本节要介绍常用对数表，对数表所列对数几乎全是近似
 数，我们不仅在数学用表中遇到近似数，其实在日常生活
-中，有关度量和计算大量物件或计算无理数的的结果，都得
+中，有关度量和计算大量物件或计算无理数的结果，都得
 用近似数来表示．因此，在介绍常用对数之前，我们特别介
 绍下面几点关于近似数的常识．
 
@@ -1808,20 +1808,20 @@ $\frac{2}{13}\approx 0.154$．
 
 $\because\quad \left|\frac{2}{13}-0.154\right|<0.0002,\quad \left|\frac{2}{13}-0.153\right|<0.0009$
 
-$\therefore\quad $0.151比0.153更接近$\frac{2}{13}$．
+$\therefore\quad $0.154比0.153更接近$\frac{2}{13}$．
 
 估计近似数的准确度的最简便的方法之一，是算出它的
 有效数字的个数．
 
 \begin{blk}{定义4}
-    若近似数的误差不超过其末一位数字的一－个单
+    若近似数的误差不超过其末一位数字的一个单
 位，那么该数的一切数字；除了左起第一个非零数字之前的
-荐以外，都叫有效数字．
+零以外，都叫有效数字．
 \end{blk}
 
 
 例如，0.154和0.153都是
-的取3位有效数字的数，即
+取3位有效数字的数，即
 $\frac{2}{13}$
 的近似值0.154或0.153具有三位有效数字．把准确数
 1.9996四舍五入到千分之一位，得2.000, 这时所有四个数字，
@@ -1848,7 +1848,7 @@ $\left|\frac{2}{13}-0.1535\right|>0.0003$
 数字．
 
 例如，0.0000437有三位有效数字，它的标准写法是
-$4.37\x10^{-8}$, 前面2100的标准写法是$2.1\x10^3$.
+$4.37\x10^{-5}$, 前面2100的标准写法是$2.1\x10^3$.
 
 在计算近似数时，我们必须指明精确到几位有效数字．
 例如0.09235716, 若取三位有效数字的精确度，我们就写成：
@@ -1881,8 +1881,8 @@ $9.24\x10^{-2}$. 若是$70,454,620,000$取四位有效数字的精确度
     \item 把其它的近似数四舍五入，比所找出的近似数多保
     留一位：
     \[\pi\approx 3.1416\approx 3.14,\qquad 0.047\approx 0.05\]
-    \item 作近似数的加法：$3.14+2.47+0.05=5.59$
-    \item 把所得结果四舍五入，保留内位数与所找出的近似
+    \item 作近似数的加法：$3.14+2.4+0.05=5.59$
+    \item 把所得结果四舍五入，保留的位数与所找出的近似
     数的位数相同，用四舍五入到十分位：
     \[5.59\approx 5.6\]
     于是
@@ -1949,7 +1949,7 @@ $\frac{xy}{x+y}$的近似值．
     \item 求出积$xy$的近似值：$xy\approx 0.823\x1.34=1.10282\approx 1.103$
     
     （在$x$和$y$的近似值中，都有三位有效数字，所得结果保留四个
-数字；有一个数宇是备用数字）．
+数字；有一个数字是备用数字）．
 \item 求出$x+y$的近似值：
 $x+y\approx 0.823+1.34=2.163$
 
@@ -2033,7 +2033,7 @@ $x+y\approx 0.823+1.34=2.163$
 
 为了说明常用对数的特性，我们首先把真数用科学记数
 法写出来，也就是把它表示为一个1和10之间的数与10的幂的
-积，即$u\x10$, 这里$1\le u<10$, $k\in\mathbb{Z}$, 例如光的速度是每秒
+积，即$u\x10^k$, 这里$1\le u<10$, $k\in\mathbb{Z}$, 例如光的速度是每秒
 186,000公里表示为$1.86\x10^5$每秒公里，一个电子的质量是
 0.000,000,000,000,000,000,000,000,000,910,83克表示为
 $9.1083\x10^{-28}$克，把一个数用科学记数法写出的规则是：
@@ -2046,7 +2046,7 @@ $9.1083\x10^{-28}$克，把一个数用科学记数法写出的规则是：
     整数的数$u$, 这样就有$N=u\x10^{-p}\; (p\ge1)$．
 \end{enumerate}
 
-如果已知$\lg2.23=0.3482$, 我们只须通过观察10的方幂
+如果已知$\lg2.23=0.3483$, 我们只须通过观察10的方幂
     的对数，就可以求得和$0.223$的有效数字相同，而只有小数点位置不同的数（即这种形式：$2.23\x10^p$, 或$2.23\x10^{-p}$,
     $p\in\mathbb{N}$的数）的常用对数，这也就是常用对数的好处．例如：
 \[\begin{split}
@@ -2210,7 +2210,7 @@ $y$是大于1的数，有1位整数；
 &=-15+1.1865=\overline{14}.1865   
 \end{split}\]
     \item 除法\[\begin{split}
-\bar{2}.6365\div 4&=(-4+2.6866)\div 4\\
+\bar{2}.6866\div 4&=(-4+2.6866)\div 4\\
 &=-1+0.6717=\bar{1}.6717
 \end{split}\]
 \end{itemize}
@@ -2257,7 +2257,7 @@ $y$是大于1的数，有1位整数；
 \item 若$\lg6444$的尾数是0.8092, 求：
 \[\lg0.6444,\qquad \lg6444000,\qquad \lg0.0006444\]
 \item 已知$\lg32.5=1.5119$, 求下面对数式中的真数$x$:
-\[\lg x=0.5119,\qquad \lg x=2,5119,\qquad \lg x=\bar{4}.5119\]
+\[\lg x=0.5119,\qquad \lg x=2.5119,\qquad \lg x=\bar{4}.5119\]
 \item \begin{enumerate}
 \item $3^{10}$是几位整数？
 \item $3^{100}$是几位整数？
@@ -2401,7 +2401,7 @@ $y$是大于1的数，有1位整数；
 \begin{solution}
 $\because\quad -0.73248=\bar{1}.26752\approx \bar{1}.2675$
 
-$\therefore\quad x=0.1881$
+$\therefore\quad x=0.1851$
 \end{solution}  
 
 \begin{ex}
@@ -2413,7 +2413,7 @@ $\therefore\quad x=0.1881$
     \item 0.015
     \item 2.4
     \item 25.6
-    \item 0,146
+    \item 0.146
     \item 0.0084
     \item 1.02
     \item 0.208
@@ -2537,10 +2537,10 @@ $\therefore\quad \Delta=106({\rm cm}^2)$.
 
 \[\begin{split}
     \lg c_1&= \lg 62.24+\lg \sin 119^{\circ}14'-\lg \sin 27^{\circ}18'\\
-    &=1.7941+\bar{1}.9365-\bar{1}.6615\\
-    &=2.0691
+    &=1.7941+\bar{1}.9408-\bar{1}.6615\\
+    &=2.0734
 \end{split}\]
-$\therefore\quad c_1=117.2$
+$\therefore\quad c_1=118.4$
 
 \[c_2=\frac{a\sin C_2}{\sin A}=\frac{62.24\sin 6^{\circ}10'}{\sin 27^{\circ}18'}\]
 
@@ -2630,7 +2630,7 @@ t=t,&\quad y_t=10(1+1.1\%)^t
 \begin{enumerate}
     \item $4^{x}=2^{\tfrac{x+1}{x}}$
     \item $3^{x-3}-3^{x-1}=80$
-    \item $5^{2x}-23.5^x-50=0$
+    \item $5^{2x}-23\cdot 5^x-50=0$
     \item $8^{5-3x}=12^{4-2x}$
     \item $5^{1-x}=6^{x-3}$
     \item $\begin{cases}
@@ -2653,7 +2653,7 @@ $\angle C=58^{\circ}51'$, 求$AB$的长．
 \item 一人观测$A,B$两物体，
 发现它们分别位于正北和
 北$36^{\circ}$西的方向，若此人向
-西北与向前进1.2公里，看到$A,B$二物分别位于东北
+西北方向前进1.2公里，看到$A,B$二物分别位于东北
 和正东方向，求$A,B$二物距离．
 \item  如图，货轮在海上以35海里/时的速度沿着方位角（从
 指北方向顺时针转到目标方向线的水平角）为$148^{\circ}$的方
@@ -2697,7 +2697,7 @@ $78^{\circ}$．求货轮到达$C$点时与灯塔$A$的距离（精确到1海里�
 距118米，求气球离地面的高度，已知测量仪器的高度为
 1米（精确到1米）．
 \item  在山顶铁塔上$B$处测得地面上一点的俯角$\alpha=54^{\circ}40'$，
-在塔底$C$处测得点$A$的俯角$B=50^{\circ}1'$，已知铁塔$BC$部
+在塔底$C$处测得点$A$的俯角$\beta=50^{\circ}1'$，已知铁塔$BC$部
 分高27.3米，求山高$CD$（精确到1米）．
 
 \begin{figure}[htp]
