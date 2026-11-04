@@ -196,12 +196,12 @@
 
 这样，由(6.1)推得
 \begin{equation}
-    \ell=aR
+    \ell=\alpha R
 \end{equation}
 即圆弧长等于这圆弧的弧度数（或这弧所对圆心角的弧度数）
 和半径长的乘积．特别地，单位圆上的弧长等于它的弧度数．
 
-利用(6.1)还可以接计算一些特殊角的弧度数．
+利用(6.1)还可以直接计算一些特殊角的弧度数．
 
 当弧长等于圆周长$C=2\pi R$时，这个比值等于$2\pi$, 因
 此，
@@ -211,7 +211,7 @@
     \text{直角}&=\frac{1}{4}\text{周角}=\frac{\pi}{2}\text{弧度}\\
     45^{\circ}&=\frac{1}{2}\text{直角}=\frac{\pi}{4}\text{弧度}\\
     30^{\circ}&=\frac{1}{3}\text{直角}=\frac{\pi}{6}\text{弧度}\\
-    60^{\circ}&=\frac{1}{3}\text{平角}=\frac{\pi}{8}\text{弧度}\\
+    60^{\circ}&=\frac{1}{3}\text{平角}=\frac{\pi}{3}\text{弧度}\\
 \end{split}\]
 
 \begin{rmk}
@@ -232,7 +232,7 @@
     = 57^{\circ}17'45''
 \end{split}\]
 $\alpha$弧度的角相应的度数：
-\[A^{\circ}=\frac{a\cdot 180^{\circ}}{\pi}\]
+\[A^{\circ}=\frac{\alpha\cdot 180^{\circ}}{\pi}\]
 
 下表给出一些常见角的弧度和它们的近似值：
 \begin{center}
@@ -308,10 +308,10 @@ $\therefore\quad \alpha_1:\alpha_2=3:2 $
     \theta &= \frac{150}{6400}\approx 0.0234\\
     &=0.0234\x\frac{180^{\circ}}{\pi}\\
     &\approx 0.0234\x 3438'\\
-    &\approx 13^{\circ}14'
+    &\approx 1^{\circ}20'
 \end{split}\]
 
-答: 两地纬度差为$13^{\circ}14'$．
+答: 两地纬度差为$1^{\circ}20'$．
 \end{solution}
 
 \begin{ex}
@@ -407,7 +407,7 @@ $-\frac{\pi}{3}$, $\frac{5\pi}{3}$
 $\frac{13\pi}{6}$和$-\frac{11\pi}{6}$
 可以写成下列形式：
 \[2\pi+\frac{\pi}{6},\qquad -2\pi+\frac{\pi}{6}\]
-显然，除了这两个角以外，与
+显然，除了这两个角以外，与$\frac{\pi}{6}$
 的角终边相同的角还有：
 \[\begin{split}
     2\x 2\pi+\frac{\pi}{6},&\qquad -2\x 2\pi+\frac{\pi}{6}\\
@@ -418,7 +418,7 @@ $\frac{13\pi}{6}$和$-\frac{11\pi}{6}$
 的角终边相同的角，连同$\frac{\pi}{6}$
 在内，可以用下式表示：
 \[2k\pi+\frac{\pi}{6},\quad (k\in\mathbb{Z})\]
-当$k=1$时，它表示$\frac{\pi}{6}$的角；$k=1$时，它表示$\frac{13\pi}{6}$的角；$k=-1$时，它表示$-\frac{11\pi}{6}$的角．
+当$k=0$时，它表示$\frac{\pi}{6}$的角；$k=1$时，它表示$\frac{13\pi}{6}$的角；$k=-1$时，它表示$-\frac{11\pi}{6}$的角．
 
 一般地，所有和$\alpha$角终边相同的角，连同$\alpha$在内，可
 以用式子$2k\pi+\alpha\; (k\in\mathbb{Z})$来表示．
@@ -451,7 +451,7 @@ $\therefore\quad -120^{\circ}$的角与$240^{\circ}$的角的终边相同，它�
 $\therefore\quad 640^{\circ}$的角与$280^{\circ}$的角的终边相同，它是第四象限
 的角．
 
-\item $\because\quad -950^{\circ}12'=-3x360^{\circ}+129^{\circ}48'$
+\item $\because\quad -950^{\circ}12'=-3\x 360^{\circ}+129^{\circ}48'$
 
 $\therefore\quad -950^{\circ}12'$的角与$129^{\circ}48'$的角的终边相同，它是
 第二象限的角．
@@ -471,7 +471,7 @@ $S=\left\{\beta \Big|\beta =2k\pi+\frac{\pi}{3},\; k\in\mathbb{Z}\right\}$
 
 $S$中在$-2\pi$到$4\pi$间的角：
 \begin{itemize}
-    \item 当$k=-1$时，$\beta =-2\pi+\frac{\pi}{3}=\frac{-5\pi}{8}$
+    \item 当$k=-1$时，$\beta =-2\pi+\frac{\pi}{3}=-\frac{5\pi}{3}$
     \item 当$k=0$时，$\beta=\frac{\pi}{3}$ 
     \item 当$k=1$时，$\beta =2\pi+\frac{\pi}{3}=\frac{7\pi}{3}$
 \end{itemize}
@@ -510,14 +510,14 @@ $S$中在$-2\pi$到$4\pi$间的角：
 \item 终边落在$y$轴的正向上，这些角的量数为
 \[2n\pi +\frac{\pi}{2}\quad (n\in\mathbb{Z})\]
 \item 终边落在$y$轴的负向上，这些角的量数为
-\[-\frac{\pi}{2}+2nx=(2n-1)\pi +\frac{\pi}{2}\quad (n\in\mathbb{Z})\]
+\[-\frac{\pi}{2}+2n\pi=(2n-1)\pi +\frac{\pi}{2}\quad (n\in\mathbb{Z})\]
 把3、4结合起来，量数为$k\pi +\frac{\pi}{2}\; (k\in\mathbb{Z})$的
 角的终边落在$y$轴上，在$k$为偶数时，终边落在$y$轴的正向
 上，在$k$为奇数时，终边落在$y$轴的负向上．
 \end{enumerate}
 
 量数为$k\cdot \frac{\pi}{2}\; (k\in\mathbb{Z})$的角的终边，或落在$x$轴上，或落在$y$轴上．在$k=0,1,2,3,4,5,\ldots$时，终边依次落
-在$z$轴正向、$y$轴正向、$x$轴负向、$y$轴负向、$x$轴正向、$y$
+在$x$轴正向、$y$轴正向、$x$轴负向、$y$轴负向、$x$轴正向、$y$
 轴正向……在$k=-1,-2,-3,-4,-5,\ldots$
 时，终边依次落在$y$轴负向、$x$轴负向、$y$轴正向、$x$轴正
 向、$y$轴负向……
@@ -716,7 +716,7 @@ $P$点所在的象限来确定的．距离$r$总是正的，并且
     \draw[->] (0,-3)--(0,3)node[right]{$y$};
 \draw[thick] (0,0) circle(2);
 \draw (0,0)--(120:3);
-\draw (0,0)--(120:2)node[left]{$P(x,y)$}--(-1,0)node[below]{$M(x,y)$};
+\draw (0,0)--(120:2)node[left]{$P(x,y)$}--(-1,0)node[below]{$M(x,0)$};
    
 \node at (2.2,0)[above]{$A$};   
 \node at (.25,-.25){$O$};
@@ -834,7 +834,7 @@ $|x|=|OM|=\frac{1}{2}$
 \subsection{数值变数的三角函数与三角函数的定义域}
 在数学中两个变数之间的函数可以表示不同物理量或几
 何量之间的函数关系，例如，数学中的二次函数$y=ax^2$,
-如果$a=1$, $a$表示正方形的边长的数值，$y$就表示正方形的
+如果$a=1$, $x$表示正方形的边长的数值，$y$就表示正方形的
 面积数值；但是当
 $a=\frac{1}{2}g$
 时，$x$表示自由落体下降的时
@@ -984,7 +984,7 @@ $$\cos\alpha>0,\qquad \sin\alpha<0, \qquad\tan\alpha=\frac{\sin\alpha}{\cos\alph
 \end{figure}
 
 \begin{example}
-    例1 决定下列三角函数的符号：
+    决定下列三角函数的符号：
 \[\cos120^{\circ},\qquad \sin(-465^{\circ}),\qquad \csc\left(-\frac{4\pi}{3}\right)\]
 \end{example}
 
@@ -1013,7 +1013,7 @@ $\sin\alpha \tan \alpha$和$\frac{cos\alpha }{\cot \alpha}$
 函数的符号得：
 \[\sin\alpha <0,\qquad \cos\alpha>0,\qquad  \tan \alpha<0,\qquad \cot \alpha<0\]
 所以
-\[\sin\alpha \tan \alpha>0,\qquad  \frac{\cos\alpha}{\cot a}<0\]
+\[\sin\alpha \tan \alpha>0,\qquad  \frac{\cos\alpha}{\cot\alpha}<0\]
 \end{solution}
 
 
@@ -1025,10 +1025,10 @@ $\tan \alpha+\cot \alpha\ge 2$
 \begin{solution}
     $\because\quad \alpha$ 是第三象限的角，$\tan \alpha>0$, $\cot \alpha>0$. 根据
 两个正数的算术平均值不小于它的几何平均值，因此有：
-\[\frac{\tan a+\cot a}{2}\ge \sqrt{\tan \alpha \cot \alpha}\]
-即：$\frac{\tan a+\cot a}{2}\ge 1$
+\[\frac{\tan\alpha+\cot\alpha}{2}\ge \sqrt{\tan \alpha \cot \alpha}\]
+即：$\frac{\tan\alpha+\cot\alpha}{2}\ge 1$
 
-$\therefore\quad \tan a+\cot a\ge 2$
+$\therefore\quad \tan\alpha+\cot\alpha\ge 2$
 \end{solution}
 
 \begin{ex}
@@ -1041,7 +1041,7 @@ $P_3(-5,-3)$．
 \item $\sec\alpha$ 能否小于$\tan \alpha$? $\csc\alpha$ 能否小于$\cot\alpha$?
 \item 就绝对值而言能否$\cos\alpha$  大于 
 $\cot\alpha$? $\sin\alpha$ 大
-于$\tan a$?
+于$\tan\alpha$?
 \item $x$为何值，不等式$|\sin x|+|\cos x|<1$成立？
 \item 决定下列各角正弦、余弦、正切的符号：
 \[885^{\circ},\qquad -395^{\circ},\qquad \frac{19\pi}{6}\]
@@ -1152,7 +1152,7 @@ $P\left(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}\right)$，
 \[\cos\frac{\pi}{4}=\frac{\sqrt{2}}{2},\qquad \sin\frac{\pi}{4}=\frac{\sqrt{2}}{2},\qquad \tan\frac{\pi}{4}=1,\qquad \cot \frac{\pi}{4}=1\]
 \item 设$\alpha =\frac{\pi}{3}(=60^{\circ})$, 这时得
 $P\left(\frac{1}{2},\frac{\sqrt{3}}{2}\right)$，那么
-\[\cos\frac{\pi}{6}=\frac{1}{2},\qquad \sin\frac{\pi}{6}=\frac{\sqrt{3}}{2},\qquad \tan\frac{\pi}{6}=\sqrt{3},\qquad \cot \frac{\pi}{6}=\frac{1}{\sqrt{3}}=\frac{\sqrt{3}}{3}\]
+\[\cos\frac{\pi}{3}=\frac{1}{2},\qquad \sin\frac{\pi}{3}=\frac{\sqrt{3}}{2},\qquad \tan\frac{\pi}{3}=\sqrt{3},\qquad \cot \frac{\pi}{3}=\frac{1}{\sqrt{3}}=\frac{\sqrt{3}}{3}\]
 \end{itemize}
 
 把上述结果列表如下：
@@ -1163,7 +1163,7 @@ $\alpha$  &  $\frac{\pi}{6}(30^{\circ})$   &  $\frac{\pi}{4}(45^{\circ})$   &  $
 \hline
 $\sin\alpha$ & $\frac{1}{2}$& $\frac{\sqrt{2}}{2}$& $\frac{\sqrt{3}}{2}$\\
 $\cos\alpha$ &  $\frac{\sqrt{3}}{2}$& $\frac{\sqrt{2}}{2}$& $\frac{1}{2}$\\
-$\tan\alpha$ & $\frac{1}{2}$ & 1 &$\sqrt{3}$\\
+$\tan\alpha$ & $\frac{\sqrt{3}}{3}$ & 1 &$\sqrt{3}$\\
 $\cot\alpha$& $\sqrt{3}$ &1& $\frac{\sqrt{3}}{3}$\\
 \hline
 \end{tabular}
@@ -1202,7 +1202,7 @@ $\cot\alpha$& $\sqrt{3}$ &1& $\frac{\sqrt{3}}{3}$\\
 我们有下面的定理．
 \begin{blk}{定理}
     余弦函数是偶函数，正弦函数、正切函数和余
-    切函数都是函数，这就是说，对于一切容许的$\alpha$ 值，都有
+    切函数都是奇函数，这就是说，对于一切容许的$\alpha$ 值，都有
   \begin{equation}
  \begin{split}
         \sin(-\alpha )=-\sin\alpha,&\qquad \cos(-\alpha )=\cos\alpha\\
@@ -1878,7 +1878,7 @@ $Oy$轴上时，过$O$、$P$两点的直线就不与正切线相交），如
 \node at (-.25,-.25){$O$};
 \node at (2,0)[below]{$A(1,0)$};
 \draw[thick] (0,0)--(45:3);
-\node at (1.5,1.5)[right]{$L(1,y)$};
+\node at (1.5,1.5)[right]{$L(1,y_1)$};
 \node at (45:1.5)[above]{$P(x,y)$};
 \draw[->] (.5,0) arc (0:45:.5);
 \node at (45/2:.7) {$\alpha$};
@@ -1892,7 +1892,7 @@ $Oy$轴上时，过$O$、$P$两点的直线就不与正切线相交），如
 \node at (-.25,-.25){$O$};
 \node at (2,0)[below]{$A(1,0)$};
 \draw[thick] (-1.5/1.414,0)node[below]{$M$}--(90+45:1.5)node[above]{$P(x,y)$}--(0,0)--(-45:3);
-\node at (1.5,-1.5)[right]{$L(1,y)$};
+\node at (1.5,-1.5)[right]{$L(1,y_1)$};
 \draw[->] (.5,0) arc (0:45+90:.5);
 \node at (135/2:.7){$\alpha$};
 \node at (0,-2.75){(b)};
@@ -2041,7 +2041,7 @@ $\because\quad \sin\frac{\pi}{3}=\frac{\sqrt{3}}{2}$，
 \[2\alpha=\frac{4\pi}{3}+2k\pi\qquad \text{或}\qquad 2\alpha=\frac{5\pi}{3}+2k\pi\quad (k\in\mathbb{Z})\]
 $\therefore\quad \alpha=\frac{2\pi}{3}+k\pi\qquad \text{或}\qquad \alpha=\frac{5\pi}{6}+k\pi\quad (k\in\mathbb{Z})$
 
-\item 在单位圆上，横坐标等于=$-\frac{1}{2}$
+\item 在单位圆上，横坐标等于$-\frac{1}{2}$
 的点分别是在第二象限
 的$P_1$点和第三象限的$P_2$点（如图6.23）．
 
@@ -2071,7 +2071,7 @@ $\because\quad \cos\frac{\pi}{3}=\frac{1}{2}$，故
 
 通过$P_2$点的一切$\frac{\alpha_2}{2}$角：
 \[\frac{\alpha_2}{2}=\left(\pi+\frac{\pi}{3}\right)+2k\pi=\frac{4\pi}{3}+2k\pi\]
-由此得：$\alpha_1=\frac{8\pi}{3}+4k\pi\quad (k\in\mathbb{Z})$．
+由此得：$\alpha_2=\frac{8\pi}{3}+4k\pi\quad (k\in\mathbb{Z})$．
 
 所以解集是：
 \[\left\{\alpha\Big|\alpha=\frac{4\pi}{3}+4k\pi,\; k\in\mathbb{Z}\right\}\bigcup \left\{\alpha\Big|\alpha=\frac{8\pi}{3}+4k\pi,\; k\in\mathbb{Z}\right\}\]
@@ -2118,7 +2118,7 @@ $\because\quad \cos\frac{\pi}{3}=\frac{1}{2}$，根据诱导公式
 因为$\tan\frac{\pi}{6}=\frac{\sqrt{3}}{3}$，
 所以通过$P_2$点和$P_1$点的一切角$\alpha=-\frac{\pi}{6}+k\pi,\; (k\in\mathbb{Z})$
 
-所以解集是：$\left\{\alpha\Big|\alpha=\frac{\pi}{6}+k\pi,\quad k\in\mathbb{Z}\right\}$
+所以解集是：$\left\{\alpha\Big|\alpha=-\frac{\pi}{6}+k\pi,\quad k\in\mathbb{Z}\right\}$
 
 \textbf{另解：} $\because\quad \tan\alpha=-\frac{\sqrt{3}}{3}<0$
 
@@ -2166,15 +2166,15 @@ $\because\quad \tan\frac{\pi}{6}=\frac{\sqrt{3}}{3}$，根据诱导公式
 
 \begin{blk}{商数关系}
 \begin{enumerate}
-    \item $\tan\alpha=\frac{\sin\alpha}{\cos\alpha},\quad \alpha=\frac{\pi}{2}+k\pi\qquad (k\in\mathbb{Z})$
+    \item $\tan\alpha=\frac{\sin\alpha}{\cos\alpha},\quad \alpha\ne\frac{\pi}{2}+k\pi\qquad (k\in\mathbb{Z})$
     \item $\cot\alpha=\frac{\cos\alpha}{\sin\alpha},\quad \alpha\ne k\pi\qquad (k\in\mathbb{Z})$
 \end{enumerate}
 \end{blk}
 
 \begin{proof}
 \[\begin{split}
-    \frac{\sin\alpha}{\cos\alpha}&=\frac{\frac{y}{r}}{\frac{x}{r}}=\frac{x}{y}=\tan\alpha,\quad \alpha=\frac{\pi}{2}+k\pi\qquad (k\in\mathbb{Z})\\
-    \frac{\cos\alpha}{\sin\alpha}&=\frac{\frac{x}{r}}{\frac{y}{r}}=\frac{y}{x}=\cot\alpha,\quad \alpha\ne k\pi\qquad (k\in\mathbb{Z})\\
+    \frac{\sin\alpha}{\cos\alpha}&=\frac{\frac{y}{r}}{\frac{x}{r}}=\frac{y}{x}=\tan\alpha,\quad \alpha\ne\frac{\pi}{2}+k\pi\qquad (k\in\mathbb{Z})\\
+    \frac{\cos\alpha}{\sin\alpha}&=\frac{\frac{x}{r}}{\frac{y}{r}}=\frac{x}{y}=\cot\alpha,\quad \alpha\ne k\pi\qquad (k\in\mathbb{Z})\\
 \end{split}\]    
 \end{proof}
 
@@ -2192,7 +2192,7 @@ $\because\quad \tan\frac{\pi}{6}=\frac{\sqrt{3}}{3}$，根据诱导公式
 \[\sin^2\alpha+\cos^2\alpha=\left(\frac{y}{r}\right)^2+\left(\frac{x}{r}\right)^2=\frac{x^2+y^2}{r^2}\]
 因为$y^2+x^2=r^2$，所以$\sin^2\alpha+\cos^2\alpha=1$．
 
-把$\sin^2\alpha+\cos^2\alpha=1$的两边同除以$\cos\alpha,\; \alpha\ne\frac{\pi}{2}+k\pi\quad (k\in\mathbb{Z})$, 便得到
+把$\sin^2\alpha+\cos^2\alpha=1$的两边同除以$\cos^2\alpha,\;\alpha\ne\frac{\pi}{2}+k\pi\quad (k\in\mathbb{Z})$, 便得到
 \[\tan^2\alpha+1=\sec^2\alpha\]
 或
 \[1+\tan^2\alpha=sec^2\alpha\]
@@ -2202,7 +2202,7 @@ $\because\quad \tan\frac{\pi}{6}=\frac{\sqrt{3}}{3}$，根据诱导公式
 \end{proof}
 
 
-上面八个公式，除去使公式中的函数不存在的那些a的
+上面八个公式，除去使公式中的函数不存在的那些$\alpha$的
 值以外，对于$\alpha$其它的值都成立，因此，把它们叫做三角
 函数的基本恒等式．
 
@@ -2274,11 +2274,11 @@ $的值．
     \end{enumerate}
 \item \begin{enumerate}
     \item $\frac{\tan\alpha-\sin\alpha}{\tan \alpha}=1-\cos\alpha$
-    \item $\frac{\tan\alpha+\cot\alpha-2}{\tan\alpha+\cot\alpha+2}=\left(\frac{\tan \alpha-1}{\tan\alpha+1}\right)$
+    \item $\frac{\tan\alpha+\cot\alpha-2}{\tan\alpha+\cot\alpha+2}=\left(\frac{\tan \alpha-1}{\tan\alpha+1}\right)^2$
 \end{enumerate}
 \item \begin{enumerate}
     \item $\frac{\tan\alpha+\tan\beta}{\cot\alpha+\cot\beta}=\tan\alpha\tan\beta$
-    \item $\frac{\cos\alpha+\cot\alpha}{\cot\alpha}-1=\tan\alpha\cot \cos\alpha$
+    \item $\frac{\cos\alpha+\cot\alpha}{\cot\alpha}-1=\tan\alpha\cos\alpha$
 \end{enumerate}
 
 \item\begin{enumerate}
@@ -2313,7 +2313,7 @@ $的值．
 \end{example}
 
 \begin{solution}
-因为$cos\alpha=\frac{12}{13}>$，所以$\alpha$角的终边在第一象限或在第四象限．
+因为$\cos\alpha=\frac{12}{13}>0$，所以$\alpha$角的终边在第一象限或在第四象限．
 
 从公式$\sec\alpha=\frac{1}{\cos\alpha}$，有$\sec\alpha=\frac{1}{\frac{12}{13}}=\frac{13}{12}$．
 
@@ -2404,7 +2404,7 @@ $\because\quad \phi$是第三象限角，$\therefore\quad \sec\phi<0$
 
 \begin{rmk}
 \begin{enumerate}
-    \item 在包含有函数$\tan\alpha$或$\sec\alpha$的一切公式里，要除去$\alpha=\frac{\pi}{2}+2k\pi$的诸值，其中$k\in\mathbb{Z}$；在包含有$\cot\alpha$或$\csc\alpha$
+    \item 在包含有函数$\tan\alpha$或$\sec\alpha$的一切公式里，要除去$\alpha=\frac{\pi}{2}+k\pi$的诸值，其中$k\in\mathbb{Z}$；在包含有$\cot\alpha$或$\csc\alpha$
     的一切公式里，要除去$\alpha=k\pi$, 其中$k\in\mathbb{Z}$．
     \item 在包含有根号的那些公式里，一般的情形在根
     号之前应置双号“$\pm$”，若已给出$\alpha$角终边所在象限，则可
@@ -2426,7 +2426,7 @@ $\because\quad \phi$是第三象限角，$\therefore\quad \sec\phi<0$
     \item 已知$\sin\alpha=-\frac{24}{25}$，计算$\cos\alpha, \tan\alpha, \cot\alpha$．
     \item 已知$\cos\alpha=-\frac{9}{41}$，$90^{\circ}<\alpha<180^{\circ}$，计算$\sin\alpha, \tan\alpha, \cot\alpha,\sec\alpha, \csc\alpha$．
 \item 已知$\cot\alpha=3\frac{41}{60}$, $\pi<\alpha<\frac{3\pi}{2}$，计算$\cos\alpha$．
-\item 已知$\tan=1.4$, $\pi<\alpha<\frac{3\pi}{2}$，计算$\alpha$角的其它三角函数值（准确到0.01）．
+\item 已知$\tan\alpha=1.4$, $\pi<\alpha<\frac{3\pi}{2}$，计算$\alpha$角的其它三角函数值（准确到0.01）．
 \item 已知$\cot\alpha=-\frac{52}{173}$和$0^{\circ}<\alpha<180^{\circ}$，计算$\tan\alpha-\sec\alpha$的值．
 \item 已知$\tan\alpha=-1.5$， $100^{\circ}<\alpha<200^{\circ}$，计算$\cos\alpha$．
 \item 已知$\sin\alpha=\frac{a}{\sqrt{a^2+b^2}}$，计算$\tan\alpha-\cot\alpha$的值．
