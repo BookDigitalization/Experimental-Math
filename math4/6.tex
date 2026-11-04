@@ -88,7 +88,7 @@ $\ell^2=2$, 所以，如果$\ell$是个有理数，设其等于
 $\frac{p}{q}$，这里$q$和$p$是两个互质的正整
 数，我们将有
 \[p^2=2q^2\]
-根据上述方程，$p$是偶数，因此$p$本身也必定是偶数，譬如
+根据上述方程，$p^2$是偶数，因此$p$本身也必定是偶数，譬如
 说，$p=2p'$, 用$2p'$代替$p$, 我们得到
 \[4({p'}^2)=2q^2\]
 或者，
@@ -241,7 +241,7 @@ $a_0$, $b_0$均为有理数），见图6.4．
 \end{figure}
 
 \begin{enumerate}
-    \item  $\frac{1}{2}\left(a_{0}+b_{0}\right)=\frac{3}{2},\qquad \left(-\frac{3}{2}\right)^{2}=\frac{9}{4}>2 \quad\Rightarrow\quad\frac{3}{2}>\sqrt{2}$
+    \item  $\frac{1}{2}\left(a_{0}+b_{0}\right)=\frac{3}{2},\qquad \left(\frac{3}{2}\right)^{2}=\frac{9}{4}>2 \quad\Rightarrow\quad\frac{3}{2}>\sqrt{2}$
     
     故 $a_{0}=a_{1}=1,\qquad   b_{1}=\frac{3}{2}$
 
@@ -268,7 +268,7 @@ $a_0$, $b_0$均为有理数），见图6.4．
     $
 
     
-    \item  $\frac{1}{2}\left(a_{6}+b_{6}\right)=\frac{181}{128},\quad \left(\frac{181}{128}\right)^{2}=\frac{32761}{16314}<2 \quad\Rightarrow\quad \frac{181}{128}<\sqrt{2}$
+    \item  $\frac{1}{2}\left(a_{6}+b_{6}\right)=\frac{181}{128},\quad \left(\frac{181}{128}\right)^{2}=\frac{32761}{16384}<2 \quad\Rightarrow\quad \frac{181}{128}<\sqrt{2}$
     
      故$a_{7}=\frac{181}{128}, \qquad b_{7}=b_{6}=\frac{91}{64}$，这时，$\frac{181}{128}<\sqrt{2}<\frac{91}{64}$，把$\frac{181}{128}$作为$\sqrt{2}$的不足近似值，其误差小于
 $\frac{1}{2^7}=\frac{1}{128}$．
@@ -394,7 +394,7 @@ $(1.1)^2,(1.2)^2,(1.3)^2,(1.4)^2=1.96<2<2.25=
 
 \subsection{实数系的基本性质}
 实数系是计算长度、面积、重量、时间等等这一类量不
-可缺少的工具．实数系具有四则运和大小次序这两种基本
+可缺少的工具．实数系具有四则运算和大小次序这两种基本
 结构．现在我们先以线段的长度为例，从几何上定义实数系
 的四则运算和大小次序，这样，同学就容易从几何上验证实
 数（线段长度）满足有理数系的四则运算和大小次序的基本
@@ -431,7 +431,7 @@ $CD$有相等长度，记作$k=\ell$．
 $OA$和$AC$, 在另一边上截取长度为$a$的线段$OB$, 此外，作直
 线$CD$平行于直线$AB$, $CD$截得的线段$BD$的长度，定义为积
 $ab$. 这个定义是合理的，因为如果我们在另一个角$O'$上类似
-地作图（图2.7(2)），那么得到的线段$B'D'$的长度和线段
+地作图（图6.7(2)），那么得到的线段$B'D'$的长度和线段
 $BD$的长度相等．
 
 \begin{figure}[htp]
@@ -558,7 +558,7 @@ $BD$的长度相等．
         a\cdot b>0\\a\cdot b<0\\a\cdot b>0\\
     \end{cases}\]
     \item 对于任意两个正实数，$a,b>0$, 恒存有一够大
-    的正整数$n$, 使得$na<b$． （通常称之为阿基米德性质）
+    的正整数$n$, 使得$na>b$． （通常称之为阿基米德性质）
 \end{enumerate}
 
 \subsubsection{ 实数集连续性（完备性）}
@@ -722,7 +722,7 @@ $a^n>b^n$．
 反过来，若$a>b>0$, 且$n$是一个正整数，则$a^{\tfrac{1}{n}}>b^{\tfrac{1}{n}}$．
 
 \begin{proof}
-    假设$a^{\tfrac{1}{n}}=b^{\tfrac{1}{n}}$, 那么$\left(a^{\tfrac{1}{n}}\right)^n>\left(b^{\tfrac{1}{n}}\right)^n$，因而，$a=b$, 这就与已知$a>b$矛盾．
+    假设$a^{\tfrac{1}{n}}=b^{\tfrac{1}{n}}$, 那么$\left(a^{\tfrac{1}{n}}\right)^n=\left(b^{\tfrac{1}{n}}\right)^n$，因而，$a=b$, 这就与已知$a>b$矛盾．
 
 假设$a^{\tfrac{1}{n}}<b^{\tfrac{1}{n}}$, 于是$\left(a^{\tfrac{1}{n}}\right)^n<\left(b^{\tfrac{1}{n}}\right)^n$，即$a<b$, 这又与已知
 条件$a>b>0$矛盾，故我们得出结论$a^{\tfrac{1}{n}}>b^{\tfrac{1}{n}}$．
@@ -858,7 +858,7 @@ $\therefore\quad -2\le x\le 8$
     \caption{}
 \end{figure}
 
-同样地，我们也可以解释$x>3$的几何意义，不等式
+同样地，我们也可以解释$|x|>3$的几何意义，不等式
 $|x|>3$是描述在$x$轴上距离原点大于3个单位的点集，图6.13
 说明了这些点的位置，图中的圆圈表示去掉$\pm 3$, 因此这些
 点的坐标小于$-3$或大于3, 即
@@ -951,7 +951,7 @@ $x>a\; (a>0)$．
 它两边之和这个定理．
 
 有时，我们需要$|a+b|$的下限估值，注意到
-\[|a|=|(a+b)-b\le |a+b| +|-b| =|a+b| +|b|\]
+\[|a|=|(a+b)-b|\le |a+b| +|-b| =|a+b| +|b|\]
 因此下面不等式成立
 \begin{equation}
     |a+b|\ge |a|-|b|
@@ -1010,7 +1010,7 @@ y>5+|x-1|
 
 \item \begin{enumerate}
     \item 若$|h|<\frac{\varepsilon}{4}$, $|k|<\frac{\varepsilon}{6}$，求证$|2h-3k|<\varepsilon$．
-    \item 若$|a_n-r|<\varepsilon$，$|a_n-a_n'|<\varepsilon$，求证$|a_n'-r|<\varepsilon$．
+    \item 若$|a_n-r|<\varepsilon$，$|a_n-a_n'|<\varepsilon$，求证$|a_n'-r|<2\varepsilon$．
     \item 若$|b_n|<\varepsilon$，$|a_n-b_n|<\varepsilon$，求证$|a_n|<2\varepsilon$．
 \end{enumerate}
 
@@ -1067,7 +1067,7 @@ y>5+|x-1|
 \[(a_1-A)+(a_2-A)+\cdots+(a_n-A)=0\]
 则必有一大于
 $A$, 也必有一小于$A$, 不妨设$a_1>A>a_2$, 于是，$A-a_1<0$,
-$A-a>0$, 把$a_1,a_2,\ldots,a_n$改换成
+$A-a_2>0$, 把$a_1,a_2,\ldots,a_n$改换成
 \begin{equation}
 a_1'=A,\; a_2'=a_2+a_1-A,\; a_3'=a_3,\; \ldots, a_n'=a_n
 \end{equation}
@@ -1086,7 +1086,7 @@ a_1'=A,\; a_2'=a_2+a_1-A,\; a_3'=a_3,\; \ldots, a_n'=a_n
 从而
 \[A(a_2+a_1-A)a_3\cdots a_n>a_1a_2\cdots a_n\]
 若(6.12)中还有不等于$A$的，比如，$a_s>A>a_m$, 我们用同法
-即用$A$取代其中较大的一个$a_c$, 用$a_m+a_s-A$代换$a_m$, 又可另
+即用$A$取代其中较大的一个$a_s$, 用$a_m+a_s-A$代换$a_m$, 又可另
 得$n$个正数，其和同前，而其积更大．由此以往，不过$n-1$
 次，便可得$n$个相等之正数$\underbrace{A,A,\cdots A}_{\text{$n$个}}$, 此时积最大，故有
 \[A^n\ge a_1a_2\cdots a_n\]
@@ -1095,7 +1095,7 @@ a_1'=A,\; a_2'=a_2+a_1-A,\; a_3'=a_3,\; \ldots, a_n'=a_n
 
 \begin{example}
     柯西不等式，若$a_i,b_i,\; i=1,2,\cdots ,n$是实数，则
-\[(a_1b_1+a_2b_2+\cdots +a_nb_n)\le (a_1^2+a_2^2+\cdots +a_n^2)(b_1^2+b_2^2+\cdots+b_n^2)\]
+\[(a_1b_1+a_2b_2+\cdots +a_nb_n)^2\le (a_1^2+a_2^2+\cdots +a_n^2)(b_1^2+b_2^2+\cdots+b_n^2)\]
 当且仅当
 $\frac{a_1}{b_1}=\frac{a_2}{b_2}=\cdots=\frac{a_n}{b_n}$
 时，等式成立．
@@ -1109,12 +1109,12 @@ $\frac{a_1}{b_1}=\frac{a_2}{b_2}=\cdots=\frac{a_n}{b_n}$
 成立，将(6.13)的左端改写成按$t$的降幂排列，得
 \begin{equation}
    ( b^2_1+b^2_2+\cdots +b^2_n)t^2+2(a_1b_1+\cdots +a_nb_n)t+(a^2_1+a_2^2+
-+\cdots +a_n^2)\ge 0
+\cdots +a_n^2)\ge 0
 \end{equation} 
 设$A=a^2_1+\cdots +a_n^2$, $B=a_1b_1+\cdots +a_nb_n$,
 $C=b^2_1+\cdots +b^2_n$, 
 于是(6.14)写成
-$Ct^2+2Bt+A>0$, 其中$C\ge 0$．
+$Ct^2+2Bt+A\ge 0$, 其中$C\ge 0$．
 \begin{itemize}
     \item 若$C=0$, 于是$b_1=b_2=\cdots =b_n=0$, 显然，柯西不等式
 成立．
@@ -1155,7 +1155,7 @@ $\because\quad C>0,\qquad \therefore\quad B^2\le AC$, 即
 \end{enumerate}
    \item  若$a_1,a_2$表示正数，$p,q$表示正整数，求证：
 \begin{enumerate}
-    \item $a_1^{p+q}+a_2^{p+q}\ge a_1^pa_2^q+a_1^qa_2^q$
+    \item $a_1^{p+q}+a_2^{p+q}\ge a_1^pa_2^q+a_1^qa_2^p$
     \item $\frac{a_1^{p+q}+a_2^{p+q}}{2}\ge \left(\frac{a_1^p+a_2^p}{2}\right)\left(\frac{a_1^q+a_2^q}{2}\right)$
 \end{enumerate}
 
@@ -1165,7 +1165,7 @@ $\because\quad C>0,\qquad \therefore\quad B^2\le AC$, 即
 \item 求证，当$n$是1或不小于5的自然数时，总有
 $2^n>n^2$．
 \item 设$0<a<1$, $0<x_0<1$, $x_n=a(1-x_{n-1})+
-+(1-a)x_{n-1},\quad (n=1,2,3,\ldots)$,
+(1-a)x_{n-1},\quad (n=1,2,3,\ldots)$,
 \begin{enumerate}
     \item 用$a$与$x_0$表示$x_n$；
     \item 证明 $0<x_n<1$．
@@ -1178,7 +1178,7 @@ $2^n>n^2$．
 \item 如果$a<3$, 那么$x_n\le 2+\frac{1}{2^{n-1}}$
 \end{enumerate}
 
-\item 若长方形的体积是定值，求全面积的最小值．
+\item 若长方体的体积是定值，求全面积的最小值．
 \item 求证球内接长方体中，以正方体的体积为最大．
 \item 求证在周长都为$2L$的所有三角形中，面积最大的必
 是等边三角形．
@@ -1201,7 +1201,7 @@ $2^n>n^2$．
 \item 对于任何实数，求证：
 \[\sqrt{\frac{a_1^2+a_2^2+\cdots+a_n^2}{n}}\ge \frac{a_1+a_2+\cdots+a_n}{n}\]
 当且仅当诸数相等时，等式成立．
-\item $a+b=1$, $a>0$, $b>0$, 求证$\sqrt{2a+1}+\sqrt{2b+1}\le 2sqrt{2}$．
+\item $a+b=1$, $a>0$, $b>0$, 求证$\sqrt{2a+1}+\sqrt{2b+1}\le 2\sqrt{2}$．
 \item 求证
 $\frac{|x_1+x_2|}{|4+x_1^2| |4+x_2^2|}<\frac{1}{8}$
 \item 对于$n\ge 2$的自然数$n$, 证明不等式
@@ -1214,7 +1214,7 @@ $$2^n>1+n\sqrt{2^{n-1}}$$
 \item 半径为1的圆内接三角形面积等于$\frac{1}{4}$,
 设此三角形三边长为$a,b,c$, 求证：
 \begin{enumerate}
-    \item $abc=13$
+    \item $abc=1$
     \item $\sqrt{a}+\sqrt{b}+\sqrt{c}<\frac{1}{a}+\frac{1}{b}+\frac{1}{c}$
 \end{enumerate}
 

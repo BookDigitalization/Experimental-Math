@@ -53,7 +53,7 @@
 \end{figure}
 
 把$Ox$轴旋转到$\beta$的终边位置而成$Ox'$轴，$Oy$轴旋转同样的角而成$Oy'$轴，
-我们用两种方法计算弦长$P_1$, $P_2$．
+我们用两种方法计算弦长$|P_1P_2|$．
 
 在$x'Oy'$坐标系中，$P_1$, $P_2$的坐标是
 \[P_1\; \left(\cos(\alpha-\beta),\, \sin(\alpha-\beta)\right),\qquad P_2\; (1,0) \]
@@ -141,7 +141,7 @@
 \[\cos\frac{\pi}{2}=0,\qquad \sin\frac{\pi}{2}=1\]
 所以$\cos\left(\frac{\pi}{2}-\alpha\right)=\sin\alpha$
 
-又因为上式中的$\alpha$为任意角，所以，若把公式中的$\left(\frac{\pi}{2}\right)$换成$\alpha$，就可得
+又因为上式中的$\alpha$为任意角，所以，若把公式中的$\alpha$换成$\left(\frac{\pi}{2}-\alpha\right)$，就可得
 \[\cos\alpha=\sin\left(\frac{\pi}{2}-\alpha\right)\]
 即：$\sin\left(\frac{\pi}{2}-\alpha\right)=\cos\alpha$
 \end{proof}
@@ -157,7 +157,7 @@
         \item $\cos135^{\circ}$
         \item $\cos\left(\frac{-61\pi}{12}\right)$
         \item $\cos1950^{\circ}$
-        \item $\cos\frac{4\pi}{9} \cos\frac{\pi}{9}\sin\frac{4\pi}{9}\sin \frac{\pi}{9}$
+        \item $\cos\frac{4\pi}{9} \cos\frac{\pi}{9}+\sin\frac{4\pi}{9}\sin \frac{\pi}{9}$
         \item $\cos^2 15^{\circ}-\sin^2 15^{\circ}$
     \end{enumerate}        
     \end{multicols}
@@ -279,7 +279,7 @@
     \item $\sin\left(-\frac{5\pi}{12}\right)$
     \item $\tan 15^{\circ}$
     \item $\sin 14^{\circ}\cdot \cos 16^{\circ}+\cos 14^{\circ}\cdot \sin 16^{\circ}$
-    \item $\sin 79^{\circ}\cdot \cos 25^{\circ}-\sin 20^{\circ}\cdot \sin 25^{\circ}$
+    \item $\sin 70^{\circ}\cdot \cos 25^{\circ}-\sin 20^{\circ}\cdot \sin 25^{\circ}$
 \end{enumerate}
 \item 已知$\sin\alpha=\frac{2}{3}$, $\cos\beta=-\frac{3}{4}$，且$\alpha,\beta$都是第二象限角
 
@@ -296,7 +296,7 @@ $\sin(\alpha+\beta)$与$\cos(\alpha-\beta)$的值．
 \subsection{两角和与差的正切}
 \begin{blk}{定理3}
     两个角$\alpha$与$\beta$的和（或差）的正切，等于一个
-分式，其分子为这两角正切的和（或整），其分母为1与这两个角的正切乘积的差（或和）．即
+分式，其分子为这两角正切的和（或差），其分母为1与这两个角的正切乘积的差（或和）．即
 \begin{align}
     \tan(\alpha+\beta)&=\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}\\
     \tan(\alpha-\beta)&=\frac{\tan\alpha-\tan\beta}{1+\tan\alpha\tan\beta}
@@ -412,7 +412,7 @@ $\sin(\alpha+\beta)$与$\cos(\alpha-\beta)$的值．
 \end{example}
 
 \begin{solution}
-\textbf{解法1：} 由已知，$\alpha\ne \frac{\pi}{4}+k\pi\; (k\in\mathbb{Z})$．不然的话，$\alpha+\frac{\pi}{4}=\frac{pi}{2}+k\pi$, $\tan\left(\frac{\pi}{4}+\alpha\right)$就没有意义了．
+\textbf{解法1：} 由已知，$\alpha\ne \frac{\pi}{4}+k\pi\; (k\in\mathbb{Z})$．不然的话，$\alpha+\frac{\pi}{4}=\frac{\pi}{2}+k\pi$, $\tan\left(\frac{\pi}{4}+\alpha\right)$就没有意义了．
 
 所以$\tan\left(\frac{\pi}{4}+\alpha\right)=\frac{1+\tan\alpha}{1-\tan\alpha}=m$
 
@@ -480,7 +480,7 @@ $\sin(\alpha+\beta)$与$\cos(\alpha-\beta)$的值．
     \item $\frac{\cos\alpha\cdot \cos\beta-\cos (\alpha+\beta)}{\cos (\alpha-\beta)-\sin\alpha\cdot \sin\beta}$
     \item $\frac{\cos (\alpha+\beta)+\cos(\alpha-\beta)}{\cos (\alpha+\beta)-\cos (\alpha-\beta)}$
     \item $\cos25^{\circ}\cdot \cos29^{\circ}-\sin24^{\circ}\cdot \sin29^{\circ}$
-    \item $\cos (36^{\circ}+x)\cdot \cos (54^{\circ}-x)\sin (36^{\circ}+x)\cdot \sin (54^{\circ}-x)$
+    \item $\cos (36^{\circ}+x)\cdot \cos (54^{\circ}-x)-\sin (36^{\circ}+x)\cdot \sin (54^{\circ}-x)$
 \end{enumerate} 
 
 \item 已知$\cos\alpha=\cos\beta=m$, $\sin\alpha=\sin\beta=n$, 试求$\cos(\alpha+\beta)$及$\cos(\alpha-\beta)$的值，并求出$m$与$n$的关系式．
@@ -490,7 +490,7 @@ $\sin(\alpha+\beta)$与$\cos(\alpha-\beta)$的值．
 且$\alpha$是第二象限角，$\beta$
 是第四象限角，试求$\sin(\alpha+\beta)$
 
-\item 若$\cos\alpha=-\frac{3}{15}$, $\sin\beta=\frac{8}{17}$, 且$a\in\left(\pi,\frac{3\pi}{2}\right)$,
+\item 若$\cos\alpha=-\frac{3}{15}$, $\sin\beta=\frac{8}{17}$, 且$\alpha\in\left(\pi,\frac{3\pi}{2}\right)$,
 $\beta\in \left(0,\frac{\pi}{2}\right)$, 试求$\sin(\alpha-\beta)$.
 
 
@@ -564,7 +564,7 @@ $\theta+\phi=45^{\circ}$．
 \item 已知$\cot\alpha=\frac{3}{4}$, $\cot\beta=\frac{1}{7}$,
 且$\alpha,\beta$都是锐角，
 
-求证：$1+\beta=135^{\circ}$．
+求证：$\alpha+\beta=135^{\circ}$．
 
 \item 已知$\tan\alpha$与$\tan\beta$是方程$x^2+6x+7=0$的两个根．
 
@@ -612,7 +612,7 @@ $\theta+\phi=45^{\circ}$．
     \tan3\alpha&=\frac{2\tan\frac{3\alpha}{2}}{1-\tan^2\frac{3\alpha}{2}}
 \end{split}\]
 
-\item 在二倍的正切公式(1.15)中，除了$\alpha=\frac{\pi}{2}+k\pi$和$\alpha=\frac{\pi}{4}+\frac{k\pi}{2},\; (k\in\mathbb{Z})$
+\item 在二倍角的正切公式(1.15)中，除了$\alpha=\frac{\pi}{2}+k\pi$和$\alpha=\frac{\pi}{4}+\frac{k\pi}{2},\; (k\in\mathbb{Z})$
 诸值之外，对$\alpha$的其余一切值都成立，因为当所指定的那些$\alpha$值，$\tan\alpha$和$\tan2\alpha$都不存在．
 \item 在使用二倍角三角函数的公式作恒等变形时，不仅要掌握从等式的左端的式子变换到右端的式子，而且也要熟练地掌握从等式的右端的式子变换到左端的式子．
 \end{enumerate}
@@ -753,7 +753,7 @@ $\theta+\phi=45^{\circ}$．
 \end{enumerate}
 \end{multicols}
 
-\item     已知$\cos\alpha=-\frac{12}{13},\; a\in \left(\frac{\pi}{2},\pi\right)$, 试求：$\sin2\alpha$, $\cos2\alpha$, $\tan2\alpha$的值．
+\item     已知$\cos\alpha=-\frac{12}{13},\; \alpha\in \left(\frac{\pi}{2},\pi\right)$, 试求：$\sin2\alpha$, $\cos2\alpha$, $\tan2\alpha$的值．
 
 \item 试推导出$\tan3\alpha$的公式（用$\tan\alpha$表示）．
 
@@ -766,7 +766,7 @@ $\theta+\phi=45^{\circ}$．
     \item $1+2\cos^2\alpha=2+\cos2\alpha$
     \item $\frac{1}{\sin\alpha}-\frac{\cos2\alpha}{\sin\alpha}=2\sin\alpha$
     \item $\tan2\alpha=\frac{2\cot\alpha}{\cot^2\alpha-1}$
-    \item $\frac{\sin^2\theta}{1-\cos^2\theta}=\cot\theta$
+    \item $\frac{\sin2\theta}{1-\cos2\theta}=\cot\theta$
     \item $\cot x-\cot2x=\frac{1}{\sin 2x}$
     \item $\frac{\sin\beta\cdot \cos\beta}{\sin^2\beta-\cos^2\beta}=-\frac{1}{2}\tan2\beta$
 \end{enumerate}
@@ -898,7 +898,7 @@ $0\le \cos^2\frac{\alpha}{2}\le 1$，故知
 
 \begin{solution}
 因为已知$270^{\circ}<\alpha<360^{\circ}$，所以$135^{\circ}<\frac{\alpha}{2}<180^{\circ}$
-这时可以肯定$\frac{\alpha}{2}$角是第一象限的角，所以$\sin \frac{\alpha}{2}$的值是正的，$\cos\frac{\alpha}{2}$和$\tan \frac{\alpha}{2}$的值是负的，因此得到
+这时可以肯定$\frac{\alpha}{2}$角是第二象限的角，所以$\sin \frac{\alpha}{2}$的值是正的，$\cos\frac{\alpha}{2}$和$\tan \frac{\alpha}{2}$的值是负的，因此得到
 \[\begin{split}
     \sin\frac{\alpha}{2}&=\sqrt{\frac{1-\cos\alpha}{2}}=\sqrt{\frac{1-0.6}{2}}=\frac{\sqrt{5}}{5}\\
      \cos\frac{\alpha}{2}&=-\sqrt{\frac{1+\cos\alpha}{2}}=-\sqrt{\frac{1+0.6}{2}}=-\frac{2\sqrt{5}}{5}\\
@@ -930,7 +930,7 @@ $0\le \cos^2\frac{\alpha}{2}\le 1$，故知
 \[\frac{\pi}{2}+k\pi<\frac{\alpha}{2}<\frac{3\pi}{4}+k\pi\quad (k\in\mathbb{Z})\]
 当$k$为正负偶数时，
 $\frac{\alpha}{2}$是第二象限角；当$k$为正负奇 数
-时，$\frac{\alpha}{2}$是第二象限角，因此，当$\alpha$是第三象限的角时，$\frac{\alpha}{2}$
+时，$\frac{\alpha}{2}$是第四象限角，因此，当$\alpha$是第三象限的角时，$\frac{\alpha}{2}$
 可能是第二象限的角或第四象限的角，所以$\sin\frac{\alpha}{2}$
 的值的符号不能确定．
 
@@ -1011,7 +1011,7 @@ $\frac{\alpha}{2}$是第二象限角；当$k$为正负奇 数
 \end{solution}
 
 由这两种解法看出，如果已知$\sin\alpha$, $\cos\alpha$的值，那么求$\tan\frac{\alpha}{2}$时，
-用公式(1.24)要比公式(1.23)方便一些，其中尤
+用公式(1.24)要比公式(1.21)方便一些，其中尤
 以$\tan\frac{\alpha}{2}=\frac{1-\cos\alpha}{\sin\alpha}$更方便．
 
 \begin{example}
@@ -1093,7 +1093,7 @@ $\frac{\alpha}{2}$是第二象限角；当$k$为正负奇 数
 \item 证明：
 \begin{enumerate}
     \item 若 $0<\alpha<\pi$, 则 $\sin 2 \alpha<2 \sin \alpha$
-    \item 若 $0<\alpha<\frac{\pi}{4}$, 则 $\tan 2 \alpha<2\tan  \alpha$
+    \item 若 $0<\alpha<\frac{\pi}{4}$, 则 $\tan 2 \alpha>2\tan  \alpha$
 \end{enumerate}
 
 \item  已知 $\sin \alpha=\frac{7}{25}$, $\frac{\pi}{2}<\alpha<\pi$,
@@ -1107,7 +1107,7 @@ $\frac{\pi}{2}<\alpha<\pi$, $\frac{\pi}{2}<\beta<\pi$，求：
     \item $\cos(2\alpha-\beta)$
     \item $\tan[2(\alpha-\beta)]$
 \end{enumerate}
-\item 设方程$x^2-(\tan \theta+\cot \theta)x+1=0$的一个限是$2+\sqrt{3}$，
+\item 设方程$x^2-(\tan \theta+\cot \theta)x+1=0$的一个根是$2+\sqrt{3}$，
 求$\sin2\theta$．
 \item 设$\tan \theta$, $\tan \phi$是方程$7x^2+3x+1=0$的二根，
 求 $\tan\frac{\theta+\phi}{2}$的值．
@@ -1159,7 +1159,7 @@ $\frac{\pi}{2}<\alpha<\pi$, $\frac{\pi}{2}<\beta<\pi$，求：
 \begin{enumerate}
     \item $\left(\sin\frac{x}{2}-\cos\frac{x}{2}\right)^2=1-\sin x$
     \item $\tan\alpha-\cot\alpha=-2\cot 2\alpha$
-    \item $\tan\left(\alpha+\frac{\pi}{4}\right)+\tan\left(\alpha-\frac{\pi}{4}\right)=2\tan\alpha$
+    \item $\tan\left(\alpha+\frac{\pi}{4}\right)+\tan\left(\alpha-\frac{\pi}{4}\right)=2\tan 2\alpha$
     \item $\sin\theta+\cos\theta=\frac{1+\sin2\theta}{\sin\theta+\cos\theta}$
     \item $\sin\alpha(1+\cos2\alpha)=\sin2\alpha\cdot \cos\alpha$
     \item $2\sin\left(\frac{\pi}{4}+x\right)\sin\left(\frac{\pi}{4}-x\right)=\cos2x$
@@ -1185,7 +1185,7 @@ $\frac{\pi}{2}<\alpha<\pi$, $\frac{\pi}{2}<\beta<\pi$，求：
 \begin{enumerate}
     \item $2\sin\theta+\sin2\theta=4\sin\theta\cdot \cos^2\frac{\theta}{2}$
     \item $\tan 15^{\circ}+\cot 15^{\circ}=4$
-    \item $\cos^2\alpha-2=\cos2\alpha\cdot \csc^2\alpha$
+    \item $\csc^2\alpha-2=\cos2\alpha\cdot \csc^2\alpha$
     \item $\sin(n\pi+x)\cos(n\pi-x)=\frac{1}{2}\sin 2x,\quad (n\in \mathbb{Z})$
     \item $\cos\alpha(\cos\alpha-\cos\beta)+\sin\alpha(\sin\alpha-\sin\beta)=2\sin^2\frac{\alpha-\beta}{2}$
     \item $\frac{\cos\alpha}{\sec\frac{\alpha}{2}+\csc\frac{\alpha}{2}}=\frac{1}{2}\left(\cos\frac{\alpha}{2}-\sin\frac{\alpha}{2}\right)$
@@ -1196,7 +1196,7 @@ $\frac{\pi}{2}<\alpha<\pi$, $\frac{\pi}{2}<\beta<\pi$，求：
 \item 求证下列条件等式：
 \begin{enumerate}
     \item 若$\tan x=\frac{b}{a}$，则$a\cos 2x+b\sin 2x=a$
-    \item 若$\tan\alpha\frac{\alpha}{2}=\frac{m}{n}$，则$\sin\alpha+\frac{m}{n}\cos\alpha=1$
+    \item 若$\tan\frac{\alpha}{2}=\frac{m}{n}$，则$\sin\alpha+\frac{m}{n}\cos\alpha=1$
     \item 若$1+2\tan^2 x=\tan^2 y$，则$\sin^2x+\cos 2y=0$
     \item 若$x+y=3-\cos4\alpha$, $x-y=4\sin2\alpha$，则$x^{\tfrac{1}{2}}+y^{\tfrac{1}{2}}=2$
     \item 若$2\alpha+\beta=\frac{\pi}{2}$，则
@@ -1495,7 +1495,7 @@ $\sin2A+\sin2B+\sin2C=4\sin A\sin B\sin C$
 \item 将下列各式化为两角和（差）的三角函数：
 \begin{multicols}{2}
 \begin{enumerate}
-    \item $\frac{\sqrt{3}}{2}\sin x+\frac{1}{2}\sin x$
+    \item $\frac{\sqrt{3}}{2}\sin x+\frac{1}{2}\cos x$
     \item $\frac{\sqrt{2}}{2}\cos x-\frac{\sqrt{2}}{2}\sin x$
     \item $\sqrt{2}\cos x+\sqrt{2}\sin x$
     \item $\cos\theta-\sqrt{3}\sin\theta$
@@ -1516,7 +1516,7 @@ $\sin2A+\sin2B+\sin2C=4\sin A\sin B\sin C$
 \end{align*} 
 \begin{align*}
 \cos x\cdot\cos y  &= \frac{1}{2} [\cos (x+y) +\cos (x-y)] \tag{VII}\\
-\cos x\cdot \sin y &=-\frac{1}{2}  [\cos (x+y)-\cos (x-y)]  \\
+\sin x\cdot \sin y &=-\frac{1}{2}  [\cos (x+y)-\cos (x-y)]  \\
 &=\frac{1}{2}[\cos (x-y)-\cos (x+y)] \tag{VIII}
 \end{align*} 
 \end{blk}
@@ -1562,7 +1562,7 @@ $\sin2A+\sin2B+\sin2C=4\sin A\sin B\sin C$
 \end{split}\]    
 
 \item \[\begin{split}
-    \text{原式}&=1+\frac{\cos146^{\circ}}{2}+\frac{1+\cos94^{\circ}}{2}+\frac{\cos120^{\circ}+\cos26^{\circ}}{2}\\
+    \text{原式}&=\frac{1+\cos146^{\circ}}{2}+\frac{1+\cos94^{\circ}}{2}+\frac{\cos120^{\circ}+\cos26^{\circ}}{2}\\
     &=1+\frac{\cos146^{\circ}+\cos94^{\circ}}{2}-\frac{1}{4}+\frac{\cos26^{\circ}}{2}\\
     &=\frac{3}{4}+\frac{2\cos120^{\circ}\cos26^{\circ}}{2}+\frac{\cos26^{\circ}}{2}\\
     &=\frac{3}{4}-\frac{\cos26^{\circ}}{2}+\frac{\cos26^{\circ}}{2}\\
@@ -1649,7 +1649,7 @@ $\sin2A+\sin2B+\sin2C=4\sin A\sin B\sin C$
 
 
 \begin{proof}
-由于$\sin B\cdot \sin C=\cos\frac{A}{2}=\frac{1+\cos A}{2}$
+由于$\sin B\cdot \sin C=\cos^2\frac{A}{2}=\frac{1+\cos A}{2}$
 且 $A=\pi-(B+C)$, $\cos A=-\cos(B+C)$, 因而就有
 \[\sin B\cdot \sin C =\frac{1}{2} [1-\cos (B+C) ] \]
 所以
@@ -1861,8 +1861,8 @@ $\cos x=a$, $\tan x=a$, $\cot x=a$就叫做最简单的三角方程．它们的�
 \begin{solution}
     已知在$(0, 2\pi)$内，$x=\frac{\pi}{2}$和$x=\frac{3\pi}{2}$，所以方程的解为
     \[\begin{split}
- &\quad        \left\{x\Big|x=\frac{\pi}{2}+2k\pi\right\} \bigcup \left\{x\Big|x=\frac{3\pi}{2}+2k\pi=\frac{\pi}{2}(2k+1)\pi\right\}\\
-        &=\left\{x\Big|x=\frac{\pi}{2}+2k\pi,\quad k\in\mathbb{Z}\right\} 
+ &\quad        \left\{x\Big|x=\frac{\pi}{2}+2k\pi\right\} \bigcup \left\{x\Big|x=\frac{3\pi}{2}+2k\pi=\frac{\pi}{2}+(2k+1)\pi\right\}\\
+        &=\left\{x\Big|x=\frac{\pi}{2}+k\pi,\quad k\in\mathbb{Z}\right\}
     \end{split} \]
 \end{solution}
 
@@ -1880,7 +1880,7 @@ $\cos x=a$, $\tan x=a$, $\cot x=a$就叫做最简单的三角方程．它们的�
 \end{example}
 
 \begin{solution}
-    由于任意角$\alpha$的余弦具有性质$|\cos\alpha|<1$, 因此，方程$\cos x=2$无解，即解集为$\emptyset$.
+    由于任意角$\alpha$的余弦具有性质$|\cos\alpha|\le 1$, 因此，方程$\cos x=2$无解，即解集为$\emptyset$.
 \end{solution}
 
 \begin{example}
@@ -1970,7 +1970,7 @@ $\left\{x\Big|x=\pm 54^{\circ}9'+k\cdot 360^{\circ},\quad k\in\mathbb{Z}\right\}
 
 \begin{solution}
     原方程化为$2(1-\cos^2x)+3\cos x=0$，即
-\[2\cos^2x+3\cos x-2=0\]
+\[2\cos^2x-3\cos x-2=0\]
 
 解这个关于$\cos x$的二次方程，得
 \begin{itemize}
@@ -2029,7 +2029,7 @@ $\left\{x\Big|x=\pm 54^{\circ}9'+k\cdot 360^{\circ},\quad k\in\mathbb{Z}\right\}
 \[\cos\frac{x}{2}=0,\qquad \sin\frac{x}{2}-\cos\frac{x}{2}=0\]
 \begin{itemize}
     \item 若$\cos\frac{x}{2}=0$，则$\frac{x}{2}=\pm\frac{\pi}{2}+2k\pi$，所以$x=\pm \pi+4k\pi,\quad (k\in\mathbb{Z})$
-    \item 若$\sin\frac{x}{2}-\cos\frac{x}{2}=0$，可变形为$\tan\frac{\pi}{2}=1$，则$\frac{x}{2}=\frac{\pi}{4}+k\pi$，所以$x=\frac{\pi}{2}+2k\pi,\quad (k\in\mathbb{Z})$
+    \item 若$\sin\frac{x}{2}-\cos\frac{x}{2}=0$，可变形为$\tan\frac{x}{2}=1$，则$\frac{x}{2}=\frac{\pi}{4}+k\pi$，所以$x=\frac{\pi}{2}+2k\pi,\quad (k\in\mathbb{Z})$
 \end{itemize}
 因此原方程的解集是
 \[\left\{x \Big|x=\pm \pi+4k\pi,\quad k\in\mathbb{Z}\right\}\bigcup \left\{x \Big|x=\frac{\pi}{2}+2k\pi,\quad k\in\mathbb{Z}\right\}\]
@@ -2065,7 +2065,7 @@ $\left\{x\Big|x=\pm 54^{\circ}9'+k\cdot 360^{\circ},\quad k\in\mathbb{Z}\right\}
     \begin{enumerate}
     \item $2\cos 2x=1$
     \item $\sin\left(\frac{x}{2}+\frac{\pi}{6}\right)=-\frac{\sqrt{3}}{2}$
-    \item $2\cos\left(\frac{\pi}{3}+45^{\circ}\right)=1$
+    \item $2\cos\left(\frac{x}{3}+45^{\circ}\right)=1$
     \item $\tan2x-\sqrt{3}=0$
     \item $\frac{1}{2}\cot(x+25^{\circ})-2=0$
     \item $2\cos^2x-3\cos x+1=0$
@@ -2102,7 +2102,7 @@ $\left\{x\Big|x=\pm 54^{\circ}9'+k\cdot 360^{\circ},\quad k\in\mathbb{Z}\right\}
 
 \item $a\sin x+b\cos x=\sqrt{a^2+b^2}\cdot \sin(x+\theta)$
 
-其中，辅助角$\theta$由$a$、$b$的符号确定象限，由$\tan\theta=\frac{a}{b}$确定
+其中，辅助角$\theta$由$a$、$b$的符号确定象限，由$\tan\theta=\frac{b}{a}$确定
 数值．
 \end{enumerate}
 
@@ -2142,7 +2142,7 @@ $\left\{x\Big|x=\pm 54^{\circ}9'+k\cdot 360^{\circ},\quad k\in\mathbb{Z}\right\}
 \end{enumerate}
 
 \item \begin{enumerate}
-    \item 等腰三角形底角的正弦为$\frac{13}{5}$，求顶角的正弦、余弦和正切；
+    \item 等腰三角形底角的正弦为$\frac{5}{13}$，求顶角的正弦、余弦和正切；
     \item 等腰三角形顶角的余弦为$\frac{7}{25}$，求底角的正弦；
     \item 等腰三角形中，腰为底的2倍，求顶角的正弦、余弦．
 \end{enumerate}
