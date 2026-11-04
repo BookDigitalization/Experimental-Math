@@ -99,7 +99,7 @@
 \end{figure}
 
 \begin{proof}
-  如图4.2，设$h>2$，则
+  如图4.2，设$h>0$，则
 \[\begin{split}
     \frac{S_f(x+h)-S_f(x)}{h}&=\frac{\Int^{x+h}_a f(t)\dd t-\Int^{x}_a f(t)\dd t}{h}\\
     &=\frac{\Int^{x+h}_x f(t)\dd t}{h}\qquad \text{（定积分性质1）}\\
@@ -121,7 +121,7 @@
 \[\frac{S_f(x+\bar h)-S_f(x)}{\bar h}=f(\bar\xi),\qquad (x+\bar h<\bar \xi<x)\]
 于是
 \begin{equation}
-    \lim_{h\to 0^-}\frac{S_f(x+\bar h)-S_f(x)}{\bar h}=\lim_{\bar\xi\to x}f(\bar\xi)=f(x)
+    \lim_{\bar h\to 0^-}\frac{S_f(x+\bar h)-S_f(x)}{\bar h}=\lim_{\bar\xi\to x}f(\bar\xi)=f(x)
 \end{equation}
 由(4.1)和(4.2)，得
 \[\frac{\dd }{\dd x}S_f(x)=\frac{\dd }{\dd x}\int^x_a f(t)\dd t=f(x)\]
@@ -198,9 +198,9 @@
 \[G(x)=\frac{x^{-n+1}}{-n+1}\]
 是满足$G'(x)=x^{-n}$的一个原函数．要特别注意定理2中$f(x)$是连续的条件，在任何包含0的区间上，函数$f(x)=\frac{1}{x^n}$无界，即有第二类间断点，如果$a,b$异号，则定积分$\Int^b_a x^{-n}\dd x$无意义，但若$a,b$同时为正或同时为负，则
 \[\int^b_ax^{-n}\dd x=\frac{x^{-n+1}}{-n+1}\Bigg|^b_a=\frac{b^{-n+1}}{-n+1}-\frac{a^{-n+1}}{-n+1}\]
-当然，又有$n\ne -1$时，上式才能成立．
+当然，只有$n\ne 1$时，上式才能成立．
 
-如果$n=-1$，依复合函数求导法则，得
+如果$n=1$，依复合函数求导法则，得
 \[(\ln|x|)'=\frac{1}{|x|}\cdot |x|'\]
 若$x>0$，则
 \[(\ln|x|)'=\frac{1}{x}\cdot 1=\frac{1}{x}\]
@@ -362,10 +362,10 @@
     \item $\frac{\dd}{\dd x}\cot x=-\csc ^{2} x, \qquad \Int \csc^{2} x \dd x=-\cot x+C$
     \item $\frac{\dd}{\dd x} \arcsin x=\frac{1}{\sqrt{1-x^{2}}} ,\qquad \Int \frac{\dd x}{\sqrt{1-x^{2}}}=\arcsin x+C$ 
     
-    $\frac{\dd}{\dd x} \arccos x=\frac{-1}{\sqrt{1-x^{2}}},\qquad \Int\frac{-1}{\sqrt{1-x^{2}}}\dd x=-\arccos x+C'$
+    $\frac{\dd}{\dd x} \arccos x=\frac{-1}{\sqrt{1-x^{2}}},\qquad \Int\frac{\dd x}{\sqrt{1-x^{2}}}=-\arccos x+C'$
     \item  $\frac{\dd}{\dd x}\arctan x=\frac{1}{x^{2}+1}, \qquad \Int \frac{\dd x}{x^{2}+1}=\arctan x+C$ 
     
-    $\frac{\dd}{\dd x} \arccot x=\frac{-1}{x^{2}+1}, \qquad \Int \frac{-1}{x^{2}+1}\dd x=-\arccot  x+C'$
+    $\frac{\dd}{\dd x} \arccot x=\frac{-1}{x^{2}+1}, \qquad \Int \frac{\dd x}{x^{2}+1}=-\arccot x+C'$
 \end{itemize}
 
 现在来看不定积分的几何意义．
@@ -387,7 +387,7 @@
 $y\big|_{x=1}=3$
 把它们代入(4.6), 得到
 \[3=1^3+C\quad \Rightarrow\quad C=2\]
-因此，满足微分方程$\frac{\dd y}{\dd x}=3x^2$和初值条$y\big|_{x=1}=3$的原函
+因此，满足微分方程$\frac{\dd y}{\dd x}=3x^2$和初值条件$y\big|_{x=1}=3$的原函
 数或相应的积分曲线是
 \[y=x^3+2\]
 
@@ -471,13 +471,13 @@ $y\big|_{x=1}=3$
 
 
 \begin{example}
-求$\Int \left(\frac{2a}{\sqrt{x}}-\frac{b}{x^2}+2xc^{\tfrac{2}{3}}\right)\dd x$
+求$\Int \left(\frac{2a}{\sqrt{x}}-\frac{b}{x^2}+3cx^{\tfrac{2}{3}}\right)\dd x$
 \end{example}
 
 
 \begin{solution}
     \[\begin{split}
-        \Int \left(\frac{2a}{\sqrt{x}}-\frac{b}{x^2}+2xc^{\tfrac{2}{3}}\right)\dd x&=2a\int x^{-\tfrac{1}{2}}\dd x-b\int x^{-2}\dd x+3c\int x^{\tfrac{2}{3}}\dd x\\
+        \Int \left(\frac{2a}{\sqrt{x}}-\frac{b}{x^2}+3cx^{\tfrac{2}{3}}\right)\dd x&=2a\int x^{-\tfrac{1}{2}}\dd x-b\int x^{-2}\dd x+3c\int x^{\tfrac{2}{3}}\dd x\\
         &=4a\sqrt{x}+\frac{b}{x}+\frac{9}{5}cx^{\tfrac{5}{3}}+C
     \end{split}\]
 \end{solution}
@@ -544,7 +544,7 @@ $y\big|_{x=1}=3$
 \item  求下列各式的极限：
 \begin{enumerate}
     \item $\Lim_{n\to\infty}\frac{\sqrt[n]{e}+\sqrt[n]{e^2}+\cdots+\sqrt[n]{e^n}}{n}$
-    \item $\Lim_{n\to\infty}\frac{\sqrt[n]{e}+\sqrt[n]{e^4}+\cdots+\sqrt[n]{e^{2n}}}{n}$
+    \item $\Lim_{n\to\infty}\frac{\sqrt[n]{e^2}+\sqrt[n]{e^4}+\cdots+\sqrt[n]{e^{2n}}}{n}$
 \end{enumerate}
 \end{enumerate}
 
@@ -557,7 +557,7 @@ $y\big|_{x=1}=3$
 
 \subsection{第一换元法}
 
-有一些不定积分，将积分变量进行某种变映后就能由基本积分公式求出，例如求$\Int e^{2x}\dd x$, 在基本积分公式中只有$\Int e^x\dd x$, 没有直接求出它的公式，我们看到所求积分的被积函数$e^{2x}$是$y=e^u$和$u=2x$的复合函数，如果在积分表达式$e^{2x}\dd x$中，把被积函数看成中间变量$u$的函数，即设$u=2x$则$e^{2x}=e^u$, 从而$\dd u=2\dd x$, 由此可见只要再给微分$\dd x$凑上一个常数因子2, 就得到中间变量$u$的微分$\dd u$, 于是
+有一些不定积分，将积分变量进行某种变换后就能由基本积分公式求出，例如求$\Int e^{2x}\dd x$, 在基本积分公式中只有$\Int e^x\dd x$, 没有直接求出它的公式，我们看到所求积分的被积函数$e^{2x}$是$y=e^u$和$u=2x$的复合函数，如果在积分表达式$e^{2x}\dd x$中，把被积函数看成中间变量$u$的函数，即设$u=2x$则$e^{2x}=e^u$, 从而$\dd u=2\dd x$, 由此可见只要再给微分$\dd x$凑上一个常数因子2, 就得到中间变量$u$的微分$\dd u$, 于是
 \[\int e^{2x}\dd x=\int e^{2x}\cdot \frac{1}{2}\dd (2x) =\frac{1}{2}\int e^u\dd u=\frac{1}{2}e^u+C\]
 然后再代回原来的积分变量，得
 \[\int e^{2x}\dd x=\frac{1}{2}e^{2x}+C\]
@@ -627,7 +627,7 @@ $y\big|_{x=1}=3$
 \[\begin{split}
     \Int \frac{\dd x}{a^2-x^2}&=\frac{1}{2a}\int\left(\frac{1}{a-x}+\frac{1}{a+x}\right)\dd x\\
     &=\frac{1}{2a}\left[-\int\frac{\dd(a-x)}{a-x}+\int\frac{\dd(a+x)}{a+x}\right]\\
-    &=\frac{1}{2a}\left[-\ln|a-x|+\ln|a+x|\right]=\frac{1}{2a}\ln\left|\frac{a+x}{a-x}\right|
+    &=\frac{1}{2a}\left[-\ln|a-x|+\ln|a+x|\right]=\frac{1}{2a}\ln\left|\frac{a+x}{a-x}\right|+C
 \end{split}\]
 \end{solution}
 
@@ -768,7 +768,7 @@ $y\big|_{x=1}=3$
     \Int\frac{\dd x}{\sqrt{x}+\sqrt[3]{x}}&=\int \frac{6u^5}{u^3+u^2}\dd u=\int\frac{6u^3}{u+1}\dd u\\
     &=6\int \left(u^2-u+1-\frac{1}{u+1}\right)\dd u\\
     &=6\left\{\frac{u^3}{3}-\frac{u^2}{2}+u-\ln|u+1|\right\}+C\\
-    &=2\sqrt{x}-3\sqrt[3]{x}+6\sqrt[6]{x}-\ln\left(\sqrt[6]{x}+1\right)+C
+    &=2\sqrt{x}-3\sqrt[3]{x}+6\sqrt[6]{x}-6\ln\left(\sqrt[6]{x}+1\right)+C
 \end{split}
     \]
 \end{solution}
@@ -778,7 +778,7 @@ $y\big|_{x=1}=3$
 \end{example}
 
 \begin{solution}
-    设$3x+1=t^3$，即$x=\frac{1}{2}(t^3-1)$，于是：$\dd x=t^2\dd t$
+    设$3x+1=t^3$，即$x=\frac{1}{3}(t^3-1)$，于是：$\dd x=t^2\dd t$
 \[\begin{split}
     \Int \frac{x+1}{\sqrt[3]{3x+1}}\dd x&=\int \frac{\frac{1}{3}(t^3-1)+1}{t}t^2\dd t\\
 &=\frac{1}{3}\int (t^4+2t)\dd t\\
@@ -799,7 +799,7 @@ $y\big|_{x=1}=3$
 因为\[\sqrt{a^2-x^2}=\sqrt{a^2\left(1-\frac{x^2}{a^2}\right)}=a\sqrt{1-\left(\frac{x}{a}\right)^2}\]
 所以可作正弦代换
 \[\frac{x}{a}=\sin t\quad \left(-\frac{\pi}{2}\le t\le \frac{\pi}{2}\right)\]
-$\sin t$在$\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$上连续且递增，有反函数$t=\arcsin\frac{x}{a},\; -1\le x\le 1$. 于是
+$\sin t$在$\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$上连续且递增，有反函数$t=\arcsin\frac{x}{a},\; -a\le x\le a$. 于是
 \[\begin{split}
     \dd x&=\dd (a\sin t)=a\cos t\dd t\\
     \sqrt{a^2-x^2}&=a\sqrt{1-\left(\frac{x}{a}\right)^2}=a\sqrt{1-\sin^2 t}=a\cos t
@@ -845,7 +845,7 @@ $\sin t$在$\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$上连续且递增，有�
 \end{tikzpicture}
     \end{center}
 
-    作正割代换．设$x=a\sec t\; \left(0<t<\frac{\pi}{2}\right)$，此函数在$t=\frac{\pi}{2}$点间断，在区间$\left[0,\frac{\pi}{2}\right)$上由$a$递增到$+\infty$，而在区间$\left(\frac{\pi}{2},\pi\right]$上由$-\infty$递增到$-a$．因此，$x=a\sec t$在$\left(0,\frac{\pi}{2}\right]$上的反函数是 
+    作正割代换．设$x=a\sec t\; \left(0<t<\frac{\pi}{2}\right)$，此函数在$t=\frac{\pi}{2}$点间断，在区间$\left[0,\frac{\pi}{2}\right)$上由$a$递增到$+\infty$，而在区间$\left(\frac{\pi}{2},\pi\right]$上由$-\infty$递增到$-a$．因此，$x=a\sec t$在$\left[0,\frac{\pi}{2}\right)$上的反函数是 
 \[t=\arcsec\frac{x}{a}\quad \left(1<\frac{x}{a}<\infty,\; \text{即}x>a\right)\]
 于是，当$x>a$时，有
 \[\begin{split}
@@ -873,7 +873,7 @@ $\sin t$在$\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$上连续且递增，有�
     &=-\int \frac{1}{\cos t}\dd t=-\ln|\sec t+\tan t|+C_2\\
     &=-\ln\left|\frac{x}{a}-\frac{\sqrt{x^2-a^2}}{a}\right|+C_2\\
     &=-\ln\left|x-\sqrt{x^2-a^2}\right|+C_2+\ln a\\
-    &=\ln\left|\frac{1}{x-\sqrt{x^2-a^2}}\right|+C'\qquad (C'=C+\ln a)\\
+    &=\ln\left|\frac{1}{x-\sqrt{x^2-a^2}}\right|+C'\qquad (C'=C_2+\ln a)\\
     &=\ln\left|\frac{x+\sqrt{x^2-a^2}}{a^2}\right|+C'=\ln\left|x+\sqrt{x^2-a^2}\right|+C'-\ln a^2\\
     &=\ln\left|x+\sqrt{x^2-a^2}\right|+C''\qquad (C''=C'-\ln a^2)
 \end{split}\]
@@ -1005,7 +1005,7 @@ $\sin t$在$\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$上连续且递增，有�
 
 \begin{solution}
 \[\begin{split}
-    \Int\frac{\dd x}{x\sqrt{x^2+x+1}}&=-\int \frac{-\frac{1}{y^2}\dd y}{\frac{1}{y}\sqrt{\frac{1}{y^2}+\frac{1}{y}+1}}=-\int \frac{\dd y}{\sqrt{y^2+y+1}}\\
+    \Int\frac{\dd x}{x\sqrt{x^2+x+1}}&=\int \frac{-\frac{1}{y^2}\dd y}{\frac{1}{y}\sqrt{\frac{1}{y^2}+\frac{1}{y}+1}}=-\int \frac{\dd y}{\sqrt{y^2+y+1}}\\
     &=-\int \frac{\dd y }{\sqrt{\left(y+\frac{1}{2}\right)^2+\frac{3}{4}}}  \\
     &=-\ln \left[y+\frac{1}{2}+\sqrt{\left(y+\frac{1}{2}\right)^2+\frac{3}{4}}\right]+C \\
     &=-\ln \left[y+\frac{1}{2}+\sqrt{y^2+y+1}\right]+C\\
@@ -1132,14 +1132,14 @@ $\therefore\quad \frac{1}{x^4-1}=\frac{A}{x-1}+\frac{B}{x+1}+\frac{Cx+D}{x^2+1}$
 事实上，由$t=\tan\frac{x}{2}$, 知
 \[\begin{split}
 \sin x&=\frac{2 \sin \frac{x}{2} \cos \frac{x}{2}}{\sin ^{2} \frac{x}{2}+\cos ^{2} \frac{x}{2}}=\frac{2 \tan \frac{x}{2}}{1+\tan^{2} \frac{x}{2}}=\frac{2 t}{1+t^{2}}\\
-\cos x &=\frac{\cos ^{2}-\frac{x}{2}-\sin ^{2} \frac{x}{2}}{\sin ^{2} \frac{x}{2}+\cos ^{2} \frac{x}{2}}=\frac{1-\tan^{2} \frac{x}{2}}{1+\tan^{2} \frac{x}{2}} 
+\cos x &=\frac{\cos ^{2}\frac{x}{2}-\sin ^{2} \frac{x}{2}}{\sin ^{2} \frac{x}{2}+\cos ^{2} \frac{x}{2}}=\frac{1-\tan^{2} \frac{x}{2}}{1+\tan^{2} \frac{x}{2}} 
 =\frac{1-t^{2}}{1+t^{2}}
 \end{split}\]
 又由 $x=2 \arctan t$, 知
 \[\dd x=\frac{2 \dd t}{1+t^{2}}\]
 于是
 \[
-\int R(\sin x,  \cos x) \dd x=\int R\left(\frac{2 t}{1+t^{2}}, \frac{1-t^{2}}{1+t^{2}}\right) \cdot \frac{2}{1+t^{2}} \dd x 
+\int R(\sin x,  \cos x) \dd x=\int R\left(\frac{2 t}{1+t^{2}}, \frac{1-t^{2}}{1+t^{2}}\right) \cdot \frac{2}{1+t^{2}} \dd t
 \]
 上式右端是 $t$ 的有理函数.
 
@@ -1203,7 +1203,7 @@ $\therefore\quad \frac{1}{x^4-1}=\frac{A}{x-1}+\frac{B}{x+1}+\frac{Cx+D}{x^2+1}$
 分部积分法是从两个函数乘积的微分公式得到的求积分方法．
 
 设$u=u(x)$, $v=v(x)$是两个可微函数，乘积$u\cdot v$的微分法则是$$\dd (u\cdot v) =u\dd v+v\dd u$$
-移项，得$u\dd v=\dd (w\cdot v) -v\dd u$，
+移项，得$u\dd v=\dd (u\cdot v) -v\dd u$，
 两边积分得
 \begin{equation}
     \int u\dd v=u\cdot v-\int v\dd u
@@ -1322,7 +1322,7 @@ $\therefore\quad \frac{1}{x^4-1}=\frac{A}{x-1}+\frac{B}{x+1}+\frac{Cx+D}{x^2+1}$
     \[\begin{split}
         \Int \ln^2 x\dd x=x(\ln x)^2-\int x\dd (\ln^2 x)&=x(\ln x)^2-\int x\cdot 2\ln x\cdot \frac{1}{x}\dd x\\
         &=x(\ln x)^2-2\int \ln x\dd x\\
-        &=x(\ln x)^2-2\left[x\ln x-\int x\d(\ln x)\right]\\
+        &=x(\ln x)^2-2\left[x\ln x-\int x\dd(\ln x)\right]\\
         &=x(\ln x)^2-2x\ln x+2\int \dd x\\
         &=x(\ln x)^2-2x\ln x+2x+C   
     \end{split}\]
@@ -1411,6 +1411,7 @@ $$
 \end{split}\]
 所以
 \[I_4=\int \sin^4 x\dd x=-\frac{1}{4}\cos x\sin^3 x-\frac{3}{8}\cos x\sin x+\frac{3}{8}x+C\]
+\end{solution}
 
 
 \begin{ex}
@@ -1449,7 +1450,6 @@ $$
 \end{multicols}
 \end{enumerate}
 \end{ex}
-\end{solution}
     
 \section{定积分的计算与应用}
 
@@ -1478,7 +1478,7 @@ $$
 所以
 \[\begin{split}
     \Int^{\tfrac{\pi}{2}}_0 \sin^3x \cos x\dd x&=\frac{1}{4}\sin^4 x\Big|^{\tfrac{\pi}{2}}_0 \\
-    &=\frac{1}{4}\left[\sin^4\frac{\pi}{4}-0\right]=\frac{1}{4}
+    &=\frac{1}{4}\left[\sin^4\frac{\pi}{2}-0\right]=\frac{1}{4}
 \end{split}\]
 \end{solution}
 
@@ -1546,7 +1546,7 @@ $$
     设$x=a-t$，则$\dd x=-\dd t$，且当$x=0$时，$t=a$；当$x=a$时，$t=0$. 于是：
 \[\begin{split}
     \Int^a_0 f(x)\dd x=\int^0_a f(a-t)(-\dd t)&=-\int^0_a f(a-t)\dd t\\
-    &=\int^a_0 f(a-t)\dd t=\Int^a_0 f(x)\dd x
+    &=\int^a_0 f(a-t)\dd t=\Int^a_0 f(a-x)\dd x
 \end{split}\]
 \end{proof}
 
@@ -1599,7 +1599,7 @@ $$
 
 \begin{solution}
     设$I_n=\Int^{\tfrac{\pi}{2}}_0 \sin^n \theta\dd \theta$，利用例4.42的结果，得到：
-\[nI_n=\left[-\cos\theta\sin^{n-1}\theta\right]\Big|^{\tfrac{\pi}{2}_0} +(n-1)I_{n-2}\]
+\[nI_n=\left[-\cos\theta\sin^{n-1}\theta\right]\Big|^{\tfrac{\pi}{2}}_0 +(n-1)I_{n-2}\]
 因为方括号的式子对于积分上，下限的值等于零，所以上面等式化简为
 \[I_n=\frac{n-1}{n}I_{n-2}\]
 分别考虑$n$是偶数和奇数两种情况：
@@ -1646,7 +1646,7 @@ $$
 
 （提示：用变量代换$x=\frac{\pi}{2}-y$.）
 \item \begin{enumerate}
-    \item 求常数$A,B,C,D$使等式$$\frac{1+2x^2}{(1-x)(1+x)^2}=A+\frac{B}{1-x}+\frac{C}{(1+x)^2}+\frac{D}{1+x}$$成立，并计算
+    \item 求常数$A,B,C,D$使等式$$\frac{1+2x^3}{(1-x)(1+x)^2}=A+\frac{B}{1-x}+\frac{C}{(1+x)^2}+\frac{D}{1+x}$$成立，并计算
     \[
     \Int^{\tfrac{1}{2}}_0 \frac{1+2x^3}{(1-x)(1+x)^2}\dd x.
     \]
@@ -1741,7 +1741,7 @@ $$
 \end{cases}\]
 实现，于是原来的函数图象在新坐标的方程是
 \[f_1 (x) =f (x) -k,\qquad g_1 (x) =g (x) -k\]
-函数$f_1$和$g_1$在区间$[a,b]$上仍连续且取非负值，显然在函数$f_1$和$g_1$之间的区域$R=\{a\le x\le b,\; g_1(x)\le y\le f_1(x)\}$就是原来的区域$R=\{a\le x\le b,\; g(x)\le y\le f(x)\}$, 但是，$R'$的区域的面积等于
+函数$f_1$和$g_1$在区间$[a,b]$上仍连续且取非负值，显然在函数$f_1$和$g_1$之间的区域$R'=\{a\le x\le b,\; g_1(x)\le y\le f_1(x)\}$就是原来的区域$R=\{a\le x\le b,\; g(x)\le y\le f(x)\}$, 但是，$R'$的区域的面积等于
 \[A=\int^b_a f_1(x)\dd x-\int^b_a g_1(x)\dd x\]
 根据定积分的性质进一步得到
 \[\begin{split}
@@ -1758,9 +1758,9 @@ $$
 \begin{solution}
 直线与抛物线交于$(2, 0)$, $(-1,-3)$两点，作出它的草图（图4.6）. 依本节定理，得到
 \[\begin{split}
-    A=\int^2_1 [(2x-x^2)-(x-2)]\dd x
-    &=\int^2_1 (-x^2+x+2)\dd x\\
-    &=\left[-\frac{1}{3}x^3+\frac{1}{2}x^2+2x\right]\Bigg|^2_1=\frac{9}{2}
+    A=\int^2_{-1} [(2x-x^2)-(x-2)]\dd x
+    &=\int^2_{-1} (-x^2+x+2)\dd x\\
+    &=\left[-\frac{1}{3}x^3+\frac{1}{2}x^2+2x\right]\Bigg|^2_{-1}=\frac{9}{2}
 \end{split}\]
 \end{solution}
 
@@ -1936,7 +1936,7 @@ $\begin{cases}
 \item \begin{enumerate}
     \item 证明点$x=t^2-1$, $y=t(t^2-1)$在曲线$y^2=x^2(x+1)$上；
     \item 当$t$由$t=-2$变化到$t=2$时，作出曲线$\begin{cases}
-        x=t^2-1\\x=t (t^2-1)
+        x=t^2-1\\y=t (t^2-1)
     \end{cases}$的图象；
 \item 求由曲线的环路所围区域的面积．
 \end{enumerate}
@@ -2330,12 +2330,12 @@ v_y=\frac{\dd y}{\dd t}=-gt+v_0\sin\alpha
 \[\frac{y(t+\Delta t)-y(t)}{\Delta t}=ky(t)\]
 令$\Delta t\to 0$, 由上式得到
 \[\frac{\dd }{\dd t}y(t)=ky(t)\]
-也就是说，人口在时刻$t$的瞬时变率与当时的值$y(x)$成正比例．为求出函数$y(t)$, 我们来解具有初始条件的微分方程
+也就是说，人口在时刻$t$的瞬时变率与当时的值$y(t)$成正比例．为求出函数$y(t)$, 我们来解具有初始条件的微分方程
 \begin{numcases}{}
     \frac{\dd }{\dd t}y(t)=ky(t)\\
     y(0)=A
 \end{numcases}
-将(4.33)改写成
+将(4.30)改写成
 \[\frac{\dd y(t)}{y(t)}=k\dd t\]
 即：$\ln[y(t)]=kt+C$，由初始条件确定常数$C$的值，得：
 \[\ln A=C\]
@@ -2381,7 +2381,7 @@ t_1&= \frac{100\lg2}{3\lg e}\approx \frac{100}{3}\cdot\frac{0.3010}{0. 4343}\\
 \hline
     增长率$k$ & 0.05&0.04&0.03&0.02&0.01\\
 \hline
-加倍期$t_1$ & 约14年& 约17年& 约23年& 约34.5年& 约39年\\
+加倍期$t_1$ & 约14年& 约17年& 约23年& 约34.5年& 约69年\\
 \hline
         \end{tabular}
 \end{center}

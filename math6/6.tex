@@ -30,7 +30,7 @@ $v=f(t)$, 如图3.1, 我们可以从速率表读得当时的速率，很自然�
 \paragraph{变力所作的功}
 
 假定某物体在一个平行于$OX$轴的力$P$的作 用下沿直线
-$OX$运动，力$P$的方向与物体运动的方向一致，并且力的大小随离开$O$点的距离而改变，即变力$P$是所在点的横坐标$x$的函数$P=P(x)$, 如图3.2．假定物体在这个变力$P$作用之下，从直线$OX$的一点$a$移到另一点$P$, 那么力$P$所作的功就是变力函数$P(x)$由$x=a$到$x=b$的和，我们用
+$OX$运动，力$P$的方向与物体运动的方向一致，并且力的大小随离开$O$点的距离而改变，即变力$P$是所在点的横坐标$x$的函数$P=P(x)$, 如图3.2．假定物体在这个变力$P$作用之下，从直线$OX$的一点$a$移到另一点$b$, 那么力$P$所作的功就是变力函数$P(x)$由$x=a$到$x=b$的和，我们用
 $W (P, [a,b])$
 表示力$P$所作的功，它表明$W$依赖于$P(x)$和$[a,b]$．
 
@@ -191,7 +191,7 @@ $R$的面积$=R_1$的面积$+R_2$的面积．（图3.5）
 
 \begin{example}
 设$y=f(t)$是一个阶梯函数，即分段地是常数函数：
-\[0=t_0<t_1<t_2<\cdots<t_{i-1}<t_i<\cdots <t_n=b\]
+\[a=t_0<t_1<t_2<\cdots<t_{i-1}<t_i<\cdots <t_n=b\]
 当$t_{i-1}\le t<t_i$时，$f(t)=k_i,\; i=1,2,\ldots,n$．由性质2，我们可以分段地用常数函数求和，就可以得到阶梯函数$f(t)$从$a$到$b$的和：
 \[k_1 (t_1-t_0) +k_2 (t_2-t_1) +\cdots +k_n (t_n-t_{n-1})\]
 
@@ -244,7 +244,7 @@ $R$的面积$=R_1$的面积$+R_2$的面积．（图3.5）
 \begin{analyze}
     一个自然的作法是用两个阶梯函数$g_n(t)$和$G_n(t)$把上述函数$f(t)=u+at$夹逼在中间，即
     \[g_n(t)\le f(t)\le G_n(t)\]
-对于任何$0\le t\le T$都成立，那么由性质1，$g_n(t)$从0到$t$的和$\le f(t)$从$0$到$T$的和$\le G_n(t)$从0到$T$的和．
+对于任何$0\le t\le T$都成立，那么由性质1，$g_n(t)$从0到$T$的和$\le f(t)$从$0$到$T$的和$\le G_n(t)$从0到$T$的和．
 
 如果能使$g_n(t)$从0到$T$的和与$G_n(t)$从0到$T$的和，当$n\to\infty$时的极限相同，则由上述夹逼关系就可以看出$f(t)$从0到$T$的和必须等于这个共同极限．
 \end{analyze}
@@ -277,7 +277,7 @@ $R$的面积$=R_1$的面积$+R_2$的面积．（图3.5）
 \begin{solution}
 \begin{enumerate}
     \item 把时间间隔$n$等分，取分点$t_i=\frac{i}{n}T,\; i=0,1, 2,\ldots,n$, 于是在每个分点$t_i=\frac{i}{n}T$处的速度分别是
-\[f (t_0) =f (0) =u,\;  f(t_1) =u+at_1,\; f (t_3) =u+at_2,\ldots,f (t_n) =f (T) =u+aT\]
+\[f (t_0) =f (0) =u,\;  f(t_1) =u+at_1,\; f (t_2) =u+at_2,\ldots,f (t_n) =f (T) =u+aT\]
 \item 用阶梯函数近似代替$v=f(t)=u+at$. 
 
 假设物体在时间的每个小区间$[t_i,t_{i+1}],\; i=0,1, 2,\ldots,(n-1)$内，以小区间起点处的速度作匀速运动，我们得到一个速度的阶梯函数
@@ -286,10 +286,10 @@ $R$的面积$=R_1$的面积$+R_2$的面积．（图3.5）
 \[g_n (t)=f(t_i)\le f(t),\quad t_i\le t<t_{i+1},\quad i=0,1,2,\ldots,(n-1)\]
 从而，对于任何$0\le t\le T$，有$g_n(t)\le f(t)$.
 
-假设物体在时间的每个小区间$[t,t+1],\; i=0,1, 2,\ldots,(n-1)$内，以小区间终点处的速度作匀速运动，我们得到另一个速度的阶梯函数
+假设物体在时间的每个小区间$[t_i,t_{i+1}],\; i=0,1, 2,\ldots,(n-1)$内，以小区间终点处的速度作匀速运动，我们得到另一个速度的阶梯函数
 \[G_n(t)=f(t_{i+1})=u+at_{i+1},\quad t_i< t\le t_{i+1},\quad i=0,1,2,\ldots,(n-1)\]
 
-由于$f(t)=u+at$是递增的，所以$G(t)$有以下性质
+由于$f(t)=u+at$是递增的，所以$G_n(t)$有以下性质
 \[G_n (t)=f(t_{i+1})\ge f(t),\quad t_i< t\le t_{i+1},\quad i=0,1,2,\ldots,(n-1)\]
 从而对于任何$0\le t\le T$，有
 \[G_n(t)\ge f(t)\]
@@ -339,7 +339,7 @@ $\because\quad t_1-t_0=t_2-t_1=\cdots=t_n-t_{n-1}=\frac{T}{n}$
 所以，这个共同的极限值$uT+\frac{1}{2}aT^2$就是物体在变速$v=f(t)=u+at$运动下，从$t=0$到$t=T$所走的距离，也就是函数$v=f(t)=u+at$从$t=0$到$t=T$的和．
 \end{enumerate}
 
-从几何上看，上述极限值$uT+\frac{1}{2}aT^2=\frac{u+(u+aT)T}{2}$就是在图\ref{fig:chapter3_sec1_line_segmentation}中的梯形$OABC$的面积．
+从几何上看，上述极限值$uT+\frac{1}{2}aT^2=\frac{[u+(u+aT)]T}{2}$就是在图\ref{fig:chapter3_sec1_line_segmentation}中的梯形$OABC$的面积．
 \end{solution}    
 
 \begin{example}
@@ -490,13 +490,13 @@ s_n&=g_n(x)\text{从0到$b$的和}\\
 因此，当$n\to\infty$时，$S_n-s_n\to 0$.
 
 又$f(x)$从$a$到$b$的和是介于$s_n$和$S_n$中间的唯一实数，
-此
+因此
 \[\lim_{n\to\infty} s_n=\lim_{n\to\infty} S_n=f(x)\text{ 从$a$到$b$的和}\]
 
 以上简单明了的分析，说明了下面两点互相关联的事实：
 \begin{enumerate}
     \item 当函数$f(x)$在$a\le x\le b$上递增时，则它从$a$到$b$的和可以用上述两个夹逼阶梯函数从$a$到$b$的和去无限逼近.
-    \item 由于$\Lim_{n\to\infty}s_n$与$\Lim_{n\to\infty}S_n$存在，且$\Lim_{n\to\infty}s_n=\Lim_{n\to\infty}S_n$, 我们可以用$f(x)$的上、下夹逼阶梯函数序列，即：$g_1 (x)\le g_2(x)\le \cdots\le g_n(x)\le \cdots\le f(x)\le \cdots\le G_1(x)\le \cdots\le G_2(x)\le G_1(x),\; (a\le x\le b)$的从$a$到$b$的和的极限$\Lim_{n\to\infty}s_n=\Lim_{n\to\infty}S_n$作为上述$f(x)$从$a$到$b$的和的数量化定义．
+    \item 由于$\Lim_{n\to\infty}s_n$与$\Lim_{n\to\infty}S_n$存在，且$\Lim_{n\to\infty}s_n=\Lim_{n\to\infty}S_n$, 我们可以用$f(x)$的上、下夹逼阶梯函数序列，即：$g_1 (x)\le g_2(x)\le \cdots\le g_n(x)\le \cdots\le f(x)\le \cdots\le G_n(x)\le \cdots\le G_2(x)\le G_1(x),\; (a\le x\le b)$的从$a$到$b$的和的极限$\Lim_{n\to\infty}s_n=\Lim_{n\to\infty}S_n$作为上述$f(x)$从$a$到$b$的和的数量化定义．
 \end{enumerate}
 \end{solution}
 
@@ -513,8 +513,8 @@ s_n&=g_n(x)\text{从0到$b$的和}\\
 \end{enumerate}
 当$n\to\infty$时，$S_n-s_n\to 0$，那么$f(x)$从$a$到$b$的和是$s_n$与$S_n$的共同极限，即：
 \begin{align*}
-f(x)\text{从$a$到$b$的和}&=\frac{b-a}{n}\lim_{n\to\infty}\sum^n_{i=1}f(x_{i-1})\\
-&=\frac{b-a}{n}\lim_{n\to\infty}\sum^n_{i=1}f(x_{i})
+f(x)\text{从$a$到$b$的和}&=\lim_{n\to\infty}\frac{b-a}{n}\sum^n_{i=1}f(x_{i-1})\\
+&=\lim_{n\to\infty}\frac{b-a}{n}\sum^n_{i=1}f(x_{i})
 \end{align*}
 
 同样地，如果$f(x)$是$[a,b]$上的递减连续函数．那么将$[a,b]$ $n$等分，分点坐标$x_i=a+\frac{i}{n}(b-a)$, 这时有两个阶梯函数
@@ -530,7 +530,7 @@ f(x)\text{从$a$到$b$的和}&=\frac{b-a}{n}\lim_{n\to\infty}\sum^n_{i=1}f(x_{i-
     S_n&=G_n\text{从$a$到$b$的和}=\frac{b-a}{n}\sum^n_{i=1}f(x_{i-1})  
 \end{align*}
 \end{enumerate}
-当$n\to\infty$时，$S_n-s_n=\frac{b-a}{n}\left[f(b)-f(a)\right]\to 0$，即：
+当$n\to\infty$时，$S_n-s_n=\frac{b-a}{n}\left[f(a)-f(b)\right]\to 0$，即：
 \[\Lim_{n\to\infty}s_n=\Lim_{n\to\infty}S_n\]
 \end{blk}
 
@@ -553,18 +553,18 @@ f(x)\text{从$a$到$b$的和}&=\frac{b-a}{n}\lim_{n\to\infty}\sum^n_{i=1}f(x_{i-
 \begin{blk}
     {定理} 设$y=f(x)$是一个定义在$[a,b]$上分段单调函数，则存在满足下列性质的两系列阶梯函数：
     \[g_n(x)\le f(x)\le G_n(x),\qquad x\in[a,b]\]
-而且当$n\to 0$时，“$G_n(x)$从$a$到$b$的和，”与“$g_n(x)$从$a$到$b$的和”趋于共同极限．
+而且当$n\to\infty$时，“$G_n(x)$从$a$到$b$的和，”与“$g_n(x)$从$a$到$b$的和”趋于共同极限．
 \end{blk}
 
 
 \begin{blk}
     {定义3} 设$f(x)$是$[a,b]$上的连续函数，如果 存在有限个分点：
-\[a=a_0<a_1<\cdots<a_k<\cdots<a_1=b\]
+\[a=a_0<a_1<\cdots<a_k<\cdots<a_\ell=b\]
 使得$f(x)$在每个分段$[a_{k-1},a_k]$都是单调的，再将每个分段
     $[a_{k-1},a_k]$都$n$等分，则当$n\to\infty$时，有
 \begin{align*}
 f(x)\text{从$a$到$b$的和}&=\lim_{n\to\infty}\frac{a_1-a_0}{n}\sum^n_{i=1}f(x_i)+\lim_{n\to\infty}\frac{a_2-a_1}{n}\sum^{2n}_{i=n+1}f(x_i)+\\
-&\cdots +\lim_{n\to\infty}\frac{a_\ell-a_{\ell-1}}{n}\sum^{\ell n}_{i=\ell(n-1)+1}f(x_i)
+&\cdots +\lim_{n\to\infty}\frac{a_\ell-a_{\ell-1}}{n}\sum^{\ell n}_{i=(\ell-1)n+1}f(x_i)
 \end{align*}
 \end{blk}
 
@@ -581,7 +581,7 @@ f(x)\text{从$a$到$b$的和}&=\lim_{n\to\infty}\frac{a_1-a_0}{n}\sum^n_{i=1}f(x
     \bar s_m&=\bar g_m(x)\text{从$a$到$b$的和}\le G_n(x)\text{从$a$到$b$的和}=S_n\\
 \end{align*}
 所以
-\[\lim_{n\to\infty}s_n=\lim_{m\to\infty}\bar S_m,\qquad \lim_{m\to\infty}\bar s_m\le \lim_{n\to\infty}S_n\]
+\[\lim_{n\to\infty}s_n\le\lim_{m\to\infty}\bar S_m,\qquad \lim_{m\to\infty}\bar s_m\le \lim_{n\to\infty}S_n\]
 但是
 \[\lim_{n\to\infty}s_n\le \lim_{m\to\infty}\bar S_m=\lim_{m\to\infty}\bar s_m\le \lim_{n\to\infty} S_n=\lim_{n\to\infty}s_n\]
 所以上述极限必须相等，即：
@@ -593,14 +593,14 @@ f(x)\text{从$a$到$b$的和}&=\lim_{n\to\infty}\frac{a_1-a_0}{n}\sum^n_{i=1}f(x
 \end{example}
 
 \begin{solution}
-    由$f'(x)=2-2x$, $f''(x)=2$知$f(1)=2-1=1$是
+    由$f'(x)=2-2x$, $f''(x)=-2$知$f(1)=2-1=1$是
 $f(x)$的极大值，并且$y=2x-x^2$在$[0, 1]$上递增，在$[1,2]$上递减，于是，我们把区间$[0, 1]$和$[1, 2]$都$n$等分，设分点坐标$x_i=\frac{i}{n},\; i=0, 1, 2,\ldots,2n$, 即有
 \[0=x_0<x_1<x_2<\cdots <x_n=1<x_{n+1}<x_{n+2}<\cdots <x_{2n}=2\]
 且$\Delta x_i=x_i-x_{i-1}=\frac{1}{n}$，由定义3得到：
 \begin{align*}
     f(x)&=2x-x^2\text{从0到2的和}\\
     &=\lim_{n\to\infty}\frac{1}{n}\sum^n_{i=1}\left[2\left(\frac{i}{n}\right)-\left(\frac{i}{n}\right)^2\right]+\lim_{n\to\infty}\frac{1}{n}\sum^{2n}_{i=n+1}\left[2\left(\frac{i}{n}\right)-\left(\frac{i}{n}\right)^2\right] \\
-&=\lim_{n\to\infty}\frac{1}{n}\sum^{2n}_{i=1}2\left(\frac{i}{n}\right)-\lim_{n\to\infty}\sum^{2n}_{i=1}\left(\frac{i}{n}\right)^2\\
+&=\lim_{n\to\infty}\frac{1}{n}\sum^{2n}_{i=1}2\left(\frac{i}{n}\right)-\lim_{n\to\infty}\frac{1}{n}\sum^{2n}_{i=1}\left(\frac{i}{n}\right)^2\\
 &=2\lim_{n\to\infty}\frac{1}{n^2}\sum^{2n}_{i=1}i-\lim_{n\to\infty}\frac{1}{n^3}\sum^{2n}_{i=1}i^2\\
 &=2\lim_{n\to\infty}\frac{1}{n^2}\cdot \frac{(2n+1)2n}{2}-\lim_{n\to\infty}\frac{1}{n^3}\cdot \frac{2n(2n+1)(4n+1)}{6}\\
 &=2\lim_{n\to\infty}\left(2+\frac{1}{n}\right)-\lim_{n\to\infty}\frac{1}{3}\left(2+\frac{1}{n}\right)\left(4+\frac{1}{n}\right)\\
@@ -629,7 +629,7 @@ $f(x)$的极大值，并且$y=2x-x^2$在$[0, 1]$上递增，在$[1,2]$上递减�
 我们把数$a$与$b$称为\textbf{积分限}（$a$称为\textbf{下限}，$b$称为\textbf{上限}）．区间$[a,b]$称为\textbf{积分区间}，函数$f(x)$称为\textbf{被积函数}，乘积$f(x)\dd x$称为\textbf{被积表达式}，定积分符号下出现的字母$x$叫做\textbf{积分变量}．
 
 上述定积分定义用定积分符号表示就是：
-\[\int^b_a f(x) \dd x=\sum^t_{k=1}\int^{a_k}_{a_{k-1}}f(x)\dd x\]
+\[\int^b_a f(x) \dd x=\sum^{\ell}_{k=1}\int^{a_k}_{a_{k-1}}f(x)\dd x\]
 其中$\Int^{a_k}_{a_{k-1}}f(x)\dd x$是$f(x)$为单调的第$k$个分段$[a_{k-1},a_k]$上的夹逼阶梯函数$g_n(x)$和$G_n(x)$从$a_{k-1}$到$a_k$的和的共同极限，即：
 \begin{align*}
     \int^{a_k}_{a_{k-1}}f(x)\dd x&=\lim_{n\to \infty}\frac{a_k-a_{k-1}}{n}\sum^n_{i=1}f(x_{i-1})\\
@@ -753,8 +753,8 @@ $\{g_n(x)\}$和$\{G_n(x)\}$, 满足下面的性质：
 \[s_n<\text{曲边梯形区域$R$的面积}A<S_n\]
 由定积分定义有：
 \[\lim_{n\to\infty}s_n=\lim_{n\to\infty}S_n=\Int^b_a f (x) \dd x\]
-又曲边梯形面积$A=(f,\; [a,b])$也是夹逼在$s_n$和$S_n$中间的实数，所以
-\[A=(f,\; [a,b])=\Int^b_a f (x) \dd x\]
+又曲边梯形面积$A(f,\; [a,b])$也是夹逼在$s_n$和$S_n$中间的实数，所以
+\[A(f,\; [a,b])=\Int^b_a f (x) \dd x\]
 \end{proof}
 
 \begin{ex}
@@ -797,19 +797,19 @@ $(3.4)+(3.5)$得到
 
 另一方面，对于函数$f(x)\; (a\le x\le c)$存在下面一组阶梯函数列：
 \[\tilde g_n(x)=\begin{cases}
-    g_n(x),  &  a\le x\le b\\
+    g_n(x),  &  a\le x<b\\
     \max\left(g_n(b), \bar g_n(b)\right),  &  x=b\\
     \bar g_n(x), & b<x\le c
 \end{cases}\]
 \[\tilde G_n(x)=\begin{cases}
-    G_n(x),  &  a\le x\le b\\
+    G_n(x),  &  a\le x<b\\
     \max\left(G_n(b), \bar G_n(b)\right),  &  x=b\\
     \bar G_n(x), & b<x\le c
 \end{cases}\]
 
-由性质2，阶梯函数列$\tilde g_n(x)$与$\tilde G_n(x)$的从$a$到$c$的和分别是$s_n+\bar s_n$和$S_n+\bar S_n$．因为$\tilde g_n(x)$与$\tilde G(x)$满足条件：
+由性质2，阶梯函数列$\tilde g_n(x)$与$\tilde G_n(x)$的从$a$到$c$的和分别是$s_n+\bar s_n$和$S_n+\bar S_n$．因为$\tilde g_n(x)$与$\tilde G_n(x)$满足条件：
 \begin{enumerate}
-    \item $\tilde g_n(x)\le f(x)\le \tilde G(x),\quad a\le x\le c$
+    \item $\tilde g_n(x)\le f(x)\le \tilde G_n(x),\quad a\le x\le c$
     \item 
     \begin{align*}
     \lim_{n\to\infty}\left[(S_n+\bar S_n)-(s_n+\bar s_n)\right]&=\lim_{n\to\infty}\left[(S_n-s_n)+(\bar S_n-\bar s_n)\right]\\
@@ -863,7 +863,7 @@ s_n<\Int^b_a f_1(x)\dd x<S_n,\quad \text{且 } S_n-s_n\to 0\\
 \begin{equation}
     \lim_{n\to\infty}\left(S_n+\bar S_n\right)=\lim_{n\to\infty}\left(s_n+\bar s_n\right)=\Int^b_a \bigl(f_1(x)+ f_2(x)\bigr)\dd x
 \end{equation}
-由(3.10)和(3.13)，$\Int^b_a \bigl(f_1(x)+ f_2(x)\bigr)\dd x$与$\Int^b_a f_1(x)\dd x + \Int^b_a  f_2(x)\dd x$
+由(3.11)和(3.13)，$\Int^b_a \bigl(f_1(x)+ f_2(x)\bigr)\dd x$与$\Int^b_a f_1(x)\dd x + \Int^b_a  f_2(x)\dd x$
 是被$s_n+\bar s_n$与$S_n+\bar S_n$所夹逼的唯一实数，所以
 \[\Int^b_a \bigl(f_1(x)+ f_2(x)\bigr)\dd x=\Int^b_a f_1(x)\dd x + \Int^b_a  f_2(x)\dd x\]
 \end{proof}
@@ -872,7 +872,7 @@ s_n<\Int^b_a f_1(x)\dd x<S_n,\quad \text{且 } S_n-s_n\to 0\\
 \[\Int^b_a kf(x)\dd x =k\Int^b_a f(x)\dd x \]
 \end{blk}
 
-此法则的证明大致和性质2的证明相同，即当$\{g_n(x)\}$和$\{G_n(x)\}$上、下夹逼$f(x)$时，那么在$k>0$的情形，$\{kg_n(x)\}$和$\{kG_n(x)\}$上、下夹逼$kf(x)$; 在$k<0$的情形，$\{kg_n(x)\}$和$\{kG_n(x)\}$上、下夹逼$kf(x)$. 我们把证明的过程留给读者去写．
+此法则的证明大致和性质2的证明相同，即当$\{g_n(x)\}$和$\{G_n(x)\}$上、下夹逼$f(x)$时，那么在$k>0$的情形，$\{kg_n(x)\}$和$\{kG_n(x)\}$上、下夹逼$kf(x)$; 在$k<0$的情形，$\{kG_n(x)\}$和$\{kg_n(x)\}$上、下夹逼$kf(x)$. 我们把证明的过程留给读者去写．
 
 \begin{blk}{性质4}
     若$m\le f(x)\le M$, $a\le x\le b$，那么
@@ -882,7 +882,7 @@ s_n<\Int^b_a f_1(x)\dd x<S_n,\quad \text{且 } S_n-s_n\to 0\\
 \begin{proof}
     设$\{g_n(x)\}$与$\{G_n(x)\}$是$f(x)$在$[a,b]$上的夹逼阶梯函数列，$s_n$与$S_n$是相应的阶梯函数在$[a,b]$上的和，根据积分的定义，有
 \[\lim_{n\to\infty}s_n=\lim_{n\to\infty}S_n=\int^b_a f(x)\dd x\]
-换言之，任给一个正数$\varepsilon$，存在自然数$N$，使得当$n<N$时，有
+换言之，任给一个正数$\varepsilon$，存在自然数$N$，使得当$n>N$时，有
 \begin{equation}
     S_n<\int^b_a f(x)\dd x+\varepsilon
 \end{equation}
@@ -951,9 +951,9 @@ s_n<\Int^b_a f_1(x)\dd x<S_n,\quad \text{且 } S_n-s_n\to 0\\
 \[s_n>\int^b_a f(x)\dd x-\frac{\varepsilon}{2}\]
 
 当$n>N_2$时，有
-\[\bar s_n<\int^b_a \varphi(x)\dd x+\frac{\varepsilon}{2}\]
+\[\bar S_n<\int^b_a \varphi(x)\dd x+\frac{\varepsilon}{2}\]
 
-因为$\bar G_n(x)>\varphi(x)>f(x)>g_n(x),\quad x\in[a,b]$，根据性质1，得到：$\bar S_n=s_n$.
+因为$\bar G_n(x)>\varphi(x)>f(x)>g_n(x),\quad x\in[a,b]$，根据性质1，得到：$\bar S_n\ge s_n$.
 
 所以，当$n>\max(N_1,N_2)$时，有
 \[\int^b_a f(x)\dd x<s_n+\frac{\varepsilon}{2}<\bar S_n+\frac{\varepsilon}{2}<\int^b_a \varphi(x)\dd x+\varepsilon\]
@@ -1071,7 +1071,7 @@ $m=f(c)$, $M=f(d)$分别是$f(x)$在$[a,b]$上的最小值和最大值，则在$
 \end{enumerate}
 
 \item 将图中阴影部分的面积用定积分表示．
-\item 设$\ell(t)=mt+b$, （$m,t$是常数），$t\in [c,d]$，
+\item 设$\ell(t)=mt+b$, （$m,b$是常数），$t\in [c,d]$，
 
 求证：$\Int^d_c (mt+b)\dd t=\frac{\ell(c)+\ell(d)}{2}(d-c)$
 \item 证明：

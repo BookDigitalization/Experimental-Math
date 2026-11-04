@@ -78,7 +78,7 @@ $\Lim_{x\to\infty} \sin x$不存在．
 \end{equation}
 \end{blk}
 
-极限式(1.2)的几何意义如图1.2所示：当$x$无限地靠近$a$，但总不能等于$a$时，曲线$y=f(x)$上的点$(x,f(x))$无限地近$(a,\ell)$点．
+极限式(1.2)的几何意义如图1.2所示：当$x$无限地靠近$a$，但总不能等于$a$时，曲线$y=f(x)$上的点$(x,f(x))$无限地接近$(a,\ell)$点．
 
 \begin{figure}[htp]
     \centering
@@ -139,7 +139,7 @@ $x=a$这一点的值没有什么必然关系，这也就是说，无论$f(x)$在
 \end{example}
 
 \begin{proof}
-函数$f(x)=\sin\frac{1}{x}$对于一切$x\ne 0$的值有定义，因此这个函数在点$x=0$的领域内有定义．
+函数$f(x)=\sin\frac{1}{x}$对于一切$x\ne 0$的值有定义，因此这个函数在点$x=0$的邻域内有定义．
 
 当$x$取数列$\{x_n\}=\left\{\frac{2}{(2n+1)\pi}\Big| n=1,2,3,\ldots\right\}$的值而趋于零时，数列$\left\{\frac{1}{x_n}\right\}$相应的值是
 \[\frac{3\pi}{2},\frac{5\pi}{2},\frac{7\pi}{2},\ldots,(2n+1)\frac{\pi}{2},\ldots\]
@@ -173,7 +173,7 @@ $x=a$这一点的值没有什么必然关系，这也就是说，无论$f(x)$在
 上面是用数列的极限来说明函数的极限，其实我们也可以直接定义函数极限．
 
 \begin{blk}{定义3}
-  如果函数$f$在点$a$邻域上有定义（可能去掉点$a$本身），使得当$0<|x-a|<\delta$时，就有$|f(x)-\ell|<\varepsilon$, 那么就说$\ell$为当$x$趋近于$a$时，函数$f$在点$a$的极限值．
+  如果函数$f$在点$a$邻域上有定义（可能去掉点$a$本身），并且对于任给的$\varepsilon>0$，总存在$\delta>0$，使得当$0<|x-a|<\delta$时，就有$|f(x)-\ell|<\varepsilon$, 那么就说$\ell$为当$x$趋近于$a$时，函数$f$在点$a$的极限值．
 \end{blk}
 
 我们对这个定义需要说明以下几点：
@@ -195,7 +195,7 @@ $x=a$这一点的值没有什么必然关系，这也就是说，无论$f(x)$在
     当$x\ne 1$时，
 \[\begin{split}
     \left|\frac{x^3-1}{x-1}-3\right|&=|(x^2+x+1)-3|\\
-    &=|(x-1)(x+2)|=|x-1|\cdot |x-2|
+    &=|(x-1)(x+2)|=|x-1|\cdot |x+2|
 \end{split}\]
 
 要由$|x-1|\cdot |x+2|<\varepsilon$找$\delta$，显然，这里因子$|x+2|$引起了麻烦．为方便起见，先假定$0<|x-1|<1$，即取$\delta_1=1$，这样
@@ -409,7 +409,7 @@ $$\Lim_{x\to 0}\frac{1}{x}=\infty$$
 \begin{proof}
 如果自变量$x$取数列$\{x_n\}=\left\{\frac{2}{(2n+1)\pi}\Big|n=1, 2, 3,\ldots\right\}$的值趋于0时，$\sin\frac{1}{x}$在原点的任意邻域内无限次交替地取$-1, 1$这两个值，对于这些值，$|f(x)|=\frac{1}{x}=\frac{\pi}{2}(2n+1)$趋于无穷大．
 
-但是当$x$取数列$\{x\}=\left\{\frac{1}{n\pi}\Big| n=1, 2, 3,\ldots\right\}$的
+但是当$x$取数列$\{x'_n\}=\left\{\frac{1}{n\pi}\Big| n=1, 2, 3,\ldots\right\}$的
 值趋于0时，由于
 $\sin\frac{1}{x}=\sin (n\pi) =0$, 
 故对于这些值，
@@ -436,7 +436,7 @@ $y=f(x)$的图象位于两条双曲线$xy=\pm 1$之间，且在原点的邻近�
 
 \end{proof}
 
-如果对于任何$G>0$, 存在$\delta>0$, 当$0<|x-a|<\delta$时，有$f(x)>G$, 就说当$x\to a$时，函数$f(x)$趋于正无无穷大，记作
+如果对于任何$G>0$, 存在$\delta>0$, 当$0<|x-a|<\delta$时，有$f(x)>G$, 就说当$x\to a$时，函数$f(x)$趋于正无穷大，记作
 \[\lim_{x\to a}f(x)=+\infty\]
 
 如果对于任何$G>0$, 存在$\delta>0$, 当$0<|x-a|<\delta$时，有$f(x)<-G$, 就说当$x\to a$时，函数$f(x)$趋于负无穷大，记作
@@ -450,7 +450,7 @@ $y=f(x)$的图象位于两条双曲线$xy=\pm 1$之间，且在原点的邻近�
 的含义，这里不再写出．建议读者将这些定义严格地写出来．
 
 例如，我们有：
-\[\lim_{\theta\to \tfrac{\pi}{2}^+}\tan\theta =+\infty,\qquad \lim_{\theta\to \tfrac{\pi}{2}^-}\tan\theta =-\infty\]
+\[\lim_{\theta\to \tfrac{\pi}{2}^-}\tan\theta =+\infty,\qquad \lim_{\theta\to \tfrac{\pi}{2}^+}\tan\theta =-\infty\]
 \[\lim_{x\to 0^+}\log_a x =-\infty\quad (a>1),\qquad \lim_{x\to 0^+}\log_a x =+\infty\quad (0<a<1)\]
 
 \begin{ex}
@@ -589,7 +589,7 @@ $\therefore\quad \left|\sqrt[n]{u(x)}-\sqrt[n]{A}\right|<|u(x)-A|\cdot \frac{2-2
     \text{扇形$OAD$的面积}&=\frac{1}{2}OA\cdot \wideparen{AD}=\frac{1}{2}\cdot 1^2\cdot \theta
 \end{split}\]
 
-假如角是用180等分平角的“度”作为单位，则扇形面积就是$\frac{1}{2}\cdot 1\cdot \frac{\pi}{100}\theta$．
+假如角是用180等分平角的“度”作为单位，则扇形面积就是$\frac{1}{2}\cdot 1\cdot \frac{\pi}{180}\theta$．
 
 因为上述扇形是夹在$\triangle OBD$和$\triangle OAC$之间，所以
 \begin{equation}
@@ -819,7 +819,7 @@ $\therefore\quad a=-1,\quad b=\frac{1}{2}$为所求．
 
 考虑数列$a_n=\left(1+\frac{1}{n}\right)^n,\; n=1, 2, 3,\ldots$的极限．
 
-首先我们计算一下数列$\{a_N\}$的数值：
+首先我们计算一下数列$\{a_n\}$的数值：
 \begin{center}
 \begin{tabular}{llll}
    $a_1=2.0$ & $a_2=2.250$ & $a_3=2.370$& $a_4=2.441$\\
@@ -875,7 +875,7 @@ $\cdots$ &$a_{256}=2.712$&$\cdots$&$a_{1024}=2.717$\\
 这就是说数列$\left\{\left(1+\frac{1}{n}\right)^n\right\}$是递增有上界的，所以它有极限，设它的极限用$e$表示，因而我们有数
 \[e=\Lim_{n\to \infty} \left(1+\frac{1}{n}\right)^n\]
 这个数$e$是无理数，取它的十进小数到十五位，其值是
-\[e=2.718281328459045\cdots\]
+\[e=2.718281828459045\cdots\]
 
 现在要把变数$n$推广到实数$x$, 这是一个以后常要用到的重要极限．
 
@@ -889,7 +889,7 @@ $\cdots$ &$a_{256}=2.712$&$\cdots$&$a_{1024}=2.717$\\
 令$[x]=n$，于是$n\le x<n+1$，所以，当$x\to +\infty$时，$n\to +\infty$，而且
 \[1+\frac{1}{n+1}<1+\frac{1}{x}\le 1+\frac{1}{n}\]
 根据指数函数的单调性和幂函数在$x>0$半直线上的单调性，有：
-\[\left(1+\frac{1}{n+1}\right)^n\le \left(1+\frac{1}{n+1}\right)^x<\left(1+\frac{1}{x}\right)^x\le \left(1+\frac{1}{n}\right)^x<\left(1+\frac{1}{n+1}\right)^{n+1}\]
+\[\left(1+\frac{1}{n+1}\right)^n\le \left(1+\frac{1}{n+1}\right)^x<\left(1+\frac{1}{x}\right)^x\le \left(1+\frac{1}{n}\right)^x<\left(1+\frac{1}{n}\right)^{n+1}\]
 因为：
 \[\begin{split}
     \Lim_{n\to +\infty} \left(1+\frac{1}{n}\right)^{n+1}&=\Lim_{n\to +\infty} \left(1+\frac{1}{n}\right)^{n}\left(1+\frac{1}{n}\right)\\
@@ -1040,7 +1040,7 @@ $\therefore\quad \Lim_{x\to 1}f(x)=1$
 
 因为$\left|\sin\frac{1}{x}\right|\le 1$，从而：    
 \[\begin{split}
-   & 0<\left|x\sin\frac{1}{x}\right|\le |x|\\
+   & 0\le\left|x\sin\frac{1}{x}\right|\le |x|\\
 &0\le \lim_{x\to 0}\left|x\sin\frac{1}{x}\right|\le \lim_{x\to 0}|x|=0\\
 &\lim_{x\to 0}x\sin\frac{1}{x}=0
 \end{split}\]
@@ -1176,7 +1176,7 @@ $\varepsilon=\frac{1}{2}f(a)$, 必定存在一个$\delta$使得$|x-a|<\delta$时
 由反函数连续性定理直接得出下面命题．
 
 \begin{blk}
-    {命题7} 反三角函数$y=\arcsin x\; \left(-\frac{\pi}{2}\le x\le \frac{\pi}{2}\right)$,\quad $y=\arccos x\; \left(0\le x\le \pi\right)$,\quad $y=\arctan x\; \left(-\frac{\pi}{2}< x< \frac{\pi}{2}\right)$,\quad $y=\arccot x\; \left(0<x<\pi\right)$在它们各自的定义域上到处连续．
+    {命题7} 反三角函数$y=\arcsin x\; \left(-\frac{\pi}{2}\le y\le \frac{\pi}{2}\right)$,\quad $y=\arccos x\; \left(0\le y\le \pi\right)$,\quad $y=\arctan x\; \left(-\frac{\pi}{2}< y< \frac{\pi}{2}\right)$,\quad $y=\arccot x\; \left(0<y<\pi\right)$在它们各自的定义域上到处连续．
 \end{blk}
 
 \begin{blk}{命题8}
@@ -1199,7 +1199,7 @@ $\varepsilon=\frac{1}{2}f(a)$, 必定存在一个$\delta$使得$|x-a|<\delta$时
 因为$\left(1+\frac{h}{x}\right)^{n}$是关于$h$的$n$次多项式，并且显然当$h\to 0$时，
 \[\left(1+\frac{h}{x}\right)^{n}\to 1\]
 
-于是，由不等式(1.10)和(1.11), 得到当$h\to 0$时，$\left(1+\frac{h}{x}\right)^{n}\to 1$. 因此
+于是，由不等式(1.10)和(1.11), 得到当$h\to 0$时，$\left(1+\frac{h}{x}\right)^{\alpha}\to 1$. 因此
 \[\lim_{h\to 0}\left[(x+h)^{\alpha}-x^{\alpha}\right]=0\]
 即：
 \[\lim_{h\to 0}(x+h)^{\alpha}=x^{\alpha}\]
@@ -1246,7 +1246,7 @@ $\therefore\quad \Lim_{x\to a}h(x)=\Lim_{x\to a}f(g(x))=\Lim_{y\to b}f(y)=f(b)=f
 由于$g(x)=\frac{1}{1+x^2}$在$\mathbb{R}$上到处连续并且它的值域
 \[g(\mathbb{R})=(0,1]\subset [0,+\infty)=Y\]
 又幂函数$f(y)=\sqrt[4]{y}$在$Y=[0,+\infty)$上到处连续，因此$f(y)=\sqrt[4]{y}$在$g(\mathbb{R})=(0,1]$上也到处连续，于是
-\[\lim_{x\to a}h(x)=h\left(\lim_{x\to a}g(x)\right)=\sqrt[4]{\frac{1}{1+a^2}}\]
+\[\lim_{x\to a}h(x)=f\left(\lim_{x\to a}g(x)\right)=\sqrt[4]{\frac{1}{1+a^2}}\]
 \end{solution}
 
 
@@ -1261,8 +1261,8 @@ $\therefore\quad \Lim_{x\to a}h(x)=\Lim_{x\to a}f(g(x))=\Lim_{y\to b}f(y)=f(b)=f
 \[\begin{split}
     \lim_{x\to 2}g(x)&=\lim_{x\to 2}\frac{1-\cos \pi x}{4-x^2}\\
     &=\lim_{x\to 2}\frac{2\sin^2\frac{\pi}{2}x}{4-x^2}=\lim_{x\to 2}\frac{\pi\sin^2\frac{\pi}{2}(2-x)}{\frac{\pi}{2}(2-x)(2+x)}\\
-    &=\lim_{x\to 2}\left[\frac{\sin\frac{\pi}{2}(2-x)}{\frac{\pi}{2}(2-x)}\cdot \frac{1}{2+x}\cdot \sin\frac{\pi}{2}(2-x)  \right]\\
-    &=1\cdot \frac{1}{4}\cdot 0=0\in [0,+\infty)
+    &=\lim_{x\to 2}\pi\left[\frac{\sin\frac{\pi}{2}(2-x)}{\frac{\pi}{2}(2-x)}\cdot \frac{1}{2+x}\cdot \sin\frac{\pi}{2}(2-x)  \right]\\
+    &=\pi\cdot 1\cdot \frac{1}{4}\cdot 0=0\in [0,+\infty)
 \end{split}\]
 
 $\therefore\quad \Lim_{x\to 2}\sqrt{\frac{1-\cos\pi x}{4-x^2}}=\sqrt{\Lim_{x\to 2}\left(\frac{1-\cos\pi x}{4-x^2}\right)}=\sqrt{0}=0$
@@ -1310,7 +1310,7 @@ $\therefore\quad \Lim_{x\to 2}\sqrt{\frac{1-\cos\pi x}{4-x^2}}=\sqrt{\Lim_{x\to 
     \item $f(x)=c$\quad （$c$为常数）
     \item $x^n$\quad（$n$是整数）
     \item $\sqrt[n]{x}\quad (x\ge 0)$
-    \item $a^n\quad (a>0,\; n\ne 1)$
+    \item $a^x\quad (a>0,\; a\ne 1)$
     \item $\log_a x$
     \item $x^\alpha$\quad （$\alpha$是任意实常数）
     \item $\sin x,\; \cos x, \; \tan x,\; \cot x$
@@ -1359,7 +1359,7 @@ $\therefore\quad \Lim_{x\to 2}\sqrt{\frac{1-\cos\pi x}{4-x^2}}=\sqrt{\Lim_{x\to 
         1,& x=0
     \end{cases}$
     \item $f(x)=\cot\frac{1}{x}$
-    \item $f(y)=\begin{cases}
+    \item $f(x)=\begin{cases}
         \cos\frac{\pi x}{2},& |x|\le 1\\
         |x-1|,& |x|>1
     \end{cases}$
@@ -1498,7 +1498,7 @@ $[0, 1]$上的上界，我们在$(k',1)$内任意取一个数$x$, 于是
 显然有：
 \[S_1=S_1'\cup S_1''\]
 由此不难看到：
-\[K=l.u.b \{S_1\} =\max \left(l.u,b \{S'_1\} ,l.u.b\{S_1''\}\right)\]
+\[K=l.u.b \{S_1\} =\max \left(l.u.b \{S'_1\} ,l.u.b\{S_1''\}\right)\]
 所以$l.u.b\{S_1'\}$和$l.u.b\{S_1''\}$两者之中，至少有一个等于$K$, 换句话说，我们总可以在$[A_1,B_1]$的两个半段之中，选取其一为$[A_2,B_2]$, 使得
 \[l.u.b \{S_2\} =K,\qquad  S_2= \{f (x) ,\; x\in [A_2, B_2] \}\] 
 如此逐步二分，每次由$[A_{n} ,B_{n}]$归纳地选取其半段作为$[A_{n+1} ,B_{n+1}]$，使得
@@ -1535,10 +1535,10 @@ $[0, 1]$上的上界，我们在$(k',1)$内任意取一个数$x$, 于是
     \item $\Lim_{x\to 0}(\cos x)^{\sin x}$
     \item $\Lim_{x\to 0}\frac{\frac{x^2}{e^{2x}}}{\ln\left(1+\frac{x^2}{e^{2x}}\right)}$
     \item $\Lim_{x\to 0}\frac{\frac{x^2}{e^{2x}}}{\sin^2 \frac{x}{e^{x}}}$
-    \item $\Lim_{x\to \infty}n^2\left(-x^{\tfrac{1}{n}}-x^{\tfrac{1}{n+1}}\right)$
+    \item $\Lim_{n\to \infty}n^2\left(x^{\tfrac{1}{n}}-x^{\tfrac{1}{n+1}}\right)$
     \item $\Lim_{x\to 0}\frac{\left(e^x+e^{-x}\right)\left(e^x-e^{-x}\right)}{2x}$
     \item $\Lim_{x\to 0}(1-2x)^{\tfrac{1}{x}}$
-    \item $\Lim_{x\to \infty}10\left(1+\frac{0.03}{n}\right)^n$
+    \item $\Lim_{n\to \infty}10\left(1+\frac{0.03}{n}\right)^n$
     \item $\Lim_{x\to +\infty}\arccos\left(\sqrt{x^2+x}-x\right)$
     \item $\Lim_{x\to -\infty}\arctan\frac{x-4}{(x-2)^2}$
     \item $\Lim_{x\to -\infty}\arctan\frac{x}{\sqrt{1+x^2}}$
