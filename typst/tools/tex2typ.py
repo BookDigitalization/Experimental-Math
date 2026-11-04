@@ -75,10 +75,12 @@ class Converter:
         tex = replace_command(tex, "wideparen", 1, self.wideparen)
         tex = replace_command(tex, "tfrac", 2, self.tfrac)
         tex = replace_command(tex, "intlongdivision", 2,
-                              lambda a: self.slot('#todo-raw("\\\\intlongdivision{%s}{%s}")' % (a[0], a[1])))
-        tex = re.sub(r"\\polylongdiv\[[^\]]*\]", r"\\polylongdiv", tex)
-        tex = replace_command(tex, "polylongdiv", 2,
-                              lambda a: self.slot('#todo-raw("\\\\polylongdiv{%s}{%s}")' % (a[0], a[1])))
+                              lambda a: self.slot("#intlongdiv(%s, %s)" % (a[0].strip(), a[1].strip())))
+        tex = re.sub(r"\\polylongdiv\[style=(\w)\]", r"\\polylongdivstyle\1", tex)
+        for style in "ABCD":
+            tex = replace_command(tex, "polylongdivstyle" + style, 2,
+                                  lambda a, s=style: self.slot(polylongdiv(a[0], a[1], s)))
+        tex = replace_command(tex, "polylongdiv", 2, lambda a: self.slot(polylongdiv(a[0], a[1], "A")))
         tex = re.sub(r"\\left\\\{\s*\\begin\{array\}\{[^}]*\}(.*?)\\end\{array\}\s*\\right\.",
                      r"\\begin{cases}\1\\end{cases}", tex, flags=re.S)
         tex = self.replace_nested_cases(tex)
@@ -87,8 +89,60 @@ class Converter:
         tex = re.sub(r"\\begin\{equation\}(.*?)\\end\{equation\}",
                      lambda m: self.slot("#numbered-eq($ %s $)" % tex_math_to_typst(m.group(1))), tex, flags=re.S)
         tex = self.replace_inline_envs(tex)
+        tex = self.replace_text_spaces(tex)
         tex = self.replace_tabular(tex)
         return tex
+
+    def replace_text_spaces(self, tex: str) -> str:
+        """正文（非公式）中的 \\quad、\\qquad、\\hspace 会被 pandoc 丢掉，改为 #h(…)"""
+        math_envs = r"(equation|align|gather|multline|eqnarray|displaymath|math)\*?"
+        out, i, depth_math = [], 0, 0
+        n = len(tex)
+        while i < n:
+            if tex.startswith("\\$", i):
+                out.append("\\$")
+                i += 2
+                continue
+            m = re.match(r"\\begin\{%s\}" % math_envs, tex[i:])
+            if m:
+                depth_math += 1
+                out.append(m.group(0))
+                i += m.end()
+                continue
+            m = re.match(r"\\end\{%s\}" % math_envs, tex[i:])
+            if m:
+                depth_math -= 1
+                out.append(m.group(0))
+                i += m.end()
+                continue
+            if tex.startswith("\\[", i) or tex.startswith("\\(", i):
+                depth_math += 1
+                out.append(tex[i : i + 2])
+                i += 2
+                continue
+            if tex.startswith("\\]", i) or tex.startswith("\\)", i):
+                depth_math -= 1
+                out.append(tex[i : i + 2])
+                i += 2
+                continue
+            if tex[i] == "$":
+                k = 2 if tex.startswith("$$", i) else 1  # $$…$$ 是一个整体
+                depth_math = 1 - depth_math if depth_math in (0, 1) else depth_math
+                out.append(tex[i : i + k])
+                i += k
+                continue
+            if depth_math == 0:
+                m = re.match(r"\\(qquad|quad)(?![a-zA-Z])\s*|\\hspace\*?\{([^}]*)\}", tex[i:])
+                if m:
+                    width = {"quad": "1em", "qquad": "2em"}.get(m.group(1) or "", None)
+                    if width is None:
+                        width = m.group(2).strip()
+                    out.append(self.slot("#h(%s)" % width))
+                    i += m.end()
+                    continue
+            out.append(tex[i])
+            i += 1
+        return "".join(out)
 
     def replace_tabular(self, tex: str) -> str:
         """tabular 自行转换：pandoc 会丢掉大部分 \\hline 和竖线"""
@@ -216,11 +270,12 @@ class Converter:
         # 占位符里可能还套着占位符，反复替换到没有为止
         while True:
             new = re.sub(r'upright\("PHM(\d+)"\)', lambda m: self.slots[int(m.group(1))], typ)
-            new = re.sub(r"#smallcaps\[PH(\d+)\]", lambda m: self.slots[int(m.group(1))], new)
+            new = re.sub(r"#smallcaps\[PH(\d+)\]", lambda m: code_slot(self.slots[int(m.group(1))]), new)
             if new == typ:
                 break
             typ = new
         typ = fix_math(typ)
+        typ = re.sub(r'^( *)#set enum\(numbering: "([^"]*)"', enum_at, typ, flags=re.M)
         typ = escape_after_calls(typ)
         typ = re.sub(r"\n{3,}", "\n\n", typ)
         return typ
@@ -246,6 +301,18 @@ def escape_after_calls(typ: str) -> str:
             out.append("\\")
         i += 1
     return "".join(out)
+
+
+def enum_at(m: re.Match) -> str:
+    """pandoc 的 #set enum(numbering: "(1)") 会作用到嵌套的各层，改为只作用于本层。
+    pandoc 每嵌套一层列表缩进 2 格，由此得出层数"""
+    depth = len(m.group(1)) // 2 + 1
+    return '%s#set enum(numbering: enum-at(%d, "%s")' % (m.group(1), depth, m.group(2))
+
+
+def code_slot(s: str) -> str:
+    """正文中的 #f(…) 后面紧跟 ( [ . 时会被当成继续调用，统一加分号结束表达式"""
+    return s + ";" if s.startswith("#") and s.endswith(")") else s
 
 
 def fix_math(typ: str) -> str:
@@ -386,6 +453,28 @@ def expand_poly(arg: str, var: str = "x") -> str:
         sign = "-" if neg else ("+" if terms else "")
         terms.append(sign + c + power)
     return "".join(terms) or "0"
+
+
+def poly_coeffs(tex: str) -> tuple[list[int], str]:
+    """把 4x^3+5x^2-2x-3 这样的多项式解析为降幂系数表和变量名（polynom 宏包的写法，可含 +0 占位）"""
+    var = (re.findall(r"[a-z]", tex) or ["x"])[0]
+    terms: dict[int, int] = {}
+    for sign, coef, v, power in re.findall(r"([+-]?)\s*(\d*)\s*([a-z]?)(?:\^\{?(\d+)\}?)?", tex.replace(" ", "")):
+        if not (coef or v):
+            continue
+        c = int(coef) if coef else 1
+        deg = (int(power) if power else 1) if v else 0
+        terms[deg] = terms.get(deg, 0) + (-c if sign == "-" else c)
+    n = max(terms)
+    return [terms.get(d, 0) for d in range(n, -1, -1)], var
+
+
+def polylongdiv(dividend: str, divisor: str, style: str) -> str:
+    a, var = poly_coeffs(dividend)
+    b, _ = poly_coeffs(divisor)
+    fmt = lambda xs: "(%s)" % ", ".join(map(str, xs))
+    opts = (', var: "%s"' % var if var != "x" else "") + (', style: "%s"' % style if style != "A" else "")
+    return "#polylongdiv(%s, %s%s)" % (fmt(a), fmt(b), opts)
 
 
 def pandoc(tex: str) -> str:

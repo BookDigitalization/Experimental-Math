@@ -2,6 +2,7 @@
 // 各册 main.typ 用 `#show: book.with(...)` 套用版式，正文中直接调用下面定义的函数。
 
 #import "@preview/cetz:0.5.3"
+#import "longdiv.typ": intlongdiv, polylongdiv
 
 // ---- 字体 ----
 // 西文与数学用 New Computer Modern（Typst 自带）；中文在 Windows 上用宋体、黑体、楷体，
@@ -72,7 +73,7 @@
   radius: 4pt,
   inset: (x: 10pt, top: 12pt, bottom: 8pt),
   {
-    place(
+    if title != [] and title != [ ] { place(
       top + title-align,
       dx: if title-align == left { 5mm } else { 0pt },
       dy: -12pt - 0.6em,
@@ -82,7 +83,7 @@
         inset: (x: 8pt, y: 3pt),
         text(fill: white, font: fonts.sans, title),
       ),
-    )
+    ) }
     body
   },
 )
@@ -103,6 +104,17 @@
   text(fill: red)[待绘制的插图 #id],
 ))
 
+// ---- 编号列表 ----
+// LaTeX 各层的默认编号：1.  (a)  i.  A.
+#let latex-enum(..n) = {
+  let n = n.pos()
+  numbering(("1.", "(a)", "i.", "A.").at(calc.min(n.len(), 4) - 1), n.last())
+}
+// 第 depth 层列表改用指定格式（对应 enumerate 宏包的 \begin{enumerate}[(1)]），其余各层不变
+#let enum-at(depth, pattern) = (..n) => {
+  if n.pos().len() == depth { numbering(pattern, n.pos().last()) } else { latex-enum(..n) }
+}
+
 // 尚未转换的 LaTeX 结构（如竖式除法），原样显示源码以便查找
 #let todo-raw(s) = text(fill: red, raw(s))
 
@@ -111,10 +123,8 @@
 #let numbered-eq(body) = math.equation(block: true, numbering: eq-numbering, body)
 
 // 不按 display 样式排的分数（对应 \tfrac）
-#let tfrac(a, b) = {
-  show math.frac: it => it
-  math.inline(math.frac(a, b))
-}
+// 用标签 <tfrac> 让下面 book() 中“分数一律 display”的 show 规则跳过它
+#let tfrac(a, b) = math.inline([#math.frac(a, b)<tfrac>])
 
 // 带编号的方程组（对应 cases 宏包的 numcases）：左侧一个大括号，每行各占一个公式编号
 #let numcases(lhs, ..rows) = {
@@ -178,17 +188,21 @@
   show emph: set text(font: fonts.kai, style: "normal")
 
   // 原书的 \frac 一律按 \dfrac 排
-  show math.frac: it => math.display(it)
+  show math.frac: it => if it.has("label") and it.label == <tfrac> { it } else { math.display(it) }
   // 公式中的中文（如 \text{个}）回落到正文的中文字体
   show math.equation: set text(font: ("New Computer Modern Math",) + fonts.serif.slice(1))
   set table(stroke: none)
 
-  set enum(indent: 1em, body-indent: 0.6em, spacing: 0.9em)
+  set enum(indent: 1em, body-indent: 0.6em, spacing: 1.2em, full: true, numbering: latex-enum)
   set list(indent: 1em, body-indent: 0.6em)
   set footnote(numbering: "①")
-  set figure(gap: 0.6em)
-  show figure.caption: set text(font: fonts.sans)
-  set figure.caption(separator: h(1em))
+  // 图注：“图 1.1”加粗，编号带章号；LaTeX 版多为空的 \caption{}，此时只印编号
+  set figure(gap: 0.6em, numbering: n => str(chapter-number()) + "." + str(n))
+  show figure.caption: it => context {
+    set text(font: fonts.sans, weight: "bold")
+    it.supplement + " " + it.counter.display(it.numbering)
+    if it.body != [] and it.body != [ ] { h(1em) + it.body }
+  }
 
   // 章节编号：第一章 / 第一节 / 一、/（一）
   set heading(numbering: (..n) => {
@@ -204,6 +218,8 @@
     counter(math.equation).update(0)
     example-counter.update(0)
     counter(footnote).update(0)
+    counter(figure.where(kind: image)).update(0)
+    counter(figure.where(kind: table)).update(0)
     v(2.5em)
     align(center, text(size: 22pt, {
       if it.numbering != none { counter(heading).display(it.numbering); h(1em) }

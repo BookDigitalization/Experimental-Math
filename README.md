@@ -61,6 +61,10 @@ $env:PAPER = "a4paper"; just book 3    # Windows PowerShell
 
 书中不少 TikZ 插图是固定尺寸。B5 和 A4 都检查过；比 B5 小的纸（如 `a5paper`）会有大量插图超出版心，不建议使用。
 
+### Typst 版（试验中）
+
+[`typst/`](typst/) 中是与 LaTeX 版并存的 Typst 重排本，目前只有第一册，用 `just typst 1` 编译，详见 [`typst/README.md`](typst/README.md)。
+
 ### 手动编译
 
 在对应目录下执行两遍（第二遍生成目录）：

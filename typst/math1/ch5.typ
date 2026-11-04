@@ -387,7 +387,7 @@ $ 4 x^2 - 4 x - 3 & = 4 (x^2 - x - 3 / 4)\
 这就是说：要对 $a x^2 + b x + c$ 分解因式，只要能寻找到四个数 $u$、$v$、$r$、$s$，同时满足以上三个等式即可，如图所示：
 
 #align(center)[
-#fig("5-01")
+#fig("5-01");
 
 ]
 要找这四个数 $u\,v\,r\,s$，可以这样去做：先找 $a$ 的因数，使 $u dot.op v = a$；再找 $c$ 的因数，使 $r s = c$；最后再试验 $u s + v r$ 是否等于 $b$：
@@ -406,13 +406,13 @@ $ 4 x^2 - 4 x - 3 & = 4 (x^2 - x - 3 / 4)\
 ]
 #solution[
 #align(center)[
-#fig("5-02")
+#fig("5-02");
 
 ]
 $ therefore quad x^2 - 5 x + 6 =\(x - 2\)\(x - 3\) $
 
 #align(center)[
-#fig("5-03")
+#fig("5-03");
 
 ]
 $ therefore quad x^2 - x - 12 =\(x + 3\)\(x - 4\) $
@@ -424,13 +424,13 @@ $ therefore quad x^2 - x - 12 =\(x + 3\)\(x - 4\) $
 ]
 #solution[
 #align(center)[
-#fig("5-04")
+#fig("5-04");
 
 ]
 $ therefore quad 15 x^2 - 7 x - 2 =\(3 x - 2\)\(5 x + 1\) $
 
 #align(center)[
-#fig("5-05")
+#fig("5-05");
 
 ]
 $ therefore quad 11 x^2 - 54 x + 63 =\(11 x - 21\)\(x - 3\) $
@@ -444,7 +444,7 @@ $ therefore quad 11 x^2 - 54 x + 63 =\(11 x - 21\)\(x - 3\) $
 遇到含有两个元的二次三项式，也可以与一元类似地作出因式分解．
 
 #align(center)[
-#fig("5-06")
+#fig("5-06");
 
 ]
 $ therefore quad 6 x^2 - x y - 12 y^2 =\(2 x - 3 y\)\(3 x + 4 y\) $
@@ -896,13 +896,13 @@ c = k $ 从中可解得：$a = 1\,quad b = - 1\,quad c = 4\,quad k = 4$．
 用综合除法
 
 #align(center)[
-#fig("5-07")
+#fig("5-07");
 
 ]
 $therefore quad f\(x\)$ 除以 $x - 2$，所得余式为一常数 $12$．
 
 #align(center)[
-#fig("5-08")
+#fig("5-08");
 
 ]
 $therefore quad f\(x\)$ 除以 $x - a$，所得余式为 $a^3 + 3 a^2 - a - 6$．又：$ f\(2\) & = 2^3 + 3 times 2^2 - 2 - 6 = 12\
@@ -922,9 +922,9 @@ f\(a\) & = a^3 + 3 a^2 - a - 6 $
 
 $therefore quad r\(x\)$ 必为零或零次多项式，即 $r\(x\)$ 必为一个常数 $R$．
 
-因而#numbered-eq($ f\(x\)= q\(x\)dot.op\(x - a\)+ R $)这是一个恒等式，不论 $x$ 取何值，总是成立的．今设 $x = a$，等式(5.7)也应成立．
+因而#numbered-eq($ f\(x\)= q\(x\)dot.op\(x - a\)+ R $);这是一个恒等式，不论 $x$ 取何值，总是成立的．今设 $x = a$，等式(5.7)也应成立．
 
-于是就有：$f\(a\)= q\(a\)dot.op\(a - a\)+ R$ 因此：#numbered-eq($ R = f\(a\) $)~◻
+于是就有：$f\(a\)= q\(a\)dot.op\(a - a\)+ R$ 因此：#numbered-eq($ R = f\(a\) $);~◻
 
 ]
 这就证明了余式定理．这个结论使我们在不做除法的前提下，也可以用求多项式的值来求出余式．
@@ -980,13 +980,13 @@ $f\(x\)= 3 x^5 + 10 x^4 - 15 x^3 - 9 x^2 + 8 x - 7$．求 $f (- 1 / 3)$ 的值�
 由综合除法
 
 #align(center)[
-#fig("5-09")
+#fig("5-09");
 
 ]
 可知：$f\(x\)$ 除以 $x + 1 / 3$ 的余数为 $- 10$，$ therefore quad f (- 1 / 3) = - 10 $
 
 ]
-由余式定理，我们得到恒等式：#numbered-eq($ f\(x\)= q\(x\)dot.op\(x - a\)+ f\(a\) $)
+由余式定理，我们得到恒等式：#numbered-eq($ f\(x\)= q\(x\)dot.op\(x - a\)+ f\(a\) $);
 
 #exercise[
 + 设 $f\(x\)= x^4 - 3 x^3 - 5 x^2 + 20 x - 8$，试分别求出 $f\(x\)$ 除以下列各式的余数：$ x - 1\,quad x + 1\,quad x - 2\,quad x + 2\,quad 3 x + 1\,quad 3 x - 2 $
@@ -1064,7 +1064,7 @@ $therefore quad x - y$ 不是 $x^n + y^n$ 的因式．~◻
 #proof[
 #emph[Proof.]由于 $a$ 是 $f\(x\)$ 的根，即：$f\(a\)= 0$．
 
-$therefore quad$ 由推论1可知，$\(x - a\)$ 能整除 $f\(x\)$．不妨设#numbered-eq($ f\(x\)= q_1\(x\)dot.op\(x - a\) $)将 $x = b$ 代入恒等式(5.10)，可得 $f\(b\)= q_1\(b\)dot.op\(b - a\)$
+$therefore quad$ 由推论1可知，$\(x - a\)$ 能整除 $f\(x\)$．不妨设#numbered-eq($ f\(x\)= q_1\(x\)dot.op\(x - a\) $);将 $x = b$ 代入恒等式(5.10)，可得 $f\(b\)= q_1\(b\)dot.op\(b - a\)$
 
 $because quad b$ 也是 $f\(x\)$ 的根
 
@@ -1078,7 +1078,7 @@ $therefore quad$ 由上式得出 $q_1\(b\)= 0$
 
 根据推论1，就说明 $x - b$ 能够整除 $q_1\(x\)$．
 
-再设#numbered-eq($ q_1\(x\)= q_2\(x\)dot.op\(x - b\) $)
+再设#numbered-eq($ q_1\(x\)= q_2\(x\)dot.op\(x - b\) $);
 
 \(5.11)式代入(5.10)式：$ f\(x\)= q_2\(x\)dot.op\(x - b\)dot.op\(x - a\) $
 
@@ -1194,7 +1194,7 @@ $because quad g\(0\)= 0\,quad g\(1\)= 0$
 
 $therefore quad g\(x\)$ 必含有因式 $x\(x - 1\)$
 
-因而可设所求三次式为：#numbered-eq($ g\(x\)= x\(x - 1\)\(A x + B\) $)
+因而可设所求三次式为：#numbered-eq($ g\(x\)= x\(x - 1\)\(A x + B\) $);
 
 又 $because quad g\(2\)= 1$ 及 $g\(3\)= 5$，代入(5.12)，得 $ {1 = 2\(2 - 1\)\(2 A + B\)\
 5 = 3\(3 - 1\)\(3 A + B\) arrow.r.double quad {4 A + 2 B = 1\
@@ -1305,7 +1305,7 @@ $because quad f\(3\)= 0\,#h(2em) therefore quad x - 3$ 是 $f\(x\)$ 的因式．
   [$- 5$],
   [6],
   [0],
-)
+);
 
 ]
 因此：$ f\(x\) & =\(x + 1\)\(x^2 - 5 x + 6\)\
@@ -1350,10 +1350,10 @@ $therefore quad x plus.minus 1$ 不是 $f\(x\)$ 的因式．
   [$- 9$],
   [$- 2$],
   [$#box(stroke: 0.5pt, inset: 3pt, $0$)$],
-)
+);
 
 ]
-因此：#numbered-eq($ f\(x\)=\(x - 2\)\(2 x^4 + 3 x^3 - 9 x^2 - 9 x - 2\) $)
+因此：#numbered-eq($ f\(x\)=\(x - 2\)\(2 x^4 + 3 x^3 - 9 x^2 - 9 x - 2\) $);
 
 继续将 $2 x^4 + 3 x^3 - 9 x^2 - 9 x - 2$ 分解因式，它的因式还可能是：$x plus.minus 1\,quad x plus.minus 2\,quad 2 x plus.minus 1$．
 
@@ -1380,10 +1380,10 @@ $therefore quad x plus.minus 1$ 不是 $f\(x\)$ 的因式．
   [$+ 5$],
   [$+ 1$],
   [$#box(stroke: 0.5pt, inset: 3pt, $0$)$],
-)
+);
 
 ]
-因此：#numbered-eq($ 2 x^4 + 3 x^3 - 9 x^2 - 9 x - 2 =\(x - 2\)\(2 x^3 + 7 x^2 + 5 x + 1\) $)
+因此：#numbered-eq($ 2 x^4 + 3 x^3 - 9 x^2 - 9 x - 2 =\(x - 2\)\(2 x^3 + 7 x^2 + 5 x + 1\) $);
 
 再将 $2 x^3 + 7 x^2 + 5 x + 1$ 分解因式，它的因式可能是：$x plus.minus 1\,quad 2 x plus.minus 1$．
 
@@ -1407,10 +1407,10 @@ $therefore quad x plus.minus 1$ 不是 $f\(x\)$ 的因式．
   [$+ 6$],
   [$+ 2$],
   [$#box(stroke: 0.5pt, inset: 3pt, $0$)$],
-)
+);
 
 ]
-因此：$2 x^3 + 7 x^2 + 5 x + 1 = (x + 1 / 2)\(2 x^2 + 6 x + 2\)$，即#numbered-eq($ 2 x^3 + 7 x^2 + 5 x + 1 = (2 x + 1)\(x^2 + 3 x + 1\) $)
+因此：$2 x^3 + 7 x^2 + 5 x + 1 = (x + 1 / 2)\(2 x^2 + 6 x + 2\)$，即#numbered-eq($ 2 x^3 + 7 x^2 + 5 x + 1 = (2 x + 1)\(x^2 + 3 x + 1\) $);
 
 在有理数范围内，$x^2 + 3 x + 1$ 已不能再分解．
 
@@ -1427,7 +1427,7 @@ $therefore quad x plus.minus 1$ 不是 $f\(x\)$ 的因式．
 逐个试除，可得：
 
 #align(center)[
-#fig("5-10")
+#fig("5-10");
 
 ]
 因此：$f\(x\)= (x + 1 / 2) (x - 2 / 3)\(6 x^2 + 6 x + 6\)$ 即：$ f\(x\)=\(2 x + 1\)\(3 x - 2\)\(x^2 + x + 1\) $ 在我们进行因式分解时，不难看出，若 $f\(x\)$ 含有因式 $p x + q$，则一定有 $f (- q / p) = 0$，因而，$x = - q / p$ 必然是 $f\(x\)$ 的有理数根，如：$ f\(x\)=\(2 x + 1\)\(3 x - 2\)\(x^2 + x + 1\) $ $therefore quad f\(x\)$ 的有理根就是：$x_1 = - 1 / 2\,quad x_2 = 2 / 3$．
@@ -1443,7 +1443,7 @@ $therefore quad x plus.minus 1$ 不是 $f\(x\)$ 的因式．
 方程左边的多项式，可能有因式：$x plus.minus 1\,quad x plus.minus 2\,quad x plus.minus 3\,quad x plus.minus 4\,quad x plus.minus 6\,quad 2 x plus.minus 1\,quad 2 x plus.minus 3$ 因而，此方程的有理根可能是：$ x = plus.minus 1\,quad x = plus.minus 2\,quad x = plus.minus 3\,quad x = plus.minus 4\,quad x = plus.minus 6\,quad x = plus.minus 1 / 2\,quad x = plus.minus 3 / 2 $ 逐个去进行试除，即可找到方程的根．
 
 #align(center)[
-#fig("5-11")
+#fig("5-11");
 
 ]
 因此：$\(x + 2\)\(x + 2\)\(x - 3\)\(2 x - 1\)= 0$，原方程的有理根是：$ x_1 = x_2 = - 2\,#h(2em) x_3 = 3\,#h(2em) x_4 = 1 / 2 $
@@ -1747,7 +1747,7 @@ x_1 - x_2 = 5 $ 解方程组可得：$x_1 = 1\,quad x_2 = - 4$
 例如，求 $\(168\,756\)$
 
 #align(center)[
-#fig("5-12")
+#fig("5-12");
 
 ]
 $ therefore quad\(168\,756\)= 2 times 2 times 3 times 7 = 84 $
@@ -1850,7 +1850,7 @@ $because quad 442 > 187$，
 
 #cols(2)[
 #align(center)[
-#todo-raw("\\intlongdivision{442}{187}")
+#intlongdiv(442, 187);
 
 ]
 $therefore quad 442 = 2 times 187 + 68$，
@@ -1858,7 +1858,7 @@ $therefore quad 442 = 2 times 187 + 68$，
 其中：$\(187\,442\)=\(187\,68\)$
 
 #align(center)[
-#todo-raw("\\intlongdivision{187}{68}")
+#intlongdiv(187, 68);
 
 ]
 $therefore quad 187 = 2 times 68 + 51$，
@@ -1866,7 +1866,7 @@ $therefore quad 187 = 2 times 68 + 51$，
 其中：$\(187\,68\)=\(68\,51\)$
 
 #align(center)[
-#todo-raw("\\intlongdivision{68}{51}")
+#intlongdiv(68, 51);
 
 ]
 $therefore quad 68 = 1 times 51 + 17$，
@@ -1874,7 +1874,7 @@ $therefore quad 68 = 1 times 51 + 17$，
 其中：$\(68\,51\)=\(51\,17\)$
 
 #align(center)[
-#todo-raw("\\intlongdivision{51}{17}")
+#intlongdiv(51, 17);
 
 ]
 $therefore quad 51 = 3 times 17$，
@@ -1888,7 +1888,7 @@ $therefore quad 51 = 3 times 17$，
 在今后的实际计算中，当然不必像上面这样繁杂．只要特别注意：#strong[辗转相除到最后能够整除时，它前一个余数就是所求的最大公约数]，因此，可以将上边的过程简写成如下格式：
 
 #align(center)[
-#fig("5-13")
+#fig("5-13");
 
 ]
 $therefore quad\(187\,442\)= 17$
@@ -1899,7 +1899,7 @@ $therefore quad\(187\,442\)= 17$
 ]
 #solution[
 #align(center)[
-#fig("5-14")
+#fig("5-14");
 
 $therefore quad\(3887\,2231\)= 23$
 
@@ -1911,7 +1911,7 @@ $therefore quad\(3887\,2231\)= 23$
 ]
 #solution[
 #align(center)[
-#fig("5-15")
+#fig("5-15");
 
 $therefore quad\(1547\,3135\)= 1 quad$ 可见，1547与3135是互质的．
 
@@ -1923,7 +1923,7 @@ $therefore quad\(1547\,3135\)= 1 quad$ 可见，1547与3135是互质的．
 ]
 #solution[
 #align(center)[
-#fig("5-16")
+#fig("5-16");
 
 $because quad\(435\,783\)= 87\;quad\(87\,928\)= 29$
 
@@ -1979,13 +1979,13 @@ $therefore quad\(435\,783\,928\)= 29$
 #solution[
 先求 $f\(x\)$ 除以 $g\(x\)$ 的商及余：
 
-#todo-raw("\\polylongdiv{x^4+x^3+0+0-2}{x^3+0+0-1}")
+#polylongdiv((1, 1, 0, 0, -2), (1, 0, 0, -1));
 
 $therefore quad f\(x\)=\(x + 1\)dot.op g\(x\)+\(x - 1\)$，并且 $\(f\(x\)\,g\(x\)\)=\(g\(x\)\,\(x - 1\)\)$．
 
 再求 $g\(x\)$ 除以 $x - 1$ 的商及余．
 
-#todo-raw("\\polylongdiv{x^3-1}{x-1}")
+#polylongdiv((1, 0, 0, -1), (1, -1));
 
 $therefore quad g\(x\)=\(x^2 + x + 1\)\(x - 1\)$，并且 $\(g\(x\)\,x - 1\)= x - 1$．
 
@@ -1994,7 +1994,7 @@ $therefore quad g\(x\)=\(x^2 + x + 1\)\(x - 1\)$，并且 $\(g\(x\)\,x - 1\)= x 
 今后，在计算中，也不必像上面那样繁杂，可以采用以下分离系数的简便格式：
 
 #align(center)[
-#fig("5-17")
+#fig("5-17");
 
 ]
 $therefore quad\(f\(x\)\,g\(x\)\)= x - 1$
@@ -2008,7 +2008,7 @@ $therefore quad\(f\(x\)\,g\(x\)\)= x - 1$
 ]
 #solution[
 #align(center)[
-#fig("5-18")
+#fig("5-18");
 
 ]
 $therefore quad\(phi\(x\)\,R\(x\)\)= 4 x^2 + 4$，若不计零次因式，则可得：$ \(phi\(x\)\,R\(x\)\)= x^2 + 1 $
@@ -2017,7 +2017,7 @@ $therefore quad\(phi\(x\)\,R\(x\)\)= 4 x^2 + 4$，若不计零次因式，则可
 正由于最高公因式可以不计零次多项式的因式，所以，在辗转相除的过程中，为使运算简便，#strong[可以将除式或被除式的各项同乘（或除）以一个非零数]．如例5.55可以这样做：
 
 #align(center)[
-#fig("5-19")
+#fig("5-19");
 
 ]
 $ therefore quad\(phi\(x\)\,R\(x\)\)= x^2 + 1 $
@@ -2032,7 +2032,7 @@ $ therefore quad\(phi\(x\)\,R\(x\)\)= x^2 + 1 $
 ]
 #solution[
 #align(center)[
-#fig("5-20")
+#fig("5-20");
 
 ]
 $therefore quad\(f\(x\)\,g\(x\)\)= x + 1$
@@ -2046,7 +2046,7 @@ $therefore quad\(f\(x\)\,g\(x\)\)= x + 1$
 同样用辗转相除法：
 
 #align(center)[
-#fig("5-21")
+#fig("5-21");
 
 ]
 $therefore quad\(x^2 + x + 1\,x^3 + x^2 + 2 x + 3\)= 1$ 即：$x^2 + x + 1$ 与 $x^3 + x^2 + 2 x + 3$ 是互质的．
@@ -2064,13 +2064,13 @@ $therefore quad\(x^2 + x + 1\,x^3 + x^2 + 2 x + 3\)= 1$ 即：$x^2 + x + 1$ 与 
 ]
 #solution[
 #align(center)[
-#fig("5-22")
+#fig("5-22");
 
 ]
 $therefore quad\(f_1\(x\)\,f_2\(x\)\)= x^2 + x - 2 = d_1\(x\)$
 
 #align(center)[
-#fig("5-23")
+#fig("5-23");
 
 ]
 $therefore quad\(f_3\(x\)\,f_4\(x\)\)= x - 1 = d_2\(x\)$
@@ -2091,7 +2091,7 @@ $therefore quad\(f_1\(x\)\,thick f_2\(x\)\,thick f_3\(x\)\,thick f_4\(x\)\)= x -
 
 + 求 $\(6 x^4 - 6 x^2\,thick 3 x^2 - 3\,thick 8 x^8 - 8 x^4\,thick 7 x^7 - 7 x^3\)$
 
-+ $f\(x\)= x^4 - 2 x^3 - 4 x^2 + 4 x - 3$,$g\(x\)= 2 x^3 - 5 x^2 - 4 x + 3$,$phi\(x\)= x^2 - 9$
++ $f\(x\)= x^4 - 2 x^3 - 4 x^2 + 4 x - 3$,#h(2em);$g\(x\)= 2 x^3 - 5 x^2 - 4 x + 3$,#h(2em);$phi\(x\)= x^2 - 9$
 
 ]
 === 公倍式与最低公倍式
@@ -2107,7 +2107,7 @@ $therefore quad\(f_1\(x\)\,thick f_2\(x\)\,thick f_3\(x\)\,thick f_4\(x\)\)= x -
 ]
 #solution[
 #align(center)[
-#fig("5-24")
+#fig("5-24");
 
 ]
 $therefore quad\[180\,240\]= 5 times 3 times 3 times 4 times 4 = 720$
@@ -2125,7 +2125,7 @@ $therefore quad\[180\,240\]= 5 times 3 times 3 times 4 times 4 = 720$
 ]
 #solution[
 #align(center)[
-#fig("5-25")
+#fig("5-25");
 
 ]
 $therefore quad\(6731\,2809\)= 53$
@@ -2139,7 +2139,7 @@ $therefore quad\(6731\,2809\)= 53$
 ]
 #solution[
 #align(center)[
-#fig("5-26")
+#fig("5-26");
 
 ]
 $therefore quad\(513\,thick 135\)= 27$
@@ -2147,7 +2147,7 @@ $therefore quad\(513\,thick 135\)= 27$
 $therefore quad\[513\,thick 135\]= frac(513 times 135, 27) = 2565$
 
 #align(center)[
-#fig("5-27")
+#fig("5-27");
 
 ]
 $therefore quad\(2565\,thick 3114\)= 9$
@@ -2196,15 +2196,15 @@ g\(x\) & = 3 x^2 - 3 = 3\(x + 1\)\(x - 1\) $ $therefore quad\[f\(x\)\,thick g\(x
 + 求下列各组数的最小公倍数：
 
   #cols(2)[
-  + 96,;
+  + 96,#h(1em);84;
 
-  + 161,;
+  + 161,#h(1em);207;
 
-  + 1233,;
+  + 1233,#h(1em);19180;
 
-  + 110,,;
+  + 110,#h(1em);231,#h(1em);426;
 
-  + 236,,.
+  + 236,#h(1em);354,#h(1em);767.
 
   ]
 

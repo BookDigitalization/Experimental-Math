@@ -7,10 +7,13 @@
 | 路径 | 内容 |
 |---|---|
 | `common/template.typ` | 六册共用的模板，对应 LaTeX 版的 `common/preamble.tex`：版式、字体、章节编号、例题与练习框等 |
+| `common/fig.typ` | 画插图用的 CeTZ 辅助函数（仿 TikZ 的节点、箭头、阴影、大括号等） |
+| `common/longdiv.typ` | 竖式除法 `intlongdiv`、`polylongdiv`，对应 longdivision、polynom 宏包，由函数自己计算每一步 |
 | `math1/main.typ` | 第一册主文件：封面信息和各章列表 |
 | `math1/preface.typ`、`math1/ch1.typ`…… | 前言和各章正文 |
 | `math1/figs.typ`、`math1/figs/ch1.typ`…… | 插图。正文用 `#fig("章-序号")` 引用，图用 [CeTZ](https://typst.app/universe/package/cetz) 画在各章的 `figures` 字典中；没画好的图显示为红色占位框 |
 | `tools/tex2typ.py`、`tools/filter.lua` | 把 LaTeX 源码初步转换为 Typst 的脚本（需要 Python 3 和 pandoc） |
+| `tools/figpreview.typ` | 只排某一章插图的预览页，便于和 LaTeX 版逐幅对照 |
 
 点阵图（`fig/` 中的 PNG）直接引用 LaTeX 版目录中的文件，不复制。
 
@@ -47,7 +50,7 @@ python typst/tools/tex2typ.py 1 3        # 只转换第 3 章（前言记作 0�
 
 转换方式：先用正则把 pandoc 处理不好的结构（TikZ 图、选做题 `\staritem`、`numcases`、`\tag`、`tabular`、
 行内的 `cases` 等）换成占位符，再用 pandoc 加 `filter.lua` 转换其余部分，最后把占位符换回 Typst 代码。
-竖式除法（`\intlongdivision`、`\polylongdiv`）暂未转换，在 PDF 中以红色源码显示。
+竖式除法（`\intlongdivision`、`\polylongdiv`）转换为 `common/longdiv.typ` 中的函数调用。
 
-插图编号是该图在 LaTeX 源码本章中是第几个 `tikzpicture`。在 LaTeX 源码中插入或删除图会使后面的编号错位，
+第一册的 76 幅 TikZ 插图已全部用 CeTZ 重画。插图编号是该图在 LaTeX 源码本章中是第几个 `tikzpicture`。在 LaTeX 源码中插入或删除图会使后面的编号错位，
 转换新的章节前请留意。

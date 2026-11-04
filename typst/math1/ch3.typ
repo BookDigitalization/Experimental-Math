@@ -28,18 +28,18 @@
  & =\(upright("正方形") A E M H + upright("矩形") B F M E + upright("矩形") D H M G + upright("正方形") M F C G\)upright("的面积") $
 
 #figure([#block[
-  #fig("3-01")
+  #fig("3-01");
 
   ]
   #block[
-  #fig("3-02")
+  #fig("3-02");
 
   ]],
   caption: [
   ]
 )
 
-由图形也能说明：#numbered-eq($ \(a + b\)^2 = a^2 + 2 a b + b^2 $)
+由图形也能说明：#numbered-eq($ \(a + b\)^2 = a^2 + 2 a b + b^2 $);
 
 这就告诉我们：任意两个正数的和的平方，等于这两个数的平方和，再加上这两个数乘积的2倍．
 
@@ -50,7 +50,7 @@
 这个结果，同样可以用图3.2说明：$  & quad upright("正方形") A B C D upright("的面积") S\
  & =\(upright("大正方形") A E G M - upright("矩形") B E G H - upright("矩形") F G M D + upright("正方形") C F G H\)upright("的面积") $
 
-由图形，也正说明：#numbered-eq($ \(a - b\)^2 = a^2 - 2 a b + b^2 $)
+由图形，也正说明：#numbered-eq($ \(a - b\)^2 = a^2 - 2 a b + b^2 $);
 
 这又告诉我们：任意两个正数差的平方，等于这两个数的平方和，再减去这两个数乘积的2倍．
 
@@ -211,7 +211,7 @@ $therefore quad - 25$ 的平方根是无意义的．
 因为，边长为1的正方形面积是1,边长为2的正方形面积是4．所以，如果把正方形的边长从1逐渐加大到2的时候，正方形的面积也应该从1逐渐加大到4．在这个过程中，势必会经过面积正好是2的一个正方形．可见，面积是2的正方形是存在的．实际上，我国古代数学中，早在两三千年前就能实实在在的画出一个面积为2的正方形来了（如图3.3）．
 
 #figure([#align(center)[
-  #fig("3-03")
+  #fig("3-03");
 
   ]],
   caption: [
@@ -236,11 +236,11 @@ $therefore quad - 25$ 的平方根是无意义的．
 用类似的办法，可以说明：任一个正有理数的平方根都是存在的．而且都有两个．同学们可以从图3.4, 3.5中，练习说明 $sqrt(3)$，$sqrt(7)$ 都是存在的．从而 $- sqrt(3)$，$- sqrt(7)$ 也应存在．因此，$3\,7$ 同样各有两个平方根：$plus.minus sqrt(3)$，$plus.minus sqrt(7)$ 等等．
 
 #figure([#block[
-  #fig("3-04")
+  #fig("3-04");
 
   ]
   #block[
-  #fig("3-05")
+  #fig("3-05");
 
   ]],
   caption: [
@@ -267,7 +267,7 @@ $therefore quad - 25$ 的平方根是无意义的．
 + 利用所画的图3.6，说明 $sqrt(5 / 2)$ 是存在的．
 
 ]
-#figure([#fig("3-06")
+#figure([#fig("3-06");
 
   ],
   caption: [
@@ -384,7 +384,7 @@ $therefore quad - 25$ 的平方根是无意义的．
   [$999^2 = 998001$],
   [$dots.h.c dots.h.c$],
   [$dots.h.c dots.h.c$],
-)
+);
 
 ]
 可见，
@@ -419,7 +419,7 @@ $therefore quad - 25$ 的平方根是无意义的．
 归纳以上各步，可以将整个过程写成以下竖式的形式：
 
 #align(center)[
-#fig("3-07")
+#fig("3-07");
 
 ]
 以上计算结果直到余0为止．表明被开方数开平方后得到一个整数．
@@ -437,7 +437,7 @@ $therefore quad - 25$ 的平方根是无意义的．
 用开平方方法计算如下：
 
 #align(center)[
-#fig("3-08")
+#fig("3-08");
 
 ]
 继续计算下去，总也得不到余数是0．这说明2开平方是永远开不尽的，这是一个不完全平方数．
@@ -453,7 +453,7 @@ $therefore quad - 25$ 的平方根是无意义的．
 ]
 #solution[
 #align(center)[
-#fig("3-09")
+#fig("3-09");
 
 ]
 ]
@@ -525,22 +525,22 @@ sqrt(360000) = 600 & sqrt(90000) = 300 $
 这样的向左或向右移动小数点，就是把被开方数缩小或扩大100倍、10000倍，……；然后进行查表，得出平方根后，还需要#strong[把查得数的小数点再向相反的方向移动，移动的位数应是被开方数小数点移动位数的一半]．例如：
 
 #align(center)[
-#fig("3-10")
+#fig("3-10");
 
 ]
-$because$ 查 $sqrt(47.33) = 6.880$,$therefore thick sqrt(4733) = 68.80$
+$because$ 查 $sqrt(47.33) = 6.880$,#h(2em);$therefore thick sqrt(4733) = 68.80$
 
-$because$ 查 $sqrt(3.714) = 1.927$,$therefore thick sqrt(37140) = 192.7$
+$because$ 查 $sqrt(3.714) = 1.927$,#h(2em);$therefore thick sqrt(37140) = 192.7$
 
 同样地，
 
 #align(center)[
-#fig("3-11")
+#fig("3-11");
 
 ]
-$because$ 查 $sqrt(5.36) = 2.315$,$therefore thick sqrt(0.0536) = 0.2315$
+$because$ 查 $sqrt(5.36) = 2.315$,#h(2em);$therefore thick sqrt(0.0536) = 0.2315$
 
-$because$ 查 $sqrt(40) = 6.325$,$therefore thick sqrt(0.00004) = 0.006325$
+$because$ 查 $sqrt(40) = 6.325$,#h(2em);$therefore thick sqrt(0.00004) = 0.006325$
 
 要注意，四位数学用表，只能查四个数码的数．因此，若是遇到有5位以上的数字，如：$sqrt(3.7896)$,就要首先用四舍五入法，将它改写为 $sqrt(3.790)$,再去查表．
 
@@ -580,7 +580,7 @@ $because$ 查 $sqrt(40) = 6.325$,$therefore thick sqrt(0.00004) = 0.006325$
 归纳我们已经学习过的数，可列成下表：
 
 #align(center)[
-#fig("3-12")
+#fig("3-12");
 
 ]
 #exercise[
@@ -1067,7 +1067,7 @@ $  & quad sqrt(0.5) - 2 sqrt(1 / 3) - sqrt(1 / 8) + sqrt(48)\
 
   + $2 sqrt(3) (sqrt(12) - sqrt(6) + 2 sqrt(27))$
 
-  + $(sqrt(1 / 3) + sqrt(3)) dot.op (sqrt(27) - sqrt(1 / 27))$（使用分配律）
+  + $(sqrt(1 / 3) + sqrt(3)) dot.op (sqrt(27) - sqrt(1 / 27))$#h(1em);（使用分配律）
 
   + $\(sqrt(2) + sqrt(3)\)\(sqrt(2) - sqrt(3)\)+ 1$
 
@@ -1093,7 +1093,7 @@ $  & quad sqrt(0.5) - 2 sqrt(1 / 3) - sqrt(1 / 8) + sqrt(48)\
 
 要在操场上画出一块面积是32$upright(m)^2$ 的长方形，并且要求它的长比宽多4m．问：这个长方形的长和宽各取多少m？（如图3.7)
 
-#figure([#fig("3-13")
+#figure([#fig("3-13");
 
   ],
   caption: [
@@ -1232,7 +1232,7 @@ $  & quad sqrt(0.5) - 2 sqrt(1 / 3) - sqrt(1 / 8) + sqrt(48)\
 
 #blk[][
 #block[
-#set enum(numbering: "I.", start: 1)
+#set enum(numbering: enum-at(1, "I."), start: 1)
 + 把原方程变形为：$ x^2 = - c / a $
 
 + 根据平方根的意义，得出：
@@ -1349,7 +1349,7 @@ $therefore quad$ 原方程的解集是 ${- 3 / 5 \, thick 0}$．
 
 #blk[][
 #block[
-#set enum(numbering: "I.", start: 1)
+#set enum(numbering: enum-at(1, "I."), start: 1)
 + 利用分配律变形为 $ \(a x + b\)x = 0 $
 
 + 由零的运算特性可知 $ a x + b = 0 #h(2em) upright("或") #h(2em) x = 0 $
@@ -1441,11 +1441,11 @@ $therefore quad x_1 = 6\,#h(2em) x_2 = 0$
 这时，我们可以如图3.9所示，把 $4 times x$ 的小长方形平分为两个 $2 times x$ 的更小长方形，再把其中带阴影的一个移至正方形 $x times x$ 的下方．这样，原来长方形就变成了⿸形，但面积仍为32$upright(m)^2$．
 
 #figure([#block[
-  #fig("3-14")
+  #fig("3-14");
 
   ]
   #block[
-  #fig("3-15")
+  #fig("3-15");
 
   ]],
   caption: [
@@ -1454,7 +1454,7 @@ $therefore quad x_1 = 6\,#h(2em) x_2 = 0$
 
 如果我们把右下方补上一个边长为2的小正方形，如图3.10所示，那么，就可以得到一个边长为 $\(x + 2\)$ 的大正方形．这个正方形的面积比原来的长方形面积多了 $2^2 = 4$.
 
-#figure([#fig("3-16")
+#figure([#fig("3-16");
 
   ],
   caption: [
@@ -1546,7 +1546,7 @@ $therefore quad x_1 = 4\,quad x_2 = - 8$
 
 #blk[][
 #block[
-#set enum(numbering: "I.", start: 1)
+#set enum(numbering: enum-at(1, "I."), start: 1)
 + 用二次项系数去除方程两边，使二次项系数变成1.并将原方程化为 $x^2 + p x + q = 0$ 的形式．
 
 + 移项，把方程进一步化为 $x^2 + p x = - q$ 的形式．
@@ -2423,7 +2423,7 @@ $x$ 是儿童人数，不能为负值，所以 $x = - 6$ 不合题意，应舍�
 它的长、宽各应等于多少cm？
 
 ]
-#figure([#fig("3-17")
+#figure([#fig("3-17");
 
   ],
   caption: [
@@ -2477,7 +2477,7 @@ $x$ 是儿童人数，不能为负值，所以 $x = - 6$ 不合题意，应舍�
 
 ]
 #figure([#align(center)[
-  #fig("3-18")
+  #fig("3-18");
 
   ]],
   caption: [
@@ -2554,7 +2554,7 @@ $therefore quad x = frac(40 plus.minus sqrt(1600 - 1200), 2) = frac(40 plus.minu
 
 + 如图3.13所示，把长方形铁皮的四个角，各剪去一个边长为5cm的正方形，折起四边，就可以做成一个无盖盒子．如果这个盒子的容积是1500$upright(c m)^3$,长方形铁皮的长是宽的2倍．那么，这块长方形长、宽各多少？
 
-  #figure([#fig("3-19")
+  #figure([#fig("3-19");
 
     ],
     caption: [
@@ -2618,7 +2618,7 @@ $therefore quad x = frac(40 plus.minus sqrt(1600 - 1200), 2) = frac(40 plus.minu
 
 + 配方法：关键是先化为二次项系数为1的形式，然后将方程“两边加上一次项系数一半的平方数”，使方程一边成为完全平方形式．$ x^2 + b / a x + c / a & = 0\
   x^2 + b / a x + (frac(b, 2 a))^2 & = (frac(b, 2 a))^2 - c / a\
-  (x + frac(b, 2 a))^2 & = frac(b^2 - 4 a c, 4 a^2) $ #numbered-eq($ x = frac(- b plus.minus sqrt(b^2 - 4 a c), 2 a) $)
+  (x + frac(b, 2 a))^2 & = frac(b^2 - 4 a c, 4 a^2) $ #numbered-eq($ x = frac(- b plus.minus sqrt(b^2 - 4 a c), 2 a) $);
 
 + 公式法------把方程化为标准式，找出各项系数 $a\,b\,c$，代入(3.4)就可以求出根．
 
@@ -2833,7 +2833,7 @@ $therefore quad x = frac(40 plus.minus sqrt(1600 - 1200), 2) = frac(40 plus.minu
   提示：由于 $ {p^2 + p^2 + q = 0\
   q^2 + p q + q = 0 $ 即：
 
-  #numcases($$, $q = - 2 p^2$, $q\(q + p + 1\)= 0$)
+  #numcases($$, $q = - 2 p^2$, $q\(q + p + 1\)= 0$);
 
   将(3.5)代入(3.6)得：$p^2\(2 p^2 - p - 1\)= 0$．
 

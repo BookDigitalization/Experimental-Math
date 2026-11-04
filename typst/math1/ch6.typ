@@ -514,7 +514,7 @@ $therefore quad$ 原方程的解集是空集 $nothing$．
 方程两边分别通分得：$ frac(3 x - 3 - 4 x + 8, \(x - 1\)\(x - 2\)) & = frac(x - 3 - 2 x + 8, \(x - 3\)\(x - 4\))\
 frac(- x + 5, \(x - 1\)\(x - 2\)) & = frac(- x + 5, \(x - 3\)\(x - 4\)) $
 
-方程两边乘以 $\(x - 1\)\(x - 2\)\(x - 3\)\(x - 4\)$，得：#numbered-eq($ \(- x + 5\)\(x - 3\)\(x - 4\)=\(- x + 5\)\(x - 1\)\(x - 2\) $)即：$ \(- x + 5\)\[\(x^2 - 7 x + 12\)-\(x^2 - 3 x + 2\)\]= 0 $
+方程两边乘以 $\(x - 1\)\(x - 2\)\(x - 3\)\(x - 4\)$，得：#numbered-eq($ \(- x + 5\)\(x - 3\)\(x - 4\)=\(- x + 5\)\(x - 1\)\(x - 2\) $);即：$ \(- x + 5\)\[\(x^2 - 7 x + 12\)-\(x^2 - 3 x + 2\)\]= 0 $
 
 解整式方程 $\(- x + 5\)\(- 4 x + 10\)= 0$
 
@@ -554,7 +554,7 @@ $therefore quad$ 原方程的解集是 ${5 \, 5 / 2}$．
 
 代入原方程就是 $y + 1 / y = 2$，两边乘以 $y$，并约简得 $ y^2 + 1 = 2 y quad arrow.r.double quad y^2 - 2 y + 1 = 0 $ 解这个方程，得：$y = 1$．
 
-把 $y = 1$ 代入 $frac(\(x - 1\)^2, x) = y$，得：#numbered-eq($ frac(\(x - 1\)^2, x) = 1 $)两边乘以 $x$，并约简得：#numbered-eq($ \(x - 1\)^2 = x $)即：$x^2 - 3 x + 1 = 0$
+把 $y = 1$ 代入 $frac(\(x - 1\)^2, x) = y$，得：#numbered-eq($ frac(\(x - 1\)^2, x) = 1 $);两边乘以 $x$，并约简得：#numbered-eq($ \(x - 1\)^2 = x $);即：$x^2 - 3 x + 1 = 0$
 
 $therefore quad x_1 = 3 / 2 + sqrt(5) / 2\,#h(2em) x_2 = 3 / 2 - sqrt(5) / 2$．
 
@@ -623,7 +623,7 @@ $therefore quad$ 原方程的解集是 ${ a b }$．
   [$\(x + 40\)$ 亩],
   [$upright(P H M 7)$],
   table.hline(),
-)
+);
 
 ]
 $ upright("原计划需要的天数") = upright("实际需要天数") + 4 upright("(天)") $
@@ -651,7 +651,7 @@ $A$、$B$ 两地相距87公里，甲骑自行车从 $A$ 出发向 $B$ 驶去，�
 ]
 #analyze[
 #align(center)[
-#fig("6-01")
+#fig("6-01");
 
 ]
 #align(center)[
@@ -673,7 +673,7 @@ $A$、$B$ 两地相距87公里，甲骑自行车从 $A$ 出发向 $B$ 驶去，�
   [$\(x + 4\)$ 公里/小时],
   [$upright(P H M 9)$],
   table.hline(),
-)
+);
 
 ]
 $ upright("甲自") A upright("到") C upright("所需要时间") = upright("乙由") B upright("到") C upright("所需
@@ -927,7 +927,7 @@ $sqrt(\(x^2 + 1\)^2) = x^2 + 1$
 
   + $sqrt(1 / 16 x^6 y^8)$
 
-  + $sqrt(x^(2 n) y^(4 m))$\($n\,m$ 为自然数)
+  + $sqrt(x^(2 n) y^(4 m))$#h(1em);\($n\,m$ 为自然数)
 
 ]
 应当指出，如果没有特殊说明，根号内的字母取值，都要使二次根式有意义．
@@ -1605,7 +1605,7 @@ $therefore quad$ 原方程的解集是 ${ 2 }$．
 
 $therefore quad sqrt(x^2 - 2 x + 6) = - 9$ 无解．
 
-解方程#numbered-eq($ sqrt(x^2 - 2 x + 6) = 3 $)两边平方：#numbered-eq($ x^2 - 2 x + 6 = 9 quad arrow.r.double quad x^2 - 2 x - 3 = 0 $) $therefore quad x_1 = 3\,#h(2em) x_2 = - 1$
+解方程#numbered-eq($ sqrt(x^2 - 2 x + 6) = 3 $);两边平方：#numbered-eq($ x^2 - 2 x + 6 = 9 quad arrow.r.double quad x^2 - 2 x - 3 = 0 $); $therefore quad x_1 = 3\,#h(2em) x_2 = - 1$
 
 验根：把 $x_1 = 3\,thick x_2 = - 1$,分别代入方程检验，可知这两个根都是原方程的根．
 
@@ -1828,7 +1828,7 @@ $therefore quad$ 原方程的解集是 ${1 / 2 \, thick - 1 / 2}$
 五、已学过的方程有：整式方程、分式方程、根式方程，统称为代数方程．其系统可列表如下：
 
 #align(center)[
-#fig("6-02")
+#fig("6-02");
 
 ]
 #heading(level: 2, numbering: none)[复习题六]
