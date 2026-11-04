@@ -464,14 +464,14 @@ $dot.o O$ 与 $B A$ 和 $B C$ 都相切，$dot.o O$ 为所求作的圆．
 画一草图（图5.12），设 $dot.o\(O\,20 upright(m m)\)$ 为要求作的圆．由于 $dot.o\(O\,20 upright(m m)\)$ 与 $dot.o\(O_1\,r_1\)$ 外切，并与 $dot.o\(O_2\,r_2\)$ 内切，所以 $ overline(O O_1) & = r_1 + 20 upright(m m) = 30 upright(m m)\
 overline(O O_2) & = 20 upright(m m) - r_2 = 12 upright(m m) $
 
-因此，$⁠O$ 点是 $dot.o\(O_1\,30 upright(m m)\)$ 和 $dot.o\(O_2\,12 upright(m m)\)$ 的交点，故 $O$ 点可作出．
+因此，$O$ 点是 $dot.o\(O_1\,30 upright(m m)\)$ 和 $dot.o\(O_2\,12 upright(m m)\)$ 的交点，故 $O$ 点可作出．
 
 ]
 作法：（图5.11）．
 
-+ 作 $dot.o\(O_1\,30 upright(m m)\)$ 和 $dot.o\(O_2\,12 upright(m m)\)$, 设两圆有交点 $⁠O$\;
++ 作 $dot.o\(O_1\,30 upright(m m)\)$ 和 $dot.o\(O_2\,12 upright(m m)\)$, 设两圆有交点 $O$\;
 
-+ 以 $⁠O$ 为圆心，以20mm为半径作 $dot.o O$, 即 $⁠dot.o O$ 为所求作的圆．
++ 以 $O$ 为圆心，以20mm为半径作 $dot.o O$, 即 $dot.o O$ 为所求作的圆．
 
 #proof[
 （略）
@@ -486,21 +486,21 @@ overline(O O_2) & = 20 upright(m m) - r_2 = 12 upright(m m) $
 从例5.6中的图5.11, 我们可看出 $dot.o O_1$ 的 $overparen(A B)$ 与 $dot.o O$ 的 $overparen(B C)$ 在切点 $B$ 处连接起来了，这种连结叫做#strong[圆弧与圆弧的平滑连接]．
 
 #exercise[
-+ 已知两定点 $A$、$⁠B$, 且直线 $⁠A B$ 与定直线 $ell$ 平行，在 $ell$ 上求作与 $A$、$⁠B$ 两点距离相等的点．
++ 已知两定点 $A$、$B$, 且直线 $A B$ 与定直线 $ell$ 平行，在 $ell$ 上求作与 $A$、$B$ 两点距离相等的点．
 
 + 求作和两条相交直线 $ell$ 和 $m$ 的距离相等，且和它们的交点的距离等于定长 $d$ 的点．
 
-+ 求作和已知直线 $ell$ 的距离等于定长 $d$，并且和 $⁠ell$ 上的一个定点的距离等于 $2 d$ 的点．
++ 求作和已知直线 $ell$ 的距离等于定长 $d$，并且和 $ell$ 上的一个定点的距离等于 $2 d$ 的点．
 
 + 求作和 $overline(A B)$ 的两端的距离相等，且和 $overline(A B)$ 的两端的连线所夹的角等于定角 $alpha$ 的点．
 
-+ 求作等腰三角形，使它的底边等于定长 $a$, 顶角等于定角 $⁠alpha$.
++ 求作等腰三角形，使它的底边等于定长 $a$, 顶角等于定角 $alpha$.
 
-+ 求作一圆，使它的半径等于定长 $⁠a$, 且经过一定点并和一条定直线相切．
++ 求作一圆，使它的半径等于定长 $a$, 且经过一定点并和一条定直线相切．
 
 + 已知三角形的二边和其中一边上的高，求作三角形．
 
-+ 已知 $⁠dot.o\(O\,15 upright(m m)\)$ 和直线 $ell$, 并且 $⁠ell$ 与 $dot.o O$ 相离，画半径为10mm的圆，使其与 $dot.o O$ 外切并和 $ell$ 相切．
++ 已知 $dot.o\(O\,15 upright(m m)\)$ 和直线 $ell$, 并且 $ell$ 与 $dot.o O$ 相离，画半径为10mm的圆，使其与 $dot.o O$ 外切并和 $ell$ 相切．
 
 ]
 === 代数法作图
@@ -509,52 +509,52 @@ overline(O O_2) & = 20 upright(m m) - r_2 = 12 upright(m m) $
 #example[
 已知：正方形 $A B C D$\(图5.13).
 
-求作：一点 $⁠P$ 使 $P in overline(C D)$, 且 $⁠overline(A P) = overline(B C) + overline(C P)$.
+求作：一点 $P$ 使 $P in overline(C D)$, 且 $overline(A P) = overline(B C) + overline(C P)$.
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-13");], caption: []), figure([#fig("5-14");], caption: []))));
 
 #analyze[
-画一草图（图5.14），已知正方形 $⁠A B C D$, 假设 $⁠P$ 点是所求作的点，即 $P in overline(C D)$, 且 $⁠overline(A P) = overline(B C) + overline(C P)$, 设 $⁠overline(C P) = x$, $⁠overline(B C) = a$, 故 $⁠overline(A P) = a + x$, $⁠overline(D P) = overline(D C) - overline(C P) = overline(B C) - overline(C P) = a - x$, 又因 $⁠triangle.stroked.t A D P$ 是直角三角形，所以根据勾股定理有：$overline(A P)^2 = overline(A D)^2 + overline(D P)^2$, 即：$\(a + x\)^2 = a^2 +\(a - x\)^2$. 解此方程得 $⁠x = a / 4$；$⁠a$ 为已知，$a / 4$ 可作出，故 $P$ 点也可作出．
+画一草图（图5.14），已知正方形 $A B C D$, 假设 $P$ 点是所求作的点，即 $P in overline(C D)$, 且 $overline(A P) = overline(B C) + overline(C P)$, 设 $overline(C P) = x$, $overline(B C) = a$, 故 $overline(A P) = a + x$, $overline(D P) = overline(D C) - overline(C P) = overline(B C) - overline(C P) = a - x$, 又因 $triangle.stroked.t A D P$ 是直角三角形，所以根据勾股定理有：$overline(A P)^2 = overline(A D)^2 + overline(D P)^2$, 即：$\(a + x\)^2 = a^2 +\(a - x\)^2$. 解此方程得 $x = a / 4$；$a$ 为已知，$a / 4$ 可作出，故 $P$ 点也可作出．
 
 ]
 作法：（图5.13）．
 
 + 作 $overline(C D)$ 的中点 $E$.
 
-+ 作 $⁠overline(C E)$ 的中点 $P$, $⁠P$ 点即为所求作的点．
++ 作 $overline(C E)$ 的中点 $P$, $P$ 点即为所求作的点．
 
 #proof[
 由作图知 $overline(C P) = a / 4$,
 
-$⁠therefore quad overline(D P) = overline(C D) - overline(C P) = 3 / 4 a$ $ overline(A P) = sqrt(overline(A D)^2 + overline(D P)^2) = sqrt(a^2 + (3 / 4 a)^2) = 5 / 4 a = a + a / 4 $ #noindent;$ overline(A P) = overline(B C) + overline(C P) $
+$therefore quad overline(D P) = overline(C D) - overline(C P) = 3 / 4 a$ $ overline(A P) = sqrt(overline(A D)^2 + overline(D P)^2) = sqrt(a^2 + (3 / 4 a)^2) = 5 / 4 a = a + a / 4 $ #noindent;$ overline(A P) = overline(B C) + overline(C P) $
 
 ]
-讨论：由分析知，$⁠overline(D P) : overline(P C) = 3 : 1$, 因为分点 $⁠P$ 是唯一的，所以此题只有一解．
+讨论：由分析知，$overline(D P) : overline(P C) = 3 : 1$, 因为分点 $P$ 是唯一的，所以此题只有一解．
 
 #example[
 在已知线段上求作一点，分已知线段为两部分，使其中一部分是全线段和另一部分的比例中项．
 
 已知：$overline(A B)$\(图5.15).
 
-求作：$⁠overline(A B)$ 的内分点 $G$, 使 $⁠overline(A G)^2 = overline(A B) dot.op overline(G B)$.
+求作：$overline(A B)$ 的内分点 $G$, 使 $overline(A G)^2 = overline(A B) dot.op overline(G B)$.
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-15");], caption: []), figure([#fig("5-16");], caption: []))));
 
 #analyze[
-画一草图（图5.16），已知 $⁠overline(A B)$, 假定 $⁠G$ 为所求之点，设 $overline(A G) = x$, 则 $⁠overline(B G) = a - x$, $⁠x$ 满足方程 $ x^2 = a\(a - x\) $ #noindent;即：$x^2 + a x - a^2 = 0$. 解此方程得：$ x_1 = frac(- a + sqrt(4 a^2 + a^2), 2)\,#h(2em) x_2 = frac(- a - sqrt(4 a^2 + a^2), 2) quad upright("舍去") $ #noindent;$therefore quad x = frac(- a + sqrt(4 a^2 + a^2), 2) = sqrt(4 a^2 + a^2) / 2 - a / 2 = sqrt(a^2 + (a / 2)^2) - a / 2$
+画一草图（图5.16），已知 $overline(A B)$, 假定 $G$ 为所求之点，设 $overline(A G) = x$, 则 $overline(B G) = a - x$, $x$ 满足方程 $ x^2 = a\(a - x\) $ #noindent;即：$x^2 + a x - a^2 = 0$. 解此方程得：$ x_1 = frac(- a + sqrt(4 a^2 + a^2), 2)\,#h(2em) x_2 = frac(- a - sqrt(4 a^2 + a^2), 2) quad upright("舍去") $ #noindent;$therefore quad x = frac(- a + sqrt(4 a^2 + a^2), 2) = sqrt(4 a^2 + a^2) / 2 - a / 2 = sqrt(a^2 + (a / 2)^2) - a / 2$
 
-此线段 $⁠x$ 可作，故 $G$ 点也可作出来．
+此线段 $x$ 可作，故 $G$ 点也可作出来．
 
 ]
 作法：（图5.15）．
 
-+ 作 $overline(B D) tack.t overline(A B)$, 使 $⁠overline(B D) = 1 / 2 overline(A B)$
++ 作 $overline(B D) tack.t overline(A B)$, 使 $overline(B D) = 1 / 2 overline(A B)$
 
-+ 在 $⁠overline(D A)$ 上截取 $overline(D E) = overline(D B)$,
++ 在 $overline(D A)$ 上截取 $overline(D E) = overline(D B)$,
 
-+ 在 $⁠overline(A B)$ 上截取 $overline(A G) = overline(A E)$, $⁠G$ 点即为所求作的点．
++ 在 $overline(A B)$ 上截取 $overline(A G) = overline(A E)$, $G$ 点即为所求作的点．
 
 #proof[
 设 $overline(A B) = a$, 由作法有，$ overline(A G) & = overline(A E) = overline(A D) - overline(E D)\
@@ -567,7 +567,7 @@ overline(G B) & = overline(A B) - overline(A G) = a - (sqrt(a^2 + (a / 2)^2) - a
  & = 3 / 2 a^2 - a sqrt(a^2 + (a / 2)^2)\
  & = a (3 / 2 a - sqrt(a^2 + (a / 2)^2)) $ #noindent;$therefore quad overline(A G)^2 = overline(A B) dot.op overline(B G)$
 
-故 $⁠G$ 点为所求之点．
+故 $G$ 点为所求之点．
 
 ]
 讨论：由分析可知，满足条件的 $overline(A G)$ 总有一个，所以 $G$ 点总能作出一个，故此题有一解也只有一解．
@@ -579,7 +579,7 @@ overline(G B) & = overline(A B) - overline(A G) = a - (sqrt(a^2 + (a / 2)^2) - a
 
 已知：$dot.o\(O\,r\)$\(图5.17).
 
-求作：$⁠dot.o O$ 的内接正十边形．
+求作：$dot.o O$ 的内接正十边形．
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-17");], caption: []), figure([#fig("5-18");], caption: []))));
@@ -587,22 +587,22 @@ overline(G B) & = overline(A B) - overline(A G) = a - (sqrt(a^2 + (a / 2)^2) - a
 #analyze[
 画一草图（图5.18），设 $overline(A B)$ 是 $dot.o O$ 的内接正十边形的一边，则 $ angle A O B = 36 degree\,#h(2em) angle O A B = angle O B A = 72 degree $ #noindent;作 $angle O B A$ 的平分线交 $overline(O A)$ 于 $C'$ 点，则 $ angle O B C' = angle A B C' = 1 / 2 angle O B A = 36 degree $ #noindent;又知 $angle B C' A = 180 degree - angle A B C' - angle O A B$,
 
-$⁠therefore quad angle B C' A = 72 degree\,quad overline(O C') = overline(B C') = overline(A B)$, 且 $ triangle.stroked.t O A B tilde.rev triangle.stroked.t B A C'\,quad overline(O A) : overline(A B) = overline(A B) : overline(A C') $
+$therefore quad angle B C' A = 72 degree\,quad overline(O C') = overline(B C') = overline(A B)$, 且 $ triangle.stroked.t O A B tilde.rev triangle.stroked.t B A C'\,quad overline(O A) : overline(A B) = overline(A B) : overline(A C') $
 
-即：$⁠overline(A B)^2 = overline(O A) dot.op overline(A C')$
+即：$overline(A B)^2 = overline(O A) dot.op overline(A C')$
 
-$⁠therefore quad overline(O C')^2 = overline(O A) dot.op overline(A C')$
+$therefore quad overline(O C')^2 = overline(O A) dot.op overline(A C')$
 
 ]
-这个结果告诉我们，$⁠C'$ 点恰好把半径 $overline(O A)$ 分成中外比且 $overline(O C')$ 是较长的一段．故应用黄金分割法由已知圆的半径作出正十边形的边长，从而圆内接正十边形可以作出来．
+这个结果告诉我们，$C'$ 点恰好把半径 $overline(O A)$ 分成中外比且 $overline(O C')$ 是较长的一段．故应用黄金分割法由已知圆的半径作出正十边形的边长，从而圆内接正十边形可以作出来．
 
 作法\(图5.17).
 
 + 作半径 $overline(O A)$.
 
-+ 作 $⁠C'$ 点分 $overline(O A)$ 成中外比，使 $overline(O C')$ 为较长的一段，
++ 作 $C'$ 点分 $overline(O A)$ 成中外比，使 $overline(O C')$ 为较长的一段，
 
-+ 以 $A$ 为起点，顺次作 $dot.o O$ 的弦 $overline(A B)$、$⁠overline(B C)$、$⁠overline(C D)$、$⁠overline(D E)$、$⁠overline(E F)$、$⁠overline(F G)$、$⁠overline(G H)$、$⁠overline(H I)$、$⁠overline(I J)$、$⁠overline(J A)$, 且使它们都等于 $⁠overline(O C')$, 则 $⁠A B C D E F G H I J$ 为所求作的圆内接正十边形．
++ 以 $A$ 为起点，顺次作 $dot.o O$ 的弦 $overline(A B)$、$overline(B C)$、$overline(C D)$、$overline(D E)$、$overline(E F)$、$overline(F G)$、$overline(G H)$、$overline(H I)$、$overline(I J)$、$overline(J A)$, 且使它们都等于 $overline(O C')$, 则 $A B C D E F G H I J$ 为所求作的圆内接正十边形．
 
 #proof[
 （略）
@@ -632,16 +632,16 @@ $⁠therefore quad overline(O C')^2 = overline(O A) dot.op overline(A C')$
 - 第五步，完成作图．即得所求作的图形．
 
 #exercise[
-+ 已知线段 $⁠a$、$⁠b$ ($a > b$), 求作下列线段 $⁠x$
++ 已知线段 $a$、$b$ ($a > b$), 求作下列线段 $x$
 
   #cols(2)[
-  + $⁠x = frac(a b, a + b)$
+  + $x = frac(a b, a + b)$
 
-  + $⁠x = sqrt(4 a^2 + b^2)$
+  + $x = sqrt(4 a^2 + b^2)$
 
-  + $⁠x = sqrt(a^2 - b^2 / 4)$
+  + $x = sqrt(a^2 - b^2 / 4)$
 
-  + $⁠x = sqrt(a^2 + 3 b^2) - b / 2$
+  + $x = sqrt(a^2 + 3 b^2) - b / 2$
 
   ]
 
@@ -660,13 +660,13 @@ $⁠therefore quad overline(O C')^2 = overline(O A) dot.op overline(A C')$
 ]
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题5.2]
 
-+ 已知线段 $⁠a$、$⁠b$、$⁠c$ 且 $a > b$, 求作线段 $⁠x = sqrt(a^2 - b^2) + c$.
++ 已知线段 $a$、$b$、$c$ 且 $a > b$, 求作线段 $x = sqrt(a^2 - b^2) + c$.
 
-+ 已知五条线段 $⁠a$、$⁠b$、$⁠c$、$⁠d$、$⁠e$, 求作线段 $⁠x = frac(a b c, d e)$．
++ 已知五条线段 $a$、$b$、$c$、$d$、$e$, 求作线段 $x = frac(a b c, d e)$．
 
-+ 已知线段 $⁠a$, 求作一条线段 $⁠x = frac(sqrt(5) - 1, 2) a$
++ 已知线段 $a$, 求作一条线段 $x = frac(sqrt(5) - 1, 2) a$
 
-+ 已知线段 $⁠a$、$⁠b$, 且 $⁠a > b$, 求作 $⁠a + b$ 和 $a - b$ 的比例中项．
++ 已知线段 $a$、$b$, 且 $a > b$, 求作 $a + b$ 和 $a - b$ 的比例中项．
 
 + 求作与一个已知圆相切于已知点，且经过已知圆外的一个定点的圆．
 
@@ -676,7 +676,7 @@ $⁠therefore quad overline(O C')^2 = overline(O A) dot.op overline(A C')$
 
 + 求作一个三角形，使它同已知三角形等积，又同另一个已知的三角形相似．
 
-+ 求作直径是 $⁠d$ 的圆内接矩形，使它的面积等于每边是 $a$ 的已知正方形面积（提示：设矩形的长、宽各为 $x$、$⁠y$, 列出含有 $⁠x$、$⁠y$ 的方程组解之）．
++ 求作直径是 $d$ 的圆内接矩形，使它的面积等于每边是 $a$ 的已知正方形面积（提示：设矩形的长、宽各为 $x$、$y$, 列出含有 $x$、$y$ 的方程组解之）．
 
 + 从已知圆外的一个已知点，作圆的割线，使它在圆外的部分与圆内的部分的比是 $1 : 2$.
 
@@ -687,33 +687,33 @@ $⁠therefore quad overline(O C')^2 = overline(O A) dot.op overline(A C')$
 
 + 求具有公共底边，且这边上的高相等的三角形顶点的轨迹．
 
-+ 三定点 $⁠A$、$⁠B$、$⁠C$ 在一直线上，且 $overline(A B) = overline(B C)$, 求与 $⁠A$、$⁠B$ 两点和与 $B$、$⁠C$ 两点连线夹角相等点的轨迹．
++ 三定点 $A$、$B$、$C$ 在一直线上，且 $overline(A B) = overline(B C)$, 求与 $A$、$B$ 两点和与 $B$、$C$ 两点连线夹角相等点的轨迹．
 
 + 从一定点 $A$ 向通过另一定点 $B$ 的动直线引垂线，求垂足 $P$ 的轨迹．
 
-+ 求到两定点 $A$、$⁠B$ 的距离的平方和等于 $overline(A B)^2$ 的点的轨迹．
++ 求到两定点 $A$、$B$ 的距离的平方和等于 $overline(A B)^2$ 的点的轨迹．
 
 + 求到一定圆引切线，切线长等于定长的点的轨迹．
 
 + 求对相交的两定圆有等幂的点的轨迹．
 
-+ 求到两定点 $A$、$⁠B$ 的距离的平方差等于 $overline(A B)^2$ 的点的轨迹．
++ 求到两定点 $A$、$B$ 的距离的平方差等于 $overline(A B)^2$ 的点的轨迹．
 
-+ 已知三点 $A$、$⁠B$、$⁠C$ 在一条直线上，求与 $A$、$⁠B$ 两点和 $B$、$⁠C$ 两点连线夹角相等的点的轨迹．
++ 已知三点 $A$、$B$、$C$ 在一条直线上，求与 $A$、$B$ 两点和 $B$、$C$ 两点连线夹角相等的点的轨迹．
 
 + 求作一个圆使和两条已知平行线都相切，并且经过两平行线间一个已知点．
 
-+ 已知 $dot.o\(O_1\,1.5 upright(c m)\)$, $⁠dot.o\(O_2\,1 upright(c m)\)$, 圆心间的距离 $⁠overline(O_1 O_2) = 4 upright(c m)$, 求作一圆，使它的半径等于1.3cm, 并且和 $⁠dot.o O_1$ 与 $dot.o O_2$ 都外切．
++ 已知 $dot.o\(O_1\,1.5 upright(c m)\)$, $dot.o\(O_2\,1 upright(c m)\)$, 圆心间的距离 $overline(O_1 O_2) = 4 upright(c m)$, 求作一圆，使它的半径等于1.3cm, 并且和 $dot.o O_1$ 与 $dot.o O_2$ 都外切．
 
-+ 已知 $dot.o\(O_1\,1.4 upright(c m)\)$, $⁠dot.o\(O_2\,1 upright(c m)\)$, $⁠overline(O_1 O_2) = 3 upright(c m)$, 求作一个圆，使它的半径为3.2cm, 并且和 $⁠dot.o O_1$ 与 $dot.o O_2$ 都相内切．
++ 已知 $dot.o\(O_1\,1.4 upright(c m)\)$, $dot.o\(O_2\,1 upright(c m)\)$, $overline(O_1 O_2) = 3 upright(c m)$, 求作一个圆，使它的半径为3.2cm, 并且和 $dot.o O_1$ 与 $dot.o O_2$ 都相内切．
 
-+ 已知线段 $a$, 求作线段 $⁠x = sqrt(3) a$, $⁠y = sqrt(12) a$.
++ 已知线段 $a$, 求作线段 $x = sqrt(3) a$, $y = sqrt(12) a$.
 
-+ 已知线段 $⁠x$ 与 $y$ 满足方程组：$ display(cases(frac(x + y, 2) = a, sqrt(x y) = b)) #h(2em)\(a > b\) $ #noindent;求作线段 $x$ 和 $y$.
++ 已知线段 $x$ 与 $y$ 满足方程组：$ display(cases(frac(x + y, 2) = a, sqrt(x y) = b)) #h(2em)\(a > b\) $ #noindent;求作线段 $x$ 和 $y$.
 
 + 作一个三角形具有已知的周长，并和一个已知三角形相似．
 
-+ 求作 $⁠triangle.stroked.t A B C$ 的内接正方形，使正方形的一边位于 $overline(A B)$ 边上，另外两个顶点各在 $overline(A C)$ 边和 $overline(B C)$ 边上．
++ 求作 $triangle.stroked.t A B C$ 的内接正方形，使正方形的一边位于 $overline(A B)$ 边上，另外两个顶点各在 $overline(A C)$ 边和 $overline(B C)$ 边上．
 
 + 在已知正方形 $A B C D$ 内作内接正方形，使内接正方形的四个顶点分别在正方形的各边上，且使它的边长等于定长 $b$.
 
@@ -723,6 +723,6 @@ $⁠therefore quad overline(O C')^2 = overline(O A) dot.op overline(A C')$
 
 + 作一个正五角星（只画出图形）．
 
-+ 已知 $⁠A$、$⁠B$、$⁠C$ 为定直线 $ell$ 上的三个定点，求作 $dot.o A$、$⁠dot.o B$、$⁠dot.o C$ 使它们两两均相切，但不切于同一点．
++ 已知 $A$、$B$、$C$ 为定直线 $ell$ 上的三个定点，求作 $dot.o A$、$dot.o B$、$dot.o C$ 使它们两两均相切，但不切于同一点．
 
 + 在已知矩形内作两个互相外切的等圆，使各切于这矩形一组对角的两边．

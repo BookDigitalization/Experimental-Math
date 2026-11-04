@@ -2028,8 +2028,9 @@ class LabelBatch:
     def resolve(self, text: str) -> str:
         if not self.items:
             return text
-        from tex2typ import convert_fragments
-        conv = [unshadow(c) for c in convert_fragments(self.items)]
+        from tex2typ import convert_fragments, fix_math, fix_inline_math
+        # 同正文的后处理：^\circ → degree、花括号不自动放大等
+        conv = [unshadow(fix_inline_math(fix_math(c))) for c in convert_fragments(self.items)]
         return re.sub(r"@@L(\d+)@@", lambda m: conv[int(m.group(1))], text)
 
 

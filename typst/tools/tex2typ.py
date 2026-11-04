@@ -287,6 +287,7 @@ class Converter:
         # p{宽度} 是内容宽度，LaTeX 另在两侧各加 \tabcolsep（6pt）；Typst 的列宽含内边距
         widths = ", ".join(w if w == "auto" else w + " + 12pt" for _, w in cols)
         aligns = ", ".join(a for a, _ in cols)
+        aligns = ", ".join(a + " + horizon" for a in aligns.split(", "))
         return "#table(\n  columns: (%s,),\n  align: (%s,),\n  %s\n)" % (widths, aligns, "\n  ".join(items))
 
     def replace_figure_pairs(self, tex: str) -> str:
@@ -411,6 +412,14 @@ class Converter:
             raise RuntimeError("占位符没有替换干净：%s" % left[:5])
         typ = fix_math(typ)
         typ = fix_inline_math(typ)
+        # \textbf 中的公式 LaTeX 不加粗；Typst 的 strong 给字重加一个增量，公式里也抵消不掉。
+        # 所以把 #strong[…] 中的行内公式拆到 strong 外面
+        def split_strong(m: re.Match) -> str:
+            parts = re.split(r"(\$[^$]*\$)", m.group(1))
+            return "".join(p if p.startswith("$") else ("#strong[%s]" % p if p.strip() else p) for p in parts if p)
+        typ = re.sub(r"#strong\[([^\[\]]*\$[^\[\]]*)\]", split_strong, typ)
+        # 填空的横线：#underline 不给纯空白画线
+        typ = re.sub(r"#underline\[#h\(([\d.]+em)\);?\]", r"#box(width: \1, stroke: (bottom: 0.4pt), outset: (bottom: 2pt))", typ)
         # pandoc 把 \square 转成很小的 □，\bigcirc 转成普通大小的 ○
         typ = typ.replace("square.stroked.tiny", "square.stroked")
         typ = re.sub(r"(?<![\w.])circle\.stroked(?![\w.])", "circle.stroked.big", typ)
@@ -433,7 +442,7 @@ def fix_inline_math(typ: str) -> str:
     - 花括号转义：Typst 会把成对的 { } 按内容自动放大，LaTeX 的 \\{ \\} 大小不变
     - 行内公式后紧接字母（如 $12$cm）时加 word joiner，免得在公式和单位之间断行（LaTeX 不会在这里断）"""
     out, pos = [], 0
-    for m in re.finditer(r"(?<!\\)\$(?:[^$\\]|\\.)*?(?<!\\)\$", typ):
+    for m in re.finditer(r"(?<!\\)\$(?:[^$\\]|\\.)*?(?<!\\)\$", typ, flags=re.S):
         out.append(typ[pos : m.start()])
         seg = re.sub(r"(?<![\\#])([{}])", r"\\\1", m.group(0))
         out.append(seg)
@@ -765,8 +774,8 @@ def aligned_rows(body: str, numbered: bool) -> str:
         r = re.sub(r"\\(nonumber|notag)\b", "", r)
         left, _, right = r.partition("&")
         rows.append("($%s$, $%s$, %s)" % (tex_math_to_typst(left) if left.strip() else "",
-                                         # 右半以 = 开头时前面补 zws，否则 Typst 会去掉 = 左侧的间距
-                                         ("zws " if left.strip() else "") + tex_math_to_typst(right) if right.strip() else "",
+                                         # 右半以 = 开头时前面补一个普通符号类的空占位 eqph（见 template.typ），否则 Typst 会去掉 = 左侧的间距
+                                         ("eqph " if left.strip() else "") + tex_math_to_typst(right) if right.strip() else "",
                                          mark))
     return "#numbered-align(%s)" % ", ".join(rows)
 

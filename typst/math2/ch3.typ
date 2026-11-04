@@ -1365,9 +1365,9 @@ $therefore quad overline(P E) = overline(P F)$（全等三角形的对应边相�
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-77");], caption: []), figure([#fig("3-78");], caption: []))));
 
 #example[
-在图3.43中，已知：$⁠A B C D E$ 是正五边形，对角线 $overline(A D)$、$⁠overline(C E)$ 相交于 $F$.
+在图3.43中，已知：$A B C D E$ 是正五边形，对角线 $overline(A D)$、$overline(C E)$ 相交于 $F$.
 
-求证：$⁠triangle.stroked.t A E F$、$⁠triangle.stroked.t D E F$、$⁠triangle.stroked.t C D F$ 都是等腰三角形．
+求证：$triangle.stroked.t A E F$、$triangle.stroked.t D E F$、$triangle.stroked.t C D F$ 都是等腰三角形．
 
 ]
 #proof[
@@ -1375,19 +1375,19 @@ $therefore quad overline(P E) = overline(P F)$（全等三角形的对应边相�
 
 $therefore quad angle A E D = 540 degree times 1 / 5 = 108 degree$
 
-$⁠because quad triangle.stroked.t E A D$ 是等腰三角形，
+$because quad triangle.stroked.t E A D$ 是等腰三角形，
 
 $therefore quad angle E A D = angle E D A =\(180 degree - 108 degree\)times 1 / 2 = 36 degree$
 
-$⁠because quad triangle.stroked.t D C E$ 也是等腰三角形，$angle D = 108 degree$,
+$because quad triangle.stroked.t D C E$ 也是等腰三角形，$angle D = 108 degree$,
 
-$⁠therefore quad angle D E F = 36 degree$.
+$therefore quad angle D E F = 36 degree$.
 
-$⁠therefore quad angle A E F = 108 degree - 36 degree = 72 degree$
+$therefore quad angle A E F = 108 degree - 36 degree = 72 degree$
 
-$⁠angle A F E = 180 degree - 36 degree - 72 degree = 72 degree$, $⁠overline(A E) = overline(A F)$.
+$angle A F E = 180 degree - 36 degree - 72 degree = 72 degree$, $overline(A E) = overline(A F)$.
 
-$⁠therefore quad triangle.stroked.t A E F$ 是等腰三角形．
+$therefore quad triangle.stroked.t A E F$ 是等腰三角形．
 
 同理可证 $triangle.stroked.t C D F$ 也是等腰三角形，腰长等于正五边形的边长；$triangle.stroked.t D E F$ 也是等腰三角形．
 
@@ -1397,7 +1397,7 @@ $⁠therefore quad triangle.stroked.t A E F$ 是等腰三角形．
 #example[
 已知：正六边形 $A B C D E F$ (图3.44)．
 
-求证：对角线 $overline(A D)$、$⁠overline(B E)$ $overline(C F)$ 相交于一点，且把正六边形 $A B C D E F$ 分割成六个正三角形．
+求证：对角线 $overline(A D)$、$overline(B E)$ $overline(C F)$ 相交于一点，且把正六边形 $A B C D E F$ 分割成六个正三角形．
 
 ]
 #figure([#fig("3-79");
@@ -1410,19 +1410,19 @@ $⁠therefore quad triangle.stroked.t A E F$ 是等腰三角形．
 #proof[
 已知 $A B C D E F$ 是正六边形，所以它的每一个内角 $ \(6 - 2\)times 180 degree times 1 / 6 = 120 degree $
 
-以 $⁠overline(A B)$ 为边作正三角形 $A B O$, 顶点 $⁠O$ 在正六边形 $A B C D E F$ 内，连结 $overline(O C)$、$⁠overline(O D)$、$⁠overline(O E)$、$⁠overline(O F)$.
+以 $overline(A B)$ 为边作正三角形 $A B O$, 顶点 $O$ 在正六边形 $A B C D E F$ 内，连结 $overline(O C)$、$overline(O D)$、$overline(O E)$、$overline(O F)$.
 
-$⁠because quad angle B = 120 degree\,quad angle A B O = 60 degree$,
+$because quad angle B = 120 degree\,quad angle A B O = 60 degree$,
 
-$⁠therefore quad angle O B C = 60 degree$.
+$therefore quad angle O B C = 60 degree$.
 
-又 $⁠because quad overline(O B) = overline(B C)$,
+又 $because quad overline(O B) = overline(B C)$,
 
-$⁠therefore quad angle B C O = angle B O C = 60 degree$.
+$therefore quad angle B C O = angle B O C = 60 degree$.
 
-$⁠therefore quad triangle.stroked.t O B C$ 也是正三角形．
+$therefore quad triangle.stroked.t O B C$ 也是正三角形．
 
-同理可证：$triangle.stroked.t O C D$、$⁠triangle.stroked.t O D E$、$⁠triangle.stroked.t O E F$、$⁠triangle.stroked.t O F A$ 都是正三角形．由于 $angle A O B + angle B O C + angle C O D = 180 degree$, 所以 $⁠A$、$⁠O$、$⁠D$ 在同一条直线上，同理，$B$、$⁠O$、$⁠E$，$⁠C$、$⁠O$、$⁠F$ 也都分别在同一条直线上，所以对角线 $overline(A D)$、$⁠overline(B E)$、$⁠overline(C F)$ 相交于一点 $O$, 且把正六边形分隔成六个全等的正三角形．
+同理可证：$triangle.stroked.t O C D$、$triangle.stroked.t O D E$、$triangle.stroked.t O E F$、$triangle.stroked.t O F A$ 都是正三角形．由于 $angle A O B + angle B O C + angle C O D = 180 degree$, 所以 $A$、$O$、$D$ 在同一条直线上，同理，$B$、$O$、$E$，$C$、$O$、$F$ 也都分别在同一条直线上，所以对角线 $overline(A D)$、$overline(B E)$、$overline(C F)$ 相交于一点 $O$, 且把正六边形分隔成六个全等的正三角形．
 
 ]
 根据例3.21得出的正六边形的性质，请同学们想想，若已知正六边形的边长，如何用圆规和直尺画一个正六边形．
@@ -1441,23 +1441,23 @@ $⁠therefore quad triangle.stroked.t O B C$ 也是正三角形．
 #solution[
 为了便于说明，我们将测倾仪指针所指倾角和斜面的斜角位置关系用图3.45(2) 来表示，问题便转化为：
 
-已知：$⁠A C tack.t B C$, $⁠A D tack.t B D$. 求证：$⁠angle A = angle B$.
+已知：$A C tack.t B C$, $A D tack.t B D$. 求证：$angle A = angle B$.
 
 ]
 #proof[
-设 $⁠B C$、$⁠A D$ 相交于 $E$ 点．
+设 $B C$、$A D$ 相交于 $E$ 点．
 
 $because quad A C tack.t B C$（已知），
 
-$⁠therefore quad angle E C A = 90 degree$（垂直定义）．
+$therefore quad angle E C A = 90 degree$（垂直定义）．
 
-$⁠therefore quad$ 在 $triangle.stroked.t A C E$ 中，$angle A + angle A E C = 90 degree$（直角三角形两锐角互余）．
+$therefore quad$ 在 $triangle.stroked.t A C E$ 中，$angle A + angle A E C = 90 degree$（直角三角形两锐角互余）．
 
-同理：$⁠angle B + angle B E D = 90 degree$
+同理：$angle B + angle B E D = 90 degree$
 
-又 $⁠because quad angle A E C = angle B E D$（对顶角相等），
+又 $because quad angle A E C = angle B E D$（对顶角相等），
 
-$⁠therefore quad angle A = angle B$（等角的余角相等）．
+$therefore quad angle A = angle B$（等角的余角相等）．
 
 ]
 这个例题可以写成下面的定理：
@@ -1469,55 +1469,55 @@ $⁠therefore quad angle A = angle B$（等角的余角相等）．
 根据这个定理很容易证明下面的例题．
 
 #example[
-已知：在图3.46中，$⁠angle B A C = 90 degree$, $⁠A D tack.t B C$ 于 $D$ 点．
+已知：在图3.46中，$angle B A C = 90 degree$, $A D tack.t B C$ 于 $D$ 点．
 
-求证：$angle B = angle C A D$, $⁠angle C = angle B A D$.
+求证：$angle B = angle C A D$, $angle C = angle B A D$.
 
 ]
 #proof[
-$⁠because quad$ 在 $triangle.stroked.t A B C$ 中，$angle B A C = 90 degree$（已知），
+$because quad$ 在 $triangle.stroked.t A B C$ 中，$angle B A C = 90 degree$（已知），
 
-$⁠therefore quad angle B$、$⁠angle C$ 都是锐角（直角三角形中，非直角的两个角都是锐角）．
+$therefore quad angle B$、$angle C$ 都是锐角（直角三角形中，非直角的两个角都是锐角）．
 
 又 $because quad A D$ 在 $angle B A C$ 的内部，
 
 $therefore quad angle C A D$ 也是锐角（全量大于它的任何一部分）．
 
-由于，$A B tack.t A C$, $⁠A D tack.t B C$,
+由于，$A B tack.t A C$, $A D tack.t B C$,
 
-$⁠therefore quad angle B = angle C A D$.
+$therefore quad angle B = angle C A D$.
 
-同理：$⁠angle C = angle B A D$\.（两边分别互相垂直的两个锐角相等）
+同理：$angle C = angle B A D$\.（两边分别互相垂直的两个锐角相等）
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-80");], caption: []), figure([#fig("3-81");], caption: []))));
 
 #example[
-已知：$⁠triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$ 中，$angle A C B = angle A' C' B' = 90 degree$, $⁠overline(A B) = overline(A' B')$, $⁠overline(A C) = overline(A' C')$ (图3.47).
+已知：$triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$ 中，$angle A C B = angle A' C' B' = 90 degree$, $overline(A B) = overline(A' B')$, $overline(A C) = overline(A' C')$ (图3.47).
 
 求证：$triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'$
 
 ]
 #proof[
-根据移形公理，移动 $⁠triangle.stroked.t A' B' C'$, 因 $⁠overline(A C) = overline(A' C')$, 所以可使 $⁠overline(A' C')$ 与 $overline(A C)$ 重合，并使 $B$、$⁠B'$ 落于 $overline(A C)$ 的两侧．
+根据移形公理，移动 $triangle.stroked.t A' B' C'$, 因 $overline(A C) = overline(A' C')$, 所以可使 $overline(A' C')$ 与 $overline(A C)$ 重合，并使 $B$、$B'$ 落于 $overline(A C)$ 的两侧．
 
 由于 $angle A C B = angle A C B' = 90 degree$.
 
-$⁠therefore quad angle B C B' = 180 degree$.
+$therefore quad angle B C B' = 180 degree$.
 
-$⁠therefore quad B$、$⁠C$、$⁠B'$ 在一条直线上．
+$therefore quad B$、$C$、$B'$ 在一条直线上．
 
 在 $triangle.stroked.t A B B'$ 中，
 
 $because quad overline(A B) = overline(A' B') = overline(A B')$,
 
-$⁠therefore quad angle B = angle B'$（等腰三角形的两底角相等）．
+$therefore quad angle B = angle B'$（等腰三角形的两底角相等）．
 
-在 $⁠triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$ 中，
+在 $triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$ 中，
 
-$because quad angle A C B = angle A' C' B'$, $⁠angle B = angle B'$, $⁠overline(A B) = overline(A' B')$.
+$because quad angle A C B = angle A' C' B'$, $angle B = angle B'$, $overline(A B) = overline(A' B')$.
 
-$⁠therefore quad triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'$ (AAS)
+$therefore quad triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'$ (AAS)
 
 ]
 由上例可得如下定理：
@@ -1527,19 +1527,19 @@ $⁠therefore quad triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B'
 
 ]
 #exercise[
-+ 求下列各图中的 $angle x$、$⁠angle y$ 的度数．
++ 求下列各图中的 $angle x$、$angle y$ 的度数．
 
 + 如果等腰 $triangle.stroked.t A B C$ 的顶角是 $angle C$,
 
-  + 当 $⁠angle C = 40 degree$ 时，求 $angle A$\;
+  + 当 $angle C = 40 degree$ 时，求 $angle A$\;
 
-  + 当 $⁠angle C = m degree$ 时，求 $angle B$\;
+  + 当 $angle C = m degree$ 时，求 $angle B$\;
 
-  + 当 $⁠angle A = 40 degree$ 时，求 $angle C$\;
+  + 当 $angle A = 40 degree$ 时，求 $angle C$\;
 
-  + 当 $⁠angle B = n degree$ 时，求 $angle C$.
+  + 当 $angle B = n degree$ 时，求 $angle C$.
 
-+ 已知 $⁠triangle.stroked.t A B C$ 中，$overline(A B) = overline(A C)$, $⁠A D$ 是 $angle B A C$ 的外角平分线，求证 $A D pll B C$.
++ 已知 $triangle.stroked.t A B C$ 中，$overline(A B) = overline(A C)$, $A D$ 是 $angle B A C$ 的外角平分线，求证 $A D pll B C$.
 
 + 求证：三角形的两个外角的和减去第三个内角等于二个直角．
 
@@ -1547,13 +1547,13 @@ $⁠therefore quad triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B'
 
 + 如果等腰三角形的顶角是 $60 degree$, 则此三角形为正三角形．
 
-+ 在 $⁠triangle.stroked.t A B C$ 中，$angle A = 25 degree$, $⁠angle B = 68 degree$, 经过这个三角形的顶点，作对边的平行线，求这些直线组成的三角形的三内角的度数．
++ 在 $triangle.stroked.t A B C$ 中，$angle A = 25 degree$, $angle B = 68 degree$, 经过这个三角形的顶点，作对边的平行线，求这些直线组成的三角形的三内角的度数．
 
 + 三角形的两个角分别等于 $62 degree$ 和 $72 degree$, 从这两个角的顶点作对边的高线，求这两条高线的夹角．
 
 + 如果一个三角形的任意两个角的和大于 $90 degree$, 这个三角形是怎样的三角形？
 
-+ 已知六边形 $⁠A B C D E F$ 中，$angle A = a degree$, $⁠angle B = b degree$, $⁠A F pll C D$, $⁠A B pll D E$, 试求图中 $⁠x$、$⁠y$ 的度数．
++ 已知六边形 $A B C D E F$ 中，$angle A = a degree$, $angle B = b degree$, $A F pll C D$, $A B pll D E$, 试求图中 $x$、$y$ 的度数．
 
 + 求七边形与十边形的内角和．
 
@@ -1596,13 +1596,13 @@ $⁠therefore quad triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B'
 
 + 试证明：三角形最小边总对着锐角．
 
-+ 在 $⁠triangle.stroked.t A B C$ 中，$overline(A B)$ 是最大的边，这个三角形的哪些角可能是锐角，可能是 $angle C$ 吗？
++ 在 $triangle.stroked.t A B C$ 中，$overline(A B)$ 是最大的边，这个三角形的哪些角可能是锐角，可能是 $angle C$ 吗？
 
 + 在等腰三角形中，如果它的腰长小于底边的长，它的顶角的大小应当在什么范围内？
 
 + 证明：在三角形中最小的锐角不大于 $60 degree$.
 
-+ 如图，已知：$⁠angle B = 90 degree$, $⁠D$ 点在 $overline(B C)$ 延长线上
++ 如图，已知：$angle B = 90 degree$, $D$ 点在 $overline(B C)$ 延长线上
 
   求证：$overline(A D) > overline(A C)$.
 
@@ -1619,19 +1619,19 @@ $⁠therefore quad triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B'
 
 + 证明：从直线外一点和直线上各点所连线段中，和直线垂直的线段最短．
 
-+ 设 $⁠triangle.stroked.t A B C$ 中的两角 $angle B$ 和 $angle C$ 的平分线相交于 $O$, 过 $⁠O$ 作 $overline(B C)$ 的平行线，与 $overline(A B)$、$⁠overline(A C)$ 分别交于 $D$、$⁠E$, 则 $⁠overline(D E) = overline(B D) + overline(C E)$.
++ 设 $triangle.stroked.t A B C$ 中的两角 $angle B$ 和 $angle C$ 的平分线相交于 $O$, 过 $O$ 作 $overline(B C)$ 的平行线，与 $overline(A B)$、$overline(A C)$ 分别交于 $D$、$E$, 则 $overline(D E) = overline(B D) + overline(C E)$.
 
-+ 在直角三角形 $⁠A B C$ 的斜边 $overline(A C)$ 上取两点 $D$、$⁠E$, 使 $⁠overline(A D) = overline(A B)$, $⁠overline(C E) = overline(C B)$, 求 $⁠angle D B E$ 的度数．
++ 在直角三角形 $A B C$ 的斜边 $overline(A C)$ 上取两点 $D$、$E$, 使 $overline(A D) = overline(A B)$, $overline(C E) = overline(C B)$, 求 $angle D B E$ 的度数．
 
 + 证明：在任一多边形中，锐角不能超过四个．
 
-+ 已知：$triangle.stroked.t A B C$ 中，$A E$ 是 $angle A$ 外角的平分线，且 $A E pll B C$. 求证：$⁠overline(A B) = overline(A C)$.
++ 已知：$triangle.stroked.t A B C$ 中，$A E$ 是 $angle A$ 外角的平分线，且 $A E pll B C$. 求证：$overline(A B) = overline(A C)$.
 
-+ 已知：$⁠triangle.stroked.t A B C$ 中，$overline(A B) = overline(A C)$, $⁠angle A = 36 degree$, $⁠overline(B D)$ 是 $angle B$ 的平分线，求证：$overline(A D) = overline(B D) = overline(B C)$, $⁠angle B D C = 2 angle A$
++ 已知：$triangle.stroked.t A B C$ 中，$overline(A B) = overline(A C)$, $angle A = 36 degree$, $overline(B D)$ 是 $angle B$ 的平分线，求证：$overline(A D) = overline(B D) = overline(B C)$, $angle B D C = 2 angle A$
 
-+ 过等腰三角形底边 $⁠overline(B C)$ 上或 $overline(B C)$ 的延长线上任一点 $D$（$⁠overline(B C)$ 的中点除外），作底边 $overline(B C)$ 的垂线，分别交两腰 $overline(A B)$、$⁠overline(A C)$（或延长线）于 $⁠E$、$⁠F$.
++ 过等腰三角形底边 $overline(B C)$ 上或 $overline(B C)$ 的延长线上任一点 $D$（$overline(B C)$ 的中点除外），作底边 $overline(B C)$ 的垂线，分别交两腰 $overline(A B)$、$overline(A C)$（或延长线）于 $E$、$F$.
 
-  求证：$⁠triangle.stroked.t A E F$ 为等腰三角形．
+  求证：$triangle.stroked.t A E F$ 为等腰三角形．
 
   #fig-center[
   #fig("3-85");
@@ -1642,7 +1642,7 @@ $⁠therefore quad triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B'
   ]
   ]
 
-+ 已知：$triangle.stroked.t A B C$ 中，$D in overline(A B)$, $⁠overline(D E) pll overline(A C)$ 交 $overline(B C)$ 于 $E$, 并且 $⁠overline(D E)$ 平分 $angle B D C$, 求证：$⁠overline(D A) = overline(D C)$.
++ 已知：$triangle.stroked.t A B C$ 中，$D in overline(A B)$, $overline(D E) pll overline(A C)$ 交 $overline(B C)$ 于 $E$, 并且 $overline(D E)$ 平分 $angle B D C$, 求证：$overline(D A) = overline(D C)$.
 
 + 求图中五角星形的五个角之和．
 
@@ -1658,21 +1658,21 @@ $⁠therefore quad triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B'
   
   ]])));
 
-+ 已知 $⁠triangle.stroked.t A B C$ 中，$angle B$ 和 $angle C$ 的平分线交于 $P$, 引 $⁠P H pll A B$, $⁠P G pll A C$, 设 $⁠P H$ 和 $P G$ 交 $overline(B C)$ 于 $H$、$⁠G$, 则 $⁠triangle.stroked.t P H G$ 的周长等于 $overline(B C)$.
++ 已知 $triangle.stroked.t A B C$ 中，$angle B$ 和 $angle C$ 的平分线交于 $P$, 引 $P H pll A B$, $P G pll A C$, 设 $P H$ 和 $P G$ 交 $overline(B C)$ 于 $H$、$G$, 则 $triangle.stroked.t P H G$ 的周长等于 $overline(B C)$.
 
 + 试证：全等三角形的对应边上的高线相等．
 
-+ 以 $⁠triangle.stroked.t A B C$ 的 $overline(A B)$、$⁠overline(A C)$ 为一边在形外分别作正三角形 $A B D$ 和正三角形 $A C E$, 设 $⁠overline(D C)$ 与 $overline(B E)$ 交于 $O$.
++ 以 $triangle.stroked.t A B C$ 的 $overline(A B)$、$overline(A C)$ 为一边在形外分别作正三角形 $A B D$ 和正三角形 $A C E$, 设 $overline(D C)$ 与 $overline(B E)$ 交于 $O$.
 
-  求证：$⁠overline(D C) = overline(B E)$, $⁠angle B O C = 120 degree$.
+  求证：$overline(D C) = overline(B E)$, $angle B O C = 120 degree$.
 
-+ 在线段 $⁠overline(A B)$ 上，取一点 $C$, 在 $⁠overline(A B)$ 的同旁作正 $triangle.stroked.t D A C$ 和正 $triangle.stroked.t E C B$, $⁠overline(D B)$、$⁠overline(E A)$ 分别交 $overline(E C)$、$⁠overline(D C)$ 于 $G$、$⁠F$. 试证：
++ 在线段 $overline(A B)$ 上，取一点 $C$, 在 $overline(A B)$ 的同旁作正 $triangle.stroked.t D A C$ 和正 $triangle.stroked.t E C B$, $overline(D B)$、$overline(E A)$ 分别交 $overline(E C)$、$overline(D C)$ 于 $G$、$F$. 试证：
 
-  + $⁠angle B D C = angle E A C$
+  + $angle B D C = angle E A C$
 
-  + $⁠overline(G C) = overline(F C)$
+  + $overline(G C) = overline(F C)$
 
-  + $⁠triangle.stroked.t C F G$ 为正三角形
+  + $triangle.stroked.t C F G$ 为正三角形
 
   + $F G pll A B$
 
@@ -1686,12 +1686,12 @@ $⁠therefore quad triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B'
 == 特殊四边形
 === 平行四边形
 #blk[定义][
-两组对边分别平行的四边形叫做平行四边形．平行四边形用符号“$⁠pgram$”表示，图3.48中的平行四边形记作“$⁠pgram A B C D$”．
+两组对边分别平行的四边形叫做平行四边形．平行四边形用符号“$pgram$”表示，图3.48中的平行四边形记作“$pgram A B C D$”．
 
 ]
 我们分析多边形的性质时，基本方法是把它分解为一些三角形，然后利用三角形的性质来研究多边形的性质．
 
-$⁠pgram A B C D$ 的每条对角线都把平行四边形分成一对全等的三角形，并且 $ triangle.stroked.t A O B tilde.equiv triangle.stroked.t C O D\,#h(2em) triangle.stroked.t B O C tilde.equiv triangle.stroked.t D O A $
+$pgram A B C D$ 的每条对角线都把平行四边形分成一对全等的三角形，并且 $ triangle.stroked.t A O B tilde.equiv triangle.stroked.t C O D\,#h(2em) triangle.stroked.t B O C tilde.equiv triangle.stroked.t D O A $
 
 请同学们利用全等三角形来证明下面平行四边形性质定理：
 
@@ -1740,42 +1740,42 @@ $⁠pgram A B C D$ 的每条对角线都把平行四边形分成一对全等的�
 ]
 证明时，只要证明两组对边平行即可，我们证明1、2, 请同学们自己证明3、4.
 
-已知：四边形 $⁠A B C D$ 中，$overline(A D) = overline(B C)$, $⁠overline(A B) = overline(C D)$ (图3.50).
+已知：四边形 $A B C D$ 中，$overline(A D) = overline(B C)$, $overline(A B) = overline(C D)$ (图3.50).
 
 求证：四边形 $A B C D$ 为平行四边形．
 
 #proof[
-连 $overline(B D)$, 在 $⁠triangle.stroked.t B A D$ 与 $triangle.stroked.t D C B$ 中，
+连 $overline(B D)$, 在 $triangle.stroked.t B A D$ 与 $triangle.stroked.t D C B$ 中，
 
-$because quad overline(A B) = overline(C D)$、$⁠overline(A D) = overline(B C)$（已知），$⁠overline(B D) = overline(B D)$（公共边），
+$because quad overline(A B) = overline(C D)$、$overline(A D) = overline(B C)$（已知），$overline(B D) = overline(B D)$（公共边），
 
-$⁠therefore quad triangle.stroked.t B A D tilde.equiv triangle.stroked.t D C B$ (SSS).
+$therefore quad triangle.stroked.t B A D tilde.equiv triangle.stroked.t D C B$ (SSS).
 
 $therefore quad angle 1 = angle 2\,quad angle 3 = angle 4$（全等三角形的对应角相等）．
 
-$⁠therefore quad A D pll B C\,quad A B pll C D$（内错角相等，则两条直线平行）．
+$therefore quad A D pll B C\,quad A B pll C D$（内错角相等，则两条直线平行）．
 
-$⁠therefore quad$ 四边形 $A B C D$ 为平行四边形（平行四边形定义）．
+$therefore quad$ 四边形 $A B C D$ 为平行四边形（平行四边形定义）．
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-91");], caption: []), figure([#fig("3-92");], caption: []))));
 
-已知：四边形 $A B C D$ 中，$angle A = angle C$, $⁠angle B = angle D$（图3.51）．
+已知：四边形 $A B C D$ 中，$angle A = angle C$, $angle B = angle D$（图3.51）．
 
-求证：四边形 $⁠A B C D$ 为平行四边形．
+求证：四边形 $A B C D$ 为平行四边形．
 
 #proof[
 $because quad angle A + angle B + angle C + angle D = 360 degree$（多边形内角和定理），
 
-又 $⁠because quad angle A = angle C\,quad angle B = angle D$（已知），
+又 $because quad angle A = angle C\,quad angle B = angle D$（已知），
 
-$⁠therefore quad 2 angle A + 2 angle B = 360 degree$.
+$therefore quad 2 angle A + 2 angle B = 360 degree$.
 
-$⁠therefore quad angle A + angle B = 180 degree$.
+$therefore quad angle A + angle B = 180 degree$.
 
-$⁠therefore quad A D pll B C$（同旁内角互补则两条直线平行）．
+$therefore quad A D pll B C$（同旁内角互补则两条直线平行）．
 
-同理可证，$⁠A B pll C D$, 所以四边形 $⁠A B C D$ 为平行四边形．
+同理可证，$A B pll C D$, 所以四边形 $A B C D$ 为平行四边形．
 
 ]
 由平行四边形的性质定理和判定定理可知，在四边形中：
@@ -1793,23 +1793,23 @@ $⁠therefore quad A D pll B C$（同旁内角互补则两条直线平行）．
 #noindent;这些都分别是平行四边形的充分必要条件．
 
 #example[
-已知：$pgram A B C D$, 且 $⁠angle A$、$⁠angle B$ 的平分线相交于 $O$, 直线 $⁠B O$ 和直线 $A D$ 相交于 $E$\(图3.52).
+已知：$pgram A B C D$, 且 $angle A$、$angle B$ 的平分线相交于 $O$, 直线 $B O$ 和直线 $A D$ 相交于 $E$\(图3.52).
 
-求证：$⁠triangle.stroked.t A O B$ 是直角三角形；$overline(O B) = overline(O E)$.
+求证：$triangle.stroked.t A O B$ 是直角三角形；$overline(O B) = overline(O E)$.
 
 ]
 #proof[
-四边形 $⁠A B C D$ 是平行四边形，$therefore quad A D pll B C$, 即 $⁠A E pll B C$.
+四边形 $A B C D$ 是平行四边形，$therefore quad A D pll B C$, 即 $A E pll B C$.
 
-$⁠therefore quad angle 2 = angle A E B$（两条直线平行，内错角相等）．
+$therefore quad angle 2 = angle A E B$（两条直线平行，内错角相等）．
 
-又 $⁠because quad B E$ 是 $angle A B C$ 的平分线（已知），
+又 $because quad B E$ 是 $angle A B C$ 的平分线（已知），
 
 $therefore quad angle 1 = angle 2$（角平分线定义）．
 
-$⁠therefore quad angle 1 = angle A E B$（等量代换）．
+$therefore quad angle 1 = angle A E B$（等量代换）．
 
-$⁠therefore quad triangle.stroked.t A B E$ 是等腰三角形（两个角相等的三角形是等腰三角形）．
+$therefore quad triangle.stroked.t A B E$ 是等腰三角形（两个角相等的三角形是等腰三角形）．
 
 又 $because quad A O$ 是 $angle D A B$ 的平分线（已知），
 
@@ -1821,33 +1821,33 @@ $therefore quad triangle.stroked.t A O B$ 是直角三角形；$overline(B O) = 
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-93");], caption: []), figure([#fig("3-94");], caption: []))));
 
 #example[
-从 $⁠pgram A B C D$ 的各顶点作对角线的垂线 $A F$、$⁠B E$、$⁠C G$、$⁠D H$, $⁠E$、$⁠F$、$⁠G$、$⁠H$ 是垂足（图3.53）．
+从 $pgram A B C D$ 的各顶点作对角线的垂线 $A F$、$B E$、$C G$、$D H$, $E$、$F$、$G$、$H$ 是垂足（图3.53）．
 
 求证：$overline(E F) = overline(G H)$.
 
 ]
 #proof[
-设 $⁠overline(A C)$、$⁠overline(B D)$ 交于 $O$ 点，连 $overline(F H)$, $⁠overline(E G)$.
+设 $overline(A C)$、$overline(B D)$ 交于 $O$ 点，连 $overline(F H)$, $overline(E G)$.
 
-$⁠because quad$ 四边形 $A B C D$ 是平行四边形（已知），
+$because quad$ 四边形 $A B C D$ 是平行四边形（已知），
 
-$therefore quad overline(A D) = overline(B C)$（平行四边形的对边相等），$⁠A D pll B C$（平行四边形定义）．
+$therefore quad overline(A D) = overline(B C)$（平行四边形的对边相等），$A D pll B C$（平行四边形定义）．
 
-$⁠therefore quad angle A D F = angle C B G$（两条直线平行，内错角相等），
+$therefore quad angle A D F = angle C B G$（两条直线平行，内错角相等），
 
-又 $⁠because quad A F tack.t B D\,quad C G tack.t B D$（已知），
+又 $because quad A F tack.t B D\,quad C G tack.t B D$（已知），
 
-$⁠therefore quad triangle.stroked.t A F D tilde.equiv triangle.stroked.t C G B$ (AAS),
+$therefore quad triangle.stroked.t A F D tilde.equiv triangle.stroked.t C G B$ (AAS),
 
 $therefore quad overline(D F) = overline(B G)$
 
-又 $⁠because quad overline(B O) = overline(O D)$（平行四边形的对角线互相平分），
+又 $because quad overline(B O) = overline(O D)$（平行四边形的对角线互相平分），
 
-$⁠therefore quad overline(F O) = overline(G O)$（等量减等量差相等）．
+$therefore quad overline(F O) = overline(G O)$（等量减等量差相等）．
 
-同理，$⁠overline(H O) = overline(O E)$.
+同理，$overline(H O) = overline(O E)$.
 
-$⁠therefore quad$ 四边形 $F H G E$ 为平行四边形（对角线互相平分的四边形是平行四边形）．
+$therefore quad$ 四边形 $F H G E$ 为平行四边形（对角线互相平分的四边形是平行四边形）．
 
 $therefore quad overline(F E) = overline(G H)$（平行四边形的对边相等）．
 
@@ -1856,9 +1856,9 @@ $therefore quad overline(F E) = overline(G H)$（平行四边形的对边相等�
 连结三角形任意两边中点的线段平行于第三边，且等于第三边的一半．
 
 ]
-已知：$⁠D$、$⁠E$ 分别为 $triangle.stroked.t A B C$ 的 $overline(A B)$ 和 $overline(A C)$ 边上的中点（图3.54）
+已知：$D$、$E$ 分别为 $triangle.stroked.t A B C$ 的 $overline(A B)$ 和 $overline(A C)$ 边上的中点（图3.54）
 
-求证：$overline(D E) pll overline(B C)$, $⁠overline(D E) = 1 / 2 overline(B C)$.
+求证：$overline(D E) pll overline(B C)$, $overline(D E) = 1 / 2 overline(B C)$.
 
 #figure([#fig("3-95");
 
@@ -1868,23 +1868,23 @@ $therefore quad overline(F E) = overline(G H)$（平行四边形的对边相等�
 )
 
 #proof[
-在 $⁠overline(D E)$ 的延长线上，截取 $overline(E F) = overline(D E)$, 由于 $⁠overline(A E) = overline(E C)$,
+在 $overline(D E)$ 的延长线上，截取 $overline(E F) = overline(D E)$, 由于 $overline(A E) = overline(E C)$,
 
-$⁠therefore quad$ 四边形 $A D C F$ 是平行四边形（对角线互相平分的四边形是平行四边形）．
+$therefore quad$ 四边形 $A D C F$ 是平行四边形（对角线互相平分的四边形是平行四边形）．
 
-$therefore quad C F pll A D$, 即 $⁠C F pll B D$.
+$therefore quad C F pll A D$, 即 $C F pll B D$.
 
-但，$⁠overline(C F) = overline(A D)\,quad overline(A D) = overline(B D)$,
+但，$overline(C F) = overline(A D)\,quad overline(A D) = overline(B D)$,
 
-$⁠therefore quad overline(C F) = overline(B D)$（等量代换），
+$therefore quad overline(C F) = overline(B D)$（等量代换），
 
-$⁠therefore quad$ 四边形 $B C F D$ 是平行四边形（一组对边平行且相等的四边形是平行四边形）．
+$therefore quad$ 四边形 $B C F D$ 是平行四边形（一组对边平行且相等的四边形是平行四边形）．
 
-$therefore quad overline(D F) pll overline(B C)$, 即 $⁠overline(D E) pll overline(B C)$.
+$therefore quad overline(D F) pll overline(B C)$, 即 $overline(D E) pll overline(B C)$.
 
-由于 $⁠overline(D E) = 1 / 2 overline(D F)$, $⁠overline(D F) = overline(B C)$（平行四边形的对边相等），
+由于 $overline(D E) = 1 / 2 overline(D F)$, $overline(D F) = overline(B C)$（平行四边形的对边相等），
 
-$⁠therefore quad overline(D E) = 1 / 2 overline(B C)$.
+$therefore quad overline(D E) = 1 / 2 overline(B C)$.
 
 ]
 #blk[定义][
@@ -1901,12 +1901,12 @@ $⁠therefore quad overline(D E) = 1 / 2 overline(B C)$.
 梯形中位线平行于两底且等于两底和的一半．
 
 ]
-已知：$⁠overline(E F)$ 是梯形 $A B C D$ 的中位线（图3.55）．
+已知：$overline(E F)$ 是梯形 $A B C D$ 的中位线（图3.55）．
 
-求证：$E F pll A D pll B C$，且 $⁠overline(E F) = 1 / 2\(overline(A D) + overline(B C)\)$.
+求证：$E F pll A D pll B C$，且 $overline(E F) = 1 / 2\(overline(A D) + overline(B C)\)$.
 
 #proof[
-由同学自己完成（提示：射线 $⁠A F$ 交 $overline(B C)$ 的延长线于 $G$, 则 $⁠overline(E F)$ 转化为 $triangle.stroked.t A B G$ 的中位线）．
+由同学自己完成（提示：射线 $A F$ 交 $overline(B C)$ 的延长线于 $G$, 则 $overline(E F)$ 转化为 $triangle.stroked.t A B G$ 的中位线）．
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-96");], caption: []), figure([#fig("3-97");], caption: []))));
@@ -1915,28 +1915,28 @@ $⁠therefore quad overline(D E) = 1 / 2 overline(B C)$.
 三角形的三条中线相交于一点，这点和各边中点的距离等于这边上中线的三分之一．
 
 ]
-已知：$overline(A M)$、$⁠overline(B N)$、$⁠overline(C P)$ 为 $triangle.stroked.t A B C$ 的三条中线（图3.56）
+已知：$overline(A M)$、$overline(B N)$、$overline(C P)$ 为 $triangle.stroked.t A B C$ 的三条中线（图3.56）
 
-求证：$overline(A M)$、$⁠overline(B N)$、$⁠overline(C P)$ 相交于一点 $G$, 且 $⁠overline(G M) = 1 / 3 overline(A M)$, $⁠overline(G N) = 1 / 3 overline(B N)$, $⁠overline(G P) = 1 / 3 overline(C P)$.
+求证：$overline(A M)$、$overline(B N)$、$overline(C P)$ 相交于一点 $G$, 且 $overline(G M) = 1 / 3 overline(A M)$, $overline(G N) = 1 / 3 overline(B N)$, $overline(G P) = 1 / 3 overline(C P)$.
 
 #proof[
-设 $⁠overline(B N)$ 与 $overline(C P)$ 相交于 $G$ 点，作 $overline(P N)$, 则 $⁠overline(P N) = 1 / 2 overline(B C)$, $⁠overline(P N) pll overline(B C)$（三角形中位线定理）．
+设 $overline(B N)$ 与 $overline(C P)$ 相交于 $G$ 点，作 $overline(P N)$, 则 $overline(P N) = 1 / 2 overline(B C)$, $overline(P N) pll overline(B C)$（三角形中位线定理）．
 
-设 $⁠H$、$⁠Q$ 分别为 $overline(B G)$、$⁠overline(C G)$ 的中点，则 $overline(H Q) = 1 / 2 overline(B C)$, $⁠overline(H Q) pll overline(B C)$（三角形中位线定理）．
+设 $H$、$Q$ 分别为 $overline(B G)$、$overline(C G)$ 的中点，则 $overline(H Q) = 1 / 2 overline(B C)$, $overline(H Q) pll overline(B C)$（三角形中位线定理）．
 
-$⁠therefore quad overline(P N) = overline(H Q)$（等量代换），$⁠overline(P N) pll overline(H Q)$（平行于第三条直线的两条直线平行）．
+$therefore quad overline(P N) = overline(H Q)$（等量代换），$overline(P N) pll overline(H Q)$（平行于第三条直线的两条直线平行）．
 
-$⁠therefore quad$ 四边形 $P H Q N$ 为平行四边形（一组对边平行且相等的四边形是平行四边形）．
+$therefore quad$ 四边形 $P H Q N$ 为平行四边形（一组对边平行且相等的四边形是平行四边形）．
 
 $therefore quad overline(G H) = overline(G N)\,quad overline(G P) = overline(G Q)$（平行四边形的对角线互相平分）
 
-但 $⁠overline(G H) = overline(H B)$, $⁠overline(G Q) = overline(C Q)$
+但 $overline(G H) = overline(H B)$, $overline(G Q) = overline(C Q)$
 
-$⁠therefore quad overline(G N) = overline(G H) = overline(H B) = 1 / 3 overline(B N)$，$⁠overline(G P) = overline(G Q) = overline(Q C) = 1 / 3 overline(C P)$.
+$therefore quad overline(G N) = overline(G H) = overline(H B) = 1 / 3 overline(B N)$，$overline(G P) = overline(G Q) = overline(Q C) = 1 / 3 overline(C P)$.
 
-这样，中线 $⁠overline(C P)$ 和中线 $overline(B N)$ 相交在这两条中线的三分之一处．用同样的推理又可证明中线 $overline(A M)$ 和中线 $overline(B N)$ 也相交在它们的三分之一处．即点 $G$.
+这样，中线 $overline(C P)$ 和中线 $overline(B N)$ 相交在这两条中线的三分之一处．用同样的推理又可证明中线 $overline(A M)$ 和中线 $overline(B N)$ 也相交在它们的三分之一处．即点 $G$.
 
-因此，$⁠overline(A M)$、$⁠overline(B N)$、$⁠overline(C P)$ 相交于 $G$, 且 $⁠overline(G M) = 1 / 3 overline(A M)$, $⁠overline(G N) = 1 / 3 overline(B N)$, $⁠overline(G P) = 1 / 3 overline(C P)$.
+因此，$overline(A M)$、$overline(B N)$、$overline(C P)$ 相交于 $G$, 且 $overline(G M) = 1 / 3 overline(A M)$, $overline(G N) = 1 / 3 overline(B N)$, $overline(G P) = 1 / 3 overline(C P)$.
 
 ]
 #blk[定义][
@@ -1947,32 +1947,32 @@ $⁠therefore quad overline(G N) = overline(G H) = overline(H B) = 1 / 3 overlin
 直角三角形的斜边的中点，与三个顶点的距离相等．
 
 ]
-已知：$⁠triangle.stroked.t A B C$ 中，$angle A C B = 90 degree$, $⁠D$ 是 $overline(A B)$ 的中点（图3.57）．
+已知：$triangle.stroked.t A B C$ 中，$angle A C B = 90 degree$, $D$ 是 $overline(A B)$ 的中点（图3.57）．
 
 求证：$overline(C D) = overline(D A) = overline(D B)$.
 
 #proof[
-取 $⁠overline(B C)$ 的中点 $E$, 连结 $⁠overline(D E)$,
+取 $overline(B C)$ 的中点 $E$, 连结 $overline(D E)$,
 
-$⁠because quad D$ 是 $overline(A B)$ 的中点，（已知）
+$because quad D$ 是 $overline(A B)$ 的中点，（已知）
 
 $therefore quad overline(D E)$ 是 $triangle.stroked.t A B C$ 的一条中位线．
 
 $therefore quad D E pll A C$（三角形中位线定理）．
 
-$⁠because quad angle A C B = 90 degree$（已知），
+$because quad angle A C B = 90 degree$（已知），
 
-$⁠therefore quad angle D E B = 90 degree$.（两条直线平行，则同位角相等），
+$therefore quad angle D E B = 90 degree$.（两条直线平行，则同位角相等），
 
-$⁠therefore quad angle D E B = angle D E C$
+$therefore quad angle D E B = angle D E C$
 
-又 $⁠because quad overline(D E) = overline(D E)\,quad overline(B E) = overline(E C)$
+又 $because quad overline(D E) = overline(D E)\,quad overline(B E) = overline(E C)$
 
-$⁠therefore quad triangle.stroked.t B D E tilde.equiv triangle.stroked.t C D E$ (SAS)
+$therefore quad triangle.stroked.t B D E tilde.equiv triangle.stroked.t C D E$ (SAS)
 
-$therefore quad overline(C D) = overline(D B)$. 但 $⁠overline(D B) = overline(D A)$,
+$therefore quad overline(C D) = overline(D B)$. 但 $overline(D B) = overline(D A)$,
 
-$⁠therefore quad overline(C D) = overline(D B) = overline(D A)$.
+$therefore quad overline(C D) = overline(D B) = overline(D A)$.
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-98");], caption: []), figure([#fig("3-99");], caption: []))));
@@ -1981,22 +1981,22 @@ $⁠therefore quad overline(C D) = overline(D B) = overline(D A)$.
 在直角三角形中，$30 degree$ 角的对边等于斜边的一半．
 
 ]
-已知：$triangle.stroked.t A B C$ 中，$angle A C B = 90 degree$, $⁠angle A = 30 degree$（图3.58）
+已知：$triangle.stroked.t A B C$ 中，$angle A C B = 90 degree$, $angle A = 30 degree$（图3.58）
 
-求证：$⁠overline(B C) = 1 / 2 overline(A B)$.
+求证：$overline(B C) = 1 / 2 overline(A B)$.
 
 #proof[
-取 $⁠overline(A B)$ 的中点 $D$. 连结 $⁠overline(C D)$, 则 $⁠overline(C D) = overline(D A)$\(例3.29)
+取 $overline(A B)$ 的中点 $D$. 连结 $overline(C D)$, 则 $overline(C D) = overline(D A)$\(例3.29)
 
-$⁠because quad angle A = 30 degree$,
+$because quad angle A = 30 degree$,
 
-$⁠therefore quad angle A C D = 30 degree$（等腰三角形两底角相等）．
+$therefore quad angle A C D = 30 degree$（等腰三角形两底角相等）．
 
-又 $⁠because quad angle B = 90 degree - 30 degree = 60 degree$（直角三角形两锐角互余），
+又 $because quad angle B = 90 degree - 30 degree = 60 degree$（直角三角形两锐角互余），
 
-$⁠angle B D C = 60 degree$（三角形的外角等于不相邻的两个内角的和）．
+$angle B D C = 60 degree$（三角形的外角等于不相邻的两个内角的和）．
 
-$⁠therefore quad triangle.stroked.t B C D$ 是正三角形（三内角相等的三角形是正三角形）．
+$therefore quad triangle.stroked.t B C D$ 是正三角形（三内角相等的三角形是正三角形）．
 
 $therefore quad overline(B C) = overline(B D) = 1 / 2 overline(A B)$.
 
@@ -2004,7 +2004,7 @@ $therefore quad overline(B C) = overline(B D) = 1 / 2 overline(A B)$.
 以上两例的逆命题也是正确的，同学们可自己证明．
 
 #blk[定义][
-取两个已知点 $⁠A$、$⁠O$, 连结 $⁠overline(A O)$, 并延长 $⁠overline(A O)$ 使 $overline(O A') = overline(A O)$, 这时我们说 $⁠A'$ 是 $A$ 点关于 $O$ 点的#strong[中心对称点]；$A$、$⁠A'$ 关于 $O$ 点成#strong[中心对称]；$O$ 点叫做两已知点 $A$、$⁠A'$ 的#strong[对称中心]（图3.59）．
+取两个已知点 $A$、$O$, 连结 $overline(A O)$, 并延长 $overline(A O)$ 使 $overline(O A') = overline(A O)$, 这时我们说 $A'$ 是 $A$ 点关于 $O$ 点的#strong[中心对称点]；$A$、$A'$ 关于 $O$ 点成#strong[中心对称]；$O$ 点叫做两已知点 $A$、$A'$ 的#strong[对称中心]（图3.59）．
 
 ]
 #figure([#fig("3-100");
@@ -2016,7 +2016,7 @@ $therefore quad overline(B C) = overline(B D) = 1 / 2 overline(A B)$.
 
 对于任何一个已知图形上的一点，作出它关于某一点 $O$ 的中心对称点，这些对称点的集合，构成了一个新的图形，这个新的图形叫做已知图形的关于 $O$ 点的#strong[中心对称形]，$O$ 点叫做这两个图形的#strong[对称中心]．
 
-例如，已知 $triangle.stroked.t A B C$, 我们作顶点 $⁠A$、$⁠B$、$⁠C$ 关于 $O$ 点的中心对称点 $A'\,B'\,C'$, 容易证明 $⁠triangle.stroked.t A' B' C'$ 就是 $triangle.stroked.t A B C$ 的关于对称中心 $O$ 的中心对称形（图3.60）．
+例如，已知 $triangle.stroked.t A B C$, 我们作顶点 $A$、$B$、$C$ 关于 $O$ 点的中心对称点 $A'\,B'\,C'$, 容易证明 $triangle.stroked.t A' B' C'$ 就是 $triangle.stroked.t A B C$ 的关于对称中心 $O$ 的中心对称形（图3.60）．
 
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-101");], caption: []), figure([#fig("3-102");], caption: []))));
 
@@ -2034,22 +2034,22 @@ $therefore quad overline(B C) = overline(B D) = 1 / 2 overline(A B)$.
 平行四边形是中心对称形，它的对称中心是两条对角线的交点．
 
 ]
-已知：$pgram A B C D$ 的对角线 $overline(A C)$、$⁠overline(B D)$ 相交于 $O$ 点（图3.61）．
+已知：$pgram A B C D$ 的对角线 $overline(A C)$、$overline(B D)$ 相交于 $O$ 点（图3.61）．
 
 求证：$pgram A B C D$ 是中心对称形；$O$ 是对称中心．
 
 #proof[
-在 $pgram A B C D$ 上任取一点 $P$, 设 $⁠P in overline(A D)$, 连结 $⁠overline(P O)$, 延长交 $⁠overline(B C)$ 于 $P'$, 在 $⁠triangle.stroked.t A O P$ 和 $triangle.stroked.t C O P'$ 中，
+在 $pgram A B C D$ 上任取一点 $P$, 设 $P in overline(A D)$, 连结 $overline(P O)$, 延长交 $overline(B C)$ 于 $P'$, 在 $triangle.stroked.t A O P$ 和 $triangle.stroked.t C O P'$ 中，
 
 $because quad overline(A O) = overline(O C)$（平行四边形对角线互相平分），
 
-$⁠angle 1 = angle 2$（对顶角相等），$⁠angle 3 = angle 4$（两条直线平行，则内错角相等），
+$angle 1 = angle 2$（对顶角相等），$angle 3 = angle 4$（两条直线平行，则内错角相等），
 
-$⁠therefore quad triangle.stroked.t A O P tilde.equiv triangle.stroked.t C O P'$ (AAS).
+$therefore quad triangle.stroked.t A O P tilde.equiv triangle.stroked.t C O P'$ (AAS).
 
 $therefore quad overline(P O) = overline(O P')$（全等三角形的对应边相等），
 
-$⁠therefore quad P'$ 是 $P$ 关于 $O$ 点的中心对称点．
+$therefore quad P'$ 是 $P$ 关于 $O$ 点的中心对称点．
 
 由于上述 $P$ 点是任意选取的，$P$ 点关于 $O$ 的对称点 $P'$ 也在 $pgram A B C D$ 上，所以 $pgram A B C D$ 是中心对称形．$O$ 点是对称中心．
 
@@ -2086,7 +2086,7 @@ $⁠therefore quad P'$ 是 $P$ 关于 $O$ 点的中心对称点．
 这个推论的后半部分，就是我们在例3.9中所证的结论．
 
 #blk[推论3][
-正方形是矩形又是菱形．即 $ { upright("矩形") } inter { upright("菱形") } = { upright("正方形") } $
+正方形是矩形又是菱形．即 $ \{ upright("矩形") \} inter \{ upright("菱形") \} = \{ upright("正方形") \} $
 
 ]
 以上三个推论，同学们作为练习，自己证明．并思考上述三个推论的逆命题是否正确，并证明你的结论．
@@ -2103,9 +2103,9 @@ $⁠therefore quad P'$ 是 $P$ 关于 $O$ 点的中心对称点．
 )
 
 #example[
-已知：$⁠A B C D$ 是矩形，设各外角的平分线相交于 $E$、$⁠F$、$⁠G$、$⁠H$\(图3.64).
+已知：$A B C D$ 是矩形，设各外角的平分线相交于 $E$、$F$、$G$、$H$\(图3.64).
 
-求证：$⁠E F G H$ 是正方形．
+求证：$E F G H$ 是正方形．
 
 ]
 #figure([#fig("3-105");
@@ -2116,59 +2116,59 @@ $⁠therefore quad P'$ 是 $P$ 关于 $O$ 点的中心对称点．
 )
 
 #proof[
-延长 $overline(A E)$、$⁠overline(C B)$ 交于 $P$ 点，
+延长 $overline(A E)$、$overline(C B)$ 交于 $P$ 点，
 
 $because quad A B C D$ 是矩形，
 
 $therefore quad A D pll B C$,
 
-$⁠therefore quad angle P = angle 3$（两条直线平行同位角相等）．
+$therefore quad angle P = angle 3$（两条直线平行同位角相等）．
 
-又 $⁠because quad angle 3 = angle 4 = 45 degree$（矩形外角的一半是 $45 degree$），
+又 $because quad angle 3 = angle 4 = 45 degree$（矩形外角的一半是 $45 degree$），
 
-$⁠therefore quad angle P = angle 4$,
+$therefore quad angle P = angle 4$,
 
-$⁠therefore quad E H pll F G$（内错角相等两条直线平行）．
+$therefore quad E H pll F G$（内错角相等两条直线平行）．
 
-同理：$⁠E F pll H G$
+同理：$E F pll H G$
 
-$⁠therefore quad$ 四边形 $E F G H$ 是平行四边形#h(1em);①
+$therefore quad$ 四边形 $E F G H$ 是平行四边形#h(1em);①
 
 $because quad angle 1 = angle 2 = 45 degree$,（矩形外角的一半是 $45 degree$），
 
-$⁠therefore quad angle A E B = 90 degree$#h(1em);②，并且 $⁠overline(A E) = overline(B E)$（两个角相等的三角形是等腰三角形），
+$therefore quad angle A E B = 90 degree$#h(1em);②，并且 $overline(A E) = overline(B E)$（两个角相等的三角形是等腰三角形），
 
-又 $⁠because quad angle 3 = angle 5 = angle 4 = angle 6$, $⁠overline(A D) = overline(B C)$（矩形的对边相等），
+又 $because quad angle 3 = angle 5 = angle 4 = angle 6$, $overline(A D) = overline(B C)$（矩形的对边相等），
 
-$⁠therefore quad triangle.stroked.t A H D tilde.equiv triangle.stroked.t B F C$（ASA）.
+$therefore quad triangle.stroked.t A H D tilde.equiv triangle.stroked.t B F C$（ASA）.
 
-$⁠therefore quad overline(A H) = overline(B F)$（全等三角形的对应边相等）．
+$therefore quad overline(A H) = overline(B F)$（全等三角形的对应边相等）．
 
-$⁠therefore quad overline(A E) + overline(A H) = overline(B E) + overline(B F)$（等量加等量和相等）．
+$therefore quad overline(A E) + overline(A H) = overline(B E) + overline(B F)$（等量加等量和相等）．
 
-即：$⁠overline(E H) = overline(E F)$#h(1em);③
+即：$overline(E H) = overline(E F)$#h(1em);③
 
-由①、②、③可知：四边形 $⁠E F G H$ 是正方形（正方形定义）
+由①、②、③可知：四边形 $E F G H$ 是正方形（正方形定义）
 
 ]
 #exercise[
-+ $E$、$⁠F$ 是 $pgram A B C D$ 对角线 $overline(B D)$ 上的两点，且 $overline(B E) = overline(D F)$, 求证：$⁠overline(A E) = overline(C F)$.
++ $E$、$F$ 是 $pgram A B C D$ 对角线 $overline(B D)$ 上的两点，且 $overline(B E) = overline(D F)$, 求证：$overline(A E) = overline(C F)$.
 
-+ 已知 $⁠pgram A B C D$ 中，$E$、$⁠F$ 是 $overline(B D)$ 上的两点，且 $angle B A E = angle D C F$. 求证：$⁠overline(B E) = overline(D F)$.
++ 已知 $pgram A B C D$ 中，$E$、$F$ 是 $overline(B D)$ 上的两点，且 $angle B A E = angle D C F$. 求证：$overline(B E) = overline(D F)$.
 
-+ 已知：在 $⁠pgram A B C D$ 中，$E$、$⁠F$ 分别是 $overline(A B)$、$⁠overline(C D)$ 上的点，且 $overline(B E) = overline(D F)$. 求证：$⁠overline(B F) pll overline(D E)$
++ 已知：在 $pgram A B C D$ 中，$E$、$F$ 分别是 $overline(A B)$、$overline(C D)$ 上的点，且 $overline(B E) = overline(D F)$. 求证：$overline(B F) pll overline(D E)$
 
-+ 已知：$⁠E$、$⁠F$ 是 $pgram A B C D$ 的对边 $overline(A B)$、$⁠overline(C D)$ 的中点，$overline(E F)$ 与 $overline(A C)$ 相交于 $O$. 求证：$⁠overline(A O) = overline(C O)$.
++ 已知：$E$、$F$ 是 $pgram A B C D$ 的对边 $overline(A B)$、$overline(C D)$ 的中点，$overline(E F)$ 与 $overline(A C)$ 相交于 $O$. 求证：$overline(A O) = overline(C O)$.
 
-+ 已知：$⁠pgram A B C D$ 中 $E$、$⁠F$ 是 $overline(B D)$ 上的两点，且 $overline(B E) = overline(D F)$. 求证：四边形 $⁠A E C F$ 是平行四边形.
++ 已知：$pgram A B C D$ 中 $E$、$F$ 是 $overline(B D)$ 上的两点，且 $overline(B E) = overline(D F)$. 求证：四边形 $A E C F$ 是平行四边形.
 
 + 求证：对角线相等的平行四边形是矩形．
 
 + 求证：对角线互相垂直的平行四边形是菱形．
 
-+ 已知：$E$、$⁠F$、$⁠G$ 分别是 $triangle.stroked.t A B C$ 三边上的中点．求证：四边形 $A E F G$ 是平行四边形．
++ 已知：$E$、$F$、$G$ 分别是 $triangle.stroked.t A B C$ 三边上的中点．求证：四边形 $A E F G$ 是平行四边形．
 
-+ 已知：等腰 $triangle.stroked.t A B C$, $⁠overline(A B) = overline(A C)$, $⁠E$、$⁠F$、$⁠G$ 是三边上的中点．求证：四边形 $A E F G$ 是菱形．
++ 已知：等腰 $triangle.stroked.t A B C$, $overline(A B) = overline(A C)$, $E$、$F$、$G$ 是三边上的中点．求证：四边形 $A E F G$ 是菱形．
 
 + 证明：顺次连结任意四边形四边的中点所成的四边形是平行四边形．
 
@@ -2188,9 +2188,9 @@ $⁠therefore quad overline(A E) + overline(A H) = overline(B E) + overline(B F)
 
 + 等腰梯形的腰等于中位线，周长为24cm. 求腰长．
 
-+ 已知梯形 $A B C D$ 中，$overline(A D) pll overline(B C)$, $⁠overline(B C) = 2 overline(A D)$，$⁠A F pll C D$ 交 $overline(B D)$ 于 $O$ 点，$overline(C D) = 6$cm, 求 $⁠overline(O F)$ 的长度．
++ 已知梯形 $A B C D$ 中，$overline(A D) pll overline(B C)$, $overline(B C) = 2 overline(A D)$，$A F pll C D$ 交 $overline(B D)$ 于 $O$ 点，$overline(C D) = 6$⁠cm, 求 $overline(O F)$ 的长度．
 
-+ 已知：正方形 $A B C D$, $⁠E$、$⁠F$、$⁠G$、$⁠H$ 分别在 $overline(A B)$、$⁠overline(B C)$、$⁠overline(C D)$、$⁠overline(D A)$ 上，并且 $overline(A E) = overline(B F) = overline(C G) = overline(D H)$, 求证：四边形 $⁠E F G H$ 是正方形．
++ 已知：正方形 $A B C D$, $E$、$F$、$G$、$H$ 分别在 $overline(A B)$、$overline(B C)$、$overline(C D)$、$overline(D A)$ 上，并且 $overline(A E) = overline(B F) = overline(C G) = overline(D H)$, 求证：四边形 $E F G H$ 是正方形．
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-106");
@@ -2246,9 +2246,9 @@ $⁠therefore quad overline(A E) + overline(A H) = overline(B E) + overline(B F)
 如果一组平行线在一条直线上截出一组等长的线段，那么在任一条与这组平行线相交的直线上也被截为一组等长的线段．
 
 ]
-已知：$ell_1 pll ell_2 pll ell_3$, 直线 $⁠m$ 与 $ell_1$、$⁠ell_2$、$⁠ell_3$ 分别相交于 $A_1\,A_2\,A_3$ 且 $overline(A_1 A_2) = overline(A_2 A_3)$；任一条直线 $⁠n$ 分别与 $ell_1$、$⁠ell_2$、$⁠ell_3$ 相交于 $B_1\,B_2\,B_3$（图3.65）．
+已知：$ell_1 pll ell_2 pll ell_3$, 直线 $m$ 与 $ell_1$、$ell_2$、$ell_3$ 分别相交于 $A_1\,A_2\,A_3$ 且 $overline(A_1 A_2) = overline(A_2 A_3)$；任一条直线 $n$ 分别与 $ell_1$、$ell_2$、$ell_3$ 相交于 $B_1\,B_2\,B_3$（图3.65）．
 
-求证：$⁠overline(B_1 B_2) = overline(B_2 B_3)$.
+求证：$overline(B_1 B_2) = overline(B_2 B_3)$.
 
 #figure([#fig("3-114");
 
@@ -2258,21 +2258,21 @@ $⁠therefore quad overline(A E) + overline(A H) = overline(B E) + overline(B F)
 )
 
 #proof[
-过 $⁠A_1$、$⁠A_2$ 分别作直线 $n$ 的平行线 $A_1 C_1$、$⁠A_2 C_2$, 与 $⁠ell_2$、$⁠ell_3$ 分别交于 $C_1\,C_2$ 两点．在 $triangle.stroked.t A_1 A_2 C_1$ 和 $triangle.stroked.t A_2 A_3 C_2$ 中，
+过 $A_1$、$A_2$ 分别作直线 $n$ 的平行线 $A_1 C_1$、$A_2 C_2$, 与 $ell_2$、$ell_3$ 分别交于 $C_1\,C_2$ 两点．在 $triangle.stroked.t A_1 A_2 C_1$ 和 $triangle.stroked.t A_2 A_3 C_2$ 中，
 
-$because quad overline(A_1 A_2) = overline(A_2 A_3)$（已知），$⁠ell_1 pll ell_2 pll ell_3$（已知）．$⁠A_1 C_1 pll n$, $⁠A_2 C_2 pll n$,
+$because quad overline(A_1 A_2) = overline(A_2 A_3)$（已知），$ell_1 pll ell_2 pll ell_3$（已知）．$A_1 C_1 pll n$, $A_2 C_2 pll n$,
 
-$⁠therefore quad A_1 C_1 pll A_2 C_2$（平行于第三条直线的两条直线平行）．
+$therefore quad A_1 C_1 pll A_2 C_2$（平行于第三条直线的两条直线平行）．
 
-$⁠therefore quad angle 1 = angle 2\,quad angle 3 = angle 4$（两条直线平行同位角相等）．
+$therefore quad angle 1 = angle 2\,quad angle 3 = angle 4$（两条直线平行同位角相等）．
 
-$⁠therefore quad triangle.stroked.t A_1 A_2 C_1 tilde.equiv triangle.stroked.t A_2 A_3 C_2$ (ASA).
+$therefore quad triangle.stroked.t A_1 A_2 C_1 tilde.equiv triangle.stroked.t A_2 A_3 C_2$ (ASA).
 
-$therefore quad overline(A_1 C_1) = overline(A_2 C_2)$（全等三角形的对应边相等）．但四边形 $⁠A_1 C_1 B_2 B_1$ 和 $A_2 C_2 B_3 B_2$ 都是平行四边形，由于平行四边形对边相等，
+$therefore quad overline(A_1 C_1) = overline(A_2 C_2)$（全等三角形的对应边相等）．但四边形 $A_1 C_1 B_2 B_1$ 和 $A_2 C_2 B_3 B_2$ 都是平行四边形，由于平行四边形对边相等，
 
-$therefore quad overline(A_1 C_1) = overline(B_1 B_2)$, $⁠overline(A_2 C_2) = overline(B_2 B_3)$.
+$therefore quad overline(A_1 C_1) = overline(B_1 B_2)$, $overline(A_2 C_2) = overline(B_2 B_3)$.
 
-$⁠therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
+$therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
 
 ]
 #blk[推论][
@@ -2284,19 +2284,19 @@ $⁠therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-115");], caption: []), figure([#fig("3-116");], caption: []))));
 
 #example[
-已知：$⁠overline(A B)$（图3.67）．
+已知：$overline(A B)$（图3.67）．
 
-求作：$⁠overline(A B)$ 上的点 $D_1$、$⁠E_1$、$⁠F_1$、$⁠G_1$，使 $⁠overline(A D_1) = overline(D_1 E_1) = overline(E_1 F_1) = overline(F_1 G_1) = overline(G_1 B)$（将 $⁠overline(A B)$ 五等分）．
+求作：$overline(A B)$ 上的点 $D_1$、$E_1$、$F_1$、$G_1$，使 $overline(A D_1) = overline(D_1 E_1) = overline(E_1 F_1) = overline(F_1 G_1) = overline(G_1 B)$（将 $overline(A B)$ 五等分）．
 
 作法：
 
 + 作射线 $A C$,
 
-+ 在射线 $⁠A C$ 上截取 $overline(A D) = overline(D E) = overline(E F) = overline(F G) = overline(G H)$,
++ 在射线 $A C$ 上截取 $overline(A D) = overline(D E) = overline(E F) = overline(F G) = overline(G H)$,
 
-+ 连结 $⁠B$、$⁠H$,
++ 连结 $B$、$H$,
 
-+ 过各分点 $⁠D$、$⁠E$、$⁠F$、$⁠G$ 分别作 $B H$ 的平行线交 $overline(A B)$ 于 $D_1$、$⁠E_1$、$⁠F_1$、$⁠G_1$, 则 $⁠D_1$、$⁠E_1$、$⁠F_1$、$⁠G_1$ 把 $overline(A B)$ 五等分．
++ 过各分点 $D$、$E$、$F$、$G$ 分别作 $B H$ 的平行线交 $overline(A B)$ 于 $D_1$、$E_1$、$F_1$、$G_1$, 则 $D_1$、$E_1$、$F_1$、$G_1$ 把 $overline(A B)$ 五等分．
 
 证明：略．
 
@@ -2304,18 +2304,18 @@ $⁠therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
 #exercise[
 + 任划一条 $overline(A B)$, 把它三等分．
 
-+ 任划一条 $⁠overline(C D)$, 把它五等分．
++ 任划一条 $overline(C D)$, 把它五等分．
 
 ]
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题3.3]
 
-+ 已知：梯形 $⁠A B C D$ 中，$angle B = 90 degree$, $⁠A D pll B C$, $⁠overline(C D) = 12$cm, $⁠angle B C D = 30 degree$, 求一腰 $⁠overline(A B)$ 之长．
++ 已知：梯形 $A B C D$ 中，$angle B = 90 degree$, $A D pll B C$, $overline(C D) = 12$⁠cm, $angle B C D = 30 degree$, 求一腰 $overline(A B)$ 之长．
 
-+ 已知：矩形 $A B C D$ 中，$overline(A B) = 2 overline(A D)$, $⁠E in overline(C D)$, $⁠angle D A E = 60 degree$.
++ 已知：矩形 $A B C D$ 中，$overline(A B) = 2 overline(A D)$, $E in overline(C D)$, $angle D A E = 60 degree$.
 
-  求证：$⁠angle C B E = 15 degree$
+  求证：$angle C B E = 15 degree$
 
-+ 已知：四边形 $⁠A B C D$ 中，$E$、$⁠F$、$⁠G$、$⁠H$ 分别是 $overline(A B)$、$⁠overline(A C)$、$⁠overline(C D)$、$⁠overline(B D)$ 的中点．
++ 已知：四边形 $A B C D$ 中，$E$、$F$、$G$、$H$ 分别是 $overline(A B)$、$overline(A C)$、$overline(C D)$、$overline(B D)$ 的中点．
 
   求证：四边形 $E F G H$ 是平行四边形．
 
@@ -2331,7 +2331,7 @@ $⁠therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
   
   ]])));
 
-+ 已知：$E$ 是正方形 $A B C D$ 的边 $overline(B C)$ 的延长线上的一点，且 $overline(C E) = overline(C F)$ 求证：$overline(D E) = overline(B F)$；$⁠D E tack.t B F$.
++ 已知：$E$ 是正方形 $A B C D$ 的边 $overline(B C)$ 的延长线上的一点，且 $overline(C E) = overline(C F)$ 求证：$overline(D E) = overline(B F)$；$D E tack.t B F$.
 
   #fig-center[
   #fig("3-119");
@@ -2342,17 +2342,17 @@ $⁠therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
   ]
   ]
 
-+ 已知：$⁠overline(A M)$ 是 $triangle.stroked.t A B C$ 的中线，四边形 $A B E D$, $⁠A C F G$ 都是正方形．
++ 已知：$overline(A M)$ 是 $triangle.stroked.t A B C$ 的中线，四边形 $A B E D$, $A C F G$ 都是正方形．
 
   求证：$overline(A M) = 1 / 2 overline(D G)$.
 
-  （提示：延长 $⁠overline(A M)$ 到 $N$, 使 $⁠overline(M N) = overline(A M)$, 考虑 $⁠triangle.stroked.t A D G$ 与 $triangle.stroked.t A B N$ 的关系）
+  （提示：延长 $overline(A M)$ 到 $N$, 使 $overline(M N) = overline(A M)$, 考虑 $triangle.stroked.t A D G$ 与 $triangle.stroked.t A B N$ 的关系）
 
 + 试证：对角线相等且互相平分的四边形是矩形．
 
-+ 已知：$A B C D$ 为平行四边形，且 $overline(A E) = overline(E B)$, $⁠overline(A F) = overline(F D)$,
++ 已知：$A B C D$ 为平行四边形，且 $overline(A E) = overline(E B)$, $overline(A F) = overline(F D)$,
 
-  求证：$⁠overline(B K) = overline(K L) = overline(L D)$（提示：连 $⁠overline(A C)$, 在 $⁠triangle.stroked.t A B C$ 中应用重心定理）
+  求证：$overline(B K) = overline(K L) = overline(L D)$（提示：连 $overline(A C)$, 在 $triangle.stroked.t A B C$ 中应用重心定理）
 
   #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-120");
   
@@ -2366,17 +2366,17 @@ $⁠therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
   
   ]])));
 
-+ 在 $triangle.stroked.t A B C$ 的外侧，以 $overline(A B)$、$⁠overline(A C)$ 为边分别作正三角形 $A B D$ 和 $A C E$, 在内侧以 $⁠B C$ 为边作正 $triangle.stroked.t B C F$.
++ 在 $triangle.stroked.t A B C$ 的外侧，以 $overline(A B)$、$overline(A C)$ 为边分别作正三角形 $A B D$ 和 $A C E$, 在内侧以 $B C$ 为边作正 $triangle.stroked.t B C F$.
 
-  求证：四边形 $⁠A E F D$ 为平行四边形．
+  求证：四边形 $A E F D$ 为平行四边形．
 
-+ 过平行四边形 $A B C D$ 的对角线 $overline(A C)$ 和 $overline(B D)$ 的交点 $O$ 作一直线，交 $overline(B C)$、$⁠overline(A D)$ 于 $E$、$⁠F$, 已知 $⁠overline(B E) = 2$ 米，$overline(A F) = 2.8$ 米，求 $overline(B C)$ 的长．
++ 过平行四边形 $A B C D$ 的对角线 $overline(A C)$ 和 $overline(B D)$ 的交点 $O$ 作一直线，交 $overline(B C)$、$overline(A D)$ 于 $E$、$F$, 已知 $overline(B E) = 2$ 米，$overline(A F) = 2.8$ 米，求 $overline(B C)$ 的长．
 
-+ 已知：$E$ 是正方形 $A B C D$ 的对角线 $overline(A C)$ 上的一点，$overline(C E) = overline(B C)$, 过 $⁠E$ 作 $E F tack.t overline(A C)$ 交 $overline(A B)$ 于 $F$.
++ 已知：$E$ 是正方形 $A B C D$ 的对角线 $overline(A C)$ 上的一点，$overline(C E) = overline(B C)$, 过 $E$ 作 $E F tack.t overline(A C)$ 交 $overline(A B)$ 于 $F$.
 
-  求证：$⁠overline(A E) = overline(E F) = overline(F B)$.
+  求证：$overline(A E) = overline(E F) = overline(F B)$.
 
-+ 设 $⁠P$ 点是正方形 $A B C D$ 的 $overline(C D)$ 上的一点，$angle B A P$ 的平分线与 $overline(B C)$ 的交点为 $Q$, 那么 $⁠overline(A P) = overline(D P) + overline(B Q)$.
++ 设 $P$ 点是正方形 $A B C D$ 的 $overline(C D)$ 上的一点，$angle B A P$ 的平分线与 $overline(B C)$ 的交点为 $Q$, 那么 $overline(A P) = overline(D P) + overline(B Q)$.
 
   #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-122");
   
@@ -2390,21 +2390,21 @@ $⁠therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
   
   ]])));
 
-+ 已知：梯形 $⁠A B C D$ 中，$A B pll C D$, $⁠E$、$⁠F$ 分别是 $overline(A C)$、$⁠overline(B D)$ 的中点，
++ 已知：梯形 $A B C D$ 中，$A B pll C D$, $E$、$F$ 分别是 $overline(A C)$、$overline(B D)$ 的中点，
 
-  求证：$E F pll A B pll D C$；$⁠overline(E F) = 1 / 2\(overline(A B) - overline(D C)\)$
+  求证：$E F pll A B pll D C$；$overline(E F) = 1 / 2\(overline(A B) - overline(D C)\)$
 
-  （提示：引 $⁠overline(C F)$ 交 $overline(A B)$ 于 $M$, 先证明 $⁠triangle.stroked.t C F D tilde.equiv triangle.stroked.t M F B$）
+  （提示：引 $overline(C F)$ 交 $overline(A B)$ 于 $M$, 先证明 $triangle.stroked.t C F D tilde.equiv triangle.stroked.t M F B$）
 
-+ 有一个角是直角的梯形叫#strong[直角梯形]，在直角梯形 $⁠A B C D$ 中，$A D pll B C$, $⁠angle A = 90 degree$, $⁠angle D = 45 degree$, $⁠overline(C D)$ 的垂直平分线交 $overline(C D)$ 于 $E$, 交 $⁠overline(B A)$ 的延长线于 $F$, 若 $⁠overline(A D) = a$, 求 $⁠overline(B F)$ 的长．
++ 有一个角是直角的梯形叫#strong[直角梯形]，在直角梯形 $A B C D$ 中，$A D pll B C$, $angle A = 90 degree$, $angle D = 45 degree$, $overline(C D)$ 的垂直平分线交 $overline(C D)$ 于 $E$, 交 $overline(B A)$ 的延长线于 $F$, 若 $overline(A D) = a$, 求 $overline(B F)$ 的长．
 
-+ 在 $triangle.stroked.t A B C$ 中，$overline(A B) = overline(A C)$, $⁠E$ 是 $overline(A B)$ 中点，$D$ 在 $overline(A B)$ 的延长线上，且 $overline(B D) = overline(A B)$, 求证：$⁠overline(C E) = 1 / 2 overline(C D)$.
++ 在 $triangle.stroked.t A B C$ 中，$overline(A B) = overline(A C)$, $E$ 是 $overline(A B)$ 中点，$D$ 在 $overline(A B)$ 的延长线上，且 $overline(B D) = overline(A B)$, 求证：$overline(C E) = 1 / 2 overline(C D)$.
 
-+ 在四边形 $⁠A B C D$ 中，对角线 $overline(A C)$、$⁠overline(B D)$ 相交于 $E$, 且 $⁠overline(A C) = overline(B D)$, $⁠M$、$⁠N$ 分别是 $overline(B C)$、$⁠overline(A D)$ 中点，$overline(M N)$ 分别交 $overline(A C)$、$⁠overline(B D)$ 于 $F$、$⁠G$, 求证 $⁠overline(E F) = overline(E G)$.
++ 在四边形 $A B C D$ 中，对角线 $overline(A C)$、$overline(B D)$ 相交于 $E$, 且 $overline(A C) = overline(B D)$, $M$、$N$ 分别是 $overline(B C)$、$overline(A D)$ 中点，$overline(M N)$ 分别交 $overline(A C)$、$overline(B D)$ 于 $F$、$G$, 求证 $overline(E F) = overline(E G)$.
 
-+ 已知：$⁠overline(B D)$ 是直角三角形 $A B C$ 的斜边 $overline(A C)$ 上的中线，过 $A$ 点作 $A Q pll D B$ 交 $overline(C B)$ 延长线于 $Q$.
++ 已知：$overline(B D)$ 是直角三角形 $A B C$ 的斜边 $overline(A C)$ 上的中线，过 $A$ 点作 $A Q pll D B$ 交 $overline(C B)$ 延长线于 $Q$.
 
-  求证：$⁠overline(A Q) = overline(A C)$.
+  求证：$overline(A Q) = overline(A C)$.
 
 == 面积与勾股定理
 === 面积的基本性质和面积单位
@@ -2421,7 +2421,7 @@ $⁠therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
 
 由面积单位的直观含义，我们可看到面积这个几何量应该具有下列基本性质：
 
-+ 设 $⁠R$ 和 $R'$ 是两个可以完全叠合的“平面区域”（图3.69），即 $R$ 和 $R'$ 的形状大小完全一致，则 $R$ 和 $R'$ 的面积显然相等．
++ 设 $R$ 和 $R'$ 是两个可以完全叠合的“平面区域”（图3.69），即 $R$ 和 $R'$ 的形状大小完全一致，则 $R$ 和 $R'$ 的面积显然相等．
 
   #figure([#scale(80%, reflow: true, image("/math2/fig/3-69.png"));
 
@@ -2437,9 +2437,9 @@ $⁠therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
     ]
   )
 
-+ 面积的可加性：设区域 $R_1$, $⁠R_2$ 是由区域 $R$ 分割而成（图3.70），或者说区域 $R_1$、$⁠R_2$ 拼成区域 $R$, 则 $⁠R$ 的面积为 $R_1$, $⁠R_2$ 的面积之和．
++ 面积的可加性：设区域 $R_1$, $R_2$ 是由区域 $R$ 分割而成（图3.70），或者说区域 $R_1$、$R_2$ 拼成区域 $R$, 则 $R$ 的面积为 $R_1$, $R_2$ 的面积之和．
 
-+ 设区域 $T$ 是区域 $R$ 的一部分，也就是区域 $R$ 包含区域 $T$, 则有：$⁠T$ 的面积 $< R$ 的面积（图3.71）．例如在图3.72中，正方形 $A B C D$ 的面积 $<$ 圆的面积 $<$ 正方形 $A' B' C' D'$ 的面积．
++ 设区域 $T$ 是区域 $R$ 的一部分，也就是区域 $R$ 包含区域 $T$, 则有：$T$ 的面积 $< R$ 的面积（图3.71）．例如在图3.72中，正方形 $A B C D$ 的面积 $<$ 圆的面积 $<$ 正方形 $A' B' C' D'$ 的面积．
 
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#scale(80%, reflow: true, image("/math2/fig/3-71.png"));], caption: []), figure([#fig("3-125");], caption: []))));
 
@@ -2454,11 +2454,11 @@ $⁠therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
 
   + 一平方公里($upright(k m)^2$)$= underline(#h(2em) #h(2em))$ 平方米($upright(m)^2$)
 
-  + 一平方米($⁠upright(m)^2$)$= underline(#h(2em) #h(2em))$ 平方分米($upright(d m)^2$)
+  + 一平方米($upright(m)^2$)$= underline(#h(2em) #h(2em))$ 平方分米($upright(d m)^2$)
 
-  + 一平方分米($⁠upright(d m)^2$)$= underline(#h(2em) #h(2em))$ 平方厘米($upright(c m)^2$)
+  + 一平方分米($upright(d m)^2$)$= underline(#h(2em) #h(2em))$ 平方厘米($upright(c m)^2$)
 
-  + 一平方厘米($⁠upright(c m)^2$)$= underline(#h(2em) #h(2em))$ 平方毫米($upright(m m)^2$)
+  + 一平方厘米($upright(c m)^2$)$= underline(#h(2em) #h(2em))$ 平方毫米($upright(m m)^2$)
 
   + 一平方丈 $= underline(#h(2em) #h(2em))$ 平方尺
 
@@ -2480,7 +2480,7 @@ $⁠therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
 === 长方形面积
 长方形的一组邻边分别叫做长和宽．
 
-设长方形 $⁠A B C D$\(图3.73), 长 $⁠overline(A B) = a$, 宽 $⁠overline(B C) = b$, 则长方形面积 $=$ 长 $times$ 宽 $= a b$.
+设长方形 $A B C D$\(图3.73), 长 $overline(A B) = a$, 宽 $overline(B C) = b$, 则长方形面积 $=$ 长 $times$ 宽 $= a b$.
 
 #figure([#fig("3-126");
 
@@ -2489,15 +2489,15 @@ $⁠therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
   ]
 )
 
-上面这个公式，同学们在小学就已经学过了．虽然如此，我们不妨问问同学：你们知道这个公式成立的理由吗？可能会有许多同学觉得这个问题太简单了，其实要严格证明这个公式并不那么简单．当 $⁠a\,b$ 是正整数时，的确是对的．例如，$a = 4$, $⁠b = 3$, 那么 $⁠overline(A B)$ 的长正好是4个单位长，$overline(B C)$ 长正好是3个单位长，$A B C D$ 正好被12个单位正方形填满．可是，$overline(A B)$、$⁠overline(B C)$ 的长不见得都能用整数表示，甚至有的线段长不能用有理数来表示，那么上述公式当 $a$、$⁠b$ 不是正整数时是否还成立呢？所以长方形面积的讨论并不是同学想像的那么简单，以至我们现在还不能严格证明它．下面我们仅对 $a$、$⁠b$ 都是整数或都是分数时加以证明．
+上面这个公式，同学们在小学就已经学过了．虽然如此，我们不妨问问同学：你们知道这个公式成立的理由吗？可能会有许多同学觉得这个问题太简单了，其实要严格证明这个公式并不那么简单．当 $a\,b$ 是正整数时，的确是对的．例如，$a = 4$, $b = 3$, 那么 $overline(A B)$ 的长正好是4个单位长，$overline(B C)$ 长正好是3个单位长，$A B C D$ 正好被12个单位正方形填满．可是，$overline(A B)$、$overline(B C)$ 的长不见得都能用整数表示，甚至有的线段长不能用有理数来表示，那么上述公式当 $a$、$b$ 不是正整数时是否还成立呢？所以长方形面积的讨论并不是同学想像的那么简单，以至我们现在还不能严格证明它．下面我们仅对 $a$、$b$ 都是整数或都是分数时加以证明．
 
-+ $a = n$, $⁠b = m$, $⁠n$、$⁠m$ 为正整数，长方形 $A B C D$ 可分成 $n times m$ 个单位正方形，所以面积为 $n dot.op m = a dot.op b$
++ $a = n$, $b = m$, $n$、$m$ 为正整数，长方形 $A B C D$ 可分成 $n times m$ 个单位正方形，所以面积为 $n dot.op m = a dot.op b$
 
-+ $⁠a$、$⁠b$ 都是分数，不妨设它们的分母相同，设 $a = m / n$, $⁠b = ell / n$，这时两个分数单位都是 $1 / n$ 单位长，$a = m$ 个 $1 / n$，$⁠b = ell$ 个 $1 / n$．
++ $a$、$b$ 都是分数，不妨设它们的分母相同，设 $a = m / n$, $b = ell / n$，这时两个分数单位都是 $1 / n$ 单位长，$a = m$ 个 $1 / n$，$b = ell$ 个 $1 / n$．
 
-  我们把长度单位等分为 $⁠n$ 段（图3.74），单位正方形被分割为 $n^2$ 个边长为 $1 / n$ 长度单位的小正方形．所以边长为 $1 / n$ 的小单位正方形面积是原单位正方形面积的 $1 / n^2$，长方形的长 $⁠a$ 为 $m$ 个 $1 / n$ 长，宽为 $ell$ 个 $1 / n$ 长，我们把长方形 $A B C D$ 分割成 $m times ell$ 个边长为 $1 / n$ 的小正方形（图3.75），所以该长方形面积为 $m times ell$ 个（$1 / n^2$ 单位面积），即 $m / n dot.op ell / n$ 个单位面积．所以长方形面积 $= a dot.op b = m / n dot.op ell / n$
+  我们把长度单位等分为 $n$ 段（图3.74），单位正方形被分割为 $n^2$ 个边长为 $1 / n$ 长度单位的小正方形．所以边长为 $1 / n$ 的小单位正方形面积是原单位正方形面积的 $1 / n^2$，长方形的长 $a$ 为 $m$ 个 $1 / n$ 长，宽为 $ell$ 个 $1 / n$ 长，我们把长方形 $A B C D$ 分割成 $m times ell$ 个边长为 $1 / n$ 的小正方形（图3.75），所以该长方形面积为 $m times ell$ 个（$1 / n^2$ 单位面积），即 $m / n dot.op ell / n$ 个单位面积．所以长方形面积 $= a dot.op b = m / n dot.op ell / n$
 
-+ $⁠a$、$⁠b$ 都是实数时，长方形的面积仍等于长 $times$ 宽．这到高中我们才能证明它．
++ $a$、$b$ 都是实数时，长方形的面积仍等于长 $times$ 宽．这到高中我们才能证明它．
 
 #align(center, block(breakable: false, grid(columns: (40%, 55%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-127");], caption: []), figure([#fig("3-128");], caption: []))));
 
@@ -2509,9 +2509,9 @@ $⁠therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
 平行四边形的面积等于底 $times$ 高.
 
 ]
-已知：平行四边形 $A B C D$ 中，设底 $overline(A B) = a$, 高 $⁠overline(B E) = h$（图3.76）
+已知：平行四边形 $A B C D$ 中，设底 $overline(A B) = a$, 高 $overline(B E) = h$（图3.76）
 
-求证：$⁠pgram A B C D$ 的面积 $= a dot.op h$.
+求证：$pgram A B C D$ 的面积 $= a dot.op h$.
 
 #figure([#fig("3-129");
 
@@ -2521,15 +2521,15 @@ $⁠therefore quad overline(B_1 B_2) = overline(B_2 B_3)$（等量代换）．
 )
 
 #proof[
-引 $⁠A F tack.t A B$ 交 $C D$ 的延长线于 $F$, 则 $⁠A F pll B E$, 四边形 $⁠A B E F$ 是矩形（为什么？）．
+引 $A F tack.t A B$ 交 $C D$ 的延长线于 $F$, 则 $A F pll B E$, 四边形 $A B E F$ 是矩形（为什么？）．
 
 在直角三角形 $A D F$ 与 $B C E$ 中，
 
 $because quad overline(A F) = overline(B E)\,quad overline(A D) = overline(B C)$,
 
-$⁠therefore quad triangle.stroked.t A D F tilde.equiv triangle.stroked.t B C E$（为什么？）
+$therefore quad triangle.stroked.t A D F tilde.equiv triangle.stroked.t B C E$（为什么？）
 
-$⁠therefore quad triangle.stroked.t A D F$ 的面积 $= triangle.stroked.t B C E$ 的面积（性质1）
+$therefore quad triangle.stroked.t A D F$ 的面积 $= triangle.stroked.t B C E$ 的面积（性质1）
 
 $therefore quad pgram A B C D$ 的面积 $= triangle.stroked.t C B E$ 的面积 $+$ 四边形 $A B E D$ 的面积，（性质2）
 
@@ -2555,12 +2555,12 @@ $therefore quad pgram A B C D$ 的面积 $= triangle.stroked.t A D F$ 的面积 
 从三角形某顶点向对边作高，则对边就叫做底．
 
 #blk[定理][
-三角形的面积等于底 $⁠times$ 高的一半.
+三角形的面积等于底 $times$ 高的一半.
 
 ]
-已知：$triangle.stroked.t A B C$ 中底 $overline(A B) = a$, $⁠overline(A B)$ 边上的高 $overline(C E) = h$（图3.77）．
+已知：$triangle.stroked.t A B C$ 中底 $overline(A B) = a$, $overline(A B)$ 边上的高 $overline(C E) = h$（图3.77）．
 
-求证：$⁠triangle.stroked.t A B C$ 的面积 $= 1 / 2 a h$.
+求证：$triangle.stroked.t A B C$ 的面积 $= 1 / 2 a h$.
 
 #figure([#fig("3-130");
 
@@ -2570,11 +2570,11 @@ $therefore quad pgram A B C D$ 的面积 $= triangle.stroked.t A D F$ 的面积 
 )
 
 #proof[
-引 $⁠B D pll A C$, $⁠C D pll A B$, $⁠C D$、$⁠B D$ 交于 $D$,（图3.77）则 $⁠A B D C$ 为平行四边形．
+引 $B D pll A C$, $C D pll A B$, $C D$、$B D$ 交于 $D$,（图3.77）则 $A B D C$ 为平行四边形．
 
 但 $pgram A B D C$ 的面积 $= a dot.op h$,
 
-$⁠pgram A B D C$ 的面积 $= 2 times triangle.stroked.t A B C$ 的面积，
+$pgram A B D C$ 的面积 $= 2 times triangle.stroked.t A B C$ 的面积，
 
 $therefore quad triangle.stroked.t A B C$ 的面积 $= 1 / 2 a h$.
 
@@ -2606,12 +2606,12 @@ $therefore quad triangle.stroked.t A B C$ 的面积 $= 1 / 2 a h$.
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-131");], caption: []), figure([#fig("3-132");], caption: []))));
 
 #example[
-已知：五边形 $⁠A B C D E$\(图3.79).
+已知：五边形 $A B C D E$\(图3.79).
 
-求作：一个三角形和五边形 $⁠A B C D E$ 等积．
+求作：一个三角形和五边形 $A B C D E$ 等积．
 
 ]
-作法：作 $overline(D B)$、$⁠overline(D A)$, 过顶点 $⁠C$、$⁠E$, 引 $⁠C G$ 和 $E F$, 分别平行于 $⁠D B$ 和 $D A$, 直线 $⁠A B$ 分别交 $C G$ 和 $E F$ 于 $G$、$⁠F$ 两点，则 $triangle.stroked.t D F G$ 为所求的三角形．
+作法：作 $overline(D B)$、$overline(D A)$, 过顶点 $C$、$E$, 引 $C G$ 和 $E F$, 分别平行于 $D B$ 和 $D A$, 直线 $A B$ 分别交 $C G$ 和 $E F$ 于 $G$、$F$ 两点，则 $triangle.stroked.t D F G$ 为所求的三角形．
 
 #proof[
 $because quad triangle.stroked.t D B C$ 的面积 $= triangle.stroked.t D B G$ 的面积，$triangle.stroked.t D A E$ 的面积 $= triangle.stroked.t D F A$ 的面积（等底等高）．
@@ -2636,9 +2636,9 @@ $because quad triangle.stroked.t D B C$ 的面积 $= triangle.stroked.t D B G$ �
 
 + 已知一等腰直角三角形的斜边是18米，求它的面积．
 
-+ 经过 $⁠pgram A B C D$ 的对角线 $overline(A C)$ 上的一点 $P$ 作两条边的平行线 $overline(E F)$, $⁠overline(G H)$（如图），则 $⁠pgram G B E P$ 和 $pgram F P H D$ 等积．
++ 经过 $pgram A B C D$ 的对角线 $overline(A C)$ 上的一点 $P$ 作两条边的平行线 $overline(E F)$, $overline(G H)$（如图），则 $pgram G B E P$ 和 $pgram F P H D$ 等积．
 
-+ 经过 $pgram A B C D$ 的顶点 $D$ 的任一直线设与 $overline(B C)$、$⁠overline(A B)$ 或者它们的延长线分别交于 $Q$、$⁠P$, 则 $⁠triangle.stroked.t A B Q$ 和 $triangle.stroked.t P Q C$ 等积．
++ 经过 $pgram A B C D$ 的顶点 $D$ 的任一直线设与 $overline(B C)$、$overline(A B)$ 或者它们的延长线分别交于 $Q$、$P$, 则 $triangle.stroked.t A B Q$ 和 $triangle.stroked.t P Q C$ 等积．
 
 + 求作一直角三角形和已知正方形等积．
 
@@ -2672,18 +2672,18 @@ $because quad triangle.stroked.t D B C$ 的面积 $= triangle.stroked.t D B G$ �
 直角三角形中，两条直角边的平方和等于斜边的平方．
 
 ]
-已知：直角三角形中，勾长是 $a$, 股长是 $⁠b$, 斜边长是 $⁠c$（图3.82）．
+已知：直角三角形中，勾长是 $a$, 股长是 $b$, 斜边长是 $c$（图3.82）．
 
-求证：$⁠a^2 + b^2 = c^2$.
+求证：$a^2 + b^2 = c^2$.
 
 #proof[
-以 $⁠a + b$ 为边长作正方形 $A B C D$, 在 $⁠overline(A B)$、$⁠overline(B C)$、$⁠overline(C D)$、$⁠overline(D A)$ 各边上分别截取 $overline(A E) = overline(B F) = overline(C G) = overline(D H) = a$, 于是，$⁠overline(E B) = overline(F C) = overline(G D) = overline(H A) = b$. 因为 $⁠angle A = angle B = angle C = angle D = 90 degree$ 所以，$triangle.stroked.t A E H tilde.equiv triangle.stroked.t B F E tilde.equiv triangle.stroked.t C G F tilde.equiv triangle.stroked.t D H G$（图3.82）.
+以 $a + b$ 为边长作正方形 $A B C D$, 在 $overline(A B)$、$overline(B C)$、$overline(C D)$、$overline(D A)$ 各边上分别截取 $overline(A E) = overline(B F) = overline(C G) = overline(D H) = a$, 于是，$overline(E B) = overline(F C) = overline(G D) = overline(H A) = b$. 因为 $angle A = angle B = angle C = angle D = 90 degree$ 所以，$triangle.stroked.t A E H tilde.equiv triangle.stroked.t B F E tilde.equiv triangle.stroked.t C G F tilde.equiv triangle.stroked.t D H G$（图3.82）.
 
-并且，这四个全等的直角三角形的斜边全是 $⁠c$. 又因为直角三角形中的两锐角互余，所以：$ alpha + beta = 90 degree $ #noindent;但 $alpha + beta + gamma = 180 degree$
+并且，这四个全等的直角三角形的斜边全是 $c$. 又因为直角三角形中的两锐角互余，所以：$ alpha + beta = 90 degree $ #noindent;但 $alpha + beta + gamma = 180 degree$
 
-$⁠therefore quad gamma = 90 degree$.
+$therefore quad gamma = 90 degree$.
 
-由正方形的定义可知四边形 $⁠E F G H$ 是正方形．正方形 $A B C D$ 的面积是 $\(a + b\)^2$ 或 $4 times 1 / 2 a b + c^2$.
+由正方形的定义可知四边形 $E F G H$ 是正方形．正方形 $A B C D$ 的面积是 $\(a + b\)^2$ 或 $4 times 1 / 2 a b + c^2$.
 
 所以 $ \(a + b\)^2 = 4 times 1 / 2 a b + c^2 $ #noindent;展开得：$ a^2 + 2 a b + b^2 = 2 a b + c^2 $ #noindent;即 $ a^2 + b^2 = c^2 $
 
@@ -2692,15 +2692,15 @@ $⁠therefore quad gamma = 90 degree$.
 
 我国古代算学家对这个定理作了各种证明，上面的证法只是其中的一种．作为例子，我们再介绍一种勾股定理的欧几里得的证法．
 
-如图3.83所示，在 $⁠triangle.stroked.t A B C$ 中，$angle A B C = 90 degree$. 以 $⁠triangle.stroked.t A B C$ 的各边为一边，分别在 $triangle.stroked.t A B C$ 的外侧作正方形 $A E D C$, $⁠B C F G$, $⁠A B H K$. 引 $⁠B L tack.t E D$, 分别交 $⁠overline(E D)$、$⁠overline(A C)$ 于 $L$、$⁠I$, 则 $⁠B L pll A E$.
+如图3.83所示，在 $triangle.stroked.t A B C$ 中，$angle A B C = 90 degree$. 以 $triangle.stroked.t A B C$ 的各边为一边，分别在 $triangle.stroked.t A B C$ 的外侧作正方形 $A E D C$, $B C F G$, $A B H K$. 引 $B L tack.t E D$, 分别交 $overline(E D)$、$overline(A C)$ 于 $L$、$I$, 则 $B L pll A E$.
 
-作 $⁠overline(K C)$、$⁠overline(B E)$.
+作 $overline(K C)$、$overline(B E)$.
 
-$⁠because quad overline(A B) = overline(A K)\,quad overline(A C) = overline(A E)\,quad angle K A C = angle E A B$,
+$because quad overline(A B) = overline(A K)\,quad overline(A C) = overline(A E)\,quad angle K A C = angle E A B$,
 
-$⁠therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t A K C$（SAS）
+$therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t A K C$（SAS）
 
-$⁠because quad triangle.stroked.t A B E$ 与矩形 $A E L I$ 等底等高，$triangle.stroked.t A K C$ 与正方形 $A B H K$ 等底等高，
+$because quad triangle.stroked.t A B E$ 与矩形 $A E L I$ 等底等高，$triangle.stroked.t A K C$ 与正方形 $A B H K$ 等底等高，
 
 $therefore quad triangle.stroked.t A B E$ 的面积 $= 1 / 2$ 矩形 $A E L I$ 的面积
 
@@ -2719,41 +2719,41 @@ $therefore quad$ 正方形 $A E D C$ 的面积 $=$ 正方形 $A B H K$ 的面积
 勾股定理揭示了直角三角形三边之间的关系，如果知道了直角三角形任意两边的长度，应用勾股定理便可计算出第三边的长．
 
 #example[
-已知：直角 $⁠triangle.stroked.t A B C$, $⁠angle B = 90 degree$, $⁠overline(A B) = 12$cm, $⁠overline(B C) = 5$cm (图3.84).
+已知：直角 $triangle.stroked.t A B C$, $angle B = 90 degree$, $overline(A B) = 12$⁠cm, $overline(B C) = 5$⁠cm (图3.84).
 
-求：$⁠overline(A C)$ 之长．
+求：$overline(A C)$ 之长．
 
 ]
 #solution[
-设 $overline(A C)$ 的长为 $x$cm, 根据勾股定理：$ x^2 = 5^2 + 12^2 quad arrow.r.double quad x^2 = 169 $ #noindent;$because quad x > 0\,#h(2em) therefore quad x = 13\(upright(c m)\)$
+设 $overline(A C)$ 的长为 $x$⁠cm, 根据勾股定理：$ x^2 = 5^2 + 12^2 quad arrow.r.double quad x^2 = 169 $ #noindent;$because quad x > 0\,#h(2em) therefore quad x = 13\(upright(c m)\)$
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-139");], caption: []), figure([#fig("3-140");], caption: []))));
 
 #example[
-将长为5米的梯子 $⁠overline(A C)$ 斜靠在墙上，$overline(B C)$ 长为2米，求地面到梯子上端高 $overline(A B)$ 之长（精确到0.01米）（图3.85）.
+将长为5米的梯子 $overline(A C)$ 斜靠在墙上，$overline(B C)$ 长为2米，求地面到梯子上端高 $overline(A B)$ 之长（精确到0.01米）（图3.85）.
 
 ]
 #solution[
-设 $overline(A B)$ 的长为 $x$（米），由于 $⁠triangle.stroked.t A B C$ 是直角三角形，且以 $overline(A C)$ 为斜边；根据勾股定理有，$ x^2 + 2^2 = 5^2 quad arrow.r.double quad x^2 = 25 - 4 = 21 $
+设 $overline(A B)$ 的长为 $x$（米），由于 $triangle.stroked.t A B C$ 是直角三角形，且以 $overline(A C)$ 为斜边；根据勾股定理有，$ x^2 + 2^2 = 5^2 quad arrow.r.double quad x^2 = 25 - 4 = 21 $
 
-$⁠because quad x > 0$
+$because quad x > 0$
 
-$⁠therefore quad x = sqrt(21) approx 4.58$（米）．
+$therefore quad x = sqrt(21) approx 4.58$（米）．
 
-答：地面到梯子上端高 $⁠overline(A B)$ 之长约等于4.58米．
+答：地面到梯子上端高 $overline(A B)$ 之长约等于4.58米．
 
 ]
 #blk[勾股定理逆定理][
-如果三角形的三边 $a$、$⁠b$、$⁠c$ 满足条件 $a^2 + b^2 = c^2$, 那么 $⁠c$ 边所对的角是直角．
+如果三角形的三边 $a$、$b$、$c$ 满足条件 $a^2 + b^2 = c^2$, 那么 $c$ 边所对的角是直角．
 
 ]
 #proof[
-设 $triangle.stroked.t A B C$ 的三边满足 $a^2 + b^2 = c^2$\(图3.86). 另作一个直角三角形 $⁠A' B' C'$，使 $⁠angle C' = 90 degree$, $⁠overline(B' C') = a$, $⁠overline(A' C') = b$. 根据勾股定理，$ overline(A' B')^2 = a^2 + b^2 $ #noindent;但 $ overline(A' B')^2 = c^2 $
+设 $triangle.stroked.t A B C$ 的三边满足 $a^2 + b^2 = c^2$\(图3.86). 另作一个直角三角形 $A' B' C'$，使 $angle C' = 90 degree$, $overline(B' C') = a$, $overline(A' C') = b$. 根据勾股定理，$ overline(A' B')^2 = a^2 + b^2 $ #noindent;但 $ overline(A' B')^2 = c^2 $
 
-$⁠therefore quad overline(A' B') = c$.
+$therefore quad overline(A' B') = c$.
 
-$⁠therefore quad triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'$ (SSS)
+$therefore quad triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'$ (SSS)
 
 $therefore quad angle C = angle C' = 90 degree$
 
@@ -2769,20 +2769,20 @@ $therefore quad angle C = angle C' = 90 degree$
 平行四边形两条对角线的平方和等于它的四边的平方和，或等于相邻两边平方和的二倍．
 
 ]
-已知：平行四边形 $⁠A B C D$ (图3.87).
+已知：平行四边形 $A B C D$ (图3.87).
 
 求证：$overline(A C)^2 + overline(B D)^2 = overline(A B)^2 + overline(B C)^2 + overline(C D)^2 + overline(D A)^2 = 2 (overline(A B)^2 + overline(B C)^2)$
 
 #proof[
-设 $⁠angle B$ 为锐角，分别由 $A$、$⁠D$ 向边 $overline(B C)$ 及其延长线作垂线 $A E$、$⁠D F$.
+设 $angle B$ 为锐角，分别由 $A$、$D$ 向边 $overline(B C)$ 及其延长线作垂线 $A E$、$D F$.
 
-$⁠because quad overline(A B) = overline(C D)\,quad angle B = angle D C F\,quad angle A E B = angle D F C = 90 degree$,
+$because quad overline(A B) = overline(C D)\,quad angle B = angle D C F\,quad angle A E B = angle D F C = 90 degree$,
 
-$⁠therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t D C F$ (AAS)
+$therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t D C F$ (AAS)
 
-在直角三角形 $A B E$、$⁠A C E$、$⁠D B F$ 中，由勾股定理可以得到：
+在直角三角形 $A B E$、$A C E$、$D B F$ 中，由勾股定理可以得到：
 
-#numbered-align(($overline(A B)^2$, $⁠zws = overline(A E)^2 + overline(B E)^2$, true), ($⁠overline(A C)^2$, $⁠zws = overline(A E)^2 + overline(E C)^2 = overline(A E)^2 + (overline(B C) - overline(B E))^2$, true), ($⁠overline(B D)^2$, $⁠zws = overline(B F)^2 + overline(D F)^2 = (overline(B C) + overline(C F))^2 + overline(D F)^2$, true));
+#numbered-align(($overline(A B)^2$, $eqph = overline(A E)^2 + overline(B E)^2$, true), ($overline(A C)^2$, $eqph = overline(A E)^2 + overline(E C)^2 = overline(A E)^2 + (overline(B C) - overline(B E))^2$, true), ($overline(B D)^2$, $eqph = overline(B F)^2 + overline(D F)^2 = (overline(B C) + overline(C F))^2 + overline(D F)^2$, true));
 
 #noindent; $\(3.2\)+\(3.3\)$ 得：$ overline(A C)^2 + overline(B D)^2 & = (overline(B C) - overline(B E))^2 + (overline(B C) + overline(C F))^2 + 2 overline(A E)^2\
  & = 2 (overline(B C)^2 + overline(B E)^2 + overline(A E)^2)\
@@ -2795,13 +2795,13 @@ $⁠therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t D C F
 当平行四边形为矩形时（图3.88），由于矩形两条对角线相等，上面的关系式转化为：$ 2 overline(A C)^2 = 2 (overline(A B)^2 + overline(B C)^2) $ #noindent;即 $ overline(A C)^2 = overline(A B)^2 + overline(B C)^2 $ #noindent;这恰好符合勾股定理．因此，一般平行四边形对角线与边的关系可看成广义勾股定理．
 
 #example[
-已知：$triangle.stroked.t A B C$ 的三边长 $overline(B C) = a$, $⁠overline(A C) = b$, $⁠overline(A B) = c$（图3.89）．
+已知：$triangle.stroked.t A B C$ 的三边长 $overline(B C) = a$, $overline(A C) = b$, $overline(A B) = c$（图3.89）．
 
-求：三角形三边上中线长 $⁠m_a$、$⁠m_b$、$⁠m_c$.
+求：三角形三边上中线长 $m_a$、$m_b$、$m_c$.
 
 ]
 #solution[
-以 $⁠triangle.stroked.t A B C$ 的边 $overline(A B)$, $⁠overline(A C)$ 为邻边作平行四边形 $A B D C$, 对角线 $⁠overline(A D)$、$⁠overline(B C)$ 相交于 $M$, 则 $⁠overline(A M)$ 为 $triangle.stroked.t A B C$ 中 $overline(B C)$ 边上的中线，它为 $overline(A D)$ 长的一半，由广义勾股定理知：$ overline(A D)^2 + overline(B C)^2 = 2 (overline(A B)^2 + overline(A C)^2) $ #noindent;即 $ 4 overline(A M)^2 + a^2 = 2\(b^2 + c^2\) $ #noindent;$therefore quad overline(A M)^2 = 1 / 4 times\[2\(b^2 + c^2\)- a^2\]$ $ A M = 1 / 2 sqrt(2\(b^2 + c^2\)- a^2) $ #noindent;即：$m_a = 1 / 2 sqrt(2\(b^2 + c^2\)- a^2)$
+以 $triangle.stroked.t A B C$ 的边 $overline(A B)$, $overline(A C)$ 为邻边作平行四边形 $A B D C$, 对角线 $overline(A D)$、$overline(B C)$ 相交于 $M$, 则 $overline(A M)$ 为 $triangle.stroked.t A B C$ 中 $overline(B C)$ 边上的中线，它为 $overline(A D)$ 长的一半，由广义勾股定理知：$ overline(A D)^2 + overline(B C)^2 = 2 (overline(A B)^2 + overline(A C)^2) $ #noindent;即 $ 4 overline(A M)^2 + a^2 = 2\(b^2 + c^2\) $ #noindent;$therefore quad overline(A M)^2 = 1 / 4 times\[2\(b^2 + c^2\)- a^2\]$ $ A M = 1 / 2 sqrt(2\(b^2 + c^2\)- a^2) $ #noindent;即：$m_a = 1 / 2 sqrt(2\(b^2 + c^2\)- a^2)$
 
 同理可得：$ m_b = 1 / 2 sqrt(2\(a^2 + c^2\)- b^2)\,#h(2em) m_c = 1 / 2 sqrt(2\(a^2 + b^2\)- c^2) $
 
@@ -2814,23 +2814,23 @@ $⁠therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t D C F
 ]])));
 
 #exercise[
-+ 在 $⁠triangle.stroked.t A B C$ 中，$angle C$ 是直角．
++ 在 $triangle.stroked.t A B C$ 中，$angle C$ 是直角．
 
-  + 已知 $overline(B C) = 6$, $⁠overline(A C) = 8$, 求 $⁠overline(A B)$ 之长．
+  + 已知 $overline(B C) = 6$, $overline(A C) = 8$, 求 $overline(A B)$ 之长．
 
-  + 已知 $overline(A B) = 25$, $⁠overline(B C) = 14$, 求 $⁠overline(A C)$ 之长．
+  + 已知 $overline(A B) = 25$, $overline(B C) = 14$, 求 $overline(A C)$ 之长．
 
-  + 已知 $overline(A C) = 13$, $⁠overline(A B) = 19$, 求 $⁠overline(B C)$ 之长．
+  + 已知 $overline(A C) = 13$, $overline(A B) = 19$, 求 $overline(B C)$ 之长．
 
 + 已知等腰直角三角形的直角边长是 $a$, 求底边．
 
 + 正方形一边长为10寸，求对角线长．
 
-+ 矩形相邻两边为 $⁠a$、$⁠b$ 时，求对角线长．
++ 矩形相邻两边为 $a$、$b$ 时，求对角线长．
 
 + 已知等边三角形的边长为 $a$, 求等边三角形一边上的高和这等边三角形的面积．
 
-+ 求出对角线为 $⁠d$ 的正方形的边长．
++ 求出对角线为 $d$ 的正方形的边长．
 
 + 作一个三角形，使三边长为3cm, 4cm, 5cm, 边长为5cm的边所对的角是不是直角？为什么？
 
@@ -2853,7 +2853,7 @@ $⁠therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t D C F
 
 + 等腰三角形的腰长是20厘米，底长是32厘米，求它的面积．
 
-+ 在 $⁠triangle.stroked.t A B C$ 中关系式 $overline(A C)^2 + overline(B C)^2 = overline(A B)^2$ 是 $angle C = 90 degree$ 的什么条件？
++ 在 $triangle.stroked.t A B C$ 中关系式 $overline(A C)^2 + overline(B C)^2 = overline(A B)^2$ 是 $angle C = 90 degree$ 的什么条件？
 
 ]
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题3.4]
@@ -2864,13 +2864,13 @@ $⁠therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t D C F
 
 + 在直角三角形的各边上，分别向外侧作一个正方形，连结每相邻的两个正方形的最近的两个顶点，得三个三角形等积．
 
-+ 已知：$a$、$⁠b$、$⁠c$ 分别为直角三角形勾、股、弦长，
++ 已知：$a$、$b$、$c$ 分别为直角三角形勾、股、弦长，
 
-  + $a = 3$, $⁠b = 4$, 求 $⁠c$.
+  + $a = 3$, $b = 4$, 求 $c$.
 
-  + $⁠c = 25$, $⁠b = 14$, 求 $⁠a$.
+  + $c = 25$, $b = 14$, 求 $a$.
 
-  + $⁠a = 13$, $⁠c = 19$, 求 $⁠b$.
+  + $a = 13$, $c = 19$, 求 $b$.
 
   #fig-center[
   #fig("3-146");
@@ -2881,11 +2881,11 @@ $⁠therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t D C F
   ]
   ]
 
-+ 像图中那样作出一系列的直角三角形，$⁠overline(A B_2)$、$⁠overline(A B_3)$、$⁠overline(A B_4)$、$⁠overline(A B_5)$ 分别是 $overline(A B_1)$ 的多少倍？
++ 像图中那样作出一系列的直角三角形，$overline(A B_2)$、$overline(A B_3)$、$overline(A B_4)$、$overline(A B_5)$ 分别是 $overline(A B_1)$ 的多少倍？
 
 + 设 $P$ 是矩形 $A B C D$ 内的一点，则 $overline(P A)^2 + overline(P C)^2 = overline(P B)^2 + overline(P D)^2$.
 
-+ 设 $⁠P$ 是等腰直角三角形 $A B C$ 的斜边 $overline(B C)$ 上的任意一点，求证 $overline(B P)^2 + overline(C P)^2 = 2 overline(A P)^2$
++ 设 $P$ 是等腰直角三角形 $A B C$ 的斜边 $overline(B C)$ 上的任意一点，求证 $overline(B P)^2 + overline(C P)^2 = 2 overline(A P)^2$
 
 + 三角形的三边长分别是2cm、3cm、4cm, 求三条中线的长．
 
@@ -2897,7 +2897,7 @@ $⁠therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t D C F
 
 + 菱形的周长为20cm, 面积是24cm$""^2$, 求它的对角线的长．
 
-+ 在等腰梯形 $⁠A B C D$ 中，$A B pll C D$, $⁠angle A = 60 degree$, $⁠B D$ 平分 $angle B$, 且梯形周长为20cm, 求梯形的面积．
++ 在等腰梯形 $A B C D$ 中，$A B pll C D$, $angle A = 60 degree$, $B D$ 平分 $angle B$, 且梯形周长为20cm, 求梯形的面积．
 
 == 相似形
 === 成比例的线段
@@ -2905,18 +2905,18 @@ $⁠therefore quad triangle.stroked.t A B E tilde.equiv triangle.stroked.t D C F
 用同样的长度单位去量两条已知线段，所得量数的比叫做两条线段的比．它是一个正实数．
 
 ]
-例如，$⁠overline(A B) = 4$ 厘米，$overline(C D) = 2$ 厘米，则 $overline(A B) : overline(C D) = 4 : 2 = 2 : 1$.
+例如，$overline(A B) = 4$ 厘米，$overline(C D) = 2$ 厘米，则 $overline(A B) : overline(C D) = 4 : 2 = 2 : 1$.
 
 上式也可写成：$ overline(A B) / overline(C D) = 4 / 2 = 2 / 1 $ #noindent;$overline(A B)$ 叫做比的#strong[前项]，$overline(C D)$ 叫做比的#strong[后项]．
 
 根据分数的基本性质可知，两条线段的比和选择的长度单位无关．
 
 #blk[定义][
-四条线段 $a$、$⁠b$、$⁠c$、$⁠d$, 如果满足等式 $⁠a : b = c : d$（或 $⁠a / b = c / d$），就说这#strong[四条线段成比例]．$⁠a$、$⁠b$、$⁠c$、$⁠d$ 分别叫做比例第一、二、三、四项．第一和第四两项叫做#strong[比例外项]，第二第三两项叫做#strong[比例内项]．
+四条线段 $a$、$b$、$c$、$d$, 如果满足等式 $a : b = c : d$（或 $a / b = c / d$），就说这#strong[四条线段成比例]．$a$、$b$、$c$、$d$ 分别叫做比例第一、二、三、四项．第一和第四两项叫做#strong[比例外项]，第二第三两项叫做#strong[比例内项]．
 
 ]
 #blk[定义][
-三条线段 $a$、$⁠b$、$⁠c$, 如果满足等式 $⁠a : b = b : c$（或 $⁠a / b = b / c$），$⁠b$ 就叫做 $a$、$⁠c$ 的#strong[比例中项]，$c$ 叫做 $a$、$⁠b$ 的#strong[比例第三项]．
+三条线段 $a$、$b$、$c$, 如果满足等式 $a : b = b : c$（或 $a / b = b / c$），$b$ 就叫做 $a$、$c$ 的#strong[比例中项]，$c$ 叫做 $a$、$b$ 的#strong[比例第三项]．
 
 ]
 成比例的量有下面几条重要性质（下面所有字母都代表不等于0的数）．
@@ -2952,28 +2952,28 @@ $ a / b = c / d = e / f = dots.h.c = r / s quad arrow.r.double quad frac(a + c +
 
 #block[
 #set enum(numbering: enum-at(1, "(i)"))
-+ 先证 $⁠a / b = c / d$ 是 $a d = b c$ 的充分条件．
++ 先证 $a / b = c / d$ 是 $a d = b c$ 的充分条件．
 
-  因为已知 $a / b = c / d$，所以两边同乘以 $⁠b d$, 即得 $⁠a d = b c$.
+  因为已知 $a / b = c / d$，所以两边同乘以 $b d$, 即得 $a d = b c$.
 
-+ 再证 $⁠a / b = c / d$ 是 $a d = b c$ 的必要条件．
++ 再证 $a / b = c / d$ 是 $a d = b c$ 的必要条件．
 
-  因为已知 $a d = b c$, 所以两边同除以 $⁠b d$, 即得 $⁠a / b = c / d$．
+  因为已知 $a d = b c$, 所以两边同除以 $b d$, 即得 $a / b = c / d$．
 ]
 
 由(i)、(ii) 所以有：$ a / b = c / d quad arrow.l.r.double quad a d = b c $
 
 证明性质6：
 
-设 $⁠a / b = c / d = e / f = dots.h.c = r / s = k$，则 $ a = b k\,c = d k\,e = f k\,dots.h\,r = s k $ #noindent;将上面诸式相加得：$ a + c + e + dots.h.c + r = k\(b + d + f + dots.h.c + s\) $ #noindent;因为 $b + d + f + dots.h.c + s eq.not 0$，所以 $ frac(a + c + e + dots.h.c + r, b + d + f + dots.h.c + s) & = k\
+设 $a / b = c / d = e / f = dots.h.c = r / s = k$，则 $ a = b k\,c = d k\,e = f k\,dots.h\,r = s k $ #noindent;将上面诸式相加得：$ a + c + e + dots.h.c + r = k\(b + d + f + dots.h.c + s\) $ #noindent;因为 $b + d + f + dots.h.c + s eq.not 0$，所以 $ frac(a + c + e + dots.h.c + r, b + d + f + dots.h.c + s) & = k\
  & = a / b = c / d = e / f\
  & = dots.h.c = r / s $
 
 ]
 #example[
-已知：在图3.90中，$⁠overline(A E) / overline(A D) = overline(B E) / overline(B C)$
+已知：在图3.90中，$overline(A E) / overline(A D) = overline(B E) / overline(B C)$
 
-求证：$⁠overline(A D) / overline(A E) = overline(B C) / overline(B E)$\; $⁠overline(A E) / overline(E D) = overline(B E) / overline(E C)$\; $⁠overline(A E) / overline(B E) = overline(E D) / overline(E C)$
+求证：$overline(A D) / overline(A E) = overline(B C) / overline(B E)$\; $overline(A E) / overline(E D) = overline(B E) / overline(E C)$\; $overline(A E) / overline(B E) = overline(E D) / overline(E C)$
 
 ]
 #figure([#fig("3-147");
@@ -2984,21 +2984,21 @@ $ a / b = c / d = e / f = dots.h.c = r / s quad arrow.r.double quad frac(a + c +
 )
 
 #proof[
-+ $⁠because quad overline(A E) / overline(A D) = overline(B E) / overline(B C)$
++ $because quad overline(A E) / overline(A D) = overline(B E) / overline(B C)$
 
-  $⁠therefore quad overline(A D) / overline(A E) = overline(B C) / overline(B E)$（反比定理）
+  $therefore quad overline(A D) / overline(A E) = overline(B C) / overline(B E)$（反比定理）
 
-+ $⁠because quad overline(A D) / overline(A E) = overline(B C) / overline(B E)$
++ $because quad overline(A D) / overline(A E) = overline(B C) / overline(B E)$
 
-  $⁠therefore quad frac(overline(A D) - overline(A E), overline(A E)) = frac(overline(B C) - overline(B E), overline(B E))$（分比定理）
+  $therefore quad frac(overline(A D) - overline(A E), overline(A E)) = frac(overline(B C) - overline(B E), overline(B E))$（分比定理）
 
-  即：$⁠overline(E D) / overline(A E) = overline(E C) / overline(B E)$
+  即：$overline(E D) / overline(A E) = overline(E C) / overline(B E)$
 
-  $⁠therefore quad overline(A E) / overline(E D) = overline(B E) / overline(E C)$（反比定理）
+  $therefore quad overline(A E) / overline(E D) = overline(B E) / overline(E C)$（反比定理）
 
-+ $⁠because quad overline(A E) / overline(E D) = overline(B E) / overline(E C)$
++ $because quad overline(A E) / overline(E D) = overline(B E) / overline(E C)$
 
-  $⁠therefore quad overline(A E) / overline(B E) = overline(E D) / overline(E C)$（更比定理）
+  $therefore quad overline(A E) / overline(B E) = overline(E D) / overline(E C)$（更比定理）
 
 ]
 #exercise[
@@ -3015,11 +3015,11 @@ $ a / b = c / d = e / f = dots.h.c = r / s quad arrow.r.double quad frac(a + c +
 
   ]
 
-+ 已知 $⁠a b = c d$, 试写出以 $⁠b$ 为首项的比例式，这样的比例式能有几个？
++ 已知 $a b = c d$, 试写出以 $b$ 为首项的比例式，这样的比例式能有几个？
 
 + 已知：$overline(A B) / overline(A D) = overline(A C) / overline(A E)$
 
-  求证：$⁠overline(A D) / overline(A B) = overline(A E) / overline(A C)$\; $⁠overline(A D) / overline(D B) = overline(A E) / overline(E C)$\; $⁠overline(A D) / overline(A E) = overline(D B) / overline(E C)$
+  求证：$overline(A D) / overline(A B) = overline(A E) / overline(A C)$\; $overline(A D) / overline(D B) = overline(A E) / overline(E C)$\; $overline(A D) / overline(A E) = overline(D B) / overline(E C)$
 
 ]
 #fig-center[
@@ -3053,10 +3053,10 @@ $ a / b = c / d = e / f = dots.h.c = r / s quad arrow.r.double quad frac(a + c +
   ]
 )
 
-例如，图3.92中，四边形 $⁠A B C D$ 与四边形 $A' B' C' D'$ 中，$angle A = angle A'$、$⁠angle B = angle B'$、$⁠angle C = angle C'$、$⁠angle D = angle D'$, 并且 $⁠overline(A B) : overline(A' B') = overline(B C) : overline(B' C') = overline(C D) : overline(C' D') = overline(D A) : overline(D' A')$, 则这两个四边形相似．记作“四边形 $⁠A B C D tilde.rev$ 四边形 $A' B' C' D'$”.
+例如，图3.92中，四边形 $A B C D$ 与四边形 $A' B' C' D'$ 中，$angle A = angle A'$、$angle B = angle B'$、$angle C = angle C'$、$angle D = angle D'$, 并且 $overline(A B) : overline(A' B') = overline(B C) : overline(B' C') = overline(C D) : overline(C' D') = overline(D A) : overline(D' A')$, 则这两个四边形相似．记作“四边形 $A B C D tilde.rev$ 四边形 $A' B' C' D'$”.
 
 #blk[定义][
-相似多边形（包括相似三角形）对应边的比叫做它们的#strong[相似比]（也叫放大率或缩小率）．相似比等于1的多边形显然是全等形．在图3.92中四边形 $⁠A B C D$ 对四边形 $A' B' C' D'$ 的相似比等于5:4.
+相似多边形（包括相似三角形）对应边的比叫做它们的#strong[相似比]（也叫放大率或缩小率）．相似比等于1的多边形显然是全等形．在图3.92中四边形 $A B C D$ 对四边形 $A' B' C' D'$ 的相似比等于5:4.
 
 ]
 #exercise[
@@ -3091,20 +3091,20 @@ $ a / b = c / d = e / f = dots.h.c = r / s quad arrow.r.double quad frac(a + c +
   ]
 )
 
-已知：$triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$ 中，$angle A = angle A'$, $⁠angle B = angle B'$（图3.93）
+已知：$triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$ 中，$angle A = angle A'$, $angle B = angle B'$（图3.93）
 
-求证：$⁠triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$.
+求证：$triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$.
 
 #proof[
 #numbered-eq($ angle A = angle A'\,quad angle B = angle B' quad arrow.r.double quad angle C = angle C' $);
 
-又根据移形公理，我们移动 $⁠triangle.stroked.t A' B' C'$, 使 $⁠A'$ 与 $A$ 重合，$A' B'$ 落在 $A B$ 上，因为 $angle A = angle A'$ 所以 $overline(A' C')$, 落在 $⁠overline(A C)$ 上．由于 $angle B = angle B'$, 所以 $⁠B C pll B' C'$（为什么？），又由三角形的全等条件（SAS）可知 $⁠triangle.stroked.t A' B' C' tilde.equiv triangle.stroked.t A B' C'$. 这时，如果
+又根据移形公理，我们移动 $triangle.stroked.t A' B' C'$, 使 $A'$ 与 $A$ 重合，$A' B'$ 落在 $A B$ 上，因为 $angle A = angle A'$ 所以 $overline(A' C')$, 落在 $overline(A C)$ 上．由于 $angle B = angle B'$, 所以 $B C pll B' C'$（为什么？），又由三角形的全等条件（SAS）可知 $triangle.stroked.t A' B' C' tilde.equiv triangle.stroked.t A B' C'$. 这时，如果
 
-+ $⁠overline(A B)$ 恰好是 $overline(A' B')$ 的整数倍，即 $ overline(A B) = n overline(A' B') $ #noindent;我们把 $overline(A B)$ 等分成 $n$ 段（图3.93中 $n = 3$）和 $⁠overline(A B')$ 等长的线段．然后过各分点分别作 $B C$ 的平行线和 $A C$ 的平行线，由平行线等分线段定理可知这两组平行线也分别把 $overline(B C)$ 和 $overline(A C)$ 分成了 $n$ 段相等的线段．
++ $overline(A B)$ 恰好是 $overline(A' B')$ 的整数倍，即 $ overline(A B) = n overline(A' B') $ #noindent;我们把 $overline(A B)$ 等分成 $n$ 段（图3.93中 $n = 3$）和 $overline(A B')$ 等长的线段．然后过各分点分别作 $B C$ 的平行线和 $A C$ 的平行线，由平行线等分线段定理可知这两组平行线也分别把 $overline(B C)$ 和 $overline(A C)$ 分成了 $n$ 段相等的线段．
 
-  由平行四边形对边相等这一性质可知；$overline(B C)$ 上被 $n$ 等分的每一线段和 $overline(B' C')$ 相等，$overline(A C)$ 上被 $n$ 等分的每一线段也和 $overline(A' C')$ 相等．因此有：$ overline(B C) = n overline(B' C')\,#h(2em) overline(A C) = n overline(A' C') $ #noindent;这时：#numbered-eq($ overline(A B) / overline(A' B') = overline(B C) / overline(B' C') = overline(C A) / overline(C' A') = n $);#noindent;由(3.4)、(3.5) 可知：当 $⁠overline(A B)$ 是 $overline(A' B')$ 的整数倍时，我们证明了 $triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$.
+  由平行四边形对边相等这一性质可知；$overline(B C)$ 上被 $n$ 等分的每一线段和 $overline(B' C')$ 相等，$overline(A C)$ 上被 $n$ 等分的每一线段也和 $overline(A' C')$ 相等．因此有：$ overline(B C) = n overline(B' C')\,#h(2em) overline(A C) = n overline(A' C') $ #noindent;这时：#numbered-eq($ overline(A B) / overline(A' B') = overline(B C) / overline(B' C') = overline(C A) / overline(C' A') = n $);#noindent;由(3.4)、(3.5) 可知：当 $overline(A B)$ 是 $overline(A' B')$ 的整数倍时，我们证明了 $triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$.
 
-+ $⁠overline(A B)$ 是 $overline(A' B')$ 的有理数倍，即 $overline(A B) = m / ell overline(A B')$（图3.94中 $⁠ell = 2\,thick m = 7$）
++ $overline(A B)$ 是 $overline(A' B')$ 的有理数倍，即 $overline(A B) = m / ell overline(A B')$（图3.94中 $ell = 2\,thick m = 7$）
 
   #figure([#fig("3-152");
 
@@ -3113,8 +3113,8 @@ $ a / b = c / d = e / f = dots.h.c = r / s quad arrow.r.double quad frac(a + c +
     ]
   )
 
-  那么一定存在 $⁠overline(A B'')$ 使 $overline(A' B') = ell overline(A B'')$, $⁠overline(A B) = m dot.op overline(A B'')$．这时，我们可把 $⁠overline(A B)$ 等分为 $m$ 段，过各分点分别引 $A C$ 和 $B C$ 的平行线，由平行线等分线段定理，这两组平行线分别把 $overline(B C)$ 和 $overline(A C)$ 等分为 $m$ 段，这时我们可以证明：$ overline(A C) & = m overline(A C'') = m / ell overline(A C')\
-  overline(B C) & = m overline(B'' C'') = m / ell overline(B' C') $ #noindent;因此：#numbered-eq($ overline(A B) / overline(A' B') = overline(B C) / overline(B' C') = overline(A C) / overline(A' C') = m / ell $);#noindent;由(3.4)、(3.6) 可知：当 $⁠overline(A B)$ 是 $overline(A' B')$ 的有理数倍时，我们也证明了 $triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$.
+  那么一定存在 $overline(A B'')$ 使 $overline(A' B') = ell overline(A B'')$, $overline(A B) = m dot.op overline(A B'')$．这时，我们可把 $overline(A B)$ 等分为 $m$ 段，过各分点分别引 $A C$ 和 $B C$ 的平行线，由平行线等分线段定理，这两组平行线分别把 $overline(B C)$ 和 $overline(A C)$ 等分为 $m$ 段，这时我们可以证明：$ overline(A C) & = m overline(A C'') = m / ell overline(A C')\
+  overline(B C) & = m overline(B'' C'') = m / ell overline(B' C') $ #noindent;因此：#numbered-eq($ overline(A B) / overline(A' B') = overline(B C) / overline(B' C') = overline(A C) / overline(A' C') = m / ell $);#noindent;由(3.4)、(3.6) 可知：当 $overline(A B)$ 是 $overline(A' B')$ 的有理数倍时，我们也证明了 $triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$.
 
 ]
 #blk[推论][
@@ -3133,9 +3133,9 @@ $ a / b = c / d = e / f = dots.h.c = r / s quad arrow.r.double quad frac(a + c +
 ]
 先证定理1.
 
-已知：$⁠triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$ 中，$overline(A B) / overline(A' B') = overline(B C) / overline(B' C') = overline(A C) / overline(A' C')$（图3.95）.
+已知：$triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$ 中，$overline(A B) / overline(A' B') = overline(B C) / overline(B' C') = overline(A C) / overline(A' C')$（图3.95）.
 
-求证：$⁠triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$
+求证：$triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$
 
 #figure([#fig("3-153");
 
@@ -3145,28 +3145,28 @@ $ a / b = c / d = e / f = dots.h.c = r / s quad arrow.r.double quad frac(a + c +
 )
 
 #proof[
-设 $⁠overline(A B) > overline(A' B')$, 在 $⁠overline(A B)$ 上取一点 $D$, 使 $⁠overline(A D) = overline(A' B')$, 过 $⁠D$ 作 $D E pll B C$ 交 $overline(A C)$ 于 $E$, 则 $⁠triangle.stroked.t A D E tilde.rev triangle.stroked.t A B C$（为什么？）
+设 $overline(A B) > overline(A' B')$, 在 $overline(A B)$ 上取一点 $D$, 使 $overline(A D) = overline(A' B')$, 过 $D$ 作 $D E pll B C$ 交 $overline(A C)$ 于 $E$, 则 $triangle.stroked.t A D E tilde.rev triangle.stroked.t A B C$（为什么？）
 
-已知 $⁠overline(A B) / overline(A' B') = overline(B C) / overline(B' C') = overline(A C) / overline(A' C')$，但 $⁠overline(A' B') = overline(A D)$，因此：$ overline(A B) / overline(A D) = overline(B C) / overline(B' C') = overline(A C) / overline(A' C') $
+已知 $overline(A B) / overline(A' B') = overline(B C) / overline(B' C') = overline(A C) / overline(A' C')$，但 $overline(A' B') = overline(A D)$，因此：$ overline(A B) / overline(A D) = overline(B C) / overline(B' C') = overline(A C) / overline(A' C') $
 
-又 $⁠because quad overline(A B) / overline(A D) = overline(A C) / overline(A E) = overline(B C) / overline(D E)$（相似三角形的对应边成比例）
+又 $because quad overline(A B) / overline(A D) = overline(A C) / overline(A E) = overline(B C) / overline(D E)$（相似三角形的对应边成比例）
 
-$⁠therefore quad overline(B C) / overline(B' C') = overline(B C) / overline(D E)\,quad overline(A C) / overline(A' C') = overline(A C) / overline(A E)$
+$therefore quad overline(B C) / overline(B' C') = overline(B C) / overline(D E)\,quad overline(A C) / overline(A' C') = overline(A C) / overline(A E)$
 
-$⁠therefore quad overline(B' C') = overline(D E)\,quad overline(A' C') = overline(A E)$
+$therefore quad overline(B' C') = overline(D E)\,quad overline(A' C') = overline(A E)$
 
-又 $⁠because quad overline(A' B') = overline(A D)$
+又 $because quad overline(A' B') = overline(A D)$
 
-$⁠therefore quad triangle.stroked.t A D E tilde.equiv triangle.stroked.t A' B' C'$
+$therefore quad triangle.stroked.t A D E tilde.equiv triangle.stroked.t A' B' C'$
 
-$⁠therefore quad triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$
+$therefore quad triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$
 
 ]
 现在证明定理2.
 
-已知：在 $⁠triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$ 中，$angle A = angle A'$, 并且 $⁠overline(A B) / overline(A' B') = overline(A C) / overline(A' C')$（图3.96）.
+已知：在 $triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$ 中，$angle A = angle A'$, 并且 $overline(A B) / overline(A' B') = overline(A C) / overline(A' C')$（图3.96）.
 
-求证：$⁠triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$.
+求证：$triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$.
 
 #figure([#fig("3-154");
 
@@ -3176,93 +3176,93 @@ $⁠therefore quad triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C
 )
 
 #proof[
-设 $⁠overline(A B) > overline(A' B')$, 在 $⁠overline(A B)$ 上取一点 $D$, 使 $⁠overline(A D) = overline(A' B')$, 过 $⁠D$ 作 $D E pll B C$ 交 $overline(A C)$ 于 $E$, 则 $⁠triangle.stroked.t A B C tilde.rev triangle.stroked.t A D E$（为什么？）
+设 $overline(A B) > overline(A' B')$, 在 $overline(A B)$ 上取一点 $D$, 使 $overline(A D) = overline(A' B')$, 过 $D$ 作 $D E pll B C$ 交 $overline(A C)$ 于 $E$, 则 $triangle.stroked.t A B C tilde.rev triangle.stroked.t A D E$（为什么？）
 
-已知 $⁠overline(A B) / overline(A' B') = overline(A C) / overline(A' C')$，但 $⁠overline(A D) = overline(A' B')$, 因此：$ overline(A B) / overline(A D) = overline(A C) / overline(A' C') $
+已知 $overline(A B) / overline(A' B') = overline(A C) / overline(A' C')$，但 $overline(A D) = overline(A' B')$, 因此：$ overline(A B) / overline(A D) = overline(A C) / overline(A' C') $
 
-又 $⁠because quad overline(A B) / overline(A D) = overline(A C) / overline(A E)$（为什么？）
+又 $because quad overline(A B) / overline(A D) = overline(A C) / overline(A E)$（为什么？）
 
-$⁠therefore quad overline(A C) / overline(A' C') = overline(A C) / overline(A E)$
+$therefore quad overline(A C) / overline(A' C') = overline(A C) / overline(A E)$
 
-$⁠therefore quad overline(A' C') = overline(A E)$
+$therefore quad overline(A' C') = overline(A E)$
 
-由于 $⁠angle A = angle A'\,quad overline(A' B') = overline(A D)$,
+由于 $angle A = angle A'\,quad overline(A' B') = overline(A D)$,
 
-$⁠therefore quad triangle.stroked.t A D E tilde.equiv triangle.stroked.t A' B' C'$.
+$therefore quad triangle.stroked.t A D E tilde.equiv triangle.stroked.t A' B' C'$.
 
-$⁠therefore quad triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$.
+$therefore quad triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$.
 
 ]
 #example[
-已知：$⁠triangle.stroked.t A B C$ 中，$angle C = 90 degree$, $⁠D$ 是 $overline(A C)$ 上一点. $D E tack.t A B$ 交 $overline(A B)$ 于 $E$ 点（图3.97）.
+已知：$triangle.stroked.t A B C$ 中，$angle C = 90 degree$, $D$ 是 $overline(A C)$ 上一点. $D E tack.t A B$ 交 $overline(A B)$ 于 $E$ 点（图3.97）.
 
 求证：$overline(A D) dot.op overline(A C) = overline(A E) dot.op overline(A B)$.
 
 ]
 #analyze[
-要证明 $⁠overline(A D) dot.op overline(A C) = overline(A E) dot.op overline(A B)$ 成立，只须证明 $overline(A D) / overline(A B) = overline(A E) / overline(A C)$ 即可，为此，只要证明 $triangle.stroked.t A E D tilde.rev triangle.stroked.t A C B$ 就行了．
+要证明 $overline(A D) dot.op overline(A C) = overline(A E) dot.op overline(A B)$ 成立，只须证明 $overline(A D) / overline(A B) = overline(A E) / overline(A C)$ 即可，为此，只要证明 $triangle.stroked.t A E D tilde.rev triangle.stroked.t A C B$ 就行了．
 
 ]
 #proof[
 $because quad D E tack.t A B$
 
-$⁠therefore quad angle A E D = 90 degree$.
+$therefore quad angle A E D = 90 degree$.
 
-又：$⁠because quad angle C = 90 degree$,
+又：$because quad angle C = 90 degree$,
 
-$⁠therefore quad angle A E D = angle C$.
+$therefore quad angle A E D = angle C$.
 
-又：$⁠because quad angle A = angle A$
+又：$because quad angle A = angle A$
 
-$⁠therefore quad triangle.stroked.t A E D tilde.rev triangle.stroked.t A C B$（为什么？）
+$therefore quad triangle.stroked.t A E D tilde.rev triangle.stroked.t A C B$（为什么？）
 
-$⁠therefore quad overline(A D) / overline(A B) = overline(A E) / overline(A C)$（为什么？）
+$therefore quad overline(A D) / overline(A B) = overline(A E) / overline(A C)$（为什么？）
 
-$⁠therefore quad overline(A D) dot.op overline(A C) = overline(A E) dot.op overline(A B)$（为什么？）
+$therefore quad overline(A D) dot.op overline(A C) = overline(A E) dot.op overline(A B)$（为什么？）
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-155");], caption: []), figure([#fig("3-156");], caption: []))));
 
 #example[
-已知：$⁠pgram A B C D$ 中，$G$ 是 $overline(D C)$ 边延长线上的一点，$A G$ 分别交 $overline(B D)$、$⁠overline(B C)$ 于 $E$、$⁠F$\(图3.98).
+已知：$pgram A B C D$ 中，$G$ 是 $overline(D C)$ 边延长线上的一点，$A G$ 分别交 $overline(B D)$、$overline(B C)$ 于 $E$、$F$\(图3.98).
 
-求证：$⁠overline(E F) / overline(A E) = overline(A E) / overline(E G)$
+求证：$overline(E F) / overline(A E) = overline(A E) / overline(E G)$
 
 ]
 #analyze[
-要证明 $⁠overline(E F) / overline(A E) = overline(A E) / overline(E G)$ 成立，但显然找不到含有这四条线段的两个相似三角形，因此，我们必须寻求第三个比，使它和上述比例式中的两个比相等，这个比就是 $overline(E B) / overline(E D)$，因此如果证明了以下两个比例式：
+要证明 $overline(E F) / overline(A E) = overline(A E) / overline(E G)$ 成立，但显然找不到含有这四条线段的两个相似三角形，因此，我们必须寻求第三个比，使它和上述比例式中的两个比相等，这个比就是 $overline(E B) / overline(E D)$，因此如果证明了以下两个比例式：
 
 #cols(2)[
-+ $⁠overline(E F) / overline(E A) = overline(E B) / overline(E D)$
++ $overline(E F) / overline(E A) = overline(E B) / overline(E D)$
 
-+ $⁠overline(E A) / overline(E G) = overline(E B) / overline(E D)$
++ $overline(E A) / overline(E G) = overline(E B) / overline(E D)$
 
 ]
 那么本题也就得证了．
 
 ]
 #proof[
-$⁠because quad$ 四边形 $A B C D$ 是平行四边形，
+$because quad$ 四边形 $A B C D$ 是平行四边形，
 
 $therefore quad A D pll B C$,
 
-$⁠therefore quad angle A D B = angle F B D$.
+$therefore quad angle A D B = angle F B D$.
 
-又 $⁠because quad angle D E A = angle B E F$,
+又 $because quad angle D E A = angle B E F$,
 
-$⁠therefore quad triangle.stroked.t A D E tilde.rev triangle.stroked.t F B E$（为什么？），因此：#numbered-eq($ overline(E F) / overline(E A) = overline(B E) / overline(E D) $);#noindent;同理，#numbered-eq($ overline(E A) / overline(E G) = overline(E B) / overline(E D) $);#noindent;由(3.7)、(3.8) 就有：$⁠overline(E F) / overline(E A) = overline(E A) / overline(E G)$
+$therefore quad triangle.stroked.t A D E tilde.rev triangle.stroked.t F B E$（为什么？），因此：#numbered-eq($ overline(E F) / overline(E A) = overline(B E) / overline(E D) $);#noindent;同理，#numbered-eq($ overline(E A) / overline(E G) = overline(E B) / overline(E D) $);#noindent;由(3.7)、(3.8) 就有：$overline(E F) / overline(E A) = overline(E A) / overline(E G)$
 
 ]
 #example[
 比例规原理：比例规是根据相似三角形原理制作的，利用比例规可以很快地把一条不太长的线段分成若干等分，或者按一定比例来放大或缩小已知的线段．
 
-比例规是由两条等长的腿 $⁠overline(A D)$ 和 $overline(B C)$\(图3.99) 构成的，两腿的两端是尖的，两腿中间有一条纵沟，沟内装有可以滑动并且可以固定在沟内任何地方的螺丝钉（$⁠O$），按槽边刻度选择点，可以使 $⁠overline(A O) / overline(O D) = overline(B O) / overline(O C)$ 等于不同的比值，如果我们要把一条线段三等分，把螺丝固定在刻度3的地方，那么 $overline(A O) / overline(O D) = overline(B O) / overline(O C) = 3$，由于 $⁠angle A O B = angle C O D$，
+比例规是由两条等长的腿 $overline(A D)$ 和 $overline(B C)$\(图3.99) 构成的，两腿的两端是尖的，两腿中间有一条纵沟，沟内装有可以滑动并且可以固定在沟内任何地方的螺丝钉（$O$），按槽边刻度选择点，可以使 $overline(A O) / overline(O D) = overline(B O) / overline(O C)$ 等于不同的比值，如果我们要把一条线段三等分，把螺丝固定在刻度3的地方，那么 $overline(A O) / overline(O D) = overline(B O) / overline(O C) = 3$，由于 $angle A O B = angle C O D$，
 
-$⁠therefore quad triangle.stroked.t A O B tilde.rev triangle.stroked.t C O D$（为什么？）
+$therefore quad triangle.stroked.t A O B tilde.rev triangle.stroked.t C O D$（为什么？）
 
-$⁠therefore quad overline(C D) = 1 / 3 overline(A B)$
+$therefore quad overline(C D) = 1 / 3 overline(A B)$
 
-用 $⁠overline(C D)$ 去截要分的线段 $overline(A B)$, 就可以把它三等分．
+用 $overline(C D)$ 去截要分的线段 $overline(A B)$, 就可以把它三等分．
 
 ]
 #align(center, block(breakable: false, grid(columns: (38%, 58%,), column-gutter: 1em, align: center + bottom, figure([#scale(60%, reflow: true, image("/math2/fig/3-99.png"));], caption: []), figure([#fig("3-157");], caption: []))));
@@ -3270,52 +3270,52 @@ $⁠therefore quad overline(C D) = 1 / 3 overline(A B)$
 #example[
 如果一个直角三角形的斜边和一条直角边与另一个直角三角形的斜边和一条直角边成比例，那么这两个直角三角形相似．
 
-已知：$⁠triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$ 中，$angle C = angle C' = 90 degree$, $⁠overline(A B) / overline(A' B') = overline(A C) / overline(A' C')$（图3.100）.
+已知：$triangle.stroked.t A B C$ 和 $triangle.stroked.t A' B' C'$ 中，$angle C = angle C' = 90 degree$, $overline(A B) / overline(A' B') = overline(A C) / overline(A' C')$（图3.100）.
 
-求证：$⁠triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$
+求证：$triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$
 
 ]
 #proof[
-设 $⁠overline(A B) / overline(A' B') = overline(A C) / overline(A' C') = k$，那么：$ overline(A B) = k overline(A' B')\,#h(2em) overline(A C) = k overline(A' C') $ #noindent;$ overline(B C) = sqrt(overline(A B)^2 - overline(A C)^2) = sqrt(k^2 (overline(A' B')^2 - overline(A' C')^2)) = k overline(B' C') $ #noindent;则：$overline(B C) / overline(B' C') = k$
+设 $overline(A B) / overline(A' B') = overline(A C) / overline(A' C') = k$，那么：$ overline(A B) = k overline(A' B')\,#h(2em) overline(A C) = k overline(A' C') $ #noindent;$ overline(B C) = sqrt(overline(A B)^2 - overline(A C)^2) = sqrt(k^2 (overline(A' B')^2 - overline(A' C')^2)) = k overline(B' C') $ #noindent;则：$overline(B C) / overline(B' C') = k$
 
-$⁠therefore quad overline(A B) / overline(A' B') = overline(A C) / overline(A' C') = overline(B C) / overline(B' C')$
+$therefore quad overline(A B) / overline(A' B') = overline(A C) / overline(A' C') = overline(B C) / overline(B' C')$
 
-$⁠therefore quad triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$
+$therefore quad triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$
 
 ]
 #exercise[
-+ 根据下面条件，判断 $⁠triangle.stroked.t A B C$ 和 $triangle.stroked.t D E F$ 是否相似？如果相似，指出对应边和对应角．
++ 根据下面条件，判断 $triangle.stroked.t A B C$ 和 $triangle.stroked.t D E F$ 是否相似？如果相似，指出对应边和对应角．
 
   + $angle A = 70 degree\,quad angle B = 50 degree\;quad angle D = 60 degree\,quad angle E = 50 degree$
 
-  + $⁠overline(A B) = 2 upright(c m)\,quad overline(B C) = 3 upright(c m)\,quad angle B = 50 degree$\;
+  + $overline(A B) = 2 upright(c m)\,quad overline(B C) = 3 upright(c m)\,quad angle B = 50 degree$\;
 
-    $⁠overline(D E) = 4 upright(c m)\,quad overline(E F) = 6 upright(c m)\,quad angle E = 50 degree$.
+    $overline(D E) = 4 upright(c m)\,quad overline(E F) = 6 upright(c m)\,quad angle E = 50 degree$.
 
-  + $⁠overline(A B) = 0.8 upright(c m)\,quad overline(B C) = 2 upright(c m)\,quad overline(A C) = 4.5 upright(c m)$\;
+  + $overline(A B) = 0.8 upright(c m)\,quad overline(B C) = 2 upright(c m)\,quad overline(A C) = 4.5 upright(c m)$\;
 
-    $⁠overline(D E) = 2.4 upright(c m)\,quad overline(E F) = 6 upright(c m)\,quad overline(F D) = 1.5 upright(c m)$.
+    $overline(D E) = 2.4 upright(c m)\,quad overline(E F) = 6 upright(c m)\,quad overline(F D) = 1.5 upright(c m)$.
 
 + 求证：顶角相等的两个等腰三角形相似．
 
 + 求证：顺次连结三角形各边中点所得的三角形与原三角形相似，并求出相似比．
 
-+ 已知：$⁠overline(B D)$、$⁠overline(C E)$ 是 $triangle.stroked.t A B C$ 的两条高线，求证：$overline(A B) dot.op overline(C E) = overline(B D) dot.op overline(A C)$.
++ 已知：$overline(B D)$、$overline(C E)$ 是 $triangle.stroked.t A B C$ 的两条高线，求证：$overline(A B) dot.op overline(C E) = overline(B D) dot.op overline(A C)$.
 
-+ 在 $⁠pgram A B C D$ 中，$P$ 是对角线 $overline(A C)$ 上的一点，过 $P$ 引直线交 $overline(A D)$ 于 $G$, 交 $⁠overline(B C)$ 于 $H$, 又分别与 $⁠overline(B A)$ 和 $overline(D C)$ 的延长线交于 $E$、$⁠F$.
++ 在 $pgram A B C D$ 中，$P$ 是对角线 $overline(A C)$ 上的一点，过 $P$ 引直线交 $overline(A D)$ 于 $G$, 交 $overline(B C)$ 于 $H$, 又分别与 $overline(B A)$ 和 $overline(D C)$ 的延长线交于 $E$、$F$.
 
-  求证：$⁠overline(P E) / overline(P F) = overline(P G) / overline(P H)$.
+  求证：$overline(P E) / overline(P F) = overline(P G) / overline(P H)$.
 
-+ 已知：$⁠triangle.stroked.t A B C$ 中，$angle A = 90 degree$, $⁠overline(A D)$ 是 $overline(B C)$ 上的高，求证：
++ 已知：$triangle.stroked.t A B C$ 中，$angle A = 90 degree$, $overline(A D)$ 是 $overline(B C)$ 上的高，求证：
 
   #cols(2)[
   + $overline(A B)^2 = overline(B D) dot.op overline(B C)$,
 
-  + $⁠overline(A C)^2 = overline(C D) dot.op overline(B C)$,
+  + $overline(A C)^2 = overline(C D) dot.op overline(B C)$,
 
-  + $⁠overline(A D)^2 = overline(B D) dot.op overline(D C)$,
+  + $overline(A D)^2 = overline(B D) dot.op overline(D C)$,
 
-  + $⁠overline(A B)^2 + overline(A C)^2 = overline(B C)^2$.
+  + $overline(A B)^2 + overline(A C)^2 = overline(B C)^2$.
 
   ]
   （注意：本题的(a)(b)(c) 给我们提供了求两条已知线段的比例中项的依据．而(d) 是应用相似三角形再次证明了勾股定理．）
@@ -3336,20 +3336,20 @@ $⁠therefore quad triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C
 平行于三角形的一边并且和其他两边相交的直线，将其他两边分成比例线段．
 
 ]
-已知：$⁠triangle.stroked.t A B C$ 中，$overline(D E) pll overline(B C)$ 交 $overline(A B)$ 于 $D$\; 交 $⁠overline(A C)$ 于 $E$ (图3.101).
+已知：$triangle.stroked.t A B C$ 中，$overline(D E) pll overline(B C)$ 交 $overline(A B)$ 于 $D$\; 交 $overline(A C)$ 于 $E$ (图3.101).
 
 求证：$overline(A D) / overline(D B) = overline(A E) / overline(E C)$
 
 #proof[
-$⁠because quad overline(D E) pll overline(B C)$
+$because quad overline(D E) pll overline(B C)$
 
-$⁠therefore quad triangle.stroked.t A D E tilde.rev triangle.stroked.t A B C$（为什么？）
+$therefore quad triangle.stroked.t A D E tilde.rev triangle.stroked.t A B C$（为什么？）
 
-$⁠therefore quad overline(A B) / overline(A D) = overline(A C) / overline(A E)$（为什么？），#h(1em);$⁠frac(overline(A B) - overline(A D), overline(A D)) = frac(overline(A C) - overline(A E), overline(A E))$（为什么？）
+$therefore quad overline(A B) / overline(A D) = overline(A C) / overline(A E)$（为什么？），#h(1em);$frac(overline(A B) - overline(A D), overline(A D)) = frac(overline(A C) - overline(A E), overline(A E))$（为什么？）
 
-即：$⁠overline(B D) / overline(A D) = overline(E C) / overline(A E)$
+即：$overline(B D) / overline(A D) = overline(E C) / overline(A E)$
 
-$⁠therefore quad overline(A D) / overline(D B) = overline(A E) / overline(E C)$（为什么？）
+$therefore quad overline(A D) / overline(D B) = overline(A E) / overline(E C)$（为什么？）
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-159");], caption: []), figure([#fig("3-160");], caption: []))));
@@ -3360,18 +3360,18 @@ $⁠therefore quad overline(A D) / overline(D B) = overline(A E) / overline(E C)
 三条或三条以上的平行线，截任意两条直线，所截出的对应线段成比例．
 
 ]
-已知：$⁠A D$、$⁠B E$、$⁠C F$ 三条直线互相平行，并且与任意二直线 $ell$、$⁠m$ 分别交于 $A$、$⁠B$、$⁠C$ 和 $D$、$⁠E$、$⁠F$ 各点（图3.102）.
+已知：$A D$、$B E$、$C F$ 三条直线互相平行，并且与任意二直线 $ell$、$m$ 分别交于 $A$、$B$、$C$ 和 $D$、$E$、$F$ 各点（图3.102）.
 
 求证：$overline(A B) / overline(B C) = overline(D E) / overline(E F)$
 
 #proof[
-过 $⁠D$ 点引 $ell$ 的平行线与直线 $B E$、$⁠C F$ 分别交于 $G$、$⁠H$ 两点．则$ overline(D G) / overline(G H) = overline(D E) / overline(E F) quad upright("（为什么？）") $
+过 $D$ 点引 $ell$ 的平行线与直线 $B E$、$C F$ 分别交于 $G$、$H$ 两点．则$ overline(D G) / overline(G H) = overline(D E) / overline(E F) quad upright("（为什么？）") $
 
-又 $⁠because quad$ 四边形 $A B G D$ 和四边形 $B C H G$ 都是平行四边形．
+又 $because quad$ 四边形 $A B G D$ 和四边形 $B C H G$ 都是平行四边形．
 
 $therefore quad overline(D G) = overline(A B)\,quad overline(G H) = overline(B C)$
 
-$⁠therefore quad overline(A B) / overline(B C) = overline(D E) / overline(E F)$
+$therefore quad overline(A B) / overline(B C) = overline(D E) / overline(E F)$
 
 ]
 平行截割定理的逆定理也成立．下面的定理是平行截割定理的逆定理的特殊情况，一般情况请同学们自己推证．
@@ -3381,45 +3381,45 @@ $⁠therefore quad overline(A B) / overline(B C) = overline(D E) / overline(E F)
 
 ]
 #example[
-已知：直线 $⁠D E$ 截 $triangle.stroked.t A B C$ 的 $overline(A B)$ 边于 $D$ 点，截 $overline(A C)$ 于 $E$ 点，并且 $overline(A D) / overline(D B) = overline(A E) / overline(E C)$（图3.103）.
+已知：直线 $D E$ 截 $triangle.stroked.t A B C$ 的 $overline(A B)$ 边于 $D$ 点，截 $overline(A C)$ 于 $E$ 点，并且 $overline(A D) / overline(D B) = overline(A E) / overline(E C)$（图3.103）.
 
-求证：$⁠D E pll B C$.
+求证：$D E pll B C$.
 
 ]
 #proof[
-过 $⁠D$ 点引 $D E' pll B C$, 交 $⁠overline(A C)$ 于 $E'$ 点，则 $ overline(A D) / overline(D B) = overline(A E') / overline(E' C) $ #noindent;但已知 $overline(A D) / overline(D B) = overline(A E) / overline(E C)$
+过 $D$ 点引 $D E' pll B C$, 交 $overline(A C)$ 于 $E'$ 点，则 $ overline(A D) / overline(D B) = overline(A E') / overline(E' C) $ #noindent;但已知 $overline(A D) / overline(D B) = overline(A E) / overline(E C)$
 
-$⁠therefore quad overline(A E') / overline(E' C) = overline(A E) / overline(E C)$，由合比定理得 $ overline(A C) / overline(E' C) = overline(A C) / overline(E C) $
+$therefore quad overline(A E') / overline(E' C) = overline(A E) / overline(E C)$，由合比定理得 $ overline(A C) / overline(E' C) = overline(A C) / overline(E C) $
 
-$⁠therefore quad overline(E' C) = overline(E C)$
+$therefore quad overline(E' C) = overline(E C)$
 
-因为 $⁠E'$ 和 $E$ 都在 $overline(A C)$ 上，所以 $E$ 和 $E'$ 重合，$overline(D E')$ 和 $overline(D E)$ 重合，因此 $D E pll B C$.
+因为 $E'$ 和 $E$ 都在 $overline(A C)$ 上，所以 $E$ 和 $E'$ 重合，$overline(D E')$ 和 $overline(D E)$ 重合，因此 $D E pll B C$.
 
 ]
 #align(center, block(breakable: false, grid(columns: (38%, 58%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-161");], caption: []), figure([#fig("3-162");], caption: []))));
 
 #example[
-已知：线段 $⁠a$、$⁠b$、$⁠c$.
+已知：线段 $a$、$b$、$c$.
 
-求作：$⁠a$、$⁠b$、$⁠c$ 的比例第四项．
+求作：$a$、$b$、$c$ 的比例第四项．
 
 作法：如图3.104所示
 
-+ 取一点 $A$, 作 $⁠angle B A C$,
++ 取一点 $A$, 作 $angle B A C$,
 
-+ 在边 $⁠A B$ 上依次截取 $overline(A D) = a$, $⁠overline(D E) = b$, 在边 $⁠A C$ 上截取 $overline(A F) = c$,
++ 在边 $A B$ 上依次截取 $overline(A D) = a$, $overline(D E) = b$, 在边 $A C$ 上截取 $overline(A F) = c$,
 
-+ 作 $⁠overline(D F)$, 作 $⁠E G pll D F$ 交 $A C$ 于 $G$ 点，$overline(F G)$ 就是所求的 $a$、$⁠b$、$⁠c$ 的比例第四项．
++ 作 $overline(D F)$, 作 $E G pll D F$ 交 $A C$ 于 $G$ 点，$overline(F G)$ 就是所求的 $a$、$b$、$c$ 的比例第四项．
 
 ]
 #proof[
 $because quad D F pll E G$,
 
-$⁠therefore quad overline(A D) / overline(D E) = overline(A F) / overline(F G)$（为什么？）
+$therefore quad overline(A D) / overline(D E) = overline(A F) / overline(F G)$（为什么？）
 
 即：$ a / b = c / overline(F G) $
 
-$⁠therefore quad overline(F G)$ 就是所求的 $a$、$⁠b$、$⁠c$ 的比例第四项．
+$therefore quad overline(F G)$ 就是所求的 $a$、$b$、$c$ 的比例第四项．
 
 ]
 #example[
@@ -3427,19 +3427,19 @@ $⁠therefore quad overline(F G)$ 就是所求的 $a$、$⁠b$、$⁠c$ 的比�
 
 已知：$overline(A B)$\(图3.105).
 
-求作：$⁠overline(A B)$ 上一点 $X$, 使 $⁠overline(A X) : overline(X B) = 3 : 2$
+求作：$overline(A B)$ 上一点 $X$, 使 $overline(A X) : overline(X B) = 3 : 2$
 
 作法：
 
-+ 以 $⁠A$ 点为端点作射线 $A C$ 和射线 $A B$ 成 $angle B A C$, 在 $⁠A C$ 上截取 $overline(A D) = 3$ 个单位长，$overline(D F) = 2$ 个单位长（单位长可任取）．
++ 以 $A$ 点为端点作射线 $A C$ 和射线 $A B$ 成 $angle B A C$, 在 $A C$ 上截取 $overline(A D) = 3$ 个单位长，$overline(D F) = 2$ 个单位长（单位长可任取）．
 
-+ 连结 $F$、$⁠B$, 过 $⁠D$ 作 $D X pll F B$, 交 $⁠overline(A B)$ 于 $X$, $⁠X$ 就是所求的点．
++ 连结 $F$、$B$, 过 $D$ 作 $D X pll F B$, 交 $overline(A B)$ 于 $X$, $X$ 就是所求的点．
 
 ]
 #proof[
 $because quad D X pll F B$，（作图）
 
-$⁠therefore quad overline(A X) / overline(X B) = overline(A D) / overline(D F) = 3 / 2$.
+$therefore quad overline(A X) / overline(X B) = overline(A D) / overline(D F) = 3 / 2$.
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-163");], caption: []), figure([#fig("3-164");], caption: []))));
@@ -3447,27 +3447,27 @@ $⁠therefore quad overline(A X) / overline(X B) = overline(A D) / overline(D F)
 #example[
 三角形内角平分线定理：三角形一个内角的平分线分它的对边成两条线段，这两条线段和它们相邻的两边成比例．
 
-已知：$⁠overline(A D)$ 是 $triangle.stroked.t A B C$ 的 $angle B A C$ 的平分线（图3.106）.
+已知：$overline(A D)$ 是 $triangle.stroked.t A B C$ 的 $angle B A C$ 的平分线（图3.106）.
 
 求证：$overline(B D) / overline(D C) = overline(A B) / overline(A C)$.
 
 ]
 #proof[
-作 $⁠C E pll D A$ 交 $B A$ 的延长线于 $E$.
+作 $C E pll D A$ 交 $B A$ 的延长线于 $E$.
 
-$⁠because quad A D$ 平分 $angle B A C$,
+$because quad A D$ 平分 $angle B A C$,
 
-$⁠therefore quad angle 1 = angle 2$.
+$therefore quad angle 1 = angle 2$.
 
-又 $⁠because quad angle 1 = angle A E C$, $⁠angle 2 = angle A C E$,
+又 $because quad angle 1 = angle A E C$, $angle 2 = angle A C E$,
 
-$⁠therefore quad angle A C E = angle A E C$.
+$therefore quad angle A C E = angle A E C$.
 
-$⁠therefore quad overline(A E) = overline(A C)$.
+$therefore quad overline(A E) = overline(A C)$.
 
-$⁠because quad A D pll E C$,
+$because quad A D pll E C$,
 
-$⁠therefore quad overline(B D) / overline(D C) = overline(B A) / overline(A E) quad arrow.r.double quad overline(B D) / overline(D C) = overline(A B) / overline(A C)$
+$therefore quad overline(B D) / overline(D C) = overline(B A) / overline(A E) quad arrow.r.double quad overline(B D) / overline(D C) = overline(A B) / overline(A C)$
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-165");
@@ -3507,29 +3507,29 @@ $⁠therefore quad overline(B D) / overline(D C) = overline(B A) / overline(A E)
 ]])));
 
 #exercise[
-+ 如图，已知 $⁠ell_1 pll ell_2 pll ell_3$, $⁠ell_1\,ell_2\,ell_3$ 分别截直线 $m$、$⁠n$ 于 $A$、$⁠B$、$⁠C$ 和 $D$、$⁠E$、$⁠F$ 点，并且 $overline(A B) = 3$cm, $⁠overline(B C) = 4$cm, $⁠overline(D E) = 2$cm, 求 $⁠overline(E F)$ 和 $overline(D F)$ 的长．
++ 如图，已知 $ell_1 pll ell_2 pll ell_3$, $ell_1\,ell_2\,ell_3$ 分别截直线 $m$、$n$ 于 $A$、$B$、$C$ 和 $D$、$E$、$F$ 点，并且 $overline(A B) = 3$⁠cm, $overline(B C) = 4$⁠cm, $overline(D E) = 2$⁠cm, 求 $overline(E F)$ 和 $overline(D F)$ 的长．
 
-+ 已知：$triangle.stroked.t A B C$ 中，$overline(D E) pll overline(B C)$, $⁠overline(E F) pll overline(C D)$. 求证：$⁠overline(A D)^2 = overline(A F) dot.op overline(A B)$.
++ 已知：$triangle.stroked.t A B C$ 中，$overline(D E) pll overline(B C)$, $overline(E F) pll overline(C D)$. 求证：$overline(A D)^2 = overline(A F) dot.op overline(A B)$.
 
-+ 如图：$⁠A B pll A' B'$,
++ 如图：$A B pll A' B'$,
 
-  + 设 $⁠overline(B O) : overline(O B') = 1 : 2$, $⁠overline(A' B') = 5$cm, 求 $⁠overline(A B)$ 的长．
+  + 设 $overline(B O) : overline(O B') = 1 : 2$, $overline(A' B') = 5$⁠cm, 求 $overline(A B)$ 的长．
 
-  + 设 $overline(B O) = 2$cm, $⁠overline(B B') = 5.3$cm, $⁠overline(A B) = 2.3$cm, 求 $⁠overline(A' B')$ 的长．
+  + 设 $overline(B O) = 2$⁠cm, $overline(B B') = 5.3$⁠cm, $overline(A B) = 2.3$⁠cm, 求 $overline(A' B')$ 的长．
 
-  + 设 $overline(A B) = 1.2$cm, $⁠overline(A' B') = 3$cm, $⁠overline(B B') = 3.5$cm, 求 $⁠overline(O B)$、$⁠overline(O B')$ 的长．
+  + 设 $overline(A B) = 1.2$⁠cm, $overline(A' B') = 3$⁠cm, $overline(B B') = 3.5$⁠cm, 求 $overline(O B)$、$overline(O B')$ 的长．
 
-+ 已知：$overline(D E) pll overline(B C)$, $⁠overline(D E) = 2$cm, $⁠overline(B C) = 3$cm, $⁠overline(B D) = 1.5$cm. 求 $⁠overline(A B)$ 的长．
++ 已知：$overline(D E) pll overline(B C)$, $overline(D E) = 2$⁠cm, $overline(B C) = 3$⁠cm, $overline(B D) = 1.5$⁠cm. 求 $overline(A B)$ 的长．
 
-+ 如图，已知：$D F pll B E$, $⁠E F pll B C$, 求证：$⁠overline(A D) / overline(D E) = overline(A E) / overline(E C)$.
++ 如图，已知：$D F pll B E$, $E F pll B C$, 求证：$overline(A D) / overline(D E) = overline(A E) / overline(E C)$.
 
-+ 如图，已知：$⁠A C pll A' C'$, $⁠B C pll B' C'$
++ 如图，已知：$A C pll A' C'$, $B C pll B' C'$
 
-  求证：$⁠overline(O A) / overline(A A') = overline(O B) / overline(B B')$；$⁠A B pll A' B'$.
+  求证：$overline(O A) / overline(A A') = overline(O B) / overline(B B')$；$A B pll A' B'$.
 
-+ 如图，已知：$⁠D$ 点是 $overline(B C)$ 中点，$angle A D B$ 和 $angle A D C$ 的平分线分别交 $overline(A B)$, $⁠overline(A C)$ 于 $E$、$⁠F$. 求证：$⁠E F pll B C$.
++ 如图，已知：$D$ 点是 $overline(B C)$ 中点，$angle A D B$ 和 $angle A D C$ 的平分线分别交 $overline(A B)$, $overline(A C)$ 于 $E$、$F$. 求证：$E F pll B C$.
 
-+ 三角形 $⁠A B C$ 中，$angle B$、$⁠angle C$ 的平分线分别交 $overline(A C)$、$⁠overline(A B)$ 于 $D$、$⁠E$, 如果 $⁠E D pll B C$, 则 $⁠triangle.stroked.t A B C$ 为等腰三角形．
++ 三角形 $A B C$ 中，$angle B$、$angle C$ 的平分线分别交 $overline(A C)$、$overline(A B)$ 于 $D$、$E$, 如果 $E D pll B C$, 则 $triangle.stroked.t A B C$ 为等腰三角形．
 
 + 已知：$overline(A D)$ 是 $triangle.stroked.t A B C$ 中 $angle B A C$ 的外角平分线，交 $overline(B C)$ 的延长线于 $D$ 点，求证：$overline(B D) / overline(C D) = overline(A B) / overline(A C)$.
 
@@ -3557,7 +3557,7 @@ $⁠therefore quad overline(B D) / overline(D C) = overline(B A) / overline(A E)
 + 相似三角形面积的比等于它们的相似比的平方．
 
 ]
-已知：$⁠triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$, $⁠overline(B C)$ 的对应边是 $overline(B' C')$, $⁠overline(A D) tack.t overline(B C)$, $⁠overline(A' D') tack.t overline(B' C')$ (图3.107).
+已知：$triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$, $overline(B C)$ 的对应边是 $overline(B' C')$, $overline(A D) tack.t overline(B C)$, $overline(A' D') tack.t overline(B' C')$ (图3.107).
 
 #figure([#fig("3-173");
 
@@ -3570,36 +3570,36 @@ $⁠therefore quad overline(B D) / overline(D C) = overline(B A) / overline(A E)
 
 + $frac(overline(A B) + overline(B C) + overline(C A), overline(A' B') + overline(B' C') + overline(C' A')) = overline(B C) / overline(B' C')$
 
-+ $⁠overline(A D) / overline(A' D') = overline(B C) / overline(B' C')$
++ $overline(A D) / overline(A' D') = overline(B C) / overline(B' C')$
 
-+ $⁠frac(triangle.stroked.t A B C upright("面积"), triangle.stroked.t A' B' C' upright("面积")) = (overline(B C) / overline(B' C'))^2$
++ $frac(triangle.stroked.t A B C upright("面积"), triangle.stroked.t A' B' C' upright("面积")) = (overline(B C) / overline(B' C'))^2$
 
 #proof[
-+ $⁠because quad triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$, $⁠overline(B C)$ 和 $overline(B' C')$ 为对应边，设相似比为 $k$，则 $ overline(A B) / overline(A' B') = overline(B C) / overline(B' C') = overline(C A) / overline(C' A') = k $
++ $because quad triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$, $overline(B C)$ 和 $overline(B' C')$ 为对应边，设相似比为 $k$，则 $ overline(A B) / overline(A' B') = overline(B C) / overline(B' C') = overline(C A) / overline(C' A') = k $
 
-  $⁠therefore quad overline(A B) = k overline(A' B')\,quad overline(B C) = k overline(B' C')\,quad overline(C A) = k overline(C' A')$
+  $therefore quad overline(A B) = k overline(A' B')\,quad overline(B C) = k overline(B' C')\,quad overline(C A) = k overline(C' A')$
 
-  $⁠therefore quad overline(A B) + overline(B C) + overline(C A) = k (overline(A' B') + overline(B' C') + overline(C' A'))$
+  $therefore quad overline(A B) + overline(B C) + overline(C A) = k (overline(A' B') + overline(B' C') + overline(C' A'))$
 
-  $⁠therefore quad frac(overline(A B) + overline(B C) + overline(C A), overline(A' B') + overline(B' C') + overline(C' A')) = k = overline(B C) / overline(B' C')$
+  $therefore quad frac(overline(A B) + overline(B C) + overline(C A), overline(A' B') + overline(B' C') + overline(C' A')) = k = overline(B C) / overline(B' C')$
 
-+ $⁠because quad triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$, $⁠B$ 与 $B'$ 是对应顶点，
++ $because quad triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$, $B$ 与 $B'$ 是对应顶点，
 
   $therefore quad angle B = angle B'$
 
-  又 $⁠because quad overline(A D) tack.t overline(B C)\,quad overline(A' D') tack.t overline(B' C')$
+  又 $because quad overline(A D) tack.t overline(B C)\,quad overline(A' D') tack.t overline(B' C')$
 
-  $⁠therefore quad angle A D B = angle A' D' B' = 90 degree$.
+  $therefore quad angle A D B = angle A' D' B' = 90 degree$.
 
-  $⁠therefore quad triangle.stroked.t A B D tilde.rev triangle.stroked.t A' B' D'$.
+  $therefore quad triangle.stroked.t A B D tilde.rev triangle.stroked.t A' B' D'$.
 
-  $⁠therefore quad overline(A D) / overline(A' D') = overline(A B) / overline(A' B')$，而 $⁠overline(A B) / overline(A' B') = overline(B C) / overline(B' C')$
+  $therefore quad overline(A D) / overline(A' D') = overline(A B) / overline(A' B')$，而 $overline(A B) / overline(A' B') = overline(B C) / overline(B' C')$
 
-  $⁠therefore quad overline(A D) / overline(A' D') = overline(B C) / overline(B' C')$
+  $therefore quad overline(A D) / overline(A' D') = overline(B C) / overline(B' C')$
 
-+ $⁠because quad triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$
++ $because quad triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$
 
-  $⁠therefore quad overline(A D) / overline(A' D') = overline(B C) / overline(B' C')$
+  $therefore quad overline(A D) / overline(A' D') = overline(B C) / overline(B' C')$
 
   $ frac(triangle.stroked.t A B C upright("面积"), triangle.stroked.t A' B' C' upright("面积")) = frac(1 / 2 overline(B C) dot.op overline(A D), 1 / 2 overline(B' C') dot.op overline(A' D')) & = overline(B C) / overline(B' C') dot.op overline(A D) / overline(A' D')\
    & = overline(B C) / overline(B' C') dot.op overline(B C) / overline(B' C') = (overline(B C) / overline(B' C'))^2 $
@@ -3610,53 +3610,53 @@ $⁠therefore quad overline(B D) / overline(D C) = overline(B A) / overline(A E)
 #example[
 我们应用相似三角形面积比的性质，可再次证明勾股定理．
 
-已知：$⁠triangle.stroked.t A B C$ 中，$angle C = 90 degree$\(图3.108).
+已知：$triangle.stroked.t A B C$ 中，$angle C = 90 degree$\(图3.108).
 
-求证：$⁠overline(A C)^2 + overline(B C)^2 = overline(A B)^2$
+求证：$overline(A C)^2 + overline(B C)^2 = overline(A B)^2$
 
 ]
 #proof[
-作斜边 $⁠overline(A B)$ 上的高 $overline(C D)$，易证 $⁠triangle.stroked.t A C D tilde.rev triangle.stroked.t C B D tilde.rev triangle.stroked.t A B C$.
+作斜边 $overline(A B)$ 上的高 $overline(C D)$，易证 $triangle.stroked.t A C D tilde.rev triangle.stroked.t C B D tilde.rev triangle.stroked.t A B C$.
 
-$⁠therefore quad frac(triangle.stroked.t A C D upright("面积"), triangle.stroked.t A B C upright("面积")) = overline(A C)^2 / overline(A B)^2\,quad frac(triangle.stroked.t C B D upright("面积"), triangle.stroked.t A B C upright("面积")) = overline(B C)^2 / overline(A B)^2$
+$therefore quad frac(triangle.stroked.t A C D upright("面积"), triangle.stroked.t A B C upright("面积")) = overline(A C)^2 / overline(A B)^2\,quad frac(triangle.stroked.t C B D upright("面积"), triangle.stroked.t A B C upright("面积")) = overline(B C)^2 / overline(A B)^2$
 
 等式两边相加得：$ frac(triangle.stroked.t A C D upright("面积") + triangle.stroked.t C B D upright("面积"), triangle.stroked.t A B C upright("面积")) = frac(overline(A C)^2 + overline(B C)^2, overline(A B)^2) $
 
-$⁠because quad triangle.stroked.t A C D upright("面积") + triangle.stroked.t C B D upright("面积") = triangle.stroked.t A B C upright("面积")$
+$because quad triangle.stroked.t A C D upright("面积") + triangle.stroked.t C B D upright("面积") = triangle.stroked.t A B C upright("面积")$
 
-$⁠therefore quad frac(overline(A C)^2 + overline(B C)^2, overline(A B)^2) = 1$
+$therefore quad frac(overline(A C)^2 + overline(B C)^2, overline(A B)^2) = 1$
 
-$⁠therefore quad overline(A C)^2 + overline(B C)^2 = overline(A B)^2$
+$therefore quad overline(A C)^2 + overline(B C)^2 = overline(A B)^2$
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-174");], caption: []), figure([#fig("3-175");], caption: []))));
 
 #example[
-在图3.109中，已知正方形 $⁠P L M N$ 顶点 $L$ 和 $M$ 在 $triangle.stroked.t A B C$ 的 $overline(B C)$ 边上，顶点 $N$ 和 $P$ 分别在边 $overline(A C)$ 和边 $overline(A B)$ 上，$overline(B C) = 12$cm, $⁠overline(B C)$ 上的高 $overline(A D) = 8$cm, 求这个正方形的边长，并正确地作出这个正方形．
+在图3.109中，已知正方形 $P L M N$ 顶点 $L$ 和 $M$ 在 $triangle.stroked.t A B C$ 的 $overline(B C)$ 边上，顶点 $N$ 和 $P$ 分别在边 $overline(A C)$ 和边 $overline(A B)$ 上，$overline(B C) = 12$⁠cm, $overline(B C)$ 上的高 $overline(A D) = 8$⁠cm, 求这个正方形的边长，并正确地作出这个正方形．
 
 ]
 #solution[
-+ 设 $⁠overline(A D)$ 和 $overline(P N)$ 相交于 $E$,
++ 设 $overline(A D)$ 和 $overline(P N)$ 相交于 $E$,
 
-  $⁠because quad P N pll B C$
+  $because quad P N pll B C$
 
-  $⁠therefore quad triangle.stroked.t A P N tilde.rev triangle.stroked.t A B C$.
+  $therefore quad triangle.stroked.t A P N tilde.rev triangle.stroked.t A B C$.
 
-  $⁠because quad overline(A D)$ 是 $triangle.stroked.t A B C$ 的 $overline(B C)$ 边上的高，$overline(A E)$ 是 $triangle.stroked.t A P N$ 的 $overline(P N)$ 边上的高，
+  $because quad overline(A D)$ 是 $triangle.stroked.t A B C$ 的 $overline(B C)$ 边上的高，$overline(A E)$ 是 $triangle.stroked.t A P N$ 的 $overline(P N)$ 边上的高，
 
   $therefore quad overline(A E) / overline(A D) = overline(P N) / overline(B C)$（相似三角形对应高的比等于相似比）．
 
-  设正方形的边长为 $⁠X$ 厘米，那么，$overline(P N) = X$ 厘米，$overline(A E) = overline(A D) - overline(E D) =\(8 - X\)$ 厘米，
+  设正方形的边长为 $X$ 厘米，那么，$overline(P N) = X$ 厘米，$overline(A E) = overline(A D) - overline(E D) =\(8 - X\)$ 厘米，
 
   $therefore quad frac(8 - X, 8) = X / 12$.
 
-  解这个方程得 $⁠X = 4.8$. 即正方形 $⁠P L M N$ 的边长为4.8厘米．
+  解这个方程得 $X = 4.8$. 即正方形 $P L M N$ 的边长为4.8厘米．
 
-+ 在 $triangle.stroked.t A B C$ 的 $overline(B C)$ 边上的高 $overline(A D)$ 上截 $overline(D E) = 4.8$cm, 过 $⁠E$ 作 $P N pll B C$ 和 $overline(A B)$、$⁠overline(A C)$ 分别交于 $P$、$⁠N$ 两点，过 $P$、$⁠N$ 分别作 $overline(B C)$ 的垂线 $overline(P L)$、$⁠overline(N M)$\; $⁠L$、$⁠M$ 是垂足，则四边形 $P L M N$ 即为所求的正方形．
++ 在 $triangle.stroked.t A B C$ 的 $overline(B C)$ 边上的高 $overline(A D)$ 上截 $overline(D E) = 4.8$⁠cm, 过 $E$ 作 $P N pll B C$ 和 $overline(A B)$、$overline(A C)$ 分别交于 $P$、$N$ 两点，过 $P$、$N$ 分别作 $overline(B C)$ 的垂线 $overline(P L)$、$overline(N M)$\; $L$、$M$ 是垂足，则四边形 $P L M N$ 即为所求的正方形．
 
 ]
 #exercise[
-+ 已知 $triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$, $⁠overline(A B)$ 与 $overline(A' B')$ 是对应边，$triangle.stroked.t A B C$ 的周长是125cm, $overline(A' B') = 12$cm, $⁠overline(B' C') = 17$cm, $⁠overline(C' A') = 21$cm, 求三角形 $⁠A B C$ 各边的长．
++ 已知 $triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$, $overline(A B)$ 与 $overline(A' B')$ 是对应边，$triangle.stroked.t A B C$ 的周长是125cm, $overline(A' B') = 12$⁠cm, $overline(B' C') = 17$⁠cm, $overline(C' A') = 21$⁠cm, 求三角形 $A B C$ 各边的长．
 
 + 两个相似三角形最长边各是35cm和14cm, 它们周长的差是60cm, 求它们的周长．
 
@@ -3676,9 +3676,9 @@ $⁠therefore quad overline(A C)^2 + overline(B C)^2 = overline(A B)^2$
 ]
 我们以五边形为例进行证明．
 
-已知：$triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$, $⁠triangle.stroked.t A C D tilde.rev triangle.stroked.t A' C' D'$, $⁠triangle.stroked.t A D E tilde.rev triangle.stroked.t A' D' E'$ (图3.110), 并且 $A$、$⁠B$、$⁠C$、$⁠D$、$⁠E$ 的对应顶点分别为 $A'$、$⁠B'$、$⁠C'$、$⁠D'$、$⁠E'$.
+已知：$triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$, $triangle.stroked.t A C D tilde.rev triangle.stroked.t A' C' D'$, $triangle.stroked.t A D E tilde.rev triangle.stroked.t A' D' E'$ (图3.110), 并且 $A$、$B$、$C$、$D$、$E$ 的对应顶点分别为 $A'$、$B'$、$C'$、$D'$、$E'$.
 
-求证：多边形 $⁠A B C D E tilde.rev$ 多边形 $A' B' C' D' E'$.
+求证：多边形 $A B C D E tilde.rev$ 多边形 $A' B' C' D' E'$.
 
 #figure([#fig("3-176");
 
@@ -3688,19 +3688,19 @@ $⁠therefore quad overline(A C)^2 + overline(B C)^2 = overline(A B)^2$
 )
 
 #proof[
-$⁠because quad triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$, $⁠A$、$⁠B$、$⁠C$ 的对应顶点是 $A'$、$⁠B'$、$⁠C'$,
+$because quad triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$, $A$、$B$、$C$ 的对应顶点是 $A'$、$B'$、$C'$,
 
-$⁠therefore quad angle B = angle B'\,quad angle B C A = angle B' C' A'\,quad overline(A B) / overline(A' B') = overline(B C) / overline(B' C') = overline(A C) / overline(A' C')$
+$therefore quad angle B = angle B'\,quad angle B C A = angle B' C' A'\,quad overline(A B) / overline(A' B') = overline(B C) / overline(B' C') = overline(A C) / overline(A' C')$
 
-又 $⁠because quad triangle.stroked.t A C D tilde.rev triangle.stroked.t A' C' D'$
+又 $because quad triangle.stroked.t A C D tilde.rev triangle.stroked.t A' C' D'$
 
-$⁠therefore quad angle A C D = angle A' C' D'\,quad overline(A C) / overline(A' C') = overline(C D) / overline(C' D')$
+$therefore quad angle A C D = angle A' C' D'\,quad overline(A C) / overline(A' C') = overline(C D) / overline(C' D')$
 
-$⁠therefore quad angle B C A + angle A C D = angle B' C' A' + angle A' C' D'$
+$therefore quad angle B C A + angle A C D = angle B' C' A' + angle A' C' D'$
 
-即：$⁠angle C = angle C'\,quad overline(A B) / overline(A' B') = overline(B C) / overline(B' C') = overline(C D) / overline(C' D')$
+即：$angle C = angle C'\,quad overline(A B) / overline(A' B') = overline(B C) / overline(B' C') = overline(C D) / overline(C' D')$
 
-同理可证：$⁠angle D = angle D'$, $⁠angle E = angle E'$, $⁠angle A = angle A'$ $ overline(C D) / overline(C' D') = overline(D E) / overline(D' E') = overline(E A) / overline(E' A') $ #noindent;则多边形 $A B C D E$ 与多边形 $A' B' C' D' E'$ 的对应角相等，对应边成比例．
+同理可证：$angle D = angle D'$, $angle E = angle E'$, $angle A = angle A'$ $ overline(C D) / overline(C' D') = overline(D E) / overline(D' E') = overline(E A) / overline(E' A') $ #noindent;则多边形 $A B C D E$ 与多边形 $A' B' C' D' E'$ 的对应角相等，对应边成比例．
 
 $therefore quad$ 多边形 $A B C D E tilde.rev$ 多边形 $A' B' C' D' E'$.
 
@@ -3718,15 +3718,15 @@ $therefore quad$ 多边形 $A B C D E tilde.rev$ 多边形 $A' B' C' D' E'$.
 #example[
 求作一个四边形和已知四边形相似，且相似比等于2.
 
-已知：四边形 $⁠A B C D$ (图3.111).
+已知：四边形 $A B C D$ (图3.111).
 
 求作：四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$ 并且相似比等于2.
 
 作法：
 
-+ 在四边形 $A B C D$ 内任取一点 $O$ 作射线 $O A$、$⁠O B$、$⁠O C$、$⁠O D$.
++ 在四边形 $A B C D$ 内任取一点 $O$ 作射线 $O A$、$O B$、$O C$、$O D$.
 
-+ 在射线 $⁠O A$ 上截取、$overline(O A') = 2 overline(O A)$, 在射线 $⁠O B$ 上截取 $overline(O B') = 2 overline(O B)$, 在射线 $⁠O C$ 上截取 $overline(O C') = 2 overline(O C)$, 在射线 $⁠O D$ 上截取 $overline(O D') = 2 overline(O D)$. 顺次作 $⁠overline(A' B')$、$⁠overline(B' C')$、$⁠overline(C' D')$、$⁠overline(D' A')$, 则四边形 $⁠A' B' C' D'$ 即为所求作的四边形．
++ 在射线 $O A$ 上截取、$overline(O A') = 2 overline(O A)$, 在射线 $O B$ 上截取 $overline(O B') = 2 overline(O B)$, 在射线 $O C$ 上截取 $overline(O C') = 2 overline(O C)$, 在射线 $O D$ 上截取 $overline(O D') = 2 overline(O D)$. 顺次作 $overline(A' B')$、$overline(B' C')$、$overline(C' D')$、$overline(D' A')$, 则四边形 $A' B' C' D'$ 即为所求作的四边形．
 
 ]
 #figure([#fig("3-177");
@@ -3739,11 +3739,11 @@ $therefore quad$ 多边形 $A B C D E tilde.rev$ 多边形 $A' B' C' D' E'$.
 #proof[
 由于 $overline(O A') / overline(O A) = overline(O B') / overline(O B) = overline(O C') / overline(O C) = overline(O D') / overline(O D) = 2 / 1$
 
-$⁠therefore quad A B pll A' B'\,quad B C pll B' C'\,quad C D pll C' D'\,quad D A pll D' A'$
+$therefore quad A B pll A' B'\,quad B C pll B' C'\,quad C D pll C' D'\,quad D A pll D' A'$
 
-$⁠therefore quad triangle.stroked.t O A B tilde.rev triangle.stroked.t O A' B'$，$⁠triangle.stroked.t O B C tilde.rev triangle.stroked.t O B' C'$，$⁠triangle.stroked.t O C D tilde.rev triangle.stroked.t O C' D'$，$⁠triangle.stroked.t O D A tilde.rev triangle.stroked.t O D' A'$
+$therefore quad triangle.stroked.t O A B tilde.rev triangle.stroked.t O A' B'$，$triangle.stroked.t O B C tilde.rev triangle.stroked.t O B' C'$，$triangle.stroked.t O C D tilde.rev triangle.stroked.t O C' D'$，$triangle.stroked.t O D A tilde.rev triangle.stroked.t O D' A'$
 
-$⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由同数个排列顺序相同的相似三角形拼成的两个多边形相似）．并且：$ overline(A' B') / overline(A B) = overline(B' C') / overline(B C) = overline(C' D') / overline(C D) = overline(D' A') / overline(D A) = overline(O A') / overline(O A) = 2 / 1 $ #noindent;$therefore quad$ 四边形 $A' B' C' D'$ 为所求作的四边形．
+$therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由同数个排列顺序相同的相似三角形拼成的两个多边形相似）．并且：$ overline(A' B') / overline(A B) = overline(B' C') / overline(B C) = overline(C' D') / overline(C D) = overline(D' A') / overline(D A) = overline(O A') / overline(O A) = 2 / 1 $ #noindent;$therefore quad$ 四边形 $A' B' C' D'$ 为所求作的四边形．
 
 ]
 由上面的作图题可以看出，用这样方法所作的多边形不仅和原多边形相似，并且对应边平行，对应顶点联线相交于一点，我们把具有这样位置关系的两个多边形叫做#strong[位似形]，把 $O$ 点叫做#strong[位似中心]．
@@ -3755,12 +3755,12 @@ $⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由�
 
 + 连结每对对应点的直线都经过同一点 $O$；
 
-+ 对任意一对对应点 $⁠A$ 和 $A'$ 都有 $overline(O A') / overline(O A) = k\,thick\(k eq.not 0\)$
++ 对任意一对对应点 $A$ 和 $A'$ 都有 $overline(O A') / overline(O A) = k\,thick\(k eq.not 0\)$
 
-#noindent;那么这两个图形 $⁠F$ 和 $F'$ 叫做#strong[位似形]，$O$ 点叫做这两个图形的#strong[位似中心]，$k$ 叫做#strong[位似比]．这时图形 $F$ 变换到图形 $F'$ 叫做#strong[位似变换]．
+#noindent;那么这两个图形 $F$ 和 $F'$ 叫做#strong[位似形]，$O$ 点叫做这两个图形的#strong[位似中心]，$k$ 叫做#strong[位似比]．这时图形 $F$ 变换到图形 $F'$ 叫做#strong[位似变换]．
 
 ]
-在图3.112所示的两个位似图形上的对应点，（如 $A$ 与 $A'$）在位似中心（$⁠O$）的同侧，我们称这种位似形为#strong[顺位似形]，位似中心为#strong[顺位似中心]．
+在图3.112所示的两个位似图形上的对应点，（如 $A$ 与 $A'$）在位似中心（$O$）的同侧，我们称这种位似形为#strong[顺位似形]，位似中心为#strong[顺位似中心]．
 
 #figure([#fig("3-178");
 
@@ -3776,9 +3776,9 @@ $⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由�
   ]
 )
 
-在图3.113所示的两个位似图形上的对应点（如 $⁠A$ 与 $A'$）在位似中心（$⁠O$）的两侧，我们称这种位似形为#strong[逆位似形]，位似中心为#strong[逆位似中心]．
+在图3.113所示的两个位似图形上的对应点（如 $A$ 与 $A'$）在位似中心（$O$）的两侧，我们称这种位似形为#strong[逆位似形]，位似中心为#strong[逆位似中心]．
 
-为清楚地区别这两种位似形，在位似形的定义中我们规定：位似比 $⁠overline(O A') / overline(O A) = k$ 中的线段 $overline(O A')$ 和 $overline(O A)$ 的第一个端点字母必须先写表示位似中心的字母 $O$, 这样一来，实际上线段 $⁠overline(O A')$、$⁠overline(O A)$ 就是有方向的了．如果把 $overline(O A)$ 所在的半直线的方向定为正向，那么 $overline(O A)$ 反向延长线的方向就是负向了．因此，顺位似时，$overline(O A')$、$⁠overline(O A)$ 同向，我们就说 $overline(O A') / overline(O A) = k > 0$\; 逆位似时，$⁠overline(O A')$、$⁠overline(O A)$ 反向，我们就说 $overline(O A') / overline(O A) = k < 0$. 于是位似比既可是正数也可是负数了．
+为清楚地区别这两种位似形，在位似形的定义中我们规定：位似比 $overline(O A') / overline(O A) = k$ 中的线段 $overline(O A')$ 和 $overline(O A)$ 的第一个端点字母必须先写表示位似中心的字母 $O$, 这样一来，实际上线段 $overline(O A')$、$overline(O A)$ 就是有方向的了．如果把 $overline(O A)$ 所在的半直线的方向定为正向，那么 $overline(O A)$ 反向延长线的方向就是负向了．因此，顺位似时，$overline(O A')$、$overline(O A)$ 同向，我们就说 $overline(O A') / overline(O A) = k > 0$\; 逆位似时，$overline(O A')$、$overline(O A)$ 反向，我们就说 $overline(O A') / overline(O A) = k < 0$. 于是位似比既可是正数也可是负数了．
 
 作一个图形的位似形，位似中心可以任意选择，例如可以选在多边形的内部（图3.111），可以选在多边形的外部（图3.112或图3.113），也可以选在多边形的边上或顶点处（图3.114和图3.115）等等．
 
@@ -3786,7 +3786,7 @@ $⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由�
 
 把一个图形放大或缩小，常常使用放缩尺，放缩尺是根据位似形原理做成的．
 
-放缩尺如图3.116所示，是由两两平行的四条直尺所组成的，在 $⁠A$、$⁠B$、$⁠C$、$⁠D$ 处用螺丝钉连接起来，组成平行四边形 $A B C D$, 它的各边可以分别绕着顶点转动．
+放缩尺如图3.116所示，是由两两平行的四条直尺所组成的，在 $A$、$B$、$C$、$D$ 处用螺丝钉连接起来，组成平行四边形 $A B C D$, 它的各边可以分别绕着顶点转动．
 
 #figure([#image("/math2/fig/3-116.png", width: 100%);
 
@@ -3795,20 +3795,20 @@ $⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由�
   ]
 )
 
-先把 $⁠S$ 固定在图板上的某一处，在 $A$ 处装上尖针，在 $E$ 处安上铅笔，直尺上 $overline(C S) = overline(C E)$, $⁠overline(D S) = overline(D A)$.
+先把 $S$ 固定在图板上的某一处，在 $A$ 处装上尖针，在 $E$ 处安上铅笔，直尺上 $overline(C S) = overline(C E)$, $overline(D S) = overline(D A)$.
 
-因为等腰三角形 $⁠S D A$ 的 $angle D S A = angle C S E$，又因为 $⁠S$、$⁠D$、$⁠C$ 共线，所以 $overline(S A)$ 重合在 $overline(S E)$ 上，因此 $S$、$⁠A$、$⁠E$ 在同一条直线上．
+因为等腰三角形 $S D A$ 的 $angle D S A = angle C S E$，又因为 $S$、$D$、$C$ 共线，所以 $overline(S A)$ 重合在 $overline(S E)$ 上，因此 $S$、$A$、$E$ 在同一条直线上．
 
-因为 $D A pll C E$, 所以 $⁠overline(S E) / overline(S A) = overline(S C) / overline(S D)$.
+因为 $D A pll C E$, 所以 $overline(S E) / overline(S A) = overline(S C) / overline(S D)$.
 
-当放缩尺绕着固定点 $⁠S$ 转动时，四边形 $A B C D$ 的形状和位置虽然随时改变，但各边的长不变，因此它始终是一个平行四边形．根据上面所说的可以知道，不管 $A$ 点移动到什么地方，$S$、$⁠A$、$⁠E$ 总在同一条直线上，$A$、$⁠E$ 在 $S C$ 的同旁，并且 $overline(S E) / overline(S A) = overline(S C) / overline(S D)$
+当放缩尺绕着固定点 $S$ 转动时，四边形 $A B C D$ 的形状和位置虽然随时改变，但各边的长不变，因此它始终是一个平行四边形．根据上面所说的可以知道，不管 $A$ 点移动到什么地方，$S$、$A$、$E$ 总在同一条直线上，$A$、$E$ 在 $S C$ 的同旁，并且 $overline(S E) / overline(S A) = overline(S C) / overline(S D)$
 
-我们可以预先把螺丝钉固定在适当的小孔 $⁠B$ 和 $D$ 处，使 $overline(S C) / overline(S D)$ 等于我们所需要的比 $k$, 于是把装在 $⁠A$ 处的尖针依照已有的图形描绘，在 $E$ 处的铅笔就画出一个和原图形相似并且放大了 $k$ 倍的图形．如果在 $E$ 处装上一针，依照已有的图形描画，而在 $A$ 处装上铅笔，那么 $A$ 处铅笔画出的图形也和原图形相似，但是把它缩小了 $k$ 倍．
+我们可以预先把螺丝钉固定在适当的小孔 $B$ 和 $D$ 处，使 $overline(S C) / overline(S D)$ 等于我们所需要的比 $k$, 于是把装在 $A$ 处的尖针依照已有的图形描绘，在 $E$ 处的铅笔就画出一个和原图形相似并且放大了 $k$ 倍的图形．如果在 $E$ 处装上一针，依照已有的图形描画，而在 $A$ 处装上铅笔，那么 $A$ 处铅笔画出的图形也和原图形相似，但是把它缩小了 $k$ 倍．
 
 前面我们研究了相似多边形和位似形，下面我们给出任意两个相似图形的一般定义．
 
 #blk[定义][
-如果两个图形 $T$ 和 $T'$ 上的点一一对应，并且图形 $T'$ 上任意一个线段 $overline(A' B')$ 和 $T$ 上与之对应的线段 $overline(A B)$ 的长度的比等于一个常数 $k$, 则称#strong[图形 $⁠T$ 和 $T'$ 相似]，表示作“$T tilde.rev T'$”，$⁠k$ 叫作#strong[$T'$ 对 $T$ 的相似比]（也叫放大率或缩小率）．
+如果两个图形 $T$ 和 $T'$ 上的点一一对应，并且图形 $T'$ 上任意一个线段 $overline(A' B')$ 和 $T$ 上与之对应的线段 $overline(A B)$ 的长度的比等于一个常数 $k$, 则称#strong[图形 ]$T$#strong[ 和 ]$T'$#strong[ 相似]，表示作“$T tilde.rev T'$”，$k$ 叫作$T'$#strong[ 对 ]$T$#strong[ 的相似比]（也叫放大率或缩小率）．
 
 ]
 实际生活中，相似形的例子是很多的，它们都符合上述相似形的定义．例如某地方的地图上任意两点间的线段和这个地方实际相对应的两点之间线段长度的比等于同一常数------比例尺．
@@ -3823,7 +3823,7 @@ $⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由�
   #align(center)[
   #table(
     columns: (auto, auto, auto, auto, auto, auto, auto, auto, auto,),
-    align: (center, center, center, center, center, center, center, center, center,),
+    align: (center + horizon, center + horizon, center + horizon, center + horizon, center + horizon, center + horizon, center + horizon, center + horizon, center + horizon,),
     table.vline(x: 1),
     table.hline(),
     [相似比],
@@ -3864,11 +3864,11 @@ $⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由�
 
 + 要作一多边形和已知多边形相似，并且使周长扩大三倍，对应边应当怎样？要使周长缩小5倍呢？要使面积扩大4倍呢？要使面积缩小9倍呢？
 
-+ 如图：$⁠O$ 是平行四边形对角线上一点，$H F$、$⁠E G$ 经过 $O$ 点，并且分别和 $overline(A B)$、$⁠overline(B C)$ 平行．求证：
++ 如图：$O$ 是平行四边形对角线上一点，$H F$、$E G$ 经过 $O$ 点，并且分别和 $overline(A B)$、$overline(B C)$ 平行．求证：
 
   + $pgram A E O H tilde.rev pgram O F C G tilde.rev pgram A B C D$\;
 
-  + $⁠pgram O F C G upright("的面积") : pgram A E O H upright("的面积") : pgram A B C D upright("的面积") = overline(O C)^2 : overline(O A)^2 : overline(A C)^2$
+  + $pgram O F C G upright("的面积") : pgram A E O H upright("的面积") : pgram A B C D upright("的面积") = overline(O C)^2 : overline(O A)^2 : overline(A C)^2$
 
 + 求作一个五边形和已知五边形相似，并且相似比等于2.5
 
@@ -3885,15 +3885,15 @@ $⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由�
 ]
 === 相似测量
 ==== 测量地面上中间有障碍物的两点间距离
-要测量地面上中间有障碍物的 $⁠A$、$⁠B$ 两点间的距离（图3.117），可以按照下面的步骤进行．
+要测量地面上中间有障碍物的 $A$、$B$ 两点间的距离（图3.117），可以按照下面的步骤进行．
 
-+ 在地面上选择适当的一点 $C$ 作为测站（要使从 $C$ 到 $A$, 从 $⁠C$ 到 $B$ 的距离可以直接量得），在 $A$、$⁠B$ 两点各插一根标杆，把平板仪放在 $C$ 点，使平板成水平，把地面上的 $C$ 点用移点器移到固定在平板上的图纸上，得到 $C$ 点的对应点 $C'$, 在 $⁠C'$ 点插一根小针．
++ 在地面上选择适当的一点 $C$ 作为测站（要使从 $C$ 到 $A$, 从 $C$ 到 $B$ 的距离可以直接量得），在 $A$、$B$ 两点各插一根标杆，把平板仪放在 $C$ 点，使平板成水平，把地面上的 $C$ 点用移点器移到固定在平板上的图纸上，得到 $C$ 点的对应点 $C'$, 在 $C'$ 点插一根小针．
 
 + 在平板上，把照准器的尺的边靠紧插在 $C'$ 点的小针，照准地面上 $C A$ 和 $C B$ 的方向，在图纸上描出对应的方向线．
 
-+ 量出 $overline(C A)$ 和 $overline(C B)$ 的实距长度，按照预定的比例尺缩小，在图纸上按照缩小后的长度，分别在对应的方向线上截取线段 $overline(C' A')$ 和 $overline(C' B')$, 定出 $⁠A'$、$⁠B'$ 两点．
++ 量出 $overline(C A)$ 和 $overline(C B)$ 的实距长度，按照预定的比例尺缩小，在图纸上按照缩小后的长度，分别在对应的方向线上截取线段 $overline(C' A')$ 和 $overline(C' B')$, 定出 $A'$、$B'$ 两点．
 
-+ 量出图纸上 $overline(A' B')$ 的长度，再按照原来预定的比例尺把 $overline(A' B')$ 的长度放大，若放大率（即比例尺）等于 $k$, 则 $⁠overline(A B) = 1 / k overline(A' B')$.
++ 量出图纸上 $overline(A' B')$ 的长度，再按照原来预定的比例尺把 $overline(A' B')$ 的长度放大，若放大率（即比例尺）等于 $k$, 则 $overline(A B) = 1 / k overline(A' B')$.
 
 #figure([#scale(60%, reflow: true, image("/math2/fig/3-117.png"));
 
@@ -3903,7 +3903,7 @@ $⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由�
 )
 
 ==== 测绘具有多边形形状地段的平面图
-要测绘多边形 $⁠A B C D E$ 形状地块的平面图（图3.118），可以按照下面的步骤进行．
+要测绘多边形 $A B C D E$ 形状地块的平面图（图3.118），可以按照下面的步骤进行．
 
 #figure([#fig("3-183");
 
@@ -3912,11 +3912,11 @@ $⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由�
   ]
 )
 
-+ 把平板仪放在地面上的适当一点 $S$, 要从 $⁠S$ 能直接看到插在多边形各顶点的标杆，并且在 $S$ 点能直接量得从 $S$ 到各顶点的距离，使平板成水平，平板上放图纸，把地面上的 $S$ 点用移点器移到图纸上，得到 $S$ 点的对应点 $S'$（图上 $⁠S$ 和 $S'$ 重合），在 $S'$ 点插一根小针．
++ 把平板仪放在地面上的适当一点 $S$, 要从 $S$ 能直接看到插在多边形各顶点的标杆，并且在 $S$ 点能直接量得从 $S$ 到各顶点的距离，使平板成水平，平板上放图纸，把地面上的 $S$ 点用移点器移到图纸上，得到 $S$ 点的对应点 $S'$（图上 $S$ 和 $S'$ 重合），在 $S'$ 点插一根小针．
 
 + 在图纸上，划出和地面上 $S A\,S B\,S C\,S D$ 和 $S E$ 方向相同的射线．
 
-+ 在地面上测量出 $overline(S A)$、$⁠overline(S B)$、$⁠overline(S C)$、$⁠overline(S D)$ 和 $overline(S E)$ 各线段的实际长度，并且按照预定的比例尺缩小成线段 $overline(S' A')$、$⁠overline(S' B')$、$⁠overline(S' C')$、$⁠overline(S' D')$ 和 $overline(S' E')$, 然后在图纸上各条对应的方向射线上分别截得 $⁠overline(S' A')$、$⁠overline(S' B')$、$⁠overline(S' C')$、$⁠overline(S' D')$ 和 $overline(S' E')$, 再作 $⁠overline(A' B')$、$⁠overline(B' C')$、$⁠overline(C' D')$、$⁠overline(D' E')$、$⁠overline(E' A')$, 所得多边形 $⁠A' B' C' D' E'$ 就是地面上多边形 $A B C D E$ 按照预定比例尺缩小的平面图．
++ 在地面上测量出 $overline(S A)$、$overline(S B)$、$overline(S C)$、$overline(S D)$ 和 $overline(S E)$ 各线段的实际长度，并且按照预定的比例尺缩小成线段 $overline(S' A')$、$overline(S' B')$、$overline(S' C')$、$overline(S' D')$ 和 $overline(S' E')$, 然后在图纸上各条对应的方向射线上分别截得 $overline(S' A')$、$overline(S' B')$、$overline(S' C')$、$overline(S' D')$ 和 $overline(S' E')$, 再作 $overline(A' B')$、$overline(B' C')$、$overline(C' D')$、$overline(D' E')$、$overline(E' A')$, 所得多边形 $A' B' C' D' E'$ 就是地面上多边形 $A B C D E$ 按照预定比例尺缩小的平面图．
 
 要计算多边形 $A B C D E$ 的面积，可先计算出平面图形 $A' B' C' D' E'$ 的面积，然后乘以原比例尺的平方的倒数，算出实际地块的面积．
 
@@ -3927,21 +3927,21 @@ $⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由�
 
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题3.5]
 
-+ 在 $triangle.stroked.t A B C$ 中，已知 $overline(B C) = 36$cm, 高 $⁠overline(A D) = 30$cm, 在距离 $⁠overline(B C)$ 边10cm的地方作一条平行于 $B C$ 的直线，交 $overline(A B)$ 于 $E$, 交 $⁠overline(A C)$ 于 $F$, 求 $⁠overline(E F)$ 的长．
++ 在 $triangle.stroked.t A B C$ 中，已知 $overline(B C) = 36$⁠cm, 高 $overline(A D) = 30$⁠cm, 在距离 $overline(B C)$ 边10cm的地方作一条平行于 $B C$ 的直线，交 $overline(A B)$ 于 $E$, 交 $overline(A C)$ 于 $F$, 求 $overline(E F)$ 的长．
 
 + 已知梯形两底的长为36cm和60cm, 高为32cm, 求这个梯形两腰延长线的交点到两底的距离各是多少？
 
 + 两个相似三角形对应边的比是 $7 : 5$, 第一个三角形的周长是14cm, 求另一个三角形的周长．
 
-+ 已知 $⁠triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$, $⁠triangle.stroked.t A' B' C'$ 的面积是 $triangle.stroked.t A B C$ 面积的4倍，并且 $overline(A B) = 4$cm, $⁠overline(B C) = 7$cm, $⁠overline(A C) = 8$cm, 求 $⁠triangle.stroked.t A' B' C'$ 各边的长．
++ 已知 $triangle.stroked.t A B C tilde.rev triangle.stroked.t A' B' C'$, $triangle.stroked.t A' B' C'$ 的面积是 $triangle.stroked.t A B C$ 面积的4倍，并且 $overline(A B) = 4$⁠cm, $overline(B C) = 7$⁠cm, $overline(A C) = 8$⁠cm, 求 $triangle.stroked.t A' B' C'$ 各边的长．
 
-+ 已知梯形 $A B C D$ 的面积为90平方厘米，两底 $overline(A B)$、$⁠overline(C D)$ 的长各为12厘米和8厘米，延长梯形两腰相交于 $M$ 点，求 $triangle.stroked.t M D C$ 的面积．
++ 已知梯形 $A B C D$ 的面积为90平方厘米，两底 $overline(A B)$、$overline(C D)$ 的长各为12厘米和8厘米，延长梯形两腰相交于 $M$ 点，求 $triangle.stroked.t M D C$ 的面积．
 
-+ 设 $A D$ 是 $triangle.stroked.t A B C$ 的中线，一条与 $overline(B C)$ 边平行的直线与 $overline(A B)$、$⁠overline(A D)$、$⁠overline(A C)$ 的交点分别为 $P$、$⁠Q$、$⁠R$, 那么 $⁠overline(P Q) = overline(Q R)$
++ 设 $A D$ 是 $triangle.stroked.t A B C$ 的中线，一条与 $overline(B C)$ 边平行的直线与 $overline(A B)$、$overline(A D)$、$overline(A C)$ 的交点分别为 $P$、$Q$、$R$, 那么 $overline(P Q) = overline(Q R)$
 
-+ 过梯形 $⁠A B C D$ 的对角线 $A C$、$⁠B D$ 的交点 $E$, 作两底的平行线，与两腰 $⁠overline(A B)$、$⁠overline(C D)$ 分别相交于 $M$、$⁠N$, 求证：$⁠overline(M E) = overline(E N)$.
++ 过梯形 $A B C D$ 的对角线 $A C$、$B D$ 的交点 $E$, 作两底的平行线，与两腰 $overline(A B)$、$overline(C D)$ 分别相交于 $M$、$N$, 求证：$overline(M E) = overline(E N)$.
 
-+ 在梯形 $⁠A B C D$ 中，作与两底互相平行的直线，交两腰 $overline(A B)$、$⁠overline(C D)$ 于 $P$、$⁠Q$ 两点，与对角线的交点是 $R$、$⁠S$, 那么 $⁠overline(P R) = overline(S Q)$
++ 在梯形 $A B C D$ 中，作与两底互相平行的直线，交两腰 $overline(A B)$、$overline(C D)$ 于 $P$、$Q$ 两点，与对角线的交点是 $R$、$S$, 那么 $overline(P R) = overline(S Q)$
 
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-184");
 
@@ -3962,13 +3962,13 @@ $⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由�
 
 + 求证：等腰三角形底边上任意一点到两腰的距离的和一定．它等于什么？如果在底边的延长线上取点，你能得出什么结论？
 
-+ $⁠O$ 点是等边三角形内任一点，试证明：$O$ 点到三边距离的和与 $O$ 点的位置无关，这个和等于什么？
++ $O$ 点是等边三角形内任一点，试证明：$O$ 点到三边距离的和与 $O$ 点的位置无关，这个和等于什么？
 
 + 已知四边形，求这样一点，使这点到各顶点的距离的和为最小．
 
-+ 已知梯形 $A B C D$ 中，$overline(A D) pll overline(B C)$, $⁠angle B = 90 degree$, $⁠angle C = 60 degree$, 腰 $⁠overline(C D) = 42$cm, 求另一腰 $⁠overline(A B)$ 等于多少厘米？
++ 已知梯形 $A B C D$ 中，$overline(A D) pll overline(B C)$, $angle B = 90 degree$, $angle C = 60 degree$, 腰 $overline(C D) = 42$⁠cm, 求另一腰 $overline(A B)$ 等于多少厘米？
 
-+ 从平行四边形 $A B C D$ 的各顶点到形外一条直线作垂线 $A E$、$⁠B F$, $⁠C G$、$⁠D H$, 设 $⁠E$、$⁠F$、$⁠G$、$⁠H$ 为垂足．求证：$overline(A E) + overline(C G) = overline(B F) + overline(D H)$.
++ 从平行四边形 $A B C D$ 的各顶点到形外一条直线作垂线 $A E$、$B F$, $C G$、$D H$, 设 $E$、$F$、$G$、$H$ 为垂足．求证：$overline(A E) + overline(C G) = overline(B F) + overline(D H)$.
 
 + 如果两正方形对角线相等，那么这两个正方形全等．
 
@@ -3976,11 +3976,11 @@ $⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由�
 
 + 已知高，求作等边三角形．
 
-+ 如图，$⁠D E pll B C$, $⁠B E$、$⁠C D$ 相交于 $F$, 射线 $⁠A F$ 和 $overline(B C)$ 相交于 $G$. 求证：$⁠overline(B G) = overline(C G)$.
++ 如图，$D E pll B C$, $B E$、$C D$ 相交于 $F$, 射线 $A F$ 和 $overline(B C)$ 相交于 $G$. 求证：$overline(B G) = overline(C G)$.
 
-+ 如图，已知：$⁠triangle.stroked.t A B C$ 中 $D E pll C A$, $⁠D F pll B A$.
++ 如图，已知：$triangle.stroked.t A B C$ 中 $D E pll C A$, $D F pll B A$.
 
-  求证：$⁠overline(D E) / overline(A C) + overline(D F) / overline(A B) = 1$
+  求证：$overline(D E) / overline(A C) + overline(D F) / overline(A B) = 1$
 
   #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-186");
   
@@ -3994,17 +3994,17 @@ $⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由�
   
   ]])));
 
-+ 已知：$⁠D$、$⁠D'$ 是 $triangle.stroked.t A B C$ 的 $overline(B C)$ 边上两点，$overline(B D) = overline(D' C)$, $⁠overline(D E)$, $⁠overline(D' E')$ 和 $overline(A C)$ 平行，并交 $overline(A B)$ 于 $E\,E'$, $⁠overline(D F)$, $⁠overline(D' F')$ 和 $A B$ 平行交 $overline(A C)$ 于 $F$、$⁠F'$, 求证：$⁠E' F pll E F'$.
++ 已知：$D$、$D'$ 是 $triangle.stroked.t A B C$ 的 $overline(B C)$ 边上两点，$overline(B D) = overline(D' C)$, $overline(D E)$, $overline(D' E')$ 和 $overline(A C)$ 平行，并交 $overline(A B)$ 于 $E\,E'$, $overline(D F)$, $overline(D' F')$ 和 $A B$ 平行交 $overline(A C)$ 于 $F$、$F'$, 求证：$E' F pll E F'$.
 
-+ 已知：$⁠E$ 是正方形 $A B C D$ 的 $overline(A B)$ 边上的一点，$overline(A E) = 1 / n overline(A B)$, $⁠overline(D E)$ 和 $overline(A C)$ 相交于 $F$. 求证；$⁠overline(A F) = frac(1, n + 1) overline(A C)$.
++ 已知：$E$ 是正方形 $A B C D$ 的 $overline(A B)$ 边上的一点，$overline(A E) = 1 / n overline(A B)$, $overline(D E)$ 和 $overline(A C)$ 相交于 $F$. 求证；$overline(A F) = frac(1, n + 1) overline(A C)$.
 
-+ 如图，已知 $⁠overline(E F) pll overline(B C)$, $⁠overline(F D) pll overline(A B)$, $⁠overline(A E) = 6.4$ 厘米，$overline(B E) = 7.2$ 厘米，$overline(C D) = 9$ 厘米，求四边形 $B D F E$ 的周长．
++ 如图，已知 $overline(E F) pll overline(B C)$, $overline(F D) pll overline(A B)$, $overline(A E) = 6.4$ 厘米，$overline(B E) = 7.2$ 厘米，$overline(C D) = 9$ 厘米，求四边形 $B D F E$ 的周长．
 
-+ 已知 $triangle.stroked.t A B C$ 的三边是 $overline(A B) = 11$cm, $⁠overline(B C) = 6$cm, $⁠overline(A C) = 7$cm, $⁠overline(A D)$, $⁠overline(A D')$ 分别是 $angle A$ 和它的外角平分线，求 $overline(D D')$ 的长．
++ 已知 $triangle.stroked.t A B C$ 的三边是 $overline(A B) = 11$⁠cm, $overline(B C) = 6$⁠cm, $overline(A C) = 7$⁠cm, $overline(A D)$, $overline(A D')$ 分别是 $angle A$ 和它的外角平分线，求 $overline(D D')$ 的长．
 
-+ 已知 $P$ 是 $angle A$ 内的一个定点，求经过 $P$ 作一条直线，分别交 $angle A$ 的两边于 $B$、$⁠C$, 使 $⁠overline(A B) : overline(A C) = 3 : 2$.
++ 已知 $P$ 是 $angle A$ 内的一个定点，求经过 $P$ 作一条直线，分别交 $angle A$ 的两边于 $B$、$C$, 使 $overline(A B) : overline(A C) = 3 : 2$.
 
-+ $⁠O C$ 是 $angle A O B$ 内的一条射线，求证从 $O C$ 上任意两点到 $angle A O B$ 的两边的距离的比一定．
++ $O C$ 是 $angle A O B$ 内的一条射线，求证从 $O C$ 上任意两点到 $angle A O B$ 的两边的距离的比一定．
 
   #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-188");
   
@@ -4018,21 +4018,21 @@ $⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由�
   
   ]])));
 
-+ 如图，$D$、$⁠E$、$⁠F$ 分别是 $triangle.stroked.t A B C$ 的边 $overline(A B)$、$⁠overline(B C)$、$⁠overline(C A)$ 上的点，$A D E F$ 是菱形，$overline(A B) = 14$cm, $⁠overline(B C) = 12$cm, $⁠overline(A C) = 10$cm, 求 $⁠overline(B E)$ 和 $overline(E C)$ 的长．
++ 如图，$D$、$E$、$F$ 分别是 $triangle.stroked.t A B C$ 的边 $overline(A B)$、$overline(B C)$、$overline(C A)$ 上的点，$A D E F$ 是菱形，$overline(A B) = 14$⁠cm, $overline(B C) = 12$⁠cm, $overline(A C) = 10$⁠cm, 求 $overline(B E)$ 和 $overline(E C)$ 的长．
 
-+ 已知：$E$ 是平行四边形 $A B C D$ 的边 $overline(D A)$ 延长线上的一点，$overline(E C)$ 交 $overline(A B)$ 于 $G$, 交对角线 $⁠overline(D B)$ 于 $F$.
++ 已知：$E$ 是平行四边形 $A B C D$ 的边 $overline(D A)$ 延长线上的一点，$overline(E C)$ 交 $overline(A B)$ 于 $G$, 交对角线 $overline(D B)$ 于 $F$.
 
-  求证：$⁠overline(F C)^2 = overline(F G) dot.op overline(F E)$
+  求证：$overline(F C)^2 = overline(F G) dot.op overline(F E)$
 
-+ 设 $⁠overline(A B)$ 的中点为 $M$, 从 $⁠overline(A B)$ 上另一点 $C$ 向直线 $A B$ 的一侧引线段 $overline(C D)$. 令 $⁠overline(C D)$ 的中点为 $N$, $⁠overline(B D)$ 的中点为 $P$, $⁠overline(M N)$ 的中点为 $Q$, 求证：直线 $⁠P Q$ 平分 $overline(A C)$.
++ 设 $overline(A B)$ 的中点为 $M$, 从 $overline(A B)$ 上另一点 $C$ 向直线 $A B$ 的一侧引线段 $overline(C D)$. 令 $overline(C D)$ 的中点为 $N$, $overline(B D)$ 的中点为 $P$, $overline(M N)$ 的中点为 $Q$, 求证：直线 $P Q$ 平分 $overline(A C)$.
 
-+ 已知梯形的面积是 $⁠Q$, 上下底的比是 $⁠m / n$，求两腰的延长线和上底所组成的三角形的面积．
++ 已知梯形的面积是 $Q$, 上下底的比是 $m / n$，求两腰的延长线和上底所组成的三角形的面积．
 
-+ 在直角三角形 $⁠A B C$ 中，$overline(A D)$ 是斜边 $overline(B C)$ 上的高，作 $D E tack.t A B$, $⁠D F tack.t A C$, $⁠E\,F$ 是垂足.
++ 在直角三角形 $A B C$ 中，$overline(A D)$ 是斜边 $overline(B C)$ 上的高，作 $D E tack.t A B$, $D F tack.t A C$, $E\,F$ 是垂足.
 
   求证：$overline(B E) / overline(C F) = overline(A B)^3 / overline(A C)^3$
 
-+ 如图，已知 $⁠overline(O M) : overline(M P) = overline(O N) : overline(N R)$, 求证：$⁠triangle.stroked.t P Q R$ 是等腰三角形．
++ 如图，已知 $overline(O M) : overline(M P) = overline(O N) : overline(N R)$, 求证：$triangle.stroked.t P Q R$ 是等腰三角形．
 
   #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-190");
   
@@ -4046,11 +4046,11 @@ $⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由�
   
   ]])));
 
-+ $triangle.stroked.t A B C$ 被一条直线所截，设与三边的交点为 $X$、$⁠Y$、$⁠Z$,
++ $triangle.stroked.t A B C$ 被一条直线所截，设与三边的交点为 $X$、$Y$、$Z$,
 
-  试证：$⁠overline(B X) / overline(X C) dot.op overline(C Y) / overline(Y A) dot.op overline(A Z) / overline(Z B) = 1$
+  试证：$overline(B X) / overline(X C) dot.op overline(C Y) / overline(Y A) dot.op overline(A Z) / overline(Z B) = 1$
 
-+ 设 $⁠O$ 是 $triangle.stroked.t A B C$ 内任一点，射线 $A O$、$⁠B O$、$⁠C O$ 与对边的交点分别是 $X$、$⁠Y$、$⁠Z$, 那么 $⁠overline(B X) / overline(X C) dot.op overline(C Y) / overline(Y A) dot.op overline(A Z) / overline(Z B) = 1$
++ 设 $O$ 是 $triangle.stroked.t A B C$ 内任一点，射线 $A O$、$B O$、$C O$ 与对边的交点分别是 $X$、$Y$、$Z$, 那么 $overline(B X) / overline(X C) dot.op overline(C Y) / overline(Y A) dot.op overline(A Z) / overline(Z B) = 1$
 
   #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-192");
   
@@ -4064,9 +4064,9 @@ $⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由�
   
   ]])));
 
-+ 从 $⁠triangle.stroked.t A B C$ 的一边 $overline(B C)$ 的延长线上的一点 $D$, 引直线与其他二边 $⁠overline(A C)$、$⁠overline(A B)$ 相交于 $E$、$⁠F$, 若 $⁠angle A E F = angle A F E$, 则 $⁠overline(B D) : overline(C D) = overline(B F) : overline(C E)$.
++ 从 $triangle.stroked.t A B C$ 的一边 $overline(B C)$ 的延长线上的一点 $D$, 引直线与其他二边 $overline(A C)$、$overline(A B)$ 相交于 $E$、$F$, 若 $angle A E F = angle A F E$, 则 $overline(B D) : overline(C D) = overline(B F) : overline(C E)$.
 
-+ 在 $⁠triangle.stroked.t A B C$ 之边 $overline(A B)$、$⁠overline(A C)$ 上取 $E$、$⁠F$ 两点，使 $overline(E B) = 2 overline(E A)$, $⁠overline(A F) = 2 overline(F C)$, 延长 $⁠overline(E F)$、$⁠overline(B C)$ 交于 $H$, 求 $⁠overline(B H) : overline(C H)$.
++ 在 $triangle.stroked.t A B C$ 之边 $overline(A B)$、$overline(A C)$ 上取 $E$、$F$ 两点，使 $overline(E B) = 2 overline(E A)$, $overline(A F) = 2 overline(F C)$, 延长 $overline(E F)$、$overline(B C)$ 交于 $H$, 求 $overline(B H) : overline(C H)$.
 
   #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-194");
   
@@ -4080,11 +4080,11 @@ $⁠therefore quad$ 四边形 $A' B' C' D' tilde.rev$ 四边形 $A B C D$\(由�
   
   ]])));
 
-+ 在 $⁠triangle.stroked.t A B C$ 中，$overline(A B) < overline(A C)$, 延长 $⁠overline(A B)$ 至 $D$, 使 $⁠overline(B D) = overline(A B)$, 在 $⁠overline(A C)$ 上取 $E$ 点，使 $overline(C E) = overline(B D)$, 连接 $⁠overline(D E)$ 与 $overline(B C)$ 交于 $F$, 则 $⁠overline(A B) : overline(A C) = overline(E F) : overline(F D)$.
++ 在 $triangle.stroked.t A B C$ 中，$overline(A B) < overline(A C)$, 延长 $overline(A B)$ 至 $D$, 使 $overline(B D) = overline(A B)$, 在 $overline(A C)$ 上取 $E$ 点，使 $overline(C E) = overline(B D)$, 连接 $overline(D E)$ 与 $overline(B C)$ 交于 $F$, 则 $overline(A B) : overline(A C) = overline(E F) : overline(F D)$.
 
-+ 延长 $⁠triangle.stroked.t A B C$ 的 $overline(B C)$ 边至 $D$, 使 $⁠overline(C D) = overline(B C)$, 从 $⁠D$ 点引直线通过 $overline(A C)$ 的中点 $E$, 与 $⁠overline(A B)$ 边相交于 $F$, 求 $⁠overline(F E) : overline(E D)$.
++ 延长 $triangle.stroked.t A B C$ 的 $overline(B C)$ 边至 $D$, 使 $overline(C D) = overline(B C)$, 从 $D$ 点引直线通过 $overline(A C)$ 的中点 $E$, 与 $overline(A B)$ 边相交于 $F$, 求 $overline(F E) : overline(E D)$.
 
-+ 从 $⁠triangle.stroked.t A B C$ 的底边 $overline(B C)$ 中点 $D$ 引直线，与过顶点 $A$ 平行 $B C$ 的直线相交于 $G$, 与 $⁠overline(B A)$ 的延长线相交于 $E$, 又与 $⁠A C$ 相交于 $F$, 求证：$⁠overline(D F) : overline(F G) = overline(D E) : overline(E G)$.
++ 从 $triangle.stroked.t A B C$ 的底边 $overline(B C)$ 中点 $D$ 引直线，与过顶点 $A$ 平行 $B C$ 的直线相交于 $G$, 与 $overline(B A)$ 的延长线相交于 $E$, 又与 $A C$ 相交于 $F$, 求证：$overline(D F) : overline(F G) = overline(D E) : overline(E G)$.
 
   #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("3-196");
   

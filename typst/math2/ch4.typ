@@ -1668,28 +1668,28 @@ $therefore quad overline(P C)^2 = a dot.op b$，$overline(P C)$ 就是所求作�
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("4-80");], caption: []), figure([#fig("4-81");], caption: []))));
 
 ==== 充分性
-已知：四边形 $⁠A B C D$, 且 $⁠angle B + angle D = 180 degree$.
+已知：四边形 $A B C D$, 且 $angle B + angle D = 180 degree$.
 
-求证：$⁠A$、$⁠B$、$⁠C$、$⁠D$ 共圆
+求证：$A$、$B$、$C$、$D$ 共圆
 
 #proof[
 由于 $angle B + angle D = 180 degree$,
 
-$⁠therefore quad angle B < 180 degree$
+$therefore quad angle B < 180 degree$
 
-$⁠A$、$⁠B$、$⁠C$ 三点不在同一条直线上，于是有 $dot.o O$ 通过 $A$、$⁠B$、$⁠C$ 三点（图4.68），如果 $D$ 点不在 $dot.o O$ 上，那么只有下面两种可能：
+$A$、$B$、$C$ 三点不在同一条直线上，于是有 $dot.o O$ 通过 $A$、$B$、$C$ 三点（图4.68），如果 $D$ 点不在 $dot.o O$ 上，那么只有下面两种可能：
 
-+ $D$ 点在 $dot.o O$ 内，延长对角线 $overline(B D)$ 与 $dot.o O$ 相交于 $D_1$ 点，于是，$angle A D C > angle A D_1 C$（例4.15）．但 $⁠angle A D_1 C + angle B = 180 degree$
++ $D$ 点在 $dot.o O$ 内，延长对角线 $overline(B D)$ 与 $dot.o O$ 相交于 $D_1$ 点，于是，$angle A D C > angle A D_1 C$（例4.15）．但 $angle A D_1 C + angle B = 180 degree$
 
-  $⁠therefore quad angle A D C + angle B > 180 degree$.
+  $therefore quad angle A D C + angle B > 180 degree$.
 
-  这与已知 $⁠angle B + angle D = 180 degree$ 相矛盾，所以 $D$ 点不能在 $dot.o O$ 内．
+  这与已知 $angle B + angle D = 180 degree$ 相矛盾，所以 $D$ 点不能在 $dot.o O$ 内．
 
-+ $D$ 点在 $dot.o O$ 外，这时 $D_1$ 点在对角线 $overline(B D)$ 上，于是，$angle A D C < angle A D_1 C$. 但 $⁠angle A D_1 C + angle B = 180 degree$
++ $D$ 点在 $dot.o O$ 外，这时 $D_1$ 点在对角线 $overline(B D)$ 上，于是，$angle A D C < angle A D_1 C$. 但 $angle A D_1 C + angle B = 180 degree$
 
-  $⁠therefore quad angle A D C + angle B < 180 degree$.
+  $therefore quad angle A D C + angle B < 180 degree$.
 
-  这又与 $⁠angle B + angle D = 180 degree$ 矛盾，所以 $D$ 点不能在 $dot.o O$ 外．
+  这又与 $angle B + angle D = 180 degree$ 矛盾，所以 $D$ 点不能在 $dot.o O$ 外．
 
 由1、2可知假设“$D$ 不在 $dot.o O$ 上”是错误的，因而 $D$ 必在 $dot.o O$ 上，充分性得证．
 
@@ -1698,7 +1698,7 @@ $⁠A$、$⁠B$、$⁠C$ 三点不在同一条直线上，于是有 $dot.o O$ �
 四边形的四个顶点共圆的充分必要条件是一个外角等于其内对角．
 
 ]
-已知四边形 $A B C D$, $⁠angle E A D$ 是它的一个外角（图4.69），推论1要求证明：$ A\,B\,C\,D upright("四点共圆") arrow.l.r.double.long angle E A D = angle C $ #noindent;请同学自证这个推论．
+已知四边形 $A B C D$, $angle E A D$ 是它的一个外角（图4.69），推论1要求证明：$ A\,B\,C\,D upright("四点共圆") arrow.l.r.double.long angle E A D = angle C $ #noindent;请同学自证这个推论．
 
 #blk[推论2][
 如果两个点在另外两个点所在直线的同旁，并且和另外两点的连线所夹的角相等，那么这四点共圆．
@@ -1706,24 +1706,24 @@ $⁠A$、$⁠B$、$⁠C$ 三点不在同一条直线上，于是有 $dot.o O$ �
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("4-82");], caption: []), figure([#fig("4-83");], caption: []))));
 
-已知：$C$、$⁠D$ 两点在 $A$、$⁠B$ 两点所在直线的同旁，且 $angle A C B = angle A D B$\(图4.70).
+已知：$C$、$D$ 两点在 $A$、$B$ 两点所在直线的同旁，且 $angle A C B = angle A D B$\(图4.70).
 
-求证：$⁠A$、$⁠B$、$⁠C$、$⁠D$ 四点共圆．
+求证：$A$、$B$、$C$、$D$ 四点共圆．
 
 #proof[
-因为 $A$、$⁠B$、$⁠C$ 三点不在同一条直线上，经过 $A$、$⁠B$、$⁠C$ 三点作一圆，在此圆上取一点 $E$, 且使 $⁠E$ 点居于 $A B$ 的另一旁，作 $overline(A E)$、$⁠overline(B E)$, 则 $⁠A E B C$ 是圆内接四边形．
+因为 $A$、$B$、$C$ 三点不在同一条直线上，经过 $A$、$B$、$C$ 三点作一圆，在此圆上取一点 $E$, 且使 $E$ 点居于 $A B$ 的另一旁，作 $overline(A E)$、$overline(B E)$, 则 $A E B C$ 是圆内接四边形．
 
 $therefore quad angle A C B + angle E = 180 degree$（圆内接四边形内对角互补）
 
-但 $⁠angle A D B + angle E = 180 degree$
+但 $angle A D B + angle E = 180 degree$
 
-$⁠therefore quad D$ 点在 $A$、$⁠E$、$⁠B$、$⁠C$ 四点所在的圆上．$A$、$⁠B$、$⁠C$、$⁠D$ 四点共圆．
+$therefore quad D$ 点在 $A$、$E$、$B$、$C$ 四点所在的圆上．$A$、$B$、$C$、$D$ 四点共圆．
 
 ]
 #example[
-已知 $D$、$⁠E$、$⁠F$ 分别是 $triangle.stroked.t A B C$ 三边上的任意一点，通过 $A$、$⁠E$、$⁠F$ 与通过 $C$、$⁠D$、$⁠E$ 的圆如果还相交于另一点 $G$（图4.71(1)）.
+已知 $D$、$E$、$F$ 分别是 $triangle.stroked.t A B C$ 三边上的任意一点，通过 $A$、$E$、$F$ 与通过 $C$、$D$、$E$ 的圆如果还相交于另一点 $G$（图4.71(1)）.
 
-求证：$⁠B$、$⁠D$、$⁠G$、$⁠F$ 四点共圆．
+求证：$B$、$D$、$G$、$F$ 四点共圆．
 
 ]
 #figure([#fig("4-84");
@@ -1734,21 +1734,21 @@ $⁠therefore quad D$ 点在 $A$、$⁠E$、$⁠B$、$⁠C$ 四点所在的圆�
 )
 
 #proof[
-由于 $A$、$⁠E$、$⁠G$、$⁠F$ 与 $C$、$⁠D$、$⁠G$、$⁠E$ 都共圆，
+由于 $A$、$E$、$G$、$F$ 与 $C$、$D$、$G$、$E$ 都共圆，
 
 $therefore quad angle A F G = angle G E C\,quad angle G E C = angle G D B$ (推论1)
 
-$therefore quad angle A F G = angle G D B$, $⁠B$、$⁠D$、$⁠G$、$⁠F$ 四点共圆（推论1）.
+$therefore quad angle A F G = angle G D B$, $B$、$D$、$G$、$F$ 四点共圆（推论1）.
 
-在图4.71(2) 中，通过 $A$、$⁠E$、$⁠F$ 与通过 $C$、$⁠D$、$⁠E$ 的圆的另一个交点在 $triangle.stroked.t A B C$ 外，结论仍然成立，请同学自证．
+在图4.71(2) 中，通过 $A$、$E$、$F$ 与通过 $C$、$D$、$E$ 的圆的另一个交点在 $triangle.stroked.t A B C$ 外，结论仍然成立，请同学自证．
 
 ]
 #example[
-已知锐角 $triangle.stroked.t A B C$ 的高 $A D$、$⁠B E$、$⁠C F$ 交于 $H$ 点，作 $triangle.stroked.t D E F$. 求证
+已知锐角 $triangle.stroked.t A B C$ 的高 $A D$、$B E$、$C F$ 交于 $H$ 点，作 $triangle.stroked.t D E F$. 求证
 
-+ $⁠overline(H A) dot.op overline(H D) = overline(H B) dot.op overline(H E) = overline(H C) dot.op overline(H F)$.
++ $overline(H A) dot.op overline(H D) = overline(H B) dot.op overline(H E) = overline(H C) dot.op overline(H F)$.
 
-+ $⁠A D$、$⁠B E$、$⁠C F$ 分别是 $triangle.stroked.t D E F$ 的三内角平分线．
++ $A D$、$B E$、$C F$ 分别是 $triangle.stroked.t D E F$ 的三内角平分线．
 
 ]
 #figure([#fig("4-85");
@@ -1761,37 +1761,37 @@ $therefore quad angle A F G = angle G D B$, $⁠B$、$⁠D$、$⁠G$、$⁠F$ �
 #proof[
 + $because quad angle A F C = 90 degree\,quad angle A D C = 90 degree$
 
-  $⁠therefore quad angle A F C = angle A D C$，$⁠A$、$⁠F$、$⁠D$、$⁠C$ 四点共圆（推论2）.
+  $therefore quad angle A F C = angle A D C$，$A$、$F$、$D$、$C$ 四点共圆（推论2）.
 
-  同理可证：$B$、$⁠C$、$⁠E$、$⁠F$ 四点也共圆．
+  同理可证：$B$、$C$、$E$、$F$ 四点也共圆．
 
   $therefore quad overline(H A) dot.op overline(H D) = overline(H C) dot.op overline(H F)\,quad overline(H C) dot.op overline(H F) = overline(H B) dot.op overline(H E)$（圆幂定理）
 
-  $⁠therefore quad overline(H A) dot.op overline(H D) = overline(H B) dot.op overline(H E) = overline(H C) dot.op overline(H F)$
+  $therefore quad overline(H A) dot.op overline(H D) = overline(H B) dot.op overline(H E) = overline(H C) dot.op overline(H F)$
 
-+ 在四边形 $⁠B D H F$ 中，$angle B D H + angle B F H = 180 degree$,
++ 在四边形 $B D H F$ 中，$angle B D H + angle B F H = 180 degree$,
 
-  $⁠therefore quad B$、$⁠D$、$⁠H$、$⁠F$ 四点共圆．
+  $therefore quad B$、$D$、$H$、$F$ 四点共圆．
 
-  同理：$C$、$⁠E$、$⁠H$、$⁠D$ 四点也共圆．
+  同理：$C$、$E$、$H$、$D$ 四点也共圆．
 
   $therefore quad angle 1 = angle 3\,quad angle 2 = angle 4$（圆周角定理推论）．
 
-  又 $⁠because quad B$、$⁠C$、$⁠E$、$⁠F$ 四点共圆，
+  又 $because quad B$、$C$、$E$、$F$ 四点共圆，
 
-  $therefore quad angle 3 = angle 4\,quad angle 1 = angle 2$, 即 $⁠A D$ 平分 $angle F D E$.
+  $therefore quad angle 3 = angle 4\,quad angle 1 = angle 2$, 即 $A D$ 平分 $angle F D E$.
 
-  同理可证：$⁠C F$ 平分 $angle D F E$\; $⁠B E$ 平分 $angle F E D$.
+  同理可证：$C F$ 平分 $angle D F E$\; $B E$ 平分 $angle F E D$.
 
 ]
-请同学们想想，如果 $⁠triangle.stroked.t A B C$ 是钝角三角形或直角三角形，这结论是否还成立？
+请同学们想想，如果 $triangle.stroked.t A B C$ 是钝角三角形或直角三角形，这结论是否还成立？
 
 由例4.24我们可看到，当我们要论证线段与线段之间，角与角之间的某些关系时，利用四点共圆的充要条件会带来方便．
 
 #exercise[
-+ 如图，$O$ 是 $triangle.stroked.t A B C$ 的外心，$M$、$⁠N$、$⁠P$ 是三边上的中点，试找出 $A$、$⁠B$、$⁠C$、$⁠M$、$⁠N$、$⁠P$、$⁠O$ 中，哪四点是共圆的．
++ 如图，$O$ 是 $triangle.stroked.t A B C$ 的外心，$M$、$N$、$P$ 是三边上的中点，试找出 $A$、$B$、$C$、$M$、$N$、$P$、$O$ 中，哪四点是共圆的．
 
-+ 如图，$triangle.stroked.t A B C$ 各边上的高 $A D$、$⁠B E$、$⁠C F$ 相交于 $H$, 试找出 $⁠A$、$⁠B$、$⁠C$、$⁠D$、$⁠E$、$⁠F$、$⁠H$ 中，哪四点是共圆的？
++ 如图，$triangle.stroked.t A B C$ 各边上的高 $A D$、$B E$、$C F$ 相交于 $H$, 试找出 $A$、$B$、$C$、$D$、$E$、$F$、$H$ 中，哪四点是共圆的？
 
 + 下列四边形中，哪一类四边形的四个顶点一定共圆？哪一类的四边形四个顶点一定不共圆？
 
@@ -1808,9 +1808,9 @@ $therefore quad angle A F G = angle G D B$, $⁠B$、$⁠D$、$⁠G$、$⁠F$ �
 
   ]
 
-+ 已知 $triangle.stroked.t A B C$，$⁠B E tack.t A C$ 于 $E$ 点，$C F tack.t A B$ 于 $F$ 点，求证：$triangle.stroked.t A E F tilde.rev triangle.stroked.t A B C$.
++ 已知 $triangle.stroked.t A B C$，$B E tack.t A C$ 于 $E$ 点，$C F tack.t A B$ 于 $F$ 点，求证：$triangle.stroked.t A E F tilde.rev triangle.stroked.t A B C$.
 
-+ 已知直线 $⁠B' C'$ 平行于一圆内接四边形 $A B C D$ 的一边 $overline(B C)$, 且分别与 $⁠overline(A B)\,overline(D C)$ 或它们的延长线相交于 $B'$、$⁠C'$ 两点，求证：$A$、$⁠D$、$⁠B'$、$⁠C'$ 四点共圆．
++ 已知直线 $B' C'$ 平行于一圆内接四边形 $A B C D$ 的一边 $overline(B C)$, 且分别与 $overline(A B)\,overline(D C)$ 或它们的延长线相交于 $B'$、$C'$ 两点，求证：$A$、$D$、$B'$、$C'$ 四点共圆．
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("4-86");
@@ -1831,9 +1831,9 @@ $therefore quad angle A F G = angle G D B$, $⁠B$、$⁠D$、$⁠G$、$⁠F$ �
 
 + 求证：以等腰三角形的一腰为直径所作的圆平分底边．
 
-+ 圆内接四边形 $A B C D$, 设 $⁠overparen(A B)\,overparen(B C)\,overparen(C D)\,overparen(D A)$ 的中点分别是 $M$、$⁠N$、$⁠P$、$⁠Q$, 求证：$⁠M P tack.t N Q$.
++ 圆内接四边形 $A B C D$, 设 $overparen(A B)\,overparen(B C)\,overparen(C D)\,overparen(D A)$ 的中点分别是 $M$、$N$、$P$、$Q$, 求证：$M P tack.t N Q$.
 
-+ 两圆相交于 $⁠A$、$⁠B$ 两点，过 $A$ 点任画一条割线分别与两圆相交于 $C$、$⁠D$. 求证：$⁠angle C B D$ 的大小与割线的位置无关．
++ 两圆相交于 $A$、$B$ 两点，过 $A$ 点任画一条割线分别与两圆相交于 $C$、$D$. 求证：$angle C B D$ 的大小与割线的位置无关．
 
   #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("4-88");
   
@@ -1847,15 +1847,15 @@ $therefore quad angle A F G = angle G D B$, $⁠B$、$⁠D$、$⁠G$、$⁠F$ �
   
   ]])));
 
-+ 已知 $overline(A B)$ 是 $dot.o O$ 的直径，半径 $overline(O C) tack.t overline(A B)$, 过 $⁠overline(O C)$ 的中点 $D$ 作弦 $overline(E F) pll overline(A B)$, 求证：$⁠angle C B E = 2 angle A B E$.
++ 已知 $overline(A B)$ 是 $dot.o O$ 的直径，半径 $overline(O C) tack.t overline(A B)$, 过 $overline(O C)$ 的中点 $D$ 作弦 $overline(E F) pll overline(A B)$, 求证：$angle C B E = 2 angle A B E$.
 
-+ 如图，$⁠triangle.stroked.t A B C$ 内接于一圆，$angle A = 57 degree$, $⁠angle B = 66 degree$, 过 $⁠A$、$⁠B$、$⁠C$ 作圆外切三角形 $A' B' C'$, 求 $⁠triangle.stroked.t A' B' C'$ 的三内角的大小.
++ 如图，$triangle.stroked.t A B C$ 内接于一圆，$angle A = 57 degree$, $angle B = 66 degree$, 过 $A$、$B$、$C$ 作圆外切三角形 $A' B' C'$, 求 $triangle.stroked.t A' B' C'$ 的三内角的大小.
 
-+ 在直角 $triangle.stroked.t A B C$ 中，$angle C = 90 degree$, 以 $⁠overline(B C)$ 为直径作 $dot.o O$ 交斜边于 $D$ 点，再取 $A C$ 的中点 $E$, 求证 $⁠dot.o O$ 与 $D E$ 相切．
++ 在直角 $triangle.stroked.t A B C$ 中，$angle C = 90 degree$, 以 $overline(B C)$ 为直径作 $dot.o O$ 交斜边于 $D$ 点，再取 $A C$ 的中点 $E$, 求证 $dot.o O$ 与 $D E$ 相切．
 
-+ 如图，$overline(A B)$ 是 $dot.o O$ 的直径，$A D$ 是 $dot.o O$ 的切线，$F B$ 与 $D B$ 是 $dot.o O$ 的割线，求证 $overline(B E) dot.op overline(B F) = overline(B C) dot.op overline(B D)$（提示：先证 $⁠D$、$⁠C$、$⁠E$、$⁠F$ 共圆）．
++ 如图，$overline(A B)$ 是 $dot.o O$ 的直径，$A D$ 是 $dot.o O$ 的切线，$F B$ 与 $D B$ 是 $dot.o O$ 的割线，求证 $overline(B E) dot.op overline(B F) = overline(B C) dot.op overline(B D)$（提示：先证 $D$、$C$、$E$、$F$ 共圆）．
 
-+ 已知等腰梯形 $A B C D$ 外切于 $dot.o O$, $⁠overline(A D) pll overline(B C)$, $⁠angle B = 30 degree$. 中线 $⁠overline(E F) = 1$cm, 求 $⁠dot.o O$ 的半径（提示：外切梯形的高等于 $dot.o O$ 的直径）．
++ 已知等腰梯形 $A B C D$ 外切于 $dot.o O$, $overline(A D) pll overline(B C)$, $angle B = 30 degree$. 中线 $overline(E F) = 1$⁠cm, 求 $dot.o O$ 的半径（提示：外切梯形的高等于 $dot.o O$ 的直径）．
 
   #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("4-90");
   
@@ -1875,25 +1875,25 @@ $therefore quad angle A F G = angle G D B$, $⁠B$、$⁠D$、$⁠G$、$⁠F$ �
 
   + 四个切点共圆．
 
-+ 两圆相交于 $P$、$⁠Q$ 两点，一条外公切线分别切它们于 $A$、$⁠B$ 两点，求证：$angle A P B + angle A Q B = 180 degree$.
++ 两圆相交于 $P$、$Q$ 两点，一条外公切线分别切它们于 $A$、$B$ 两点，求证：$angle A P B + angle A Q B = 180 degree$.
 
-+ 如果 $⁠triangle.stroked.t A B C$ 内接于 $dot.o O$, $⁠H$ 是它的垂心，求证：$H$ 点分别以 $B C$、$⁠A C$、$⁠A B$ 为轴的对称点是相应边上高的延长线与 $dot.o O$ 的交点．
++ 如果 $triangle.stroked.t A B C$ 内接于 $dot.o O$, $H$ 是它的垂心，求证：$H$ 点分别以 $B C$、$A C$、$A B$ 为轴的对称点是相应边上高的延长线与 $dot.o O$ 的交点．
 
 + 已知 $H$ 是 $triangle.stroked.t A B C$ 的垂心，$overline(B C)$ 边上高的延长线与 $triangle.stroked.t A B C$ 的外接圆相交于 $H_1$ 点，求证：$B C$ 平分 $angle H B H_1$ 和 $angle H C H_1$.
 
-+ 如果 $⁠triangle.stroked.t A B C$, $⁠angle A$ 的平分线与 $overline(B C)$ 相交于 $D$ 点，与 $triangle.stroked.t A B C$ 的外接圆相交于 $E$ 点，那么 $overline(A B) dot.op overline(A C) = overline(A D) dot.op overline(A E)$
++ 如果 $triangle.stroked.t A B C$, $angle A$ 的平分线与 $overline(B C)$ 相交于 $D$ 点，与 $triangle.stroked.t A B C$ 的外接圆相交于 $E$ 点，那么 $overline(A B) dot.op overline(A C) = overline(A D) dot.op overline(A E)$
 
-+ 已知：四边形 $⁠A B C D$ 是圆内接四边形，$E$ 是它的对角线 $overline(B D)$ 上一点，并且 $angle B A E = angle C A D$, 求证
++ 已知：四边形 $A B C D$ 是圆内接四边形，$E$ 是它的对角线 $overline(B D)$ 上一点，并且 $angle B A E = angle C A D$, 求证
 
-  + $⁠overline(A B) dot.op overline(C D) = overline(A C) dot.op overline(B E)$,
+  + $overline(A B) dot.op overline(C D) = overline(A C) dot.op overline(B E)$,
 
-  + $⁠overline(A D) dot.op overline(B C) = overline(A C) dot.op overline(E D)$,
+  + $overline(A D) dot.op overline(B C) = overline(A C) dot.op overline(E D)$,
 
-  + $⁠overline(A B) dot.op overline(C D) + overline(A D) dot.op overline(B C) = overline(A C) dot.op overline(B D)$
+  + $overline(A B) dot.op overline(C D) + overline(A D) dot.op overline(B C) = overline(A C) dot.op overline(B D)$
 
   #noindent;把(c) 中结论用普通语言叙述为一条定理．
 
-+ 已知圆内接四边形 $⁠A B C D$, $⁠P$、$⁠Q$ 分别是 $overparen(A B)$、$⁠overparen(C D)$ 的中点，求证：$overline(P Q)$ 与 $overline(A B)$、$⁠overline(C D)$ 交成等角．
++ 已知圆内接四边形 $A B C D$, $P$、$Q$ 分别是 $overparen(A B)$、$overparen(C D)$ 的中点，求证：$overline(P Q)$ 与 $overline(A B)$、$overline(C D)$ 交成等角．
 
 == 圆与正多边形
 === 圆的内接正多边形与外切正多边形
@@ -1903,7 +1903,7 @@ $therefore quad angle A F G = angle G D B$, $⁠B$、$⁠D$、$⁠G$、$⁠F$ �
 如果把圆分成 $n$ 等分，那么，顺次连结各分点所得的多边形是圆的内接正 $n$ 边形；经过各分点作圆的切线，所组成的多边形是圆的外切正 $n$ 边形．
 
 ]
-已知：$A_1\,A_2\,A_3\,dots.h\,A_n$ 为 $n$ 等分某圆周的分点，过 $A_1\,A_2\,A_3\,dots.h\,A_n$, 作圆的切线交成 $⁠n$ 边形 $A'_1 A'_2 A'_3 dots.h.c A'_n$ (图4.73).
+已知：$A_1\,A_2\,A_3\,dots.h\,A_n$ 为 $n$ 等分某圆周的分点，过 $A_1\,A_2\,A_3\,dots.h\,A_n$, 作圆的切线交成 $n$ 边形 $A'_1 A'_2 A'_3 dots.h.c A'_n$ (图4.73).
 
 求证：$n$ 边形 $A_1 A_2 A_3 dots.h.c A_n$ 和 $A'_1 A'_2 A'_3 dots.h.c A'_n$ 都是正多边形．
 
@@ -1919,20 +1919,20 @@ $therefore quad angle A F G = angle G D B$, $⁠B$、$⁠D$、$⁠G$、$⁠F$ �
 
 $therefore quad overparen(A_1 A_2) = overparen(A_2 A_3) = dots.h.c = overparen(A_n A_1)\,quad overline(A_1 A_2) = overline(A_2 A_3) = dots.h.c = overline(A_n A_1)$
 
-又 $⁠because quad angle A_1\,angle A_2\,angle A_3\,dots.h\,angle A_n$ 的度数都等于 $overparen(A_1 A_2)$ 的度数的 $\(n - 2\)$ 倍的一半．
+又 $because quad angle A_1\,angle A_2\,angle A_3\,dots.h\,angle A_n$ 的度数都等于 $overparen(A_1 A_2)$ 的度数的 $\(n - 2\)$ 倍的一半．
 
-$therefore quad angle A_1 = angle A_2 = angle A_3 = dots.h.c = angle A_n$, $⁠A_1 A_2 A_3 dots.h.c A_n$ 是正 $n$ 边形．
+$therefore quad angle A_1 = angle A_2 = angle A_3 = dots.h.c = angle A_n$, $A_1 A_2 A_3 dots.h.c A_n$ 是正 $n$ 边形．
 
 由于在 $triangle.stroked.t A'_1 A_1 A_2\,triangle.stroked.t A'_2 A_2 A_3\,dots.h\,triangle.stroked.t A'_n A_n A_1$ 中，$overline(A_1 A_2) = overline(A_2 A_3) = dots.h.c = overline(A_n A_1)$，且
 
-#numbered-align(($⁠angle A'_1 A_1 A_2$, $⁠zws = angle A'_1 A_2 A_1$, false), ($$, $= angle A'_2 A_2 A_3 = angle A'_2 A_3 A_2$, [(弦切角定理及其推论)]), ($$, $= dots.h.c = angle A'_n A_n A_1 = angle A'_n A_1 A_n$, false));
+#numbered-align(($angle A'_1 A_1 A_2$, $eqph = angle A'_1 A_2 A_1$, false), ($$, $= angle A'_2 A_2 A_3 = angle A'_2 A_3 A_2$, [(弦切角定理及其推论)]), ($$, $= dots.h.c = angle A'_n A_n A_1 = angle A'_n A_1 A_n$, false));
 
-$⁠therefore quad triangle.stroked.t A'_1 A_1 A_2 tilde.equiv triangle.stroked.t A'_2 A_2 A_3 tilde.equiv dots.h.c tilde.equiv triangle.stroked.t A'_n A_n A_1$
+$therefore quad triangle.stroked.t A'_1 A_1 A_2 tilde.equiv triangle.stroked.t A'_2 A_2 A_3 tilde.equiv dots.h.c tilde.equiv triangle.stroked.t A'_n A_n A_1$
 
 因此：$ angle A'_1 & = angle A'_2 = angle A'_3 = dots.h.c = angle A'_n\
 overline(A'_1 A'_2) & = overline(A'_2 A'_3) = dots.h.c = overline(A'_n A'_1) $
 
-$⁠therefore quad A'_1 A'_2 A'_3 dots.h.c A'_n$ 是正多边形．
+$therefore quad A'_1 A'_2 A'_3 dots.h.c A'_n$ 是正多边形．
 
 ]
 根据上述定理，我们只要把圆 $n$ 等分就可作出圆的内接正 $n$ 边形了，但能否只用直尺圆规将一个圆 $n$ 等分呢？这个问题并不简单，事实上有的是不可能的．下面我们举例给出圆内接正六边形、正三角形、正方形的作法．
@@ -1942,15 +1942,15 @@ $⁠therefore quad A'_1 A'_2 A'_3 dots.h.c A'_n$ 是正多边形．
 
 已知：$dot.o O$\(图4.74).
 
-求作：$⁠dot.o O$ 的内接正六边形．
+求作：$dot.o O$ 的内接正六边形．
 
 作法
 
 + 作直径 $overline(A D)$.
 
-+ 分别以 $⁠A$、$⁠D$ 为圆心，以 $dot.o O$ 的半径为半径画弧，分别交 $dot.o O$ 于 $B$、$⁠F$、$⁠C$、$⁠E$ 四点
++ 分别以 $A$、$D$ 为圆心，以 $dot.o O$ 的半径为半径画弧，分别交 $dot.o O$ 于 $B$、$F$、$C$、$E$ 四点
 
-+ 作 $overline(A B)$、$⁠overline(B C)$、$⁠overline(C D)$、$⁠overline(D E)$、$⁠overline(E F)$、$⁠overline(F A)$, 则 $⁠A B C D E F$ 就是 $dot.o O$ 的内接正六边形．
++ 作 $overline(A B)$、$overline(B C)$、$overline(C D)$、$overline(D E)$、$overline(E F)$、$overline(F A)$, 则 $A B C D E F$ 就是 $dot.o O$ 的内接正六边形．
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("4-93");], caption: []), figure([#fig("4-94");], caption: []))));
@@ -1958,15 +1958,15 @@ $⁠therefore quad A'_1 A'_2 A'_3 dots.h.c A'_n$ 是正多边形．
 #proof[
 由作法可知，$overline(A B) = overline(O A) = overline(O B)$,
 
-$⁠therefore quad triangle.stroked.t O A B$ 是等边三角形．$angle A O B = 60 degree$.
+$therefore quad triangle.stroked.t O A B$ 是等边三角形．$angle A O B = 60 degree$.
 
-同理：$⁠angle C O D = 60 degree$,
+同理：$angle C O D = 60 degree$,
 
-$⁠therefore quad angle B O C = 180 degree - angle A O B - angle C O D = 60 degree$.
+$therefore quad angle B O C = 180 degree - angle A O B - angle C O D = 60 degree$.
 
-同理：$⁠angle E O F = angle D O E = angle A O F = 60 degree$,
+同理：$angle E O F = angle D O E = angle A O F = 60 degree$,
 
-$⁠therefore quad overparen(A B) = overparen(B C) = overparen(C D) = overparen(D E) = overparen(E F) = overparen(F A)$, $⁠A B C D E F$ 是 $dot.o O$ 的内接正六边形（本节定理）．
+$therefore quad overparen(A B) = overparen(B C) = overparen(C D) = overparen(D E) = overparen(E F) = overparen(F A)$, $A B C D E F$ 是 $dot.o O$ 的内接正六边形（本节定理）．
 
 ]
 #example[
@@ -1980,23 +1980,23 @@ $⁠therefore quad overparen(A B) = overparen(B C) = overparen(C D) = overparen(
 
 + 作直径 $overline(A D)$.
 
-+ 以 $⁠D$ 为圆心，以 $dot.o O$ 的半径为半径作弧交 $dot.o O$ 于 $B$、$⁠C$ 两点．
++ 以 $D$ 为圆心，以 $dot.o O$ 的半径为半径作弧交 $dot.o O$ 于 $B$、$C$ 两点．
 
-+ 作 $overline(A B)$、$⁠overline(B C)$、$⁠overline(C A)$, 则 $⁠triangle.stroked.t A B C$ 就是 $dot.o O$ 的正三角形．
++ 作 $overline(A B)$、$overline(B C)$、$overline(C A)$, 则 $triangle.stroked.t A B C$ 就是 $dot.o O$ 的正三角形．
 
 ]
 #proof[
 由作法可知，$overline(B D) = overline(O B) = overline(O D)$,
 
-$⁠therefore quad triangle.stroked.t O B D$ 是等边三角形．$angle B O D = 60 degree$.
+$therefore quad triangle.stroked.t O B D$ 是等边三角形．$angle B O D = 60 degree$.
 
-同理：$⁠angle C O D = 60 degree$.
+同理：$angle C O D = 60 degree$.
 
-$⁠therefore quad angle A O B = angle A O C = 180 degree - 60 degree = 120 degree$.
+$therefore quad angle A O B = angle A O C = 180 degree - 60 degree = 120 degree$.
 
-$⁠therefore quad angle A O B = angle B O C = angle A O C\,quad overparen(A B) = overparen(B C) = overparen(A C)$
+$therefore quad angle A O B = angle B O C = angle A O C\,quad overparen(A B) = overparen(B C) = overparen(A C)$
 
-$⁠therefore quad triangle.stroked.t A B C$ 为 $dot.o O$ 的内接正三角形（本节定理）．
+$therefore quad triangle.stroked.t A B C$ 为 $dot.o O$ 的内接正三角形（本节定理）．
 
 ]
 #example[
@@ -2004,13 +2004,13 @@ $⁠therefore quad triangle.stroked.t A B C$ 为 $dot.o O$ 的内接正三角形
 
 已知：$dot.o O$\(图4.76).
 
-求作：$⁠dot.o O$ 的内接正方形．
+求作：$dot.o O$ 的内接正方形．
 
 作法
 
-+ 作直径 $overline(A C)$、$⁠overline(B D)$, 使 $⁠overline(A C) tack.t overline(B D)$.
++ 作直径 $overline(A C)$、$overline(B D)$, 使 $overline(A C) tack.t overline(B D)$.
 
-+ 作 $⁠overline(A B)$、$⁠overline(B C)$、$⁠overline(C D)$、$⁠overline(D A)$, 则 $⁠A B C D$ 就是 $dot.o O$ 的内接正方形．
++ 作 $overline(A B)$、$overline(B C)$、$overline(C D)$、$overline(D A)$, 则 $A B C D$ 就是 $dot.o O$ 的内接正方形．
 
 ]
 #proof[
@@ -2018,14 +2018,14 @@ $because quad A C$ 和 $B D$ 垂直于 $O$ 点，
 
 $therefore quad angle A O B = angle B O C = angle C O D = angle D O A\,quad overparen(A B) = overparen(B C) = overparen(C D) = overparen(D A)$
 
-$⁠therefore quad A B C D$ 为 $dot.o O$ 的内接正方形（本节定理）．
+$therefore quad A B C D$ 为 $dot.o O$ 的内接正方形（本节定理）．
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("4-95");], caption: []), figure([#fig("4-96");], caption: []))));
 
 作出了圆的内接正方形 $A C E G$ 以后（图4.77），再分别作直径垂直于每一边，就可以作出圆内接正八边形，一般只要我们作出了圆内接正 $n$ 边形，再分别作直径垂直各边，就很容易作出圆内接正 $2 n$ 边形．
 
-如果一个正 $n$ 边形不容易或者不可能用圆规和直尺作出．我们可用量角器近似地作出一个圆心角等于 $(360 degree) / n$，这个圆心角所对的弧就约是整个圆周的 $1 / n$, 所对的弦就约是圆内接正 $⁠n$ 边形的一边，以这条弦为半径，从圆上一点起在圆上依次截取，就可以近似地把圆分成 $n$ 个等分，依次连结各分点就可以得到所求的圆内接正 $n$ 边形．实用上，用这种方法作图也就可以了．
+如果一个正 $n$ 边形不容易或者不可能用圆规和直尺作出．我们可用量角器近似地作出一个圆心角等于 $(360 degree) / n$，这个圆心角所对的弧就约是整个圆周的 $1 / n$, 所对的弦就约是圆内接正 $n$ 边形的一边，以这条弦为半径，从圆上一点起在圆上依次截取，就可以近似地把圆分成 $n$ 个等分，依次连结各分点就可以得到所求的圆内接正 $n$ 边形．实用上，用这种方法作图也就可以了．
 
 #exercise[
 以下作图只要求作出图形．
@@ -2060,23 +2060,23 @@ $⁠therefore quad A B C D$ 为 $dot.o O$ 的内接正方形（本节定理）�
 )
 
 #proof[
-首先，过 $A_n\,A_1\,A_2$ 三点作一圆 $dot.o O$, 再分别作 $⁠overline(O A_n)\,overline(O A_1)\,overline(O A_2)\,overline(O A_3)\,dots.h$. 显然，$⁠triangle.stroked.t O A_n A_1$ 和 $triangle.stroked.t O A_1 A_2$ 都是全等的等腰三角形（SSS）.
+首先，过 $A_n\,A_1\,A_2$ 三点作一圆 $dot.o O$, 再分别作 $overline(O A_n)\,overline(O A_1)\,overline(O A_2)\,overline(O A_3)\,dots.h$. 显然，$triangle.stroked.t O A_n A_1$ 和 $triangle.stroked.t O A_1 A_2$ 都是全等的等腰三角形（SSS）.
 
 $therefore quad A_1 O$ 是 $angle A_n A_1 A_2$ 的平分线．
 
 又 $because quad angle A_n A_1 A_2 = angle A_1 A_2 A_3$,
 
-$⁠therefore quad angle O A_2 A_1 = angle O A_1 A_2 = 1 / 2 angle A_n A_1 A_2 = 1 / 2 angle A_1 A_2 A_3$,
+$therefore quad angle O A_2 A_1 = angle O A_1 A_2 = 1 / 2 angle A_n A_1 A_2 = 1 / 2 angle A_1 A_2 A_3$,
 
-因此：$⁠A_2 O$ 是 $angle A_1 A_2 A_3$ 的平分线，$angle O A_2 A_1 = angle O A_2 A_3$,
+因此：$A_2 O$ 是 $angle A_1 A_2 A_3$ 的平分线，$angle O A_2 A_1 = angle O A_2 A_3$,
 
-又 $⁠because quad overline(A_1 A_2) = overline(A_2 A_3)\,quad overline(O A_2) = overline(O A_2)$,
+又 $because quad overline(A_1 A_2) = overline(A_2 A_3)\,quad overline(O A_2) = overline(O A_2)$,
 
-$⁠therefore quad triangle.stroked.t O A_1 A_2 tilde.equiv triangle.stroked.t O A_2 A_3$ (SAS), $overline(O A_2) = overline(O A_3)$
+$therefore quad triangle.stroked.t O A_1 A_2 tilde.equiv triangle.stroked.t O A_2 A_3$ (SAS), $overline(O A_2) = overline(O A_3)$
 
-这就是说 $⁠A_3$ 在所作的 $dot.o O$ 上．循此下去，同样可证明正多边形 $A_1 A_2 A_3 dots.h.c A_n$ 的其他各顶点也在 $dot.o O$ 上．
+这就是说 $A_3$ 在所作的 $dot.o O$ 上．循此下去，同样可证明正多边形 $A_1 A_2 A_3 dots.h.c A_n$ 的其他各顶点也在 $dot.o O$ 上．
 
-其次，有了外接圆 $dot.o O$，圆心 $⁠O$ 到各边的距离便彼此相等，这就是说，以 $O$ 为圆心，$O$ 到一边的距离为半径必可作一圆和各边都相切，此圆即是正多边形 $A_1 A_2 A_3 dots.h.c A_n$ 的内切圆（图4.78）.
+其次，有了外接圆 $dot.o O$，圆心 $O$ 到各边的距离便彼此相等，这就是说，以 $O$ 为圆心，$O$ 到一边的距离为半径必可作一圆和各边都相切，此圆即是正多边形 $A_1 A_2 A_3 dots.h.c A_n$ 的内切圆（图4.78）.
 
 ]
 正多边形的外接圆和内切圆的公共圆心，叫做#strong[正多边形的中心]；外接圆的半径，叫做#strong[正多边形的半径]；内切圆的半径，叫做正多边形的#strong[边心距]；正多边形每一边所对的外接圆的圆心角，叫做#strong[正多边形的中心角]．
@@ -2088,7 +2088,7 @@ $⁠therefore quad triangle.stroked.t O A_1 A_2 tilde.equiv triangle.stroked.t O
   ]
 )
 
-如图4.79, $A_1 A_2 A_3 dots.h.c A_n$ 是正 $n$ 边形，$dot.o\(O\,r\)$ 是它的外接圆，$dot.o\(O\,d_n\)$ 是它的内切圆，$O$ 为它的中心，$r$ 是它的半径，$d_n$ 是它的边心距．设正 $n$ 边形的边长为 $a_n$, 半径长为 $⁠r$, 边心距为 $⁠d_n$, 这三者有下面的勾股关系．$ r^2 = d_n^2 + (a_n / 2)^2 $
+如图4.79, $A_1 A_2 A_3 dots.h.c A_n$ 是正 $n$ 边形，$dot.o\(O\,r\)$ 是它的外接圆，$dot.o\(O\,d_n\)$ 是它的内切圆，$O$ 为它的中心，$r$ 是它的半径，$d_n$ 是它的边心距．设正 $n$ 边形的边长为 $a_n$, 半径长为 $r$, 边心距为 $d_n$, 这三者有下面的勾股关系．$ r^2 = d_n^2 + (a_n / 2)^2 $
 
 由于边数相同的正多边形的对应角都相等；正多边形的各边相等，所以边数相同的正多边形的对应边成比例．因此，我们可得下面的定理．
 
@@ -2099,39 +2099,39 @@ $⁠therefore quad triangle.stroked.t O A_1 A_2 tilde.equiv triangle.stroked.t O
 #example[
 正多边形的面积，等于它的周长和边心距乘积的一半．
 
-已知：正多边形的面积 $⁠S$, 周长是 $⁠p$, 边心距是 $⁠d$.
+已知：正多边形的面积 $S$, 周长是 $p$, 边心距是 $d$.
 
-求证：$⁠S = 1 / 2 p d$
+求证：$S = 1 / 2 p d$
 
 ]
 #proof[
-如图4.80, 设 $⁠overline(A B)$ 是正 $n$ 边形的一边，$O$ 是这个正多边形外接圆圆心，那么 $ triangle.stroked.t O A B upright("的面积") = 1 / 2 d times overline(A B) $
+如图4.80, 设 $overline(A B)$ 是正 $n$ 边形的一边，$O$ 是这个正多边形外接圆圆心，那么 $ triangle.stroked.t O A B upright("的面积") = 1 / 2 d times overline(A B) $
 
-$⁠therefore quad S = triangle.stroked.t O A B upright("的面积") times n = 1 / 2 d times overline(A B) times n$
+$therefore quad S = triangle.stroked.t O A B upright("的面积") times n = 1 / 2 d times overline(A B) times n$
 
-$⁠because quad overline(A B) times n = p$
+$because quad overline(A B) times n = p$
 
-$⁠therefore quad S = 1 / 2 p d$.
+$therefore quad S = 1 / 2 p d$.
 
 ]
 #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("4-99");], caption: []), figure([#fig("4-100");], caption: []))));
 
 #example[
-已知正三角形的边长为 $⁠a$. 求它的外接圆半径 $⁠r$ 和它的内切圆半径 $d$.
+已知正三角形的边长为 $a$. 求它的外接圆半径 $r$ 和它的内切圆半径 $d$.
 
 ]
 #solution[
-如图4.81, 设 $⁠O$ 是正 $triangle.stroked.t A B C$ 的中心，$O M tack.t overline(A B)$ 于 $M$, 则 $⁠overline(O A) = r$, $⁠overline(O M) = d$, $⁠angle O A M = 1 / 2 angle C A B = 30 degree$
+如图4.81, 设 $O$ 是正 $triangle.stroked.t A B C$ 的中心，$O M tack.t overline(A B)$ 于 $M$, 则 $overline(O A) = r$, $overline(O M) = d$, $angle O A M = 1 / 2 angle C A B = 30 degree$
 
-在直角三角形 $⁠O A M$ 中，$r = 2 d$, $⁠overline(A M) = a / 2$
+在直角三角形 $O A M$ 中，$r = 2 d$, $overline(A M) = a / 2$
 
-$⁠therefore quad\(2 d\)^2 = d^2 + (a / 2)^2$
+$therefore quad\(2 d\)^2 = d^2 + (a / 2)^2$
 
-解之得：$⁠d = sqrt(3) / 6 a$.
+解之得：$d = sqrt(3) / 6 a$.
 
-于是，$⁠r = 2 d = sqrt(3) / 3 a$
+于是，$r = 2 d = sqrt(3) / 3 a$
 
-答：内切圆半径是 $⁠sqrt(3) / 6 a$，外接圆半径是 $⁠sqrt(3) / 3 a$.
+答：内切圆半径是 $sqrt(3) / 6 a$，外接圆半径是 $sqrt(3) / 3 a$.
 
 ]
 #exercise[
@@ -2148,7 +2148,7 @@ $⁠therefore quad\(2 d\)^2 = d^2 + (a / 2)^2$
 
   + 正十边形；
 
-  + 正 $⁠n$ 边形．
+  + 正 $n$ 边形．
 
   ]
 
@@ -2158,7 +2158,7 @@ $⁠therefore quad\(2 d\)^2 = d^2 + (a / 2)^2$
 
 ]
 === 圆的周长和面积
-由于圆被 $⁠n$ 等分后，顺次连结各分点，便得到一个 $n$ 边形，如果再把这 $n$ 段弧的中点取出来，圆上便出现了 $2 n$ 个分点，而顺次连结这个 $2 n$ 分点所得到的正 $2 n$ 边形，便包围着原来的正 $n$ 边形（图4.82），那么，这个正 $2 n$ 边形的周长和面积都比原来的正 $n$ 边形的周长和面积大，如此下去，我们还可继续得出圆内接正 $4 n$ 边形、正 $8 n$ 边形……我们可以看到这样的圆的内接正 $n$、$2 n$、$4 n$、$8 n$、……边形的边数越增，它们的周长和面积就越逼近圆的周长和面积．这样一来，当已知圆的半径时，我们便可计算它的内接正 $⁠n$、$2 n$、$4 n$、$8 n$、……边形的周长和面积，作为精确度不同的圆周长和圆面积的近似值．
+由于圆被 $n$ 等分后，顺次连结各分点，便得到一个 $n$ 边形，如果再把这 $n$ 段弧的中点取出来，圆上便出现了 $2 n$ 个分点，而顺次连结这个 $2 n$ 分点所得到的正 $2 n$ 边形，便包围着原来的正 $n$ 边形（图4.82），那么，这个正 $2 n$ 边形的周长和面积都比原来的正 $n$ 边形的周长和面积大，如此下去，我们还可继续得出圆内接正 $4 n$ 边形、正 $8 n$ 边形……我们可以看到这样的圆的内接正 $n$、$2 n$、$4 n$、$8 n$、……边形的边数越增，它们的周长和面积就越逼近圆的周长和面积．这样一来，当已知圆的半径时，我们便可计算它的内接正 $n$、$2 n$、$4 n$、$8 n$、……边形的周长和面积，作为精确度不同的圆周长和圆面积的近似值．
 
 现在我们来举例说明，半径是一个单位长的圆内接正4、8、16、32、64边形的周长的计算方法．
 
@@ -2169,32 +2169,32 @@ $⁠therefore quad\(2 d\)^2 = d^2 + (a / 2)^2$
   ]
 )
 
-如图4.82, 设 $⁠overline(A_1 A_2)$ 是半径为1个单位长的圆内接正 $n$ 边形的一边，其长度记为 $a_n$, 又设 $⁠B$ 是 $overparen(A_1 A_2)$ 的中点，那么，$overline(A_1 B)$ 就是圆内接正 $2 n$ 边形的一边，其边长记为 $a_(2 n)$, 于是，$ a_(2 n) = overline(A_1 B) & = sqrt(overline(A_1 D)^2 + overline(D B)^2)\
+如图4.82, 设 $overline(A_1 A_2)$ 是半径为1个单位长的圆内接正 $n$ 边形的一边，其长度记为 $a_n$, 又设 $B$ 是 $overparen(A_1 A_2)$ 的中点，那么，$overline(A_1 B)$ 就是圆内接正 $2 n$ 边形的一边，其边长记为 $a_(2 n)$, 于是，$ a_(2 n) = overline(A_1 B) & = sqrt(overline(A_1 D)^2 + overline(D B)^2)\
  & = sqrt(overline(A_1 D)^2 + (overline(O B) - overline(O D))^2)\
  & = sqrt(overline(A_1 D)^2 + (overline(O B) - sqrt(overline(O A_1)^2 - overline(A_1 D)^2))^2)\
  & = sqrt(overline(A_1 D)^2 + (1 - sqrt(1 - overline(A_1 D)^2))^2)\
  & = sqrt(2 - 2 sqrt(1 - overline(A_1 D)^2)) = sqrt(2 - 2 sqrt(1 - (a_n / 2)^2))\
  & = sqrt(2) sqrt(1 - sqrt(1 - (a_n / 2)^2)) $ #noindent;$a_4 = sqrt(2)$, 代入上面公式可得：$ a_8 = 0.7653668\,quad a_16 = 0.3901804\,quad a_32 = 0.1960339\,quad a_64 = 0.098135 $
 
-设 $⁠ell_n$ 是半径为1个单位长的圆内接正 $n$ 边形的周长，则可算出：$ ell_4 = 5.6568542\,quad ell_8 = 6.1229344\,quad ell_16 = 6.2428864\, $ #noindent;$ ell_32 = 6.2730848\,#h(2em) ell_64 = 6.2806426 . $
+设 $ell_n$ 是半径为1个单位长的圆内接正 $n$ 边形的周长，则可算出：$ ell_4 = 5.6568542\,quad ell_8 = 6.1229344\,quad ell_16 = 6.2428864\, $ #noindent;$ ell_32 = 6.2730848\,#h(2em) ell_64 = 6.2806426 . $
 
-现在我们再来计算 $⁠ell_n$ 与直径长的比值．$ ell_4 / 2 = 2.8284271\,#h(2em) ell_8 / 2 = 3.0614672\, $ #noindent;$ ell_16 / 2 = 3.121443\,#h(2em) ell_32 / 2 = 3.1365424\, $ #noindent;$ ell_64 / 2 = 3.1403213 . $
+现在我们再来计算 $ell_n$ 与直径长的比值．$ ell_4 / 2 = 2.8284271\,#h(2em) ell_8 / 2 = 3.0614672\, $ #noindent;$ ell_16 / 2 = 3.121443\,#h(2em) ell_32 / 2 = 3.1365424\, $ #noindent;$ ell_64 / 2 = 3.1403213 . $
 
-我们看到这些比值，随着 $⁠n$ 的增加，就会愈来愈逼近圆周长与直径的比值．对任何圆来说，圆周长与直径长的比是一个常数，这个常数就是圆周率 $pi$. 我们用上述方法就能任意精确地算出 $⁠pi$ 的近似值．圆周率 $pi$ 的精确值是一个永远写不完的无限不循环小数．$ pi = 3.14159265358979323846 dots.h.c $ #noindent;应用时常根据实际需要取 $pi$ 的近似值．
+我们看到这些比值，随着 $n$ 的增加，就会愈来愈逼近圆周长与直径的比值．对任何圆来说，圆周长与直径长的比是一个常数，这个常数就是圆周率 $pi$. 我们用上述方法就能任意精确地算出 $pi$ 的近似值．圆周率 $pi$ 的精确值是一个永远写不完的无限不循环小数．$ pi = 3.14159265358979323846 dots.h.c $ #noindent;应用时常根据实际需要取 $pi$ 的近似值．
 
-我国古代的数学家对于圆周率的研究有很大的贡献．三国魏时刘徽就用我们上面的计算方法，从圆内接正六边形开始一直算到圆内接正192边形，得出 $pi = 3.14$. 刘徽是世界上计算 $⁠pi$ 的值精确到0.01的第一人．继他以后，南北朝时的祖冲之算出 $pi$ 值，在3.1415926和3.1415927之间并且用分数 $22\/7$ 和 $355\/113$ 来表示 $pi$ 的近似值．这两个分数分别叫做约率和密率．祖冲之的密率直到一千多年后，才为欧洲人鄂图和安托尼兹所知．
+我国古代的数学家对于圆周率的研究有很大的贡献．三国魏时刘徽就用我们上面的计算方法，从圆内接正六边形开始一直算到圆内接正192边形，得出 $pi = 3.14$. 刘徽是世界上计算 $pi$ 的值精确到0.01的第一人．继他以后，南北朝时的祖冲之算出 $pi$ 值，在3.1415926和3.1415927之间并且用分数 $22\/7$ 和 $355\/113$ 来表示 $pi$ 的近似值．这两个分数分别叫做约率和密率．祖冲之的密率直到一千多年后，才为欧洲人鄂图和安托尼兹所知．
 
 如果圆周长用 $C$ 表示，半径用 $r$ 表示，那么，从 $frac(C, 2 r) = pi$ , 就可推出下面的#strong[圆周长公式] $ C = 2 pi r $
 
-在半径为 $⁠r$ 的圆上（图4.83）, $ 1 degree upright("弧的长") = upright("周长") / 360 = frac(2 pi r, 360) = frac(pi r, 180) $ #noindent;由此，我们可得到计算 $n degree$ 弧的弧长公式 $ ell = frac(n pi r, 180) $ #noindent;这里 $ell$ 表示弧长，$n$ 是弧所含的度数．
+在半径为 $r$ 的圆上（图4.83）, $ 1 degree upright("弧的长") = upright("周长") / 360 = frac(2 pi r, 360) = frac(pi r, 180) $ #noindent;由此，我们可得到计算 $n degree$ 弧的弧长公式 $ ell = frac(n pi r, 180) $ #noindent;这里 $ell$ 表示弧长，$n$ 是弧所含的度数．
 
 我们已经知道#strong[圆的面积公式] $ S = pi r^2 $ #noindent;这里 $S$ 表示圆的面积，$r$ 仍表示圆的半径．
 
 这个公式的来源，我们可作如下说明．
 
-如图4.83, $overline(A_1 A_2)$ 是圆内接正 $n$ 边形的一边，如果它的周长是 $ell_n$, 边心距是 $⁠d_n$, 那么，这个正多边形的面积 $ S_n = 1 / 2 ell_n d_n $
+如图4.83, $overline(A_1 A_2)$ 是圆内接正 $n$ 边形的一边，如果它的周长是 $ell_n$, 边心距是 $d_n$, 那么，这个正多边形的面积 $ S_n = 1 / 2 ell_n d_n $
 
-当这个圆的内接正多边形的边数 $⁠n$ 无限增加时，它的面积 $S_n$ 逼近于圆的面积 $S$\; 它的周长 $⁠ell_n$ 逼近于圆周长 $C$, 它的边心距 $⁠d_n$ 逼近于圆的半径 $r$. 因此，有 $ S = 1 / 2 C r = 1 / 2 times 2 pi r times r = pi r^2 $
+当这个圆的内接正多边形的边数 $n$ 无限增加时，它的面积 $S_n$ 逼近于圆的面积 $S$\; 它的周长 $ell_n$ 逼近于圆周长 $C$, 它的边心距 $d_n$ 逼近于圆的半径 $r$. 因此，有 $ S = 1 / 2 C r = 1 / 2 times 2 pi r times r = pi r^2 $
 
 一条弧和经过这条弧的端点的两条半径组成的图形，叫做#strong[扇形]（图4.84的阴影部分）．
 
@@ -2202,12 +2202,12 @@ $⁠therefore quad\(2 d\)^2 = d^2 + (a / 2)^2$
 
 由圆的面积公式，我们可得到扇形面积公式，因为，$ upright("含有") 1 degree upright("弧的扇形面积") = upright("圆面积") / 360 $ #noindent;所以圆心角是 $n degree$ 的扇形面积计算公式是：$ S = frac(n pi r^2, 360) $ #noindent;这里 $S$ 是扇形面积，$n$ 是扇形的圆心角的度数，$r$ 是圆的半径．
 
-由于 $ frac(n pi r^2, 360) = 1 / 2 (frac(n pi r, 180)) dot.op r $ #noindent;而 $frac(n pi r, 180)$ 是扇形的弧长 $ell$，所以，当知道扇形弧长 $⁠ell$ 时，扇形面积公式又可写成：$ S = 1 / 2 ell r $
+由于 $ frac(n pi r^2, 360) = 1 / 2 (frac(n pi r, 180)) dot.op r $ #noindent;而 $frac(n pi r, 180)$ 是扇形的弧长 $ell$，所以，当知道扇形弧长 $ell$ 时，扇形面积公式又可写成：$ S = 1 / 2 ell r $
 
 这就是说，#strong[扇形的面积等于它的弧长和半径乘积的一半]．
 
 #example[
-第一次测定地球半径的是公元前三世纪的希腊天文学家爱拉托斯芬．他在夏至这一天，当太阳在塞伊城的天顶（$⁠S$）时（图4.85），而在亚历山大城（$⁠A$），测得太阳与天顶的方向差是 $7.2 degree$. 他由塞伊城和亚历山大城的实际距离 $⁠overparen(A S)$ 算出了地球的半径，问爱拉托斯芬怎样算出地球半径 $r$ 的？
+第一次测定地球半径的是公元前三世纪的希腊天文学家爱拉托斯芬．他在夏至这一天，当太阳在塞伊城的天顶（$S$）时（图4.85），而在亚历山大城（$A$），测得太阳与天顶的方向差是 $7.2 degree$. 他由塞伊城和亚历山大城的实际距离 $overparen(A S)$ 算出了地球的半径，问爱拉托斯芬怎样算出地球半径 $r$ 的？
 
 ]
 #figure([#fig("4-104");
@@ -2218,29 +2218,29 @@ $⁠therefore quad\(2 d\)^2 = d^2 + (a / 2)^2$
 )
 
 #solution[
-塞伊城和亚历山大城是在同一条子午线 $overparen(A S)$ 上，若地球的截面是圆形地心是 $O$, 太阳的光线是平行的，则 $⁠angle A O S = 7.2 degree$.
+塞伊城和亚历山大城是在同一条子午线 $overparen(A S)$ 上，若地球的截面是圆形地心是 $O$, 太阳的光线是平行的，则 $angle A O S = 7.2 degree$.
 
-$⁠because quad overparen(A S) upright("的弧长") = frac(7.2 times pi times r, 180)$
+$because quad overparen(A S) upright("的弧长") = frac(7.2 times pi times r, 180)$
 
-$⁠therefore quad r = frac(180, 7.2 times pi) times overparen(A S)$
+$therefore quad r = frac(180, 7.2 times pi) times overparen(A S)$
 
-把 $⁠overparen(A S)$ 的长度代入上式，就可算出地球的半径．
+把 $overparen(A S)$ 的长度代入上式，就可算出地球的半径．
 
 ]
 #example[
-已知扇形的半径 $r approx 4.8$cm, 所含的圆心角是 $42 degree$, 求它的周长和面积（$⁠pi approx 3.14$）.
+已知扇形的半径 $r approx 4.8$⁠cm, 所含的圆心角是 $42 degree$, 求它的周长和面积（$pi approx 3.14$）.
 
 ]
 #solution[
-设扇形的弧长为 $⁠ell$, 则：$ ell = frac(42 times 3.14 times 4.8, 180) approx 3.5\(upright(c m)\) $ #noindent;$therefore quad$ 扇形的周长 $= 2 r + ell = 2 times 4.8 + 3.5 = 13.1$\(cm).
+设扇形的弧长为 $ell$, 则：$ ell = frac(42 times 3.14 times 4.8, 180) approx 3.5\(upright(c m)\) $ #noindent;$therefore quad$ 扇形的周长 $= 2 r + ell = 2 times 4.8 + 3.5 = 13.1$\(cm).
 
 扇形的面积 $= 1 / 2 ell r = 1 / 2 times 3.5 times 4.8 approx 8.4\(upright(c m^2)\)$
 
-答：扇形周长约是13.1cm, 面积约为8.4$⁠upright(c m^2)$.
+答：扇形周长约是13.1cm, 面积约为8.4$upright(c m^2)$.
 
 ]
 #exercise[
-+ 已知圆的周长 $⁠C approx 48.5$cm, 求圆的半径 $⁠r$.
++ 已知圆的周长 $C approx 48.5$⁠cm, 求圆的半径 $r$.
 
 + 一列火车，火车头上的主动轮的直径约是1.2米，如果主动轮每秒钟转250次，那么，火车的速度是每小时约多少公里？
 
@@ -2272,21 +2272,21 @@ $⁠therefore quad r = frac(180, 7.2 times pi) times overparen(A S)$
 
 + 用全等的正多边形的砖铺地面，要砖与砖之间不留空隙，有哪几种正多边形的砖合用？
 
-+ 已知圆的半径为 $⁠r$. 求外切正三角形、外切正方形、外切正六边形的周长和面积．
++ 已知圆的半径为 $r$. 求外切正三角形、外切正方形、外切正六边形的周长和面积．
 
 + 求证：正三角形的边心距、半径和高的比是 $1 : 2 : 3$.
 
-+ 已知圆的半径是 $⁠r$, 求证圆的内接正八边形的周长是 $8 sqrt(2 - sqrt(2)) r$, 面积是 $2 sqrt(2) r^2$.
++ 已知圆的半径是 $r$, 求证圆的内接正八边形的周长是 $8 sqrt(2 - sqrt(2)) r$, 面积是 $2 sqrt(2) r^2$.
 
 + 已知正三角形外接圆面积是100平方厘米，求它的内切圆面积．
 
 + 有一圆管的外直径是150mm, 内直径是100mm, 求这圆管的横断面的面积和它的厚度．
 
-+ 已知一圆的半径是200mm, $⁠overparen(A B)$ 所对的圆心角是 $45 degree$, 求 $⁠overparen(A B)$ 长和扇形 $O A B$ 的面积．
++ 已知一圆的半径是200mm, $overparen(A B)$ 所对的圆心角是 $45 degree$, 求 $overparen(A B)$ 长和扇形 $O A B$ 的面积．
 
-+ 如图：$triangle.stroked.t A B C$ 中，$angle C = 90 degree$, $⁠overparen(A C B)$ 是以 $overline(A B)$ 为直径的半圆，$overparen(A D C)$ 是以 $overline(A C)$ 为直径的半圆，$overparen(C E B)$ 是以 $overline(C B)$ 为直径的半圆．
++ 如图：$triangle.stroked.t A B C$ 中，$angle C = 90 degree$, $overparen(A C B)$ 是以 $overline(A B)$ 为直径的半圆，$overparen(A D C)$ 是以 $overline(A C)$ 为直径的半圆，$overparen(C E B)$ 是以 $overline(C B)$ 为直径的半圆．
 
-  求证：I的面积 $+$II的面积 $=$III的面积．
+  求证：I的面积 $+$⁠II的面积 $=$⁠III的面积．
 
   #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("4-106");
   
@@ -2303,19 +2303,19 @@ $⁠therefore quad r = frac(180, 7.2 times pi) times overparen(A S)$
 + 为了把半径是3cm和1cm的两根圆柱紧紧地捆扎在一起，绕一圈需要多少铅丝？
 
 #heading(level: 2, numbering: none, outlined: false)[复习题四]
-+ 已知两定点 $⁠A$、$⁠B$, 分别以 $⁠A$、$⁠B$ 为圆心，以同一的半径 $r thick (r gt.eq 1 / 2 overline(A B))$ 作圆，求证这些等圆的交点都在 $overline(A B)$ 的垂直平分线上．
++ 已知两定点 $A$、$B$, 分别以 $A$、$B$ 为圆心，以同一的半径 $r thick (r gt.eq 1 / 2 overline(A B))$ 作圆，求证这些等圆的交点都在 $overline(A B)$ 的垂直平分线上．
 
 + 两圆的半径都是4cm, 并且一圆过另一圆的圆心，求这两圆的公共弦长．
 
-+ 已知 $overline(A B)$ 是 $dot.o O$ 的直径，以 $overline(O B)$ 为直径作 $dot.o O'$, 过 $⁠B$ 点作直线与 $dot.o O$ 相交于 $M$ 点，与 $dot.o O'$ 相交于 $N$ 点．求证：$overline(B N) = overline(M N)$.
++ 已知 $overline(A B)$ 是 $dot.o O$ 的直径，以 $overline(O B)$ 为直径作 $dot.o O'$, 过 $B$ 点作直线与 $dot.o O$ 相交于 $M$ 点，与 $dot.o O'$ 相交于 $N$ 点．求证：$overline(B N) = overline(M N)$.
 
-+ 已知 $⁠overline(C D)$ 是 $dot.o O$ 的直径，$A$ 为 $dot.o O$ 外一点，$A T$ 切圆于 $T$ 点，如果切点 $T$ 与 $C$ 的连线平行于 $A O$, 求证 $⁠A D$ 与 $dot.o O$ 相切．
++ 已知 $overline(C D)$ 是 $dot.o O$ 的直径，$A$ 为 $dot.o O$ 外一点，$A T$ 切圆于 $T$ 点，如果切点 $T$ 与 $C$ 的连线平行于 $A O$, 求证 $A D$ 与 $dot.o O$ 相切．
 
-+ 以 $O$ 为圆心作两个同心圆，已知 $overline(A B)$ 为小圆的直径，过 $A$、$⁠B$ 两点分别作小圆的切线交大圆于 $C$、$⁠D$ 两点（使 $C$、$⁠D$ 分别在 $overline(A B)$ 的两侧），证明 $C$、$⁠O$、$⁠D$ 三点共线．
++ 以 $O$ 为圆心作两个同心圆，已知 $overline(A B)$ 为小圆的直径，过 $A$、$B$ 两点分别作小圆的切线交大圆于 $C$、$D$ 两点（使 $C$、$D$ 分别在 $overline(A B)$ 的两侧），证明 $C$、$O$、$D$ 三点共线．
 
 + 若一圆的两条切线交成 $60 degree$ 角，圆的半径为 $r$, 求交点到圆心的距离．若交角为 $120 degree$, 交点到圆心的距离又是多少？
 
-+ 有一桥拱是圆弧 $⁠overparen(A C B)$, 桥的跨度 $⁠overline(A B) = 37.4$ 米，拱高 $overline(C D) = 7.2$ 米，求拱圈的半径．
++ 有一桥拱是圆弧 $overparen(A C B)$, 桥的跨度 $overline(A B) = 37.4$ 米，拱高 $overline(C D) = 7.2$ 米，求拱圈的半径．
 
   #align(center, block(breakable: false, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#fig("4-108");
   
@@ -2329,38 +2329,38 @@ $⁠therefore quad r = frac(180, 7.2 times pi) times overparen(A S)$
   
   ]])));
 
-+ 如图，一工件的断面，$a$、$⁠b$、$⁠r$ 为已知，求 $x$.
++ 如图，一工件的断面，$a$、$b$、$r$ 为已知，求 $x$.
 
-+ 已知 $⁠overline(A B)$ 为一半圆的直径，直线 $ell$ 与半圆相切于 $C$ 点，$overline(C D) tack.t overline(A B)$ 于 $D$ 点，$overline(A M) tack.t ell$ 于 $M$ 点，$overline(B N) tack.t ell$ 于 $N$ 点．
++ 已知 $overline(A B)$ 为一半圆的直径，直线 $ell$ 与半圆相切于 $C$ 点，$overline(C D) tack.t overline(A B)$ 于 $D$ 点，$overline(A M) tack.t ell$ 于 $M$ 点，$overline(B N) tack.t ell$ 于 $N$ 点．
 
-  求证：$overline(M C) = overline(N C)$；$⁠overline(C D)^2 = overline(A M) dot.op overline(B N)$.
+  求证：$overline(M C) = overline(N C)$；$overline(C D)^2 = overline(A M) dot.op overline(B N)$.
 
-+ 已知 $⁠dot.o O_1$ 与 $dot.o O_2$ 外切于 $A$ 点，一直线与 $dot.o O_1$ 和 $dot.o O_2$ 分别相切于 $T_1$、$⁠T_2$ 两点，并与连心线 $O_1 O_2$ 相交于 $S$ 点，
++ 已知 $dot.o O_1$ 与 $dot.o O_2$ 外切于 $A$ 点，一直线与 $dot.o O_1$ 和 $dot.o O_2$ 分别相切于 $T_1$、$T_2$ 两点，并与连心线 $O_1 O_2$ 相交于 $S$ 点，
 
   求证：$overline(S A)^2 = overline(S T_1) dot.op overline(S T_2)$.
 
-+ 已知 $⁠overline(M N)$ 为一圆的直径，过圆外一点 $D$ 作 $overline(D A) tack.t overline(M N)$ 于 $A$ 点交圆于 $C$ 点，$overline(D N)$ 交圆于 $P$, $⁠overline(M P)$ 交 $overline(A D)$ 于 $B$, 求证：$⁠overline(A C)^2 = overline(A B) dot.op overline(A D)$（提示：先证 $⁠overline(A B) dot.op overline(A D) = overline(A M) dot.op overline(A N)$）．
++ 已知 $overline(M N)$ 为一圆的直径，过圆外一点 $D$ 作 $overline(D A) tack.t overline(M N)$ 于 $A$ 点交圆于 $C$ 点，$overline(D N)$ 交圆于 $P$, $overline(M P)$ 交 $overline(A D)$ 于 $B$, 求证：$overline(A C)^2 = overline(A B) dot.op overline(A D)$（提示：先证 $overline(A B) dot.op overline(A D) = overline(A M) dot.op overline(A N)$）．
 
-+ 过两相交圆的公弦上的一点 $⁠P$, 作一条直线交一圆于 $⁠A$、$⁠B$ 两点与另一圆相交于 $C$、$⁠D$ 两点，求证：$overline(A C) : overline(C P) = overline(B D) : overline(B P)$.
++ 过两相交圆的公弦上的一点 $P$, 作一条直线交一圆于 $A$、$B$ 两点与另一圆相交于 $C$、$D$ 两点，求证：$overline(A C) : overline(C P) = overline(B D) : overline(B P)$.
 
-+ 设 $⁠overline(A B)$ 是一圆的直径，由 $A$、$⁠B$ 两点作弦 $overline(A C)$ 及 $overline(B D)$ 相交于 $E$ 点，求证：$overline(A E) dot.op overline(A C) + overline(B E) dot.op overline(B D) = overline(A B)^2$.
++ 设 $overline(A B)$ 是一圆的直径，由 $A$、$B$ 两点作弦 $overline(A C)$ 及 $overline(B D)$ 相交于 $E$ 点，求证：$overline(A E) dot.op overline(A C) + overline(B E) dot.op overline(B D) = overline(A B)^2$.
 
-  （提示，过 $⁠E$ 作 $E P tack.t A B$ 于 $P$, 寻找共圆点，利用圆幂定理）
+  （提示，过 $E$ 作 $E P tack.t A B$ 于 $P$, 寻找共圆点，利用圆幂定理）
 
-+ 在 $⁠triangle.stroked.t A B C$ 中，$angle A$ 的外角平分线与此三角形的外接圆相交于 $D$, 求证 $⁠overline(B D) = overline(C D)$.
++ 在 $triangle.stroked.t A B C$ 中，$angle A$ 的外角平分线与此三角形的外接圆相交于 $D$, 求证 $overline(B D) = overline(C D)$.
 
 + 假设两圆互相外切，求证以两圆心之间线段作直径的圆必与前两圆的外公切线相切．
 
-+ 已知直角 $⁠triangle.stroked.t A B C$, $⁠angle C = 90 degree$, 过 $⁠overline(A C)$ 边上一点 $D$, 作斜边 $⁠overline(A B)$ 的垂线交斜边于 $E$ 点，交它的外接圆于 $G$ 点，交 $overline(B C)$ 的延长线于 $F$ 点，求证：$overline(E G)^2 = overline(E A) dot.op overline(E B)$；$⁠overline(E G)^2 = overline(E D) dot.op overline(E F)$.
++ 已知直角 $triangle.stroked.t A B C$, $angle C = 90 degree$, 过 $overline(A C)$ 边上一点 $D$, 作斜边 $overline(A B)$ 的垂线交斜边于 $E$ 点，交它的外接圆于 $G$ 点，交 $overline(B C)$ 的延长线于 $F$ 点，求证：$overline(E G)^2 = overline(E A) dot.op overline(E B)$；$overline(E G)^2 = overline(E D) dot.op overline(E F)$.
 
 + 求证正三角形内的任一点到三边的距离和等于一边上的高．
 
-+ 求证：圆内接正 $⁠n$ 边形内任一点到各边的距离和等于 $n$ 倍边心距．
++ 求证：圆内接正 $n$ 边形内任一点到各边的距离和等于 $n$ 倍边心距．
 
-+ 已知等边 $triangle.stroked.t A B C$ 内接于 $dot.o O$, $⁠P$ 为 $overparen(B C)$ 上任一点. 求证：$overline(P A) = overline(P B) + overline(P C)$.
++ 已知等边 $triangle.stroked.t A B C$ 内接于 $dot.o O$, $P$ 为 $overparen(B C)$ 上任一点. 求证：$overline(P A) = overline(P B) + overline(P C)$.
 
-+ 从圆外一点 $⁠P$, 作这个圆的切线 $⁠P A$, $⁠A$ 是切点，再从 $P$ 点引圆的割线与圆相交于 $B$、$⁠C$, 设 $⁠angle P$ 的平分线与 $overline(A B)$、$⁠overline(A C)$ 的交点分别是 $D$、$⁠E$.
++ 从圆外一点 $P$, 作这个圆的切线 $P A$, $A$ 是切点，再从 $P$ 点引圆的割线与圆相交于 $B$、$C$, 设 $angle P$ 的平分线与 $overline(A B)$、$overline(A C)$ 的交点分别是 $D$、$E$.
 
-  求证：$⁠overline(D B) / overline(A B) + overline(E C) / overline(A C) = 1$
+  求证：$overline(D B) / overline(A B) + overline(E C) / overline(A C) = 1$
 
-+ 已知 $⁠dot.o O$ 与 $dot.o O'$ 相离，连心线与 $dot.o O$ 和 $dot.o O'$ 的交点顺次是 $A$、$⁠B$、$⁠C$、$⁠D$, 直线 $⁠P P'$ 分别与 $dot.o O$ 和 $dot.o O'$ 相切于 $P$、$⁠P'$ 点，求证：$overline(P P')^2 = overline(A C) dot.op overline(B D)$.
++ 已知 $dot.o O$ 与 $dot.o O'$ 相离，连心线与 $dot.o O$ 和 $dot.o O'$ 的交点顺次是 $A$、$B$、$C$、$D$, 直线 $P P'$ 分别与 $dot.o O$ 和 $dot.o O'$ 相切于 $P$、$P'$ 点，求证：$overline(P P')^2 = overline(A C) dot.op overline(B D)$.

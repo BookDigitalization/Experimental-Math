@@ -135,7 +135,7 @@
 // 分栏（对应 multicols）。Typst 的 columns 不会像 multicols 那样把各栏排得一样高，
 // 所以先量出排成一栏时的高度，再放进高度约为其 1/n 的盒子里分栏。
 // 太高（超过半页）时改用普通分栏，以便跨页。
-#let cols(n, body, gutter: 1.5em) = layout(size => {
+#let cols-by-height(n, body, gutter: 10pt) = layout(size => {
   let w = (size.width - gutter * (n - 1)) / n
   let h = measure(block(width: w, body)).height
   if h / n > 12cm {
@@ -144,6 +144,25 @@
     block(width: 100%, height: h / n + 1.2em, breakable: false, columns(n, gutter: gutter, body))
   }
 })
+
+#let cols(n, body, gutter: 10pt) = {
+  // 内容全是编号列表的题目时，同 multicols 各栏高度相当：每栏 ⌈k/n⌉ 题，按列排
+  let items = if body.has("children") { body.children.filter(c => c.func() == enum.item) } else { () }
+  let others = if body.has("children") {
+    body.children.filter(c => c.func() != enum.item and c != [ ] and c.func() != parbreak)
+  } else { (body,) }
+  if items.len() > 0 and others.len() == 0 {
+    let per = calc.ceil(items.len() / n)
+    let groups = range(n).map(i => items.slice(calc.min(i * per, items.len()), calc.min((i + 1) * per, items.len())))
+    // 各栏本来就从上一级题目的正文处开始，栏内的列表不再缩进
+    set enum(indent: 0pt)
+    grid(
+      columns: (1fr,) * n,
+      column-gutter: gutter,
+      ..groups.enumerate().map(((i, g)) => if g.len() == 0 { [] } else { enum(start: i * per + 1, ..g) }),
+    )
+  } else { cols-by-height(n, body, gutter: gutter) }
+}
 
 // 插图占位：CeTZ 图尚未画好时显示原 TikZ 图的编号
 #let todo-fig(id) = align(center, block(
@@ -200,26 +219,35 @@
   let eq(x) = math.equation(block: false, numbering: none, math.display(x))
   let rows = rows.pos().map(((l, r, n)) => (eq(l), eq(r), n))
   block(width: 100%, above: 1em, below: 1em, layout(size => {
-    // 公式块居中后右侧剩下的宽度；说明放不下时同 LaTeX，移到下一行靠右排
     let lw = calc.max(..rows.map(((l, r, n)) => measure(l).width))
     let rw = calc.max(..rows.map(((l, r, n)) => measure(r).width))
+    // 公式块居中后右侧剩下的宽度。说明放不下时同 amsmath：先把公式块左移，还放不下才移到下一行靠右排
     let side = (size.width - lw - rw) / 2
+    let gap = 1em.to-absolute()
+    let marks = rows.map(((l, r, n)) => if n == true { number } else if n == false { none } else { box(n) })
+    let mw = calc.max(0pt, ..rows.zip(marks).filter(((row, m)) => m != none and row.at(2) != true).map(((row, m)) => measure(m).width))
+    let shift = if mw + gap > side { calc.min(mw + gap - side, side) } else { 0pt }
+    let indent = calc.max(0pt, side - shift)
     let cells = ()
-    for (l, r, n) in rows {
-      let mark = if n == true { number } else if n == false { none } else { box(n) }
-      let fits = mark == none or n == true or measure(mark).width + 1em.to-absolute() <= side
-      cells += ([], l, r, if fits and mark != none { mark } else { [] })
-      if not fits { cells.push(grid.cell(colspan: 4, align: right, mark)) }
+    for ((l, r, n), mark) in rows.zip(marks) {
+      let fits = mark == none or n == true or measure(mark).width + gap <= side + shift
+      // 左右两半放在同一格的同一行里，基线对齐（分开放在两格时按顶端对齐，有分式时基线错开）
+      cells.push(pad(left: indent, box(width: lw, align(right, l)) + r))
+      cells.push(if fits and mark != none { mark } else { [] })
+      if not fits { cells.push(grid.cell(colspan: 2, align: right, mark)) }
     }
     // 整块宽于版心时缩小（LaTeX 版中这些公式排得下）
     fit-width(grid(
-      columns: (1fr, auto, auto, 1fr),
+      columns: (1fr, auto),
       row-gutter: 0.8em,
-      align: (right, right, left, right),
+      align: (left + horizon, right + horizon),
       ..cells,
     ))
   }))
 }
+
+// numbered-align 右半以关系符开头时放在最前面的空占位：属普通符号类，使 = 两侧都有间距
+#let eqph = math.class("normal", none)
 
 // 不按 display 样式排的分数（对应 \tfrac）
 // 用标签 <tfrac> 让下面 book() 中“分数一律 display”的 show 规则跳过它
@@ -263,6 +291,8 @@
     paper: paper,
     margin: 2.5cm,
     header: context {
+      // 脚注每页从①编号（同 LaTeX 版的 footmisc perpage）
+      counter(footnote).update(0)
       let page-no = counter(page).get().first()
       // 章首页不印页眉
       let starts = query(heading.where(level: 1)).filter(h => h.location().page() == here().page())
@@ -332,6 +362,9 @@
   set enum(indent: 1em, body-indent: 0.6em, spacing: 0.86em, full: true, numbering: latex-enum)
   set list(indent: 1em, body-indent: 0.6em)
   set footnote(numbering: "①")
+  show footnote.entry: set text(size: 9pt)
+  // 独立公式上下的间距（LaTeX 的 \abovedisplayskip 约 10pt）
+  show math.equation.where(block: true): set block(above: 0.85em, below: 0.85em)
   // 图注：“图 1.1”加粗，编号带章号；LaTeX 版多为空的 \caption{}，此时只印编号
   set figure(gap: 0.6em, numbering: n => str(chapter-number()) + "." + str(n))
   show figure.caption: it => context {

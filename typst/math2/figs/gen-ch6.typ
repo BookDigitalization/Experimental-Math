@@ -292,7 +292,7 @@
     line((2.25, 0), (2.25, 3.03), stroke: (paint: black, thickness: 0.4pt), mark: (start: "stealth", end: "stealth", fill: black))
     node((2.25, 1.515), [5m], fill: white)
     arc((-1.25, 0), start: 0deg, stop: 60deg, radius: 0.5, stroke: (paint: black, thickness: 0.4pt))
-    node((-1.5, 0.433), [$60^compose$], pos: "right")
+    node((-1.5, 0.433), [$60 degree$], pos: "right")
   })
   ,
   "6-22": canvas({
@@ -317,7 +317,7 @@
     line((0, -2), (0, 0), (4, -4.767), (4, 0), stroke: (paint: black, thickness: 0.4pt, dash: (3pt, 3pt,)))
     node((4, -4.767), [$C$], pos: "below")
     arc((0, -0.5), start: -90deg, stop: -50deg, radius: 0.5, stroke: (paint: black, thickness: 0.4pt))
-    node((0.3214, -0.383), [$40^compose$], pos: "below", dist: 4pt)
+    node((0.3214, -0.383), [$40 degree$], pos: "below", dist: 4pt)
   })
   ,
   "6-24": canvas({

@@ -202,7 +202,7 @@
     let C = (0, -3)
     node(C, [$angle 1$ 与 $angle 3$\; $angle 2$ 与 $angle 3$ 互为补角], frame: "rect", name: "C")
     let D = (0, -4.5)
-    node(D, [$angle 1 + angle 3 = 180^compose #h(2em) angle 2 + angle 3 = 180^compose$], frame: "rect", name: "D")
+    node(D, [$angle 1 + angle 3 = 180 degree #h(2em) angle 2 + angle 3 = 180 degree$], frame: "rect", name: "D")
     let E = (0, -6)
     node(E, [$angle 1 + angle 3 = angle 2 + angle 3$], frame: "rect", name: "E")
     let F = (0, -7.5)
