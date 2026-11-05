@@ -12,7 +12,7 @@
 
 \begin{blk}{定义}
     一条直线$\ell$在空间作平行于固定方向的运动，但
-总和任一固定的曲线$C$相交，所产生的曲面叫做柱面、移动
+总和任一固定的曲线$C$相交，所产生的曲面叫做柱面．移动
 的直线$\ell$所在的每个位置叫做柱面的母线，而在移动中始终
 和母线相交的曲线$C$叫做柱面的准线．
 \end{blk}
@@ -192,7 +192,7 @@ B'C'D'E'$. 也有用棱柱一条对角线的两
 \begin{blk}{定义} 
     底面是平行四边形的四棱柱叫
     做平行六面体．其中侧棱和底面斜交的叫
-    斜平行六面体，侧棱和底垂直的叫直平行六面体．底面是
+    斜平行六面体，侧棱和底面垂直的叫直平行六面体．底面是
     矩形的直平行六面体叫做长方体．交于一个顶点的三条棱的
     长相等的长方体叫做正方体，也叫立方体．（图2.6）
 \end{blk}
@@ -360,27 +360,33 @@ $\therefore\quad {DB'}^2={AA'}^2+{BD}^2={AA'}^2+AB^2+AD^2$
 
 \begin{blk}
    {定理} 正棱柱两底中心的连线垂直于底面（请读者自证）
-   
-   圆柱体的两个底面是相等的圆面，它们所在的平
+\end{blk}
+
+\begin{enumerate}\setcounter{enumi}{3}
+\item 圆柱体的两个底面是相等的圆面，它们所在的平
 面平行．
-\end{blk}
+\end{enumerate}
 
-\begin{blk}{定义} 
+\begin{blk}{定义}
     圆柱体两底面之间的距离叫做圆柱的高．
-
-    圆柱体的母线平行且相等，并且垂直于两个底
-面，母线的长等于圆柱的高．
 \end{blk}
+
+\begin{enumerate}\setcounter{enumi}{4}
+\item 圆柱体的母线平行且相等，并且垂直于两个底
+面，母线的长等于圆柱的高．
+\end{enumerate}
 
 \begin{blk}{定义}
 空间图形$F$对给定直线$\ell$为轴的轴对称是具有如
 下性质的映射$R_1:F\mapsto F$, 对于任意点$P\in F$, 有它的像$R_1(P)
 =P'\in F$, 并且线段$PP'$被$\ell$垂直平分．这时$\ell$称为$F$的对
 称轴．$P$、$P'$叫做关于$\ell$的对称点．
-
-圆柱两底圆心连线垂直于底面，并且是圆柱的对
-称轴（简称圆柱的轴）．
 \end{blk}
+
+\begin{enumerate}\setcounter{enumi}{5}
+\item 圆柱两底圆心连线垂直于底面，并且是圆柱的对
+称轴（简称圆柱的轴）．
+\end{enumerate}
 
 已知：如图2.9圆柱$AD$\footnote{圆柱可用它的两个底面内不在同一条母线上的两个点的字母来
 表示．}中，
@@ -423,7 +429,7 @@ $BD$ ($O'\in BD$).
 
 $\because\quad $圆柱的两个底面平行．
 
-$\therefore\quad AC\parallel BD$ 且AC、BD分别为两底面圆的直径．
+$\therefore\quad AC\parallel BD$ 且$AC$、$BD$分别为两底面圆的直径．
 
 $\because\quad $圆柱的两底面是全等的圆面．
 
@@ -690,7 +696,7 @@ $\therefore\quad X_1O_1\parallel X_2O_2$
 锥的侧棱．
 
 如果棱锥的底面是三角形、四边形……$n$边形，那么棱锥
-就分别叫做\textbf{三棱锥，四棱锥，五棱锥……$n$棱锥}（见图2.15）、棱锥的表示法可以用表示顶点和底面顶点的
+就分别叫做\textbf{三棱锥，四棱锥，五棱锥……$n$棱锥}（见图2.15的(1)、(2)、(3)）．棱锥的表示法可以用表示顶点和底面顶点的
 几个字母来表示，例如棱锥$S-ACD$. 
 \end{blk}
 
@@ -755,7 +761,7 @@ $\therefore\quad X_1O_1\parallel X_2O_2$
 正多边形的边）、高、斜高、侧棱和底面的夹角、侧面和底
 面所成的角、斜高和高所成的角等等．在这些元素中只要给
 出其中两个元素（至少有一线段），就可以通过解直角三角
-形和底面正多边形来求出其它元素．
+形和底面正多边形来求出其他元素．
 
 \begin{example}
 已知棱锥底面是边长为12的三角形，它的各个侧
@@ -817,8 +823,8 @@ $\therefore\quad SO=OD=2\sqrt{3}$ (cm)
     \centering
 \begin{tikzpicture}[yscale=.4]
 \tkzDefPoints{1.5/0/C, -1.5/0/A, 0/8/S, 0/0/O}
-\tkzDefPoint(-45:1.5){D}
-\tkzDefPoint(-45-90:1.5){B}
+\tkzDefPoint(-45:1.5){B}
+\tkzDefPoint(-45-90:1.5){D}
 \draw[dashed](1.5,0) arc (0:180:1.5);
 \draw(1.5,0) arc (0:-180:1.5);
 
@@ -931,7 +937,7 @@ $\therefore\quad OA\bot AT$
     
     \item 证明：六条棱长相等三棱锥是正三棱锥．
     \item 试用两种画法分别画出底面边长为6cm, 高为15cm的
-    正六棱锥的直观图，比例尺为
+    正六棱锥的直观图，比例尺为$\dfrac{1}{3}$．
     \item 用第二种画法画出底面半径是2cm, 母线为3cm的圆锥的
     直观图．
     \item 用第一种画法画出底面边长为2cm, 高为4cm的正五棱锥
@@ -1242,8 +1248,7 @@ $\therefore\quad DF=OD-O_1D_1=\frac{5}{6}{\sqrt{3}}-\frac{\sqrt{3}}{3}=\frac{\sq
     \item 下图是正四棱台的二视图，
     （图中所标尺寸单位是cm）
     试用两种画法画出它的直观
-    图，比例尺为
-    1/3.
+    图，比例尺为$\dfrac{1}{3}$．
 \end{enumerate}
 \end{ex}
 
@@ -1337,7 +1342,7 @@ $XOZ$、$YOZ$三个平面的画出表示半径是$R$的圆的三个椭圆，再
 球有下列一些性质：
 \begin{enumerate}
     \item 同球的半径（或直径）相等．
-    \item 球被平面所截得截面是一圆面．
+    \item 球被平面所截得截面是一个圆面．
 \end{enumerate}
 
 \begin{figure}[htp]
@@ -1459,8 +1464,8 @@ $A$、$B$两点间的球面距离．
 \tkzDefPointsBy[translation= from b to c](a){d}
 \tkzDrawPolygon(a,b,c,d)
 \tkzInterLC(a,b)(O,M) \tkzGetPoints{t1}{t2}
-\tkzDrawArc[thick, color=black](O,t1)(t2)
-\tkzDrawArc[dashed, color=black](O,t2)(t1)
+\tkzDrawArc[dashed, color=black](O,t1)(t2)
+\tkzDrawArc[color=black](O,t2)(t1)
 \tkzLabelPoint[above right](a){$\alpha$}
 \tkzDefPoints{0/1.8/K, .75/1.75/K'}
 \tkzLabelPoints[left](K',K)
@@ -1582,7 +1587,7 @@ $\therefore\quad AM=AO\cos45^{\circ}\approx 6370\x0.7071\approx 4504$
     如图2.31, $O$为球心，过半径
 $OA$和$OB$作平面，则这个平面所截
 的圆为大圆，在这个圆上已知圆心角
-$\angle AOB=50^{\circ}$, $AB=5\pi$cm. 设球的半
+$\angle AOB=50^{\circ}$, $\wideparen{AB}=5\pi$cm. 设球的半
 径为$R$, 则
 \[5\pi=\left(\frac{50\pi}{180}\right)\cdot R\quad \Rightarrow\quad R=18\]
 
@@ -1693,7 +1698,7 @@ $\angle AOB=50^{\circ}$, $AB=5\pi$cm. 设球的半
 \end{figure}
 
 
-多面体的面至少有四个顶点，多面体依照它的面数分别
+多面体至少有四个面，多面体依照它的面数分别
 称为\textbf{四面体、五面体、……$n$面体}等等．
 
 多面体中最简单的是凸多面体，所谓凸多面体是指对它
@@ -1765,7 +1770,7 @@ $n$&3&4&5&3&3\\
     \item 试证：以正八面体各面中心为顶点，可成一个正六面体．
     \item \begin{enumerate}
         \item 说出正四面体、正六面体、正八面体、正十二面
-    体、正二十面体各多少个顶点数，棱数和面数．
+    体、正二十面体各有多少个顶点数，棱数和面数．
     \item 如果以$F$表示正多面体的面数，$V$表示顶点数，以
     $E$表示棱数，那么你能发现$F$、$V$和$E$的关系式吗？
 \end{enumerate}
@@ -1871,7 +1876,7 @@ $\therefore\quad BC\bot$截面$AVM$
 $\therefore\quad DM\bot BC,\qquad \angle AMD$为二面角$D-BC-A$的平面角．
 
 已知$\angle AMD=\angle AVO=90^{\circ}-\alpha$，
-又在$\triangle ADM$中，$\angle ADM=(90^{\circ}-\alpha)+\alpha=90^{\circ}$
+又在$\triangle ADM$中，$\angle ADM=180^{\circ}-[(90^{\circ}-\alpha)+\alpha]=90^{\circ}$
 
 $\therefore\quad \triangle ADM$是直角三角形，
 
@@ -2303,7 +2308,7 @@ $120^{\circ}$, 这两个切点的球面距离是$12\pi$cm, 求这个球的半
 垂直，它们的长都等于2m, 求棱台的高和对角面的面
 积．
 \item 已知圆锥的底面的面积$Q=324\pi{\rm cm^2}$, 平行于底面截面
-的面积$Q'=182\frac{1}{4}{\rm cm^2}$, 截面与底面间的距离$OO'$为
+的面积$Q'=182\frac{1}{4}\pi{\rm cm^2}$, 截面与底面间的距离$OO'$为
 30cm, 求圆锥的顶角（母线间最大夹角）．
 \item 圆锥底面半径为$r$, 高为$h$, 在它里面作各侧面都是正方
 形的内接正三棱柱，求这棱柱的每条棱的长．
