@@ -334,25 +334,50 @@
 #let disp-above = 1.4em
 #let disp-below = 1.5em
 
-#let numbered-eq(body) = math.equation(block: true, numbering: eq-numbering, body)
+#let numbered-eq(body, label: none) = {
+  let eq = math.equation(block: true, numbering: eq-numbering, body)
+  if label == none { eq } else [#eq#label]
+}
+
+// 自动编号的公式编号“(章.序号)”。lbl 不为 none 时同时放一个带该标签的 metadata，
+// 记下“章.序号”供 ref-num 引用（对应 \label，用于 numcases、align 的某一行）
+#let eq-number(lbl) = {
+  counter(math.equation).step()
+  context {
+    let s = str(chapter-number()) + "." + str(counter(math.equation).get().first())
+    "(" + s + ")"
+    if lbl != none [#metadata(s)#lbl]
+  }
+}
+
+// \ref{…}：印出所引公式（或别的带标签对象）的编号，不带括号，同 LaTeX
+#let ref-num(lbl) = context {
+  let found = query(lbl)
+  if found.len() == 0 { return text(fill: red)[??] }
+  let el = found.first()
+  if el.func() == metadata { return el.value }
+  let loc = el.location()
+  let ch = str(counter(heading).at(loc).first())
+  if el.func() == math.equation { ch + "." + str(counter(math.equation).at(loc).first()) }
+  else if el.func() == figure { ch + "." + str(el.counter.at(loc).first()) }
+  else { text(fill: red)[??] }
+}
 
 // 带编号或带 \tag 说明的多行对齐公式（对应 align 环境，以及带 \tag 的 align*、\[…\]）。
 // 每行为 (左半, 右半, 编号)，左半右对齐、右半左对齐，相当于 LaTeX 中 & 两侧；
-// 编号为 true（自动编号）、false（不编号）或内容（\tag 的说明，靠右排）
+// 编号为 true（自动编号）、标签（自动编号，并可用 ref-num 引用）、false（不编号）或内容（\tag 的说明，靠右排）
 #let numbered-align(..rows) = {
-  let number = {
-    counter(math.equation).step()
-    context "(" + str(chapter-number()) + "." + str(counter(math.equation).get().first()) + ")"
-  }
   let eq(x) = math.equation(block: false, numbering: none, math.display(x))
   let rows = rows.pos().map(((l, r, n)) => (eq(l), eq(r), n))
+  let marks = rows.map(((l, r, n)) => if n == true { eq-number(none) } else if type(n) == label { eq-number(n) }
+    else if n == false { none } else { box(n) })
+  let rows = rows.map(((l, r, n)) => (l, r, if type(n) == label { true } else { n }))
   block(width: 100%, above: disp-above, below: disp-below, layout(size => {
     let lw = calc.max(..rows.map(((l, r, n)) => measure(l).width))
     let rw = calc.max(..rows.map(((l, r, n)) => measure(r).width))
     // 公式块居中后右侧剩下的宽度。说明放不下时同 amsmath：先把公式块左移，还放不下才移到下一行靠右排
     let side = (size.width - lw - rw) / 2
     let gap = 1em.to-absolute()
-    let marks = rows.map(((l, r, n)) => if n == true { number } else if n == false { none } else { box(n) })
     let mw = calc.max(0pt, ..rows.zip(marks).filter(((row, m)) => m != none and row.at(2) != true).map(((row, m)) => measure(m).width))
     let shift = if mw + gap > side { calc.min(mw + gap - side, side) } else { 0pt }
     let indent = calc.max(0pt, side - shift)
@@ -382,13 +407,11 @@
 #let tfrac(a, b) = math.inline([#math.frac(a, b)<tfrac>])
 
 // 带编号的方程组（对应 cases 宏包的 numcases）：左侧一个大括号，每行各占一个公式编号
-#let numcases(lhs, ..rows) = {
+// labels 给出各行的标签（none 表示该行没有 \label），如 labels: (none, <eq2>)
+#let numcases(lhs, labels: (), ..rows) = {
   let rows = rows.pos()
   let n = rows.len()
-  let number = {
-    counter(math.equation).step()
-    context "(" + str(chapter-number()) + "." + str(counter(math.equation).get().first()) + ")"
-  }
+  let labels = labels + (none,) * (n - labels.len())
   let gutter = 0.7em
   let cells = rows.map(r => math.equation(block: false, numbering: none, math.display(r)))
   // 大括号的高度取各行实际高度之和，整组不跨页
@@ -400,10 +423,23 @@
       align: (x, y) => (right, right + horizon, left + horizon, right + horizon).at(x),
       grid.cell(rowspan: n, []),
       grid.cell(rowspan: n, $lhs lr(\{ #block(height: height) #h(0pt))$),
-      ..cells.map(c => (c, number)).flatten(),
+      ..cells.zip(labels).map(((c, l)) => (c, eq-number(l))).flatten(),
     )
   })
 }
+
+// 章节编号：第一章、第一节、一、（一）
+#let heading-numbering(..n) = {
+  let n = n.pos()
+  if n.len() == 1 { "第" + chinese-number(n.at(0)) + "章" }
+  else if n.len() == 2 { "第" + chinese-number(n.at(1)) + "节" }
+  else if n.len() == 3 { chinese-number(n.at(2)) + "、" }
+  else if n.len() == 4 { "（" + chinese-number(n.at(3)) + "）" }
+}
+
+// 选学的节、小节（LaTeX 版的 \starsection、\starsubsection）：编号左侧伸出一个“*”，
+// 不占宽度（同 \llap{*}），目录中同样带“*”。用法：#heading(level: 2, numbering: star-numbering)[…]
+#let star-numbering(..n) = box(width: 0pt, context h(-measure[\*].width) + [\*]) + heading-numbering(..n)
 
 // ---- 书的整体版式 ----
 #let book(
@@ -524,13 +560,7 @@
   }
 
   // 章节编号：第一章 / 第一节 / 一、/（一）
-  set heading(numbering: (..n) => {
-    let n = n.pos()
-    if n.len() == 1 { "第" + chinese-number(n.at(0)) + "章" }
-    else if n.len() == 2 { "第" + chinese-number(n.at(1)) + "节" }
-    else if n.len() == 3 { chinese-number(n.at(2)) + "、" }
-    else if n.len() == 4 { "（" + chinese-number(n.at(3)) + "）" }
-  })
+  set heading(numbering: heading-numbering)
   // 标题中的汉字用黑体，西文字母和数字用粗体（同 LaTeX 的 \bfseries）
   show heading: set text(font: fonts.sans, weight: "bold")
   show heading.where(level: 1): it => {

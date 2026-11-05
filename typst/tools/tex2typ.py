@@ -17,6 +17,7 @@ TikZ 插图不转换，只按章内出现顺序编号为 "章-序号"（如 "1-0
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import subprocess
 import sys
@@ -87,6 +88,13 @@ class Converter:
         # pifont 的带圈数字：\ding{172}–{181}、\ding{192}–{201} 都是 ①–⑩
         tex = re.sub(r"\\ding\{(\d+)\}", lambda m: chr(0x2460 + (int(m.group(1)) - 172) % 20)
                      if 172 <= int(m.group(1)) <= 181 or 192 <= int(m.group(1)) <= 201 else m.group(0), tex)
+        # 第四册 (4.13) 的 \text{\textcircled{\scriptsize 1}} 等：换成 ①…⑳
+        tex = re.sub(r"\\text\{\\textcircled\{(?:\\scriptsize\s*)?(\d+)\}\}|\\textcircled\{(?:\\scriptsize\s*)?(\d+)\}",
+                     lambda m: chr(0x245F + int(m.group(1) or m.group(2))), tex)
+        tex = re.sub(r"\\setlength\{\\arraycolsep\}\{[^}]*\}", "", tex)
+        # array 列格式中的 *{n}{c}：pandoc 不认得，展开
+        tex = re.sub(r"(\\begin\{array\}\{)((?:[^{}]|\{[^{}]*\})*)\}",
+                     lambda m: m.group(1) + re.sub(r"\*\{(\d+)\}\{([^{}]*)\}", lambda k: k.group(2) * int(k.group(1)), m.group(2)) + "}", tex)
         tex = re.sub(r"\\vskip\s*[\d.]+\s*(ex|em|pt|mm|cm)", "", tex)
         # 行内改字号的 {\small 00}、{\Large ?}（pandoc 会丢掉字号）。如第三册“21{\small00} 表示两个有效数字”
         sizes = {"tiny": 0.5, "scriptsize": 0.7, "footnotesize": 0.8, "small": 0.9,
@@ -94,6 +102,10 @@ class Converter:
         tex = re.sub(r"\{\\(%s)(?![a-zA-Z])\s*([^{}\n]*)\}" % "|".join(sizes),
                      lambda m: self.slot("#text(size: %gem)[%s]" % (sizes[m.group(1)], convert_fragments([m.group(2)])[0]))
                      if m.group(2).strip() and "\\begin" not in m.group(2) else m.group(0), tex)
+        # 选学的节、小节（编号左侧加“*”，见 template.typ 的 star-numbering）
+        tex = re.sub(r"\\star(sub)?section\{((?:[^{}]|\{[^{}]*\})*)\}",
+                     lambda m: "\n\n" + self.slot("#heading(level: %d, numbering: star-numbering)[%s]" % (
+                         3 if m.group(1) else 2, convert_fragments([m.group(2)])[0])) + "\n\n", tex)
         # \section*：后面跟 \addcontentsline{toc}{subsection} 的（习题）以小节的缩进列入目录，否则不列入目录
         # 后面跟 \addcontentsline{toc}{section} 的（复习题）与“第X节”同级列入目录
         tex = re.sub(r"\\section\*\{([^}]*)\}\s*\\addcontentsline\{toc\}\{(sub)?section\}\{[^}]*\}",
@@ -148,9 +160,13 @@ class Converter:
         tex = self.replace_numcases(tex)
         tex = re.sub(r"\\begin\{align\}(.*?)\\end\{align\}",
                      lambda m: self.display(m, aligned_rows(m.group(1), numbered=True)), tex, flags=re.S)
-        tex = re.sub(r"\\begin\{equation\}(.*?)\\end\{equation\}",
-                     lambda m: self.slot("#numbered-eq($ %s $)" % tex_math_to_typst(m.group(1))) + self.noindent_after(m),
-                     tex, flags=re.S)
+        def equation(m: re.Match) -> str:
+            body, lbl = take_label(m.group(1))
+            arg = ", label: %s" % typst_label(lbl) if lbl else ""
+            return self.slot("#numbered-eq($ %s $%s)" % (tex_math_to_typst(body), arg)) + self.noindent_after(m)
+        tex = re.sub(r"\\begin\{equation\}(.*?)\\end\{equation\}", equation, tex, flags=re.S)
+        # \ref{…}：所引对象的编号（公式的 \label 已在上面各环境中取出）
+        tex = re.sub(r"\\ref\{([^}]*)\}", lambda m: self.slot("#ref-num(%s)" % typst_label(m.group(1))), tex)
         tex = self.replace_inline_envs(tex)
         tex = self.replace_text_spaces(tex)
         # 表格的行距（Typst 版的表格另有内边距，不需要）
@@ -431,11 +447,15 @@ class Converter:
 
     def replace_numcases(self, tex: str) -> str:
         def repl(m: re.Match) -> str:
-            lhs = tex_math_to_typst(m.group(1)) if m.group(1).strip() else ""
-            rows = [r.replace("&", " ") for r in re.split(r"\\\\", m.group(2)) if r.strip()]
-            parts = ["$%s$" % lhs] + ["$%s$" % tex_math_to_typst(r) for r in rows]
+            # 方程组的名称，如 {(\rm I)}、{(\text{II})}
+            name = re.sub(r"\\rm\s+([^{}()\s]+)", r"\\mathrm{\1}", m.group(1))
+            lhs = tex_math_to_typst(name) if name.strip() else ""
+            rows = [take_label(r.replace("&", " ")) for r in re.split(r"\\\\", m.group(2)) if r.strip()]
+            parts = ["$%s$" % lhs] + ["$%s$" % tex_math_to_typst(r) for r, _ in rows]
+            if any(lb for _, lb in rows):
+                parts.append("labels: (%s,)" % ", ".join(typst_label(lb) if lb else "none" for _, lb in rows))
             return self.display(m, "#numcases(%s)" % ", ".join(parts))
-        return re.sub(r"\\begin\{numcases\}\{(.*?)\}(.*?)\\end\{numcases\}", repl, tex, flags=re.S)
+        return re.sub(r"\\begin\{numcases\}\{((?:[^{}]|\{[^{}]*\})*)\}(.*?)\\end\{numcases\}", repl, tex, flags=re.S)
 
     def replace_inline_envs(self, tex: str) -> str:
         """行内公式里的 cases、array 等多行结构，pandoc 的 Typst 输出有误，改为单独转换"""
@@ -451,6 +471,8 @@ class Converter:
         # 占位符里可能还套着占位符，反复替换到没有为止
         while True:
             new = re.sub(r'upright\(\s*"?P\s*H\s*M\s*(\d+)"?\s*\)', lambda m: self.slots[int(m.group(1))], typ)
+            # \mathop{\mathrm{PHMn}}^{…}：pandoc 写成 "PHMn"^(…)，上标在 LaTeX 中排在正上方
+            new = re.sub(r'"PHM(\d+)"', lambda m: "limits(%s)" % self.slots[int(m.group(1))], new)
             new = re.sub(r"#smallcaps\[PH(\d+)\]", lambda m: indent_like(new, m.start(), code_slot(self.slots[int(m.group(1))])), new)
             if new == typ:
                 break
@@ -716,6 +738,8 @@ def fix_strings(typ: str) -> str:
 def fix_math(typ: str) -> str:
     # \dot{x}（循环小数的点）：模板中 dot 被定义成了 dot.o 等符号的字典（见 template.typ），重音要写 std.math.dot
     typ = re.sub(r"(?<![\w.#])dot\(", "std.math.dot(", typ)
+    # vmatrix / Vmatrix：pandoc 写成 delim: "||"、"‖‖"，Typst 只要一个字符
+    typ = typ.replace('delim: "||"', 'delim: "|"').replace('delim: "‖‖"', 'delim: "‖"')
     # 多行对齐公式的续行以 & + 或 & - 开头：LaTeX（amsmath 在右栏开头补 {}）按二元运算排，
     # Typst 当作正负号紧贴后面的项；前面补一个空的普通符号 eqph（见 template.typ）
     typ = re.sub(r"(\\\n\s*&\s*)([+-])(?=\s)", r"\1eqph \2", typ)
@@ -772,11 +796,27 @@ def replace_command(tex: str, name: str, nargs: int, fn) -> str:
         pos = j
 
 
+def take_label(s: str) -> tuple[str, str | None]:
+    """去掉公式中的 \\label{…}，返回 (去掉后的公式, 标签名或 None)"""
+    labels = []
+    s = re.sub(r"\\label\{([^}]*)\}", lambda m: labels.append(m.group(1)) or "", s)
+    return s, (labels[0] if labels else None)
+
+
+def typst_label(name: str) -> str:
+    """LaTeX 的标签名 → Typst 的 label(…)（标签名中可能有 : ( = | 等字符，不能写成 <…>）"""
+    return "label(%s)" % json.dumps(name, ensure_ascii=False)
+
+
 def split_top(s: str, sep: str = ",") -> list[str]:
-    """按 sep 切分，不切花括号内的部分"""
-    parts, depth, cur, i = [], 0, "", 0
+    """按 sep 切分，不切花括号内、\\begin…\\end 环境内（如 align 中的 vmatrix）的部分"""
+    parts, depth, env, cur, i = [], 0, 0, "", 0
     while i < len(s):
-        if s.startswith(sep, i) and depth == 0 and not (sep != "\\\\" and i > 0 and s[i - 1] == "\\"):
+        if s.startswith("\\begin{", i):
+            env += 1
+        elif s.startswith("\\end{", i):
+            env -= 1
+        if s.startswith(sep, i) and depth == 0 and env == 0 and not (sep != "\\\\" and i > 0 and s[i - 1] == "\\"):
             parts.append(cur)
             cur = ""
             i += len(sep)
@@ -922,14 +962,16 @@ def aligned_rows(body: str, numbered: bool) -> str:
             continue
         tags = []
         r = replace_command(r, "tag", 1, lambda a: tags.append(a[0]) or "")
+        r, lbl = take_label(r)
         if tags:
             mark = "[(%s)]" % convert_fragments([tags[0]])[0]
         elif numbered and not re.search(r"\\(nonumber|notag)\b", r):
-            mark = "true"
+            mark = typst_label(lbl) if lbl else "true"
         else:
             mark = "false"
         r = re.sub(r"\\(nonumber|notag)\b", "", r)
-        left, _, right = r.partition("&")
+        left, *rest = split_top(r, "&")
+        right = " & ".join(rest)
         rows.append("($%s$, $%s$, %s)" % (tex_math_to_typst(left) if left.strip() else "",
                                          # 右半以 = 开头时前面补一个普通符号类的空占位 eqph（见 template.typ），否则 Typst 会去掉 = 左侧的间距
                                          # 左半为空的续行也要补，否则这些行的 = 比首行偏左
@@ -965,6 +1007,8 @@ VOLUME_MACROS = {
 # 各册主文件中“本册专用”的、可以直接换成标准 LaTeX 命令的定义（在交给 pandoc 之前替换）
 VOLUME_TEX = {
     3: [(r"\\Vec(?![a-zA-Z])", r"\\overrightarrow")],   # \renewcommand{\Vec}{\overrightarrow}
+    # \newcommand{\Lim}{\displaystyle\lim}、\newcommand{\arccot}{{\rm arccot\; }}
+    4: [(r"\\Lim(?![a-zA-Z])", r"\\lim\\limits"), (r"\\arccot(?![a-zA-Z])", r"\\operatorname{arccot}")],
 }
 
 

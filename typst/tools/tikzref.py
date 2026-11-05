@@ -27,7 +27,7 @@ def volume_preamble(volume: int) -> str:
 
 def pictures(volume: int):
     vdir = ROOT / ("math%d" % volume)
-    for ch in range(1, 10):
+    for ch in range(1, 100):
         p = vdir / ("%d.tex" % ch)
         if not p.exists():
             break

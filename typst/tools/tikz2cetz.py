@@ -2325,9 +2325,12 @@ def main() -> None:
     labels = LabelBatch()
     results = []
     failures = []
+    from tex2typ import VOLUME_TEX
     for fid, src in pictures(volume):
         if only and fid not in only:
             continue
+        for pat, rep in VOLUME_TEX.get(volume, []):   # 本册专用命令，如第四册的 \arccot
+            src = re.sub(pat, rep, src)
         code, err = convert(fid, src, labels)
         if err:
             failures.append((fid, err))
