@@ -286,7 +286,7 @@ $-(a-b)<0$, 即$b-a<0$, 这就是$b<a$, 同理可证后半个
 \end{blk}
 
 \begin{itemize}
-    \item 当$n=2$时，由$a>b>0$，根据推论2得到：
+    \item 当$n=2$时，由$a>b>0$和$a>b>0$，根据推论2得到：
 $a^2>b^2$
 \item 当$n=3$时，由$a>b>0$和$a^2>b^2$, 同理得到：
 $a^3>b^3$
@@ -302,7 +302,7 @@ $a^3>b^3$
 
 因为$\sqrt[n]{a}$, $\sqrt[n]{b}$是$n$次算术根，所以它们都是正数．
 
-假设$a^{\tfrac{1}{n}}=b^{\tfrac{1}{n}}$，于是$\left(a^{\tfrac{1}{n}}\right)^n=\left(b^{\tfrac{1}{n}}\right)^n$，因而$a=b$，这就与已知$a>b$矛盾．
+假设$a^{\tfrac{1}{n}}=b^{\tfrac{1}{n}}$，那么$\left(a^{\tfrac{1}{n}}\right)^n=\left(b^{\tfrac{1}{n}}\right)^n$，因而$a=b$，这就与已知$a>b$矛盾．
 
 假设$a^{\tfrac{1}{n}}<b^{\tfrac{1}{n}}$，于是$\left(a^{\tfrac{1}{n}}\right)^n<\left(b^{\tfrac{1}{n}}\right)^n$，即$a<b$，这又与
 已知条件矛盾．但是$\sqrt[n]{a}$和$\sqrt[n]{b}$的大小关系，只有三种可能，
@@ -470,7 +470,7 @@ $\frac{a_1+a_2}{2}$为正数$a_1$, $a_2$的算术
 \end{figure}
 
 
-以$a_1+a_2$为直径作圆
+以$a_1+a_2$为直径作半圆
 (图3.4), 设$AD=a_1$, $DB=a_2$,
 过$D$点作线段$AB$的垂直线交
 半圆于$C$点，于是$\angle ACB=
@@ -510,13 +510,13 @@ $(a_1^2+h^2)+(a_2^2+h^2) =(a_1+a_2)^2$
 
 \end{proof}
     
-\begin{example}
+\begin{starexample}
 $a_1,a_2,a_3$为任意正数，求证：
 \begin{equation}
  \frac{a_1+a_2+a_3}{3}\ge \sqrt[3]{a_1a_2a_3}  
 \end{equation}
 这里的等于关系当且仅当$a_1=a_2=a_3$时成立．
-\end{example}
+\end{starexample}
 
 \begin{proof}
     如果令$b_1>0$, $b_2>0$, $b_3>0$, 使得
@@ -565,10 +565,10 @@ $a_1,a_2,\ldots,a_n$是不是有：
 我们说这个一般的结论“$n$个正数的算术平均不小于几何
 平均”是成立的，不过这里我们略去它的证明．
 
-\begin{example}
+\begin{starexample}
     求证在周长都为$2L$的所有三角形中，面积最大
 的必是等边三角形．
-\end{example}
+\end{starexample}
 
 \begin{proof}
     设三角形边长为$a,b,c$, 则周长为$a+b+c=2L$,
@@ -831,8 +831,8 @@ $\frac{a^3+b^3}{2}\ge \left(\frac{a+b}{2}\right)^3$
 \item 当$x$为何值时，$2x(9-2x),\quad \left(0<x<\frac{9}{2}\right)$
 取最大值，
 最大值是多少？
-\item 求证：周长一定的所有矩形中以正方形的面积最
-大；面积一定的所有矩形中以正方形的周长最短，
+\item 求证：(1) 周长一定的所有矩形中以正方形的面积最
+大；(2) 面积一定的所有矩形中以正方形的周长最短，
 这个正方形的边长是多少？
 \item  斜边长一定的直角三角形中，求两直角边的和的最大
 值，又何时达到最大值．
@@ -855,7 +855,7 @@ $\frac{a^3+b^3}{2}\ge \left(\frac{a+b}{2}\right)^3$
 \item 若$a,b,c$是正整数，求证：
 $ab+bc+ac\le 3abc$
 
-\item 求证$a_1+a_2+\cdots+a_n<\frac{1}{1-a}\quad (0<a<1)$
+\item 求证$a+a^2+\cdots+a^n<\frac{1}{1-a}\quad (0<a<1)$
 
 \item 若$|a|<1$, $|b|<1$, 求证：$\left|\frac{a+b}{1+ab}\right|<1$
 
@@ -864,7 +864,7 @@ $ab+bc+ac\le 3abc$
 \item 若$a,b,c,d$是正数，求证：
 $$\sqrt{(a+c)(b+d)}\ge \sqrt{ab}+\sqrt{cd}$$
 \item 若$a>b>0$且$m>n$, 求证：
-$\frac{a-b}{a^m+b}>\frac{a-b}{a^n+b}$
+\[\frac{a^m-b^m}{a^m+b^m}>\frac{a^n-b^n}{a^n+b^n}\]
 
 \item 若$a>0$, $b>0$且$a+b=1$, 求证：
 $\left(a+\frac{1}{a}\right)\left(b+\frac{1}{b}\right)\ge \frac{25}{4}$
@@ -955,7 +955,7 @@ $\left(a+\frac{1}{a}\right)\left(b+\frac{1}{b}\right)\ge \frac{25}{4}$
 “$\emptyset$”表示空集，这说明原不等式不能成立．
 
 解不等式组就是先分别求不等式组中各个不等式的解
-集，然后再求这些解集的交集．
+集，然后再求这些解集的交集．如：
 \end{solution}
 
 \begin{example}
@@ -1109,8 +1109,8 @@ $\left(a+\frac{1}{a}\right)\left(b+\frac{1}{b}\right)\ge \frac{25}{4}$
 \end{solution}
 
 \begin{rmk}
-    含有字母系数的不等式，它的解集因字母系数的
-取值不同而有不同的情形，因此需要对字母系数的取值分情
+    含有文字系数的不等式，它的解集因文字系数的
+取值不同而有不同的情形，因此需要对文字系数的取值分情
 况进行讨论．
 \end{rmk}
 
@@ -1161,7 +1161,7 @@ $\left(a+\frac{1}{a}\right)\left(b+\frac{1}{b}\right)\ge \frac{25}{4}$
 \begin{enumerate}
 \item $\begin{cases}
     \frac{x+2}{6}>\frac{x-9}{6}+\frac{x+5}{2}\\
-    6-\left(\frac{x-2}{4}+\frac{2}{3}\right)<\frac{x}{6}
+    6-\left(\frac{x-2}{4}+\frac{2}{3}\right)>\frac{x}{6}
 \end{cases}$
 \item $\begin{cases}
     \frac{3}{4}x-\frac{2}{3}\le \frac{4x-3}{12}\\
@@ -1426,8 +1426,37 @@ $\frac{ax+b}{cx+d}>0\; (<0)$的解法举例}
 不等式组(3.23)的解集$=\{x|-2<x<3\}$, 不等式组(3.24)的
 解集$=\varnothing$．
 
-答：原不等式的解集$=\{x|-2<x<3\}$
+答：原不等式的解集$=\{x|-2<x<3\}\cup\varnothing=\{x|-2<x<3\}$
 
+\end{solution}
+
+\begin{example}
+    解不等式$\frac{x+1}{x-1}\ge 0$．
+\end{example}
+
+\begin{solution}
+分式的值非负的充分必要条件是分子非负而分母为
+正，或者分子非正而分母为负，即原不等式的解满足下面不
+等式组之一：
+\begin{equation}
+    \begin{cases}
+        x+1\ge 0\\x-1>0
+    \end{cases}\Rightarrow\quad \begin{cases}
+        x\ge -1\\  x>1
+    \end{cases}
+\end{equation}
+或
+\begin{equation}
+    \begin{cases}
+        x+1\le 0\\x-1<0
+    \end{cases}\Rightarrow\quad \begin{cases}
+        x\le -1\\  x<1
+    \end{cases}
+\end{equation}
+所以不等式组(3.25)的解集$=\{x|x>1\}$, 不等式组(3.26)的解
+集$=\{x|x\le -1\}$．
+
+答：原不等式的解集$=\{x|x>1\}\cup\{x|x\le -1\}$
 \end{solution}
 
 \begin{ex}
@@ -1581,8 +1610,8 @@ $|x+4|>9$．
 
 按照绝对值的定义，
 \[|x-10|=\begin{cases}
-    x-10, & x\ge 10\\
-    -(x-10), & x<10
+    x-10, & \text{当}x\ge 10\\
+    -(x-10), & \text{当}x<10
 \end{cases}\]
 
 由此可见，$x=10$是个分界点，我们称它为$x-10$的零点，
@@ -1626,7 +1655,7 @@ $|x+4|>9$．
 \end{split}
     \]
 
-    同理可解例3.28：$|x+4|>9$，在这里零点是$x=-4$, 它把数轴分成两段：
+    同理可解例3.29：$|x+4|>9$，在这里零点是$x=-4$, 它把数轴分成两段：
     \begin{itemize}
         \item  当$x\ge -4$时，$|x+4|=x+4$;
         \item  当$x<-4$时，$|x+4|=-(x+4)$.
@@ -1644,7 +1673,7 @@ $|x+4|>9$．
 \end{split}\]
 
 当然这种方法对解含一个绝对值的不等式不如前法方
-便、但它具有一般性，且它可推广到解含二个、三个……绝
+便，但它具有一般性，且它可推广到解含二个、三个……绝
 对值的不等式．
 
 \begin{example}
@@ -1675,9 +1704,9 @@ $|x+4|>9$．
 \node at (-.5,-.75){$-3\le x<2$};
 \node at (4,-.75){$x\ge 2$};
 
-\node at (-5,.5){$-(x-2)+[-(x+3)]$}; 
+\node at (-4.8,1.4){$-(x-2)+[-(x+3)]$};
 \node at (-.5,1){$-(x-2)+(x+3)$};
-\node at (4,.5){$(x-2)+(x+3)$};
+\node at (4.2,1.4){$(x-2)+(x+3)$};
 \end{tikzpicture}
 \caption{}
 \end{figure}
@@ -1694,7 +1723,7 @@ $|x+4|>9$．
     (x-2)+(x+3)>7\\ x\ge 2
 \end{cases}\right\}\\
 &=\{x|x<-4\}\cup\emptyset \cup\{x|x>3\}\\
-&=\{x|x<-4\}\cup \{x|x>3\}
+&=\{x|x<-4\text{ 或 }x>3\}\quad\text{(图3.13)}
 \end{split}\]
 
 \begin{figure}[htp]
@@ -1723,7 +1752,7 @@ $|x+4|>9$．
 \begin{enumerate}
     \item $|x-2|<5$
     \item $|2x-3|\ge 1$
-    \item $|2-3x|\le 3$
+    \item $|2-3x|\le \frac{1}{2}$
     \item $|4x-5|<15$
     \item $\left|\frac{1}{2}x+1\right|<4$
     \item $|2x+5|<\frac{5}{12}$
@@ -1771,7 +1800,7 @@ $x=-\frac{b}{2a}$时等式成立．
 这个定理的证明已在本章的例3.12中用配方法证过了．
 建议读者再复习一遍它的证明．
 
-这个定理告诉我们；不管$b^2-4ac<0$还是$b^2-4ac=0$,
+这个定理告诉我们：不管$b^2-4ac<0$还是$b^2-4ac=0$,
 二次三项式$ax^2+bx+c$的值除可能是0外，符号总是和二次
 项的系数$a$的符号一致，不随$x$的改变而改变的．
 
@@ -1789,7 +1818,7 @@ $x=-\frac{b}{2a}$时等式成立．
 呢？这时$ax^2+bx+c$的值的符号要因$x$的值不同而改变，现在
 我们就来讨论它的值的符号怎样随$x$的取值改变．
 
-当$b^2-4ac>0$. 而$a\ne 0$时，$ax^2+bx+c=0$有两个不同
+当$b^2-4ac>0$而$a\ne 0$时，$ax^2+bx+c=0$有两个不同
 的实根$x_1$和$x_2$, 并设$x_1<x_2$, 于是根据因式定理有：
 \[ax^2+bx+c=a(x-x_1)(x-x_2)\]
 
@@ -2306,7 +2335,7 @@ $x^2+y^2+z^2\ge \frac{1}{3}$．
 解下列关于$x$的不等式：
 \begin{multicols}{2}
 \begin{enumerate}
-    \item $ax+b^2>bx+a^3\quad (a<b)$
+    \item $ax+b^2>bx+a^2\quad (a<b)$
     \item $mx-n^3<nx-m^3\quad (m<n)$
     \item $ax+b>cx+d$
     \item $\frac{2x}{2-h}-\frac{h(x+1)}{2-h}<1\quad (h\ne 2)$
@@ -2316,7 +2345,7 @@ $x^2+y^2+z^2\ge \frac{1}{3}$．
 \item 解不等式组：
 \begin{enumerate}
     \item $\begin{cases}
-        (x-1)^2<(x+1)^3-4\\(x-1)(x-2)<(x+3)(x-4)+20
+        (x-1)^2<(x+1)^2-4\\(x-1)(x-2)<(x+3)(x-4)+20
     \end{cases}$
     \item $\begin{cases}
         (x+2)^3-(x-1)^3<9x^2 \\(x+2)^2-(x-1)^2>9
@@ -2333,7 +2362,7 @@ $x^2+y^2+z^2\ge \frac{1}{3}$．
         11x-5<13\\3x+2>-5
     \end{cases}$
     \item $\begin{cases}
-       3x+10>0\\ \frac{15}{3}x-10<4x
+       3x+10>0\\ \frac{16}{3}x-10<4x
     \end{cases}$
     \item $\begin{cases}
       \frac{2x-11}{4}+\frac{19-2x}{2}>-2x\\

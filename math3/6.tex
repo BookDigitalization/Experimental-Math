@@ -137,7 +137,7 @@
 角的度量是取一个确定的角作为度量单位，利用它来量
 所有的角．用周角的$\frac{1}{360}$
 作为度量单位的叫做“度”．在高
-等数学和其它基础科学理论系统中也常用弧度作为度量圆弧
+等数学和其他基础科学理论系统中也常用弧度作为度量圆弧
 和角的单位．
 
 在弧度制中，取等于半径长的圆弧作为单位弧长．这样
@@ -228,8 +228,8 @@
 \[\begin{split}
     \alpha&=\frac{A\pi}{180}\\
     1'&=\left(\frac{1}{60}\right)^{\circ}=\frac{1}{60}\left(\frac{\pi}{180}\right)\approx 0.00029088\\
-    1\text{(弧度)}&=\frac{180^{\circ}}{\pi}=57.295^{\circ}\approx 3438'\approx 206265''
-    = 57^{\circ}17'45''
+    \text{又}\ 1\text{(弧度)}&=\frac{180^{\circ}}{\pi}=57.295^{\circ}\approx 3438'\approx 206265''
+    \approx 57^{\circ}17'45''
 \end{split}\]
 $\alpha$弧度的角相应的度数：
 \[A^{\circ}=\frac{\alpha\cdot 180^{\circ}}{\pi}\]
@@ -374,7 +374,7 @@ $-\frac{\pi}{3}$, $\frac{5\pi}{3}$
 \begin{scope}
     \draw[->](-2,0)--(2,0)node[right]{$x$};
     \draw[->](0,-2)--(0,2)node[right]{$y$};
-\draw (0,0)--(30:2.5)node[right]{$B$};
+\draw (0,0)--(30:2.5)node[right]{$B_1$};
 \draw[->] (.75,0) arc (0:30:.75);
 \draw[->] (1,0) arc (0:-330:1);
 \node at (.2,-.2){$O$};
@@ -388,7 +388,7 @@ $-\frac{\pi}{3}$, $\frac{5\pi}{3}$
 \begin{scope}[xshift=6cm]
     \draw[->](-2,0)--(2,0)node[right]{$x$};
     \draw[->](0,-2)--(0,2)node[right]{$y$};
-    \draw (0,0)--(-60:2.5)node[right]{$B$};
+    \draw (0,0)--(-60:2.5)node[right]{$B_1$};
     \draw[->] (.75,0) arc (0:-60:.75);
     \draw[->] (1,0) arc (0:300:1);
     \node at (.2,.2){$O$};
@@ -502,7 +502,7 @@ $S$中在$-2\pi$到$4\pi$间的角：
 \begin{enumerate}
     \item 终边落在$x$轴的正向上，这些角的量数为
 \[2n\pi\quad  (n\in\mathbb{Z})\]
-\item 终边落在x轴的负向上，这些角的量数
+\item 终边落在$x$轴的负向上，这些角的量数
 \[2n\pi +\pi =(2n+1)\pi\quad  (n\in\mathbb{Z})\]
 把1、2结合起来，量数为$k\pi\;  (k\in\mathbb{Z})$的角的终边
 落在$x$轴上，在$k$为偶数时，终边落在$x$轴的正向上；在$k$
@@ -653,6 +653,7 @@ S_1\pm 4\pi ,\ldots$的弧，当$\ell$包卷在单位圆上时也达到同一个
 \node at (0,-2.2)[left]{$B_1$};
 \node at (0.25,-.25){$O$};  
 
+\node at (6,4){$0\to A$};
 \node at (6,3){$\frac{\pi}{6}\to P_1,\qquad \frac{\pi}{3}\to P_2$};
 \node at (6,2){$ \frac{\pi}{2}\to B,\qquad \frac{2\pi}{3}\to P_3$};
 \node at (6,1){$\frac{5\pi}{6}\to P_4,\qquad \pi\to A_1$};
@@ -829,6 +830,7 @@ $|x|=|OM|=\frac{1}{2}$
 \begin{example}
     $$\cos 0=1,\qquad \sin 0=0,\qquad \cos\frac{\pi}{2}=0,\qquad \sin\frac{\pi}{2}=1$$
     \[\cos\pi=-1,\qquad \sin\pi=0,\qquad \cos\frac{3\pi}{2}=0,\qquad \sin\frac{3\pi}{2}=-1\]
+    为什么？
 \end{example}
 
 \subsection{数值变数的三角函数与三角函数的定义域}
@@ -903,7 +905,7 @@ $\sin1.54\approx \sin88^{\circ}14'\approx 0.9995$
     于数$\alpha$的点$P$的横坐标和纵坐标，它们对于任何实数$\alpha$都
     有明确的值．
 \item 函数$\tan\alpha$的定义域是除去形如$\frac{\pi}{2}+k\pi\; (k\in\mathbb{Z})$的数的实数集：
-    \[\left\{\alpha\Big|\alpha\in\mathbb{R},\; \alpha\ne \frac{\pi}{2}+k\pi, \; k\in\mathbb{Z} \right\} \]
+    \[\left\{\alpha\Big|\alpha\in\mathbb{R}\ \text{但}\ \alpha\ne \frac{\pi}{2}+k\pi, \; k\in\mathbb{Z} \right\} \]
     即正切的定义域是无限个开区间组成的一个集：
 \[\cdots, \left(-\frac{3\pi}{2},-\frac{\pi}{2}\right), \left(-\frac{\pi}{2},\frac{\pi}{2}\right), \left(\frac{\pi}{2},\frac{3\pi}{2}\right),\left(\frac{3\pi}{2},\frac{5\pi}{2}\right),\cdots\]
 这是因为$\tan\alpha =\frac{y}{x}$
@@ -915,11 +917,11 @@ $\sin1.54\approx \sin88^{\circ}14'\approx 0.9995$
 点这两点对应的一切实数可以合并写成：
 \[\alpha=\frac{\pi}{2}+k\pi\qquad  (k\in\mathbb{Z})\]
 \item 函数$\cot\alpha$的定义域是除去形如$k\pi\;  (k\in\mathbb{Z})$的数的实
-数集：$\{\alpha|\alpha\in\mathbb{R},\; \alpha\ne k\pi ,k\in\mathbb{Z}\}$, 即余切的定义域是无
+数集：$\{\alpha|\alpha\in\mathbb{R}\ \text{但}\ \alpha\ne k\pi ,k\in\mathbb{Z}\}$, 即余切的定义域是无
 限个开区间组成的一个集：
 \[\cdots, (-\pi ,0),(0,\pi ),(\pi ,2\pi ),\cdots\]
-\item 函数$\sec\alpha$的定义域与正切函数$\tan\alpha$的定义域$\left\{\alpha\Big|\alpha\in\mathbb{R},\;  \alpha\ne \frac{\pi}{2}+k\pi ,k\in\mathbb{Z}\right\}$相同．
-\item 函数$\csc\alpha$的定义域与余切函数$\cot\alpha$的定义域$\{\alpha|\alpha\in\mathbb{R},\; \alpha\ne k\pi ,k\in\mathbb{Z}\}$相同．
+\item 函数$\sec\alpha$的定义域与正切函数$\tan\alpha$的定义域$\left\{\alpha\Big|\alpha\in\mathbb{R}\ \text{但}\ \alpha\ne \frac{\pi}{2}+k\pi ,k\in\mathbb{Z}\right\}$相同．
+\item 函数$\csc\alpha$的定义域与余切函数$\cot\alpha$的定义域$\{\alpha|\alpha\in\mathbb{R}\ \text{但}\ \alpha\ne k\pi ,k\in\mathbb{Z}\}$相同．
 \end{enumerate}
 
 \subsection{三角函数的正负}
@@ -1004,7 +1006,7 @@ $$\cos\alpha>0,\qquad \sin\alpha<0, \qquad\tan\alpha=\frac{\sin\alpha}{\cos\alph
 
 \begin{example}
     如果$\alpha$ 是第四象限的角，那么
-$\sin\alpha \tan \alpha$和$\frac{cos\alpha }{\cot \alpha}$
+$\sin\alpha \tan \alpha$和$\frac{\cos\alpha }{\cot \alpha}$
 各取什么符号？
 \end{example}
 
@@ -1022,14 +1024,14 @@ $\sin\alpha \tan \alpha$和$\frac{cos\alpha }{\cot \alpha}$
 $\tan \alpha+\cot \alpha\ge 2$
 \end{example}
 
-\begin{solution}
+\begin{proof}
     $\because\quad \alpha$ 是第三象限的角，$\tan \alpha>0$, $\cot \alpha>0$. 根据
 两个正数的算术平均值不小于它的几何平均值，因此有：
 \[\frac{\tan\alpha+\cot\alpha}{2}\ge \sqrt{\tan \alpha \cot \alpha}\]
 即：$\frac{\tan\alpha+\cot\alpha}{2}\ge 1$
 
 $\therefore\quad \tan\alpha+\cot\alpha\ge 2$
-\end{solution}
+\end{proof}
 
 \begin{ex}
 \begin{enumerate}
@@ -1039,14 +1041,20 @@ $P_3(-5,-3)$．
 \item 若$P$点的坐标为$(-4,y)$、$OP$长为5, 试求$y$值，
 并写出角的终边通过$P$点的三角函数值．
 \item $\sec\alpha$ 能否小于$\tan \alpha$? $\csc\alpha$ 能否小于$\cot\alpha$?
-\item 就绝对值而言能否$\cos\alpha$  大于 
-$\cot\alpha$? $\sin\alpha$ 大
+\item 就绝对值而言能否(a) $\cos\alpha$  大于 
+$\cot\alpha$? (b) $\sin\alpha$ 大
 于$\tan\alpha$?
 \item $x$为何值，不等式$|\sin x|+|\cos x|<1$成立？
 \item 决定下列各角正弦、余弦、正切的符号：
 \[885^{\circ},\qquad -395^{\circ},\qquad \frac{19\pi}{6}\]
 \item 若$\cos A<0$且$\tan A<0$, 试决定$A$为何象限角？
-\item 设$\frac{\sin\alpha}{\tan\alpha}<0$, $\frac{\cot\alpha}{\cos\alpha}<0$, $\sin\alpha \cos\alpha <0$, 角$\alpha$ 的终边应当在哪些象限？
+\item 设
+\begin{enumerate}
+    \item $\frac{\sin\alpha}{\tan\alpha}<0$；
+    \item $\frac{\cot\alpha}{\cos\alpha}<0$；
+    \item $\sin\alpha \cos\alpha <0$，
+\end{enumerate}
+角$\alpha$ 的终边应当在哪些象限？
 \item 设$\alpha$ 的终边在第三象限内，决定下列各式的符
 号：
 \begin{multicols}{2}
@@ -1083,7 +1091,7 @@ $\cos\frac{\pi}{2}=0$,
 $\sin\frac{\pi}{2}=1$, $\tan\frac{\pi}{2}$不存在, $\cot\frac{\pi}{2}=0$，$\sec \frac{\pi}{2}$不存在, $\csc\frac{\pi}{2}=1$．
 
 \item 当$\alpha =\pi$ 时，则$P$的坐标是$(-1,0)$, 那么，$\cos\pi =-1$, $\sin\pi =0$, $\tan\pi =0$, $\cot\pi$不存在，$\sec \pi =-1$, $\csc\pi$ 不存在．
-\item 当$\alpha=\frac{3\pi}{2}$时，则P的坐标是$(0,-1)$, 那么，$\cos\frac{3\pi}{2}=0$, 
+\item 当$\alpha=\frac{3\pi}{2}$时，则$P$的坐标是$(0,-1)$, 那么，$\cos\frac{3\pi}{2}=0$, 
 $\sin\frac{3\pi}{2}=-1$, $\tan\frac{3\pi}{2}$不存在, $\cot\frac{3\pi}{2}=0$，$\sec \frac{3\pi}{2}$不存在, $\csc\frac{3\pi}{2}=-1$．
 \end{itemize}
 
@@ -1404,7 +1412,7 @@ $\sin(-1480^{\circ}10')=-\sin(1480^{\circ}10')=-\sin(4\x 360^{\circ}+40^{\circ}1
 
 \subsection{$\frac{\pi}{2}\pm\alpha$与$\alpha$的三角函数间的关系}
 
-$\frac{\pi}{2}\pm\alpha$与$\alpha$的三角函数间有下述关系：
+$\frac{\pi}{2}+\alpha$与$\alpha$的三角函数间有下述关系：
 \begin{equation}
     \begin{split}
 \sin\left(\frac{\pi}{2}+\alpha\right)=\cos\alpha,&\qquad \cos\left(\frac{\pi}{2}+\alpha\right)=-\sin\alpha\\
@@ -1547,19 +1555,19 @@ $\frac{\pi}{2}\pm\alpha$与$\alpha$的三角函数间有下述关系：
 叫做三角函数的诱导公式．为便于查阅和比较，我们把三角
 函数的诱导公式全部都列于下表中．
 \begin{center}
-\begin{tabular}{ccccc}
+\begin{tabular}{cccccc}
     \hline
-& $\cos$ & $\sin$ & $\tan $ &  $\cot$\\
+& $\cos$ & $\sin$ & $\tan $ &  $\cot$ & \\
 \hline
-$-\alpha$& $\cos\alpha$ & $-\sin\alpha$ & $-\tan\alpha $ &  $-\cot\alpha$\\
-\vspace{1ex}$\frac{\pi}{2}+\alpha$& $-\sin\alpha$ & $\cos\alpha$ & $-\cot\alpha $ &  $-\tan\alpha$\\
-\vspace{1ex}$\frac{\pi}{2}-\alpha$& $\sin\alpha$ & $\cos\alpha$ & $\cot\alpha $ &  $\tan \alpha$\\
-$\pi+\alpha$& $-\cos\alpha$ & $-\sin\alpha$ & $\tan\alpha $ &  $\cot\alpha$\\
-$\pi-\alpha$& $-\cos\alpha$ & $\sin\alpha$ & $-\tan\alpha $ &  $-\cot\alpha$\\
-\vspace{1ex}$\frac{3\pi}{2}+\alpha$& $\sin\alpha$ & $-\cos\alpha$ & $-\cot\alpha $ &  $-\tan\alpha$\\
-\vspace{1ex}$\frac{3\pi}{2}-\alpha$& $-\sin\alpha$ & $-\cos\alpha$ & $\cot\alpha $ &  $\tan\alpha$\\
-$2\pi+\alpha$& $\cos\alpha$ & $\sin\alpha$ & $\tan\alpha $ &  $\cot\alpha$\\
-$2\pi-\alpha$& $\cos\alpha$ & $-\sin\alpha$ & $-\tan\alpha $ &  $-\cot\alpha$\\
+$-\alpha$& $\cos\alpha$ & $-\sin\alpha$ & $-\tan\alpha $ &  $-\cot\alpha$ & \begin{tikzpicture}[scale=.36,baseline=-.5ex] \draw (0,0) circle(1); \draw (-1.3,0)--(1.3,0) (0,-1.3)--(0,1.3); \draw[pattern=north east lines] (0,0)--(30:1)--({cos(30)},0)--cycle; \fill (30:1) circle(1.5pt); \draw[pattern=north east lines] (0,0)--(-30:1)--({cos(-30)},0)--cycle; \fill (-30:1) circle(1.5pt); \end{tikzpicture}\\
+\vspace{1ex}$\frac{\pi}{2}+\alpha\ (90^{\circ}+\alpha)$& $-\sin\alpha$ & $\cos\alpha$ & $-\cot\alpha $ &  $-\tan\alpha$ & \begin{tikzpicture}[scale=.36,baseline=-.5ex] \draw (0,0) circle(1); \draw (-1.3,0)--(1.3,0) (0,-1.3)--(0,1.3); \draw[pattern=north east lines] (0,0)--(30:1)--({cos(30)},0)--cycle; \fill (30:1) circle(1.5pt); \draw[pattern=north east lines] (0,0)--(120:1)--(0,{sin(120)})--cycle; \fill (120:1) circle(1.5pt); \end{tikzpicture}\\
+\vspace{1ex}$\frac{\pi}{2}-\alpha\ (90^{\circ}-\alpha)$& $\sin\alpha$ & $\cos\alpha$ & $\cot\alpha $ &  $\tan \alpha$ & \begin{tikzpicture}[scale=.36,baseline=-.5ex] \draw (0,0) circle(1); \draw (-1.3,0)--(1.3,0) (0,-1.3)--(0,1.3); \draw[pattern=north east lines] (0,0)--(30:1)--({cos(30)},0)--cycle; \fill (30:1) circle(1.5pt); \draw[pattern=north east lines] (0,0)--(60:1)--(0,{sin(60)})--cycle; \fill (60:1) circle(1.5pt); \end{tikzpicture}\\
+$\pi+\alpha\ (180^{\circ}+\alpha)$& $-\cos\alpha$ & $-\sin\alpha$ & $\tan\alpha $ &  $\cot\alpha$ & \begin{tikzpicture}[scale=.36,baseline=-.5ex] \draw (0,0) circle(1); \draw (-1.3,0)--(1.3,0) (0,-1.3)--(0,1.3); \draw[pattern=north east lines] (0,0)--(30:1)--({cos(30)},0)--cycle; \fill (30:1) circle(1.5pt); \draw[pattern=north east lines] (0,0)--(210:1)--({cos(210)},0)--cycle; \fill (210:1) circle(1.5pt); \end{tikzpicture}\\
+$\pi-\alpha\ (180^{\circ}-\alpha)$& $-\cos\alpha$ & $\sin\alpha$ & $-\tan\alpha $ &  $-\cot\alpha$ & \begin{tikzpicture}[scale=.36,baseline=-.5ex] \draw (0,0) circle(1); \draw (-1.3,0)--(1.3,0) (0,-1.3)--(0,1.3); \draw[pattern=north east lines] (0,0)--(30:1)--({cos(30)},0)--cycle; \fill (30:1) circle(1.5pt); \draw[pattern=north east lines] (0,0)--(150:1)--({cos(150)},0)--cycle; \fill (150:1) circle(1.5pt); \end{tikzpicture}\\
+\vspace{1ex}$\frac{3\pi}{2}+\alpha\ (270^{\circ}+\alpha)$& $\sin\alpha$ & $-\cos\alpha$ & $-\cot\alpha $ &  $-\tan\alpha$ & \begin{tikzpicture}[scale=.36,baseline=-.5ex] \draw (0,0) circle(1); \draw (-1.3,0)--(1.3,0) (0,-1.3)--(0,1.3); \draw[pattern=north east lines] (0,0)--(30:1)--({cos(30)},0)--cycle; \fill (30:1) circle(1.5pt); \draw[pattern=north east lines] (0,0)--(300:1)--(0,{sin(300)})--cycle; \fill (300:1) circle(1.5pt); \end{tikzpicture}\\
+\vspace{1ex}$\frac{3\pi}{2}-\alpha\ (270^{\circ}-\alpha)$& $-\sin\alpha$ & $-\cos\alpha$ & $\cot\alpha $ &  $\tan\alpha$ & \begin{tikzpicture}[scale=.36,baseline=-.5ex] \draw (0,0) circle(1); \draw (-1.3,0)--(1.3,0) (0,-1.3)--(0,1.3); \draw[pattern=north east lines] (0,0)--(30:1)--({cos(30)},0)--cycle; \fill (30:1) circle(1.5pt); \draw[pattern=north east lines] (0,0)--(240:1)--(0,{sin(240)})--cycle; \fill (240:1) circle(1.5pt); \end{tikzpicture}\\
+$2\pi+\alpha\ (360^{\circ}+\alpha)$& $\cos\alpha$ & $\sin\alpha$ & $\tan\alpha $ &  $\cot\alpha$ & \begin{tikzpicture}[scale=.36,baseline=-.5ex] \draw (0,0) circle(1); \draw (-1.3,0)--(1.3,0) (0,-1.3)--(0,1.3); \draw[pattern=north east lines] (0,0)--(30:1)--({cos(30)},0)--cycle; \fill (30:1) circle(1.5pt); \end{tikzpicture}\\
+$2\pi-\alpha\ (360^{\circ}-\alpha)$& $\cos\alpha$ & $-\sin\alpha$ & $-\tan\alpha $ &  $-\cot\alpha$ & \begin{tikzpicture}[scale=.36,baseline=-.5ex] \draw (0,0) circle(1); \draw (-1.3,0)--(1.3,0) (0,-1.3)--(0,1.3); \draw[pattern=north east lines] (0,0)--(30:1)--({cos(30)},0)--cycle; \fill (30:1) circle(1.5pt); \draw[pattern=north east lines] (0,0)--(-30:1)--({cos(-30)},0)--cycle; \fill (-30:1) circle(1.5pt); \end{tikzpicture}\\
 \hline
 \end{tabular}
 \end{center}
@@ -1902,7 +1910,7 @@ $Oy$轴上时，过$O$、$P$两点的直线就不与正切线相交），如
 \end{figure}
 
 如果角$\alpha$ 的终边$OP$在$Oy$轴的左侧，反向延长$OP$与
-正切线交于$L$点．设$P$点、$L$点的坐标分别是$(x,y)$、$(x_1,y_1)$，
+正切线交于$L$点．设$P$点、$L$点的坐标分别是$(x,y)$、$(1,y_1)$，
 这时$P$点和$L$点的同名称坐标的符号相反，但由于
 $\triangle  OPM    \sim \triangle OLA$, 所以它们的坐标的比相同（图6.19(b)），即
 \[\tan\alpha =\frac{y}{x}=\frac{MP}{OM}=\frac{AL}{OA}=\frac{y_1}{1}=y_1\]
@@ -1934,7 +1942,7 @@ $\alpha$的余切等于角$\alpha$终边所在直线与余切线交
     \node at (22.5:.7){$\alpha$};
 \node at (-.25,-.25){$O$};
 \node at (0,1.7)[left]{$B(0,1)$};
-\node at (1.5,1.5)[above]{$L_1(x_1,1)$};
+\node at (1.5,1.5)[above]{$L(x_1,1)$};
 \node at (45:1.5)[right]{$P(x,y)$};
     \end{tikzpicture}
     \caption{}
@@ -2195,7 +2203,7 @@ $\because\quad \tan\frac{\pi}{6}=\frac{\sqrt{3}}{3}$，根据诱导公式
 把$\sin^2\alpha+\cos^2\alpha=1$的两边同除以$\cos^2\alpha,\;\alpha\ne\frac{\pi}{2}+k\pi\quad (k\in\mathbb{Z})$, 便得到
 \[\tan^2\alpha+1=\sec^2\alpha\]
 或
-\[1+\tan^2\alpha=sec^2\alpha\]
+\[1+\tan^2\alpha=\sec^2\alpha\]
 把$\sin^2\alpha+\cos^2\alpha=1$的两边同除以$\sin^2\alpha$,$\alpha\ne k\pi\quad (k\in\mathbb{Z})$，便
 得到
 \[1+\cot^2\alpha =\csc^2\alpha\]
@@ -2203,7 +2211,7 @@ $\because\quad \tan\frac{\pi}{6}=\frac{\sqrt{3}}{3}$，根据诱导公式
 
 
 上面八个公式，除去使公式中的函数不存在的那些$\alpha$的
-值以外，对于$\alpha$其它的值都成立，因此，把它们叫做三角
+值以外，对于$\alpha$其他的值都成立，因此，把它们叫做三角
 函数的基本恒等式．
 
 利用这些恒等式，可以进行同角的三角函数式的恒等变
@@ -2243,7 +2251,8 @@ $的值．
 \text{原式}&=\frac{\cos\alpha(2\sin\alpha-1)}{1+\sin^2\alpha-(1-\sin^2\alpha)-\sin\alpha}\\
 &=\frac{\cos\alpha(2\sin\alpha-1)}{2\sin^2\alpha-\sin\alpha}\\
 &=\frac{\cos\alpha(2\sin\alpha-1)}{\sin\alpha(2\sin\alpha-1)}\\
-&=\frac{\cos\alpha}{\sin\alpha}=\cot\alpha
+&=\frac{\cos\alpha}{\sin\alpha}\qquad (\because\ \alpha=24^{\circ}30'\text{时，}2\sin\alpha-1\ne 0)\\
+&=\cot\alpha
 \end{split}\]
 最后把$\alpha$值代入，查表可得：
 \[\cot24^{\circ}30'=2.194\]
@@ -2292,7 +2301,7 @@ $的值．
 \end{enumerate}
        
    化简下列各式：
-\begin{enumerate}
+\begin{enumerate}\setcounter{enumi}{5}
     \item \begin{enumerate}
         \item $\sqrt{1-\cos^2\alpha}\cdot \cot \alpha$
         \item $\sqrt{\frac{1-\cos\alpha}{1+\cos\alpha}}$
@@ -2305,7 +2314,7 @@ $的值．
 \end{ex}
 
 \subsection{根据一个三角函数计算其余各三角函数}
-根据前面中所推导出的三角函数间的基本公式，可以
+根据上一小节中所推导出的三角函数间的基本公式，可以
 从一个已知的三角函数值，计算其余的三角函数值．
 
 \begin{example}
@@ -2426,8 +2435,8 @@ $\because\quad \phi$是第三象限角，$\therefore\quad \sec\phi<0$
     \item 已知$\sin\alpha=-\frac{24}{25}$，计算$\cos\alpha, \tan\alpha, \cot\alpha$．
     \item 已知$\cos\alpha=-\frac{9}{41}$，$90^{\circ}<\alpha<180^{\circ}$，计算$\sin\alpha, \tan\alpha, \cot\alpha,\sec\alpha, \csc\alpha$．
 \item 已知$\cot\alpha=3\frac{41}{60}$, $\pi<\alpha<\frac{3\pi}{2}$，计算$\cos\alpha$．
-\item 已知$\tan\alpha=1.4$, $\pi<\alpha<\frac{3\pi}{2}$，计算$\alpha$角的其它三角函数值（准确到0.01）．
-\item 已知$\cot\alpha=-\frac{52}{173}$和$0^{\circ}<\alpha<180^{\circ}$，计算$\tan\alpha-\sec\alpha$的值．
+\item 已知$\tan\alpha=1.4$, $\pi<\alpha<\frac{3\pi}{2}$，计算$\alpha$角的其他三角函数值（准确到0.01）．
+\item 已知$\cos\alpha=-\frac{52}{173}$和$0^{\circ}<\alpha<180^{\circ}$，计算$\tan\alpha-\sec\alpha$的值．
 \item 已知$\tan\alpha=-1.5$， $100^{\circ}<\alpha<200^{\circ}$，计算$\cos\alpha$．
 \item 已知$\sin\alpha=\frac{a}{\sqrt{a^2+b^2}}$，计算$\tan\alpha-\cot\alpha$的值．
 \item 已知$\cot\alpha=3$, $\pi<\alpha<\frac{3\pi}{2}$，求积$\sin\alpha\cos\alpha$．
@@ -2475,7 +2484,7 @@ $\because\quad \phi$是第三象限角，$\therefore\quad \sec\phi<0$
 \begin{enumerate}
     \item $\sin1000^{\circ}$
     \item $\cos(-2200^{\circ})$
-    \item $\tan\left(-\frac{3}{11}\pi\right)$
+    \item $\tan\left(-\frac{3}{10}\pi\right)$
     \item $\cot 10$
 \end{enumerate}
 \end{multicols}
@@ -2491,7 +2500,7 @@ $\because\quad \phi$是第三象限角，$\therefore\quad \sec\phi<0$
 
 \item 求下列各式的值：
 \begin{enumerate}
-    \item $\csc180^{\circ}+\sin60^{\circ}+\tan45^{\circ}-\cos230^{\circ}+\sin30^{\circ}
+    \item $\csc180^{\circ}+\sin60^{\circ}+\tan45^{\circ}-\cos^2 30^{\circ}+\sin30^{\circ}
 +\cot90^{\circ}$
     \item $4\sin\pi-2\cos\frac{3\pi}{2}+3\sin2\pi -\tan\pi$
 \end{enumerate}
@@ -2514,7 +2523,7 @@ $\because\quad \phi$是第三象限角，$\therefore\quad \sec\phi<0$
 \item  求下列各式的值：
 \begin{enumerate}
 \item $5 \sin 90^{\circ}+2 \cos 0^{\circ}-2 \sin 270^{\circ}+10 \cos 180^{\circ}$
-\item $\cos \frac{\pi}{8}-\sin ^{2} \frac{\pi}{4}\cos \pi -\frac{1}{8} \tan^{2} \frac{\pi}{3} \sin \frac{3 \pi}{2}+\cos 0$
+\item $\cos \frac{\pi}{3}-\sin ^{2} \frac{\pi}{4}\cos \pi -\frac{1}{3} \tan^{2} \frac{\pi}{3} \sin \frac{3 \pi}{2}+\cos 0$
 \item $8 \sin 510^{\circ} \cdot \cos \left(-300^{\circ}\right) \cdot \tan 240^{\circ}$
 \item $10 \cot  315^{\circ} \cdot \sin \left(-150^{\circ}\right) \cdot \cos 225^{\circ}$,
 \item $\frac{\cos \left(-120^{\circ}\right)}{\cos 30^{\circ}}+\frac{\tan 210^{\circ} \sin 315^{\circ}}{\cos 180^{\circ}}$
@@ -2537,8 +2546,8 @@ $\because\quad \phi$是第三象限角，$\therefore\quad \sec\phi<0$
     \item $\cot x+\sqrt{3}=0,\qquad \left(\frac{3\pi}{2}<x<2\pi\right)$
     \item $2\sin x-\sqrt{2}=0,\qquad (0<x<2\pi)$
     \item $3\tan x+\sqrt{3}=0,\qquad (0<x<2\pi)$
-    \item $2\cos x-\sqrt{3}=0,\qquad (0<x<2\pi)$
-    \item $\sqrt{3}\cot x-1=0,\qquad (0<x<2\pi)$
+    \item $2\cos x-\sqrt{3}=0$
+    \item $\sqrt{3}\cot x-1=0$
 \end{enumerate}
 
 \item 证明下列各恒等式：

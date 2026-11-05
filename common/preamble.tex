@@ -45,6 +45,8 @@
 
 % ---- 例题、解答等环境 ----
 \newtheorem{example}{\bf 例}[chapter]
+% 选学的例题：原书在“例”字左侧加“*”（同 \staritem），编号与 example 连续
+\newtheorem{starexample}[example]{\llap{*}\bf 例}
 \newenvironment{solution}{\noindent {\bf 解：}}{}
 \newenvironment{analyze}{\noindent {\bf 分析：}}{}
 \newenvironment{rmk}{\noindent {\bf 注意：}}{}
