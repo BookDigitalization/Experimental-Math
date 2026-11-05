@@ -30,3 +30,6 @@ original/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Claude Code 的个人提示词（只在本机，不提交）
+CLAUDE.local.md
