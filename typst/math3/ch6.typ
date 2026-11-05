@@ -283,7 +283,7 @@ dots.h.c dots.h.c #h(2em) & #h(2em) #h(2em) dots.h.c dots.h.c $ #noindent;所有
 
 ]
 #solution[
-+ $S = lr(\{ beta #scale(x: 180%, y: 180%)[$\|$] beta = 2 k pi + pi / 3 \, thick k in bb(Z) \})$
++ $S = lr(\{ beta class("normal", stretch(|, size: #1.8em)) beta = 2 k pi + pi / 3 \, thick k in bb(Z) \})$
 
   $S$ 中在 $- 2 pi$ 到 $4 pi$ 间的角：
 
@@ -293,7 +293,7 @@ dots.h.c dots.h.c #h(2em) & #h(2em) #h(2em) dots.h.c dots.h.c $ #noindent;所有
 
   - 当 $k = 1$ 时，$beta = 2 pi + pi / 3 = frac(7 pi, 3)$
 
-+ $S = lr(\{ beta #scale(x: 180%, y: 180%)[$\|$] beta = 2 k pi - pi / 4 \, thick k in bb(Z) \})$
++ $S = lr(\{ beta class("normal", stretch(|, size: #1.8em)) beta = 2 k pi - pi / 4 \, thick k in bb(Z) \})$
 
   $S$ 中在 $- 2 pi$ 到 $4 pi$ 间的角：
 
@@ -303,7 +303,7 @@ dots.h.c dots.h.c #h(2em) & #h(2em) #h(2em) dots.h.c dots.h.c $ #noindent;所有
 
   - 当 $k = 2$ 时，$beta = 4 pi - pi / 4 = frac(15 pi, 4)$
 
-+ $S = lr(\{ beta #scale(x: 180%, y: 180%)[$\|$] beta = 2 k pi + frac(15 pi, 7) \, thick k in bb(Z) \})$
++ $S = lr(\{ beta class("normal", stretch(|, size: #1.8em)) beta = 2 k pi + frac(15 pi, 7) \, thick k in bb(Z) \})$
 
   $S$ 中在 $- 2 pi$ 到 $4 pi$ 间的角：
 
@@ -538,11 +538,11 @@ sec alpha = 1 / x = frac(1, cos alpha)\,#h(2em) csc alpha = 1 / y = frac(1, sin 
 
 + 函数 $cos alpha$ 和 $sin alpha$ 的定义域是开区间 $- oo < alpha < + oo$, 即 $\(- oo\,+ oo\)$, 这是因为 $cos alpha$ 和 $sin alpha$ 是单位圆上对应于数 $alpha$ 的点 $P$ 的横坐标和纵坐标，它们对于任何实数 $alpha$ 都有明确的值．
 
-+ 函数 $tan alpha$ 的定义域是除去形如 $pi / 2 + k pi thick\(k in bb(Z)\)$ 的数的实数集：$ lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha in bb(R) med upright("但") med alpha eq.not pi / 2 + k pi \, thick k in bb(Z) \}) $ #noindent;即正切的定义域是无限个开区间组成的一个集：$ dots.h.c\,(- frac(3 pi, 2) \, - pi / 2)\,(- pi / 2 \, pi / 2)\,(pi / 2 \, frac(3 pi, 2))\,(frac(3 pi, 2) \, frac(5 pi, 2))\,dots.h.c $ #noindent;这是因为 $tan alpha = y / x$ 是单位圆上 $P$ 点的纵坐标对横坐标之比，唯有当 $x = 0$ 时它失去意义，单位圆上与 $x = 0$ 对应的点只有 $\(0\,1\)$ 和 $\(0\,- 1\)$, 与 $\(0\,1\)$ 点对应的一切实数是 $alpha = pi / 2 + 2 k pi thick\(k in bb(Z)\)$, 与 $\(0\,- 1\)$ 点对应的一切实数是 $alpha = - pi / 2 + 2 k pi thick\(k in bb(Z)\)$, 和 $\(0\,1\)$ 点、$\(0\,- 1\)$ 点这两点对应的一切实数可以合并写成：$ alpha = pi / 2 + k pi #h(2em)\(k in bb(Z)\) $
++ 函数 $tan alpha$ 的定义域是除去形如 $pi / 2 + k pi thick\(k in bb(Z)\)$ 的数的实数集：$ lr(\{ alpha class("normal", stretch(|, size: #1.8em)) alpha in bb(R) med upright("但") med alpha eq.not pi / 2 + k pi \, thick k in bb(Z) \}) $ #noindent;即正切的定义域是无限个开区间组成的一个集：$ dots.h.c\,(- frac(3 pi, 2) \, - pi / 2)\,(- pi / 2 \, pi / 2)\,(pi / 2 \, frac(3 pi, 2))\,(frac(3 pi, 2) \, frac(5 pi, 2))\,dots.h.c $ #noindent;这是因为 $tan alpha = y / x$ 是单位圆上 $P$ 点的纵坐标对横坐标之比，唯有当 $x = 0$ 时它失去意义，单位圆上与 $x = 0$ 对应的点只有 $\(0\,1\)$ 和 $\(0\,- 1\)$, 与 $\(0\,1\)$ 点对应的一切实数是 $alpha = pi / 2 + 2 k pi thick\(k in bb(Z)\)$, 与 $\(0\,- 1\)$ 点对应的一切实数是 $alpha = - pi / 2 + 2 k pi thick\(k in bb(Z)\)$, 和 $\(0\,1\)$ 点、$\(0\,- 1\)$ 点这两点对应的一切实数可以合并写成：$ alpha = pi / 2 + k pi #h(2em)\(k in bb(Z)\) $
 
 + 函数 $cot alpha$ 的定义域是除去形如 $k pi thick\(k in bb(Z)\)$ 的数的实数集：$\{ alpha\|alpha in bb(R) med upright("但") med alpha eq.not k pi\,k in bb(Z) \}$, 即余切的定义域是无限个开区间组成的一个集：$ dots.h.c\,\(- pi\,0\)\,\(0\,pi\)\,\(pi\,2 pi\)\,dots.h.c $
 
-+ 函数 $sec alpha$ 的定义域与正切函数 $tan alpha$ 的定义域 $lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha in bb(R) med upright("但") med alpha eq.not pi / 2 + k pi \, k in bb(Z) \})$ 相同．
++ 函数 $sec alpha$ 的定义域与正切函数 $tan alpha$ 的定义域 $lr(\{ alpha class("normal", stretch(|, size: #1.8em)) alpha in bb(R) med upright("但") med alpha eq.not pi / 2 + k pi \, k in bb(Z) \})$ 相同．
 
 + 函数 $csc alpha$ 的定义域与余切函数 $cot alpha$ 的定义域 $\{ alpha\|alpha in bb(R) med upright("但") med alpha eq.not k pi\,k in bb(Z) \}$ 相同．
 
@@ -1018,8 +1018,7 @@ tan (frac(3 pi, 2) - alpha) = cot alpha\, & #h(2em) cot (frac(3 pi, 2) - alpha) 
 #solution[
 $ sin\(- 1650 degree\) & = - sin\(1650 degree\)= - sin\(4 times 360 degree + 210 degree\)\
  & = - sin 210 degree = - sin\(180 degree + 30 degree\)\
- & = sin 30 degree = 1 / 2\
-cos (- frac(19 pi, 6)) & = cos frac(19 pi, 6) = cos (2 pi + frac(7 pi, 6))\
+ & = sin 30 degree = 1 / 2 $ $ cos (- frac(19 pi, 6)) & = cos frac(19 pi, 6) = cos (2 pi + frac(7 pi, 6))\
  & = cos frac(7 pi, 6) = cos (pi + pi / 6)\
  & = - cos pi / 6 = - sqrt(3) / 2 $
 
@@ -1406,7 +1405,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 
   #strong[另解：]$because quad sin alpha = sqrt(3) / 2 > 0$
 
-  $therefore quad alpha$ 角终边在第一或第二象限．但知 $sin pi / 3 = sqrt(3) / 2$⁠，根据诱导公式得到 $ sin (pi / 3 + 2 k pi) = sin [(pi - pi / 3) + 2 k pi] = sin pi / 3 = sqrt(3) / 2 $ #noindent;所以 $sin alpha = sqrt(3) / 2$ 的解集是 $ lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha = pi / 3 + 2 k pi \, thick k in bb(Z) \}) union.big lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha = frac(2 pi, 3) + 2 k pi \, thick k in bb(Z) \}) $
+  $therefore quad alpha$ 角终边在第一或第二象限．但知 $sin pi / 3 = sqrt(3) / 2$⁠，根据诱导公式得到 $ sin (pi / 3 + 2 k pi) = sin [(pi - pi / 3) + 2 k pi] = sin pi / 3 = sqrt(3) / 2 $ #noindent;所以 $sin alpha = sqrt(3) / 2$ 的解集是 $ lr(\{ alpha class("normal", stretch(|, size: #1.8em)) alpha = pi / 3 + 2 k pi \, thick k in bb(Z) \}) union.big lr(\{ alpha class("normal", stretch(|, size: #1.8em)) alpha = frac(2 pi, 3) + 2 k pi \, thick k in bb(Z) \}) $
 
 + 在单位圆上，纵坐标等于 $- sqrt(3) / 2$ 的点，分别是在第三象限的点 $P_1$ 和第四象限的点 $P_2$ (如图6.22)
 
@@ -1421,7 +1420,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 
   通过 $P_2$ 点的一切 $2 alpha_2$ 角：$ 2 alpha_2 = (2 pi - pi / 3) + 2 k pi = frac(5 pi, 3) + 2 k pi $ #noindent;由此得 $alpha_2 = frac(5 pi, 6) + k pi\,quad k in bb(Z)$
 
-  所以 $sin 2 alpha = - sqrt(3) / 2$ 的解集是 $ lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha = frac(2 pi, 3) + k pi \, thick k in bb(Z) \}) union.big lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha = frac(5 pi, 6) + k pi \, thick k in bb(Z) \}) $
+  所以 $sin 2 alpha = - sqrt(3) / 2$ 的解集是 $ lr(\{ alpha class("normal", stretch(|, size: #1.8em)) alpha = frac(2 pi, 3) + k pi \, thick k in bb(Z) \}) union.big lr(\{ alpha class("normal", stretch(|, size: #1.8em)) alpha = frac(5 pi, 6) + k pi \, thick k in bb(Z) \}) $
 
   #strong[另解：]$because quad sin 2 alpha = - sqrt(3) / 2 < 0$
 
@@ -1442,7 +1441,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 
   通过 $P_2$ 点的一切 $alpha_2 / 2$ 角：$ alpha_2 / 2 = (pi + pi / 3) + 2 k pi = frac(4 pi, 3) + 2 k pi $ #noindent;由此得：$alpha_2 = frac(8 pi, 3) + 4 k pi quad\(k in bb(Z)\)$⁠．
 
-  所以解集是：$ lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha = frac(4 pi, 3) + 4 k pi \, thick k in bb(Z) \}) union.big lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha = frac(8 pi, 3) + 4 k pi \, thick k in bb(Z) \}) $
+  所以解集是：$ lr(\{ alpha class("normal", stretch(|, size: #1.8em)) alpha = frac(4 pi, 3) + 4 k pi \, thick k in bb(Z) \}) union.big lr(\{ alpha class("normal", stretch(|, size: #1.8em)) alpha = frac(8 pi, 3) + 4 k pi \, thick k in bb(Z) \}) $
 
   #strong[另解：]$because quad cos alpha / 2 = - 1 / 2 < 0$⁠，
 
@@ -1465,7 +1464,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 
   因为 $tan pi / 6 = sqrt(3) / 3$⁠，所以通过 $P_2$ 点和 $P_1$ 点的一切角 $alpha = - pi / 6 + k pi\,thick\(k in bb(Z)\)$
 
-  所以解集是：$lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha = - pi / 6 + k pi \, quad k in bb(Z) \})$
+  所以解集是：$lr(\{ alpha class("normal", stretch(|, size: #1.8em)) alpha = - pi / 6 + k pi \, quad k in bb(Z) \})$
 
   #strong[另解：]$because quad tan alpha = - sqrt(3) / 3 < 0$
 

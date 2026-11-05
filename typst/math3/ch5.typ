@@ -377,9 +377,9 @@
 我们把上面讨论的结果列成下表．
 
 #align(center)[
-#table(
+#text(size: 0.9em)[#table(
   columns: (auto, 19% + 12pt, 19% + 12pt, 19% + 12pt, 19% + 12pt,),
-  align: (center + horizon, left + horizon, left + horizon, left + horizon, left + horizon,),
+  align: (center + horizon, left + top, left + top, left + top, left + top,),
   table.vline(x: 0),
   table.vline(x: 1),
   table.vline(x: 2),
@@ -433,7 +433,7 @@
   [顶点 $\(0\,0\)$ \ #h(1fr);#fig("5-10");#h(1fr);],
   [$\(0\,0\)$ 适合 $y = a x^2$⁠，在 $x = 0$ 取得 $y_max = 0$],
   table.hline(),
-);
+)]
 
 ]
 从以上讨论可以看到，对抛物线 $y = a x^2$ 主要要掌握三件东西：（1）对称轴，（2）顶点，（3）开口方向，即 $a$ 的正负．而这三件东西又都和二次函数的极值点、极值有关，顶点的坐标确定后，对称轴方程和极值点也就随之求出，故顶点位置是个关键．
@@ -730,7 +730,7 @@ a & = - 3 $ #noindent;所求抛物线方程是 $y = - 3\(x - 2\)^2 + 4$⁠．
 
 #align(center)[#text(size: 0.9em)[#table(
   columns: (22% + 12pt, auto, auto, auto,),
-  align: (left + horizon, center + horizon, center + horizon, center + horizon,),
+  align: (left + top, center + horizon, center + horizon, center + horizon,),
   table.vline(x: 0),
   table.vline(x: 1),
   table.vline(x: 2),
@@ -784,7 +784,7 @@ a & = - 3 $ #noindent;所求抛物线方程是 $y = - 3\(x - 2\)^2 + 4$⁠．
   [$y = a x^2 + b x + c$ 的极值],
   table.cell(colspan: 3, align: left)[当 $x = - frac(b, 2 a)$ 时，$y_max = frac(4 a c - b^2, 4 a)$],
   table.hline(),
-);]]
+)]]
 
 #example[
 指出下面抛物线的开口方向，顶点坐标和对称轴方程，并画出图象：
@@ -1303,9 +1303,9 @@ $ y =\(x - 2\)^2 + 1 $
 下面我们把有关二次三项式的值的符号的结论与它在图象上相应的情况列在下表中．
 
 #align(center)[
-#table(
+#text(size: 0.9em)[#table(
   columns: (auto, 25% + 12pt, 22% + 12pt, 22% + 12pt,),
-  align: (center + horizon, left + horizon, left + horizon, left + horizon,),
+  align: (center + horizon, left + top, left + top, left + top,),
   table.vline(x: 0),
   table.vline(x: 1),
   table.vline(x: 2),
@@ -1336,7 +1336,7 @@ $ y =\(x - 2\)^2 + 1 $
   [#h(1fr);#fig("5-37");#h(1fr); \ 在区间 $\(x_1\,x_2\)$ 内，图象上的点的纵坐标小于0；在区间 $\(x_1\,x_2\)$ 外，图象上的点的纵坐标大于0],
   [#h(1fr);#fig("5-38");#h(1fr); \ 在区间 $\(x_1\,x_2\)$ 内，图象上的点的纵坐标大于0；在区间 $\(x_1\,x_2\)$ 外，图象上的点的纵坐标小于0],
   table.hline(),
-);
+)]
 
 ]
 在解一元二次不等式时，只要看二次函数 $y = a x^2 + b x + c$, 当 $x$ 取何值时，抛物线上的点的纵坐标是正的或是负的就可以了．解一元二次不等式 $a x^2 + b x + c > 0$\(或 $< 0$) 可按照下列步骤：
@@ -1382,9 +1382,9 @@ $ y =\(x - 2\)^2 + 1 $
 
 ]
 #solution[
-抛物线在 $x$ 轴下方与 $x$ 轴没有交点的充分必要条件是：$ display(cases(k - 1 < 0, Delta = 4\(k + 1\)^2 - 4\(k - 1\)\(4 k - 4\)< 0)) arrow.r.double quad display(cases(k - 1 < 0, 3 k^2 - 10 k + 3 > 0)) $ #noindent;解集：$ lr(\{ k \| k < 1 \, thick 3 k^2 - 10 k + 3 > 0 \}) & = lr(\{ k #scale(x: 180%, y: 180%)[$\|$] k < 1 \, thick k < 1 / 3 \}) union.big \{ k\|k < 1\,thick k > 3 \}\
- & = lr(\{ k #scale(x: 180%, y: 180%)[$\|$] k < 1 / 3 \}) union.big nothing\
- & = lr(\{ k #scale(x: 180%, y: 180%)[$\|$] k < 1 / 3 \}) $
+抛物线在 $x$ 轴下方与 $x$ 轴没有交点的充分必要条件是：$ display(cases(k - 1 < 0, Delta = 4\(k + 1\)^2 - 4\(k - 1\)\(4 k - 4\)< 0)) arrow.r.double quad display(cases(k - 1 < 0, 3 k^2 - 10 k + 3 > 0)) $ #noindent;解集：$ lr(\{ k \| k < 1 \, thick 3 k^2 - 10 k + 3 > 0 \}) & = lr(\{ k class("normal", stretch(|, size: #1.8em)) k < 1 \, thick k < 1 / 3 \}) union.big \{ k\|k < 1\,thick k > 3 \}\
+ & = lr(\{ k class("normal", stretch(|, size: #1.8em)) k < 1 / 3 \}) union.big nothing\
+ & = lr(\{ k class("normal", stretch(|, size: #1.8em)) k < 1 / 3 \}) $
 
 ]
 #example[
@@ -1398,10 +1398,10 @@ $ y =\(x - 2\)^2 + 1 $
 
 由 (5.18) 得：$m < 1$⁠．
 
-因此，$m$ 的解集：$  & lr(\{ m #scale(x: 180%, y: 180%)[$\|$] - 3 lt.eq m lt.eq 2 \, thick m < - sqrt(33) / 3 \, thick m < 1 \})\
- & #h(2em) union.big lr(\{ m #scale(x: 180%, y: 180%)[$\|$] - 3 lt.eq m lt.eq 2 \, thick m > sqrt(33) / 3 \, thick m < 1 \})\
- & = lr(\{ m #scale(x: 180%, y: 180%)[$\|$] - 3 lt.eq m < - sqrt(33) / 3 \}) union.big nothing\
- & = lr(\{ m #scale(x: 180%, y: 180%)[$\|$] - 3 lt.eq m < - sqrt(33) / 3 \}) $ #noindent;故 $m$ 的值在 $- 3 lt.eq m < - sqrt(33) / 3$ 的范围内，可使方程 $x^2 + 2\(m - 1\)x + 3 m^2 - 11 = 0$ 有正实数根．
+因此，$m$ 的解集：$  & lr(\{ m class("normal", stretch(|, size: #1.8em)) - 3 lt.eq m lt.eq 2 \, thick m < - sqrt(33) / 3 \, thick m < 1 \})\
+ & #h(2em) union.big lr(\{ m class("normal", stretch(|, size: #1.8em)) - 3 lt.eq m lt.eq 2 \, thick m > sqrt(33) / 3 \, thick m < 1 \})\
+ & = lr(\{ m class("normal", stretch(|, size: #1.8em)) - 3 lt.eq m < - sqrt(33) / 3 \}) union.big nothing\
+ & = lr(\{ m class("normal", stretch(|, size: #1.8em)) - 3 lt.eq m < - sqrt(33) / 3 \}) $ #noindent;故 $m$ 的值在 $- 3 lt.eq m < - sqrt(33) / 3$ 的范围内，可使方程 $x^2 + 2\(m - 1\)x + 3 m^2 - 11 = 0$ 有正实数根．
 
 ]
 #example[
@@ -1411,7 +1411,7 @@ $ y =\(x - 2\)^2 + 1 $
 #solution[
 方程有两符号相反实根，即0在两根之间的充分必要条件是 $f\(0\)dot.op\(p - 3\)< 0$（图5.24）．即 $ 6 p\(p - 3\)< 0 $ #noindent;又 $- 3$ 小于最小实根，故需添上条件；$ f\(- 3\)\(p - 3\)> 0 $ #noindent;即：$\[9\(p - 3\)+ 6 p + 6 p\]\(p - 3\)> 0$⁠．化简得 $p < 1 2 / 7$ 或 $p > 3$
 
-因此原方程有两符号相反实根，且最小实根大于 $- 3$ 的等价条件是：$ display(cases(0 < p < 3, p < 1 2 / 7\,#h(2em) upright("或") #h(2em) p > 3)) $ #noindent;所以 $p$ 的解集：$lr(\{ p #scale(x: 180%, y: 180%)[$\|$] 0 < p < 1 2 / 7 \})$⁠．
+因此原方程有两符号相反实根，且最小实根大于 $- 3$ 的等价条件是：$ display(cases(0 < p < 3, p < 1 2 / 7\,#h(2em) upright("或") #h(2em) p > 3)) $ #noindent;所以 $p$ 的解集：$lr(\{ p class("normal", stretch(|, size: #1.8em)) 0 < p < 1 2 / 7 \})$⁠．
 
 #figure([#fig("5-39");
 

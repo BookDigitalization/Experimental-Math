@@ -2,7 +2,7 @@
 // 各册 main.typ 用 `#show: book.with(...)` 套用版式，正文中直接调用下面定义的函数。
 
 #import "@preview/cetz:0.5.3"
-#import "longdiv.typ": intlongdiv, polylongdiv
+#import "longdiv.typ": intlongdiv, declongdiv, polylongdiv
 
 // ---- 字体 ----
 // 西文与数学用 New Computer Modern（Typst 自带）；中文在 Windows 上用宋体、黑体、楷体，
@@ -308,7 +308,8 @@
   let b = trim-start(body)
   let f = first-content(b)
   if f != none and is-block(f) {
-    block(sticky: true, below: 0.56em, { unindent; strong(label) })
+    // 单独成段的标签：直接取消首行缩进（unindent 在这里会缩成负值，伸出版心）
+    block(sticky: true, below: 0.56em, { set par(first-line-indent: 0pt); strong(label) })
     b
   } else { unindent; strong(label); b }
 })
@@ -407,11 +408,13 @@
 #let tfrac(a, b) = math.inline([#math.frac(a, b)<tfrac>])
 
 // 带编号的方程组（对应 cases 宏包的 numcases）：左侧一个大括号，每行各占一个公式编号
-// labels 给出各行的标签（none 表示该行没有 \label），如 labels: (none, <eq2>)
-#let numcases(lhs, labels: (), ..rows) = {
+// labels 给出各行的标签（none 表示该行没有 \label），如 labels: (none, <eq2>)；
+// tags 给出各行的 \tag（该行印“(tag)”，不占编号），如 tags: ([2.2], none)
+#let numcases(lhs, labels: (), tags: (), ..rows) = {
   let rows = rows.pos()
   let n = rows.len()
   let labels = labels + (none,) * (n - labels.len())
+  let tags = tags + (none,) * (n - tags.len())
   let gutter = 0.7em
   let cells = rows.map(r => math.equation(block: false, numbering: none, math.display(r)))
   // 大括号的高度取各行实际高度之和，整组不跨页
@@ -423,7 +426,7 @@
       align: (x, y) => (right, right + horizon, left + horizon, right + horizon).at(x),
       grid.cell(rowspan: n, []),
       grid.cell(rowspan: n, $lhs lr(\{ #block(height: height) #h(0pt))$),
-      ..cells.zip(labels).map(((c, l)) => (c, eq-number(l))).flatten(),
+      ..cells.zip(labels, tags).map(((c, l, t)) => (c, if t != none [(#t)] else { eq-number(l) })).flatten(),
     )
   })
 }
@@ -478,7 +481,8 @@
       // 前言、目录等不编号的章没有节，奇数页也印章名（同 LaTeX 的 \@mkboth{目录}{目录}）
       let front = prev.len() > 0 and prev.last().numbering == none
       let sec-name = if sec == none { if front { name } else { [] } } else {
-        [第#chinese-number(counter(heading).at(sec.location()).at(1))节#h(1em)#sec.body]
+        // 按该节自己的编号格式（选学的节为 star-numbering，带“*”）
+        [#numbering(sec.numbering, ..counter(heading).at(sec.location()))#h(1em)#sec.body]
       }
       set text(size: 9pt)
       set par(first-line-indent: 0pt)
@@ -527,6 +531,8 @@
   show figure.where(kind: table): set figure.caption(position: top)
   // 方程组各行的间距（LaTeX 的 cases 比 Typst 默认宽松）
   set math.cases(gap: 0.6em)
+  // 行内的矩阵、行列式：Typst 把元素排成脚标大小，LaTeX 的元素与正文同大
+  show math.mat: it => math.display(it)
   // 宽于版心的独立公式缩小到版心宽度（LaTeX 版中这些公式排得下）
   // 独立公式上下的间距（LaTeX 的 \abovedisplayskip、\belowdisplayskip）。套在 fit-width 外面，
   // 否则公式在 fit-width 的 layout 里，自身的间距在容器边上被吞掉

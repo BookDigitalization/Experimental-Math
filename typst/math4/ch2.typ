@@ -22,15 +22,15 @@
 #solution[
 $\(2.1\)times 1 / 3$ 得
 
-#numcases($$, $x + 5 / 3 y = 11 / 3$, $4 x - 3 y = 5 #h(2em) upright("(2.2)")$);
+#numcases($$, $x + 5 / 3 y = 11 / 3$, $4 x - 3 y = 5$, tags: (none, [2.2],));
 
 #noindent; $\(2.2\)-\(2.3\)times 4$ 得
 
-#numcases($$, $x + 5 / 3 y = 11 / 3 #h(2em) upright("(2.3)")$, $- 29 / 3 y = - 29 / 3$);
+#numcases($$, $x + 5 / 3 y = 11 / 3$, $- 29 / 3 y = - 29 / 3$, tags: ([2.3], none,));
 
 #noindent; $\(2.4\)times (- 3 / 29)$ 得
 
-#numcases($$, $x + 5 / 3 y = 11 / 3 #h(2em) upright("(2.3)")$, $y = 1$);
+#numcases($$, $x + 5 / 3 y = 11 / 3$, $y = 1$, tags: ([2.3], none,));
 
 #noindent; (2.5) 代入 (2.3) 得：$display(cases(x = 2, y = 1))$ 所以原方程组的解集为 $\{\(x\,y\)\} = \{\(2\,1\)\}$⁠．
 
@@ -44,19 +44,19 @@ $\(2.1\)times 1 / 3$ 得
 #solution[
 先将 (2.6)、(2.7) 互换，得
 
-#numcases($$, $x - 3 y + 2 z = 3 #h(2em) upright("(2.7)")$, $3 x + 7 y - 5 z = 19 #h(2em) upright("(2.6)")$, $5 x - 11 y - 8 z = - 13 #h(2em) upright("(2.8)")$);
+#numcases($$, $x - 3 y + 2 z = 3$, $3 x + 7 y - 5 z = 19$, $5 x - 11 y - 8 z = - 13$, tags: ([2.7], [2.6], [2.8],));
 
 #noindent; $\(2.6\)-\(2.7\)times 3$ 且 $\(2.8\)-\(2.7\)times 5$⁠，得
 
-#numcases($$, $x - 3 y + 2 z = 3 #h(2em) upright("(2.7)")$, $16 y - 11 z = 10$, $4 y - 18 z = - 28$);
+#numcases($$, $x - 3 y + 2 z = 3$, $16 y - 11 z = 10$, $4 y - 18 z = - 28$, tags: ([2.7], none, none,));
 
 #noindent; $\(2.10\)times 1 / 4$ 后，再与 (2.9) 互换，得
 
-#numcases($$, $x - 3 y + 2 z = 3 #h(2em) upright("(2.7)")$, $y - 9 / 2 z = - 7$, $16 y - 11 z = 10 #h(2em) upright("(2.9)")$);
+#numcases($$, $x - 3 y + 2 z = 3$, $y - 9 / 2 z = - 7$, $16 y - 11 z = 10$, tags: ([2.7], none, [2.9],));
 
 #noindent; $\(2.9\)-\(2.11\)times 16$ 后，再乘以 $1 / 61$⁠，得
 
-#numcases($$, $x - 3 y + 2 z = 3 #h(2em) upright("(2.7)")$, $y - 9 / 2 z = - 7 #h(2em) upright("(2.11)")$, $z = 2$);
+#numcases($$, $x - 3 y + 2 z = 3$, $y - 9 / 2 z = - 7$, $z = 2$, tags: ([2.7], [2.11], none,));
 
 #noindent; (2.12) 代入 (2.11)，再代入 (2.7)，整理可得：$ display(cases(x = 5, y = 2, z = 2)) $ #noindent;所以原方程组的解集为 $\{\(x\,y\,z\)\} = \{\(5\,2\,2\)\}$⁠．
 
@@ -140,7 +140,7 @@ $ upright("原方程组") & arrow.r.double display(cases(quad x + 4 y + 7 z = 0,
 
 #noindent;再将 (2.18) 变形后，可得
 
-#numcases($$, $x + b_1 / a_1 y = c_1 / a_1 #h(2em) upright("(2.17)")$, $\(a_1 b_2 - a_2 b_1\)y = a_1 c_2 - a_2 c_1$);
+#numcases($$, $x + b_1 / a_1 y = c_1 / a_1$, $\(a_1 b_2 - a_2 b_1\)y = a_1 c_2 - a_2 c_1$, tags: ([2.17], none,));
 
 #noindent;由方程出发，可分别讨论如下：
 
@@ -268,7 +268,7 @@ a_2 = a + b\,quad b_2 = a - b\,quad c_2 = 2\(a^2 + b^2\) $ #noindent;则$ a_1 b_
 分析公式 (2.22) 可以看出，两个分母都是 $a_1 b_2 - a_2 b_1$, 其中只含有未知数的系数．如果把方程组 (I) 中未知数的系数分离出来，按照它们原有的位置排列成一个正方形，即
 
 #align(center)[
-#fig("2-01");
+#text(size: 1.371em, fig("2-01"));
 
 ]
 #noindent;那么可以看到 $a_1 b_2 - a_2 b_1$ 是这样两项的和：一项是正方形中实线所示的对角线（称为主对角线）上两个数的积，取正号；另一项是正方形中虚线所示的对角线（称为副对角线）上两个数的积，取负号．
@@ -444,7 +444,7 @@ D_y & = mat(delim: "|", m, m + 1; 1, 2 m) = 2 m^2 -\(m + 1\)=\(2 m + 1\)\(m - 1\
 
 == 三阶行列式与三元线性方程组
 === 三阶行列式
-仿照二阶行列式，我们可以把九个数排成三行三列的正方形，并在两侧各加一竖直线．如#numbered-eq($ mat(delim: "|", a_1, b_1, c_1; a_2, b_2, c_2; a_3, b_3, c_3; #none) $);#noindent;并规定它表示一个数#numbered-eq($ a_1 b_2 c_3 + a_2 b_3 c_1 + a_3 b_1 c_2 - a_3 b_2 c_1 - a_2 b_1 c_3 - a_1 b_3 c_2 $);
+仿照二阶行列式，我们可以把九个数排成三行三列的正方形，并在两侧各加一竖直线．如#numbered-eq($ mat(delim: "|", a_1, b_1, c_1; a_2, b_2, c_2; a_3, b_3, c_3) $);#noindent;并规定它表示一个数#numbered-eq($ a_1 b_2 c_3 + a_2 b_3 c_1 + a_3 b_1 c_2 - a_3 b_2 c_1 - a_2 b_1 c_3 - a_1 b_3 c_2 $);
 
 这时我们就把 (2.24) 叫做一个三阶行列式，(2.25) 式就叫做这个三阶行列式的展开式（或这三阶行列式的值．）
 
@@ -470,10 +470,8 @@ D_y & = mat(delim: "|", m, m + 1; 1, 2 m) = 2 m^2 -\(m + 1\)=\(2 m + 1\)\(m - 1\
 ]
 #solution[
 由对角线法则可得：$ mat(delim: "|", 1, 3, 5; 2, 4, 8; 3, 0, - 1) & = 1 dot.op 4 dot.op\(- 1\)+ 2 dot.op 0 dot.op 5 + 3 dot.op 3 dot.op 8 - 3 dot.op 4 dot.op 5 - 2 dot.op 3 dot.op\(- 1\)- 1 dot.op 0 dot.op 8\
- & = - 4 + 0 + 72 - 60 + 6 - 0 = 14\
-mat(delim: "|", 2, - 3, 1; 4, - 1, 7; - 1, 5, 2) & = 2 dot.op\(- 1\)dot.op 2 + 4 dot.op 5 dot.op 1 +\(- 1\)dot.op\(- 3\)dot.op 7 -\(- 1\)dot.op\(- 1\)dot.op 1 - 4 dot.op\(- 3\)dot.op 2 - 2 dot.op 5 dot.op 7\
- & = - 4 + 20 + 21 - 1 + 24 - 70 = - 10\
-mat(delim: "|", x, y, z; z, x, y; y, z, x) = x^3 + y^3 + z^3 - 3 x y z $
+ & = - 4 + 0 + 72 - 60 + 6 - 0 = 14 $ $ mat(delim: "|", 2, - 3, 1; 4, - 1, 7; - 1, 5, 2) & = 2 dot.op\(- 1\)dot.op 2 + 4 dot.op 5 dot.op 1 +\(- 1\)dot.op\(- 3\)dot.op 7 -\(- 1\)dot.op\(- 1\)dot.op 1 - 4 dot.op\(- 3\)dot.op 2 - 2 dot.op 5 dot.op 7\
+ & = - 4 + 20 + 21 - 1 + 24 - 70 = - 10 $ $ mat(delim: "|", x, y, z; z, x, y; y, z, x) = x^3 + y^3 + z^3 - 3 x y z $
 
 ]
 #exercise[
@@ -574,11 +572,11 @@ Delta' & = a_1 b_2 c_3 + a_2 b_3 c_1 + a_3 b_1 c_2 - a_3 b_2 c_1 - a_2 b_1 c_3 -
 
 ]
 #example[
-计算行列式$Delta = mat(delim: "|", a, a + 1, a + 2; b, b + 1, b + 2; c, c + 1, c + 2; #none)$的值．
+计算行列式$Delta = mat(delim: "|", a, a + 1, a + 2; b, b + 1, b + 2; c, c + 1, c + 2)$的值．
 
 ]
 #solution[
-由定理8可知 $ Delta = mat(delim: "|", a, a, a; b, b, b; c, c, c; #none) + mat(delim: "|", a, a, 2; b, b, 2; c, c, 2; #none) + mat(delim: "|", a, 1, a; b, 1, b; c, 1, c; #none) + mat(delim: "|", a, 1, 2; b, 1, 2; c, 1, 2; #none) $ #noindent;又由定理3可知，前三个行列式的值均为零，而由定理7可知，第四个行列式的值也为零．所以，$Delta = 0$⁠．
+由定理8可知 $ Delta = mat(delim: "|", a, a, a; b, b, b; c, c, c) + mat(delim: "|", a, a, 2; b, b, 2; c, c, 2) + mat(delim: "|", a, 1, a; b, 1, b; c, 1, c) + mat(delim: "|", a, 1, 2; b, 1, 2; c, 1, 2) $ #noindent;又由定理3可知，前三个行列式的值均为零，而由定理7可知，第四个行列式的值也为零．所以，$Delta = 0$⁠．
 
 ]
 #example[
@@ -670,8 +668,7 @@ Delta' & = a_1 b_2 c_3 + a_2 b_3 c_1 + a_3 b_1 c_2 - a_3 b_2 c_1 - a_2 b_1 c_3 -
 $ A_11 & =\(- 1\)^(1 + 1) mat(delim: "|", 9, 0; 3, 7) = 63\
 A_12 & =\(- 1\)^(1 + 2) mat(delim: "|", 8, 0; - 2, 7) = - 56\
 A_13 & =\(- 1\)^(1 + 3) mat(delim: "|", 8, 9; - 2, 3) = 42\
-A_21 & =\(- 1\)^(2 + 1) mat(delim: "|", 2, 5; 3, 7) = 1\
-A_22 & =\(- 1\)^(2 + 2) mat(delim: "|", 1, 5; - 2, 7) = 17\
+A_21 & =\(- 1\)^(2 + 1) mat(delim: "|", 2, 5; 3, 7) = 1 $ $ A_22 & =\(- 1\)^(2 + 2) mat(delim: "|", 1, 5; - 2, 7) = 17\
 A_23 & =\(- 1\)^(2 + 3) mat(delim: "|", 1, 2; - 2, 3) = - 7\
 A_31 & =\(- 1\)^(3 + 1) mat(delim: "|", 2, 5; 9, 0) = - 45\
 A_32 & =\(- 1\)^(3 + 2) mat(delim: "|", 1, 5; 8, 0) = 40\
@@ -720,8 +717,7 @@ A_33 & =\(- 1\)^(3 + 3) mat(delim: "|", 1, 2; 8, 9) = - 7 $
 综合定理10、定理11的内容，我们可以得到三阶行列式的一个重要等式，这就是 $ a_(i 1) A_(k 1) + a_(i 2) A_(k 2) + a_(i 3) A_(k 3) = display(cases(Delta & quad i = k, 0 & quad i eq.not k)) $ #noindent;以及 $ a_(1 j) A_(1 k) + a_(2 j) A_(2 k) + a_(3 j) A_(3 k) = display(cases(Delta & quad j = k, 0 & quad j eq.not k)) $ #noindent;这些重要等式，将在三元线性方程组的求解公式中起重要作用．
 
 #exercise[
-+ 试应用定理9、10，计算下列行列式 $ mat(delim: "|", 2, 1, 3; 5, 0, 7; 4, - 3, - 2) #h(2em) mat(delim: "|", 5, 0, - 5; 3, 2, 7; - 4, 3, 9)\
-  mat(delim: "|", - 6, 5, 2; 2, 1, - 2; 2, 7, 4) #h(2em) mat(delim: "|", 2, 6, 7; - 3, 8, 8; - 5, 2, 3) #h(2em) mat(delim: "|", 1, x, y; x, y, 1; y, 1, x) $
++ 试应用定理9、10，计算下列行列式 $ mat(delim: "|", 2, 1, 3; 5, 0, 7; 4, - 3, - 2) #h(2em) mat(delim: "|", 5, 0, - 5; 3, 2, 7; - 4, 3, 9) $ $ mat(delim: "|", - 6, 5, 2; 2, 1, - 2; 2, 7, 4) #h(2em) mat(delim: "|", 2, 6, 7; - 3, 8, 8; - 5, 2, 3) #h(2em) mat(delim: "|", 1, x, y; x, y, 1; y, 1, x) $
 
 + 解下列方程 $ mat(delim: "|", 2, x + 2, 6; 1, x, 3; 1, 3, x) = 0\,#h(2em) mat(delim: "|", a, a, x; 1, 1, 1; b, x, b) = 0 $
 
@@ -739,19 +735,19 @@ A_33 & =\(- 1\)^(3 + 3) mat(delim: "|", 1, 2; 8, 9) = - 7 $
 
 #numcases($\(upright("II")\)$, $a_11 x_1 + a_12 x_2 + a_13 x_3 = b_1$, $a_21 x_1 + a_22 x_2 + a_23 x_3 = b_2$, $a_31 x_1 + a_32 x_2 + a_33 x_3 = b_3$);
 
-#noindent;这时，我们仍称三阶行列式 $ Delta = mat(delim: "|", a_11, a_12, a_13; a_21, a_22, a_23; a_31, a_32, a_33; #none) $ #noindent;为方程组 (II) 的系数行列式，并把这个行列式中各个元素 $a_(i j)$ 的代数余子式表为 $A_(i j)$⁠．
+#noindent;这时，我们仍称三阶行列式 $ Delta = mat(delim: "|", a_11, a_12, a_13; a_21, a_22, a_23; a_31, a_32, a_33) $ #noindent;为方程组 (II) 的系数行列式，并把这个行列式中各个元素 $a_(i j)$ 的代数余子式表为 $A_(i j)$⁠．
 
 利用关于行列式性质的定理10、定理11，可以导出方程组 (II) 的解：
 
 分别以 $A_11$⁠、$A_21$⁠、$A_31$⁠、乘以方程 (2.26), (2.27), (2.28), 得 $ display(cases(a_11 A_11 x_1 + a_12 A_11 x_2 + a_13 A_11 x_3 = b_1 A_11, a_21 A_21 x_1 + a_22 A_21 x_2 + a_23 A_21 x_3 = b_2 A_21, a_31 A_31 x_1 + a_32 A_31 x_2 + a_33 A_31 x_3 = b_3 A_31)) $ #noindent;再将三式相加，得 $  & \(a_11 A_11 + a_21 A_21 + a_31 A_31\)x_1 +\(a_12 A_11 + a_22 A_21 + a_32 A_31\)x_2\
  & #h(2em) +\(a_13 A_11 + a_23 A_21 + a_33 A_31\)x_3\
- & = b_1 A_11 + b_2 A_21 + b_3 A_31 $ #noindent;显然，这个等式的右边，正好是一个三阶行列式 $ Delta_1 = mat(delim: "|", b_1, a_12, a_13; b_2, a_22, a_23; b_3, a_32, a_33; #none) $ #noindent;的展开式，而这个行列式就是在 $Delta$ 中以方程组右端的常数代替同一方程中 $x_1$ 的系数而得出的．在这个等式的左边，由定理10及11可知：$ a_11 A_11 + a_21 A_21 + a_31 A_31 & = Delta\
+ & = b_1 A_11 + b_2 A_21 + b_3 A_31 $ #noindent;显然，这个等式的右边，正好是一个三阶行列式 $ Delta_1 = mat(delim: "|", b_1, a_12, a_13; b_2, a_22, a_23; b_3, a_32, a_33) $ #noindent;的展开式，而这个行列式就是在 $Delta$ 中以方程组右端的常数代替同一方程中 $x_1$ 的系数而得出的．在这个等式的左边，由定理10及11可知：$ a_11 A_11 + a_21 A_21 + a_31 A_31 & = Delta\
 a_12 A_11 + a_22 A_21 + a_32 A_31 & = 0\
 a_13 A_11 + a_23 A_21 + a_33 A_31 & = 0 $ #noindent;从而，上面的等式就可写成：$Delta dot.op x_1 = Delta_1$
 
-同理，用 $A_12$, $A_22$, $A_32$ 分别乘以第一、二、三个方程，然后相加，并设 $ Delta_2 = mat(delim: "|", a_11, b_1, a_13; a_21, b_2, a_23; a_31, b_3, a_33; #none) $ #noindent;可得：$Delta dot.op x_2 = Delta_2$
+同理，用 $A_12$, $A_22$, $A_32$ 分别乘以第一、二、三个方程，然后相加，并设 $ Delta_2 = mat(delim: "|", a_11, b_1, a_13; a_21, b_2, a_23; a_31, b_3, a_33) $ #noindent;可得：$Delta dot.op x_2 = Delta_2$
 
-用 $A_13$, $A_23$, $A_33$ 分别乘以第一、二、三个方程，然后相加，并设 $ Delta_3 = mat(delim: "|", a_11, a_12, b_1; a_21, a_22, b_2; a_31, a_32, b_3; #none) $ #noindent;可得：$Delta dot.op x_3 = Delta_3$
+用 $A_13$, $A_23$, $A_33$ 分别乘以第一、二、三个方程，然后相加，并设 $ Delta_3 = mat(delim: "|", a_11, a_12, b_1; a_21, a_22, b_2; a_31, a_32, b_3) $ #noindent;可得：$Delta dot.op x_3 = Delta_3$
 
 因此，便得到一个新的方程组 $ upright("(III)") display(cases(Delta dot.op x_1 = Delta_1, Delta dot.op x_2 = Delta_2, Delta dot.op x_3 = Delta_3)) $
 
@@ -761,7 +757,7 @@ a_13 A_11 + a_23 A_21 + a_33 A_31 & = 0 $ #noindent;从而，上面的等式就�
 
 一、若 $Delta eq.not 0$⁠，则方程组 (III) 有唯一解#numbered-eq($ display(cases(x_1 = Delta_1\/Delta, x_2 = Delta_2\/Delta, x_3 = Delta_3\/Delta)) $);#noindent;可以证明，(2.29) 也是方程组 (II) 的解；将 (2.29) 代入方程组 (II) 的方程 (2.26), 得
 
-#numbered-align(($upright("左边")$, $eqph = a_11 Delta_1 / Delta + a_12 Delta_2 / Delta + a_13 Delta_3 / Delta$, false), ($$, $eqph = 1 / Delta (a_11 Delta_1 + a_12 Delta_2 + a_13 Delta_3)$, false), ($$, $eqph = 1 / Delta #scale(x: 120%, y: 120%)[$\[$] a_11\(b_1 A_11 + b_2 A_21 + b_3 A_31\)+ a_12\(b_1 A_12 + b_2 A_22 + b_3 A_32\)$, false), ($$, $#h(2em) #h(2em) + a_13\(b_1 A_13 + b_2 A_23 + b_3 A_33\)#scale(x: 120%, y: 120%)[$\]$]$, false), ($$, $eqph = 1 / Delta #scale(x: 120%, y: 120%)[$\[$] b_1\(a_11 A_11 + a_12 A_12 + a_13 A_13\)+ b_2\(a_11 A_21 + a_12 A_22 + a_13 A_23\)$, false), ($$, $#h(2em) #h(2em) + b_3\(a_11 A_31 + a_12 A_32 + a_13 A_33\)#scale(x: 120%, y: 120%)[$\]$]$, false), ($$, $eqph = 1 / Delta #scale(x: 120%, y: 120%)[$\[$] b_1 Delta + b_2 0 + b_3 0 #scale(x: 120%, y: 120%)[$\]$]$, [(定理10, 11)]), ($$, $eqph = b_1 = upright("右边")$, false));
+#numbered-align(($upright("左边")$, $eqph = a_11 Delta_1 / Delta + a_12 Delta_2 / Delta + a_13 Delta_3 / Delta$, false), ($$, $eqph = 1 / Delta (a_11 Delta_1 + a_12 Delta_2 + a_13 Delta_3)$, false), ($$, $eqph = 1 / Delta class("opening", stretch(\[, size: #1.2em)) a_11\(b_1 A_11 + b_2 A_21 + b_3 A_31\)+ a_12\(b_1 A_12 + b_2 A_22 + b_3 A_32\)$, false), ($$, $#h(2em) #h(2em) + a_13\(b_1 A_13 + b_2 A_23 + b_3 A_33\)class("closing", stretch(\], size: #1.2em))$, false), ($$, $eqph = 1 / Delta class("opening", stretch(\[, size: #1.2em)) b_1\(a_11 A_11 + a_12 A_12 + a_13 A_13\)+ b_2\(a_11 A_21 + a_12 A_22 + a_13 A_23\)$, false), ($$, $#h(2em) #h(2em) + b_3\(a_11 A_31 + a_12 A_32 + a_13 A_33\)class("closing", stretch(\], size: #1.2em))$, false), ($$, $eqph = 1 / Delta class("opening", stretch(\[, size: #1.2em)) b_1 Delta + b_2 0 + b_3 0 class("closing", stretch(\], size: #1.2em))$, [(定理10, 11)]), ($$, $eqph = b_1 = upright("右边")$, false));
 
 这就是说，满足方程组 (II) 的方程 (2.26); 同理可以证明 (2.29) 也是满足方程组 (II) 的方程 (2.27) 与 (2.28). 因此，(2.29) 是方程组 (II) 的一个解．
 
@@ -812,7 +808,7 @@ Delta_3 & = mat(delim: "|", 3, 7, 19; 1, - 3, 3; 5, - 11, - 13) = 488 $ #noinden
 #solution[
 可以算出 $Delta = Delta_1 = Delta_2 = Delta_3 = 0$⁠，同时还可看出，方程组中第二个方程两边乘以2后与第一个方程相加正好是第三个方程．这说明原方程组的三个方程只有两个是独立的．事实上，凡满足第一、二两个方程的解，一定也满足第三个方程．因而，原方程组可以改写成 $ display(cases(3 x - y + 5 z = 16, x + 2 y + 3 z = 14)) arrow.r.double quad display(cases(3 x - y = 16 - 5 z, x + 2 y = 14 - 3 z)) $ #noindent;把未知数 $z$ 看作参数（可任意取值），令 $z = t$, 进一步解二元线性方程组 $ display(cases(3 x - y = 16 - 5 t, x + 2 y = 14 - 3 t)) $ #noindent;得出：$ x = 1 / 7\(46 - 13 t\)\,#h(2em) y = 1 / 7\(26 - 4 t\)\,#h(2em) z = t $
 
-由于 $t$ 的任意性，因而原方程组有无限多个解，其解集可以表为 $ lr(\{ \( x \, y \, z \) \}) = lr(\{ (frac(46 - 13 t, 7) \, frac(26 - 4 t, 7) \, t) #scale(x: 180%, y: 180%)[$\|$] t upright("为任意值") \}) $
+由于 $t$ 的任意性，因而原方程组有无限多个解，其解集可以表为 $ lr(\{ \( x \, y \, z \) \}) = lr(\{ (frac(46 - 13 t, 7) \, frac(26 - 4 t, 7) \, t) class("normal", stretch(|, size: #1.8em)) t upright("为任意值") \}) $
 
 ]
 应该指出，这个方程组的解的形式不是唯一的，同样可以将 $y$ 或 $x$ 看作参数，得出另外两种解的表达形式，但实际效果是相同的，即解集是相等的．
@@ -973,7 +969,7 @@ Delta_3 & = mat(delim: "|", 3, 7, 19; 1, - 3, 3; 5, - 11, - 13) = 488 $ #noinden
 
 二阶行列式：$mat(delim: "|", a_1, b_1; a_2, b_2) = a_1 b_2 - a_2 b_1$
 
-三阶行列式：$mat(delim: "|", a_1, b_1, c_1; a_2, b_2, c_2; a_3, b_3, c_3; #none) = a_1 b_2 c_3 + a_2 b_3 c_1 + a_3 b_1 c_2 - a_3 b_2 c_1 - a_2 b_1 c_3 - a_1 b_3 c_2$
+三阶行列式：$mat(delim: "|", a_1, b_1, c_1; a_2, b_2, c_2; a_3, b_3, c_3) = a_1 b_2 c_3 + a_2 b_3 c_1 + a_3 b_1 c_2 - a_3 b_2 c_1 - a_2 b_1 c_3 - a_1 b_3 c_2$
 
 这样看来，对于四阶行列式，甚至更高阶的行列式的定义就会越来越繁，需要另辟新的途径．
 
@@ -983,8 +979,8 @@ Delta_3 & = mat(delim: "|", 3, 7, 19; 1, - 3, 3; 5, - 11, - 13) = 488 $ #noinden
 
 由于二阶行列式已有确定定义，因而三阶行列式也就完全可用上述等式右边的式子来定义，这样定义的结果和曾经有的对角线法则定义是一致的．而这种用低一阶的行列式来定义高一阶行列式的方法更有普遍性．
 
-仿照这样，我们可以用三阶行列式来给出四阶行列式的定义：用四个三阶行列式分别与四个数相乘积的代数和，就叫做一个四阶行列式．即 $ mat(delim: "|", a_11, a_12, a_13, a_14; a_21, a_22, a_23, a_24; a_31, a_32, a_33, a_34; a_41, a_42, a_43, a_44; #none) & =\(- 1\)^(1 + 1) dot.op a_11 mat(delim: "|", a_22, a_23, a_24; a_32, a_33, a_34; a_42, a_43, a_44; #none) +\(- 1\)^(2 + 1) dot.op a_21 mat(delim: "|", a_12, a_13, a_14; a_32, a_33, a_34; a_42, a_43, a_44; #none)\
- & +\(- 1\)^(3 + 1) a_31 mat(delim: "|", a_12, a_13, a_14; a_22, a_23, a_24; a_42, a_43, a_44; #none) +\(- 1\)^(4 + 1) dot.op a_41 mat(delim: "|", a_12, a_13, a_14; a_22, a_23, a_24; a_32, a_33, a_34; #none) $
+仿照这样，我们可以用三阶行列式来给出四阶行列式的定义：用四个三阶行列式分别与四个数相乘积的代数和，就叫做一个四阶行列式．即 $ mat(delim: "|", a_11, a_12, a_13, a_14; a_21, a_22, a_23, a_24; a_31, a_32, a_33, a_34; a_41, a_42, a_43, a_44) & =\(- 1\)^(1 + 1) dot.op a_11 mat(delim: "|", a_22, a_23, a_24; a_32, a_33, a_34; a_42, a_43, a_44) +\(- 1\)^(2 + 1) dot.op a_21 mat(delim: "|", a_12, a_13, a_14; a_32, a_33, a_34; a_42, a_43, a_44)\
+ & +\(- 1\)^(3 + 1) a_31 mat(delim: "|", a_12, a_13, a_14; a_22, a_23, a_24; a_42, a_43, a_44) +\(- 1\)^(4 + 1) dot.op a_41 mat(delim: "|", a_12, a_13, a_14; a_22, a_23, a_24; a_32, a_33, a_34) $
 
 由每个三阶行列式有6项，每一项是三个元素的乘积，可知四阶行列式有24项，每一项是四个元素的乘积．在每一项的四个元素中，各行都有一个元素且只有一个元素出现，各列也都有一个元素且仅有一个元素出现．
 
@@ -997,7 +993,7 @@ Delta_3 & = mat(delim: "|", 3, 7, 19; 1, - 3, 3; 5, - 11, - 13) = 488 $ #noinden
 
 ]
 #solution[
-按照四阶行列式的定义 $ Delta & = 1 mat(delim: "|", - 1, 3, 4; 5, 1, 7; 0, 0, 3) - 2 mat(delim: "|", 2, 0, 0; 5, 1, 7; 0, 0, 3) + 0 -\(- 1\)mat(delim: "|", 2, 0, 0; - 1, 3, 4; 5, 1, 7; #none)\
+按照四阶行列式的定义 $ Delta & = 1 mat(delim: "|", - 1, 3, 4; 5, 1, 7; 0, 0, 3) - 2 mat(delim: "|", 2, 0, 0; 5, 1, 7; 0, 0, 3) + 0 -\(- 1\)mat(delim: "|", 2, 0, 0; - 1, 3, 4; 5, 1, 7)\
  & = - 48 - 12 + 34 = - 26 $
 
 ]
@@ -1060,7 +1056,7 @@ Delta_3 & = mat(delim: "|", 3, 7, 19; 1, - 3, 3; 5, - 11, - 13) = 488 $ #noinden
 
 ]
 #proof[
-设四阶行列式 $Delta =\|a_(i j)\|$ $\(i = 1\,2\,3\,4\;thick j = 1\,2\,3\,4\)$⁠，并设 $Delta$ 的第 $i$ 行的所有元素都乘以 $k$ 就得到行列式 $Delta'$⁠，我们要证明 $ Delta' = k dot.op Delta $ #noindent;由于 $ Delta = mat(delim: "|", \|, \|, \|, \|; a_(i 1), a_(i 2), a_(i 3), a_(i 4); \|, \|, \|, \|; #none)\,#h(2em) Delta' = mat(delim: "|", \|, \|, \|, \|; k a_(i 1), k a_(i 2), k a_(i 3), k a_(i 4); \|, \|, \|, \|; #none) $ #noindent;并且将这两个行列式都按第 $i$ 行展开，根据定理10可得 $ Delta & = a_(i 1) A_(i 1) + a_(i 2) A_(i 2) + a_(i 3) A_(i 3) + a_(i 4) A_(i 4)\
+设四阶行列式 $Delta =\|a_(i j)\|$ $\(i = 1\,2\,3\,4\;thick j = 1\,2\,3\,4\)$⁠，并设 $Delta$ 的第 $i$ 行的所有元素都乘以 $k$ 就得到行列式 $Delta'$⁠，我们要证明 $ Delta' = k dot.op Delta $ #noindent;由于 $ Delta = mat(delim: "|", \|, \|, \|, \|; a_(i 1), a_(i 2), a_(i 3), a_(i 4); \|, \|, \|, \|)\,#h(2em) Delta' = mat(delim: "|", \|, \|, \|, \|; k a_(i 1), k a_(i 2), k a_(i 3), k a_(i 4); \|, \|, \|, \|) $ #noindent;并且将这两个行列式都按第 $i$ 行展开，根据定理10可得 $ Delta & = a_(i 1) A_(i 1) + a_(i 2) A_(i 2) + a_(i 3) A_(i 3) + a_(i 4) A_(i 4)\
 Delta' & = k a_(i 1) A_(i 1) + k a_(i 2) A_(i 2) + k a_(i 3) A_(i 3) + k a_(i 4) A_(i 4)\
  & = k\(a_(i 1) A_(i 1) + a_(i 2) A_(i 2) + a_(i 3) A_(i 3) + a_(i 4) A_(i 4)\)\
  & = k Delta $ #noindent;利用行列式的性质，可以有效的简化计算．
@@ -1133,7 +1129,7 @@ Delta' & = k a_(i 1) A_(i 1) + k a_(i 2) A_(i 2) + k a_(i 3) A_(i 3) + k a_(i 4)
 ]
 #solution[
 先计算系数行列式 $Delta$ 及 $Delta_j$⁠：$ Delta & = mat(delim: "|", 1, 1, 1, 1, 1; 0, 1, 2, 0, 1; 1, 0, 1, 0, 1; 1, 0, 0, 0, 2; 2, 1, 0, 0, 1) = - mat(delim: "|", 0, 1, 2, 1; 1, 0, 1, 1; 1, 0, 0, 2; 2, 1, 0, 1) = - mat(delim: "|", 0, 1, 2, 1; 1, 0, 1, 1; 1, 0, 0, 2; 2, 0, - 2, 0)\
- & = mat(delim: "|", 1, 1, 1; 1, 0, 2; 2, - 2, 0) = mat(delim: "|", 1, 1, 1; - 1, - 2, 0; 2, - 2, 0) = mat(delim: "|", - 1, - 2; 2, - 2) = 6 $ #noindent;$ Delta_1 = 6\,#h(2em) Delta_2 = 0\,#h(2em) Delta_3 = 6\,#h(2em) Delta_4 = 0\,#h(2em) Delta_5 = 6 $ #noindent;所以原方程组的解集为 $ \{\(x_1\,x_2\,x_3\,x_4\,x_5\)\} = \{\(1\,0\,1\,0\,1\)\} $
+ & = mat(delim: "|", 1, 1, 1; 1, 0, 2; 2, - 2, 0) = mat(delim: "|", 1, 1, 1; - 1, - 2, 0; 2, - 2, 0) = mat(delim: "|", - 1, - 2; 2, - 2) = 6 $ $ Delta_1 = 6\,#h(2em) Delta_2 = 0\,#h(2em) Delta_3 = 6\,#h(2em) Delta_4 = 0\,#h(2em) Delta_5 = 6 $ #noindent;所以原方程组的解集为 $ \{\(x_1\,x_2\,x_3\,x_4\,x_5\)\} = \{\(1\,0\,1\,0\,1\)\} $
 
 ]
 #exercise[
@@ -1233,7 +1229,7 @@ Delta' & = k a_(i 1) A_(i 1) + k a_(i 2) A_(i 2) + k a_(i 3) A_(i 3) + k a_(i 4)
 #solution[
 先解由 (2.40)，(2.41)，(2.42) 组成的方程组，得 $ \(x\,y\,z\)= (t \, t - 3 / 7 \, t - 6 / 7) $ #noindent;其中 $t$ 为参数．
 
-再将 $\(x\,y\,z\)= (t \, t - 3 / 7 \, t - 6 / 7)$ 代入 (2.43), 得 $ 4 t - t + 3 / 7 - 3 t + 18 / 7 = 3 quad arrow.r.double quad 0 t = 0 $ #noindent;这就是说，$t$ 为任意数时，$\(x\,y\,z\)$ 满足 (2.43), 因此，原方程组的解集为 $ \{\(x\,y\,z\)\} = lr(\{ (t \, t - 3 / 7 \, t - 6 / 7) #scale(x: 120%, y: 120%)[$\|$] t upright("为任意数") \}) $
+再将 $\(x\,y\,z\)= (t \, t - 3 / 7 \, t - 6 / 7)$ 代入 (2.43), 得 $ 4 t - t + 3 / 7 - 3 t + 18 / 7 = 3 quad arrow.r.double quad 0 t = 0 $ #noindent;这就是说，$t$ 为任意数时，$\(x\,y\,z\)$ 满足 (2.43), 因此，原方程组的解集为 $ \{\(x\,y\,z\)\} = lr(\{ (t \, t - 3 / 7 \, t - 6 / 7) class("normal", stretch(|, size: #1.2em)) t upright("为任意数") \}) $
 
 ]
 综上所述，对于方程的个数多于未知数个数的线性方程组求解，一般地可以先取与未知数个数相等的几个方程组成“部分方程组”求解，再作以下几种情形的解决：
@@ -1282,7 +1278,7 @@ Delta' & = k a_(i 1) A_(i 1) + k a_(i 2) A_(i 2) + k a_(i 3) A_(i 3) + k a_(i 4)
 #solution[
 注意到由未知数 $x\,y$ 的系数作成的二阶行列式 $ mat(delim: "|", 1, 2; 1, 7) eq.not 0 $
 
-我们就把含 $z$ 的项移到等号右边，把方程组看成是两个未知数 $x\,y$ 的二元一次方程组 $ display(cases(x + 2 y = 6 - 3 z, x + 7 y = 7 - 4 z)) $ #noindent;解得 $ x = 1 / 5\(28 - 13 z\)\,#h(2em) y = 1 / 5\(1 - z\) $ #noindent;令 $z = t$⁠，（$t$ 为参数）则方程组的解集是 $ \{\(x\,y\,z\)\} = lr(\{ (frac(28 - 13 t, 5) \, frac(1 - t, 5) \, t) #scale(x: 120%, y: 120%)[$\|$] t upright("为任意数") \}) $ #noindent;由于 $t$ 的任意性，因此方程组有无限多个解．
+我们就把含 $z$ 的项移到等号右边，把方程组看成是两个未知数 $x\,y$ 的二元一次方程组 $ display(cases(x + 2 y = 6 - 3 z, x + 7 y = 7 - 4 z)) $ #noindent;解得 $ x = 1 / 5\(28 - 13 z\)\,#h(2em) y = 1 / 5\(1 - z\) $ #noindent;令 $z = t$⁠，（$t$ 为参数）则方程组的解集是 $ \{\(x\,y\,z\)\} = lr(\{ (frac(28 - 13 t, 5) \, frac(1 - t, 5) \, t) class("normal", stretch(|, size: #1.2em)) t upright("为任意数") \}) $ #noindent;由于 $t$ 的任意性，因此方程组有无限多个解．
 
 ]
 #example[
@@ -1317,7 +1313,7 @@ Delta' & = k a_(i 1) A_(i 1) + k a_(i 2) A_(i 2) + k a_(i 3) A_(i 3) + k a_(i 4)
 
   令 $a_2 = k a_1$⁠，就有 $b_2 = k b_1\,quad c_2 = k c_1$⁠．由第一个方程解得 $ x = 1 / a_1\(d_1 - b_1 y - c_1 z\) $ #noindent;代入第二个方程 $ a_2 x + b_2 y + c_2 z & = k a_1 x + k b_1 y + k c_1 z\
    & = k\(d_1 - b_1 y - c_1 z\)+ k b_1 y + k c_1 z\
-   & = k d_1 $ #noindent;所以，当 $d_2 = k d_1$ 时，方程组有无穷多个解，解集为：$ \{\(x\,y\,z\)\} = lr(\{ (frac(d_1 - b_1 L - c_1 t, a_1) \, thick L \, thick t) #scale(x: 120%, y: 120%)[$\|$] L\,t upright("为任意数") \}) $ #noindent;当 $d_2 eq.not k d_1$ 时，方程组无解，解集为空集．
+   & = k d_1 $ #noindent;所以，当 $d_2 = k d_1$ 时，方程组有无穷多个解，解集为：$ \{\(x\,y\,z\)\} = lr(\{ (frac(d_1 - b_1 L - c_1 t, a_1) \, thick L \, thick t) class("normal", stretch(|, size: #1.2em)) L\,t upright("为任意数") \}) $ #noindent;当 $d_2 eq.not k d_1$ 时，方程组无解，解集为空集．
 
 综合前两节所述，方程个数与未知数个数不等的线性方程组求解，总是以方程个数等于未知数个数的方程组作为基础来考虑的：方程多了，先舍去一些方程，解一个部分方程组，解出后，再对其他各方程逐步验证；未知数多了，移一些未知数到等号右边，解出后引进参数，写出解集．由此可见，主要关键仍在求解方程个数等于未知数个数的线性方程组．
 
@@ -1367,9 +1363,9 @@ Delta' & = k a_(i 1) A_(i 1) + k a_(i 2) A_(i 2) + k a_(i 3) A_(i 3) + k a_(i 4)
 
   由 (2.49) 的第一个方程，可得 $ x_1 = - a_12 / a_11 x_2 - a_13 / a_11 x_3 $ #noindent;代入第二、第三个方程，得 $  & quad a_21 x_1 + a_22 x_2 + a_23 x_3\
    & = - 1 / a_11\(a_12 a_21 - a_11 a_22\)x_2 - 1 / a_11\(a_13 a_21 - a_11 a_23\)x_3\
-   & = A_33 / a_11 x_2 - A_32 / a_11 x_3 $ #noindent;由于所给条件为所有 $A_(i j) = 0 thick\(1 lt.eq i lt.eq 3\,thick 1 lt.eq j lt.eq 3\)$, 所以，$ a_21 x_1 + a_22 x_2 + a_23 x_3 = 0 $ #noindent;$  & quad a_31 x_1 + a_32 x_2 + a_33 x_3\
+   & = A_33 / a_11 x_2 - A_32 / a_11 x_3 $ #noindent;由于所给条件为所有 $A_(i j) = 0 thick\(1 lt.eq i lt.eq 3\,thick 1 lt.eq j lt.eq 3\)$, 所以，$ a_21 x_1 + a_22 x_2 + a_23 x_3 = 0 $ $  & quad a_31 x_1 + a_32 x_2 + a_33 x_3\
    & = - 1 / a_11\(a_12 a_31 - a_11 a_32\)x_2 - 1 / a_11\(a_13 a_31 - a_11 a_33\)x_3\
-   & = - A_23 / a_11 x_2 + A_22 / a_11 x_3 = 0 $ #noindent;可见这个解同时满足三个方程，即不论 $x_2\,x_3$ 取什么值，$ (- a_12 / a_11 x_2 - a_13 / a_11 x_3 \, thick x_2 \, thick x_3) $ #noindent;都是方程组 (2.49) 的解．所以方程组 (2.49) 有无限多个非零解：$ \{\(x_1\,x_2\,x_3\)\} = lr(\{ (- a_12 / a_11 L - a_13 / a_11 t \, thick L \, thick t) #scale(x: 120%, y: 120%)[$\|$] L\,t upright("为任意数") \}) $
+   & = - A_23 / a_11 x_2 + A_22 / a_11 x_3 = 0 $ #noindent;可见这个解同时满足三个方程，即不论 $x_2\,x_3$ 取什么值，$ (- a_12 / a_11 x_2 - a_13 / a_11 x_3 \, thick x_2 \, thick x_3) $ #noindent;都是方程组 (2.49) 的解．所以方程组 (2.49) 有无限多个非零解：$ \{\(x_1\,x_2\,x_3\)\} = lr(\{ (- a_12 / a_11 L - a_13 / a_11 t \, thick L \, thick t) class("normal", stretch(|, size: #1.2em)) L\,t upright("为任意数") \}) $
 
 #example[
 下列方程组有没有非零解，如果有，求出它的全部非零解．$ display(cases(x_1 + x_2 + x_3 = 0, 3 x_1 - x_2 + 2 x_3 = 0, x_1 - 3 x_2 = 0)) $
@@ -1432,7 +1428,7 @@ $a = 1$ 或 $a = - 2$ 尽管方程组有无限多个非零解，但程度有所�
 
 再加以改写，得 $ display(cases(a_1 x_0 + b_1 y_0 + c_1 dot.op 1 = 0, a_2 x_0 + b_2 y_0 + c_2 dot.op 1 = 0, a_3 x_0 + b_3 y_0 + c_3 dot.op 1 = 0)) $ #noindent;这就告诉我们，三元齐次线性方程组 $ display(cases(a_1 x + b_1 y + c_1 z = 0, a_2 x + b_2 y + c_2 z = 0, a_3 x + b_3 y + c_3 z = 0)) $ #noindent;有一个非零解 $\(x_0\,y_0\,1\)$⁠．
 
-但由于齐次线性方程组有非零解的必要条件是它的系数行列式等于零，因而可以推出 $ mat(delim: "|", a_1, b_1, c_1; a_2, b_2, c_2; a_3, b_3, c_3; #none) = 0 $ #noindent;所以原方程组有解的必要条件是$mat(delim: "|", a_1, b_1, c_1; a_2, b_2, c_2; a_3, b_3, c_3; #none) = 0$
+但由于齐次线性方程组有非零解的必要条件是它的系数行列式等于零，因而可以推出 $ mat(delim: "|", a_1, b_1, c_1; a_2, b_2, c_2; a_3, b_3, c_3) = 0 $ #noindent;所以原方程组有解的必要条件是$mat(delim: "|", a_1, b_1, c_1; a_2, b_2, c_2; a_3, b_3, c_3) = 0$
 
 ]
 #exercise[
@@ -1644,7 +1640,7 @@ mat(delim: "|", a_1, b_1, c_1; a_2, b_2, c_2; a_3, b_3, c_3) & = a_1 b_2 c_3 + a
 
   + $mat(delim: "|", a - b - c, 2 a, 2 a; 2 b, b - c - a, 2 b; 2 c, 2 c, c - a - b) =\(a + b + c\)^3$
 
-  + $mat(delim: "|", b_1 + c_1, c_1 + a_1, a_1 + b_1; b_2 + c_2, c_2 + a_2, a_2 + b_2; b_3 + c_3, c_3 + a_3, a_3 + b_3; #none) = 2 mat(delim: "|", a_1, b_1, c_1; a_2, b_2, c_2; a_3, b_3, c_3; #none)$
+  + $mat(delim: "|", b_1 + c_1, c_1 + a_1, a_1 + b_1; b_2 + c_2, c_2 + a_2, a_2 + b_2; b_3 + c_3, c_3 + a_3, a_3 + b_3) = 2 mat(delim: "|", a_1, b_1, c_1; a_2, b_2, c_2; a_3, b_3, c_3)$
 
 + #block(sticky: true)[解下列方程：]
 
@@ -1726,7 +1722,7 @@ mat(delim: "|", a_1, b_1, c_1; a_2, b_2, c_2; a_3, b_3, c_3) & = a_1 b_2 c_3 + a
 
 + #staritem(26);已知 $2 x + 5 y + 4 z = 0$, $3 x + y - 7 z = 0$, 求证：$x + y - z = 0$⁠．
 
-+ #staritem(27);已知 $a\,b\,c$ 是互不相同的数，且设 $ p\(x\)= mat(delim: "|", 1, x, x^2, x^3; 1, a, a^2, a^3; 1, b, b^2, b^3; 1, c, c^2, c^3; #none) $
++ #staritem(27);已知 $a\,b\,c$ 是互不相同的数，且设 $ p\(x\)= mat(delim: "|", 1, x, x^2, x^3; 1, a, a^2, a^3; 1, b, b^2, b^3; 1, c, c^2, c^3) $
 
   + 证明 $p\(x\)$ 是关于 $x$ 的三次多项式；
 

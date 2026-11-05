@@ -296,7 +296,7 @@
 
 ]
 #solution[
-$ arccos (- sqrt(2) / 2) = pi - arccos (sqrt(2) / 2) = pi - pi / 4 = frac(3 pi, 4) $ #noindent;$ arccos\(- 0.9695\) & = 180 degree - arccos 0.9695\
+$ arccos (- sqrt(2) / 2) = pi - arccos (sqrt(2) / 2) = pi - pi / 4 = frac(3 pi, 4) $ $ arccos\(- 0.9695\) & = 180 degree - arccos 0.9695\
  & = 180 degree - 14 degree 11' = 165 degree 49' approx 165.82 degree\
  & approx 0.9212 pi approx 2.894 upright("弧度") $
 
@@ -678,7 +678,7 @@ sin alpha & = 3 / sqrt(10) $ #noindent;$therefore quad sin ["arccot" (- 1 / 3)] 
 #solution[
 设 $alpha = arctan 3$⁠，其中 $0 < alpha < pi / 2$⁠，则 $tan alpha = 3$⁠．
 
-又设 $beta = "arccot" (- 1 / 5)$⁠，其中 $pi / 2 < beta < pi$⁠，则：$ cot beta = - 1 / 5\,#h(2em) tan beta = - 5 $ #noindent;$ tan [arctan 3 + "arccot" (- 1 / 5)] & = tan\(alpha + beta\)\
+又设 $beta = "arccot" (- 1 / 5)$⁠，其中 $pi / 2 < beta < pi$⁠，则：$ cot beta = - 1 / 5\,#h(2em) tan beta = - 5 $ $ tan [arctan 3 + "arccot" (- 1 / 5)] & = tan\(alpha + beta\)\
  & = frac(tan alpha + tan beta, 1 - tan alpha dot.op tan beta)\
  & = frac(3 +\(- 5\), 1 - 3\(- 5\)) = - 1 / 8 $ #noindent;而且 $pi / 2 < alpha + beta < frac(3 pi, 2)$⁠，$ therefore quad arctan 3 + "arccot" (- 1 / 5) = arctan (- 1 / 8) + pi = pi - arctan 1 / 8 $
 
@@ -804,7 +804,7 @@ sin alpha & = 3 / sqrt(10) $ #noindent;$therefore quad sin ["arccot" (- 1 / 3)] 
   ]
   #block[
   #set enum(numbering: enum-at(2, none, start: 6))
-  + $sin #scale(x: 180%, y: 180%)[${$] 2 arccos #scale(x: 120%, y: 120%)[$\[$] cot\(2 arctan x\)#scale(x: 120%, y: 120%)[$\]$] #scale(x: 180%, y: 180%)[$}$] = 0$
+  + $sin class("opening", stretch(\{, size: #1.8em)) 2 arccos class("opening", stretch(\[, size: #1.2em)) cot\(2 arctan x\)class("closing", stretch(\], size: #1.2em)) class("closing", stretch(\}, size: #1.8em)) = 0$
   ]
 
 + 若 $arctan x + arctan y + arctan z = pi$, 求证：$x + y + z = x y z$⁠．
@@ -1025,7 +1025,7 @@ x & = 74 degree 31' + k dot.op 90 degree $ #noindent;$therefore quad$ 原方程�
 
 由 $cos x = 1 / 2$⁠，得：$x = 2 k pi plus.minus pi / 3$⁠；由 $cos x = - 1$⁠，得：$x =\(2 k + 1\)pi$⁠．
 
-$therefore quad$ 原方程的解集是 $ lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = 2 k pi plus.minus pi / 3 \}) union lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = \( 2 k + 1 \) pi \}) $
+$therefore quad$ 原方程的解集是 $ lr(\{ x class("normal", stretch(|, size: #1.2em)) x = 2 k pi plus.minus pi / 3 \}) union lr(\{ x class("normal", stretch(|, size: #1.2em)) x = \( 2 k + 1 \) pi \}) $
 
 ]
 #example[
@@ -1051,7 +1051,7 @@ $therefore quad$ 原方程的解集是 $ lr(\{ x \| x = k dot.op 180 degree + \(
 
 若两个因式的乘积等于零，则至少有一个因式等于零，同时应当满足下列条件：对于使第一个因式为零的解，应当使方程的第二个因式有确定的值．上面的方程可分为这样的两个方程：$ 2 sin x - sqrt(3) = 0 quad upright("或") quad sin x + 1 = 0 $ #noindent;分别由 $sin x = sqrt(3) / 2$ 和 $sin x = - 1$⁠，得到：$ x = k pi +\(- 1\)^k dot.op pi / 3 quad upright("和") quad x = - pi / 2 + 2 k pi $
 
-把 $x = k pi +\(- 1\)^k dot.op pi / 3$ 代入 $sin x + 1$ 中，有确定值，同样把 $x = - pi / 2 + 2 k pi$ 代入 $2 sin x - sqrt(3)$ 中，也有确定值，所以原方程的解集是 $ lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = k pi + \( - 1 \)^k dot.op pi / 3 \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = - pi / 2 + 2 k pi \}) $
+把 $x = k pi +\(- 1\)^k dot.op pi / 3$ 代入 $sin x + 1$ 中，有确定值，同样把 $x = - pi / 2 + 2 k pi$ 代入 $2 sin x - sqrt(3)$ 中，也有确定值，所以原方程的解集是 $ lr(\{ x class("normal", stretch(|, size: #1.8em)) x = k pi + \( - 1 \)^k dot.op pi / 3 \}) union.big lr(\{ x class("normal", stretch(|, size: #1.8em)) x = - pi / 2 + 2 k pi \}) $
 
 ]
 一般的情况下，在三角方程中，不只有一个三角函数，我们可以利用同一个角的各三角函数值之间的关系式，把方程中未知角的各三角函数都用某一个三角函数表示出来，这样，就把所解的三角方程先归结到多项式方程的问题．
@@ -1080,7 +1080,7 @@ $therefore quad$ 原方程的解集是 $\{ x\|x =\(2 k + 1\)pi\,thick k in bb(Z)
 
 因此，用 $cos x$ 去除原方程的两边，得到和原方程同解的方程 $ tan x = 1 $ #noindent;由此，$x = k pi + pi / 4$⁠．
 
-所以原方程的解集是 $lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = k pi + pi / 4 \, thick k in bb(Z) \})$
+所以原方程的解集是 $lr(\{ x class("normal", stretch(|, size: #1.8em)) x = k pi + pi / 4 \, thick k in bb(Z) \})$
 
 ]
 #rmk[
@@ -1100,7 +1100,7 @@ $therefore quad$ 原方程的解集是 $\{ x\|x =\(2 k + 1\)pi\,thick k in bb(Z)
 
 由 $tan x = 2$ 得 $ x approx k dot.op 180 degree + 63 degree 26' $
 
-由 $tan x = 1.5$ 得 $ x approx k dot.op 180 degree + 56 degree 19' $ #noindent;$therefore quad$ 原方程的解集是：$ lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = k dot.op 180 degree + 63 degree 26' \}) union lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = k dot.op 180 degree + 56 degree 19' \}) $ #noindent;或者 $ lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = k pi + arctan 2 \}) union.big lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = k pi + arctan 3 / 2 \}) $
+由 $tan x = 1.5$ 得 $ x approx k dot.op 180 degree + 56 degree 19' $ #noindent;$therefore quad$ 原方程的解集是：$ lr(\{ x class("normal", stretch(|, size: #1.2em)) x = k dot.op 180 degree + 63 degree 26' \}) union lr(\{ x class("normal", stretch(|, size: #1.2em)) x = k dot.op 180 degree + 56 degree 19' \}) $ #noindent;或者 $ lr(\{ x class("normal", stretch(|, size: #1.2em)) x = k pi + arctan 2 \}) union.big lr(\{ x class("normal", stretch(|, size: #1.2em)) x = k pi + arctan 3 / 2 \}) $
 
 又这样的方程 $2 sin^2 x + 5 sin x cos x + cos^2 x = 4$ 也可以归入齐次方程，因为原方程可写成 $ 2 sin^2 x + 5 sin x cos x + cos^2 x - 4\(cos^2 x + sin^2 x\)= 0 $ #noindent;化简得 $ 2 sin^2 x - 5 sin x cos x + 3 cos^2 x = 0 $
 
@@ -1118,7 +1118,7 @@ $therefore quad$ 原方程的解集是 $\{ x\|x =\(2 k + 1\)pi\,thick k in bb(Z)
 x = - 2 arctan 2 + 2 k pi $
 
 由 $tan x / 2 = 1 / 2$ 得：$ x / 2 & = arctan 1 / 2 + k pi\
-x = 2 arctan 1 / 2 + 2 k pi $ #noindent;因为原方程的解不含有 $cos^2 x / 2 = 0$ 的解，所以，这样解不会丢根，由此知原方程的解是 $ lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = - 2 arctan 2 + 2 k pi \}) union lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = 2 arctan 1 / 2 + 2 k pi \}) $
+x = 2 arctan 1 / 2 + 2 k pi $ #noindent;因为原方程的解不含有 $cos^2 x / 2 = 0$ 的解，所以，这样解不会丢根，由此知原方程的解是 $ lr(\{ x class("normal", stretch(|, size: #1.2em)) x = - 2 arctan 2 + 2 k pi \}) union lr(\{ x class("normal", stretch(|, size: #1.2em)) x = 2 arctan 1 / 2 + 2 k pi \}) $
 
 ]
 ==== 一边为零，另一边可以分解为因式的乘积的方程
@@ -1131,7 +1131,7 @@ x = 2 arctan 1 / 2 + 2 k pi $ #noindent;因为原方程的解不含有 $cos^2 x 
 
 如果方程的两边除以 $1 - cos x$, 那么，原方程中就会丢掉 $1 - cos x = 0$ 的根．为了不致丢掉这些根，把因式 $1 - cos x$ 提出，方程就变形为：$ \(1 - cos x\)\(1 - tan x\)= 0 $ #noindent;于是 $ 1 - cos x = 0 quad upright("或") quad 1 - tan x = 0 $ #noindent;由 $cos x = 1$ 得到 $x = 2 k pi$, 由 $tan x = 1$ 得到 $x = pi / 4 + k pi$⁠．
 
-由于方程 $cos x = 1$ 的解使因式 $1 - tan x$ 有确定值，而方程 $tan x = 1$ 的解也使因式 $1 - cos x$ 有确定值，所以原方程的解集是 $ lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = 2 k pi \}) union lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = pi / 4 + k pi \}) $
+由于方程 $cos x = 1$ 的解使因式 $1 - tan x$ 有确定值，而方程 $tan x = 1$ 的解也使因式 $1 - cos x$ 有确定值，所以原方程的解集是 $ lr(\{ x class("normal", stretch(|, size: #1.2em)) x = 2 k pi \}) union lr(\{ x class("normal", stretch(|, size: #1.2em)) x = pi / 4 + k pi \}) $
 
 ]
 #example[
@@ -1152,9 +1152,9 @@ x = 2 arctan 1 / 2 + 2 k pi $ #noindent;因为原方程的解不含有 $cos^2 x 
   ]
 )
 
-$because quad tan x = 0$ 的解 $x = k pi = 3 k dot.op pi / 3 in \{ x\|tan 3 x = 0 \} = lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = k dot.op pi / 3 \})$
+$because quad tan x = 0$ 的解 $x = k pi = 3 k dot.op pi / 3 in \{ x\|tan 3 x = 0 \} = lr(\{ x class("normal", stretch(|, size: #1.2em)) x = k dot.op pi / 3 \})$
 
-又 $tan 2 x = 0$ 的解 $x = k dot.op pi / 2$ 中，当 $k = 2 n + 1$ 时，使 $tan x$ 没有确定值，必须舍去；又当 $k = 2 n$ 时，$ x = n pi = 3 n dot.op pi / 3 in lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = k dot.op pi / 3 \}) = \{ x\|tan 3 x = 0 \} $ #noindent;因此，所求方程的解集是 $lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = k dot.op pi / 3 \, quad k in bb(Z) \})$
+又 $tan 2 x = 0$ 的解 $x = k dot.op pi / 2$ 中，当 $k = 2 n + 1$ 时，使 $tan x$ 没有确定值，必须舍去；又当 $k = 2 n$ 时，$ x = n pi = 3 n dot.op pi / 3 in lr(\{ x class("normal", stretch(|, size: #1.2em)) x = k dot.op pi / 3 \}) = \{ x\|tan 3 x = 0 \} $ #noindent;因此，所求方程的解集是 $lr(\{ x class("normal", stretch(|, size: #1.2em)) x = k dot.op pi / 3 \, quad k in bb(Z) \})$
 
 ]
 #example[
@@ -1183,7 +1183,7 @@ $because quad tan x = 0$ 的解 $x = k pi = 3 k dot.op pi / 3 in \{ x\|tan 3 x =
 #strong[解法1：]移项，得 $sin 7 x - sin 5 x = 0$⁠，利用和差化积公式得 $ 2 cos 6 x sin x = 0 $ #noindent;由此得 $ cos 6 x = 0 quad upright("或") quad sin x = 0 $ #noindent;由 $cos 6 x = 0$⁠，得：$ 6 x & = pi / 2 + k pi\
 x & = pi / 12 + k dot.op pi / 6 $ #noindent;由 $sin x = 0$⁠，得：$x = k pi$⁠．
 
-所求方程的解集是 $ lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = pi / 12 + k dot.op pi / 6 \}) union lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = k pi \}) $
+所求方程的解集是 $ lr(\{ x class("normal", stretch(|, size: #1.2em)) x = pi / 12 + k dot.op pi / 6 \}) union lr(\{ x class("normal", stretch(|, size: #1.2em)) x = k pi \}) $
 
 #strong[解法2：]利用二角正弦相等条件有 $ 7 x = 5 x + 2 k pi quad upright("或") quad 7 x = pi - 5 x + 2 k pi $
 
@@ -1191,7 +1191,7 @@ x & = pi / 12 + k dot.op pi / 6 $ #noindent;由 $sin x = 0$⁠，得：$x = k pi
 
 由 $7 x = pi - 5 x + 2 k pi$ 得 $12 x = pi + 2 k pi$, 因此：$x = pi / 12 + k dot.op pi / 6$
 
-$therefore quad$ 方程的解集是 $ lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = k pi \}) union lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = pi / 12 + k dot.op pi / 6 \}) $
+$therefore quad$ 方程的解集是 $ lr(\{ x class("normal", stretch(|, size: #1.2em)) x = k pi \}) union lr(\{ x class("normal", stretch(|, size: #1.2em)) x = pi / 12 + k dot.op pi / 6 \}) $
 
 我们得到与第一种解法相同的结果．
 
@@ -1216,7 +1216,7 @@ $therefore quad x + frac(5 pi, 6) = 2 k pi + pi / 6 quad upright("或") quad x +
 
 由此：$x = 2 k pi - frac(2 pi, 3) quad upright("或") quad x = 2 k pi$⁠．
 
-$therefore quad$ 原方程的解集是 $ lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = 2 k pi - frac(2 pi, 3) \}) union lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = 2 k pi \}) $
+$therefore quad$ 原方程的解集是 $ lr(\{ x class("normal", stretch(|, size: #1.2em)) x = 2 k pi - frac(2 pi, 3) \}) union lr(\{ x class("normal", stretch(|, size: #1.2em)) x = 2 k pi \}) $
 
 ]
 #example[
@@ -1227,7 +1227,7 @@ $therefore quad$ 原方程的解集是 $ lr(\{ x #scale(x: 120%, y: 120%)[$\|$] 
 方程两边除以 $sqrt(2^2 +\(- 3\)^2) = sqrt(13)$, 得到 $ 2 / sqrt(13) sin x + frac(\(- 3\), sqrt(13)) cos x = 1 $ #noindent;令 $cos phi = 2 / sqrt(13) > 0\,quad sin phi = frac(- 3, sqrt(13)) < 0$ 则角 $phi$ 是第四象限角，且由 $tan phi = - 3 / 2 = - 1.5$, 查表得出 $phi = arctan\(- 1.5\)approx - 56 degree 18'$, 于是原方程可写成 $ sin x cos\(- 56 degree 18'\)+ cos x sin\(- 56 degree 18'\)= 1 $ #noindent;即：$sin\(x - 56 degree 18'\)= 1$⁠，由此：$ x - 56 degree 18' & = k dot.op 360 degree + 90 degree\
 x & = k dot.op 360 degree + 146 degree 18' $
 
-$therefore quad$ 原方程的解集是 $\{ x #scale(x: 120%, y: 120%)[$\|$] x = k dot.op 360 degree + 146 degree 18' \}$⁠．
+$therefore quad$ 原方程的解集是 $\{ x class("normal", stretch(|, size: #1.2em)) x = k dot.op 360 degree + 146 degree 18' \}$⁠．
 
 ]
 #v(0.8em);
@@ -1245,7 +1245,7 @@ $therefore quad x = 2 k pi + 2 (- pi / 3) = 2 k pi - frac(2 pi, 3)$
 
 因为原方程不含使 $tan x / 2$ 失去意义的解 $x =\(2 k + 1\)pi$, 所以用万能公式进行代换不会丢根．
 
-$therefore quad$ 原方程的解集是 $ lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = 2 k pi - 2 / 3 pi \}) union lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = 2 k pi \}) $ #noindent;所得结果与例9.36第一种解法相同．
+$therefore quad$ 原方程的解集是 $ lr(\{ x class("normal", stretch(|, size: #1.2em)) x = 2 k pi - 2 / 3 pi \}) union lr(\{ x class("normal", stretch(|, size: #1.2em)) x = 2 k pi \}) $ #noindent;所得结果与例9.36第一种解法相同．
 
 #v(0.8em);
 
@@ -1255,7 +1255,7 @@ $therefore quad$ 原方程的解集是 $ lr(\{ x #scale(x: 120%, y: 120%)[$\|$] 
 由 $sqrt(3) cos x / 2 + sin x / 2 = 0$, 两边除以 $cos x / 2$ 得：$ sqrt(3) + tan x / 2 & = 0\
 tan x / 2 & = - sqrt(3)\
 x / 2 & = k pi - pi / 3\
-x & = 2 k pi - frac(2 pi, 3) $ #noindent;$therefore quad$ 原方程的解集是 $ lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = 2 k pi \}) union lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x = 2 k pi - 2 / 3 pi \}) $ #noindent;所得结果仍与例9.36的第一种方法相同．
+x & = 2 k pi - frac(2 pi, 3) $ #noindent;$therefore quad$ 原方程的解集是 $ lr(\{ x class("normal", stretch(|, size: #1.2em)) x = 2 k pi \}) union lr(\{ x class("normal", stretch(|, size: #1.2em)) x = 2 k pi - 2 / 3 pi \}) $ #noindent;所得结果仍与例9.36的第一种方法相同．
 
 == 三角不等式的解法
 #blk[定理][
@@ -1351,7 +1351,7 @@ $therefore quad cos 4 x < 0$ 在 $[0 \, pi / 2]$ 内的部分解满足条件：$
 
 又 $f\(x\)$ 的周期是 $pi / 2$⁠．
 
-$therefore quad cos 4 x < 0$ 的一切解满足条件 $ pi / 8 + n dot.op pi / 2 < x < frac(3 pi, 8) + n dot.op pi / 2 #h(2em)\(n in bb(Z)\) $ #noindent;$therefore quad 2 cos^2 2 x < 1$ 的解集是 $ lr(\{ x #scale(x: 180%, y: 180%)[$\|$] pi / 8 + n dot.op pi / 2 < x < frac(3 pi, 8) + n dot.op pi / 2 \}) $
+$therefore quad cos 4 x < 0$ 的一切解满足条件 $ pi / 8 + n dot.op pi / 2 < x < frac(3 pi, 8) + n dot.op pi / 2 #h(2em)\(n in bb(Z)\) $ #noindent;$therefore quad 2 cos^2 2 x < 1$ 的解集是 $ lr(\{ x class("normal", stretch(|, size: #1.8em)) pi / 8 + n dot.op pi / 2 < x < frac(3 pi, 8) + n dot.op pi / 2 \}) $
 
 ]
 #example[
@@ -1361,7 +1361,7 @@ $therefore quad cos 4 x < 0$ 的一切解满足条件 $ pi / 8 + n dot.op pi / 2
 #solution[
 移项，并将 $cos 2 x = 2 cos^2 x - 1$ 代入得 $ frac(cos x\(1 - 2 cos x\), 2 cos^2 x - 1) > 0 $ #noindent;因为原不等式的解使 $cos 2 x eq.not 0$（即 $2 cos^2 x - 1 eq.not 0$⁠），两边乘以 $\(2 cos^2 x - 1\)^2$, 得到同解不等式 $ cos x\(1 - 2 cos x\)\(2 cos^2 x - 1\)> 0 $ #noindent;即 $ (cos x + 1 / sqrt(2)) cos x (cos x - 1 / 2) (cos x - 1 / sqrt(2)) < 0 $ #noindent;上面不等式左端的函数式 $f\(x\)$ 的零点依大小排列是 $- 1 / sqrt(2)\,thick 0\,thick 1 / 2\,thick 1 / sqrt(2)$⁠．由此得知，仅当#numbered-eq($ - 1 / sqrt(2) < cos x < 0 $);#noindent;或#numbered-eq($ 1 / 2 < cos x < 1 / sqrt(2) $);#noindent;时，$cos x\(1 - 2 cos x\)\(2 cos^2 x - 1\)> 0$⁠．
 
-由于 $cos x$ 在区间 $\[0\,pi\]$ 内是递减的，在区间 $\[pi\,2 pi\]$ 内是递增的，所以由不等式 (9.10), 得（图9.21）：$ pi / 2 < x < frac(3 pi, 4)\,#h(2em) frac(5 pi, 4) < x < frac(3 pi, 2) $ #noindent;由不等式 (9.11), 得（图9.22）：$ pi / 4 < x < pi / 3\,#h(2em) frac(5 pi, 3) < x < frac(7 pi, 4) $ #noindent;因此，原不等式在区间 $0 < x < 2 pi$ 内的解集是 $ lr(\{ x #scale(x: 180%, y: 180%)[$\|$] pi / 4 < x < pi / 3 \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] pi / 2 < x < frac(3 pi, 4) \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] frac(5 pi, 4) < x < frac(3 pi, 2) \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] frac(5 pi, 3) < x < frac(7 pi, 4) \}) $
+由于 $cos x$ 在区间 $\[0\,pi\]$ 内是递减的，在区间 $\[pi\,2 pi\]$ 内是递增的，所以由不等式 (9.10), 得（图9.21）：$ pi / 2 < x < frac(3 pi, 4)\,#h(2em) frac(5 pi, 4) < x < frac(3 pi, 2) $ #noindent;由不等式 (9.11), 得（图9.22）：$ pi / 4 < x < pi / 3\,#h(2em) frac(5 pi, 3) < x < frac(7 pi, 4) $ #noindent;因此，原不等式在区间 $0 < x < 2 pi$ 内的解集是 $ lr(\{ x class("normal", stretch(|, size: #1.8em)) pi / 4 < x < pi / 3 \}) union.big lr(\{ x class("normal", stretch(|, size: #1.8em)) pi / 2 < x < frac(3 pi, 4) \}) union.big lr(\{ x class("normal", stretch(|, size: #1.8em)) frac(5 pi, 4) < x < frac(3 pi, 2) \}) union.big lr(\{ x class("normal", stretch(|, size: #1.8em)) frac(5 pi, 3) < x < frac(7 pi, 4) \}) $
 
 ]
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("9-21");], caption: []), figure([#fig("9-22");], caption: []))));
@@ -1633,7 +1633,7 @@ $therefore quad cos 4 x < 0$ 的一切解满足条件 $ pi / 8 + n dot.op pi / 2
 
   + $sin\(2 pi cos x\)> 0$
 
-  + $lg sin x lt.eq 0$
+  + $lg sin x lt.eq.slant 0$
 
   + $cos^2 x + 7 sin^2 x < 8 sin x cos x$
 

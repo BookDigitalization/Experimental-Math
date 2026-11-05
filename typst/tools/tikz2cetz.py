@@ -1507,14 +1507,21 @@ class PathBuilder:
                     if cl:
                         segs.append("line(%s, %s, %s)" % (pic.xy(cl[0]), pic.xy(cl[1]), ", ".join(args)))
                 return "\n".join(segs) if segs else "// （被 \\clip 裁掉）"
-            xs = [pic.xy(p) for p in pts]
-            if not closed and len(pts) >= 2:
-                # TikZ 中连到节点的线止于节点边框：用 CeTZ 的边框锚点（从节点中心朝另一端的方向）
-                for k, nb in ((0, 1), (len(pts) - 1, len(pts) - 2)):
-                    name = self.node_refs.get(pts[k])
-                    if name:
-                        xs[k] = '(name: "%s", anchor: %sdeg)' % (name, fmt(angle_of(sub(pts[nb], pts[k]))))
-            return "line(%s, %s)" % (", ".join(xs), ", ".join(a))
+            def one_line(pts):
+                xs = [pic.xy(p) for p in pts]
+                if not closed and len(pts) >= 2:
+                    # TikZ 中连到节点的线止于节点边框：用 CeTZ 的边框锚点（从节点中心朝另一端的方向）
+                    for k, nb in ((0, 1), (len(pts) - 1, len(pts) - 2)):
+                        name = self.node_refs.get(pts[k])
+                        if name:
+                            xs[k] = '(name: "%s", anchor: %sdeg)' % (name, fmt(angle_of(sub(pts[nb], pts[k]))))
+                return "line(%s, %s)" % (", ".join(xs), ", ".join(a))
+            # (A)--(B)--(C)：经过中间的节点时，线在节点两侧的边框处断开，分成几条线
+            cuts = [k for k in range(1, len(pts) - 1) if self.node_refs.get(pts[k])]
+            if cuts and not closed and not marks:
+                bounds = [0] + cuts + [len(pts) - 1]
+                return "\n".join(one_line(pts[i:j + 1]) for i, j in zip(bounds, bounds[1:]))
+            return one_line(pts)
         if len(pieces) == 1 and pieces[0][0] == "ellipse":
             _, c, rx, ry = pieces[0]
             tf = pic.tf
@@ -2267,7 +2274,9 @@ class LabelBatch:
         def tfrac(args: list[str]) -> str:
             tfracs.append("tfrac(%s, %s)" % tuple(tex_math_to_typst(a) for a in args))
             return r"\mathrm{TFRAC%d}" % (len(tfracs) - 1)
-        items = [replace_command(t, "tfrac", 2, tfrac) for t in self.items]
+        from tex2typ import mark_lr_braces
+        # \left\{ … \right\}：同正文先加标记，fix_inline_math 才知道这对花括号要随内容放大
+        items = [mark_lr_braces(replace_command(t, "tfrac", 2, tfrac)) for t in self.items]
         # 同正文的后处理：^\circ → degree、花括号不自动放大等
         conv = [unshadow(fix_inline_math(fix_math(c))) for c in convert_fragments(items)]
         # pandoc 把 \mathrm{TFRAC12} 写成 upright(T F R A C 12)

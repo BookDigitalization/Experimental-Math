@@ -351,7 +351,7 @@ upright("余式") & quad r\(x\)= 50 / 27 x + 16 / 9 $
 ]
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题3.1]
 
-+ 试求证 $ mat(delim: "|", a_1 + x, b_1 + x, c_1 + x; a_2 + x, b_2 + x, c_2 + x; a_3 + x, b_3 + x, c_3 + x; #none) $ #noindent;是一个次数不大于1的多项式或一个零多项式，并求出 $p\(1\)$ 的值．
++ 试求证 $ mat(delim: "|", a_1 + x, b_1 + x, c_1 + x; a_2 + x, b_2 + x, c_2 + x; a_3 + x, b_3 + x, c_3 + x) $ #noindent;是一个次数不大于1的多项式或一个零多项式，并求出 $p\(1\)$ 的值．
 
 + 不求乘积的各项，只计算下列乘积中 $x^20$⁠、$x^12$ 两项的系数 $ \(a_13 x^13 + a_12 x^12 + dots.h.c + a_1 x + a_0\)\(b_9 x^9 + b_8 x^8 + dots.h.c + b_1 x + b_0\) $
 
@@ -680,22 +680,22 @@ $f\(x\)= x^2 - 3 x + 2$, $g\(x\)= x^4 - 3 x^3 + 5 x^2 - 8 x + 5$
 辗转相除法的理论基础在于多项式的带余除法及本节的定理1.
 
 #blk[定理2][
-对于非零多项式 $f\(x\)$, $g\(x\)$, $r\(x\)$, 若存在多项式 $q\(x\)$ 使得 $f\(x\)= q\(x\)dot.op g\(x\)+ r\(x\)$, 则有 $ #scale(x: 120%, y: 120%)[$\($] f\(x\)\,thick g\(x\)#scale(x: 120%, y: 120%)[$\)$] = #scale(x: 120%, y: 120%)[$\($] g\(x\)\,thick r\(x\)#scale(x: 120%, y: 120%)[$\)$] $
+对于非零多项式 $f\(x\)$, $g\(x\)$, $r\(x\)$, 若存在多项式 $q\(x\)$ 使得 $f\(x\)= q\(x\)dot.op g\(x\)+ r\(x\)$, 则有 $ class("opening", stretch(\(, size: #1.2em)) f\(x\)\,thick g\(x\)class("closing", stretch(\), size: #1.2em)) = class("opening", stretch(\(, size: #1.2em)) g\(x\)\,thick r\(x\)class("closing", stretch(\), size: #1.2em)) $
 
 ]
 #proof[
-设 $#scale(x: 120%, y: 120%)[$\($] g\(x\)\,thick r\(x\)#scale(x: 120%, y: 120%)[$\)$] = d\(x\)$⁠，则
+设 $class("opening", stretch(\(, size: #1.2em)) g\(x\)\,thick r\(x\)class("closing", stretch(\), size: #1.2em)) = d\(x\)$⁠，则
 
 + $d\(x\)$ 首项系数是1;
 
 + $d\(x\)$ 是 $g\(x\)$, $r\(x\)$ 的公因式，由定理1可知，$d\(x\)$ 也是 $f\(x\)$ 的因式，因而也是 $f\(x\)\,g\(x\)$ 的公因式；
 
-+ 再设 $f\(x\)$, $g\(x\)$ 的任一个公因式为 $ell\(x\)$, 由于 $r\(x\)= f\(x\)- q\(x\)dot.op g\(x\)$, 所以，$ell\(x\)$ 也是 $r\(x\)$ 的一个因式，因而 $ell\(x\)$ 就是 $g\(x\)\,r\(x\)$ 的公因式，再由最高公因式的定义知，$ell\(x\)$ 是 $d\(x\)$ 的因式．所以 $ #scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$] = d\(x\)= #scale(x: 120%, y: 120%)[$\($] g\(x\)\,r\(x\)#scale(x: 120%, y: 120%)[$\)$] $
++ 再设 $f\(x\)$, $g\(x\)$ 的任一个公因式为 $ell\(x\)$, 由于 $r\(x\)= f\(x\)- q\(x\)dot.op g\(x\)$, 所以，$ell\(x\)$ 也是 $r\(x\)$ 的一个因式，因而 $ell\(x\)$ 就是 $g\(x\)\,r\(x\)$ 的公因式，再由最高公因式的定义知，$ell\(x\)$ 是 $d\(x\)$ 的因式．所以 $ class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em)) = d\(x\)= class("opening", stretch(\(, size: #1.2em)) g\(x\)\,r\(x\)class("closing", stretch(\), size: #1.2em)) $
 
 ]
-这样一个定理对于求两个已知多项式的最高公因式起到一些什么作用呢？两个多项式中总有一个多项式的次数不大于另一个多项式的次数，不妨设 $g\(x\)$ 的次数不大于 $f\(x\)$ 的次数，则因在带余除法中，$r\(x\)$ 的次数小于 $g\(x\)$ 的次数或 $r\(x\)= 0$.（注意，定理2并不要求 $r\(x\)$ 满足带余除法中对余式的要求，但带余除法中的余式满足定理2中 $r\(x\)$ 的条件）这就说明 $r\(x\)$ 的次数小于 $f\(x\)$ 的次数，把求 $#scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$]$ 转化为求 $#scale(x: 120%, y: 120%)[$\($] g\(x\)\,r\(x\)#scale(x: 120%, y: 120%)[$\)$]$ 实际上是一个降次的过程．
+这样一个定理对于求两个已知多项式的最高公因式起到一些什么作用呢？两个多项式中总有一个多项式的次数不大于另一个多项式的次数，不妨设 $g\(x\)$ 的次数不大于 $f\(x\)$ 的次数，则因在带余除法中，$r\(x\)$ 的次数小于 $g\(x\)$ 的次数或 $r\(x\)= 0$.（注意，定理2并不要求 $r\(x\)$ 满足带余除法中对余式的要求，但带余除法中的余式满足定理2中 $r\(x\)$ 的条件）这就说明 $r\(x\)$ 的次数小于 $f\(x\)$ 的次数，把求 $class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em))$ 转化为求 $class("opening", stretch(\(, size: #1.2em)) g\(x\)\,r\(x\)class("closing", stretch(\), size: #1.2em))$ 实际上是一个降次的过程．
 
-次数是降低了，那么有没有把握求出 $#scale(x: 120%, y: 120%)[$\($] g\(x\)\,r\(x\)#scale(x: 120%, y: 120%)[$\)$]$ 呢？现在可以对 $g\(x\)$, $r\(x\)$ 再进行带余除法，求出又一个余式 $r_2\(x\)$（为了易于辨别，我们把第一次余式记为 $r_1\(x\)$⁠，类似地把第一次第二次所得的商式分别记为 $q_1\(x\)$, $q_2\(x\)$, 以后以此类推），循此以往，可得到一系列的带余除法：#numbered-eq($ f\(x\) & = q_1\(x\)g\(x\)+ r_1\(x\)\,quad upright(d e g) r_1\(x\)< upright(d e g) g\(x\)\
+次数是降低了，那么有没有把握求出 $class("opening", stretch(\(, size: #1.2em)) g\(x\)\,r\(x\)class("closing", stretch(\), size: #1.2em))$ 呢？现在可以对 $g\(x\)$, $r\(x\)$ 再进行带余除法，求出又一个余式 $r_2\(x\)$（为了易于辨别，我们把第一次余式记为 $r_1\(x\)$⁠，类似地把第一次第二次所得的商式分别记为 $q_1\(x\)$, $q_2\(x\)$, 以后以此类推），循此以往，可得到一系列的带余除法：#numbered-eq($ f\(x\) & = q_1\(x\)g\(x\)+ r_1\(x\)\,quad upright(d e g) r_1\(x\)< upright(d e g) g\(x\)\
 g\(x\) & = q_2\(x\)r_1\(x\)+ r_2\(x\)\,quad upright(d e g) r_2\(x\)< upright(d e g) r_1\(x\)\
 r_1\(x\) & = q_3\(x\)r_2\(x\)+ r_3\(x\)\,quad upright(d e g) r_3\(x\)< upright(d e g) r_2\(x\)\
 r_2\(x\) & = q_4\(x\)r_3\(x\)+ r_4\(x\)\,quad upright(d e g) r_4\(x\)< upright(d e g) r_3\(x\)\
@@ -704,28 +704,28 @@ r_(i - 1)\(x\) & = q_(i + 1)\(x\)r_i\(x\)+ r_(i + 1)\(x\)\,quad upright(d e g) r
 dots.h.c & dots.h.c dots.h.c dots.h.c\
 r_(s - 1)\(x\) & = q_(s + 1)\(x\)r_s\(x\) $);
 
-最后一个等式表示 $r_s\(x\)$ 整除 $r_(s - 1)\(x\)$, 或者说 $r_(s + 1)\(x\)= 0$⁠．此时就有 $ #scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$] & = #scale(x: 120%, y: 120%)[$\($] g\(x\)\,r_1\(x\)#scale(x: 120%, y: 120%)[$\)$] = #scale(x: 120%, y: 120%)[$\($] r_1\(x\)\,r_2\(x\)#scale(x: 120%, y: 120%)[$\)$] = dots.h.c\
- & = #scale(x: 120%, y: 120%)[$\($] r_i\(x\)\,r_(i + 1)\(x\)#scale(x: 120%, y: 120%)[$\)$] = dots.h.c\
- & = #scale(x: 120%, y: 120%)[$\($] r_(s - 1)\(x\)\,r_s\(x\)#scale(x: 120%, y: 120%)[$\)$] $
+最后一个等式表示 $r_s\(x\)$ 整除 $r_(s - 1)\(x\)$, 或者说 $r_(s + 1)\(x\)= 0$⁠．此时就有 $ class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em)) & = class("opening", stretch(\(, size: #1.2em)) g\(x\)\,r_1\(x\)class("closing", stretch(\), size: #1.2em)) = class("opening", stretch(\(, size: #1.2em)) r_1\(x\)\,r_2\(x\)class("closing", stretch(\), size: #1.2em)) = dots.h.c\
+ & = class("opening", stretch(\(, size: #1.2em)) r_i\(x\)\,r_(i + 1)\(x\)class("closing", stretch(\), size: #1.2em)) = dots.h.c\
+ & = class("opening", stretch(\(, size: #1.2em)) r_(s - 1)\(x\)\,r_s\(x\)class("closing", stretch(\), size: #1.2em)) $
 
-显然有 $#scale(x: 120%, y: 120%)[$\($] r_(s - 1)\(x\)\,r_s\(x\)#scale(x: 120%, y: 120%)[$\)$] = 1 / c r_s\(x\)$⁠，其中：$c$ 是 $r_s\(x\)$ 首项系数．因此：$ #scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$] = 1 / c r_s\(x\) $
+显然有 $class("opening", stretch(\(, size: #1.2em)) r_(s - 1)\(x\)\,r_s\(x\)class("closing", stretch(\), size: #1.2em)) = 1 / c r_s\(x\)$⁠，其中：$c$ 是 $r_s\(x\)$ 首项系数．因此：$ class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em)) = 1 / c r_s\(x\) $
 
 自然会提出这样一个问题，如果始终不能整除，怎么办？我们来证明不会出现始终不能整除的情况．
 
-设 $upright(d e g) g\(x\)$ 是一个有限的非负整数 $m$⁠．若 $r_1\(x\)eq.not 0$, 令 $upright(d e g) r_i\(x\)= m_i$⁠，则 $ m > m_1 > m_2 > dots.h.c > m_i > dots.h.c > m_(s - 1) > m_s $ #noindent;注意到 $m$ 和所有 $m_i$ 都是非负整数，而数列 $m\,m_1\,m_2\,dots.h\,m_i\,dots.h$ 是一个严格递减的数列，则这个数列一定是有限的．例如 $m = 100$ 时，数列最多不会超过101项．在某种情形下，若 $m_s = 0$, 即 $r_s\(x\)$ 是一个非零常数时，$r_s\(x\)$ 就整除 $r_(s - 1)\(x\)$ 了．在这种情况下，$#scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$] = 1$, 我们说 $f\(x\)$ 与 $g\(x\)$ 互质．这就说明，即使 $f\(x\)$, $g\(x\)$ 互质，它们的最高公因式1仍可由上述累次的带余除法求得，由此我们得到：
+设 $upright(d e g) g\(x\)$ 是一个有限的非负整数 $m$⁠．若 $r_1\(x\)eq.not 0$, 令 $upright(d e g) r_i\(x\)= m_i$⁠，则 $ m > m_1 > m_2 > dots.h.c > m_i > dots.h.c > m_(s - 1) > m_s $ #noindent;注意到 $m$ 和所有 $m_i$ 都是非负整数，而数列 $m\,m_1\,m_2\,dots.h\,m_i\,dots.h$ 是一个严格递减的数列，则这个数列一定是有限的．例如 $m = 100$ 时，数列最多不会超过101项．在某种情形下，若 $m_s = 0$, 即 $r_s\(x\)$ 是一个非零常数时，$r_s\(x\)$ 就整除 $r_(s - 1)\(x\)$ 了．在这种情况下，$class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em)) = 1$, 我们说 $f\(x\)$ 与 $g\(x\)$ 互质．这就说明，即使 $f\(x\)$, $g\(x\)$ 互质，它们的最高公因式1仍可由上述累次的带余除法求得，由此我们得到：
 
 #blk[定理3（辗转相除法定理）][
-任给两个非零多项式 $f\(x\)$, $g\(x\)$ 进行 (3.15) 式所给出的辗转相除，通过有限次的运算总可求出唯一存在的 $#scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$]$⁠．
+任给两个非零多项式 $f\(x\)$, $g\(x\)$ 进行 (3.15) 式所给出的辗转相除，通过有限次的运算总可求出唯一存在的 $class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em))$⁠．
 
 ]
-存在性已在前面叙述，至于唯一性则在给出 $#scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$]$ 的定义后即已阐明．
+存在性已在前面叙述，至于唯一性则在给出 $class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em))$ 的定义后即已阐明．
 
 #example[
 $f\(x\)= 6 x^5 - 4 x^4 - 11 x^3 - 3 x^2 - 3 x - 1$,
 
 $g\(x\)= 4 x^4 + 2 x^3 - 18 x^2 + 3 x - 5$
 
-求 $#scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$]$
+求 $class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em))$
 
 ]
 #solution[
@@ -733,10 +733,10 @@ $g\(x\)= 4 x^4 + 2 x^3 - 18 x^2 + 3 x - 5$
 #fig("3-05");
 
 ]
-所以 $#scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$] = 1 / 2\(2 x^3 - 4 x^2 + x - 1\)$⁠．
+所以 $class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em)) = 1 / 2\(2 x^3 - 4 x^2 + x - 1\)$⁠．
 
 ]
-在习题3.1第7题中，我们知道对被除式 $f\(x\)$ 乘以非零常数 $k$, 给予 $r\(x\)$ 的影响也不过是乘一个常数 $k$, 而我们所求的最后的 $r_s\(x\)$ 本来就得乘以 $1 / c$（$c$ 是 $r_s\(x\)$ 的首项系数）才成为 $#scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$]$, 所以实际上对 $#scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$]$ 完全没有影响，即使对部分余式 $f_1\(x\)$\(如例3.19) 的 $- 14 x^4 + 32 x^3 - 15 x^2 + 9 x - 2$ 乘以非零常数 $k$, 对 $#scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$]$ 也没有影响，因为 $#scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$] = #scale(x: 120%, y: 120%)[$\($] f_1\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$]$ 在辗转相除法中，实际上我们已把求 $#scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$]$ 转化为求 $#scale(x: 120%, y: 120%)[$\($] f_1\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$]$, (注意在定理2中，并未要求 $upright(d e g) r\(x\)< upright(d e g) g\(x\)$⁠，所以 $f_1\(x\)$ 又起一个被除式的角色，因而乘以非零常数 $k$⁠，对于所得的 $r\(x\)$ 仍不过相差一个常数因子，而这一点上面已说明对 $#scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$]$ 不会有影响的．
+在习题3.1第7题中，我们知道对被除式 $f\(x\)$ 乘以非零常数 $k$, 给予 $r\(x\)$ 的影响也不过是乘一个常数 $k$, 而我们所求的最后的 $r_s\(x\)$ 本来就得乘以 $1 / c$（$c$ 是 $r_s\(x\)$ 的首项系数）才成为 $class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em))$, 所以实际上对 $class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em))$ 完全没有影响，即使对部分余式 $f_1\(x\)$\(如例3.19) 的 $- 14 x^4 + 32 x^3 - 15 x^2 + 9 x - 2$ 乘以非零常数 $k$, 对 $class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em))$ 也没有影响，因为 $class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em)) = class("opening", stretch(\(, size: #1.2em)) f_1\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em))$ 在辗转相除法中，实际上我们已把求 $class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em))$ 转化为求 $class("opening", stretch(\(, size: #1.2em)) f_1\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em))$, (注意在定理2中，并未要求 $upright(d e g) r\(x\)< upright(d e g) g\(x\)$⁠，所以 $f_1\(x\)$ 又起一个被除式的角色，因而乘以非零常数 $k$⁠，对于所得的 $r\(x\)$ 仍不过相差一个常数因子，而这一点上面已说明对 $class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em))$ 不会有影响的．
 
 辗转相除法是一个运算过程较繁的方法．如果 $f\(x\)$, $g\(x\)$ 很容易分解因式，或者说如果 $f\(x\)$ 与 $g\(x\)$ 这两个多项式中至少有一个很容易分解成不可约因式的乘积，我们当然宁愿用分解因式的方法来求这两个多项式的最高公因式．但是多项式的因式分解并不总能做到．例如把一个三次多项式与一个四次多项式相乘，求出作为乘积的七次多项式是轻而易举的；但反过来，给出一个七次多项式，要求分解成两个次数较低的多项式的乘积，一般是很难做到的．相比之下，辗转相除法尽管较繁，却是有效、能算，总能求出两个多项式的最高公因式．再进一步考察任何一个多项式的不可约因式分解的表达式，是否总存在．如果存在，是否唯一，我们在以前的学习中并未作出结论．将来的进一步学习可以对这个问题作出肯定的答案．而这个结论要通过一系列命题的推导才能得出，辗转相除法之有效、能算恰恰是推导这一系列命题的基础之一．因此，从理论上来，辗转相除法是不可替代的重要的数学方法．
 
@@ -745,7 +745,7 @@ $g\(x\)= 4 x^4 + 2 x^3 - 18 x^2 + 3 x - 5$
 #example[
 $f\(x\)= x^4 - 10 x^2 + 1$,#h(1em);$g\(x\)= x^4 - 4 sqrt(2) x^3 + 6 x^2 + 4 sqrt(2) x + 1$
 
-求 $#scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$]$
+求 $class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em))$
 
 ]
 #solution[
@@ -753,11 +753,11 @@ $f\(x\)= x^4 - 10 x^2 + 1$,#h(1em);$g\(x\)= x^4 - 4 sqrt(2) x^3 + 6 x^2 + 4 sqrt
 #fig("3-06");
 
 ]
-#noindent;所以 $#scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$] = x^2 - 2 sqrt(2) x - 1$⁠．
+#noindent;所以 $class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em)) = x^2 - 2 sqrt(2) x - 1$⁠．
 
 ]
 #exercise[
-求 $#scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$]$⁠：
+求 $class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em))$⁠：
 
 + $f\(x\)= x^4 - 7 x^3 + 13 x^2 + 3 x - 18$
 
@@ -774,13 +774,13 @@ $f\(x\)= x^4 - 10 x^2 + 1$,#h(1em);$g\(x\)= x^4 - 4 sqrt(2) x^3 + 6 x^2 + 4 sqrt
 
 + $f\(x\)= 2 x^4 + 3 x^3 + 6 x^2 + 4 x + 3\,quad g\(x\)= 2 x^4 - 5 x^3 - 6 x^2 - 12 x - 9$
 
-  求：$#scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\)$]$ 及 $#scale(x: 120%, y: 120%)[$\[$] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\]$]$⁠．其中 $#scale(x: 120%, y: 120%)[$\[$] f\(x\)\,g\(x\)#scale(x: 120%, y: 120%)[$\]$]$ 为 $f\(x\)$ 与 $g\(x\)$ 的最低公倍式．
+  求：$class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em))$ 及 $class("opening", stretch(\[, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\], size: #1.2em))$⁠．其中 $class("opening", stretch(\[, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\], size: #1.2em))$ 为 $f\(x\)$ 与 $g\(x\)$ 的最低公倍式．
 
 + $f\(x\)= 2 x^4 + 3 x^3 - 4 x^2 + 13 x - 6\,quad g\(x\)= 2 x^4 - x^3 + 2 x^2 + 3 x - 2$
 
   $h\(x\)= x^4 + 3 x^3 + x^2 + 5 x + 6$
 
-  求：$#scale(x: 120%, y: 120%)[$\($] f\(x\)\,g\(x\)\,h\(x\)#scale(x: 120%, y: 120%)[$\)$]$
+  求：$class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)\,h\(x\)class("closing", stretch(\), size: #1.2em))$
 
 + $f\(x\)= x^3 + a x^2 + b x + 1\,#h(2em) g\(x\)= x^3 + b x^2 + a x + 1$
 
@@ -891,7 +891,7 @@ $ f\(x\)=\(x - alpha_1\)\(x - alpha_2\)\(x - alpha_3\)q\(x\)+ r\(x\) $ #noindent
 #proof[
 令 $f_i\(x\)$ 是由下列条件所唯一确定的次数不大于 $n$ 的多项式：$ f_i\(alpha_j\)= delta_(i j) b_i\,#h(2em) delta_(i j) = display(cases(1 & quad i = j, 0 & quad i eq.not j)) quad\(i\,j = 1\,2\,dots.h\,n + 1\) $ #noindent;则由因式定理可知 $ f_i\(x\)= c_i\(x - alpha_1\)dots.h.c\(x - alpha_(i - 1)\)\(x - alpha_(i + 1)\)dots.h.c\(x - alpha_(n + 1)\) $ #noindent;由 $f_i\(alpha_i\)= b_i$ 定出 $c_i$ 的值，可得 $ c_i = frac(b_i, \(alpha_i - alpha_1\)dots.h.c\(alpha_i - alpha_(i - 1)\)\(alpha_i - alpha_(i + 1)\)dots.h.c\(alpha_i - alpha_(n + 1)\)) $ #noindent;$therefore quad f_i\(x\)= b_i frac(\(x - alpha_1\)dots.h.c\(x - alpha_(i - 1)\)\(x - alpha_(i + 1)\)dots.h.c\(x - alpha_(n + 1)\), \(alpha_i - alpha_1\)dots.h.c\(alpha_i - alpha_(i - 1)\)\(alpha_i - alpha_(i + 1)\)dots.h.c\(alpha_i - alpha_(n + 1)\))$
 
-显然有 $f\(x\)= sum_(i = 1)^(n + 1) f_i\(x\)$.
+显然有 $f\(x\)= limits(display(sum))_(i = 1)^(n + 1) f_i\(x\)$.
 
 ]
 上述公式叫做拉格朗日的插值公式．
@@ -1343,7 +1343,7 @@ $therefore quad f\(x\)$ 除以 $g\(x\)$ 所得的余式为 $ r\(x\) & = f\(1\)+ 
   #cols(2)[
   + $f'\(x\)$
 
-  + $#scale(x: 120%, y: 120%)[$\($] f\(x\)\,f'\(x\)#scale(x: 120%, y: 120%)[$\)$]$
+  + $class("opening", stretch(\(, size: #1.2em)) f\(x\)\,f'\(x\)class("closing", stretch(\), size: #1.2em))$
 
   ]
 
@@ -1389,14 +1389,14 @@ $therefore quad f\(x\)$ 除以 $g\(x\)$ 所得的余式为 $ r\(x\) & = f\(1\)+ 
   #cols(2)[
   + $f'\(x\)$
 
-  + $#scale(x: 120%, y: 120%)[$\($] f\(x\)\,f'\(x\)#scale(x: 120%, y: 120%)[$\)$]$
+  + $class("opening", stretch(\(, size: #1.2em)) f\(x\)\,f'\(x\)class("closing", stretch(\), size: #1.2em))$
 
-  + $frac(f\(x\), #scale(x: 120%, y: 120%)[$\($] f\(x\)\,f'\(x\)#scale(x: 120%, y: 120%)[$\)$])$
+  + $frac(f\(x\), class("opening", stretch(\(, size: #1.2em)) f\(x\)\,f'\(x\)class("closing", stretch(\), size: #1.2em)))$
 
   ]
   #block[
   #set enum(numbering: enum-at(2, none, start: 4))
-  + $frac(f\(x\), #scale(x: 120%, y: 120%)[$\[$] f\(x\)\,f'\(x\)#scale(x: 120%, y: 120%)[$\]$])$ 除以 $\(x - 2\)^2$ 所得的余式．
+  + $frac(f\(x\), class("opening", stretch(\[, size: #1.2em)) f\(x\)\,f'\(x\)class("closing", stretch(\], size: #1.2em)))$ 除以 $\(x - 2\)^2$ 所得的余式．
   ]
 
 #heading(level: 2, numbering: none, outlined: false)[本章内容要点]

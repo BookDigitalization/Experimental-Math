@@ -69,17 +69,17 @@ a^(- tfrac(m, n)) = 1 / a^(tfrac(m, n))\, & #h(2em)\(a > 0\) $ #noindent;采用�
   由贝努利不等式（第六章例6.4）得 $ a =\(1 + h\)^n > 1 + n h $ #noindent;所以，$0 < h < frac(a - 1, n)\,#h(2em) 1 < 1 + h < 1 + frac(a - 1, n)$⁠，即：$ 1 < a^(tfrac(1, n)) < 1 + frac(a - 1, n) $ #noindent;再令 $n arrow.r + oo$, 由上式就得到 $ 1 lt.eq lim_(n arrow.r + oo) a^(tfrac(1, n)) lt.eq 1 $ #noindent;因此$ lim_(n arrow.r + oo) a^(tfrac(1, n)) = 1 $
 
 + 当 $0 < a < 1$ 时，令 $a = 1 / b$, 则 $b > 1$, 由上面的证明得到$ lim_(n arrow.r + oo) b^(tfrac(1, n)) = 1 $ #noindent;于是 $ lim_(n arrow.r + oo) a^(tfrac(1, n)) & = lim_(n arrow.r + oo) (1 / b)^(tfrac(1, n)) = lim_(n arrow.r + oo) 1 / b^(tfrac(1, n))\
-   & = frac(1, lim_(n arrow.r + oo) b^(tfrac(1, n))) = 1 / 1 = 1 $
+   & = frac(1, limits(lim)_(n arrow.r + oo) b^(tfrac(1, n))) = 1 / 1 = 1 $
 
 ]
 性质3可以进一步推广到下面的推论：
 
 #blk[推论][
-若 $a > 0$ 且 $a eq.not 1$, 有理数数列 $\{ h_i \}\,thick i = 1\,2\,3\,dots.h$, 以0为极限，即 $lim_(i arrow.r oo) h_i = 0$, 那么 $ lim_(i arrow.r oo) a^(h_i) = 1 $
+若 $a > 0$ 且 $a eq.not 1$, 有理数数列 $\{ h_i \}\,thick i = 1\,2\,3\,dots.h$, 以0为极限，即 $limits(lim)_(i arrow.r oo) h_i = 0$, 那么 $ lim_(i arrow.r oo) a^(h_i) = 1 $
 
 ]
 #proof[
-先设 $a > 1$, 因为 $lim_(i arrow.r oo) h_i = 0$, 必定存在这样的自然数 $N$, 使得当 $i gt.eq N$ 时，$\|h_i\|< 1$, 从而 $frac(1, \|h_i\|) > 1$⁠．用 $m_i$ 表示 $[frac(1, \|h_i\|)]$, 即不大于 $frac(1, \|h_i\|)$ 的最大整数，于是#numbered-eq($ m_i = [frac(1, \|h_i\|)] lt.eq frac(1, \|h_i\|) < m_i + 1 $);#noindent;所以，当 $i gt.eq N$ 时，有 $ frac(1, m_i + 1) <\|h_i\|lt.eq 1 / m_i $ #noindent;由 $h_i arrow.r 0$ 知，$frac(1, \|h_i\|) arrow.r oo$. 从而由 $m_i + 1 > frac(1, \|h_i\|)$ 知，$m_i arrow.r + oo$⁠．根据有理指数幂的单调性，得 $ 1 < a^(\|h_i\|) < a^(tfrac(1, m_i))\,#h(2em)\(a > 1\) $
+先设 $a > 1$, 因为 $limits(lim)_(i arrow.r oo) h_i = 0$, 必定存在这样的自然数 $N$, 使得当 $i gt.eq N$ 时，$\|h_i\|< 1$, 从而 $frac(1, \|h_i\|) > 1$⁠．用 $m_i$ 表示 $[frac(1, \|h_i\|)]$, 即不大于 $frac(1, \|h_i\|)$ 的最大整数，于是#numbered-eq($ m_i = [frac(1, \|h_i\|)] lt.eq frac(1, \|h_i\|) < m_i + 1 $);#noindent;所以，当 $i gt.eq N$ 时，有 $ frac(1, m_i + 1) <\|h_i\|lt.eq 1 / m_i $ #noindent;由 $h_i arrow.r 0$ 知，$frac(1, \|h_i\|) arrow.r oo$. 从而由 $m_i + 1 > frac(1, \|h_i\|)$ 知，$m_i arrow.r + oo$⁠．根据有理指数幂的单调性，得 $ 1 < a^(\|h_i\|) < a^(tfrac(1, m_i))\,#h(2em)\(a > 1\) $
 
 仿照性质3的证明，令 $b_i = a^(tfrac(1, m_i)) - 1 > 0$, 于是，$ a^(tfrac(1, m_i)) & =\(1 + b_i\)\
 a & =\(1 + b_i\)^(m_i) > 1 + m_i b_i\
@@ -87,7 +87,7 @@ a & =\(1 + b_i\)^(m_i) > 1 + m_i b_i\
 
 $therefore quad b_i arrow.r 0$, 即 $a^(tfrac(1, m_i)) arrow.r 1$⁠，从而当 $i arrow.r oo$ 时，$\|h_i\|arrow.r 0$, $a^(\|h_i\|) arrow.r 1$, 即 $a^(h_i) arrow.r 1$⁠．
 
-若 $0 < a < 1$, 令 $b = 1 / a > 1$, 于是 $ lim_(i arrow.r oo) a^(h_i) = lim_(i arrow.r oo) (1 / b)^(h_i) = frac(1, lim_(i arrow.r oo) b^(h_i)) = 1 / 1 = 1 $
+若 $0 < a < 1$, 令 $b = 1 / a > 1$, 于是 $ lim_(i arrow.r oo) a^(h_i) = lim_(i arrow.r oo) (1 / b)^(h_i) = frac(1, limits(lim)_(i arrow.r oo) b^(h_i)) = 1 / 1 = 1 $
 
 ]
 应用这个推论，我们可以说明当有理数 $x$ 的变化够小时，有理指数函数 $f\(x\)= a^x$ 的变化可以任意小．
@@ -200,14 +200,14 @@ $therefore quad b_i arrow.r 0$, 即 $a^(tfrac(1, m_i)) arrow.r 1$⁠，从而当
 
   + 求证当 $i gt.eq 50$ 时，不等式 $1 < 100^(tfrac(100, 2 i + 1)) < 100^(tfrac(1, m_i))$ 成立；
 
-  + 求证：$lim_(i arrow.r oo) (100^(tfrac(1, m_i)) - 1) = 0\,quad lim_(i arrow.r oo) 100^(h_i) = 1$⁠．
+  + 求证：$limits(lim)_(i arrow.r oo) (100^(tfrac(1, m_i)) - 1) = 0\,quad limits(lim)_(i arrow.r oo) 100^(h_i) = 1$⁠．
 
 == 无理指数幂的定义
 要把指数幂的定义由有理数推广到实数，自然又得用逼近法．
 
-设 $beta$ 是一个无理数，我们可以用两个有理数列 $\{ r_n \}$, $\{ s_n \}$ 去左、右夹逼，即 $r_n arrow.r beta arrow.l s_n$, 从而 $lim_(n arrow.r oo) r_n = lim_(n arrow.r oo) s_n = beta$. 现在的问题是数列 $\{ a^(r_n) \}$⁠，$\{ a^(s_n) \}$⁠，（这里 $a > 0$⁠）的极限是否存在？如果存在的话，我们就可以定义 $ a^beta = lim_(n arrow.r oo) a^(r_n) = lim_(n arrow.r oo) a^(s_n) $
+设 $beta$ 是一个无理数，我们可以用两个有理数列 $\{ r_n \}$, $\{ s_n \}$ 去左、右夹逼，即 $r_n arrow.r beta arrow.l s_n$, 从而 $limits(lim)_(n arrow.r oo) r_n = limits(lim)_(n arrow.r oo) s_n = beta$. 现在的问题是数列 $\{ a^(r_n) \}$⁠，$\{ a^(s_n) \}$⁠，（这里 $a > 0$⁠）的极限是否存在？如果存在的话，我们就可以定义 $ a^beta = limits(lim)_(n arrow.r oo) a^(r_n) = limits(lim)_(n arrow.r oo) a^(s_n) $
 
-从而就可以把有理指数函数 $a^x$ 开拓为在 $beta$ 点连续的函数：$ a^x thick\(a > 0\,thick x in bb(Q) union \{ beta \}\)= display(cases(a^x thick\(x in bb(Q)\), a^beta = lim_(n arrow.r oo) a^(r_n) = lim_(n arrow.r oo) a^(s_n))) $
+从而就可以把有理指数函数 $a^x$ 开拓为在 $beta$ 点连续的函数：$ a^x thick\(a > 0\,thick x in bb(Q) union \{ beta \}\)= display(cases(a^x thick\(x in bb(Q)\), a^beta = limits(lim)_(n arrow.r oo) a^(r_n) = limits(lim)_(n arrow.r oo) a^(s_n))) $
 
 #blk[引理][
 设 $r_n arrow.r beta arrow.l s_n$, 则
@@ -250,7 +250,7 @@ $a > 1$ 和 $0 < a < 1$ 这两种情形是完全相似的，只是不等式方�
 #proof[
 当 $beta$, $gamma$ 是有理数时，上述等式已在本教材第三册第一章给出证明，所以我们只要说明 $beta$, $gamma$ 是无理数的情形．
 
-设 $r_n arrow.r beta arrow.l s_n$, $c_n arrow.r gamma arrow.l d_n$ 分别是 $beta$, $gamma$ 的左、右夹逼数列，于是 $ \(r_n + c_n\)arrow.r beta + gamma arrow.l\(s_n + d_n\) $ #noindent;$ a^(beta + gamma) & = lim a^(r_n + c_n) = lim a^(r_n) dot.op a^(c_n)\
+设 $r_n arrow.r beta arrow.l s_n$, $c_n arrow.r gamma arrow.l d_n$ 分别是 $beta$, $gamma$ 的左、右夹逼数列，于是 $ \(r_n + c_n\)arrow.r beta + gamma arrow.l\(s_n + d_n\) $ $ a^(beta + gamma) & = lim a^(r_n + c_n) = lim a^(r_n) dot.op a^(c_n)\
  & = lim a^(r_n) dot.op lim a^(c_n) = a^beta a^gamma $
 
 现在让我们来证明 $\(a^beta\)^gamma = a^(beta dot.op gamma)$（为了讨论的方便，我们只讨论 $a > 1\,thick beta\,gamma > 0$ 的情形），
@@ -322,7 +322,7 @@ $ lim_(x arrow.r 0) a^x = 1 $
 对这个极限的证明可以仿照第一节中性质3的推论的证法去证．利用性质3, 容易证明实指数函数处处连续．
 
 #blk[性质4][
-当 $x$ 无限增大时，$a^x\,thick\(a > 1\)$ 也无限增大，可以写成 $lim_(x arrow.r + oo) a^x = + oo$（注意这个表达式并不表示此极限存在，而是说 $a^x$ 可以超过任何一个指定的正数），若 $0 < a < 1$, 则 $lim_(x arrow.r + oo) a^x = 0$
+当 $x$ 无限增大时，$a^x\,thick\(a > 1\)$ 也无限增大，可以写成 $limits(lim)_(x arrow.r + oo) a^x = + oo$（注意这个表达式并不表示此极限存在，而是说 $a^x$ 可以超过任何一个指定的正数），若 $0 < a < 1$, 则 $limits(lim)_(x arrow.r + oo) a^x = 0$
 
 ]
 #proof[
@@ -336,13 +336,13 @@ $ lim_(x arrow.r 0) a^x = 1 $
 
 ]
 #blk[性质5][
-+ 若 $a > 1$, $lim_(x arrow.r - oo) a^x = 0$.
++ 若 $a > 1$, $limits(lim)_(x arrow.r - oo) a^x = 0$.
 
-+ 若 $0 < a < 1$,$lim_(x arrow.r - oo) a^x = + oo$.
++ 若 $0 < a < 1$,$limits(lim)_(x arrow.r - oo) a^x = + oo$.
 
 ]
 #proof[
-为确定起见，设 $a > 1$, 令 $x = - y\,thick\(y > 0\)$, 则当 $x arrow.r - oo$ 时，$y arrow.r + oo$, 所以 $ lim_(x arrow.r - oo) a^x = lim_(y arrow.r + oo) a^(- y) = lim_(y arrow.r + oo) 1 / a^y = frac(1, lim_(y arrow.r + oo) a^y) = 0 $
+为确定起见，设 $a > 1$, 令 $x = - y\,thick\(y > 0\)$, 则当 $x arrow.r - oo$ 时，$y arrow.r + oo$, 所以 $ limits(lim)_(x arrow.r - oo) a^x = limits(lim)_(y arrow.r + oo) a^(- y) = limits(lim)_(y arrow.r + oo) 1 / a^y = frac(1, limits(lim)_(y arrow.r + oo) a^y) = 0 $
 
 $0 < a < 1$ 的情形，证明留给读者．
 
@@ -375,10 +375,10 @@ $0 < a < 1$ 的情形，证明留给读者．
 #proof[
 由性质1, 对于任何实数 $x$, 有 $ f\(0\)f\(x\)= f\(0 + x\)= f\(x\) $ #noindent;即得，$f\(0\)= 1$. 当 $f\(x\)$ 递增时，$f\(1\)= a > f\(0\)= 1$, 而当 $f\(x\)$ 递减时，$f\(1\)= a < f\(0\)= 1$.
 
-由性质1：$ f\(m\) & = f #scale(x: 120%, y: 120%)[$\($]\(m - 1\)+ 1 #scale(x: 120%, y: 120%)[$\)$] = f\(m - 1\)dot.op f\(1\)\
- & = f\(m - 2\)dot.op #scale(x: 120%, y: 120%)[$\($] f\(1\)#scale(x: 120%, y: 120%)[$\)$]^2 = f\(m - 3\)dot.op #scale(x: 120%, y: 120%)[$\($] f\(1\)#scale(x: 120%, y: 120%)[$\)$]^3\
+由性质1：$ f\(m\) & = f class("opening", stretch(\(, size: #1.2em))\(m - 1\)+ 1 class("closing", stretch(\), size: #1.2em)) = f\(m - 1\)dot.op f\(1\)\
+ & = f\(m - 2\)dot.op class("opening", stretch(\(, size: #1.2em)) f\(1\)class("closing", stretch(\), size: #1.2em))^2 = f\(m - 3\)dot.op class("opening", stretch(\(, size: #1.2em)) f\(1\)class("closing", stretch(\), size: #1.2em))^3\
 dots.h.c & dots.h.c dots.h.c dots.h.c dots.h.c\
- & = #scale(x: 120%, y: 120%)[$\($] f\(1\)#scale(x: 120%, y: 120%)[$\)$]^m = a^m $ #noindent;又因为 $ [f (m / n)]^n & = f overbrace((m / n + m / n + dots.h.c + m / n), n upright("个"))\
+ & = class("opening", stretch(\(, size: #1.2em)) f\(1\)class("closing", stretch(\), size: #1.2em))^m = a^m $ #noindent;又因为 $ [f (m / n)]^n & = f overbrace((m / n + m / n + dots.h.c + m / n), n upright("个"))\
  & = f\(m\)= a^m $ #noindent;所以：$f (m / n) = root(n, a^m) = a^(tfrac(m, n))$
 
 因为 $f (m / n) f (- m / n) = f (m / n - m / n) = f\(0\)= 1$
@@ -452,7 +452,7 @@ dots.h.c & dots.h.c dots.h.c dots.h.c dots.h.c\
 
   + 当 $n$ 是1或不小于5的自然数时，总有 $2^n > n^2$⁠；
 
-  + $lim_(n arrow.r oo) 2^n / n = oo$⁠．
+  + $limits(lim)_(n arrow.r oo) 2^n / n = oo$⁠．
 
 == 对数函数
 由实数幂的定义，我们得知指数函数 $ a^x\,quad\(a > 0\,thick a eq.not 1\)\,#h(2em) x in bb(R) $ #noindent;的值都是正的，现在还要进一步说明指数函数的值域是正实数集，也就是必须证明下面的命题．
@@ -462,7 +462,7 @@ dots.h.c & dots.h.c dots.h.c dots.h.c dots.h.c\
 
 ]
 #proof[
-为确定起见，设 $a > 1$, 依实指数函数的性质5, $lim_(x arrow.r - oo) a^x = 0$, 可以找出这样一数 $c_1$ 以使 $a^(c_1) < b$, 依 $a^x\,thick\(a > 1\)$ 是增函数且 $lim_(x arrow.r + oo) a^x = + oo$, 可以找出这样的数 $c_2 > c_1$, 以使 $a^(c_2) > b$, 现在由连续函数中间值定理知道，在 $c_1$ 与 $c_2$ 之间有实数 $c$ 以使 $a^c = b$, 再由单调性知道这个数是唯一的．类似地可以证明 $0 < a < 1$ 的场合，这个证明留给同学补全．
+为确定起见，设 $a > 1$, 依实指数函数的性质5, $limits(lim)_(x arrow.r - oo) a^x = 0$, 可以找出这样一数 $c_1$ 以使 $a^(c_1) < b$, 依 $a^x\,thick\(a > 1\)$ 是增函数且 $limits(lim)_(x arrow.r + oo) a^x = + oo$, 可以找出这样的数 $c_2 > c_1$, 以使 $a^(c_2) > b$, 现在由连续函数中间值定理知道，在 $c_1$ 与 $c_2$ 之间有实数 $c$ 以使 $a^c = b$, 再由单调性知道这个数是唯一的．类似地可以证明 $0 < a < 1$ 的场合，这个证明留给同学补全．
 
 ]
 现在我们根据第八章第五节反函数定理可以说由指数函数得到一个定义在正实数变域上的反函数，称为对数函数，记作 $f : bb(R)^(+) mapsto bb(R)$, 这里 $f\(x\)= log_a x$, 它是连续的单调函数．正式定义如下：
@@ -611,7 +611,7 @@ $therefore quad f (A^(- tfrac(m, n))) = - f (A^(tfrac(m, n))) = - m / n f\(A\)$
 
 + 证明下面不等式：
 
-  + $lr(|log_a b|) + lr(|log_b a|) gt.eq 2$
+  + $lr(|log_a b|) + lr(|log_b a|) gt.eq.slant 2$
 
   + $frac(1, log_2 pi) + frac(1, log_pi 2) > 2$
 
@@ -763,7 +763,7 @@ x & = - 0.9 $ #noindent;经验算可知原方程的解集是 $\{ - 0.9 \}$.
 
   因此，由 (10.7) 可得，$1 < x < 1 / a^3$⁠．
 
-  $therefore quad$ 原不等式的解集是 $lr(\{ x \| 0 < x < a^2 \}) union lr(\{ x #scale(x: 180%, y: 180%)[$\|$] 1 < x < 1 / a^3 \})$
+  $therefore quad$ 原不等式的解集是 $lr(\{ x \| 0 < x < a^2 \}) union lr(\{ x class("normal", stretch(|, size: #1.8em)) 1 < x < 1 / a^3 \})$
 
 ]
 #example[
@@ -785,7 +785,7 @@ $ upright("函数") f upright("有意义") & arrow.l.r.double.long display(cases
  & arrow.l.r.double.long 0 < frac(x, x^2 - 1) lt.eq 1 arrow.l.r.double.long display(cases(frac(x, x^2 - 1) > 0, frac(x^2 - x - 1, x^2 - 1) gt.eq 0))\
  & arrow.l.r.double.long display(cases(- 1 < x < 0 quad upright("或") quad x > 1, x < - 1 quad upright("或") quad frac(1 - sqrt(5), 2) lt.eq x < 1 quad upright("或") quad x gt.eq frac(1 + sqrt(5), 2)))\
  & arrow.l.r.double.long display(cases(- 1 < x < 0, frac(1 - sqrt(5), 2) lt.eq x < 1)) upright("或") quad display(cases(x > 1, x gt.eq frac(1 + sqrt(5), 2)))\
- & arrow.l.r.double.long frac(1 - sqrt(5), 2) lt.eq x < 0 quad upright("或") quad x gt.eq frac(1 + sqrt(5), 2) $ #noindent;故函数 $f$ 的定义域为 $ lr(\{ x #scale(x: 180%, y: 180%)[$\|$] frac(1 - sqrt(5), 2) lt.eq x < 0 \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x gt.eq frac(1 + sqrt(5), 2) \}) $
+ & arrow.l.r.double.long frac(1 - sqrt(5), 2) lt.eq x < 0 quad upright("或") quad x gt.eq frac(1 + sqrt(5), 2) $ #noindent;故函数 $f$ 的定义域为 $ lr(\{ x class("normal", stretch(|, size: #1.8em)) frac(1 - sqrt(5), 2) lt.eq x < 0 \}) union.big lr(\{ x class("normal", stretch(|, size: #1.8em)) x gt.eq frac(1 + sqrt(5), 2) \}) $
 
 ]
 #example[
@@ -805,7 +805,7 @@ $ upright("函数") f upright("有意义") & arrow.l.r.double.long display(cases
 )
 
 显然 (10.11) 又可写成#numbered-eq($ x = pi / 4 + 2 k pi $);#noindent;和#numbered-eq($ x = frac(5 pi, 4) + 2 k pi $);#noindent;再由 (10.12), (10.13), (10.14) 容易看出角 $3 x$ 与角 $- frac(3 pi, 2)$, $frac(3 pi, 4)$ 和 $- pi / 4$ 有相同的终边，所以若将解 (10.12) $x = - pi / 2 + 2 k pi$ 和解 (10.14) $x = frac(5 pi, 4) + 2 k pi$ 代入 $sin 3 x$ 中，便得到 $ sin 3 (- pi / 2 - 2 k pi) & = sin (- frac(3 pi, 2)) = - sin frac(3 pi, 2) = 1\
-sin 3 (frac(5 pi, 4) + 2 k pi) & = sin frac(15 pi, 4) = sin (4 pi - pi / 4) = sin (- pi / 4) = - sqrt(2) / 2 < 0 $ #noindent;因此这两组解是增解，应该舍去，经检验知 $x = pi / 4 + 2 k pi$ 满足不等式组 (10.10), 所以方程的解集是 $lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = pi / 4 + 2 k pi \, quad k in bb(Z) \})$
+sin 3 (frac(5 pi, 4) + 2 k pi) & = sin frac(15 pi, 4) = sin (4 pi - pi / 4) = sin (- pi / 4) = - sqrt(2) / 2 < 0 $ #noindent;因此这两组解是增解，应该舍去，经检验知 $x = pi / 4 + 2 k pi$ 满足不等式组 (10.10), 所以方程的解集是 $lr(\{ x class("normal", stretch(|, size: #1.8em)) x = pi / 4 + 2 k pi \, quad k in bb(Z) \})$
 
 ]
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题10.4]
@@ -900,9 +900,9 @@ sin 3 (frac(5 pi, 4) + 2 k pi) & = sin frac(15 pi, 4) = sin (4 pi - pi / 4) = si
 
   + $2^(2 x) - 2^(x + 1) < 2^3$
 
-  + $frac(1, (1 / 10)^y - 1) lt.eq frac(2, (1 / 100)^y - 10)$
+  + $frac(1, (1 / 10)^y - 1) lt.eq.slant frac(2, (1 / 100)^y - 10)$
 
-  + $frac(1, 2^x - 1) gt.eq frac(1, 4^x - 3)$
+  + $frac(1, 2^x - 1) gt.eq.slant frac(1, 4^x - 3)$
 
   + $(3 / 4)^(x - 1) (4 / 3)^(tfrac(1, x)) > 9 / 16$
 

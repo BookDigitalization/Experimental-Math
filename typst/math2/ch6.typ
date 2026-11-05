@@ -188,8 +188,7 @@ $therefore quad sin alpha = overline(M P) / overline(O P) = overline(M P) uprigh
 我们根据锐角三角比的定义和直角三角形中的一些边角特殊关系，可以计算出 $30 degree$⁠、$45 degree$⁠、$60 degree$ 角的三角比的精确值．
 
 作 $triangle.stroked.t A B C$, 使 $angle C = 90 degree$, $angle A = 30 degree$ (图6.8), 那么 $angle B = 60 degree$, 设 $overline(B C) = a$, 则 $overline(A B) = 2 a$, $overline(A C) = sqrt(overline(A B)^2 - overline(B C)^2) = sqrt(\(2 a\)^2 - a^2) = sqrt(3) a$. 由此得：$ sin 30 degree = frac(a, 2 a) = 1 / 2\, & #h(2em) sin 60 degree = frac(sqrt(3) a, 2 a) = sqrt(3) / 2\
-cos 30 degree = frac(sqrt(3) a, 2 a) = sqrt(3) / 2\, & #h(2em) cos 60 degree = frac(a, 2 a) = 1 / 2\
-tan 30 degree = frac(a, sqrt(3) a) = 1 / sqrt(3) = sqrt(3) / 3\, & #h(2em) tan 60 degree = frac(sqrt(3) a, a) = sqrt(3)\
+cos 30 degree = frac(sqrt(3) a, 2 a) = sqrt(3) / 2\, & #h(2em) cos 60 degree = frac(a, 2 a) = 1 / 2 $ $ tan 30 degree = frac(a, sqrt(3) a) = 1 / sqrt(3) = sqrt(3) / 3\, & #h(2em) tan 60 degree = frac(sqrt(3) a, a) = sqrt(3)\
 cot 30 degree = frac(sqrt(3) a, a) = sqrt(3)\, & #h(2em) cot 60 degree = frac(a, sqrt(3) a) = 1 / sqrt(3) = sqrt(3) / 3 $
 
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-08");], caption: []), figure([#fig("6-09");], caption: []))));

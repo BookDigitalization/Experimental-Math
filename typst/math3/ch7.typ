@@ -836,7 +836,7 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
 === 余切函数的主要性质
 由上一章的讨论和余切函数图象，我们可以得到余切函数 $y = cot x$ 的主要性质如下：
 
-+ 定义域#h(1em);余切函数 $y = cot x$ 的定义域是 $x eq.not k pi thick thick\(k in bb(Z)\)$ 的实数集，也就是由下面无数个开区间：$ #scale(x: 180%, y: 180%)[$\($] k pi\,thick\(k + 1\)pi #scale(x: 180%, y: 180%)[$\)$]\,#h(2em) k = 0\,plus.minus 1\,plus.minus 2\,plus.minus 3\,dots.h $ #noindent;组成的一个集．
++ 定义域#h(1em);余切函数 $y = cot x$ 的定义域是 $x eq.not k pi thick thick\(k in bb(Z)\)$ 的实数集，也就是由下面无数个开区间：$ class("opening", stretch(\(, size: #1.8em)) k pi\,thick\(k + 1\)pi class("closing", stretch(\), size: #1.8em))\,#h(2em) k = 0\,plus.minus 1\,plus.minus 2\,plus.minus 3\,dots.h $ #noindent;组成的一个集．
 
 + 值域#h(1em);余切函数 $y = cot x$ 的值域为一切实数．
 
@@ -916,7 +916,7 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
 #text(size: 0.9em)[#block(breakable: true)[#show table: set block(breakable: true)
 #table(
   columns: (9% + 12pt, 19% + 12pt, 19% + 12pt, 19% + 12pt, 19% + 12pt,),
-  align: (left + horizon, left + horizon, left + horizon, left + horizon, left + horizon,),
+  align: (left + top, left + top, left + top, left + top, left + top,),
   table.vline(x: 1),
   table.hline(),
   [函数],
@@ -944,16 +944,16 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
   [奇函数],
   table.hline(),
   [函数的符号],
-  [在一、二象限，即 $x in #scale(x: 120%, y: 120%)[$\($] 2 k pi$, $\(2 k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$sin x > 0$⁠；在三、四象限，即 $x in #scale(x: 120%, y: 120%)[$\($]\(2 k + 1\)pi$, $2\(k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$sin x < 0$],
-  [在一、四象限，即 $x in #scale(x: 120%, y: 120%)[$\($] - pi / 2 + 2 k pi$, $pi / 2 + 2 k pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$cos x > 0$⁠；在二、三象限，即 $x in #scale(x: 120%, y: 120%)[$\($] pi / 2 + 2 k pi$, $pi / 2 +\(2 k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$cos x < 0$],
-  [在一、三象限，即 $x in #scale(x: 120%, y: 120%)[$\($] 2 k pi$, $pi / 2 + 2 k pi #scale(x: 120%, y: 120%)[$\)$]$ 或 $#scale(x: 120%, y: 120%)[$\($]\(2 k + 1\)pi$, $pi / 2 +\(2 k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$tan x > 0$⁠；在二、四象限，即 $x in #scale(x: 120%, y: 120%)[$\($] pi / 2 + 2 k pi$, $\(2 k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 或 $#scale(x: 120%, y: 120%)[$\($] pi / 2 +\(2 k + 1\)pi$, $\(2 k + 2\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$tan x < 0$],
-  [在一、三象限，即 $x in #scale(x: 120%, y: 120%)[$\($] 2 k pi$, $pi / 2 + 2 k pi #scale(x: 120%, y: 120%)[$\)$]$ 或 $#scale(x: 120%, y: 120%)[$\($]\(2 k + 1\)pi$, $pi / 2 +\(2 k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$cot x > 0$⁠；在二、四象限，即 $x in #scale(x: 120%, y: 120%)[$\($] pi / 2 + 2 k pi$, $\(2 k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 或 $#scale(x: 120%, y: 120%)[$\($] pi / 2 +\(2 k + 1\)pi$, $\(2 k + 2\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$cot x < 0$],
+  [在一、二象限，即 $x in class("opening", stretch(\(, size: #1.2em)) 2 k pi$, $\(2 k + 1\)pi class("closing", stretch(\), size: #1.2em))$ 时，$sin x > 0$⁠；在三、四象限，即 $x in class("opening", stretch(\(, size: #1.2em))\(2 k + 1\)pi$, $2\(k + 1\)pi class("closing", stretch(\), size: #1.2em))$ 时，$sin x < 0$],
+  [在一、四象限，即 $x in class("opening", stretch(\(, size: #1.2em)) - pi / 2 + 2 k pi$, $pi / 2 + 2 k pi class("closing", stretch(\), size: #1.2em))$ 时，$cos x > 0$⁠；在二、三象限，即 $x in class("opening", stretch(\(, size: #1.2em)) pi / 2 + 2 k pi$, $pi / 2 +\(2 k + 1\)pi class("closing", stretch(\), size: #1.2em))$ 时，$cos x < 0$],
+  [在一、三象限，即 $x in class("opening", stretch(\(, size: #1.2em)) 2 k pi$, $pi / 2 + 2 k pi class("closing", stretch(\), size: #1.2em))$ 或 $class("opening", stretch(\(, size: #1.2em))\(2 k + 1\)pi$, $pi / 2 +\(2 k + 1\)pi class("closing", stretch(\), size: #1.2em))$ 时，$tan x > 0$⁠；在二、四象限，即 $x in class("opening", stretch(\(, size: #1.2em)) pi / 2 + 2 k pi$, $\(2 k + 1\)pi class("closing", stretch(\), size: #1.2em))$ 或 $class("opening", stretch(\(, size: #1.2em)) pi / 2 +\(2 k + 1\)pi$, $\(2 k + 2\)pi class("closing", stretch(\), size: #1.2em))$ 时，$tan x < 0$],
+  [在一、三象限，即 $x in class("opening", stretch(\(, size: #1.2em)) 2 k pi$, $pi / 2 + 2 k pi class("closing", stretch(\), size: #1.2em))$ 或 $class("opening", stretch(\(, size: #1.2em))\(2 k + 1\)pi$, $pi / 2 +\(2 k + 1\)pi class("closing", stretch(\), size: #1.2em))$ 时，$cot x > 0$⁠；在二、四象限，即 $x in class("opening", stretch(\(, size: #1.2em)) pi / 2 + 2 k pi$, $\(2 k + 1\)pi class("closing", stretch(\), size: #1.2em))$ 或 $class("opening", stretch(\(, size: #1.2em)) pi / 2 +\(2 k + 1\)pi$, $\(2 k + 2\)pi class("closing", stretch(\), size: #1.2em))$ 时，$cot x < 0$],
   table.hline(),
   [增减性],
-  [在一、四象限，即 $x in #scale(x: 120%, y: 120%)[$\($] - pi / 2 + 2 k pi$, $pi / 2 + 2 k pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$sin x$ 是增函数；在二、三象限，即 $x in #scale(x: 120%, y: 120%)[$\($] pi / 2 + 2 k pi$, $pi / 2 +\(2 k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$sin x$ 是减函数],
-  [在一、二象限，即 $x in #scale(x: 120%, y: 120%)[$\($] 2 k pi$, $\(2 k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$cos x$ 是减函数；在三、四象限，即 $x in #scale(x: 120%, y: 120%)[$\($]\(2 k + 1\)pi$, $2\(k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$cos x$ 是增函数],
-  [在各象限都为增函数，即 $x in #scale(x: 120%, y: 120%)[$\($] - pi / 2 + k pi$, $pi / 2 + k pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$tan x$ 是增函数],
-  [在各象限都为减函数，即 $x in #scale(x: 120%, y: 120%)[$\($] k pi$, $\(k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$cot x$ 是减函数],
+  [在一、四象限，即 $x in class("opening", stretch(\(, size: #1.2em)) - pi / 2 + 2 k pi$, $pi / 2 + 2 k pi class("closing", stretch(\), size: #1.2em))$ 时，$sin x$ 是增函数；在二、三象限，即 $x in class("opening", stretch(\(, size: #1.2em)) pi / 2 + 2 k pi$, $pi / 2 +\(2 k + 1\)pi class("closing", stretch(\), size: #1.2em))$ 时，$sin x$ 是减函数],
+  [在一、二象限，即 $x in class("opening", stretch(\(, size: #1.2em)) 2 k pi$, $\(2 k + 1\)pi class("closing", stretch(\), size: #1.2em))$ 时，$cos x$ 是减函数；在三、四象限，即 $x in class("opening", stretch(\(, size: #1.2em))\(2 k + 1\)pi$, $2\(k + 1\)pi class("closing", stretch(\), size: #1.2em))$ 时，$cos x$ 是增函数],
+  [在各象限都为增函数，即 $x in class("opening", stretch(\(, size: #1.2em)) - pi / 2 + k pi$, $pi / 2 + k pi class("closing", stretch(\), size: #1.2em))$ 时，$tan x$ 是增函数],
+  [在各象限都为减函数，即 $x in class("opening", stretch(\(, size: #1.2em)) k pi$, $\(k + 1\)pi class("closing", stretch(\), size: #1.2em))$ 时，$cot x$ 是减函数],
   table.hline(),
   [函数的极值],
   [当 $x = pi / 2 + 2 k pi$ 时，$sin x = 1$ 是极大值；当 $x = frac(3 pi, 2) + 2 k pi$ 时，$sin x = - 1$ 是极小值],

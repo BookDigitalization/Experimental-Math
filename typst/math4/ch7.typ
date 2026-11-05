@@ -13,6 +13,8 @@
 + 以3去除2，得：
 
   #align(center)[
+  #declongdiv("2.00", 3, max-extra: 2);
+
   ]
   #noindent;因为每次20除以3都余2, 所以商数6重复出现，这个除法可以无止境地作下去．
 
@@ -24,7 +26,7 @@
 从上面的分析，同学们可以看出 $2 / 3$ 显然不能用有限位小数表示出，但是存在着由有限位小数所成的无穷数列 $\{ a_n \}$ 和 $\{ b_n \}$ $ \{ a_n \} & : quad a_1 = 0.6\,thick a_2 = 0.66\,thick a_3 = 0.666\,thick dots.h\,thick a_n = 0 . underbrace(66 dots.h.c 66, n upright("位小数"))\,thick dots.h\
 \{ b_n \} & : quad b_1 = 0.7\,thick b_2 = 0.67\,thick b_3 = 0.667\,thick dots.h\,thick b_n = 0 . underbrace(66 dots.h.c 67, n upright("位小数"))\,thick dots.h $ #noindent;满足 $ a_n = 0 . underbrace(66 dots.h.c 66, n upright("位小数")) < 2 / 3 < 0 . underbrace(66 dots.h.c 67, n upright("位小数")) = a_n + 1 / 10^n $ #noindent;并且 $a_n$ 与 $2 / 3$ 之间的误差 $lr(|a_n - 2 / 3|) < b_n - a_n = 1 / 10^n$, 同样 $b_n$ 与 $2 / 3$ 之间误差 $lr(|b_n - 2 / 3|) < 1 / 10^n$⁠，只要 $n$ 充分大，误差可以小到任意小．上面的逼近过程，表明无穷数列 $\{ a_n \}$, $\{ b_n \}$ 从左、右两方面趋近 $2 / 3$⁠，可以使其误差任意小，$2 / 3$ 就是数列 $\{ a_n \}$ 的极限，也是数列 $\{ b_n \}$ 的极限，用符号表示就是 $ lim_(n arrow.r oo) a_n = 2 / 3\,#h(2em) lim_(n arrow.r oo) b_n = 2 / 3 $ #noindent;或者用 $ a_n arrow.r 2 / 3\,#h(2em) b_n arrow.r 2 / 3\,#h(2em) a_n arrow.r 2 / 3 arrow.l b_n $ #noindent;来生动地表述上述事实．
 
-从这里我们看到逼近与极限是密切相关的，极限只是把逼近过程推进到无穷 $\(n arrow.r oo\)$ 的结果，逼近只要误差小到所要求的精确度后就可以停止．$lim_(n arrow.r oo) a_n = 2 / 3$ 表示数列 $\{ a_n \}$ 当 $n$ 无限增大的极限值是 $2 / 3$⁠．
+从这里我们看到逼近与极限是密切相关的，极限只是把逼近过程推进到无穷 $\(n arrow.r oo\)$ 的结果，逼近只要误差小到所要求的精确度后就可以停止．$limits(lim)_(n arrow.r oo) a_n = 2 / 3$ 表示数列 $\{ a_n \}$ 当 $n$ 无限增大的极限值是 $2 / 3$⁠．
 
 我们再用极限的观点对 $sqrt(2)$ 进行分析如下．$sqrt(2)$ 是一个什么数？要回答这个问题，我们只须找出有理数 $a / b$ 在什么时候大于 $sqrt(2)$, 什么时候小于 $sqrt(2)$, 也就是说，如果 $(a / b)^2 < 2$, 那么正数 $a / b < sqrt(2)$⁠；如果 $(a / b)^2 > 2$, 那么 $a / b > sqrt(2)$. 根据有理数是有序的，稠密的，因此有理数的平方总能和2比较大小，这就保证我们可以用逼近法（譬如十分逼近法）决定左、右夹逼 $sqrt(2)$ 的两个由十进位小数组成的数列 $\{ a_n \}$⁠、$\{ b_n \}$ 如下：$ \{ a_n \} & : quad a_1 = 1\,thick a_2 = 1.4\,thick a_3 = 1.41\,thick a_4 = 1.414\,dots.h\
 \{ b_n \} & : quad b_1 = 2\,thick b_2 = 1.5\,thick b_3 = 1.42\,thick b_4 = 1.415\,dots.h $ #noindent;使得 $a_n < sqrt(2) < b_n$, 而且 $b_n - a_n = 1 / 10^n$, 于是 $ \|a_n - sqrt(2)\|< 1 / 10^n\,#h(2em)\|b_n - sqrt(2)\|< 1 / 10^n $ #noindent;这就是说，第 $n$ 次的有限小数近似值 $a_n$ 和 $b_n$ 与 $sqrt(2)$ 的误差分别小于 $1 / 10^n$⁠，因此，只要 $n$ 充分大，误差就可以小到任意小，当我们让这个计算过程，无穷地进行下去时，我们就说 $sqrt(2)$ 是数列 $\{ a_n \}$ 或 $\{ b_n \}$ 的极限，记做 $ lim_(n arrow.r oo) a_n = sqrt(2)\,#h(2em) lim_(n arrow.r oo) b_n = sqrt(2) $
@@ -44,7 +46,7 @@
 
 + 当 $n$ 愈来愈大时，$a_n = 1 / n$ 愈来愈接近0, 它们的误差 $\|a_n - 0\|= 1 / n$, 只要 $n$ 充分大，就可以小到任意小．
 
-对于情形3，我们就说：数列 $lr(\{ 1 / n \})$ 趋近于0或收敛到0, 或0是数列 $lr(\{ 1 / n \})$ 的极限，并记作 $1 / n arrow.r 0$ 或 $lim_(n arrow.r oo) 1 / n = 0$⁠．
+对于情形3，我们就说：数列 $lr(\{ 1 / n \})$ 趋近于0或收敛到0, 或0是数列 $lr(\{ 1 / n \})$ 的极限，并记作 $1 / n arrow.r 0$ 或 $limits(lim)_(n arrow.r oo) 1 / n = 0$⁠．
 
 现在，让我们再用数轴把上述事实图解说明如下：
 
@@ -115,7 +117,7 @@
 
 ]
 #proof[
-对于任给 $epsilon > 0$⁠，要使 $ lr(|frac(n, n + 1) - 1|) = frac(1, n + 1) < epsilon $ #noindent;只须 $n + 1 > 1 / epsilon$⁠，即 $n > 1 / epsilon - 1$⁠，取 $N = (1 / epsilon - 1)$ 的整数部分 $+ 1$⁠，所以当 $n gt.eq N$ 时，可使 $ lr(|frac(n, n + 1) - 1|) = frac(1, n + 1) lt.eq frac(1, N + 1) < epsilon $ #noindent;这就是说 $lim_(n arrow.r oo) frac(n, n + 1) = 1$⁠．
+对于任给 $epsilon > 0$⁠，要使 $ lr(|frac(n, n + 1) - 1|) = frac(1, n + 1) < epsilon $ #noindent;只须 $n + 1 > 1 / epsilon$⁠，即 $n > 1 / epsilon - 1$⁠，取 $N = (1 / epsilon - 1)$ 的整数部分 $+ 1$⁠，所以当 $n gt.eq N$ 时，可使 $ lr(|frac(n, n + 1) - 1|) = frac(1, n + 1) lt.eq frac(1, N + 1) < epsilon $ #noindent;这就是说 $limits(lim)_(n arrow.r oo) frac(n, n + 1) = 1$⁠．
 
 ]
 #example[
@@ -127,7 +129,7 @@
 
 对于任给 $epsilon > 0$, 因为数列 $\{ a_n \}$ 的所有偶数项为0, 所以从第二项开始以后的所有偶数项都小于给定的 $epsilon$. 现在须从奇数项中确定从哪一项开始以后的一切项与0的误差小于 $epsilon$.
 
-令奇数项与0的误差：$frac(2, n + 1) < epsilon$⁠，即 $ n + 1 > 2 / epsilon\,#h(2em) n > 2 / epsilon - 1 $ #noindent;取 $N = (2 / epsilon - 1)$ 的整数部分加1，于是，当 $n gt.eq N$⁠，可使 $frac(2, n + 1) < epsilon$⁠．所以对于任给 $epsilon > 0$, 从第 $N$ 项开始以后的一切项都能使 $\|a_n - 0\|< epsilon$ 成立．即 $lim_(n arrow.r oo) a_n = 0$⁠．
+令奇数项与0的误差：$frac(2, n + 1) < epsilon$⁠，即 $ n + 1 > 2 / epsilon\,#h(2em) n > 2 / epsilon - 1 $ #noindent;取 $N = (2 / epsilon - 1)$ 的整数部分加1，于是，当 $n gt.eq N$⁠，可使 $frac(2, n + 1) < epsilon$⁠．所以对于任给 $epsilon > 0$, 从第 $N$ 项开始以后的一切项都能使 $\|a_n - 0\|< epsilon$ 成立．即 $limits(lim)_(n arrow.r oo) a_n = 0$⁠．
 
 ]
 #example[
@@ -137,7 +139,7 @@
 #proof[
 对于任给 $epsilon > 0$, 要使 $ \|a_n - 1\|= lr(|frac(n^2 - 1, n^2 + n + 1) - 1|) = lr(|frac(- n - 2, n^2 + n + 1)|) = frac(n + 2, n^2 + n + 1) < epsilon $ #noindent;看看是否存在这样的 $N$, 使得当 $n gt.eq N$ 时，永远有 $\|a_n - 1\|< epsilon$⁠，可是直接从上面的不等式解出 $N$ 是不容易的，但我们注意到，当 $n$ 充分大时，在分子中起主导作用的是 $n$, 而在分母中起主导作用 $n^2$. 如果把分子扩大为 $2 n thick\(n > 2\)$, 又把分母缩小为 $n^2$, 这样有 $ \|a_n - 1\|= frac(n + 2, n^2 + n + 1) < frac(2 n, n^2) = 2 / n $
 
-现在令 $\|a_n - 1\|< 2 / n < epsilon$⁠，即 $n > 2 / epsilon$⁠，取 $N$ 为 $2 / epsilon$ 的整数部分加1, 于是，当 $n gt.eq N$ 时，可使 $ \|a_n - 1\|< 2 / n < epsilon $ #noindent;这就是说 $lim_(n arrow.r oo) frac(n^2 - 1, n^2 + n + 1) = 1$⁠．
+现在令 $\|a_n - 1\|< 2 / n < epsilon$⁠，即 $n > 2 / epsilon$⁠，取 $N$ 为 $2 / epsilon$ 的整数部分加1, 于是，当 $n gt.eq N$ 时，可使 $ \|a_n - 1\|< 2 / n < epsilon $ #noindent;这就是说 $limits(lim)_(n arrow.r oo) frac(n^2 - 1, n^2 + n + 1) = 1$⁠．
 
 ]
 在上面的证明中，所取得的 $N$ 比实际所需要的要大一些，这样并不影响我们所要说明的问题：“$N$ 是根据预先给定的 $epsilon$ 来确定的，而且这个 $N$ 满足极限定义中的条件”，事实上，$N$ 不是由 $epsilon$ 唯一确定的，对于给定的 $epsilon > 0$, 如果某数，譬如10000可以充当极限定义中的 $N$, 则大于10000的任何一个自然数也都可以充当 $N$, 自然 $N$ 愈小愈好，但是，有时候为了便于证明，不妨把 $N$ 取得大些．问题的关键是是否存在这样的 $N$, 至于这个 $N$ 是否是最小的，那是第二位的问题．
@@ -158,9 +160,9 @@
 
 例如，$\{ n^2 \}$, $\{ - n^2 \}$, $\{\(- n\)\}$ 等数列都是无限增大的．
 
-如果数列 $\{ a_n \}$ 是无限增大的，并且从某项以后的一切项为正数时，我们说数列 $\{ a_n \}$ 趋于#strong[正无穷大]，记作 $lim_(n arrow.r oo) a_n = + oo$⁠，例如 $lim_(n arrow.r oo) n^2 = + oo$⁠．
+如果数列 $\{ a_n \}$ 是无限增大的，并且从某项以后的一切项为正数时，我们说数列 $\{ a_n \}$ 趋于#strong[正无穷大]，记作 $limits(lim)_(n arrow.r oo) a_n = + oo$⁠，例如 $limits(lim)_(n arrow.r oo) n^2 = + oo$⁠．
 
-如果数列 $\{ a_n \}$ 是无限增大的，并且从某项以后的一切项为负数时，我们说数列 $\{ a_n \}$ 趋于#strong[负无穷大]，记作 $lim_(n arrow.r oo) a_n = - oo$. 例如 $lim_(n arrow.r oo)\(- n^2\)= - oo$⁠．
+如果数列 $\{ a_n \}$ 是无限增大的，并且从某项以后的一切项为负数时，我们说数列 $\{ a_n \}$ 趋于#strong[负无穷大]，记作 $limits(lim)_(n arrow.r oo) a_n = - oo$. 例如 $limits(lim)_(n arrow.r oo)\(- n^2\)= - oo$⁠．
 
 在无界数列中，也有不是无限增大的，例如，数列 $ (n sin frac(n pi, 2)) : quad 1\,0\,- 3\,0\,5\,0\,- 7\,0\,dots.h $ #noindent;是无界的，但不是无限增大的，因为它的偶数项永远等于0．
 
@@ -170,7 +172,7 @@
 如果各项不为0的数列 $\{ a_n \}$ 是无限增大的，那么它的倒数 $b_n = 1 / a_n$ 就组成以0为极限的数列；反过来，如果各项不为0的数列 $\{ a_n \}$ 收敛到0, 那么它的倒数 $b_n = 1 / a_n$ 就组成无限增大的数列．
 
 ]
-事实上，对于任意给出的无论多么小的正数 $epsilon$, 令 $M = 1 / epsilon$⁠，根据数列 $\{ a_n \}$ 是无限增大的，一定可以找到正整数 $N$, 使得当 $n gt.eq N$ 时，有 $\|a_n\|> M$ 成立，从而 $ \|b_n\|= lr(|1 / a_n|) = frac(1, \|a_n\|) < 1 / M = epsilon $ #noindent;这就是说，$lim_(n arrow.r oo) b_n = lim_(n arrow.r oo) 1 / a_n = 0$⁠．同样也可以证明逆命题．
+事实上，对于任意给出的无论多么小的正数 $epsilon$, 令 $M = 1 / epsilon$⁠，根据数列 $\{ a_n \}$ 是无限增大的，一定可以找到正整数 $N$, 使得当 $n gt.eq N$ 时，有 $\|a_n\|> M$ 成立，从而 $ \|b_n\|= lr(|1 / a_n|) = frac(1, \|a_n\|) < 1 / M = epsilon $ #noindent;这就是说，$limits(lim)_(n arrow.r oo) b_n = limits(lim)_(n arrow.r oo) 1 / a_n = 0$⁠．同样也可以证明逆命题．
 
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题7.1]
 
@@ -224,17 +226,17 @@
 虽然数列趋向于它们各自的极限时，有各种不同的状态，但是所有这些数列都具有一系列的共同的性质，我们现在就来研究其中若干重要性质．
 
 #blk[定理1][
-若 $lim_(n arrow.r oo) a_n = A$, 而 $A > p$\(或 $A < p$), 则存在数 $N$, 当 $n gt.eq N$ 时，永远有 $a_n > p$\(或 $a_n < p$)．
+若 $limits(lim)_(n arrow.r oo) a_n = A$, 而 $A > p$\(或 $A < p$), 则存在数 $N$, 当 $n gt.eq N$ 时，永远有 $a_n > p$\(或 $a_n < p$)．
 
 ]
 #proof[
-$because quad lim_(n arrow.r oo) a_n = A$ 让我们取定正数 $epsilon < A - p$ (或 $p - A$), 从而 $ A - epsilon > p $ #noindent;根据数列极限定义，可以找到这样的 $N$, 使得当 $n gt.eq N$ 时，有 $ A - epsilon < a_n < A + epsilon $ #noindent;于是，当 $n gt.eq N$ 时，就有 $a_n > p$ (或 $a_n < p$)．
+$because quad limits(lim)_(n arrow.r oo) a_n = A$ 让我们取定正数 $epsilon < A - p$ (或 $p - A$), 从而 $ A - epsilon > p $ #noindent;根据数列极限定义，可以找到这样的 $N$, 使得当 $n gt.eq N$ 时，有 $ A - epsilon < a_n < A + epsilon $ #noindent;于是，当 $n gt.eq N$ 时，就有 $a_n > p$ (或 $a_n < p$)．
 
 ]
 定理1说明如果数列的极限大于（或小于）某一个实数，那么收敛到此极限的数列从某一项起也大于（或小于）这个实数．这个性质反映了收敛的数列和极限之间的密切关系．
 
 #blk[定理2][
-若 $lim_(n arrow.r oo) a_n = A$, 而且当 $n gt.eq N$ 时，$a_n lt.eq p$（或 $a_n gt.eq p$⁠），则 $A lt.eq p$（或 $A gt.eq p$⁠）．
+若 $limits(lim)_(n arrow.r oo) a_n = A$, 而且当 $n gt.eq N$ 时，$a_n lt.eq p$（或 $a_n gt.eq p$⁠），则 $A lt.eq p$（或 $A gt.eq p$⁠）．
 
 ]
 #proof[
@@ -243,10 +245,10 @@ $because quad lim_(n arrow.r oo) a_n = A$ 让我们取定正数 $epsilon < A - p
 $therefore quad A lt.eq p$⁠．
 
 ]
-从例7.2看到 $a_n = frac(n, n + 1) < 1$, 而 $lim_(n arrow.r oo) frac(n, n + 1) = 1$. 这个例子说明从严格的不等式 $a_n < p$ 和 $lim_(n arrow.r oo) a_n = A$, 不能推出严格的不等式 $A < p$. 而定理2是说取极限过程使不大于或不小于关系保持不变．
+从例7.2看到 $a_n = frac(n, n + 1) < 1$, 而 $limits(lim)_(n arrow.r oo) frac(n, n + 1) = 1$. 这个例子说明从严格的不等式 $a_n < p$ 和 $limits(lim)_(n arrow.r oo) a_n = A$, 不能推出严格的不等式 $A < p$. 而定理2是说取极限过程使不大于或不小于关系保持不变．
 
 #blk[定理3][
-若 $lim_(n arrow.r oo) a_n = A$, 则 $A$ 是唯一的．
+若 $limits(lim)_(n arrow.r oo) a_n = A$, 则 $A$ 是唯一的．
 
 ]
 #proof[
@@ -258,7 +260,7 @@ $therefore quad A lt.eq p$⁠．
 
 ]
 #blk[定理4][
-若 $lim_(n arrow.r oo) a_n = A$, 则数列 $\{ a_n \}$ 是有界的．
+若 $limits(lim)_(n arrow.r oo) a_n = A$, 则数列 $\{ a_n \}$ 是有界的．
 
 ]
 #proof[
@@ -268,26 +270,26 @@ $therefore quad A lt.eq p$⁠．
 
 ]
 #blk[定理5][
-若三个数列 $\{ a_n \}\,\{ b_n \}\,\{ c_n \}$ 的对应项满足不等式 $a_n lt.eq b_n lt.eq c_n$, 对于一切 $n = 1\,2\,3\,dots.h$ 并且 $lim_(n arrow.r oo) a_n = lim_(n arrow.r oo) c_n = A$⁠，则 $lim_(n arrow.r oo) b_n = A$⁠．
+若三个数列 $\{ a_n \}\,\{ b_n \}\,\{ c_n \}$ 的对应项满足不等式 $a_n lt.eq b_n lt.eq c_n$, 对于一切 $n = 1\,2\,3\,dots.h$ 并且 $limits(lim)_(n arrow.r oo) a_n = limits(lim)_(n arrow.r oo) c_n = A$⁠，则 $limits(lim)_(n arrow.r oo) b_n = A$⁠．
 
 ]
 #proof[
-$ because quad lim_(n arrow.r oo) a_n = A\,quad lim_(n arrow.r oo) c_n = A $ #noindent;根据数列极限定义知，对于任意给定 $epsilon > 0$, 存在正整数 $N_1$, 使得当 $n gt.eq N_1$ 时，有 $ A - epsilon < a_n < A + epsilon $ #noindent;并且也存在一个正整数 $N_2$, 使得当 $n gt.eq N_2$, 有 $ A - epsilon < c_n < A + epsilon $ #noindent;令 $N = max\(N_1\,N_2\)$, 于是当 $n gt.eq N$ 时，就同时有 $ A - epsilon < a_n < A + epsilon\,#h(2em) A - epsilon < c_n < A + epsilon $ #noindent;$because quad a_n lt.eq b_n lt.eq c_n\,quad n = 1\,2\,3\,dots.h$
+$ because quad limits(lim)_(n arrow.r oo) a_n = A\,quad limits(lim)_(n arrow.r oo) c_n = A $ #noindent;根据数列极限定义知，对于任意给定 $epsilon > 0$, 存在正整数 $N_1$, 使得当 $n gt.eq N_1$ 时，有 $ A - epsilon < a_n < A + epsilon $ #noindent;并且也存在一个正整数 $N_2$, 使得当 $n gt.eq N_2$, 有 $ A - epsilon < c_n < A + epsilon $ #noindent;令 $N = max\(N_1\,N_2\)$, 于是当 $n gt.eq N$ 时，就同时有 $ A - epsilon < a_n < A + epsilon\,#h(2em) A - epsilon < c_n < A + epsilon $ #noindent;$because quad a_n lt.eq b_n lt.eq c_n\,quad n = 1\,2\,3\,dots.h$
 
 $therefore quad$ 当 $n gt.eq N$ 时，就有 $ A - epsilon < a_n lt.eq b_n lt.eq c_n < A + epsilon $
 
-这就是说，$lim_(n arrow.r oo) b_n = A$⁠．
+这就是说，$limits(lim)_(n arrow.r oo) b_n = A$⁠．
 
 ]
 定理5不仅告诉我们判断 $\{ b_n \}$ 的极限存在的一种方法，而且也可用这方法来求极限．用这个方法，我们可以不去直接求 $\{ b_n \}$ 的极限，而是把它和另外两个我们熟悉的有相同极限的数列作比较．
 
 #example[
-求 $lim_(n arrow.r oo) frac(1, n (cos^2 1 / 2 n pi + n sin^2 1 / 2 n pi))$
+求 $limits(lim)_(n arrow.r oo) frac(1, n (cos^2 1 / 2 n pi + n sin^2 1 / 2 n pi))$
 
 ]
 #solution[
 $ upright("分母") & = n (cos^2 1 / 2 n pi + n sin^2 1 / 2 n pi)\
- & = n [1 + \( n - 1 \) sin^2 1 / 2 n pi] $ #noindent;又因为 $0 lt.eq sin^2 1 / 2 n pi lt.eq 1$⁠，所以 $ 0 < n lt.eq n (cos^2 1 / 2 n pi + n sin^2 1 / 2 n pi) lt.eq n^2 $ #noindent;即 $ 1 / n^2 lt.eq frac(1, n (cos^2 1 / 2 n pi + n sin^2 1 / 2 n pi)) lt.eq 1 / n $ #noindent;此外，$lim_(n arrow.r oo) 1 / n^2 = 0\,quad lim_(n arrow.r oo) 1 / n = 0$⁠，根据定理5，$ lim_(n arrow.r oo) frac(1, n (cos^2 1 / 2 n pi + n sin^2 1 / 2 n pi)) = 0 $
+ & = n [1 + \( n - 1 \) sin^2 1 / 2 n pi] $ #noindent;又因为 $0 lt.eq sin^2 1 / 2 n pi lt.eq 1$⁠，所以 $ 0 < n lt.eq n (cos^2 1 / 2 n pi + n sin^2 1 / 2 n pi) lt.eq n^2 $ #noindent;即 $ 1 / n^2 lt.eq frac(1, n (cos^2 1 / 2 n pi + n sin^2 1 / 2 n pi)) lt.eq 1 / n $ #noindent;此外，$limits(lim)_(n arrow.r oo) 1 / n^2 = 0\,quad limits(lim)_(n arrow.r oo) 1 / n = 0$⁠，根据定理5，$ limits(lim)_(n arrow.r oo) frac(1, n (cos^2 1 / 2 n pi + n sin^2 1 / 2 n pi)) = 0 $
 
 ]
 #example[
@@ -299,11 +301,11 @@ $ upright("分母") & = n (cos^2 1 / 2 n pi + n sin^2 1 / 2 n pi)\
 
 若 $\|q\|> 1$, 则 $\|q\|= 1 + a\,thick\(a > 0\)$, 于是 $ \|q\|^n =\(1 + a\)^n > 1 + n a $ #noindent;当 $n arrow.r oo$ 时，变量 $1 + n a$ 无限增大，是发散的，因此，$\|q\|^n$ 也是发散的．
 
-若 $0 <\|q\|< 1$, 设 $q = 1 / q_1$, 于是 $\|q_1\|> 1$, 因而 $\|q_1\|^n > 1 + n a > 0$, 根据不等式的性质，得：$ 0 < frac(1, \|q_1^n\|) < frac(1, 1 + n a) $ #noindent;又 $lim_(n arrow.r oo) frac(1, 1 + n a) = 0\,quad lim 0 = 0$⁠，根据定理5，得：$ lim_(n arrow.r oo) frac(1, \|q_1^n\|) = 0\,quad lim_(n arrow.r oo)\|q\|^n = lim_(n arrow.r oo)\|q^n\|= 0 $ #noindent;从而，$lim_(n arrow.r oo) q^n = 0$, $0 <\|q\|< 1$⁠．
+若 $0 <\|q\|< 1$, 设 $q = 1 / q_1$, 于是 $\|q_1\|> 1$, 因而 $\|q_1\|^n > 1 + n a > 0$, 根据不等式的性质，得：$ 0 < frac(1, \|q_1^n\|) < frac(1, 1 + n a) $ #noindent;又 $limits(lim)_(n arrow.r oo) frac(1, 1 + n a) = 0\,quad lim 0 = 0$⁠，根据定理5，得：$ lim_(n arrow.r oo) frac(1, \|q_1^n\|) = 0\,quad lim_(n arrow.r oo)\|q\|^n = lim_(n arrow.r oo)\|q^n\|= 0 $ #noindent;从而，$limits(lim)_(n arrow.r oo) q^n = 0$, $0 <\|q\|< 1$⁠．
 
 ]
 #example[
-证明 $lim_(n arrow.r oo) frac(r^n, n !) = 0$
+证明 $limits(lim)_(n arrow.r oo) frac(r^n, n !) = 0$
 
 ]
 #proof[
@@ -330,9 +332,9 @@ alpha_1 & approx frac(a - x_1^2, 2 x_1) $ #noindent;把 $x_1 + frac(a - x_1^2, 2
 
 为得到更精确的近似值，重复上面的过程，用 $x_2$ 替换上面的 $x_1$, 同样得到 $sqrt(a)$ 的第三个近似值 $ x_3 = frac(x_2^2 + a, 2 x_2) $ #noindent;一般地，若求得 $sqrt(a)$ 的第 $n$ 个近似值 $x_n$, 则下一近似值可由公式#numbered-eq($ x_(n + 1) = frac(x_n^2 + a, 2 x_n) $);#noindent;求得．
 
-现在我们来证明，这样求得的 $sqrt(a)$ 近似值数列 (7.1) 收敛到 $sqrt(a)$\. 这也就是要证明误差 $\|x_(n + 1) - sqrt(a)\|$ 可以任意地小．为此，比较相邻的两个近似值的误差：$ alpha_n = x_n - sqrt(a)\,#h(2em) alpha_(n + 1) = x_(n + 1) - sqrt(a) $ #noindent;#numbered-eq($ alpha_(n + 1) = x_(n + 1) - sqrt(a) = frac(x_n^2 + a, 2 x_n) - sqrt(a) = frac((x_n - sqrt(a))^2, 2 x_n) $);#noindent;因为 $sqrt(a)$ 是算术根，其近似值 $x_n$ 均为正值．因此，$alpha_(n + 1) > 0$, 即 $alpha_2\,alpha_3\,dots.h$ 均为正数．换言之，从第二个近似值开始以后所有近似值均为过剩近似值，而第一个近似值是可以是过剩的也可以是不足的．由 (7.2) 得 $ x_(n + 1) - sqrt(a) = (frac(x_n - sqrt(a), 2 x_n)) (x_n - sqrt(a)) = (1 / 2 - frac(sqrt(a), 2 x_n)) (x_n - sqrt(a)) $ #noindent;$because quad x_n > sqrt(a)\,quad therefore quad 0 < 1 / 2 - frac(sqrt(a), 2 x_n) < 1 / 2$⁠，由此得 $ lr(|x_(n + 1) - sqrt(a)|) < 1 / 2 lr(|x_n - sqrt(a)|) < (1 / 2)^2 lr(|x_(n - 1) - sqrt(a)|) < dots.h.c < (1 / 2)^n lr(|x_1 - sqrt(a)|) $ #noindent;$therefore quad 0 lt.eq lim_(n arrow.r oo) lr(|x_(n + 1) - sqrt(a)|) lt.eq lim_(n arrow.r oo) (1 / 2)^n lr(|x_1 - sqrt(a)|)$
+现在我们来证明，这样求得的 $sqrt(a)$ 近似值数列 (7.1) 收敛到 $sqrt(a)$\. 这也就是要证明误差 $\|x_(n + 1) - sqrt(a)\|$ 可以任意地小．为此，比较相邻的两个近似值的误差：$ alpha_n = x_n - sqrt(a)\,#h(2em) alpha_(n + 1) = x_(n + 1) - sqrt(a) $ #numbered-eq($ alpha_(n + 1) = x_(n + 1) - sqrt(a) = frac(x_n^2 + a, 2 x_n) - sqrt(a) = frac((x_n - sqrt(a))^2, 2 x_n) $);#noindent;因为 $sqrt(a)$ 是算术根，其近似值 $x_n$ 均为正值．因此，$alpha_(n + 1) > 0$, 即 $alpha_2\,alpha_3\,dots.h$ 均为正数．换言之，从第二个近似值开始以后所有近似值均为过剩近似值，而第一个近似值是可以是过剩的也可以是不足的．由 (7.2) 得 $ x_(n + 1) - sqrt(a) = (frac(x_n - sqrt(a), 2 x_n)) (x_n - sqrt(a)) = (1 / 2 - frac(sqrt(a), 2 x_n)) (x_n - sqrt(a)) $ #noindent;$because quad x_n > sqrt(a)\,quad therefore quad 0 < 1 / 2 - frac(sqrt(a), 2 x_n) < 1 / 2$⁠，由此得 $ lr(|x_(n + 1) - sqrt(a)|) < 1 / 2 lr(|x_n - sqrt(a)|) < (1 / 2)^2 lr(|x_(n - 1) - sqrt(a)|) < dots.h.c < (1 / 2)^n lr(|x_1 - sqrt(a)|) $ #noindent;$therefore quad 0 lt.eq limits(lim)_(n arrow.r oo) lr(|x_(n + 1) - sqrt(a)|) lt.eq limits(lim)_(n arrow.r oo) (1 / 2)^n lr(|x_1 - sqrt(a)|)$
 
-因为 $lim_(n arrow.r oo) (1 / 2)^n lr(|x_1 - sqrt(a)|) = 0$⁠，所以$ lim_(n arrow.r oo) lr(|x_(n + 1) - sqrt(a)|) = 0 $ #noindent;即：$lim_(n arrow.r oo) x_(n + 1) = sqrt(a)$⁠．
+因为 $limits(lim)_(n arrow.r oo) (1 / 2)^n lr(|x_1 - sqrt(a)|) = 0$⁠，所以$ limits(lim)_(n arrow.r oo) lr(|x_(n + 1) - sqrt(a)|) = 0 $ #noindent;即：$limits(lim)_(n arrow.r oo) x_(n + 1) = sqrt(a)$⁠．
 
 ]
 现在看看这个方法逐次逼近 $sqrt(a)$, 应用起来有多好！下面以 $sqrt(2)$ 为例：
@@ -343,15 +345,15 @@ x_4 & = frac(2 + 1.4166666^2, 2 times 1.4166666) = 1.4142157 $ #noindent;其误�
 
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题7.2]
 
-+ 求 $lim_(n arrow.r oo) frac(sin frac(n pi, 2), sqrt(n^2 + n))$
++ 求 $limits(lim)_(n arrow.r oo) frac(sin frac(n pi, 2), sqrt(n^2 + n))$
 
-+ 若 $\|phi.alt\(n + 1\)\|lt.eq k\|phi.alt\(n\)\|\,quad 0 < k < 1$⁠，求证 $lim_(n arrow.r oo) phi.alt\(n\)= 0$⁠．
++ 若 $\|phi.alt\(n + 1\)\|lt.eq k\|phi.alt\(n\)\|\,quad 0 < k < 1$⁠，求证 $limits(lim)_(n arrow.r oo) phi.alt\(n\)= 0$⁠．
 
-+ 若 $lim_(n arrow.r oo) frac(phi.alt\(n + 1\), phi.alt\(n\)) = ell\,quad - 1 < ell < 1$⁠，求证 $lim_(n arrow.r oo) phi.alt\(n\)= 0$⁠．
++ 若 $limits(lim)_(n arrow.r oo) frac(phi.alt\(n + 1\), phi.alt\(n\)) = ell\,quad - 1 < ell < 1$⁠，求证 $limits(lim)_(n arrow.r oo) phi.alt\(n\)= 0$⁠．
 
-+ 应用上题，求 $lim_(n arrow.r oo) frac(r^n, n !)$⁠．
++ 应用上题，求 $limits(lim)_(n arrow.r oo) frac(r^n, n !)$⁠．
 
-+ 求 $lim_(n arrow.r oo) frac(n\(n - 1\)dots.h.c\(n - k + 1\), k !) (1 / 2)^n$⁠．
++ 求 $limits(lim)_(n arrow.r oo) frac(n\(n - 1\)dots.h.c\(n - k + 1\), k !) (1 / 2)^n$⁠．
 
 + 设数列 $lr(\{ p_n / q_n \})$ 是一个逐步定义的有理分数数列：$ a_1 & = p_1 / q_1 = 1 / 1\,quad a_2 = p_2 / q_2 = frac(p_1 + 2 q_1, p_1 + q_1) = frac(1 + 2 times 1, 1 + 1) = 3 / 2\
   a_3 & = p_3 / q_3 = frac(p_2 + 2 q_2, p_2 + q_2) = frac(3 + 2 times 2, 3 + 2) = 7 / 5\,quad dots.h $ #noindent;由 $a_n = p_n / q_n$⁠，我们定义 $a_(n + 1) = p_(n + 1) / q_(n + 1) = frac(p_n + 2 q_n, p_n + q_n)$⁠．
@@ -366,7 +368,7 @@ x_4 & = frac(2 + 1.4166666^2, 2 times 1.4166666) = 1.4142157 $ #noindent;其误�
 
 + 试用例7.11的方法求 $sqrt(28)$, 准确到 $10^(- 4)$⁠．
 
-+ 求证 $lim_(n arrow.r oo) n^beta / a^n = 0$, 这里 $a$ 为大于1的定值，$beta$ 为一整数．
++ 求证 $limits(lim)_(n arrow.r oo) n^beta / a^n = 0$, 这里 $a$ 为大于1的定值，$beta$ 为一整数．
 
 == 数列极限的四则运算
 #blk[定义][
@@ -386,9 +388,10 @@ a_n dot.op b_n & = (6 + 4 / n) (3 + 1 / n) = 18 + 18 / n + 4 / n^2\
 a_n / b_n & = frac(6 + 4 / n, 3 + 1 / n) = frac(6 n + 4, 3 n + 1) = 2 + frac(2, 3 n + 1) $ #noindent;现在我们对这些变量求它们各自的极限值（见下表）：
 
 #align(center)[
-#table(
+#text(size: 0.9em)[#table(
   columns: (auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,),
   align: (center + horizon, center + horizon, center + horizon, center + horizon, center + horizon, center + horizon, center + horizon, center + horizon, center + horizon, center + horizon,),
+  inset: (x: 3pt, y: 5pt),
   table.vline(x: 0),
   table.vline(x: 1),
   table.vline(x: 2),
@@ -421,7 +424,7 @@ a_n / b_n & = frac(6 + 4 / n, 3 + 1 / n) = frac(6 n + 4, 3 n + 1) = 2 + frac(2, 
   [6.004],
   [6.0004],
   [$dots.h.c$],
-  [$lim_(n arrow.r oo) (6 + 4 / n) = 6$],
+  [$limits(lim)_(n arrow.r oo) (6 + 4 / n) = 6$],
   table.hline(),
   [$b_n$],
   [4],
@@ -432,7 +435,7 @@ a_n / b_n & = frac(6 + 4 / n, 3 + 1 / n) = frac(6 n + 4, 3 n + 1) = 2 + frac(2, 
   [3.001],
   [3.0001],
   [$dots.h.c$],
-  [$lim_(n arrow.r oo) (3 + 1 / n) = 3$],
+  [$limits(lim)_(n arrow.r oo) (3 + 1 / n) = 3$],
   table.hline(),
   [$a_n + b_n$],
   [14],
@@ -443,7 +446,7 @@ a_n / b_n & = frac(6 + 4 / n, 3 + 1 / n) = frac(6 n + 4, 3 n + 1) = 2 + frac(2, 
   [9.005],
   [9.0005],
   [$dots.h.c$],
-  [$lim_(n arrow.r oo) (9 + 5 / n) = 9$],
+  [$limits(lim)_(n arrow.r oo) (9 + 5 / n) = 9$],
   table.hline(),
   [$a_n - b_n$],
   [6],
@@ -454,7 +457,7 @@ a_n / b_n & = frac(6 + 4 / n, 3 + 1 / n) = frac(6 n + 4, 3 n + 1) = 2 + frac(2, 
   [3.003],
   [3.0003],
   [$dots.h.c$],
-  [$lim_(n arrow.r oo) (3 + 3 / n) = 3$],
+  [$limits(lim)_(n arrow.r oo) (3 + 3 / n) = 3$],
   table.hline(),
   [$a_n dot.op b_n$],
   [40],
@@ -465,7 +468,7 @@ a_n / b_n & = frac(6 + 4 / n, 3 + 1 / n) = frac(6 n + 4, 3 n + 1) = 2 + frac(2, 
   [18.018],
   [18.0018],
   [$dots.h.c$],
-  [$lim_(n arrow.r oo) (18 + 18 / n + 4 / n^2) = 18$],
+  [$limits(lim)_(n arrow.r oo) (18 + 18 / n + 4 / n^2) = 18$],
   table.hline(),
   [$a_n\/b_n$],
   [$2 1 / 2$],
@@ -476,48 +479,48 @@ a_n / b_n & = frac(6 + 4 / n, 3 + 1 / n) = frac(6 n + 4, 3 n + 1) = 2 + frac(2, 
   [2.0006],
   [2.00006],
   [$dots.h.c$],
-  [$lim_(n arrow.r oo) (2 + frac(2, 3 n + 1)) = 2$],
+  [$limits(lim)_(n arrow.r oo) (2 + frac(2, 3 n + 1)) = 2$],
   table.hline(),
-);
+)]
 
 ]
 #noindent;显然有下面的等式
 
-+ $lim_(n arrow.r oo)\(a_n + b_n\)= lim_(n arrow.r oo) a_n + lim_(n arrow.r oo) b_n = 6 + 3 = 9$
++ $limits(lim)_(n arrow.r oo)\(a_n + b_n\)= limits(lim)_(n arrow.r oo) a_n + limits(lim)_(n arrow.r oo) b_n = 6 + 3 = 9$
 
-+ $lim_(n arrow.r oo)\(a_n - b_n\)= lim_(n arrow.r oo) a_n - lim_(n arrow.r oo) b_n = 6 - 3 = 3$
++ $limits(lim)_(n arrow.r oo)\(a_n - b_n\)= limits(lim)_(n arrow.r oo) a_n - limits(lim)_(n arrow.r oo) b_n = 6 - 3 = 3$
 
-+ $lim_(n arrow.r oo) a_n dot.op b_n = lim_(n arrow.r oo) a_n dot.op lim_(n arrow.r oo) b_n = 6 dot.op 3 = 18$
++ $limits(lim)_(n arrow.r oo) a_n dot.op b_n = limits(lim)_(n arrow.r oo) a_n dot.op limits(lim)_(n arrow.r oo) b_n = 6 dot.op 3 = 18$
 
-+ $lim_(n arrow.r oo) a_n / b_n = frac(lim_(n arrow.r oo) a_n, lim_(n arrow.r oo) b_n) = 6 / 3 = 2$
++ $limits(lim)_(n arrow.r oo) a_n / b_n = frac(limits(lim)_(n arrow.r oo) a_n, limits(lim)_(n arrow.r oo) b_n) = 6 / 3 = 2$
 
 ]
 上面这些等式，对于求变量的极限很方便，以后经常用到，于是我们得到关于极限算法定理如下：
 
 #blk[定理][
-设 $lim_(n arrow.r oo) a_n = A\,thick lim_(n arrow.r oo) b_n = B$⁠，则
+设 $limits(lim)_(n arrow.r oo) a_n = A\,thick limits(lim)_(n arrow.r oo) b_n = B$⁠，则
 
-+ $lim_(n arrow.r oo)\(a_n + b_n\)= lim_(n arrow.r oo) a_n + lim_(n arrow.r oo) b_n$
++ $limits(lim)_(n arrow.r oo)\(a_n + b_n\)= limits(lim)_(n arrow.r oo) a_n + limits(lim)_(n arrow.r oo) b_n$
 
-+ $lim_(n arrow.r oo)\(a_n - b_n\)= lim_(n arrow.r oo) a_n - lim_(n arrow.r oo) b_n$
++ $limits(lim)_(n arrow.r oo)\(a_n - b_n\)= limits(lim)_(n arrow.r oo) a_n - limits(lim)_(n arrow.r oo) b_n$
 
-+ $lim_(n arrow.r oo) a_n dot.op b_n = lim_(n arrow.r oo) a_n dot.op lim_(n arrow.r oo) b_n$
++ $limits(lim)_(n arrow.r oo) a_n dot.op b_n = limits(lim)_(n arrow.r oo) a_n dot.op limits(lim)_(n arrow.r oo) b_n$
 
-+ $lim_(n arrow.r oo) a_n / b_n = frac(lim_(n arrow.r oo) a_n, lim_(n arrow.r oo) b_n)$⁠，只要 $b_n eq.not 0$⁠，$lim_(n arrow.r oo) b_n eq.not 0$
++ $limits(lim)_(n arrow.r oo) a_n / b_n = frac(limits(lim)_(n arrow.r oo) a_n, limits(lim)_(n arrow.r oo) b_n)$⁠，只要 $b_n eq.not 0$⁠，$limits(lim)_(n arrow.r oo) b_n eq.not 0$
 
 ]
 #proof[
-设 $lim_(n arrow.r oo) a_n = A\,thick lim_(n arrow.r oo) b_n = B$⁠，对于任给 $epsilon / 2 > 0$⁠，存在 $N_1$ 使得当 $n gt.eq N_1$ 时，有 $ \|a_n - A\|< epsilon / 2 $ #noindent;同样存在 $N_2$ 使得当 $n gt.eq N_2$ 时，有 $ \|b_n - B\|< epsilon / 2 $ #noindent;取 $N = max\(N_1\,N_2\)$, 于是当 $n gt.eq N$ 时，便同时有 $ \|a_n - A\|< epsilon / 2\,#h(2em)\|b_n - B\|< epsilon / 2 $ #noindent;因此，当 $n gt.eq N$ 时，有 $ \|\(a_n + b_n\)-\(A + B\)\|=\|\(a_n - A\)+\(b_n - B\)\|lt.eq\|a_n - A\|+\|b_n - B\|< epsilon / 2 + epsilon / 2 = epsilon $ #noindent;因此，$lim_(n arrow.r oo)\(a_n + b_n\)= A + B = lim_(n arrow.r oo) a_n + lim_(n arrow.r oo) b_n$ 同样地，可以证明等式2．
+设 $limits(lim)_(n arrow.r oo) a_n = A\,thick limits(lim)_(n arrow.r oo) b_n = B$⁠，对于任给 $epsilon / 2 > 0$⁠，存在 $N_1$ 使得当 $n gt.eq N_1$ 时，有 $ \|a_n - A\|< epsilon / 2 $ #noindent;同样存在 $N_2$ 使得当 $n gt.eq N_2$ 时，有 $ \|b_n - B\|< epsilon / 2 $ #noindent;取 $N = max\(N_1\,N_2\)$, 于是当 $n gt.eq N$ 时，便同时有 $ \|a_n - A\|< epsilon / 2\,#h(2em)\|b_n - B\|< epsilon / 2 $ #noindent;因此，当 $n gt.eq N$ 时，有 $ \|\(a_n + b_n\)-\(A + B\)\|=\|\(a_n - A\)+\(b_n - B\)\|lt.eq\|a_n - A\|+\|b_n - B\|< epsilon / 2 + epsilon / 2 = epsilon $ #noindent;因此，$limits(lim)_(n arrow.r oo)\(a_n + b_n\)= A + B = limits(lim)_(n arrow.r oo) a_n + limits(lim)_(n arrow.r oo) b_n$ 同样地，可以证明等式2．
 
 为了证明等式3，我们要用到加、减同一个量的方法，$ \|a_n b_n - A B\| & =\|a_n b_n - A b_n + A b_n - A B\|\
  & =\|b_n\(a_n - A\)+ A\(b_n - B\)\|\
  & lt.eq\|b_n\|dot.op\|a_n - A\|+\|A\|dot.op\|b_n - B\| $ #noindent;因此，如果 $\|b_n\|dot.op\|a_n - A\|+\|A\|dot.op\|b_n - B\|< epsilon thick\(n gt.eq N\)$⁠，等式3就一定成立．因为变量 $b_n$ 有极限，所以变量 $b_n$ 一定#strong[有界]，即存在正数 $M$, 使得 $\|b_n\|< M$. 由于这样的 $M$ 不只一个，凡比 $M$ 大的数都满足上面不等式，故我们选取 $M$ 时可以要求它也满足 $\|A\|< M$, 于是，我们这样选取自然数 $N$, 使得当 $n gt.eq N$ 时，同时成立 $ \|a_n - A\|< frac(epsilon, 2 M)\,#h(2em)\|b_n - B\|< frac(epsilon, 2 M) $ #noindent;这样，$ \|a_n b_n - A B\|< M dot.op frac(epsilon, 2 M) + frac(\|A\|epsilon, 2 M) < epsilon / 2 + epsilon / 2 = epsilon $ #noindent;因此，等式3成立．
 
-最后来证明4．其实只证明 $lim_(n arrow.r oo) 1 / b_n = 1 / B$ 就够了，为了证明，当 $n gt.eq N$, 有 $ lr(|1 / b_n - 1 / B|) = frac(\|B - b_n\|, \|B b_n\|) =\|B - b_n\|lr(|frac(1, B b_n)|) < epsilon $ #noindent;只要能证明数列 $lr(\{ frac(1, B b_n) \})$ 是有界的就可以了．因为 $lim_(n arrow.r oo) B b_n = B lim_(n arrow.r oo) b_n = B^2 > 0$, 所以当给定 $epsilon' = B^2 / 2$, 就一定存在自然数 $N$, 使得当 $n gt.eq N$ 时，有 $ - B^2 / 2 < B b_n - B^2 < B^2 / 2 $ #noindent;即 $ B^2 / 2 < B b_n < frac(3 B^2, 2) $ #noindent;从而 $frac(2, 3 B^2) < frac(1, B b_n) < 2 / B^2$⁠，$\(because med B eq.not 0\)$⁠．
+最后来证明4．其实只证明 $limits(lim)_(n arrow.r oo) 1 / b_n = 1 / B$ 就够了，为了证明，当 $n gt.eq N$, 有 $ lr(|1 / b_n - 1 / B|) = frac(\|B - b_n\|, \|B b_n\|) =\|B - b_n\|lr(|frac(1, B b_n)|) < epsilon $ #noindent;只要能证明数列 $lr(\{ frac(1, B b_n) \})$ 是有界的就可以了．因为 $limits(lim)_(n arrow.r oo) B b_n = B limits(lim)_(n arrow.r oo) b_n = B^2 > 0$, 所以当给定 $epsilon' = B^2 / 2$, 就一定存在自然数 $N$, 使得当 $n gt.eq N$ 时，有 $ - B^2 / 2 < B b_n - B^2 < B^2 / 2 $ #noindent;即 $ B^2 / 2 < B b_n < frac(3 B^2, 2) $ #noindent;从而 $frac(2, 3 B^2) < frac(1, B b_n) < 2 / B^2$⁠，$\(because med B eq.not 0\)$⁠．
 
 取 $M = max (lr(|frac(2, 3 B^2)|) \, lr(|frac(1, B b_1)|) \, lr(|frac(1, B b_2)|) \, dots.h \, lr(|frac(1, B b_(N - 1))|) \, lr(|2 / B^2|))$
 
-于是，对于一切自然数 $n$, 有：$lr(|frac(1, B b_n)|) lt.eq M$⁠．因此，$ lr(|1 / b_n - 1 / B|) =\|B - b_n\|lr(|frac(1, B b_n)|) lt.eq\|B - b_n\|M $ #noindent;由于 $lim_(n arrow.r oo) b_n = B$, 我们选出自然数 $N_1$, 使得当 $n gt.eq N_1$ 时，有 $ \|B - b_n\|< epsilon / M $ #noindent;从而当 $n gt.eq N_1$ 时，有 $ lr(|1 / b_n - 1 / B|) < epsilon / M dot.op M = epsilon $ #noindent;因此，$lim_(n arrow.r oo) 1 / b_n = 1 / B$⁠，最后根据等式3，得到：$ lim_(n arrow.r oo) a_n / b_n = lim_(n arrow.r oo) a_n dot.op lim_(n arrow.r oo) 1 / b_n = A / B = frac(lim_(n arrow.r oo) a_n, lim_(n arrow.r oo) b_n)\,quad\(b_n eq.not 0\,thick B eq.not 0\) $
+于是，对于一切自然数 $n$, 有：$lr(|frac(1, B b_n)|) lt.eq M$⁠．因此，$ lr(|1 / b_n - 1 / B|) =\|B - b_n\|lr(|frac(1, B b_n)|) lt.eq\|B - b_n\|M $ #noindent;由于 $limits(lim)_(n arrow.r oo) b_n = B$, 我们选出自然数 $N_1$, 使得当 $n gt.eq N_1$ 时，有 $ \|B - b_n\|< epsilon / M $ #noindent;从而当 $n gt.eq N_1$ 时，有 $ lr(|1 / b_n - 1 / B|) < epsilon / M dot.op M = epsilon $ #noindent;因此，$limits(lim)_(n arrow.r oo) 1 / b_n = 1 / B$⁠，最后根据等式3，得到：$ limits(lim)_(n arrow.r oo) a_n / b_n = limits(lim)_(n arrow.r oo) a_n dot.op limits(lim)_(n arrow.r oo) 1 / b_n = A / B = frac(limits(lim)_(n arrow.r oo) a_n, limits(lim)_(n arrow.r oo) b_n)\,quad\(b_n eq.not 0\,thick B eq.not 0\) $
 
 ]
 对于这个定理的应用，我们提醒几点注意：
@@ -531,21 +534,21 @@ a_n / b_n & = frac(6 + 4 / n, 3 + 1 / n) = frac(6 n + 4, 3 n + 1) = 2 + frac(2, 
 + 在 $a_n arrow.r oo$, $b_n arrow.r oo$ 的情形下，求 $a_n plus.minus b_n$, $a_n / b_n$ 的极限，需要先对式子变形使满足定理的条件．
 
 #example[
-求 $lim_(n arrow.r oo) frac(3 n^2 + 4 n - 1, 4 n^2 - n + 3)$
+求 $limits(lim)_(n arrow.r oo) frac(3 n^2 + 4 n - 1, 4 n^2 - n + 3)$
 
 ]
 #solution[
-$ lim_(n arrow.r oo) frac(3 n^2 + 4 n - 1, 4 n^2 - n + 3) & = lim_(n arrow.r oo) frac(3 + 4 / n - 1 / n^2, 4 - 1 / n + 3 / n^2)\
- & = frac(lim_(n arrow.r oo) (3 + 4 / n - 1 / n^2), lim_(n arrow.r oo) (4 - 1 / n + 3 / n^2))\
+$ limits(lim)_(n arrow.r oo) frac(3 n^2 + 4 n - 1, 4 n^2 - n + 3) & = limits(lim)_(n arrow.r oo) frac(3 + 4 / n - 1 / n^2, 4 - 1 / n + 3 / n^2)\
+ & = frac(limits(lim)_(n arrow.r oo) (3 + 4 / n - 1 / n^2), limits(lim)_(n arrow.r oo) (4 - 1 / n + 3 / n^2))\
  & = frac(3 + 0 - 0, 4 - 0 + 0) = 3 / 4 $
 
 ]
 #example[
-求 $lim_(n arrow.r oo) frac((1 + 1 / n)^(P + 1) - 1, 1 / n)$（$P$ 为自然数）．
+求 $limits(lim)_(n arrow.r oo) frac((1 + 1 / n)^(P + 1) - 1, 1 / n)$（$P$ 为自然数）．
 
 ]
 #solution[
-$ (1 + 1 / n)^(P + 1) - 1 = 1 / n [(1 + 1 / n)^P + (1 + 1 / n)^(P - 1) + dots.h.c + (1 + 1 / n) + 1] $ #noindent;显然：$ lim_(n arrow.r oo) frac((1 + 1 / n)^(P + 1) - 1, 1 / n) = lim_(n arrow.r oo) [(1 + 1 / n)^P + (1 + 1 / n)^(P - 1) + dots.h.c + (1 + 1 / n) + 1] $ #noindent;中括号内共有 $P + 1$ 项，首项是 $P$ 个 $(1 + 1 / n)$ 的乘积，应用定理知 $lim_(n arrow.r oo) (1 + 1 / n)^P = 1$, 同理知其他各项的极限为1, 故 $ lim_(n arrow.r oo) frac((1 + 1 / n)^(P + 1) - 1, 1 / n) = 1 + 1 + dots.h.c + 1 = P + 1 $
+$ (1 + 1 / n)^(P + 1) - 1 = 1 / n [(1 + 1 / n)^P + (1 + 1 / n)^(P - 1) + dots.h.c + (1 + 1 / n) + 1] $ #noindent;显然：$ limits(lim)_(n arrow.r oo) frac((1 + 1 / n)^(P + 1) - 1, 1 / n) = limits(lim)_(n arrow.r oo) [(1 + 1 / n)^P + (1 + 1 / n)^(P - 1) + dots.h.c + (1 + 1 / n) + 1] $ #noindent;中括号内共有 $P + 1$ 项，首项是 $P$ 个 $(1 + 1 / n)$ 的乘积，应用定理知 $limits(lim)_(n arrow.r oo) (1 + 1 / n)^P = 1$, 同理知其他各项的极限为1, 故 $ limits(lim)_(n arrow.r oo) frac((1 + 1 / n)^(P + 1) - 1, 1 / n) = 1 + 1 + dots.h.c + 1 = P + 1 $
 
 ]
 #example[
@@ -553,15 +556,15 @@ $ (1 + 1 / n)^(P + 1) - 1 = 1 / n [(1 + 1 / n)^P + (1 + 1 / n)^(P - 1) + dots.h.
 
 ]
 #solution[
-我们对 $s\(n\)$ 作变形，将它改写成下面的形式 $ n^(p - q) [frac(a_0 + a_1 / n + dots.h.c + a_p / n^p, b_0 + b_1 / n + dots.h.c + b_q / n^q)] $ #noindent;在方括号内的分式，其分子和分母都是以 $1 / n$ 为变量的多项式，因此，$ lim_(n arrow.r oo) frac(a_0 + a_1 / n + dots.h.c + a_p / n^p, b_0 + b_1 / n + dots.h.c + b_q / n^q) = a_0 / b_0 $ #noindent;现在，
+我们对 $s\(n\)$ 作变形，将它改写成下面的形式 $ n^(p - q) [frac(a_0 + a_1 / n + dots.h.c + a_p / n^p, b_0 + b_1 / n + dots.h.c + b_q / n^q)] $ #noindent;在方括号内的分式，其分子和分母都是以 $1 / n$ 为变量的多项式，因此，$ limits(lim)_(n arrow.r oo) frac(a_0 + a_1 / n + dots.h.c + a_p / n^p, b_0 + b_1 / n + dots.h.c + b_q / n^q) = a_0 / b_0 $ #noindent;现在，
 
-- 如果 $p < q$, 那么 $lim_(n arrow.r oo) n^(p - q) = lim_(n arrow.r oo) 1 / n^(q - p) = 0$⁠；
+- 如果 $p < q$, 那么 $limits(lim)_(n arrow.r oo) n^(p - q) = limits(lim)_(n arrow.r oo) 1 / n^(q - p) = 0$⁠；
 
-- 如果 $p = q$, 那么 $n^(p - q) = n^0 = 1$ 且 $lim_(n arrow.r oo) n^(p - q) = 1$⁠；
+- 如果 $p = q$, 那么 $n^(p - q) = n^0 = 1$ 且 $limits(lim)_(n arrow.r oo) n^(p - q) = 1$⁠；
 
-- 如果 $p > q$, 那么 $lim_(n arrow.r oo) n^(p - q) = + oo$⁠．
+- 如果 $p > q$, 那么 $limits(lim)_(n arrow.r oo) n^(p - q) = + oo$⁠．
 
-#noindent;因此，$ lim_(n arrow.r oo) s\(n\)= display(cases(0 & quad p < q, a_0 / b_0 & quad p = q, + oo & quad p > q\,quad a_0 / b_0 > 0, - oo & quad p > q\,quad a_0 / b_0 < 0)) $
+#noindent;因此，$ limits(lim)_(n arrow.r oo) s\(n\)= display(cases(0 & quad p < q, a_0 / b_0 & quad p = q, + oo & quad p > q\,quad a_0 / b_0 > 0, - oo & quad p > q\,quad a_0 / b_0 < 0)) $
 
 ]
 上面的例子说明我们只了解分子，分母的变化性态或它们的极限值，还不能判断它们比的性态，它们比的性态要由分式本身的性质来决定．因此：如果 $a_n arrow.r oo$, $b_n arrow.r oo$ 或 $a_n arrow.r 0$, $b_n arrow.r 0$ 我们就说 $a_n / b_n$ 表示 $oo / oo$ 或 $0 / 0$ 的#strong[未定式]．
@@ -571,33 +574,33 @@ $ (1 + 1 / n)^(P + 1) - 1 = 1 / n [(1 + 1 / n)^P + (1 + 1 / n)^(P - 1) + dots.h.
 求下列各变量的极限：
 
 #cols(2)[
-+ $lim_(n arrow.r oo) (1 / n + 3)$
++ $limits(lim)_(n arrow.r oo) (1 / n + 3)$
 
-+ $lim_(n arrow.r oo) frac(5 - 1\(n + 1\), n)$
++ $limits(lim)_(n arrow.r oo) frac(5 - 1\(n + 1\), n)$
 
-+ $lim_(n arrow.r oo) (2 / n + frac(4 n - 1, n))$
++ $limits(lim)_(n arrow.r oo) (2 / n + frac(4 n - 1, n))$
 
-+ $lim_(n arrow.r oo) (frac(5 n + 1, 2 n - 1) - 3 / 2^n)$
++ $limits(lim)_(n arrow.r oo) (frac(5 n + 1, 2 n - 1) - 3 / 2^n)$
 
-+ $lim_(n arrow.r oo) frac(3 n^2 + 1, 4 n^3 - n - 2)$
++ $limits(lim)_(n arrow.r oo) frac(3 n^2 + 1, 4 n^3 - n - 2)$
 
-+ $lim_(n arrow.r oo) frac(n^2 + 4, 2 n^2 - 3 n - 4)$
++ $limits(lim)_(n arrow.r oo) frac(n^2 + 4, 2 n^2 - 3 n - 4)$
 
-+ $lim_(n arrow.r oo) frac(1000 n, n^2 + 1)$
++ $limits(lim)_(n arrow.r oo) frac(1000 n, n^2 + 1)$
 
-+ $lim_(n arrow.r oo)\(sqrt(n + 1) - sqrt(n)\)$
++ $limits(lim)_(n arrow.r oo)\(sqrt(n + 1) - sqrt(n)\)$
 
-+ $lim_(n arrow.r oo) frac(sin (n dot.op pi / 2), n)$
++ $limits(lim)_(n arrow.r oo) frac(sin (n dot.op pi / 2), n)$
 
-+ $lim_(n arrow.r oo) frac(n^2 sin n !, n^3)$
++ $limits(lim)_(n arrow.r oo) frac(n^2 sin n !, n^3)$
 
-+ $lim_(n arrow.r oo) frac(3^n - 1, 2^n)$
++ $limits(lim)_(n arrow.r oo) frac(3^n - 1, 2^n)$
 
-+ $lim_(n arrow.r oo) frac(\(- 2\)^n + 3^n, \(- 2\)^(n + 1) + 3^(n + 1))$
++ $limits(lim)_(n arrow.r oo) frac(\(- 2\)^n + 3^n, \(- 2\)^(n + 1) + 3^(n + 1))$
 
-+ $lim_(n arrow.r oo) frac(3 n^2 - 5 n + sin n, 4 n^2 + 7 n + 6)$
++ $limits(lim)_(n arrow.r oo) frac(3 n^2 - 5 n + sin n, 4 n^2 + 7 n + 6)$
 
-+ $lim_(n arrow.r oo) n / sqrt(n^2 + n)$
++ $limits(lim)_(n arrow.r oo) n / sqrt(n^2 + n)$
 
 ]
 注：$n ! = 1 dot.op 2 dot.op 3 dot.op dots.h.c dot.op\(n - 1\)dot.op n$⁠．
@@ -632,15 +635,15 @@ s_n = 1 / 2 + 1 / 4 + dots.h.c + 1 / 2^n = frac(1 / 2 [1 - (1 / 2)^n], 1 - 1 / 2
 
 #noindent;因此，前 $n$ 项部分和 $s_n$ 的极限是1, 即 $ lim_(n arrow.r oo) s_n = 1 $
 
-我们可以这样理解无穷级数 $sum_(n = 1)^oo 1 / 2^n$ 的意义，它就是前 $n$ 项部分和 $s_n$ 的极限值，于是 $ 1 / 2 + 1 / 4 + 1 / 8 + dots.h.c + 1 / 2^n + dots.h.c = 1 $ #noindent;我们说，这个无穷级数收敛到1, 而前 $n$ 项的部分和 $s_n$ 是这个极限的近似值．
+我们可以这样理解无穷级数 $limits(display(sum))_(n = 1)^oo 1 / 2^n$ 的意义，它就是前 $n$ 项部分和 $s_n$ 的极限值，于是 $ 1 / 2 + 1 / 4 + 1 / 8 + dots.h.c + 1 / 2^n + dots.h.c = 1 $ #noindent;我们说，这个无穷级数收敛到1, 而前 $n$ 项的部分和 $s_n$ 是这个极限的近似值．
 
 现在，我们可以赋予这一类收敛的无穷级数以和的意义．
 
 #blk[定义][
-如果无穷级数 $u_1 + u_2 + dots.h.c + u_n + dots.h.c$ 的前 $n$ 项部分和 $s_n$ 所组成的数列 $\{ s_n \}$ 有极限值，即 $lim_(n arrow.r oo) s_n = s$, 那么，这个无穷级数就叫做收敛的，并把这个确定的数 $lim_(n arrow.r oo) s_n = s$ 叫做这个无穷级数的和，即 $ sum_(n = 1)^oo u_n = lim_(n arrow.r oo) s_n = s $
+如果无穷级数 $u_1 + u_2 + dots.h.c + u_n + dots.h.c$ 的前 $n$ 项部分和 $s_n$ 所组成的数列 $\{ s_n \}$ 有极限值，即 $limits(lim)_(n arrow.r oo) s_n = s$, 那么，这个无穷级数就叫做收敛的，并把这个确定的数 $limits(lim)_(n arrow.r oo) s_n = s$ 叫做这个无穷级数的和，即 $ sum_(n = 1)^oo u_n = limits(lim)_(n arrow.r oo) s_n = s $
 
 ]
-下面我们用收敛的数列来构造收敛的无穷级数．假设数列 $\{ a_n \}$ 是收敛的，即 $lim_(n arrow.r oo) a_n = A$, 令 $b_i = a_i - a_(i - 1)\,thick i = 1\,2\,dots.h$⁠，即得一个新数列 $\{ b_n \}$⁠．无穷级数 $b_1 + b_2 + dots.h.c + b_n + b_(n + 1) + dots.h.c$ 是收敛的．
+下面我们用收敛的数列来构造收敛的无穷级数．假设数列 $\{ a_n \}$ 是收敛的，即 $limits(lim)_(n arrow.r oo) a_n = A$, 令 $b_i = a_i - a_(i - 1)\,thick i = 1\,2\,dots.h$⁠，即得一个新数列 $\{ b_n \}$⁠．无穷级数 $b_1 + b_2 + dots.h.c + b_n + b_(n + 1) + dots.h.c$ 是收敛的．
 
 事实上，这个级数的部分和是：$ s_1 & = b_1 = a_1 - a_0\
 s_2 & = b_1 + b_2 =\(a_1 - a_0\)+\(a_2 - a_1\)= a_2 - a_0\
@@ -651,7 +654,7 @@ dots.h.c & dots.h.c dots.h.c dots.h.c dots.h.c $ #noindent;因此：#numbered-eq
  & = lim_(n arrow.r oo) a_n - a_0 $);#noindent;因此，无穷级数 $sum_(i = 1)^oo b_i$ 是收敛的．
 
 #example[
-令 $a_n = 1 - frac(1, n + 1)$⁠，$n = 0\,1\,2\,dots.h$⁠，显然 $\{ a_n \}$ 是收敛的，并且 $lim_(n arrow.r oo) a_n = 1$⁠．
+令 $a_n = 1 - frac(1, n + 1)$⁠，$n = 0\,1\,2\,dots.h$⁠，显然 $\{ a_n \}$ 是收敛的，并且 $limits(lim)_(n arrow.r oo) a_n = 1$⁠．
 
 令$ b_i & = a_i - a_(i - 1) = (1 - frac(1, i + 1)) - (1 - 1 / i)\
  & = 1 / i - frac(1, i + 1) = frac(1, i\(i + 1\)) $ #noindent;于是，$ frac(1, 1 dot.op 2) + frac(1, 2 dot.op 3) + frac(1, 3 dot.op 4) + dots.h.c + frac(1, n\(n + 1\)) & = lim_(n arrow.r oo) a_n - a_0\
@@ -665,7 +668,7 @@ dots.h.c & dots.h.c dots.h.c dots.h.c dots.h.c $ #noindent;因此：#numbered-eq
 
 ]
 #solution[
-我们在本章例7.9中，已经证明，若 $\|q\|< 1$, 则 $lim_(n arrow.r oo) q^n = 0$⁠．因为：$ s_n = frac(a_1\(1 - q^n\), 1 - q) = frac(a_1, 1 - q) - frac(a_1 q^n, 1 - q) $ #noindent;所以，$ lim_(n arrow.r oo) s_n = frac(a_1, 1 - q) - frac(a_1, 1 - q) lim_(n arrow.r oo) q^n = frac(a_1, 1 - q) $ #noindent;因此：$ a_1 + a_1 q + a_1 q^2 + dots.h.c + a_1 q^(n - 1) + dots.h.c = frac(a_1, 1 - q) quad\(\|q\|< 1\) $
+我们在本章例7.9中，已经证明，若 $\|q\|< 1$, 则 $limits(lim)_(n arrow.r oo) q^n = 0$⁠．因为：$ s_n = frac(a_1\(1 - q^n\), 1 - q) = frac(a_1, 1 - q) - frac(a_1 q^n, 1 - q) $ #noindent;所以，$ limits(lim)_(n arrow.r oo) s_n = frac(a_1, 1 - q) - frac(a_1, 1 - q) limits(lim)_(n arrow.r oo) q^n = frac(a_1, 1 - q) $ #noindent;因此：$ a_1 + a_1 q + a_1 q^2 + dots.h.c + a_1 q^(n - 1) + dots.h.c = frac(a_1, 1 - q) quad\(\|q\|< 1\) $
 
 ]
 为了讨论循环小数及以后的需要，让我们用下面两个定理作为本节的总结．
@@ -679,7 +682,7 @@ dots.h.c & dots.h.c dots.h.c dots.h.c dots.h.c $ #noindent;因此：#numbered-eq
 
 ]
 #blk[定理2][
-无穷级数 $sum_(i = 1)^oo a_i$ 收敛的必要条件是 $lim_(n arrow.r oo) a_n = 0$.
+无穷级数 $sum_(i = 1)^oo a_i$ 收敛的必要条件是 $limits(lim)_(n arrow.r oo) a_n = 0$.
 
 ]
 #proof[
@@ -886,17 +889,17 @@ $ 0.3 overline(12) & = 0.3 + 0.0 overline(12) = 0.3 +\(0.012 + 0.00012 + dots.h.
 
 + 求下列各式的极限值：
 
-  + $lim_(n arrow.r oo) frac(1 + a + a^2 + dots.h.c + a^n, 1 + b + b^2 + dots.h.c + b^n) #h(2em)\(\|a\|< 1\,thick\|b\|< 1\)$
+  + $limits(lim)_(n arrow.r oo) frac(1 + a + a^2 + dots.h.c + a^n, 1 + b + b^2 + dots.h.c + b^n) #h(2em)\(\|a\|< 1\,thick\|b\|< 1\)$
 
-  + $lim_(n arrow.r oo) (1 / n - 2 / n + 3 / n - dots.h.c + frac(\(- 1\)^(n - 1) n, n))$
+  + $limits(lim)_(n arrow.r oo) (1 / n - 2 / n + 3 / n - dots.h.c + frac(\(- 1\)^(n - 1) n, n))$
 
-  + $lim_(n arrow.r oo) (1^2 / n^3 + 2^2 / n^3 + dots.h.c + frac(\(n - 1\)^2, n^3))$
+  + $limits(lim)_(n arrow.r oo) (1^2 / n^3 + 2^2 / n^3 + dots.h.c + frac(\(n - 1\)^2, n^3))$
 
-  + $lim_(n arrow.r oo) (1 / 2 + 3 / 2^2 + 5 / 2^3 + dots.h.c + frac(2 n - 1, 2^n))$
+  + $limits(lim)_(n arrow.r oo) (1 / 2 + 3 / 2^2 + 5 / 2^3 + dots.h.c + frac(2 n - 1, 2^n))$
 
-+ $lim_(n arrow.r oo) (1 - 1 / 2^2) (1 - 1 / 3^2) (1 - 1 / 4^2) dots.h.c (1 - 1 / n^2)$
++ $limits(lim)_(n arrow.r oo) (1 - 1 / 2^2) (1 - 1 / 3^2) (1 - 1 / 4^2) dots.h.c (1 - 1 / n^2)$
 
-+ 数列 $x_n thick\(n = 1\,2\,3\,dots.h\)$ 是由下列各式所确定：$ x_0 = a\,thick x_1 = b\,thick x_n = frac(x_(n - 2) + x_(n - 1), 2) quad\(n gt.eq 2\) $ #noindent;求 $lim_(n arrow.r oo) x_n$.
++ 数列 $x_n thick\(n = 1\,2\,3\,dots.h\)$ 是由下列各式所确定：$ x_0 = a\,thick x_1 = b\,thick x_n = frac(x_(n - 2) + x_(n - 1), 2) quad\(n gt.eq 2\) $ #noindent;求 $limits(lim)_(n arrow.r oo) x_n$.
 
 + 将下列循环小数化为分数：$ 0 . overline(47)\,#h(2em) 2 . overline(234)\,#h(2em) 0.4 overline(7)\,#h(2em) 3.2 overline(31)\,#h(2em) 0 . overline(1108)\,#h(2em) 5.38 overline(90) $
 
@@ -922,7 +925,7 @@ k''_1 & = 2\,quad k''_2 = 1.5\,quad k''_3 = 1.42\,thick dots.h $
   ]
 )
 
-如图7.5, 在直线 $A B$ 上取点列 $\{ B_n \}$ 和 $\{ macron(B)_n \}$ 使得 $ A B_n = k'_n A' B'\,#h(2em) A macron(B)_n = k''_n A' B' $ #noindent;再由 $B_n$, $macron(B)_n$ 点分别作 $B C$ 边平行线交 $A C$ 线于 $C_n$, $macron(C)_n$ 点，则因为相似三角形定理对有理数比值是对的，所以 $ triangle.stroked.t A B_n C_n tilde.rev triangle.stroked.t A macron(B)_n macron(C)_n tilde.rev triangle.stroked.t A' B' C' $ #noindent;$ frac(A B_n, A' B') & = frac(A C_n, A' C') = frac(B_n C_n, B' C') = k'_n\
+如图7.5, 在直线 $A B$ 上取点列 $\{ B_n \}$ 和 $\{ macron(B)_n \}$ 使得 $ A B_n = k'_n A' B'\,#h(2em) A macron(B)_n = k''_n A' B' $ #noindent;再由 $B_n$, $macron(B)_n$ 点分别作 $B C$ 边平行线交 $A C$ 线于 $C_n$, $macron(C)_n$ 点，则因为相似三角形定理对有理数比值是对的，所以 $ triangle.stroked.t A B_n C_n tilde.rev triangle.stroked.t A macron(B)_n macron(C)_n tilde.rev triangle.stroked.t A' B' C' $ $ frac(A B_n, A' B') & = frac(A C_n, A' C') = frac(B_n C_n, B' C') = k'_n\
 frac(A macron(B)_n, A' B') & = frac(A macron(C)_n, A' C') = frac(macron(B)_n macron(C)_n, B' C') = k''_n $ #noindent;由作图知 $ k'_n A' B' = A B_n < A B < A macron(B)_n = k''_n A' B' $ #noindent;并可得 $ k'_n A' C' & = A C_n < A C < A macron(C)_n = k''_n A' C'\
 k'_n B' C' & = B_n C_n < B C < macron(B)_n macron(C)_n = k''_n B' C' $ #noindent;对上面不等式各端取极限，得到 $ lim_(n arrow.r oo) k'_n A' C' = lim_(n arrow.r oo) k''_n A' C' = k A' C' $ #noindent;另一方面又可得到 $ lim_(n arrow.r oo) k'_n A' C' = lim_(n arrow.r oo) k''_n A' C' = A C $ #noindent;根据数列的极限值是唯一的，因此 $A C = k A' C'$, 同理可得 $B C = k B' C'$⁠．
 
@@ -1000,7 +1003,7 @@ upright("密率") pi = 355 / 113\,#h(2em) upright("约率") pi = 22 / 7 $ #noind
 
 + 从 $angle B A C$ 边上一点 $B$ 起，作 $B C tack.t A C$, 从 $C$ 作 $C D tack.t A B$, 从 $D$ 再作 $D E tack.t A C$, 这样无限继续下去，设 $B C = 7$⁠cm, $C D = 6$⁠cm, 求这些垂线的和（图7.8）．
 
-+ 有一束射线，每相邻两条射线间的夹角为 $alpha$⁠，从一条射线上任一点对其紧邻的一射线作垂线 $S_0$, 从它的垂足再对下一射线作垂线 $S_1$, 依此类推（图7.9）．问：$lim_(n arrow.r oo)\(S_0 + S_1 + S_2 + dots.h.c + S_n + dots.h.c\)= ?$
++ 有一束射线，每相邻两条射线间的夹角为 $alpha$⁠，从一条射线上任一点对其紧邻的一射线作垂线 $S_0$, 从它的垂足再对下一射线作垂线 $S_1$, 依此类推（图7.9）．问：$limits(lim)_(n arrow.r oo)\(S_0 + S_1 + S_2 + dots.h.c + S_n + dots.h.c\)= ?$
 
   #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("7-08");], caption: []), figure([#fig("7-09");], caption: []))));
 
@@ -1034,9 +1037,9 @@ upright("密率") pi = 355 / 113\,#h(2em) upright("约率") pi = 22 / 7 $ #noind
 
 + 对于任何 $A_m$, 都至少有一个 $a_N$ 使得 $A_m < a_N$, 换言之，线段 $\[A_m\,B_m\]$ 至少包含一个点，比如 $a_N$（由 $\{ a_n \}$ 的递增性，所有 $n gt.eq N$ 也满足 $A_m < a_n$⁠）．
 
-因此，由性质1和实数完备性就得到唯一的实数 $k$, 介于一切 $A_m$ 和 $B_m$ 之间，换言之，存在唯一实数 $k$ 使得 $lim_(m arrow.r oo) A_m = k = lim_(m arrow.r oo) B_m$
+因此，由性质1和实数完备性就得到唯一的实数 $k$, 介于一切 $A_m$ 和 $B_m$ 之间，换言之，存在唯一实数 $k$ 使得 $limits(lim)_(m arrow.r oo) A_m = k = limits(lim)_(m arrow.r oo) B_m$
 
-现在让我们来说明 $k$ 也就是 $\{ a_n \}$ 的极限！设 $epsilon$ 是一个任给的正数，因为 $lim_(m arrow.r oo) A_m = k = lim_(m arrow.r oo) B_m$ 所以存在足够大的 $M$, 使得（如图7.10）
+现在让我们来说明 $k$ 也就是 $\{ a_n \}$ 的极限！设 $epsilon$ 是一个任给的正数，因为 $limits(lim)_(m arrow.r oo) A_m = k = limits(lim)_(m arrow.r oo) B_m$ 所以存在足够大的 $M$, 使得（如图7.10）
 
 #figure([#fig("7-10");
 
@@ -1045,15 +1048,15 @@ upright("密率") pi = 355 / 113\,#h(2em) upright("约率") pi = 22 / 7 $ #noind
   ]
 )
 
-#numbered-eq($ k - epsilon < A_M lt.eq k lt.eq B_M < k + epsilon $);#noindent;由性质3知道，存在一个够大的 $N$, 使得#numbered-eq($ A_M < a_N $);#noindent;由性质2知道，$B_M$ 是一个上界，即恒有#numbered-eq($ a_N lt.eq B_M $);#noindent;由 $\{ a_n \}$ 的递增性，当 $n gt.eq N$ 时，有#numbered-eq($ a_N lt.eq a_n $);#noindent;综合上述 (7.4)---(7.7) 四点，就说明了当 $n gt.eq N$ 时，有 $ k - epsilon < A_M lt.eq a_N lt.eq a_n < B_M < k + epsilon $ #noindent;亦即 $\|a_n - k\|< epsilon$, 这也就说明了 $lim_(n arrow.r oo) a_n = k$⁠．
+#numbered-eq($ k - epsilon < A_M lt.eq k lt.eq B_M < k + epsilon $);#noindent;由性质3知道，存在一个够大的 $N$, 使得#numbered-eq($ A_M < a_N $);#noindent;由性质2知道，$B_M$ 是一个上界，即恒有#numbered-eq($ a_N lt.eq B_M $);#noindent;由 $\{ a_n \}$ 的递增性，当 $n gt.eq N$ 时，有#numbered-eq($ a_N lt.eq a_n $);#noindent;综合上述 (7.4)---(7.7) 四点，就说明了当 $n gt.eq N$ 时，有 $ k - epsilon < A_M lt.eq a_N lt.eq a_n < B_M < k + epsilon $ #noindent;亦即 $\|a_n - k\|< epsilon$, 这也就说明了 $limits(lim)_(n arrow.r oo) a_n = k$⁠．
 
 ]
 #example[
-应用本节存在定理，求 $lim_(n arrow.r oo) frac(r^n, n !)$⁠．
+应用本节存在定理，求 $limits(lim)_(n arrow.r oo) frac(r^n, n !)$⁠．
 
 ]
 #solution[
-设 $x_n = frac(r^n, n !)$⁠，则 $ \|x_(n + 1)\|= frac(\|r\|, n + 1)\|x_n\| $ #noindent;所以只在 $n >\|r\|- 1$ 时，数列 $\{\|x_n\|\}$ 才是递减的，同时，由于 $\|x_n\|> 0$, 所以它是有下界的，因此数列 $\{\|x_n\|\}$ 收敛于 $ell$, 在上面等式两边取极限 $ lim_(n arrow.r oo)\|x_(n + 1)\|= lim_(n arrow.r oo) frac(\|r\|, n + 1) dot.op\|x_n\| $ #noindent;即 $ lim_(n arrow.r oo)\|x_(n + 1)\|= lim_(n arrow.r oo) frac(\|r\|, n + 1) dot.op lim_(n arrow.r oo)\|x_n\| $ #noindent;因为变量 $\|x_(n + 1)\|$ 和 $\|x_n\|$ 取同一个数列的数值（除第一个数值外）．因此有同一个极限 $ell$⁠，即：$ell = 0 dot.op ell$⁠，所以 $ lim_(n arrow.r oo)\|x_n\|= ell = 0 $ #noindent;最后有 $ lim_(n arrow.r oo) x_n = lim_(n arrow.r oo) frac(r^n, n !) = 0 $
+设 $x_n = frac(r^n, n !)$⁠，则 $ \|x_(n + 1)\|= frac(\|r\|, n + 1)\|x_n\| $ #noindent;所以只在 $n >\|r\|- 1$ 时，数列 $\{\|x_n\|\}$ 才是递减的，同时，由于 $\|x_n\|> 0$, 所以它是有下界的，因此数列 $\{\|x_n\|\}$ 收敛于 $ell$, 在上面等式两边取极限 $ limits(lim)_(n arrow.r oo)\|x_(n + 1)\|= limits(lim)_(n arrow.r oo) frac(\|r\|, n + 1) dot.op\|x_n\| $ #noindent;即 $ limits(lim)_(n arrow.r oo)\|x_(n + 1)\|= limits(lim)_(n arrow.r oo) frac(\|r\|, n + 1) dot.op limits(lim)_(n arrow.r oo)\|x_n\| $ #noindent;因为变量 $\|x_(n + 1)\|$ 和 $\|x_n\|$ 取同一个数列的数值（除第一个数值外）．因此有同一个极限 $ell$⁠，即：$ell = 0 dot.op ell$⁠，所以 $ limits(lim)_(n arrow.r oo)\|x_n\|= ell = 0 $ #noindent;最后有 $ limits(lim)_(n arrow.r oo) x_n = limits(lim)_(n arrow.r oo) frac(r^n, n !) = 0 $
 
 ]
 #example[
@@ -1076,7 +1079,7 @@ $because quad sqrt(2) < 2\,#h(2em) therefore quad a_1 < 2\,quad a_2 < sqrt(2 + 2
 
 假设 $a_(n - 1) < 2$, 那么，$ a_n = sqrt(2 + a_(n - 1)) < sqrt(2 + 2) = 2 $ #noindent;所以对于一切 $n in bb(N)$, 有 $a_n < 2$⁠．
 
-根据极限存在定理知数列 $\{ a_n \}$ 有极限，设它为 $x$⁠，于是，$lim_(n arrow.r oo) a_n = x$⁠．由于 $ a_n = sqrt(2 + a_(n - 1)) $ #noindent;两边平方得 $ a_n^2 = 2 + a_(n - 1) $ #noindent;取极限有 $ lim_(n arrow.r oo) a_n^2 = lim_(n arrow.r oo)\(2 + a_(n - 1)\) $ #noindent;或者：$x^2 = 2 + x$⁠，解得：$ x_1 = 2\,#h(2em) x_2 = - 1 $ #noindent;然而因为 $a_n > 0 quad arrow.r.double.long quad lim_(n arrow.r oo) a_n = x gt.eq 0$,
+根据极限存在定理知数列 $\{ a_n \}$ 有极限，设它为 $x$⁠，于是，$limits(lim)_(n arrow.r oo) a_n = x$⁠．由于 $ a_n = sqrt(2 + a_(n - 1)) $ #noindent;两边平方得 $ a_n^2 = 2 + a_(n - 1) $ #noindent;取极限有 $ lim_(n arrow.r oo) a_n^2 = lim_(n arrow.r oo)\(2 + a_(n - 1)\) $ #noindent;或者：$x^2 = 2 + x$⁠，解得：$ x_1 = 2\,#h(2em) x_2 = - 1 $ #noindent;然而因为 $a_n > 0 quad arrow.r.double.long quad limits(lim)_(n arrow.r oo) a_n = x gt.eq 0$,
 
 $therefore quad x_2 = - 1$ 不合要求，因此，$ lim_(n arrow.r oo) a_n = 2 $
 
@@ -1097,13 +1100,13 @@ $therefore quad x_2 = - 1$ 不合要求，因此，$ lim_(n arrow.r oo) a_n = 2 
 
   + $x_n = p_0 + p_1 / 10 + dots.h.c + p_n / 10^n$⁠，式中 $p_i\,thick\(i = 0\,1\,2\,dots.h\)$ 是非负整数，且从 $p_1$ 起不大于9.
 
-+ 已知 $a_1 = sqrt(2)\,thick a_2 = sqrt(2 sqrt(2))\,thick a_3 = sqrt(2 sqrt(2 sqrt(2)))\,dots.h\,a_(n + 1) = sqrt(2 a_n)\,dots.h$, 求 $lim_(n arrow.r oo) a_n$.
++ 已知 $a_1 = sqrt(2)\,thick a_2 = sqrt(2 sqrt(2))\,thick a_3 = sqrt(2 sqrt(2 sqrt(2)))\,dots.h\,a_(n + 1) = sqrt(2 a_n)\,dots.h$, 求 $limits(lim)_(n arrow.r oo) a_n$.
 
 + 设 $a_(n + 1) = sqrt(k + a_n)$, 这里 $k > 0$, $a_1 > 0$, 求证数列 $\{ a_n \}$ 递增，并以方程 $x^2 = x + k$ 的正根为极限．
 
-+ 已知 $x_1 = 1\,x_2 = 1 + frac(x_1, 1 + x_1)\,dots.h\,x_n = 1 + frac(x_(n - 1), 1 + x_(n - 1))\,dots.h$, 求 $lim_(n arrow.r oo) x_n$.
++ 已知 $x_1 = 1\,x_2 = 1 + frac(x_1, 1 + x_1)\,dots.h\,x_n = 1 + frac(x_(n - 1), 1 + x_(n - 1))\,dots.h$, 求 $limits(lim)_(n arrow.r oo) x_n$.
 
-+ 数列 $\{ x_n \}$ 由下面递归方程定义 $ x_1 = h\,#h(2em) x_(n + 1) = x_n^2 + k $ #noindent;这里 $0 < k < 1 / 4$⁠，$h$ 在方程 $x^2 - x + k = 0$ 的二根 $a\,b$ 之间，即 $a < h < b$⁠．求证：$a < x_(n + 1) < x_n < b$, 并求 $lim_(n arrow.r oo) x_n$.
++ 数列 $\{ x_n \}$ 由下面递归方程定义 $ x_1 = h\,#h(2em) x_(n + 1) = x_n^2 + k $ #noindent;这里 $0 < k < 1 / 4$⁠，$h$ 在方程 $x^2 - x + k = 0$ 的二根 $a\,b$ 之间，即 $a < h < b$⁠．求证：$a < x_(n + 1) < x_n < b$, 并求 $limits(lim)_(n arrow.r oo) x_n$.
 
 + 设 $0 < a_1 < b_1$ 是两个给定正数，令 $ a_2 & = sqrt(a_1 b_1)\,#h(2em) b_2 = 1 / 2\(a_1 + b_1\)\,quad\(a_2 < b_2\)\
   a_3 & = sqrt(a_2 b_2)\,#h(2em) b_3 = 1 / 2\(a_2 + b_2\)\,quad\(a_3 < b_3\)\

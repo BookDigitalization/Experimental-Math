@@ -85,12 +85,25 @@ class Converter:
                           ("Longrightarrow", "arrow.r.double.long"), ("longrightarrow", "arrow.r.long"),
                           ("Longleftarrow", "arrow.l.double.long"), ("longleftarrow", "arrow.l.long")):
             tex = re.sub(r"\\%s(?![a-zA-Z])" % name, lambda m, s=sym: " " + self.math_slot(s) + " ", tex)
+        tex = self.replace_big_delims(self.one_sided_lr(tex))
+        # \displaystyle\lim（如分母中）：pandoc 丢掉 \displaystyle，下标就排到了右下角
+        # \displaystyle\sum 等同理：求和号用大号，上下限在正上、正下方；积分号只放大
+        big_ops = {"lim": "limits(lim)", "sum": "limits(display(sum))", "prod": "limits(display(product))",
+                   "int": "display(integral)"}
+        tex = re.sub(r"\\displaystyle\s*\\(lim|sum|prod|int)(?![a-zA-Z])\s*",
+                     lambda m: self.math_slot(big_ops[m.group(1)]) + " ", tex)
+        # pandoc 把 \geqslant、\leqslant 转成了普通的 ≥、≤
+        for name, sym in (("geqslant", "gt.eq.slant"), ("leqslant", "lt.eq.slant")):
+            tex = re.sub(r"\\%s(?![a-zA-Z])" % name, lambda m, s=sym: " " + self.math_slot(s) + " ", tex)
         # pifont 的带圈数字：\ding{172}–{181}、\ding{192}–{201} 都是 ①–⑩
         tex = re.sub(r"\\ding\{(\d+)\}", lambda m: chr(0x2460 + (int(m.group(1)) - 172) % 20)
                      if 172 <= int(m.group(1)) <= 181 or 192 <= int(m.group(1)) <= 201 else m.group(0), tex)
         # 第四册 (4.13) 的 \text{\textcircled{\scriptsize 1}} 等：换成 ①…⑳
         tex = re.sub(r"\\text\{\\textcircled\{(?:\\scriptsize\s*)?(\d+)\}\}|\\textcircled\{(?:\\scriptsize\s*)?(\d+)\}",
                      lambda m: chr(0x245F + int(m.group(1) or m.group(2))), tex)
+        # 紧接着 array 的 \setlength{\arraycolsep}{X}：记在列格式前面（见 replace_arrays），其余的去掉
+        tex = re.sub(r"\\setlength\{\\arraycolsep\}\{([\d.]+(?:pt|em))\}\s*\\begin\{array\}\{",
+                     r"\\begin{array}{!\1!", tex)
         tex = re.sub(r"\\setlength\{\\arraycolsep\}\{[^}]*\}", "", tex)
         # array 列格式中的 *{n}{c}：pandoc 不认得，展开
         tex = re.sub(r"(\\begin\{array\}\{)((?:[^{}]|\{[^{}]*\})*)\}",
@@ -125,7 +138,7 @@ class Converter:
         # proof 是本书自定义的环境（只印“证明：”），换个名字，免得 pandoc 按 amsthm 加上 Proof. 和 ◻
         tex = re.sub(r"\\(begin|end)\{proof\}", r"\\\1{bookproof}", tex)
         # 多行环境末尾多余的 \\ 会让 pandoc 转错（LaTeX 中只是多一个空行）
-        tex = re.sub(r"\\\\\s*(\\end\{(cases|array|aligned|align\*?|split|gathered|matrix|pmatrix)\})", r"\1", tex)
+        tex = re.sub(r"\\\\\s*(\\end\{(cases|array|aligned|align\*?|split|gathered|[pbvBV]?matrix)\})", r"\1", tex)
         tex = re.sub(r"\{\\rm\s+([^{}]*)\}", r"\\mathrm{\1}", tex)
         # 整个公式都是 \rm 的：$\rm II'$、$\rm cm^2$
         tex = re.sub(r"\$\\rm\s+([^$]*?)(['^][^$]*)?\$", lambda m: "$\\mathrm{%s}%s$" % (m.group(1), m.group(2) or ""), tex)
@@ -139,6 +152,9 @@ class Converter:
         tex = replace_command(tex, "tfrac", 2, self.tfrac)
         tex = replace_command(tex, "intlongdivision", 2,
                               lambda a: self.slot("#intlongdiv(%s, %s)" % (a[0].strip(), a[1].strip())))
+        # \longdivision[n]{2.00}{3}：小数竖式除法（第四册第七章）
+        tex = re.sub(r"\\longdivision(?:\[(\d+)\])?\{([\d.]+)\}\{(\d+)\}",
+                     lambda m: self.slot('#declongdiv("%s", %s, max-extra: %s)' % (m.group(2), m.group(3), m.group(1) or "2")), tex)
         tex = re.sub(r"\\polylongdiv\[style=(\w)\]", r"\\polylongdivstyle\1", tex)
         for style in "ABCD":
             tex = replace_command(tex, "polylongdivstyle" + style, 2,
@@ -156,8 +172,9 @@ class Converter:
             return self.display(m, aligned_rows("\\\\".join(rows), numbered=False))
         tex = re.sub(r"\\begin\{equation\}\s*\\begin\{split\}(.*?)\\end\{split\}\s*\\tag\{([^}]*)\}\s*\\end\{equation\}",
                      split_tag, tex, flags=re.S)
-        tex = self.replace_tags(tex)
+        # numcases 要在 replace_tags 之前：其中的 \tag 代替该行的编号
         tex = self.replace_numcases(tex)
+        tex = self.replace_tags(tex)
         tex = re.sub(r"\\begin\{align\}(.*?)\\end\{align\}",
                      lambda m: self.display(m, aligned_rows(m.group(1), numbered=True)), tex, flags=re.S)
         def equation(m: re.Match) -> str:
@@ -264,14 +281,16 @@ class Converter:
         tex = re.sub(r"\\begin\{tabular\}\{@\{\}[lcr]@\{\}\}(.*?)\\end\{tabular\}",
                      lambda m: m.group(1).replace("\\\\", "\\newline "), tex, flags=re.S)
         # 其余的嵌套表格：从最后一个表格往前处理，内层的先换成占位符，外层按单元格拆分时就不会被拆坏
-        pat = re.compile(r"(\{\\(small|footnotesize)\s*)?\\begin\{(tabular|longtable)\}")
+        # 也认 center 环境里不带花括号的 \small，以及 \setlength{\tabcolsep}{3pt}（第四册例 7.12 的表）
+        pat = re.compile(r"(\{\\(small|footnotesize)\s*)?(?:\\(small|footnotesize)\s*)?"
+                         r"(?:\\setlength\{\\tabcolsep\}\{([\d.]+)pt\}\s*)?\\begin\{(tabular|longtable)\}")
         while True:
             ms = list(pat.finditer(tex))
             if not ms:
                 return tex
             m = ms[-1]
             out = [tex[: m.start()]]
-            env = m.group(3)
+            env = m.group(5)
             spec, j = read_group(tex, m.end())
             end = tex.index(r"\end{%s}" % env, j)
             body = tex[j:end]
@@ -279,7 +298,9 @@ class Converter:
                 # 表头的重复部分（\endfirsthead 与 \endhead 之间）只要一份
                 body = re.sub(r"\\endfirsthead.*?\\endhead", "", body, flags=re.S)
                 body = re.sub(r"\\end(firsthead|head|foot|lastfoot)\b", "", body)
-            typ = self.tabular(spec, body)
+            typ = self.tabular(spec, body, colsep=float(m.group(4)) if m.group(4) else None)
+            if m.group(3):
+                typ = "#text(size: %s)[%s]" % ("0.9em" if m.group(3) == "small" else "0.8em", typ)
             if env == "longtable":
                 # 长表可以跨页（模板中表格默认不跨页）
                 typ = "#block(breakable: true)[#show table: set block(breakable: true)\n%s]" % typ
@@ -295,7 +316,7 @@ class Converter:
             out.append(self.slot(typ))
             tex = "".join(out) + tex[pos:]
 
-    def tabular(self, spec: str, body: str) -> str:
+    def tabular(self, spec: str, body: str, colsep: float | None = None) -> str:
         cols, vlines = parse_colspec(spec)
         rows = split_top(body, "\\\\")
         items: list[str] = []
@@ -349,10 +370,12 @@ class Converter:
                 else:
                     items.append(content + ",")
         # p{宽度} 是内容宽度，LaTeX 另在两侧各加 \tabcolsep（6pt）；Typst 的列宽含内边距
-        widths = ", ".join(w if w == "auto" else w + " + 12pt" for _, w in cols)
-        aligns = ", ".join(a for a, _ in cols)
-        aligns = ", ".join(a + " + horizon" for a in aligns.split(", "))
-        return "#table(\n  columns: (%s,),\n  align: (%s,),\n  %s\n)" % (widths, aligns, "\n  ".join(items))
+        sep = 6 if colsep is None else colsep
+        widths = ", ".join(w if w == "auto" else "%s + %gpt" % (w, 2 * sep) for _, w in cols)
+        # p{} 列在 LaTeX 中顶端对齐，其余列垂直居中
+        aligns = ", ".join(a + (" + horizon" if w == "auto" else " + top") for a, w in cols)
+        inset = "" if colsep is None else "\n  inset: (x: %gpt, y: 5pt)," % colsep
+        return "#table(\n  columns: (%s,),\n  align: (%s,),%s\n  %s\n)" % (widths, aligns, inset, "\n  ".join(items))
 
     def replace_figure_pairs(self, tex: str) -> str:
         """figure 中用两个 minipage 并排、各带 \\caption 的两幅图：pandoc 会合成一幅图、一个图号。
@@ -381,10 +404,15 @@ class Converter:
                       repl, tex, flags=re.S)
 
     def replace_tikz(self, tex: str) -> str:
+        sizes = {"small": 9 / 10.5, "large": 12 / 10.5, "Large": 14.4 / 10.5, "LARGE": 17.28 / 10.5}
         def repl(m: re.Match) -> str:
             self.fig_count += 1
-            return self.slot('#fig("%d-%02d")' % (self.chapter, self.fig_count))
-        return re.sub(r"\\begin\{tikzpicture\}.*?\\end\{tikzpicture\}", repl, tex, flags=re.S)
+            ref = '#fig("%d-%02d")' % (self.chapter, self.fig_count)
+            if m.group(1):   # \begin{center}\Large 中的图：节点文字随之放大
+                return "\\begin{center}" + self.slot("#text(size: %.4gem, %s)" % (sizes[m.group(1)], ref[1:]))
+            return self.slot(ref)
+        return re.sub(r"(?:\\begin\{center\}\s*\\(small|large|Large|LARGE)\s*)?\\begin\{tikzpicture\}.*?\\end\{tikzpicture\}",
+                      repl, tex, flags=re.S)
 
     def wideparen(self, args: list[str]) -> str:
         body = args[0].strip()
@@ -414,11 +442,18 @@ class Converter:
             m = pat.search(tex)
             if not m:
                 return tex
-            aligns = set(re.sub(r"[^lcr]", "", m.group(1)))
+            spec = m.group(1)
+            # 前面有 \setlength{\arraycolsep}{X} 的（预处理时记在列格式前面，写作 !X!）：列距为 2X
+            gap = "1.5em"
+            g = re.match(r"!([\d.]+)(pt|em)!", spec)
+            if g:
+                gap = "%g%s" % (2 * float(g.group(1)), g.group(2))
+                spec = spec[g.end():]
+            aligns = set(re.sub(r"[^lcr]", "", spec))
             align = {"l": "left", "r": "right"}.get(aligns.pop(), "center") if len(aligns) == 1 else "center"
             rows = [r for r in split_top(m.group(2), "\\\\") if r.strip() and r.strip() != r"\hline"]
             conv = ["; ".join([", ".join(tex_math_to_typst(c) if c.strip() else "" for c in split_top(r, "&"))]) for r in rows]
-            typ = "mat(delim: #none, align: #%s, column-gap: #1.5em, %s)" % (align, "; ".join(conv))
+            typ = "mat(delim: #none, align: #%s, column-gap: #%s, %s)" % (align, gap, "; ".join(conv))
             tex = tex[: m.start()] + self.math_slot(typ) + tex[m.end():]
 
     def replace_tags(self, tex: str) -> str:
@@ -445,15 +480,68 @@ class Converter:
         """块级的公式占位：前后空行，必要时下一段开头加 #noindent"""
         return "\n\n" + self.slot(typst) + "\n\n" + self.noindent_after(m)
 
+    @staticmethod
+    def one_sided_lr(tex: str) -> str:
+        """\\left[ … \\right. 与 \\left. … \\right]（多行公式中跨行的一对括号，各行只放大一侧）：pandoc 转成普通括号。
+        Typst 的 lr 要成对，这里按这一段里有没有分式换成 \\Big 或 \\big"""
+        toks = list(re.finditer(r"\\(left|right)\s*(\\\{|\\\}|\\[a-zA-Z]+|.)", tex))
+        stack, reps = [], []
+        for t in toks:
+            if t.group(1) == "left":
+                stack.append(t)
+            elif stack:
+                o = stack.pop()
+                # 里面有 array、aligned 等环境的（\left\{\begin{array}…\right. 是方程组）不动
+                if (o.group(2) == ".") != (t.group(2) == ".") and "\\begin{" not in tex[o.end():t.start()]:
+                    size = "Big" if re.search(r"\\[dt]?frac", tex[o.end():t.start()]) else "big"
+                    for tok, side in ((o, "l"), (t, "r")):
+                        reps.append((tok.start(), tok.end(), "" if tok.group(2) == "." else "\\%s%s%s " % (size, side, tok.group(2))))
+        for s, e, r in sorted(reps, reverse=True):
+            tex = tex[:s] + r + tex[e:]
+        return tex
+
+    def replace_big_delims(self, tex: str) -> str:
+        """\\big( \\Big| \\Bigg\\{ 等固定大小的定界符 → stretch(…, size: …)。
+        pandoc 写成 #scale(…)[$\\($]：缩放不改变占位，两侧还多出空格，竖线、括号的大小也不配"""
+        sizes = {"big": 1.2, "Big": 1.8, "bigg": 2.4, "Bigg": 3.0}
+        delims = {"(": r"\(", ")": r"\)", "[": r"\[", "]": r"\]", r"\{": r"\{", r"\}": r"\}",
+                  "|": "|", r"\vert": "|", r"\|": "‖", r"\Vert": "‖", "/": "slash",
+                  r"\langle": "angle.l", r"\rangle": "angle.r", ".": None}
+        def repl(m: re.Match) -> str:
+            size, side, d = sizes[m.group(1)], m.group(2), m.group(3)
+            sym = delims[d]
+            if sym is None:
+                return ""
+            if side == "m":
+                cls = "relation"
+            elif side == "l" or d in ("(", "[", r"\{", r"\langle"):
+                cls = "opening"
+            elif side == "r" or d in (")", "]", r"\}", r"\rangle"):
+                cls = "closing"
+            else:
+                cls = "normal"
+            return " " + self.math_slot('class("%s", stretch(%s, size: #%gem))' % (cls, sym, size)) + " "
+        return re.sub(r"\\(big|Big|bigg|Bigg)([lrm]?)(?![a-zA-Z])\s*"
+                      r"(\\[{}|]|\\[vV]ert(?![a-zA-Z])|\\[lr]angle(?![a-zA-Z])|[()\[\]|/.])", repl, tex)
+
     def replace_numcases(self, tex: str) -> str:
         def repl(m: re.Match) -> str:
             # 方程组的名称，如 {(\rm I)}、{(\text{II})}
             name = re.sub(r"\\rm\s+([^{}()\s]+)", r"\\mathrm{\1}", m.group(1))
             lhs = tex_math_to_typst(name) if name.strip() else ""
-            rows = [take_label(r.replace("&", " ")) for r in re.split(r"\\\\", m.group(2)) if r.strip()]
+            rows, tags = [], []
+            for r in re.split(r"\\\\", m.group(2)):
+                if not r.strip():
+                    continue
+                t = []
+                r = replace_command(r, "tag", 1, lambda a: t.append(a[0]) or "")
+                rows.append(take_label(r.replace("&", " ")))
+                tags.append(t[0] if t else None)
             parts = ["$%s$" % lhs] + ["$%s$" % tex_math_to_typst(r) for r, _ in rows]
             if any(lb for _, lb in rows):
                 parts.append("labels: (%s,)" % ", ".join(typst_label(lb) if lb else "none" for _, lb in rows))
+            if any(tags):
+                parts.append("tags: (%s,)" % ", ".join("[%s]" % convert_fragments([t])[0] if t else "none" for t in tags))
             return self.display(m, "#numcases(%s)" % ", ".join(parts))
         return re.sub(r"\\begin\{numcases\}\{((?:[^{}]|\{[^{}]*\})*)\}(.*?)\\end\{numcases\}", repl, tex, flags=re.S)
 
@@ -480,6 +568,8 @@ class Converter:
         left = re.findall(r"PHM?\s*\d+|P H M", typ)
         if left:
             raise RuntimeError("占位符没有替换干净：%s" % left[:5])
+        # 独立公式后紧跟带编号的公式（占位符，filter.lua 不知道它也是独立公式）：中间的 #noindent 会成为一个空段落
+        typ = re.sub(r"(\$\s*)#noindent;\s*(?=#(?:numbered-eq|numbered-align|numcases)\()", r"\1", typ)
         typ = fix_math(typ)
         typ = fix_inline_math(typ)
         # \textbf 中的公式 LaTeX 不加粗；Typst 的 strong 给字重加一个增量，公式里也抵消不掉。
@@ -1007,8 +1097,12 @@ VOLUME_MACROS = {
 # 各册主文件中“本册专用”的、可以直接换成标准 LaTeX 命令的定义（在交给 pandoc 之前替换）
 VOLUME_TEX = {
     3: [(r"\\Vec(?![a-zA-Z])", r"\\overrightarrow")],   # \renewcommand{\Vec}{\overrightarrow}
-    # \newcommand{\Lim}{\displaystyle\lim}、\newcommand{\arccot}{{\rm arccot\; }}
-    4: [(r"\\Lim(?![a-zA-Z])", r"\\lim\\limits"), (r"\\arccot(?![a-zA-Z])", r"\\operatorname{arccot}")],
+    # \newcommand{\arccot}{{\rm arccot\; }}
+    4: [(r"\\arccot(?![a-zA-Z])", r"\\operatorname{arccot}")],
+}
+# 各册专用、要直接写成 Typst 公式的命令（pandoc 会丢掉 \displaystyle、\limits）
+VOLUME_SLOTS = {
+    4: {"Lim": "limits(lim)"},   # \newcommand{\Lim}{\displaystyle\lim}：行内也把下标排在正下方
 }
 
 
@@ -1017,6 +1111,8 @@ def convert(volume: int, chapter: int, src: Path) -> str:
     tex = src.read_text(encoding="utf-8")
     for name, ident in VOLUME_MACROS.get(volume, {}).items():
         tex = re.sub(r"\\%s(?![a-zA-Z])\s*" % name, lambda m, i=ident: conv.math_slot(i) + " ", tex)
+    for name, typ_ in VOLUME_SLOTS.get(volume, {}).items():
+        tex = re.sub(r"\\%s(?![a-zA-Z])\s*" % name, lambda m, t=typ_: conv.math_slot(t) + " ", tex)
     for pat, rep in VOLUME_TEX.get(volume, []):
         tex = re.sub(pat, rep, tex)
     tex = conv.preprocess(tex)

@@ -436,7 +436,7 @@ x < - 6 #h(2em) & upright("或") #h(2em) x > 2 $ #noindent;因此，满足不等
 
   + $\|a - b - c\|gt.eq\|a\|-\|b\|-\|c\|$
 
-  + $#scale(x: 180%, y: 180%)[$\|$]\|a\|-\|b\|#scale(x: 180%, y: 180%)[$\|$] lt.eq\|a + b\|$
+  + $class("normal", stretch(|, size: #1.8em))\|a\|-\|b\|class("normal", stretch(|, size: #1.8em)) lt.eq\|a + b\|$
 
 + #lead-list(none, 2)[
   + 若 $\|h\|< epsilon / 4$, $\|k\|< epsilon / 6$⁠，求证 $\|2 h - 3 k\|< epsilon$⁠．

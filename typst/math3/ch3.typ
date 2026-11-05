@@ -532,9 +532,9 @@ $  & quad\(a_1^2 + a_2^2 + a_3^2\)\(b_1^2 + b_2^2 + b_3^2\)-\(a_1 b_1 + a_2 b_2 
 
 由于这第二种类型的一元一次不等式 $a x + b < 0$ 的两端乘以 $\(- 1\)$ 后，总可以变成第一种类型的同解不等式 $- a x - b > 0$, 所以我们只讨论第一种类型的一元一次不等式的解集：
 
-- 当 $a > 0$ 时，那么 $a x + b > 0$ 的解集是：$lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x > - b / a \})$⁠，解集是数轴上不含点 $- b / a$ 的正向射线．
+- 当 $a > 0$ 时，那么 $a x + b > 0$ 的解集是：$lr(\{ x class("normal", stretch(|, size: #1.8em)) x > - b / a \})$⁠，解集是数轴上不含点 $- b / a$ 的正向射线．
 
-- 当 $a < 0$ 时，那么 $a x + b > 0$ 的解集是：$lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x < - b / a \})$⁠，解集是数轴上不含点 $- b / a$ 的负向射线．
+- 当 $a < 0$ 时，那么 $a x + b > 0$ 的解集是：$lr(\{ x class("normal", stretch(|, size: #1.8em)) x < - b / a \})$⁠，解集是数轴上不含点 $- b / a$ 的负向射线．
 
 #example[
 解不等式 $frac(x - 1, 6) - frac(2 x + 1, 4) < frac(2 x, 15) - 1$
@@ -543,7 +543,7 @@ $  & quad\(a_1^2 + a_2^2 + a_3^2\)\(b_1^2 + b_2^2 + b_3^2\)-\(a_1 b_1 + a_2 b_2 
 #solution[
 两边同乘以60，得：$ 10\(x - 1\)- 15\(2 x + 1\) & < 8 x - 60\
 - 20 x - 25 & < 8 x - 60\
-- 28 x & < - 35 $ #noindent;因此：$x > 5 / 4$⁠，所以它的解集是：$lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x > 5 / 4 \})$
+- 28 x & < - 35 $ #noindent;因此：$x > 5 / 4$⁠，所以它的解集是：$lr(\{ x class("normal", stretch(|, size: #1.8em)) x > 5 / 4 \})$
 
 ]
 #example[
@@ -581,10 +581,10 @@ $  & quad\(a_1^2 + a_2^2 + a_3^2\)\(b_1^2 + b_2^2 + b_3^2\)-\(a_1 b_1 + a_2 b_2 
   ]
 )
 
-求解的过程也可以用集合的符号来书写，即 $  & quad lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(3\(x - 2\)+ 1 < 6\(x + 1\), 7 - 4\(x - 3\)> 5 x - 10)) \})\
- & = lr(\{ x #scale(x: 180%, y: 180%)[$\|$] 3 \( x - 2 \) + 1 < 6 \( x + 1 \) \}) inter lr(\{ x #scale(x: 180%, y: 180%)[$\|$] 7 - 4 \( x - 3 \) > 5 x - 10 \})\
+求解的过程也可以用集合的符号来书写，即 $  & quad lr(\{ x class("normal", stretch(|, size: #1.8em)) display(cases(3\(x - 2\)+ 1 < 6\(x + 1\), 7 - 4\(x - 3\)> 5 x - 10)) \})\
+ & = lr(\{ x class("normal", stretch(|, size: #1.8em)) 3 \( x - 2 \) + 1 < 6 \( x + 1 \) \}) inter lr(\{ x class("normal", stretch(|, size: #1.8em)) 7 - 4 \( x - 3 \) > 5 x - 10 \})\
  & = \{ x\|3 x > - 11 \} inter \{ x\|9 x < 29 \}\
- & = lr(\{ x #scale(x: 180%, y: 180%)[$\|$] - 11 / 3 < x < 29 / 9 \}) $
+ & = lr(\{ x class("normal", stretch(|, size: #1.8em)) - 11 / 3 < x < 29 / 9 \}) $
 
 ]
 #example[
@@ -592,9 +592,9 @@ $  & quad\(a_1^2 + a_2^2 + a_3^2\)\(b_1^2 + b_2^2 + b_3^2\)-\(a_1 b_1 + a_2 b_2 
 
 ]
 #solution[
-$  & quad lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(5\(x - 3\)> 3\(2 x - 3\), 5\(x - 2\)< 3\(x - 1\))) \})\
- & = lr(\{ x #scale(x: 180%, y: 180%)[$\|$] 5 \( x - 3 \) > 3 \( 2 x - 3 \) \}) inter lr(\{ x #scale(x: 180%, y: 180%)[$\|$] 5 \( x - 2 \) < 3 \( x - 1 \) \})\
- & = \{ x\|x < - 6 \} inter lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x < 7 / 2 \})\
+$  & quad lr(\{ x class("normal", stretch(|, size: #1.8em)) display(cases(5\(x - 3\)> 3\(2 x - 3\), 5\(x - 2\)< 3\(x - 1\))) \})\
+ & = lr(\{ x class("normal", stretch(|, size: #1.8em)) 5 \( x - 3 \) > 3 \( 2 x - 3 \) \}) inter lr(\{ x class("normal", stretch(|, size: #1.8em)) 5 \( x - 2 \) < 3 \( x - 1 \) \})\
+ & = \{ x\|x < - 6 \} inter lr(\{ x class("normal", stretch(|, size: #1.8em)) x < 7 / 2 \})\
  & = \{ x\|x < - 6 \} $
 
 #figure([#fig("3-06");
@@ -612,7 +612,7 @@ $  & quad lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(5\(x - 3\)> 3\(2 
 
 ]
 #solution[
-$  & quad lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(7 x - 3 > 5 x + 1, 1 / 2 x > x + 1 / 2)) \})\
+$  & quad lr(\{ x class("normal", stretch(|, size: #1.8em)) display(cases(7 x - 3 > 5 x + 1, 1 / 2 x > x + 1 / 2)) \})\
  & = \{ x\|7 x - 3 > 5 x + 1 \} inter lr(\{ x \| 1 / 2 x > x + 1 / 2 \})\
  & = \{ x\|x > 2 \} inter \{ x\|x < - 1 \} = nothing $
 
@@ -645,11 +645,11 @@ $  & quad lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(7 x - 3 > 5 x + 1
 
 答：不等式的解集是：
 
-- 当 $m > 1$ 时，$lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x > frac(2 - 3 m, m - 1) \})$
+- 当 $m > 1$ 时，$lr(\{ x class("normal", stretch(|, size: #1.8em)) x > frac(2 - 3 m, m - 1) \})$
 
-- 当 $m = 1$ 时，$lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x in bb(R) \})$
+- 当 $m = 1$ 时，$lr(\{ x class("normal", stretch(|, size: #1.8em)) x in bb(R) \})$
 
-- 当 $m < 1$ 时，$lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x < frac(2 - 3 m, m - 1) \})$
+- 当 $m < 1$ 时，$lr(\{ x class("normal", stretch(|, size: #1.8em)) x < frac(2 - 3 m, m - 1) \})$
 
 ]
 #exercise[
@@ -791,9 +791,9 @@ x & gt.eq 189 / 52 = 3 33 / 52 $ #noindent;大于 $3 33 / 52$ 的最小自然数
 
 ]
 #solution[
-分式的值为负，当且仅当分子和分母的值有不同符号，即原不等式成立的充分必要条件是下列不等式组之一成立：#numbered-eq($ display(cases(2 x - 3 > 0, 5 - 4 x < 0)) arrow.r.double quad display(cases(x > 3 / 2, x > 5 / 4)) $);#noindent;或#numbered-eq($ display(cases(2 x - 3 < 0, 5 - 4 x > 0)) arrow.r.double quad display(cases(x < 3 / 2, x < 5 / 4)) $);#noindent;因为 $3 / 2 > 5 / 4$, 不等式组 (3.21) 的解集 $= lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x > 3 / 2 \})$, 不等式组 (3.22) 的解集 $= lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x < 5 / 4 \})$⁠．
+分式的值为负，当且仅当分子和分母的值有不同符号，即原不等式成立的充分必要条件是下列不等式组之一成立：#numbered-eq($ display(cases(2 x - 3 > 0, 5 - 4 x < 0)) arrow.r.double quad display(cases(x > 3 / 2, x > 5 / 4)) $);#noindent;或#numbered-eq($ display(cases(2 x - 3 < 0, 5 - 4 x > 0)) arrow.r.double quad display(cases(x < 3 / 2, x < 5 / 4)) $);#noindent;因为 $3 / 2 > 5 / 4$, 不等式组 (3.21) 的解集 $= lr(\{ x class("normal", stretch(|, size: #1.8em)) x > 3 / 2 \})$, 不等式组 (3.22) 的解集 $= lr(\{ x class("normal", stretch(|, size: #1.8em)) x < 5 / 4 \})$⁠．
 
-答：原不等式的解集 $= lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x > 3 / 2 \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x < 5 / 4 \})$
+答：原不等式的解集 $= lr(\{ x class("normal", stretch(|, size: #1.8em)) x > 3 / 2 \}) union.big lr(\{ x class("normal", stretch(|, size: #1.8em)) x < 5 / 4 \})$
 
 ]
 #example[
@@ -932,8 +932,8 @@ $  & quad \{ x\|thick\|x + 4\|> 9 \}\
 )
 
 从而得到不等式 $\|x - 10\|lt.eq 0.05$ 的解集：$  & quad \{ x\|thick\|x - 10\|lt.eq 0.05 \}\
- & = lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(-\(x - 10\)lt.eq 0.05, x < 10)) \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(x - 10 lt.eq 0.05, x gt.eq 10)) \})\
- & = #scale(x: 180%, y: 180%)[$\[$] \{ x\|-\(x - 10\)lt.eq 0.05 \} inter \{ x\|x < 10 \} #scale(x: 180%, y: 180%)[$\]$] union.big #scale(x: 180%, y: 180%)[$\[$] \{ x\|x - 10 lt.eq 0.05 \} inter \{ x\|x gt.eq 10 \} #scale(x: 180%, y: 180%)[$\]$]\
+ & = lr(\{ x class("normal", stretch(|, size: #1.8em)) display(cases(-\(x - 10\)lt.eq 0.05, x < 10)) \}) union.big lr(\{ x class("normal", stretch(|, size: #1.8em)) display(cases(x - 10 lt.eq 0.05, x gt.eq 10)) \})\
+ & = class("opening", stretch(\[, size: #1.8em)) \{ x\|-\(x - 10\)lt.eq 0.05 \} inter \{ x\|x < 10 \} class("closing", stretch(\], size: #1.8em)) union.big class("opening", stretch(\[, size: #1.8em)) \{ x\|x - 10 lt.eq 0.05 \} inter \{ x\|x gt.eq 10 \} class("closing", stretch(\], size: #1.8em))\
  & = \{ x\|9.95 lt.eq x < 10 \} union \{ x\|10 lt.eq x lt.eq 10.05 \}\
  & = \{ x\|9.95 lt.eq x lt.eq 10.05 \} $
 
@@ -944,8 +944,8 @@ $  & quad \{ x\|thick\|x + 4\|> 9 \}\
 - 当 $x < - 4$ 时，$\|x + 4\|= -\(x + 4\)$.
 
 #noindent;于是不等式的解集为：$  & quad \{ x\|thick\|x + 4\|> 9 \}\
- & = lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(-\(x + 4\)> 9, x < - 4)) \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(x + 4 > 9, x gt.eq - 4)) \})\
- & = #scale(x: 180%, y: 180%)[$\[$] \{ x\|-\(x + 4\)> 9 \} inter \{ x\|x < - 4 \} #scale(x: 180%, y: 180%)[$\]$] union.big #scale(x: 180%, y: 180%)[$\[$] \{ x\|x + 4 > 9 \} inter \{ x\|x gt.eq - 4 \} #scale(x: 180%, y: 180%)[$\]$]\
+ & = lr(\{ x class("normal", stretch(|, size: #1.8em)) display(cases(-\(x + 4\)> 9, x < - 4)) \}) union.big lr(\{ x class("normal", stretch(|, size: #1.8em)) display(cases(x + 4 > 9, x gt.eq - 4)) \})\
+ & = class("opening", stretch(\[, size: #1.8em)) \{ x\|-\(x + 4\)> 9 \} inter \{ x\|x < - 4 \} class("closing", stretch(\], size: #1.8em)) union.big class("opening", stretch(\[, size: #1.8em)) \{ x\|x + 4 > 9 \} inter \{ x\|x gt.eq - 4 \} class("closing", stretch(\], size: #1.8em))\
  & = \{ x\|x < - 13 \} union \{ x\|x > 5 \} $
 
 当然这种方法对解含一个绝对值的不等式不如前法方便，但它具有一般性，且它可推广到解含二个、三个……绝对值的不等式．
@@ -964,8 +964,8 @@ $  & quad \{ x\|thick\|x + 4\|> 9 \}\
   ]
 )
 
-所以原不等式的解就是这三个解集的并集，即 $  & quad lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(-\(x - 2\)+\[-\(x + 3\)\]> 7, x < - 3)) \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(-\(x - 2\)+\(x + 3\)> 7, - 3 lt.eq x < 2)) \})\
- & #h(2em) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(\(x - 2\)+\(x + 3\)> 7, x gt.eq 2)) \})\
+所以原不等式的解就是这三个解集的并集，即 $  & quad lr(\{ x class("normal", stretch(|, size: #1.8em)) display(cases(-\(x - 2\)+\[-\(x + 3\)\]> 7, x < - 3)) \}) union.big lr(\{ x class("normal", stretch(|, size: #1.8em)) display(cases(-\(x - 2\)+\(x + 3\)> 7, - 3 lt.eq x < 2)) \})\
+ & #h(2em) union.big lr(\{ x class("normal", stretch(|, size: #1.8em)) display(cases(\(x - 2\)+\(x + 3\)> 7, x gt.eq 2)) \})\
  & = \{ x\|x < - 4 \} union nothing union \{ x\|x > 3 \}\
  & = \{ x\|x < - 4 upright(" 或 ") x > 3 \} quad upright("(图3.13)") $
 
@@ -1044,7 +1044,7 @@ $  & quad \{ x\|thick\|x + 4\|> 9 \}\
 
 + $a x^2 + b x + c > 0$ $\(a > 0\,thick b^2 - 4 a c < 0\)$ 的解集是：$\{ x\|x in bb(R) \}$⁠．
 
-+ $a x^2 + b x + c > 0$ $\(a > 0\,thick b^2 - 4 a c = 0\)$ 的解集是：$lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x in bb(R) \, thick x eq.not - frac(b, 2 a) \})$
++ $a x^2 + b x + c > 0$ $\(a > 0\,thick b^2 - 4 a c = 0\)$ 的解集是：$lr(\{ x class("normal", stretch(|, size: #1.8em)) x in bb(R) \, thick x eq.not - frac(b, 2 a) \})$
 
 + $a x^2 + b x + c < 0$ $\(a > 0\,thick b^2 - 4 a c < 0\)$ 的解集是空集 $nothing$⁠．
 
@@ -1117,7 +1117,7 @@ $  & quad \{ x\|thick\|x + 4\|> 9 \}\
 
 ]
 #solution[
-由于 $b^2 - 4 a c =\(- 4\)^2 - 4 times 2 times\(- 5\)= 56 > 0$⁠，所以对应的二次方程有两个实根：$ x_1 = frac(2 - sqrt(14), 2)\,#h(2em) x_2 = frac(2 + sqrt(14), 2) $ #noindent;又 $a = 2 > 0$, 所以要使原不等式成立，它的解必须且只须在二根之间，或等于二根．因此解集为：$ lr(\{ x #scale(x: 180%, y: 180%)[$\|$] frac(2 - sqrt(14), 2) lt.eq x lt.eq frac(2 + sqrt(14), 2) \}) $
+由于 $b^2 - 4 a c =\(- 4\)^2 - 4 times 2 times\(- 5\)= 56 > 0$⁠，所以对应的二次方程有两个实根：$ x_1 = frac(2 - sqrt(14), 2)\,#h(2em) x_2 = frac(2 + sqrt(14), 2) $ #noindent;又 $a = 2 > 0$, 所以要使原不等式成立，它的解必须且只须在二根之间，或等于二根．因此解集为：$ lr(\{ x class("normal", stretch(|, size: #1.8em)) frac(2 - sqrt(14), 2) lt.eq x lt.eq frac(2 + sqrt(14), 2) \}) $
 
 ]
 #example[
@@ -1255,11 +1255,11 @@ $p$ 为何值时，二次三项式 $x^2 +\(p - 2\)x + 2 p + 1$ 对于任何 $x$ 
 
 ]
 #solution[
-解法1：用化为不等式组的方法解 $  & quad lr(\{ x #scale(x: 180%, y: 180%)[$\|$] frac(9 - x^2, x^2 - x - 2) gt.eq 0 \})\
- & = lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(9 - x^2 gt.eq 0, x^2 - x - 2 > 0)) \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(9 - x^2 lt.eq 0, x^2 - x - 2 < 0)) \})\
- & = #scale(x: 180%, y: 180%)[$\[$] \{ x\|- 3 lt.eq x lt.eq 3 \} inter \{ x\|x < - 1 upright(" 或 ") x > 2 \} #scale(x: 180%, y: 180%)[$\]$]\
- & #h(2em) union.big #scale(x: 180%, y: 180%)[$\[$] \{ x\|x lt.eq - 3 upright(" 或 ") x gt.eq 3 \} inter \{ x\|- 1 < x < 2 \} #scale(x: 180%, y: 180%)[$\]$]\
- & = #scale(x: 180%, y: 180%)[$\[$] \{ x\|- 3 lt.eq x < - 1 \} union \{ x\|2 < x lt.eq 3 \} #scale(x: 180%, y: 180%)[$\]$] union #scale(x: 120%, y: 120%)[$\[$] nothing union nothing #scale(x: 120%, y: 120%)[$\]$]\
+解法1：用化为不等式组的方法解 $  & quad lr(\{ x class("normal", stretch(|, size: #1.8em)) frac(9 - x^2, x^2 - x - 2) gt.eq 0 \})\
+ & = lr(\{ x class("normal", stretch(|, size: #1.8em)) display(cases(9 - x^2 gt.eq 0, x^2 - x - 2 > 0)) \}) union.big lr(\{ x class("normal", stretch(|, size: #1.8em)) display(cases(9 - x^2 lt.eq 0, x^2 - x - 2 < 0)) \})\
+ & = class("opening", stretch(\[, size: #1.8em)) \{ x\|- 3 lt.eq x lt.eq 3 \} inter \{ x\|x < - 1 upright(" 或 ") x > 2 \} class("closing", stretch(\], size: #1.8em))\
+ & #h(2em) union.big class("opening", stretch(\[, size: #1.8em)) \{ x\|x lt.eq - 3 upright(" 或 ") x gt.eq 3 \} inter \{ x\|- 1 < x < 2 \} class("closing", stretch(\], size: #1.8em))\
+ & = class("opening", stretch(\[, size: #1.8em)) \{ x\|- 3 lt.eq x < - 1 \} union \{ x\|2 < x lt.eq 3 \} class("closing", stretch(\], size: #1.8em)) union class("opening", stretch(\[, size: #1.2em)) nothing union nothing class("closing", stretch(\], size: #1.2em))\
  & = \{ x\|- 3 lt.eq x < - 1 \} union \{ x\|2 < x lt.eq 3 \} $
 
 解法2: 用列表法来解．

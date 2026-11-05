@@ -62,8 +62,7 @@
 #solution[
 由于：$15 degree = 45 degree - 30 degree\,#h(2em) 75 degree = 45 degree + 30 degree$ $ cos 45 degree = sin 45 degree = sqrt(2) / 2\,quad cos 30 degree = sqrt(3) / 2\,quad sin 30 degree = 1 / 2 $ #noindent;所以：$ cos 15 degree & = cos\(45 degree - 30 degree\)= cos 45 degree cos 30 degree + sin 45 degree sin 30 degree\
  & = sqrt(2) / 2 dot.op sqrt(3) / 2 + sqrt(2) / 2 dot.op 1 / 2\
- & = frac(sqrt(6) + sqrt(2), 4) approx 0.9659\
-cos 75 degree & = cos\(45 degree + 30 degree\)= cos 45 degree cos 30 degree - sin 45 degree sin 30 degree\
+ & = frac(sqrt(6) + sqrt(2), 4) approx 0.9659 $ $ cos 75 degree & = cos\(45 degree + 30 degree\)= cos 45 degree cos 30 degree - sin 45 degree sin 30 degree\
  & = sqrt(2) / 2 dot.op sqrt(3) / 2 - sqrt(2) / 2 dot.op 1 / 2\
  & = frac(sqrt(6) - sqrt(2), 4) approx frac(2.4495 - 1.4142, 4)\
  & approx 0.2588 $
@@ -234,8 +233,7 @@ $ upright("等式左边") & = frac(\(sin alpha cos beta + cos alpha sin beta\)\(
 $ tan 15 degree & = tan\(60 degree - 45 degree\)\
  & = frac(tan 60 degree - tan 45 degree, 1 + tan 60 degree tan 45 degree)\
  & = frac(sqrt(3) - 1, 1 + sqrt(3)) = frac(\(sqrt(3) - 1\)^2, 2)\
- & = frac(4 - 2 sqrt(3), 2) = 2 - sqrt(3)\
-tan 75 degree & = tan\(45 degree + 30 degree\)\
+ & = frac(4 - 2 sqrt(3), 2) = 2 - sqrt(3) $ $ tan 75 degree & = tan\(45 degree + 30 degree\)\
  & = frac(1 + 1 / sqrt(3), 1 - 1 / sqrt(3)) = frac(sqrt(3) + 1, sqrt(3) - 1)\
  & = frac(4 + 2 sqrt(3), 2) = 2 + sqrt(3) $
 
@@ -1211,7 +1209,7 @@ $ 1 + sin theta + cos theta & =\(1 + cos theta\)+ sin theta\
 $ cos alpha dot.op cos 2 alpha dot.op cos 4 alpha & = frac(2 sin alpha dot.op cos alpha dot.op cos 2 alpha dot.op cos 4 alpha, 2 sin alpha)\
  & = frac(sin 2 alpha dot.op cos 2 alpha dot.op cos 4 alpha, 2 sin alpha)\
  & = frac(sin 4 alpha dot.op cos 4 alpha, 2^2 sin alpha)\
- & = frac(sin 8 alpha, 2^3 sin alpha) = frac(sin 8 alpha, 8 sin alpha) $ #noindent;$ cos pi / 7 cos frac(2 pi, 7) cos frac(4 pi, 7) = frac(sin frac(8 pi, 7), 8 sin pi / 7) = frac(- sin pi / 7, 8 sin pi / 7) = - 1 / 8 $
+ & = frac(sin 8 alpha, 2^3 sin alpha) = frac(sin 8 alpha, 8 sin alpha) $ $ cos pi / 7 cos frac(2 pi, 7) cos frac(4 pi, 7) = frac(sin frac(8 pi, 7), 8 sin pi / 7) = frac(- sin pi / 7, 8 sin pi / 7) = - 1 / 8 $
 
 ]
 #example[
@@ -1247,9 +1245,9 @@ $ cos alpha dot.op cos 2 alpha dot.op cos 4 alpha & = frac(2 sin alpha dot.op co
 ]
 #proof[
 $ upright("右边") & = sin^2 alpha\(sin 3 alpha dot.op sin alpha\)+ cos^2 alpha\(cos 3 alpha dot.op cos alpha\)\
- & = 1 / 2 #scale(x: 120%, y: 120%)[$\[$] sin^2 alpha\(cos 2 alpha - cos 4 alpha\)+ cos^2 alpha\(cos 4 alpha + cos 2 alpha\)#scale(x: 120%, y: 120%)[$\]$]\
- & = 1 / 2 #scale(x: 120%, y: 120%)[$\[$] cos 2 alpha\(sin^2 alpha + cos^2 alpha\)+ cos 4 alpha\(cos^2 alpha - sin^2 alpha\)#scale(x: 120%, y: 120%)[$\]$]\
- & = 1 / 2 #scale(x: 120%, y: 120%)[$\[$] cos 2 alpha + cos 4 alpha dot.op cos 2 alpha #scale(x: 120%, y: 120%)[$\]$]\
+ & = 1 / 2 class("opening", stretch(\[, size: #1.2em)) sin^2 alpha\(cos 2 alpha - cos 4 alpha\)+ cos^2 alpha\(cos 4 alpha + cos 2 alpha\)class("closing", stretch(\], size: #1.2em))\
+ & = 1 / 2 class("opening", stretch(\[, size: #1.2em)) cos 2 alpha\(sin^2 alpha + cos^2 alpha\)+ cos 4 alpha\(cos^2 alpha - sin^2 alpha\)class("closing", stretch(\], size: #1.2em))\
+ & = 1 / 2 class("opening", stretch(\[, size: #1.2em)) cos 2 alpha + cos 4 alpha dot.op cos 2 alpha class("closing", stretch(\], size: #1.2em))\
  & = 1 / 2 cos 2 alpha\(1 + cos 4 alpha\)\
  & = 1 / 2 cos 2 alpha dot.op 2 cos^2 2 alpha\
  & = cos^3 2 alpha = upright("左边") $
@@ -1496,7 +1494,7 @@ $  & quad 4 cos frac(pi - A, 4) cos frac(pi - B, 4) cos frac(pi - C, 4)\
 
 ]
 #solution[
-已知在 $\(0\,2 pi\)$ 内解为 $x = pi / 6$ 和 $x = frac(5 pi, 6)$, 所以方程的解集为 $ lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = pi / 6 + 2 k pi \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = frac(5 pi, 6) + 2 k pi \}) $
+已知在 $\(0\,2 pi\)$ 内解为 $x = pi / 6$ 和 $x = frac(5 pi, 6)$, 所以方程的解集为 $ lr(\{ x class("normal", stretch(|, size: #1.8em)) x = pi / 6 + 2 k pi \}) union.big lr(\{ x class("normal", stretch(|, size: #1.8em)) x = frac(5 pi, 6) + 2 k pi \}) $
 
 ]
 #example[
@@ -1504,8 +1502,8 @@ $  & quad 4 cos frac(pi - A, 4) cos frac(pi - B, 4) cos frac(pi - C, 4)\
 
 ]
 #solution[
-已知在 $\(0\,2 pi\)$ 内，$x = pi / 2$ 和 $x = frac(3 pi, 2)$⁠，所以方程的解为 $  & quad lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = pi / 2 + 2 k pi \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = frac(3 pi, 2) + 2 k pi = pi / 2 + \( 2 k + 1 \) pi \})\
- & = lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = pi / 2 + k pi \, quad k in bb(Z) \}) $
+已知在 $\(0\,2 pi\)$ 内，$x = pi / 2$ 和 $x = frac(3 pi, 2)$⁠，所以方程的解为 $  & quad lr(\{ x class("normal", stretch(|, size: #1.8em)) x = pi / 2 + 2 k pi \}) union.big lr(\{ x class("normal", stretch(|, size: #1.8em)) x = frac(3 pi, 2) + 2 k pi = pi / 2 + \( 2 k + 1 \) pi \})\
+ & = lr(\{ x class("normal", stretch(|, size: #1.8em)) x = pi / 2 + k pi \, quad k in bb(Z) \}) $
 
 ]
 #example[
@@ -1513,7 +1511,7 @@ $  & quad 4 cos frac(pi - A, 4) cos frac(pi - B, 4) cos frac(pi - C, 4)\
 
 ]
 #solution[
-解集为 $lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = frac(3 pi, 2) + 2 k pi \, quad k in bb(Z) \})$
+解集为 $lr(\{ x class("normal", stretch(|, size: #1.8em)) x = frac(3 pi, 2) + 2 k pi \, quad k in bb(Z) \})$
 
 ]
 #example[
@@ -1529,8 +1527,8 @@ $  & quad 4 cos frac(pi - A, 4) cos frac(pi - B, 4) cos frac(pi - C, 4)\
 
 ]
 #solution[
-由查表可知在 $\[0\,2 pi\)$ 内，$x = 40 degree 54'$ 和 $x = 220 degree 54'$⁠．所以方程的解为 $  & quad lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = 40 degree 54' + k dot.op 360 degree \}) union lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = 220 degree 54' + k dot.op 360 degree \})\
- & = lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = 40 degree 54' + k dot.op 180 degree \, thick k in bb(Z) \}) $
+由查表可知在 $\[0\,2 pi\)$ 内，$x = 40 degree 54'$ 和 $x = 220 degree 54'$⁠．所以方程的解为 $  & quad lr(\{ x class("normal", stretch(|, size: #1.8em)) x = 40 degree 54' + k dot.op 360 degree \}) union lr(\{ x class("normal", stretch(|, size: #1.8em)) x = 220 degree 54' + k dot.op 360 degree \})\
+ & = lr(\{ x class("normal", stretch(|, size: #1.8em)) x = 40 degree 54' + k dot.op 180 degree \, thick k in bb(Z) \}) $
 
 ]
 一般地，可以概括出：
@@ -1583,15 +1581,15 @@ $  & quad 4 cos frac(pi - A, 4) cos frac(pi - B, 4) cos frac(pi - C, 4)\
 
 ]
 #solution[
-+ 原方程化为 $cos 2 x = 1 / 2$ $ 2 x = plus.minus pi / 3 + 2 k pi\,quad\(k in bb(Z)\) $ #noindent;所以解集是 $lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = plus.minus pi / 6 + k pi \, quad k in bb(Z) \})$
++ 原方程化为 $cos 2 x = 1 / 2$ $ 2 x = plus.minus pi / 3 + 2 k pi\,quad\(k in bb(Z)\) $ #noindent;所以解集是 $lr(\{ x class("normal", stretch(|, size: #1.8em)) x = plus.minus pi / 6 + k pi \, quad k in bb(Z) \})$
 
-+ 原方程化为 $tan\(x + 15 degree\)= - 1$ $ x + 15 degree = - 45 degree + k dot.op 180 degree\,quad\(k in bb(Z)\) $ #noindent;所以解集是 $lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = - 60 degree + k dot.op 180 degree \, quad k in bb(Z) \})$
++ 原方程化为 $tan\(x + 15 degree\)= - 1$ $ x + 15 degree = - 45 degree + k dot.op 180 degree\,quad\(k in bb(Z)\) $ #noindent;所以解集是 $lr(\{ x class("normal", stretch(|, size: #1.8em)) x = - 60 degree + k dot.op 180 degree \, quad k in bb(Z) \})$
 
-+ 原方程化为 $sin\(3 x - 9 degree\)= 1 / 2$ $ 3 x - 9 degree = 30 degree + k dot.op 360 degree\,quad 3 x - 9 degree = 150 degree + k dot.op 360 degree\,#h(2em)\(k in bb(Z)\) $ #noindent;所以解集为$ lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = 13 degree + k dot.op 120 degree \, quad k in bb(Z) \}) union lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = 53 degree + k dot.op 120 degree \, quad k in bb(Z) \}) $
++ 原方程化为 $sin\(3 x - 9 degree\)= 1 / 2$ $ 3 x - 9 degree = 30 degree + k dot.op 360 degree\,quad 3 x - 9 degree = 150 degree + k dot.op 360 degree\,#h(2em)\(k in bb(Z)\) $ #noindent;所以解集为$ lr(\{ x class("normal", stretch(|, size: #1.8em)) x = 13 degree + k dot.op 120 degree \, quad k in bb(Z) \}) union lr(\{ x class("normal", stretch(|, size: #1.8em)) x = 53 degree + k dot.op 120 degree \, quad k in bb(Z) \}) $
 
 + 原方程是关于 $cos x$ 的二次方程，解这个方程，得 $ cos x = 2 + sqrt(2)\,#h(2em) cos x = 2 - sqrt(2) $ #noindent;因为 $2 + sqrt(2) > 1$, 所以 $cos x = 2 + sqrt(2)$ 无解；从 $cos x = 2 - sqrt(2)$, 可以解得：$x = plus.minus 54 degree 9' + k dot.op 360 degree$, $\(k in bb(Z)\)$⁠．
 
-  所以原方程的解集是 $lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = plus.minus 54 degree 9' + k dot.op 360 degree \, quad k in bb(Z) \})$
+  所以原方程的解集是 $lr(\{ x class("normal", stretch(|, size: #1.8em)) x = plus.minus 54 degree 9' + k dot.op 360 degree \, quad k in bb(Z) \})$
 
 ]
 #example[
@@ -1611,7 +1609,7 @@ $  & quad 4 cos frac(pi - A, 4) cos frac(pi - B, 4) cos frac(pi - C, 4)\
 
 - $cos x = - 1 / 2\,quad x = plus.minus frac(2 pi, 3) + 2 k pi\,quad\(k in bb(Z)\)$
 
-#noindent;所以原方程的解集是 $lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = plus.minus frac(2 pi, 3) + 2 k pi \, quad k in bb(Z) \})$⁠．
+#noindent;所以原方程的解集是 $lr(\{ x class("normal", stretch(|, size: #1.8em)) x = plus.minus frac(2 pi, 3) + 2 k pi \, quad k in bb(Z) \})$⁠．
 
 ]
 #example[
@@ -1631,7 +1629,7 @@ $  & quad 4 cos frac(pi - A, 4) cos frac(pi - B, 4) cos frac(pi - C, 4)\
 
 - $tan x = - sqrt(3) / 3\,#h(2em) x = - pi / 6 + k pi\,quad\(k in bb(Z)\)$
 
-#noindent;所以原方程的解集是 $ lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = pi / 3 + k pi \, quad k in bb(Z) \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = - pi / 6 + k pi \, quad k in bb(Z) \}) $
+#noindent;所以原方程的解集是 $ lr(\{ x class("normal", stretch(|, size: #1.8em)) x = pi / 3 + k pi \, quad k in bb(Z) \}) union.big lr(\{ x class("normal", stretch(|, size: #1.8em)) x = - pi / 6 + k pi \, quad k in bb(Z) \}) $
 
 ]
 #example[
@@ -1641,7 +1639,7 @@ $  & quad 4 cos frac(pi - A, 4) cos frac(pi - B, 4) cos frac(pi - C, 4)\
 #solution[
 由和角公式$ sin x = 2 (sin pi / 3 dot.op cos x - cos pi / 3 dot.op sin x) = sqrt(3) cos x - sin x $ #noindent;所以 $2 sin x = sqrt(3) cos x$⁠，两边同除以 $2 cos x$⁠，得 $ tan x = sqrt(3) / 2 approx 0.8660 $ #noindent;查表可得：$x = 40 degree 54' + k dot.op 180 degree quad\(k in bb(Z)\)$
 
-所以原方程的解集是 $lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = 40 degree 54' + k dot.op 180 degree \, quad k in bb(Z) \})$
+所以原方程的解集是 $lr(\{ x class("normal", stretch(|, size: #1.8em)) x = 40 degree 54' + k dot.op 180 degree \, quad k in bb(Z) \})$
 
 ]
 #example[
@@ -1657,7 +1655,7 @@ $  & quad 4 cos frac(pi - A, 4) cos frac(pi - B, 4) cos frac(pi - C, 4)\
 
 - 若 $sin x / 2 - cos x / 2 = 0$⁠，可变形为 $tan x / 2 = 1$⁠，则 $x / 2 = pi / 4 + k pi$⁠，所以 $x = pi / 2 + 2 k pi\,quad\(k in bb(Z)\)$
 
-#noindent;因此原方程的解集是 $ lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = \( 4 k plus.minus 1 \) pi \, quad k in bb(Z) \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x = pi / 2 + 2 k pi \, quad k in bb(Z) \}) $
+#noindent;因此原方程的解集是 $ lr(\{ x class("normal", stretch(|, size: #1.8em)) x = \( 4 k plus.minus 1 \) pi \, quad k in bb(Z) \}) union.big lr(\{ x class("normal", stretch(|, size: #1.8em)) x = pi / 2 + 2 k pi \, quad k in bb(Z) \}) $
 
 ]
 #exercise[

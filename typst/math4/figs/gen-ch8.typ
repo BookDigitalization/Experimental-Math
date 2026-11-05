@@ -439,7 +439,10 @@
     node(D, [$g$], frame: "rect", name: "D")
     let E = (7, 0)
     node(E, [$x$], name: "E")
-    line((name: "A", anchor: 0deg), B, C, D, (name: "E", anchor: 180deg), stroke: (paint: black, thickness: 0.4pt))
+    line((name: "A", anchor: 0deg), (name: "B", anchor: 180deg), stroke: (paint: black, thickness: 0.4pt))
+  line((name: "B", anchor: 0deg), (name: "C", anchor: 180deg), stroke: (paint: black, thickness: 0.4pt))
+  line((name: "C", anchor: 0deg), (name: "D", anchor: 180deg), stroke: (paint: black, thickness: 0.4pt))
+  line((name: "D", anchor: 0deg), (name: "E", anchor: 180deg), stroke: (paint: black, thickness: 0.4pt))
   })
   ,
   "8-23": canvas({

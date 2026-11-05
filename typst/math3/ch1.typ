@@ -2520,8 +2520,8 @@ $therefore quad x = 0.1851$
 ]
 #solution[
 由题意可得：$ s = 1 / 2\(15.37 + 21.42 + 13.83\)= 25.31\
-s - a = 9.94\,#h(2em) s - b = 3.89\,#h(2em) s - c = 11.48 $ #noindent;因此：$ lg Delta & = 1 / 2 #scale(x: 120%, y: 120%)[$\[$] lg s + lg\(s - a\)+ lg\(s - b\)+ lg\(s - c\)#scale(x: 120%, y: 120%)[$\]$]\
- & = 1 / 2 #scale(x: 120%, y: 120%)[$\[$] 1.4033 + 0.9974 + 0.5899 + 1.0599 #scale(x: 120%, y: 120%)[$\]$]\
+s - a = 9.94\,#h(2em) s - b = 3.89\,#h(2em) s - c = 11.48 $ #noindent;因此：$ lg Delta & = 1 / 2 class("opening", stretch(\[, size: #1.2em)) lg s + lg\(s - a\)+ lg\(s - b\)+ lg\(s - c\)class("closing", stretch(\], size: #1.2em))\
+ & = 1 / 2 class("opening", stretch(\[, size: #1.2em)) 1.4033 + 0.9974 + 0.5899 + 1.0599 class("closing", stretch(\], size: #1.2em))\
  & = 2.0253 $ #noindent;$therefore quad Delta = 106.0\(upright(c m)^2\)$.
 
 ]
@@ -2543,9 +2543,9 @@ lg\|A\| & = 3 lg 2.31 + 1 / 5 lg 0.072\
 
 ]
 #solution[
-这里 $A$ 是锐角，并且 $a < b$, 我们先计算 $lg sin B$⁠．$ sin B = frac(b sin A, a) = frac(74.83 sin 27 degree 18', 62.24) $ #noindent;$ lg sin B & = lg 74.83 + lg sin 27 degree 18' - lg 62.24\
+这里 $A$ 是锐角，并且 $a < b$, 我们先计算 $lg sin B$⁠．$ sin B = frac(b sin A, a) = frac(74.83 sin 27 degree 18', 62.24) $ $ lg sin B & = lg 74.83 + lg sin 27 degree 18' - lg 62.24\
  & = 1.8741 + macron(1) .6615 - 1.7941\
- & = macron(1) .7415 $ #noindent;因为 $lg sin B < 0$⁠，即 $0 < sin B < 1$, 且 $b > a$, 所以这题有两解，查表得：$ B_1 = 33 degree 28'\,#h(2em) B_2 = 180 degree - B_1 = 146 degree 32' $ #noindent;$ C_1 & = 180 degree -\(A + B_1\)= 180 degree - 60 degree 46' = 119 degree 14'\
+ & = macron(1) .7415 $ #noindent;因为 $lg sin B < 0$⁠，即 $0 < sin B < 1$, 且 $b > a$, 所以这题有两解，查表得：$ B_1 = 33 degree 28'\,#h(2em) B_2 = 180 degree - B_1 = 146 degree 32' $ $ C_1 & = 180 degree -\(A + B_1\)= 180 degree - 60 degree 46' = 119 degree 14'\
 C_2 & = 180 degree -\(A + B_2\)= 180 degree - 173 degree 50' = 6 degree 10' $
 
 $ c_1 = frac(a sin C_1, sin A) = frac(62.24 sin 119 degree 14', sin 27 degree 18') $

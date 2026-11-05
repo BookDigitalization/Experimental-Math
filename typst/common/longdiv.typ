@@ -54,6 +54,93 @@
   }
 }
 
+// ---- 小数竖式除法：#declongdiv("2.00", 3, max-extra: 2)，对应 \longdivision[2]{2.00}{3} ----
+// 同 longdivision 宏包：被除数的各位用完后继续补 0（最多 max-extra 位），从这时起余数一重复就停，
+// 重复的商（循环节）上加横线。减数跨过小数点时也印出小数点（如 2.0 下的 1.8）
+#let declongdiv(dividend, divisor, max-extra: 2) = {
+  let chars = dividend.clusters()
+  if "." not in chars { chars.push(".") }
+  let rem = 0
+  let quotient = ()   // 每列的商（小数点列为 "."）
+  let qcol = ()       // 每个商对应的列
+  let rows = ()
+  let started = false
+  let seen = (:)      // 补 0 阶段：余数 -> 第几个商
+  let repeat-from = none
+  let i = 0
+  let extra = 0
+  while true {
+    if i >= chars.len() {
+      // 被除数用完：补 0
+      if rem == 0 or extra >= max-extra + 1 or repeat-from != none { break }
+      chars.push("0")
+      extra += 1
+    }
+    let c = chars.at(i)
+    if c == "." { quotient.push("."); i += 1; continue }
+    let cur = rem * 10 + int(c)
+    let q = calc.quo(cur, divisor)
+    quotient.push(q)
+    if q > 0 {
+      if started { rows.push((cur, i, false)) }
+      rows.push((q * divisor, i, true))
+      started = true
+    }
+    rem = cur - q * divisor
+    i += 1
+    // 被除数的各位用完以后，记录每一步的余数，重复时停止
+    if i >= dividend.clusters().len() {
+      let key = str(rem)
+      if key in seen { repeat-from = seen.at(key); break }
+      seen.insert(key, quotient.len())
+    }
+  }
+  rows.push((rem, chars.len() - 1, false))
+  let n = chars.len()
+  let dot = chars.position(c => c == ".")
+
+  // 一个数按位放进以 last 列为末位的格子，跨过小数点列时在那里印小数点
+  let place-number(value, last, underline) = {
+    let s = str(value).clusters()
+    let cols = ()
+    let c = last
+    for k in range(s.len()) {
+      if c == dot { c -= 1 }
+      cols.push(c)
+      c -= 1
+    }
+    let first = cols.last()
+    range(n).map(col => {
+      let k = cols.position(x => x == col)
+      let content = if k != none { s.at(s.len() - 1 - k) } else if col == dot and col > first and col < last { "." } else { [] }
+      let stroke = if underline and col >= first and col <= last { (bottom: rule) } else { none }
+      grid.cell(content, stroke: stroke)
+    })
+  }
+  // 商：整数部分的前导 0 不印，但个位印 0（如 0.666）
+  let qcells = quotient.enumerate().map(((k, q)) => {
+    if q == "." { "." }
+    else if k < dot - 1 and q == 0 and quotient.slice(0, k).all(x => x == 0) { [] }
+    else if repeat-from != none and k >= repeat-from { math.equation(math.overline(str(q))) }
+    else { str(q) }
+  })
+  let make(rows) = grid(
+    columns: (auto,) + (auto,) * n,
+    column-gutter: 0pt,
+    row-gutter: 0.35em,
+    align: center + bottom,
+    inset: (x: 0.05em, y: 0.15em),
+    [], ..qcells,
+    grid.cell(align: right)[#divisor#h(0.1em))], ..chars.map(d => grid.cell(stroke: (top: rule), d)),
+    ..rows.map(((v, last, ul)) => ([], ..place-number(v, last, ul))).flatten(),
+  )
+  context {
+    let full = measure(make(rows)).height
+    let head = measure(make(())).height
+    box(baseline: full - head + 0.15em, make(rows))
+  }
+}
+
 // ---- 多项式长除法：#polylongdiv((4, 5, -2, -3), (1, 2, 1)) ----
 // 系数按降幂排列；除式首项系数须为 ±1（书中各例都是），商的系数才是整数。
 // style: "A" 为常见的“商在上、除式在左”的格式；"D" 为“除式在右上、商在除式下方”的格式。

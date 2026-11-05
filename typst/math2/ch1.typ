@@ -280,7 +280,7 @@ $therefore quad S = frac(100 times 101, 2) = 5050$
 ]
 #solution[
 在 $d$ 上用圆规截取2段 $u$ 后，所余的一段 $overline(D_2 E)$ 较 $u$ 短；在 $u$ 上截取2段 $overline(D_2 E)$ 后，所余的 $overline(U_2 V)$ 较 $overline(D_2 E)$ 短；在 $overline(D_2 E)$ 上截取2段 $overline(U_2 V)$ 后，所余的一段 $overline(F_2 E)$ 较 $overline(U_2 V)$ 短；但 $overline(U_2 V)$ 恰好是 $overline(F_2 E)$ 的2倍．于是 $ overline(D_2 E) & = overline(D_2 F_2) + overline(F_2 E) = 2 overline(U_2 V) + overline(F_2 E)\
- & = 2 dot.op 2 overline(F_2 E) + overline(F_2 E) = 5 overline(F_2 E) $ #noindent;$ u = 2 overline(D_2 E) + overline(U_2 V) = 2 dot.op 5 overline(F_2 E) + 2 overline(F_2 E) = 12 overline(F_2 E) $ #noindent;$therefore quad overline(F_2 E) = 1 / 12 u\,quad overline(D_2 E) = 5 / 12 u\,quad d = 2 5 / 12 u$
+ & = 2 dot.op 2 overline(F_2 E) + overline(F_2 E) = 5 overline(F_2 E) $ $ u = 2 overline(D_2 E) + overline(U_2 V) = 2 dot.op 5 overline(F_2 E) + 2 overline(F_2 E) = 12 overline(F_2 E) $ #noindent;$therefore quad overline(F_2 E) = 1 / 12 u\,quad overline(D_2 E) = 5 / 12 u\,quad d = 2 5 / 12 u$
 
 ]
 由例1.7和例1.8可以看出，当被度量线段（$c$ 和 $d$⁠）不能恰好被分割而成为长度单位的整数倍，也就是它们不能被长度单位量尽时，都是求出另一条线段（例1.7中是 $overline(U_1 V)$, 例1.8中是 $overline(F_2 E)$⁠），使得它能量尽长度单位和被量线段．再按例1.6的方法求出以长度单位为单位的这条线段的长度，然后便可求出原来被量线段的长度了．

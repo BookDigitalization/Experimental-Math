@@ -101,15 +101,17 @@ function Para(p)
   local last_display = nil
   for _, el in ipairs(p.content) do
     -- 紧挨着的两个独立公式 \[..\]\[..\] 合成一个多行公式，否则 Typst 中间会多出一个空段落
-    -- （一个有 & 对齐、一个没有时不合并：合并后没有 & 的行会和对齐的行错开）
+    -- （有 & 对齐的不合并：一个有一个没有时，合并后没有 & 的行会和对齐的行错开；两个都有时，
+    -- LaTeX 中是各自独立的对齐组，合并后对齐到一起、整体变宽，还少了两式之间的空白）
     if el.t == "Math" and el.mathtype == "DisplayMath" and after_display and last_display
-        and (last_display.text:find("&", 1, true) ~= nil) == (el.text:find("&", 1, true) ~= nil) then
+        and not last_display.text:find("&", 1, true) and not el.text:find("&", 1, true) then
       last_display.text = "\\begin{gathered}" .. last_display.text:gsub("^\\begin{gathered}(.*)\\end{gathered}$", "%1")
         .. "\\\\" .. el.text .. "\\end{gathered}"
       while #out > 0 and is_space(out[#out]) do out:remove() end
       goto continue
     end
-    if after_display and not is_space(el) then
+    -- 下一个独立公式前不加（#noindent 会成为两式之间的一个空段落）
+    if after_display and not is_space(el) and not (el.t == "Math" and el.mathtype == "DisplayMath") then
       out:insert(pandoc.RawInline("typst", "#noindent;"))
       after_display = false
     end

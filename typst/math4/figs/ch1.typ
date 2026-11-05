@@ -8,13 +8,21 @@
   set text(size: 9pt)   // \small
   // 一个框：粗线（thick）外框，上下内边距 2pt，左右为 tabular 的列间距 6pt
   // lead：行间空白。LaTeX 中 aligned 的行距是固定的 \baselineskip 加 \jot，Typst 是固定的行间空白，按各框分别取值
-  let tbox(head, body, lead: 1em) = box(stroke: 0.8pt, inset: (y: 2pt), table(
+  // CeTZ 的 content 里文字的上下边界不按字形算，含分式的行会叠在一起；框和标注里都设回 bounds（同正文）
+  let bounds(body) = { set text(top-edge: "bounds", bottom-edge: "bounds"); body }
+  let tbox(head, body, lead: 1em) = box(stroke: 0.8pt, inset: (y: 2pt), bounds(table(
     columns: 1, align: center, stroke: none, inset: (x: 6pt, y: 3pt),
     ..if head != none { (head, table.hline(stroke: 0.4pt)) },
-    { set par(leading: lead); body },
-  ))
+    // 陈列公式（$ … $）改为 display 样式的行内公式：正文中陈列公式会被包进 width: 100% 的块并按版心宽度缩放，
+    // 在自动宽度的单元格里就被缩得很小
+    // 多行的行内公式第一行的高度少算了约 5pt，上内边距相应加大
+    table.cell(inset: (x: 6pt, top: if head != none { 9pt } else { 7pt }, bottom: 3pt), { set par(leading: lead)
+      // cetz.draw 的 content 遮住了类型 content，要写 std.content
+      if type(body) == std.content and body.func() == math.equation { math.equation(block: false, math.display(body.body)) }
+      else { body } }),
+  )))
   let sp(..xs) = xs.pos().join(h(1em))
-  let lab(p, body, pos) = node(p, body, pos: pos)
+  let lab(p, body, pos) = node(p, bounds(body), pos: pos)
   canvas({
     content((0, 0), anchor: "north-west", name: "D", tbox(sp[两][角][差], $
       & sin(alpha - beta) \ & = sin alpha cos beta \ & quad eqph - cos alpha sin beta \
@@ -69,15 +77,15 @@
       sin x + sin y & = 2 sin (x + y) / 2 cos (x - y) / 2 \
       sin x - sin y & = 2 cos (x + y) / 2 sin (x - y) / 2 \
       cos x + cos y & = 2 cos (x + y) / 2 cos (x - y) / 2 \
-      cos x - cos y & = -2 sin (x + y) / 2 sin (x - y) / 2 $, lead: 0.25em))
+      cos x - cos y & = -2 sin (x + y) / 2 sin (x - y) / 2 $, lead: 0.45em))
     line("P.south", "Q.north", mark: arrow)
-    lab(("P.south", 50%, "Q.north"), align(right)[以 $x$ 代 $alpha + beta$\ $y$ 代 $alpha - beta$], "left")
-    lab(("P.south", 50%, "Q.north"), align(left)[以 $(x + y) / 2$ 代 $alpha$\ 以 $(x - y) / 2$ 代 $beta$], "right")
+    lab(("P.south", 50%, "Q.north"), std.stack(spacing: 4pt, align(right)[以 $x$ 代 $alpha + beta$], align(right)[$y$ 代 $alpha - beta$]), "left")
+    lab(("P.south", 50%, "Q.north"), std.stack(spacing: 4pt, [以 $(x + y) / 2$ 代 $alpha$], [以 $(x - y) / 2$ 代 $beta$]), "right")
 
     content((rel: (0, -1.8), to: "H.south"), anchor: "north", name: "T", tbox(none, $
       tan alpha / 2 & = plus.minus sqrt((1 - cos alpha) / (1 + cos alpha)) \
       & = (sin alpha) / (1 + cos alpha) \
-      & = (1 - cos alpha) / (sin alpha) $, lead: 0.2em))
+      & = (1 - cos alpha) / (sin alpha) $, lead: 0.4em))
     line("H.south", "T.north", mark: arrow)
     lab(("H.south", 50%, "T.north"), [变], "left")
     lab(("H.south", 50%, "T.north"), [形], "right")

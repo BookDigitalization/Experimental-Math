@@ -27,7 +27,9 @@
     // 节点 n1、n2、n3 依次相连
     let chain(n1, n2, n3, dashed: false) = {
       let (p, q, s) = (pts.at(n1), pts.at(n2), pts.at(n3))
-      line(toward(p, unit(p, q), r), toward(q, unit(q, p), r), toward(q, unit(q, s), r), toward(s, unit(s, q), r), stroke: st(dashed))
+      // 经过中间节点时在圆周处断开（TikZ 的 (a)--(b)--(c) 每段都裁到节点边界）
+      line(toward(p, unit(p, q), r), toward(q, unit(q, p), r), stroke: st(dashed))
+      line(toward(q, unit(q, s), r), toward(s, unit(s, q), r), stroke: st(dashed))
     }
     // n1 → n2，沿同一方向再走 t，画圆弧（a0 → a1，半径 R），再连到 n3
     let hook(n1, n2, t, a0, a1, n3, dashed: false) = {
@@ -38,7 +40,8 @@
       let qq = toward(q, u, t)
       let c = (qq.at(0) - R * calc.cos(a0 * 1deg), qq.at(1) - R * calc.sin(a0 * 1deg))
       let e = (c.at(0) + R * calc.cos(a1 * 1deg), c.at(1) + R * calc.sin(a1 * 1deg))
-      line(toward(p, u, r), pq, qq, stroke: st(dashed))
+      line(toward(p, u, r), pq, stroke: st(dashed))
+      line(toward(q, u, r), qq, stroke: st(dashed))
       arc(qq, start: a0 * 1deg, stop: a1 * 1deg, radius: R, stroke: st(dashed))
       line(e, toward(s, unit(s, e), r), stroke: st(dashed))
     }

@@ -316,7 +316,7 @@ $therefore quad 12.5 = 4.5 +\(6 - 1\)d$⁠，解得：$d = 1.6$⁠．
 因此，前10个正三角形面积之和 $ S_10 = frac(sqrt(3) / 4 a^2 [1 - (3 / 4)^10], 1 - 3 / 4) = sqrt(3) a^2 [1 - (3 / 4)^10] $
 
 ]
-为书写简便起见，我们用符号 $sum_(i = m)^n a_i$ 表示数列 $\{ a_i \}$ 的相邻的一些项的和．整数 $i$ 在确定了的界限内变动，在 $Sigma$ 的下面和上面的数字分别表示求和的起止项的序号，符号“$Sigma$⁠”读作sigma．例如 $ sum_(i = 1)^n a_i & = a_1 + a_2 + dots.h.c + a_n\
+为书写简便起见，我们用符号 $limits(display(sum))_(i = m)^n a_i$ 表示数列 $\{ a_i \}$ 的相邻的一些项的和．整数 $i$ 在确定了的界限内变动，在 $Sigma$ 的下面和上面的数字分别表示求和的起止项的序号，符号“$Sigma$⁠”读作sigma．例如 $ sum_(i = 1)^n a_i & = a_1 + a_2 + dots.h.c + a_n\
 sum_(i = k)^n a_i & = a_k + a_(k + 1) + dots.h.c + a_n $
 
 在许多数学问题里，我们需要求出以下标 $i$ 的 $k$ 次多项式 $f\(i\)$ 为通项的前 $n$ 项和的公式：$ S_k\(n\)= sum_(i = 0)^(n - 1) f\(i\)= f\(0\)+ f\(1\)+ dots.h.c + f\(n - 1\) $ #noindent;这里的指标集是非负整数集．
@@ -412,8 +412,7 @@ x^2 S_n & = a_0 x^2 + a_1 x^3 + a_2 x^4 + dots.h.c + a_(n - 1) x^(n + 1) + a_n x
 由 $v_(n + 1) = 3 v_n - 2 v_(n - 1)$ 容易看出 $ v_(n + 1) - v_n = 2\(v_n - v_(n - 1)\) $ #noindent;设 $q_n = v_(n + 1) - v_n$, $q_(n - 1) = v_n - v_(n - 1)$, 则 $q_n = 2 q_(n - 1)\,thick\(n = 1\,2\,dots.h\)$, 换言之，$\{ q_n \}$ 是公比为2的等比数列，$ therefore quad q_n = 2 q_(n - 1) = 2^2 q_(n - 2) = dots.h.c = 2^n\(v_1 - v_0\)= 2^n\(3 - 2\)= 2^n $ #noindent;从而：$ q_(n - 1) & = v_n - v_(n - 1) = 2^(n - 1)\
 v_n & =\(v_n - v_(n - 1)\)+\(v_(n - 1) - v_(n - 2)\)+ dots.h.c +\(v_1 - v_0\)+ v_0\
  & = 2^(n - 1) + 2^(n - 2) + dots.h.c + 2 + 1 + 2\
- & =\(2^n - 1\)+ 2 = 2^n + 1\
-S_n = sum_(i = 0)^(n - 1) v_i & = sum_(i = 0)^(n - 1)\(2^i + 1\)\
+ & =\(2^n - 1\)+ 2 = 2^n + 1 $ $ S_n = sum_(i = 0)^(n - 1) v_i & = sum_(i = 0)^(n - 1)\(2^i + 1\)\
  & = sum_(i = 0)^(n - 1) 2^i + sum_(i = 0)^(n - 1) 1\
  & =\(2^n - 1\)+ n = 2^n +\(n - 1\) $
 
@@ -540,15 +539,15 @@ S_n = sum_(i = 0)^(n - 1) v_i & = sum_(i = 0)^(n - 1)\(2^i + 1\)\
 + #block(sticky: true)[求下列各数列的和]
 
   #cols(2)[
-  + $sum_(i = 0)^(n - 1) i^3$
+  + $limits(display(sum))_(i = 0)^(n - 1) i^3$
 
-  + $sum_(i = 0)^(n - 1) i^4$
+  + $limits(display(sum))_(i = 0)^(n - 1) i^4$
 
-  + $sum_(i = 0)^(n - 1)\(i - 1\)i$
+  + $limits(display(sum))_(i = 0)^(n - 1)\(i - 1\)i$
 
-  + $sum_(i = 1)^n\(2 i - 1\)^2$
+  + $limits(display(sum))_(i = 1)^n\(2 i - 1\)^2$
 
-  + $sum_(i = 1)^n frac(2 i + 1, i^2 dot.op\(i + 1\)^2)$
+  + $limits(display(sum))_(i = 1)^n frac(2 i + 1, i^2 dot.op\(i + 1\)^2)$
 
   ]
 
@@ -566,7 +565,7 @@ S_n = sum_(i = 0)^(n - 1) v_i & = sum_(i = 0)^(n - 1)\(2^i + 1\)\
 
   + 用 $n$ 的式子表示一般项；
 
-  + 用 $n$ 的式子表示前 $n$ 项的和 $sum_(k = 1)^n a_k$
+  + 用 $n$ 的式子表示前 $n$ 项的和 $limits(display(sum))_(k = 1)^n a_k$
 
 + 若数列 $\{ a_n \}$ 是等差数列，求证：$ frac(1, a_1 a_2) + frac(1, a_2 a_3) + dots.h.c + frac(1, a_(n - 1) a_n) = frac(n - 1, a_1 a_n) $
 
@@ -696,10 +695,9 @@ S_n = sum_(i = 0)^(n - 1) v_i & = sum_(i = 0)^(n - 1)\(2^i + 1\)\
    & = frac(sin frac(k beta, 2), sin beta / 2) sin (alpha + frac(k - 1, 2) beta) $ #noindent;成立，那么：$ S\(k + 1\) & = S\(k\)+ sin\(alpha + k beta\)\
    & = frac(sin frac(k beta, 2), sin beta / 2) sin (alpha + frac(k - 1, 2) beta) + sin\(alpha + k beta\)\
    & = frac(1, sin beta / 2) [sin (alpha + frac(k - 1, 2) beta) sin frac(k beta, 2) + sin \( alpha + k beta \) sin beta / 2]\
-   & = frac(1, 2 sin beta / 2)\[cos (alpha - beta / 2) - cos (alpha + k beta - beta / 2)\
-   & #h(2em) #h(2em) + cos (alpha + k beta - beta / 2) - cos (alpha + k beta + beta / 2)\]\
-   & = frac(1, 2 sin beta / 2) [cos (alpha - beta / 2) - cos (alpha + k beta + beta / 2)]\
-  S\(k + 1\) & = frac(\(- 2\), 2 sin beta / 2) sin (frac(2 alpha + k beta, 2)) sin (frac(- k beta - beta, 2))\
+   & = frac(1, 2 sin beta / 2) class("opening", stretch(\[, size: #1.8em)) cos (alpha - beta / 2) - cos (alpha + k beta - beta / 2)\
+   & #h(2em) #h(2em) + cos (alpha + k beta - beta / 2) - cos (alpha + k beta + beta / 2) class("closing", stretch(\], size: #1.8em))\
+   & = frac(1, 2 sin beta / 2) [cos (alpha - beta / 2) - cos (alpha + k beta + beta / 2)] $ $ S\(k + 1\) & = frac(\(- 2\), 2 sin beta / 2) sin (frac(2 alpha + k beta, 2)) sin (frac(- k beta - beta, 2))\
    & = frac(1, sin beta / 2) dot.op sin (alpha + k / 2 beta) dot.op sin frac(\(k + 1\)beta, 2)\
    & = frac(sin frac(\(k + 1\)beta, 2), sin beta / 2) sin [alpha + frac(\(k + 1\)- 1, 2) beta] $ #noindent;即当 $n = k + 1$ 时，等式仍成立．由1和2可知，等式对任何自然数 $n$ 都成立．
 
@@ -752,11 +750,11 @@ S_n = sum_(i = 0)^(n - 1) v_i & = sum_(i = 0)^(n - 1)\(2^i + 1\)\
 
 + 用数学归纳法证明下列各等式：
 
-  + $sum_(k = 1)^n 3^(k - 1) = frac(3^n - 1, 2)$
+  + $limits(display(sum))_(k = 1)^n 3^(k - 1) = frac(3^n - 1, 2)$
 
-  + $sum_(k = 1)^n k\(k + 1\)= 1 / 3 n\(n + 1\)\(n + 2\)$
+  + $limits(display(sum))_(k = 1)^n k\(k + 1\)= 1 / 3 n\(n + 1\)\(n + 2\)$
 
-  + $sum_(k = 1)^n frac(1, k\(k + 1\)) = frac(n, n + 1)$
+  + $limits(display(sum))_(k = 1)^n frac(1, k\(k + 1\)) = frac(n, n + 1)$
 
   + #h(0pt)
     $  & cos alpha + cos\(alpha + beta\)+ cos\(alpha + 2 beta\)+ dots.h.c + cos\[alpha +\(n - 1\)beta\]\

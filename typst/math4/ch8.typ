@@ -168,7 +168,7 @@ $f + g$, $f - g$, $f dot.op g$ 的定义域是 $\[0\,1\]$⁠．因为当 $x = 1$
 \(f dot.op g\)\(x\)= sin x dot.op cos x & = 1 / 2 sin 2 x\
 (f / g)\(x\)= frac(sin x, cos x) & = tan x $
 
-这里 $f + g$, $f - g$, $f dot.op g$ 的定义域是 $\(- oo\,+ oo\)$, $f / g$ 的定义域是$ lr(\{ x #scale(x: 120%, y: 120%)[$\|$] x in bb(R) \, thick x eq.not pi / 2 + k pi \, thick k in bb(Z) \}) $
+这里 $f + g$, $f - g$, $f dot.op g$ 的定义域是 $\(- oo\,+ oo\)$, $f / g$ 的定义域是$ lr(\{ x class("normal", stretch(|, size: #1.2em)) x in bb(R) \, thick x eq.not pi / 2 + k pi \, thick k in bb(Z) \}) $
 
 ]
 === 复合函数
@@ -185,25 +185,25 @@ $f + g$, $f - g$, $f dot.op g$ 的定义域是 $\[0\,1\]$⁠．因为当 $x = 1$
 
 我们已经知道火箭的垂直高度 $h$ 是 $t$ 的函数 $h\(t\)$, 又火箭到观测站的距离 $d$ 又是火箭的高度 $h$ 的函数 $ d = sqrt(1 + h^2) $ #noindent;因此在时刻 $t$, $R$ 到 $O$ 的距离是 $ d\(t\)= sqrt(1 + h^2\(t\)) $
 
-上面函数 $d\(t\)$ 是由 $h = h\(t\)$ 和 $d = f\(h\)= sqrt(1 + h^2)$ 两个函数构成的，把其中一个函数 $h\(t\)$ 代入另一个函数 $f\(h\)$ 的运算叫做复合运算，得到的函数 $d\(t\)= f #scale(x: 120%, y: 120%)[$\($] h\(t\)#scale(x: 120%, y: 120%)[$\)$]$ 叫做 $t$ 的复合函数．
+上面函数 $d\(t\)$ 是由 $h = h\(t\)$ 和 $d = f\(h\)= sqrt(1 + h^2)$ 两个函数构成的，把其中一个函数 $h\(t\)$ 代入另一个函数 $f\(h\)$ 的运算叫做复合运算，得到的函数 $d\(t\)= f class("opening", stretch(\(, size: #1.2em)) h\(t\)class("closing", stretch(\), size: #1.2em))$ 叫做 $t$ 的复合函数．
 
-一般说来，若 $z = f\(y\)$, $y = g\(x\)$, 且 $g\(x\)$ 的值域含于 $f\(y\)$ 的定义域中，那么对于 $g\(x\)$ 定义域内的每一个 $x$ 值经过中间变数 $y$, 相应地得到唯一确定的一个值 $z$, 变数 $z$ 经过中间变数 $y$ 而成为变数 $x$ 的函数，记为 $z = f #scale(x: 120%, y: 120%)[$\($] g\(x\)#scale(x: 120%, y: 120%)[$\)$]$, 这个函数称为前两个函数的#strong[复合函数]．应该指出，函数 $y = g\(x\)$ 的值域不能超出函数 $f\(y\)$ 的定义域，这是极重要的．
+一般说来，若 $z = f\(y\)$, $y = g\(x\)$, 且 $g\(x\)$ 的值域含于 $f\(y\)$ 的定义域中，那么对于 $g\(x\)$ 定义域内的每一个 $x$ 值经过中间变数 $y$, 相应地得到唯一确定的一个值 $z$, 变数 $z$ 经过中间变数 $y$ 而成为变数 $x$ 的函数，记为 $z = f class("opening", stretch(\(, size: #1.2em)) g\(x\)class("closing", stretch(\), size: #1.2em))$, 这个函数称为前两个函数的#strong[复合函数]．应该指出，函数 $y = g\(x\)$ 的值域不能超出函数 $f\(y\)$ 的定义域，这是极重要的．
 
 #example[
 设 $z = sqrt(1 + y)$, 它的定义域 $D_y =\[- 1\,+ oo\)$, 再设 $y = x^2 - 5$, 它的定义域 $D_x =\(- oo\,+ oo\)$, 值域 $R =\[- 5\,+ oo\)$.
 
-作为复合函数 $z = sqrt(1 +\(x^2 - 5\)) = sqrt(x^2 - 4)$, 其定义域只能是 $\(- oo\,- 2\]$ 和 $\[2\,+ oo\)$, 这时，$y = x^2 - 5$ 的值域是 $\[- 1\,+ oo\)$, 它没有超过 $D_y =\[- 1\,+ oo\)$ 的范围，这就是说复合函数 $z = f #scale(x: 120%, y: 120%)[$\($] g\(x\)#scale(x: 120%, y: 120%)[$\)$]$ 的定义域只能由 $y = g\(x\)$ 的定义域中那些使 $g\(x\)$ 属于 $z = f\(y\)$ 的定义域的 $x$ 组成．
+作为复合函数 $z = sqrt(1 +\(x^2 - 5\)) = sqrt(x^2 - 4)$, 其定义域只能是 $\(- oo\,- 2\]$ 和 $\[2\,+ oo\)$, 这时，$y = x^2 - 5$ 的值域是 $\[- 1\,+ oo\)$, 它没有超过 $D_y =\[- 1\,+ oo\)$ 的范围，这就是说复合函数 $z = f class("opening", stretch(\(, size: #1.2em)) g\(x\)class("closing", stretch(\), size: #1.2em))$ 的定义域只能由 $y = g\(x\)$ 的定义域中那些使 $g\(x\)$ 属于 $z = f\(y\)$ 的定义域的 $x$ 组成．
 
 ]
 #example[
 已知 $f\(g\)= frac(1, g + 1)$⁠，$g = g\(x\)= x^2$⁠．
 
-求 $f #scale(x: 120%, y: 120%)[$\($] g\(x\)#scale(x: 120%, y: 120%)[$\)$]$ 和 $g #scale(x: 120%, y: 120%)[$\($] f\(x\)#scale(x: 120%, y: 120%)[$\)$]$⁠．
+求 $f class("opening", stretch(\(, size: #1.2em)) g\(x\)class("closing", stretch(\), size: #1.2em))$ 和 $g class("opening", stretch(\(, size: #1.2em)) f\(x\)class("closing", stretch(\), size: #1.2em))$⁠．
 
 ]
 #solution[
-$ f #scale(x: 120%, y: 120%)[$\($] g\(x\)#scale(x: 120%, y: 120%)[$\)$] & = frac(1, x^2 + 1)\
-g #scale(x: 120%, y: 120%)[$\($] f\(x\)#scale(x: 120%, y: 120%)[$\)$] & = (frac(1, x + 1))^2 = frac(1, x^2 + 2 x + 1) $ #noindent;显然，$f #scale(x: 120%, y: 120%)[$\($] g\(x\)#scale(x: 120%, y: 120%)[$\)$] eq.not g #scale(x: 120%, y: 120%)[$\($] f\(x\)#scale(x: 120%, y: 120%)[$\)$]$, 这表明函数的复合运算是不满足交换律的．
+$ f class("opening", stretch(\(, size: #1.2em)) g\(x\)class("closing", stretch(\), size: #1.2em)) & = frac(1, x^2 + 1)\
+g class("opening", stretch(\(, size: #1.2em)) f\(x\)class("closing", stretch(\), size: #1.2em)) & = (frac(1, x + 1))^2 = frac(1, x^2 + 2 x + 1) $ #noindent;显然，$f class("opening", stretch(\(, size: #1.2em)) g\(x\)class("closing", stretch(\), size: #1.2em)) eq.not g class("opening", stretch(\(, size: #1.2em)) f\(x\)class("closing", stretch(\), size: #1.2em))$, 这表明函数的复合运算是不满足交换律的．
 
 ]
 #example[
@@ -221,7 +221,7 @@ g #scale(x: 120%, y: 120%)[$\($] f\(x\)#scale(x: 120%, y: 120%)[$\)$] & = (frac(
 
 ]
 #solution[
-$y = x sin 1 / x$ 可分解为 $f\(x\)= x$ 与 $g\(x\)= sin 1 / x$ 之积，又 $g\(x\)= sin 1 / x$ 可以看作是 $g\(h\)= sin h$ 和 $h = h\(x\)= 1 / x$ 的复合函数，于是原来的函数可以看作下面简单函数的组合 $ F\(x\)= f\(x\)dot.op g #scale(x: 120%, y: 120%)[$\($] h\(x\)#scale(x: 120%, y: 120%)[$\)$] $ #noindent;这里 $f\(x\)= x$, $g\(h\)= sin h$, $h = h\(x\)= 1 / x$⁠．
+$y = x sin 1 / x$ 可分解为 $f\(x\)= x$ 与 $g\(x\)= sin 1 / x$ 之积，又 $g\(x\)= sin 1 / x$ 可以看作是 $g\(h\)= sin h$ 和 $h = h\(x\)= 1 / x$ 的复合函数，于是原来的函数可以看作下面简单函数的组合 $ F\(x\)= f\(x\)dot.op g class("opening", stretch(\(, size: #1.2em)) h\(x\)class("closing", stretch(\), size: #1.2em)) $ #noindent;这里 $f\(x\)= x$, $g\(h\)= sin h$, $h = h\(x\)= 1 / x$⁠．
 
 ]
 #example[
@@ -229,13 +229,13 @@ $y = x sin 1 / x$ 可分解为 $f\(x\)= x$ 与 $g\(x\)= sin 1 / x$ 之积，又 
 
 ]
 #solution[
-设 $F\(x\)= sqrt(x - sqrt(x + 1) - 2) = sqrt(\(x + 1\)- sqrt(x + 1) - 3)$⁠，则 $F\(x\)$ 可以看作 $f\(y\)= sqrt(y^2 - y - 3)$ 与 $y = g\(x\)= sqrt(x + 1)$ 的复合函数，即 $F\(x\)= f #scale(x: 120%, y: 120%)[$\($] g\(x\)#scale(x: 120%, y: 120%)[$\)$]$ 且知：
+设 $F\(x\)= sqrt(x - sqrt(x + 1) - 2) = sqrt(\(x + 1\)- sqrt(x + 1) - 3)$⁠，则 $F\(x\)$ 可以看作 $f\(y\)= sqrt(y^2 - y - 3)$ 与 $y = g\(x\)= sqrt(x + 1)$ 的复合函数，即 $F\(x\)= f class("opening", stretch(\(, size: #1.2em)) g\(x\)class("closing", stretch(\), size: #1.2em))$ 且知：
 
 $f\(y\)$ 的定义域 $D_f = lr((- oo \, frac(1 - sqrt(13), 2)]) union.big lr([frac(1 + sqrt(13), 2) \, + oo))$
 
 $g\(x\)$ 的定义域 $D_g =\[- 1\,+ oo\)$, 它的值域 $R_g =\[0\,+ oo\)$
 
-$  & upright("复合函数") F\(x\)= f #scale(x: 120%, y: 120%)[$\($] g\(x\)#scale(x: 120%, y: 120%)[$\)$] upright("有意义") arrow.l.r.double.long display(cases(g\(x\)upright("有意义"), g\(x\)in lr([frac(1 + sqrt(13), 2) \, + oo))))\
+$  & upright("复合函数") F\(x\)= f class("opening", stretch(\(, size: #1.2em)) g\(x\)class("closing", stretch(\), size: #1.2em)) upright("有意义") arrow.l.r.double.long display(cases(g\(x\)upright("有意义"), g\(x\)in lr([frac(1 + sqrt(13), 2) \, + oo))))\
  & arrow.l.r.double.long display(cases(x + 1 gt.eq 0, sqrt(x + 1) gt.eq frac(1 + sqrt(13), 2))) arrow.l.r.double.long display(cases(x gt.eq - 1, x + 1 gt.eq (frac(1 + sqrt(13), 2))^2 = frac(7 + sqrt(13), 2)))\
  & arrow.l.r.double.long x gt.eq frac(5 + sqrt(13), 2) $ #noindent;$therefore quad$ 函数 $sqrt(x - sqrt(x + 1) - 2)$ 的定义域是 $lr([frac(5 + sqrt(13), 2) \, + oo))$⁠．
 
@@ -260,7 +260,7 @@ $  & upright("复合函数") F\(x\)= f #scale(x: 120%, y: 120%)[$\($] g\(x\)#sca
 + #block(sticky: true)[证明函数 $f\(x\)= frac(1, 1 + x)$ 在它的定义域上是单射的．又 $x$ 为何值时，下列各式才有意义？]
 
   #cols(2)[
-  + $f #scale(x: 120%, y: 120%)[$\($] f\(x\)#scale(x: 120%, y: 120%)[$\)$]$
+  + $f class("opening", stretch(\(, size: #1.2em)) f\(x\)class("closing", stretch(\), size: #1.2em))$
 
   + $f (1 / x)$
 
@@ -270,7 +270,7 @@ $  & upright("复合函数") F\(x\)= f #scale(x: 120%, y: 120%)[$\($] g\(x\)#sca
 
   ]
 
-+ 下列函数能否构成复合函数 $y = f #scale(x: 120%, y: 120%)[$\($] phi\(x\)#scale(x: 120%, y: 120%)[$\)$]$, 如果能够构成，则指出复合函数的定义域和值域：
++ 下列函数能否构成复合函数 $y = f class("opening", stretch(\(, size: #1.2em)) phi\(x\)class("closing", stretch(\), size: #1.2em))$, 如果能够构成，则指出复合函数的定义域和值域：
 
   + $y = f\(u\)= 2 u + 1\,#h(2em) u = phi\(x\)= x^2$
 
@@ -288,7 +288,7 @@ $  & upright("复合函数") F\(x\)= f #scale(x: 120%, y: 120%)[$\($] g\(x\)#sca
   + 设 $y = f\(x\)= sqrt(1 + x + x^2)$, 求 $f\(x^2\)$, $f\(- x^2\)$⁠．
   ]
 
-+ 若 $phi\(x\)= x^3 + 1$, 求 $phi\(x^2\)$, $#scale(x: 120%, y: 120%)[$\($] phi\(x\)#scale(x: 120%, y: 120%)[$\)$]^2$, $phi #scale(x: 120%, y: 120%)[$\($] phi\(x\)#scale(x: 120%, y: 120%)[$\)$]$⁠．
++ 若 $phi\(x\)= x^3 + 1$, 求 $phi\(x^2\)$, $class("opening", stretch(\(, size: #1.2em)) phi\(x\)class("closing", stretch(\), size: #1.2em))^2$, $phi class("opening", stretch(\(, size: #1.2em)) phi\(x\)class("closing", stretch(\), size: #1.2em))$⁠．
 
 + #block(sticky: true)[求下列函数定义域：]
 
@@ -299,7 +299,7 @@ $  & upright("复合函数") F\(x\)= f #scale(x: 120%, y: 120%)[$\($] g\(x\)#sca
 
   ]
 
-+ $a\,b\,c\,d$ 取什么值，才能使函数$ f\(x\)= frac(a x + b, c x + d) $#noindent;对所有 $x$ 满足 $f #scale(x: 120%, y: 120%)[$\($] f\(x\)#scale(x: 120%, y: 120%)[$\)$] = x$⁠？
++ $a\,b\,c\,d$ 取什么值，才能使函数$ f\(x\)= frac(a x + b, c x + d) $#noindent;对所有 $x$ 满足 $f class("opening", stretch(\(, size: #1.2em)) f\(x\)class("closing", stretch(\), size: #1.2em)) = x$⁠？
 
 == 函数的图象
 从平面上一条曲线（对这条曲线应该要求：与纵轴平行的直线与它的交点不能多于一个）可以引出一个函数，反过来，给了一个函数 $y = f\(x\)$, 那么通常采用直角坐标系，就可以用图形来表示 $y$ 是 $x$ 的函数．
@@ -311,7 +311,7 @@ $  & upright("复合函数") F\(x\)= f #scale(x: 120%, y: 120%)[$\($] g\(x\)#sca
 #align(center)[
 #table(
   columns: (auto, 45% + 12pt, 45% + 12pt,),
-  align: (center + horizon, left + horizon, left + horizon,),
+  align: (center + horizon, left + top, left + top,),
   table.hline(),
   [],
   [解析性质],
@@ -520,7 +520,7 @@ $y = f\(x\)= x^2$, 这个幂函数的函数值，在 $x = 1$ 时，$f\(1\)= 1^2 
 
 “充分接近”和“相差任意小”这两句话是不够明确的，而必须用定量的术语给以严格的表述．现在我们可以用数列极限的概念把“当 $x$ 充分接近 $x_0$ 时，$f\(x\)$ 与 $f\(x_0\)$ 相差任意小”这句话定量地描述如下：
 
-如果在函数定义域 $I$ 中，自变量 $x$ 取任何一个收敛于 $x_0 in I$（即 $lim_(i arrow.r oo) x_i = x_0$⁠）的数列 $\{ x_i \}$ 的项 $x_i thick\(i = 1\,2\,dots.h\)$, 那么对应的函数数列：$ f\(x_1\)\,thick f\(x_2\)\,thick dots.h\,thick f\(x_i\)\,dots.h $ #noindent;总有极限值 $f\(x_0\)$, 即 $ lim_(i arrow.r oo) f\(x_i\)= f\(x_0\) $
+如果在函数定义域 $I$ 中，自变量 $x$ 取任何一个收敛于 $x_0 in I$（即 $limits(lim)_(i arrow.r oo) x_i = x_0$⁠）的数列 $\{ x_i \}$ 的项 $x_i thick\(i = 1\,2\,dots.h\)$, 那么对应的函数数列：$ f\(x_1\)\,thick f\(x_2\)\,thick dots.h\,thick f\(x_i\)\,dots.h $ #noindent;总有极限值 $f\(x_0\)$, 即 $ lim_(i arrow.r oo) f\(x_i\)= f\(x_0\) $
 
 于是我们得到下述连续性的严格定义：
 
@@ -529,7 +529,7 @@ $y = f\(x\)= x^2$, 这个幂函数的函数值，在 $x = 1$ 时，$f\(1\)= 1^2 
 
 + $f\(a\)$ 有一个确定值，
 
-+ 对于 $I$ 中每一个收敛于 $a$ 的数列 $\{ x_i \}$, 对应的函数数列 $\{ f\(x_i\)\}$ 总以 $f\(a\)$ 为极限，即有关系式：$lim_(i arrow.r oo) f\(x_i\)= f\(a\)= f (lim_(i arrow.r oo) x_i)$ 成立．
++ 对于 $I$ 中每一个收敛于 $a$ 的数列 $\{ x_i \}$, 对应的函数数列 $\{ f\(x_i\)\}$ 总以 $f\(a\)$ 为极限，即有关系式：$limits(lim)_(i arrow.r oo) f\(x_i\)= f\(a\)= f (limits(lim)_(i arrow.r oo) x_i)$ 成立．
 
 ]
 这个定义表明对于一个连续函数 $f$, 记号lim可以和记号 $f$ 互换．
@@ -541,7 +541,7 @@ $y = f\(x\)= x^2$, 这个幂函数的函数值，在 $x = 1$ 时，$f\(1\)= 1^2 
 
 ]
 #example[
-函数 $f\(x\)=\[x\]$ 在整数点 $n$ 处不连续，因为当 $x = n\,thick\(n in bb(Z)\)$ 时，函数 $f\(x\)=\[x\]$ 有确定值 $f\(n\)=\[n\]= n$⁠．虽然当 $x$ 取的数列 $\{ x_i \}$ 的值，从 $x = n$ 的右边趋于 $n$ 时，有 $lim_(i arrow.r oo) f\(x_i\)= lim_(i arrow.r oo)\[x_i\]= n = f\(n\)$, 但是当 $x$ 取的数列 $\{ x'_i \}$ 从 $x = n$ 的左边趋于 $n$ 时，即当 $x'_i$ 满足条件：（1）$n - 1 lt.eq x'_i < n$,（2）$lim_(i arrow.r oo) x'_i = n$ 时，那么 $ lim_(i arrow.r oo) f\(x'_i\)= lim_(i arrow.r oo)\[x'_i\]= n - 1 eq.not f\(n\)= n $ #noindent;这就是说 $f\(x\)=\[x\]$ 的图象是在整数点具有跳跃性间断的曲线．
+函数 $f\(x\)=\[x\]$ 在整数点 $n$ 处不连续，因为当 $x = n\,thick\(n in bb(Z)\)$ 时，函数 $f\(x\)=\[x\]$ 有确定值 $f\(n\)=\[n\]= n$⁠．虽然当 $x$ 取的数列 $\{ x_i \}$ 的值，从 $x = n$ 的右边趋于 $n$ 时，有 $limits(lim)_(i arrow.r oo) f\(x_i\)= limits(lim)_(i arrow.r oo)\[x_i\]= n = f\(n\)$, 但是当 $x$ 取的数列 $\{ x'_i \}$ 从 $x = n$ 的左边趋于 $n$ 时，即当 $x'_i$ 满足条件：（1）$n - 1 lt.eq x'_i < n$,（2）$limits(lim)_(i arrow.r oo) x'_i = n$ 时，那么 $ limits(lim)_(i arrow.r oo) f\(x'_i\)= limits(lim)_(i arrow.r oo)\[x'_i\]= n - 1 eq.not f\(n\)= n $ #noindent;这就是说 $f\(x\)=\[x\]$ 的图象是在整数点具有跳跃性间断的曲线．
 
 ]
 现在我们来考虑另一种间断性的曲线．
@@ -549,17 +549,17 @@ $y = f\(x\)= x^2$, 这个幂函数的函数值，在 $x = 1$ 时，$f\(1\)= 1^2 
 #example[
 函数 $f\(x\)= 1 / x$ 在点 $x = 0$ 处不连续，因为 $f\(0\)$ 不存在，并且任何数列 $\{ x_i \}$ 收敛于0时，例如：
 
-当 $x_i > 0$, $x_i arrow.r 0$ 时，即 $x_i$ 从右边趋近于原点时，有 $lim_(i arrow.r oo) 1 / x_i = + oo$⁠；
+当 $x_i > 0$, $x_i arrow.r 0$ 时，即 $x_i$ 从右边趋近于原点时，有 $limits(lim)_(i arrow.r oo) 1 / x_i = + oo$⁠；
 
-当 $x_i < 0$, $x_i arrow.r 0$ 时，即 $x_i$ 从左边趋近于原点时，有 $lim_(i arrow.r oo) 1 / x_i = - oo$⁠；
+当 $x_i < 0$, $x_i arrow.r 0$ 时，即 $x_i$ 从左边趋近于原点时，有 $limits(lim)_(i arrow.r oo) 1 / x_i = - oo$⁠；
 
-当 $\{ x_i \}$ 是任意一个趋于0的数列时，则 $lim_(i arrow.r oo) lr(|1 / x_i|) = oo$⁠．
+当 $\{ x_i \}$ 是任意一个趋于0的数列时，则 $limits(lim)_(i arrow.r oo) lr(|1 / x_i|) = oo$⁠．
 
 无论哪种情形，数列 $lr(\{ 1 / x_i \})$ 趋向无穷大．
 
 ]
 #rmk[
-例8.16和例8.18的分母的零点都是函数的不连续点，但是例8.16中的分式：$f\(x\)= 3 / 4 dot.op frac(x^2 - 1, x - 1)$⁠，当 $x eq.not 1$ 时，代数恒等式 $ 3 / 4 dot.op frac(x^2 - 1, x - 1) = 3 / 4\(x + 1\) $ #noindent;是成立的．因此任何数列 $x_i thick\(eq.not 1\)$ 趋于1时，由于 $x_i eq.not 1$⁠，$ lim_(i arrow.r oo) f\(x_i\) & = lim_(i arrow.r oo) 3 / 4 dot.op frac(x_i^2 - 1, x_i - 1) = lim_(i arrow.r oo) 3 / 4\(x_i + 1\)\
+例8.16和例8.18的分母的零点都是函数的不连续点，但是例8.16中的分式：$f\(x\)= 3 / 4 dot.op frac(x^2 - 1, x - 1)$⁠，当 $x eq.not 1$ 时，代数恒等式 $ 3 / 4 dot.op frac(x^2 - 1, x - 1) = 3 / 4\(x + 1\) $ #noindent;是成立的．因此任何数列 $x_i thick\(eq.not 1\)$ 趋于1时，由于 $x_i eq.not 1$⁠，$ limits(lim)_(i arrow.r oo) f\(x_i\) & = limits(lim)_(i arrow.r oo) 3 / 4 dot.op frac(x_i^2 - 1, x_i - 1) = limits(lim)_(i arrow.r oo) 3 / 4\(x_i + 1\)\
  & = 3 / 4\(1 + 1\)= 3 / 2 $
 
 这就是说，对于任何收敛于1的数列 $\{ x_i \}$, 对应的函数数列 $\{ f\(x_i\)\}$ 都以 $3 / 2$ 为极限．
@@ -568,7 +568,7 @@ $y = f\(x\)= x^2$, 这个幂函数的函数值，在 $x = 1$ 时，$f\(1\)= 1^2 
 
 ]
 #blk[定义][
-如果对于任何收敛于 $a$ 的数列 $\{ x_i \}$, $lim_(i arrow.r oo) f\(x_i\)$ 存在，并且彼此相等，但不等于 $f\(a\)$, 或者 $f\(a\)$ 没有定义，则称 $f$ 在 $a$ 处有可去间断点．
+如果对于任何收敛于 $a$ 的数列 $\{ x_i \}$, $limits(lim)_(i arrow.r oo) f\(x_i\)$ 存在，并且彼此相等，但不等于 $f\(a\)$, 或者 $f\(a\)$ 没有定义，则称 $f$ 在 $a$ 处有可去间断点．
 
 ]
 例8.16中的 $x = 1$ 就是 $f$ 的可去间断点．
@@ -587,23 +587,23 @@ $y = f\(x\)= x^2$, 这个幂函数的函数值，在 $x = 1$ 时，$f\(1\)= 1^2 
 #blk[定理1][
 设 $f$ 和 $g$ 在 $a$ 处连续，即 $ lim_(x arrow.r a) f\(x\)= f\(a\)\,#h(2em) lim_(x arrow.r a) g\(x\)= g\(a\) $ #noindent;则
 
-+ $lim_(x arrow.r a)\[f\(x\)plus.minus g\(x\)\]= f\(a\)plus.minus g\(a\)$⁠，（即 $f plus.minus g$ 在 $a$ 处连续）．
++ $limits(lim)_(x arrow.r a)\[f\(x\)plus.minus g\(x\)\]= f\(a\)plus.minus g\(a\)$⁠，（即 $f plus.minus g$ 在 $a$ 处连续）．
 
-+ $lim_(x arrow.r a) f\(x\)dot.op g\(x\)= f\(a\)dot.op g\(a\)$⁠，（即 $f dot.op g$ 在 $a$ 处连续）．
++ $limits(lim)_(x arrow.r a) f\(x\)dot.op g\(x\)= f\(a\)dot.op g\(a\)$⁠，（即 $f dot.op g$ 在 $a$ 处连续）．
 
-+ 若 $g\(a\)eq.not 0$⁠，$lim_(x arrow.r a) frac(1, g\(x\)) = frac(1, g\(a\))$⁠，（即 $1\/g$ 在 $a$ 处连续）．
++ 若 $g\(a\)eq.not 0$⁠，$limits(lim)_(x arrow.r a) frac(1, g\(x\)) = frac(1, g\(a\))$⁠，（即 $1\/g$ 在 $a$ 处连续）．
 
 ]
 #example[
-函数 $f\(x\)= x^k$ ($k$ 是一个正整数，$x in bb(R)$) 到处连续，即 $lim_(x arrow.r a) x^k = a^k\,thick\(a in bb(R)\)$⁠．
+函数 $f\(x\)= x^k$ ($k$ 是一个正整数，$x in bb(R)$) 到处连续，即 $limits(lim)_(x arrow.r a) x^k = a^k\,thick\(a in bb(R)\)$⁠．
 
 ]
 #proof[
 对 $k$ 用数学归纳法来证明，设 $a$ 是 $f$ 的定义域 $bb(R)$ 中任何一点．
 
-当 $k = 1$ 时，显然，$lim_(x arrow.r a) x = a$, 命题成立．
+当 $k = 1$ 时，显然，$limits(lim)_(x arrow.r a) x = a$, 命题成立．
 
-假设当 $k = i thick\(i in bb(N)\)$ 时，有 $ lim_(x arrow.r a) x^i = a^i #h(2em)\(i in bb(N)\) $ #noindent;那么，当 $k = i + 1$ 时，有 $ lim_(x arrow.r a) x^(i + 1) = lim_(x arrow.r a) x^i dot.op x = lim_(x arrow.r a) x^i dot.op lim_(x arrow.r a) x = a^i dot.op a = a^(i + 1) $ #noindent;于是，对于所有正整数 $k$, $f\(x\)= x^k$ 在任何一点 $a$ 连续，也即 $f\(x\)= x^k$ 到处连续．
+假设当 $k = i thick\(i in bb(N)\)$ 时，有 $ limits(lim)_(x arrow.r a) x^i = a^i #h(2em)\(i in bb(N)\) $ #noindent;那么，当 $k = i + 1$ 时，有 $ limits(lim)_(x arrow.r a) x^(i + 1) = limits(lim)_(x arrow.r a) x^i dot.op x = limits(lim)_(x arrow.r a) x^i dot.op limits(lim)_(x arrow.r a) x = a^i dot.op a = a^(i + 1) $ #noindent;于是，对于所有正整数 $k$, $f\(x\)= x^k$ 在任何一点 $a$ 连续，也即 $f\(x\)= x^k$ 到处连续．
 
 ]
 由定理1和 $f\(x\)= x^k thick\(k in bb(N)\)$, 及常数函数 $g\(x\)= c$ ($c$ 是常数）的到处连续性，我们可以证明下面的命题成立．
@@ -623,9 +623,9 @@ $f\(x\)= root(n, x)$ 在区间 $\[0\,+ oo\)$ 上连续，即 $ lim_(x arrow.r x_
 
 ]
 #proof[
-设 $x_0$ 是一个任给正数，数列 $\{ x_i \}$ 是在 $\[0\,+ oo\)$ 内任何一个收敛到 $x_0$ 的数列，即 $lim_(i arrow.r oo) x_i = x_0$⁠．我们要证明，当 $lim_(i arrow.r oo) x_i = x_0$ 时，$lim_(i arrow.r oo)\(root(n, x_i) - root(n, x_0)\)= 0$⁠．
+设 $x_0$ 是一个任给正数，数列 $\{ x_i \}$ 是在 $\[0\,+ oo\)$ 内任何一个收敛到 $x_0$ 的数列，即 $limits(lim)_(i arrow.r oo) x_i = x_0$⁠．我们要证明，当 $limits(lim)_(i arrow.r oo) x_i = x_0$ 时，$limits(lim)_(i arrow.r oo)\(root(n, x_i) - root(n, x_0)\)= 0$⁠．
 
-在代数恒等式：$ \(A - B\)(A^(n - 1) + A^(n - 2) B + dots.h.c + A B^(n - 2) + B^(n - 1)) = A^n - B^n $ #noindent;中，以 $A = x_i^(tfrac(1, n))$, $B = x_0^(tfrac(1, n))$ 代入，即得：#numbered-eq($ root(n, x_i) - root(n, x_0) = frac(x_i - x_0, x_i^(tfrac(n - 1, n)) + x_i^(tfrac(n - 2, n)) dot.op x_0^(tfrac(1, n)) + dots.h.c + x_i^(tfrac(1, n)) dot.op x_0^(tfrac(n - 2, n)) + x_0^(tfrac(n - 1, n))) $);#noindent;由于 $lim_(i arrow.r oo) x_i = x_0$, 根据数列极限定义，取 $epsilon = x_0 / 2$⁠，则存在正整数 $N$, 使得当 $i > N$ 时，有 $ x_i > x_0 - x_0 / 2 = x_0 / 2 $ #noindent;从而，当 $i > N$ 时，有#numbered-eq($ \(x_i\)^(tfrac(1, n)) > (x_0 / 2)^(tfrac(1, n)) $);#noindent;此外，显然有#numbered-eq($ \(x_0\)^(tfrac(1, n)) > (x_0 / 2)^(tfrac(1, n)) $);
+在代数恒等式：$ \(A - B\)(A^(n - 1) + A^(n - 2) B + dots.h.c + A B^(n - 2) + B^(n - 1)) = A^n - B^n $ #noindent;中，以 $A = x_i^(tfrac(1, n))$, $B = x_0^(tfrac(1, n))$ 代入，即得：#numbered-eq($ root(n, x_i) - root(n, x_0) = frac(x_i - x_0, x_i^(tfrac(n - 1, n)) + x_i^(tfrac(n - 2, n)) dot.op x_0^(tfrac(1, n)) + dots.h.c + x_i^(tfrac(1, n)) dot.op x_0^(tfrac(n - 2, n)) + x_0^(tfrac(n - 1, n))) $);#noindent;由于 $limits(lim)_(i arrow.r oo) x_i = x_0$, 根据数列极限定义，取 $epsilon = x_0 / 2$⁠，则存在正整数 $N$, 使得当 $i > N$ 时，有 $ x_i > x_0 - x_0 / 2 = x_0 / 2 $ #noindent;从而，当 $i > N$ 时，有#numbered-eq($ \(x_i\)^(tfrac(1, n)) > (x_0 / 2)^(tfrac(1, n)) $);#noindent;此外，显然有#numbered-eq($ \(x_0\)^(tfrac(1, n)) > (x_0 / 2)^(tfrac(1, n)) $);
 
 由 (8.2)---(8.4) 立即得 $ lr(|root(n, x_i) - root(n, x_0)|) < frac(\|x_i - x_0\|, n (root(n, x_0 / 2))^(n - 1)) $ #noindent;当 $i arrow.r oo$ 时，$\|x_i - x_0\|arrow.r 0$, 又因为 $n (root(n, x_0 / 2))^(n - 1)$ 是一个和 $i$ 无关的常数，所以 $ lr(|root(n, x_i) - root(n, x_0)|) arrow.r 0 $ #noindent;即 $ lim_(x arrow.r x_0) root(n, x) = root(n, x_0) $ #noindent;这也就证明了 $f\(x\)= root(n, x)$ 在区间 $\[0\,+ oo\)$ 上到处连续．
 
@@ -876,7 +876,7 @@ g : thick x & = g\(y\)= sqrt(1 - y^2) $ #noindent;互为反函数，因为在上
 设给了一个函数 $y = f\(x\)$, 其定义域为 $X$, 值域为 $Y = f\(X\)$, 如果对于 $Y = f\(X\)$ 中每一个 $y$ 值，都可以从关系式 $y = f\(x\)$ 确定唯一的一个 $x$ 值，则得到一个定义在 $Y = f\(X\)$ 上而且把 $f\(X\)= Y$ 映射到 $X$ 上的以 $y$ 为自变数的新函数 $x = g\(y\)$, 这个函数称为函数 $y = f\(x\)$ 的反函数．
 
 ]
-不难理解 $f$ 也是 $g$ 的反函数，并且函数 $y = f\(x\)$ 与它的反函数 $x = g\(y\)$ 组成的复合函数一定是一个恒等函数，即 $ g #scale(x: 120%, y: 120%)[$\($] f\(x\)#scale(x: 120%, y: 120%)[$\)$] = x\,#h(2em) f #scale(x: 120%, y: 120%)[$\($] g\(y\)#scale(x: 120%, y: 120%)[$\)$] = y $ #noindent;有时用符号 $f^(- 1)$ 表示反函数比较方便，如 $ f^(- 1) #scale(x: 120%, y: 120%)[$\($] f\(x\)#scale(x: 120%, y: 120%)[$\)$] = x\,#h(2em) f #scale(x: 120%, y: 120%)[$\($] f^(- 1)\(y\)#scale(x: 120%, y: 120%)[$\)$] = y $
+不难理解 $f$ 也是 $g$ 的反函数，并且函数 $y = f\(x\)$ 与它的反函数 $x = g\(y\)$ 组成的复合函数一定是一个恒等函数，即 $ g class("opening", stretch(\(, size: #1.2em)) f\(x\)class("closing", stretch(\), size: #1.2em)) = x\,#h(2em) f class("opening", stretch(\(, size: #1.2em)) g\(y\)class("closing", stretch(\), size: #1.2em)) = y $ #noindent;有时用符号 $f^(- 1)$ 表示反函数比较方便，如 $ f^(- 1) class("opening", stretch(\(, size: #1.2em)) f\(x\)class("closing", stretch(\), size: #1.2em)) = x\,#h(2em) f class("opening", stretch(\(, size: #1.2em)) f^(- 1)\(y\)class("closing", stretch(\), size: #1.2em)) = y $
 
 按照函数 $y = f\(x\)$ 的图象容易判断函数 $y = f\(x\)$ 是否有反函数存在，就是在值域 $Y = f\(X\)$ 内，任意给一个值 $y_0$, 作和 $x$ 轴平行的直线 $y = y_0$⁠．如果函数 $y = f\(x\)\,thick x in X$ 的图象和直线 $y = y_0$ 的交点多于一个，那么这个函数的反函数就不存在．如果只有一个交点，那么这个函数就有反函数．如图8.22所示．
 
