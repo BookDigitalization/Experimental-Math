@@ -1,5 +1,5 @@
 \chapter{单变量函数}
-前面中我们已经说明了如何由量的度量而产生实数
+第六章中我们已经说明了如何由量的度量而产生实数
 系．在这一章中我们要进一步说明如何用变数符号去表达变
 量，用变数之间的函数关系去表达变量之间的关联．变数是
 变量的抽象，函数是变量相互关系的抽象．在这一章里我们
@@ -28,7 +28,7 @@ z$等字母表示变数，从纯数学的观点来说，一个变数就是一
     \item  半开区间$(a,b]$就是$\{x|a<x\le b\}$；
     $[a,b)$就是$\{x|a\le x<b\}$．
 \end{itemize}
-在上述各种情形，数$b-a$为区间的长度．
+在上述各种情形，数$b-a$为\textbf{区间的长度}．
 
 常量可以看作变量的特殊情形，它的变域是由一个数组
 成的集合$\{x|x=a\}$．
@@ -114,7 +114,7 @@ z$等字母表示变数，从纯数学的观点来说，一个变数就是一
 表示．
 
 以后我们要常用到一点的邻域的概念．\textbf{$c$点的邻域}是包
-含$c$点的任何开区间$(a,b)$, 而$c$点的去心邻域指去掉$c$
+含$c$点的任何开区间$(a,b)$, 而$c$点的\textbf{去心邻域}指去掉$c$
 点的任何$c$点的邻域．它的图象如图8.6．
 
 $c$点的去心邻域可写成$(a,c)\cup (c,b)$. 我们常把
@@ -130,7 +130,7 @@ $(\pi-1,\pi+1)$, $\left(\pi-\frac{3}{2},\pi+\frac{3}{2}\right)$, $(\pi-0.01,\pi+
 
 \subsection{函数的定义}
 我们已经在第三册研究过许多函数，例如多项式函数、
-三角函数，由于函数这个概念的重要性，并且它将是我们
+三角函数等，由于函数这个概念的重要性，并且它将是我们
 的主要研究对象，因此需要回忆一般的函数的定义，下面我
 们从数集之间的多对一（包括一对一）的关系重新给出函数
 定义．
@@ -157,7 +157,7 @@ $(\pi-1,\pi+1)$, $\left(\pi-\frac{3}{2},\pi+\frac{3}{2}\right)$, $(\pi-0.01,\pi+
 \end{example}
 
 \begin{solution}
-    方程$f(x)=\frac{2x}{x^2+1}$等价于
+    方程$y=\frac{2x}{x^2+1}$等价于
     \begin{equation}
         yx^2-2x+y=0
     \end{equation}
@@ -202,7 +202,7 @@ $F$和摄氏温标度数$c$，因为不存在低于绝对零度的温度，因
 $\therefore\quad $函数$f$的定义域为$(-\infty,0)\cup(0,1]$．
 
 \item \[\text{函数$g$有意义}\Leftrightarrow x^2-1\ge 0 \Rightarrow\quad x\le -1, \text{ 或 } x\ge 1\]
-$\therefore\quad $函数$g$的定义域为$(-\infty,-1]\cup[1,+\infty)$．
+因此函数$g$的定义域为$(-\infty,-1]\cup[1,+\infty)$．
     \end{enumerate}
 \end{solution}
 
@@ -364,6 +364,7 @@ $g(x)=0$, 所以$\frac{f}{g}$的定义域是$[0,1)$, 同样得到$\frac{g}{f}$�
     \centering
 \begin{tikzpicture}[thick]
 \draw (0,0)node[below]{$L$}--node[below]{1}(4,0)node[below]{$O$}--node[above]{$d$}(0,2.5)node[above]{$R$}--node[left]{$h$}(0,0);
+\draw[thin] (0,.25)--(.25,.25)--(.25,0);
 \end{tikzpicture}
     \caption{}
 \end{figure}
@@ -382,7 +383,7 @@ $g(x)=0$, 所以$\frac{f}{g}$的定义域是$[0,1)$, 同样得到$\frac{g}{f}$�
 一般说来，若$z=f(y)$, $y=g(x)$, 且$g(x)$的值域含于
 $f(y)$的定义域中，那么对于$g(x)$定义域内的每一个$x$值经过
 中间变数$y$, 相应地得到唯一确定的一个值$z$, 变数$z$经过
-中间变数$y$而成变数$x$的函数，记为$z=f\big(g(x)\big)$, 这个函
+中间变数$y$而成为变数$x$的函数，记为$z=f\big(g(x)\big)$, 这个函
 数称为前两个函数的\textbf{复合函数}．应该指出，函数$y=g(x)$的
 值域不能超出函数$f(y)$的定义域，这是极重要的．
 
@@ -466,7 +467,7 @@ $f\left(\sin\frac{x}{2}\right)=\cos x+1=2-2\sin^2\frac{x}{2}$
 $f(y)$的定义域
 $D_f=\left(-\infty,\frac{1-\sqrt{13}}{2}\right]\bigcup\left[\frac{1+\sqrt{13}}{2},+\infty\right)$
 
-$g(x)$的定义域$D_g=[-1,+\infty)$, 它的值域$R_x=[0,+\infty)$
+$g(x)$的定义域$D_g=[-1,+\infty)$, 它的值域$R_g=[0,+\infty)$
 
 \[\begin{split}
 &\text{复合函数$F(x)=f\big(g(x)\big)$有意义}\Longleftrightarrow
@@ -533,7 +534,7 @@ $\left[\frac{5+\sqrt{13}}{2},+\infty\right)$．
     \item $y=f(u)=\sqrt{u},\qquad u=\varphi(x)=1-x^2$
     \item $y=f(u)=u^2+u^3, \qquad u=\varphi(x)=\begin{cases}
         1,& \text{当$x$为有理数}\\
-        2,&\text{当$x$为无理数}\\
+        -1,&\text{当$x$为无理数}\\
     \end{cases}$
     \item $y=f(u)=2$, 定义域为$U_1$,\qquad  $u=\varphi(x)$, 定义域为
     $X$, 值域为$U_2$．
@@ -919,7 +920,7 @@ $k$倍而使横坐标不变的几何变换得到．
 长度等于$2\pi$的区间上来讨论这两个函数．
 
 设$f(x)=\sin x$的定义域$D_f=[0,2\pi]$, 因为余弦函数
-$g(x)=\cos x$可以看作正弦函数$\sin x$ 与$x'=x+\frac{\pi}{2}$
+$g(x)=\cos x$可以看作正弦函数$\sin x'$ 与$x'=x+\frac{\pi}{2}$
 的复合函数，即$g(x)=\cos x=\sin\left(x+\frac{\pi}{2}\right)$,
 所以复合函数$\sin\left(x+\frac{\pi}{2} \right)$
 有意义，必须且只须$0\le x+\frac{\pi}{2}\le 2\pi$，
@@ -1008,7 +1009,8 @@ $g(x)=\sqrt{1-4x^2}$的图象，如图8.18所示．
 \end{figure}
 \end{solution}
 
-\begin{ex}
+\section*{习题8.2}
+\addcontentsline{toc}{subsection}{习题8.2}
 \begin{enumerate}
     \item 试由函数增减性的定义，说明下面函数的增减性：
     \begin{multicols}{2}
@@ -1047,7 +1049,6 @@ $g(x)=\sqrt{1-4x^2}$的图象，如图8.18所示．
 明至$P$与$L$等距离的所有点$(x,y)$的集合，是具有$f(x)=
 ax^2+bx+c$形式的函数的图象．
 \end{enumerate}
-\end{ex}
 
 \section{函数的连续性}
 在初中一年级讨论平方根时，我们曾用下面的想法初步
@@ -1060,7 +1061,7 @@ ax^2+bx+c$形式的函数的图象．
 如下：
 
 $y=f(x)=x^2$, 这个幂函数的函数值，在$x=1$时，$f(1)=1^2=1$；
-$x=2$时，$f(2)=2^2=4$; 当$x$由1变到2时，$f(x)$的值应
+$x=2$时，$f(2)=2^2=4$; 当$x$由1变到2时，$x^2$的值应
 该由1“连续地”变到4, 所以$x$应该能取一个值$x_0$使
 $f(x_0)=x^2_0=2$．
 
@@ -1130,7 +1131,7 @@ $f(1)$没有意义．
     函数$f(x)=[x]$在整数点$n$处不连续，因为当
 $x=n,\; (n\in\mathbb{Z})$时，函数$f(x)=[x]$有确定值$f(n)=[n]=n$．
 虽然当$x$取的数列$\{x_i\}$的值，从$x=n$的右边趋于$n$时，
-有$\Lim_{i\to\infty}f(x_i)=\Lim_{i\to\infty}[x_i]=n=f(n)$, 但是当$x$取的数列$\{x'_i\}$从$x=n$的左边趋于$n$时，即当$x'_i$满足条件：$n-1\le x'_i <n$, $\Lim_{i\to \infty}x'_i=n$时，那么
+有$\Lim_{i\to\infty}f(x_i)=\Lim_{i\to\infty}[x_i]=n=f(n)$, 但是当$x$取的数列$\{x'_i\}$从$x=n$的左边趋于$n$时，即当$x'_i$满足条件：（1）$n-1\le x'_i <n$, （2）$\Lim_{i\to \infty}x'_i=n$时，那么
 \[\Lim_{i\to \infty}f(x'_i)=\Lim_{i\to \infty}[x'_i]=n-1\ne f(n)=n\]
 这就是说$f(x)=[x]$的图象是在整数点具有跳跃性间断的
 曲线．
@@ -1248,8 +1249,8 @@ $f(a)$．
 \end{blk}
 
 \begin{blk}{命题3}
-    $f(x)=\sqrt[n]{x}$在区间$(0,+\infty)$上连续，即 
-\[\lim_{x\to x_0}\sqrt[n]{x}=\sqrt[n]{x_0}\qquad (x\in[0,+\infty))\]
+    $f(x)=\sqrt[n]{x}$在区间$[0,+\infty)$上连续，即
+\[\lim_{x\to x_0}\sqrt[n]{x}=\sqrt[n]{x_0}\qquad (x_0\in[0,+\infty))\]
 \end{blk}
 
 \begin{proof}
@@ -1284,7 +1285,7 @@ $\varepsilon=\frac{x_0}{2}$，
 \[\left|\sqrt[n]{x_i}-\sqrt[n]{x_0}\right|\to 0\]
 即
 \[\lim_{x\to x_0} \sqrt[n]{x}=\sqrt[n]{x_0}\]
-这也就证明了$f(x)=\sqrt[n]{x}$ 在区间$[0,\infty)$上到处连续．
+这也就证明了$f(x)=\sqrt[n]{x}$ 在区间$[0,+\infty)$上到处连续．
 \end{proof}
 
 我们在这里介绍了函数连续性的严格定义，对于初学者
@@ -1381,29 +1382,29 @@ $f(b)$异号．当我们把它二
 \item 
 令$x=\frac{a_2+b_2}{2}=\frac{1+1.25}{2}=1.125$, 算出$f\left(1.125\right)=-0.4512<0$，取$[a_3,b_3]=\left[1.125,1.25\right]$；
 \item 
-令$x=\frac{a_3+b_3}{2}=\frac{1.125+1.25}{2}=1.1875$, 算出$f\left(1.1875\right)=-0.1379<0$，取$[a_3,b_3]=\left[1.1875,1.25\right]$；
-\item 
-令$x=\frac{1.1875+1.25}{2}=1.2188$, 算出$f\left(1.2188\right)=0.029>0$，取$[a_4,b_4]=\left[1.1875,1.2188\right]$；
+令$x=\frac{a_3+b_3}{2}=\frac{1.125+1.25}{2}=1.1875$, 算出$f\left(1.1875\right)=-0.1379<0$，取$[a_4,b_4]=\left[1.1875,1.25\right]$；
+\item
+令$x=\frac{1.1875+1.25}{2}=1.2188$, 算出$f\left(1.2188\right)=0.029>0$，取$[a_5,b_5]=\left[1.1875,1.2188\right]$；
 
-\item 
-令$x=\frac{1.1875+1.2188}{2}=1.203$, 算出$f\left(1.203\right)=-0.0552<0$，取$[a_5,b_5]=\left[1.203,1.2188\right]$；
+\item
+令$x=\frac{1.1875+1.2188}{2}=1.203$, 算出$f\left(1.203\right)=-0.0560<0$，取$[a_6,b_6]=\left[1.203,1.2188\right]$；
 
-\item 
-令$x=\frac{1.203+1.2188}{2}=1.211$, 算出$f\left(1.211\right)=-0.0132<0$，取$[a_6,b_6]=\left[1.211,1.2188\right]$；
+\item
+令$x=\frac{1.203+1.2188}{2}=1.211$, 算出$f\left(1.211\right)=-0.0130<0$，取$[a_7,b_7]=\left[1.211,1.2188\right]$；
 
-\item 
-令$x=\frac{1.211+1.2188}{2}=1.215$, 算出$f\left(1.215\right)=0.008>0$，取$[a_7,b_7]=\left[1.211,1.215\right]$；
+\item
+令$x=\frac{1.211+1.2188}{2}=1.215$, 算出$f\left(1.215\right)=0.008>0$，取$[a_8,b_8]=\left[1.211,1.215\right]$；
 
-\item 
-令$x=\frac{1.211+1.215}{2}=1.213$, 算出$f\left(1.213\right)=-0.0025<0$，取$[a_8,b_8]=\left[1.213,1.215\right]$；
+\item
+令$x=\frac{1.211+1.215}{2}=1.213$, 算出$f\left(1.213\right)=-0.0022<0$，取$[a_9,b_9]=\left[1.213,1.215\right]$；
 
 \end{itemize}
 
 这样继续下去，我们得到无穷个闭区间满足下面的
 条件：
 \begin{enumerate}
-    \item $[a,b]=[1,2]\supseteq [a_1,b_1]=\left[1,\frac{3}{2}\right]\supseteq [a_2,b_2]=\left[1,\frac{5}{4}\right]\supseteq [a_3,b_3]=\left[1.1875,1.25\right]
-    \supseteq [a_4,b_4]=\left[1.1875,1.2188\right]\supseteq [a_5,b_5]=\left[1.203,1.2188\right]\supseteq [a_6,b_6]=\left[1.211,1.2188\right]\supseteq [a_7,b_7]=\left[1.211,1.215\right]\supseteq [a_8,b_8]=\left[1.213,1.215\right]\supseteq   \cdots 
+    \item $[a,b]=[1,2]\supseteq [a_1,b_1]=\left[1,\frac{3}{2}\right]\supseteq [a_2,b_2]=\left[1,\frac{5}{4}\right]\supseteq [a_3,b_3]=\left[1.125,1.25\right]\supseteq [a_4,b_4]=\left[1.1875,1.25\right]
+    \supseteq [a_5,b_5]=\left[1.1875,1.2188\right]\supseteq [a_6,b_6]=\left[1.203,1.2188\right]\supseteq [a_7,b_7]=\left[1.211,1.2188\right]\supseteq [a_8,b_8]=\left[1.211,1.215\right]\supseteq [a_9,b_9]=\left[1.213,1.215\right]\supseteq   \cdots
     \supseteq  
     [a_n,b_n]\supseteq\cdots $
     \item $[a_n,b_n]=\frac{1}{2}[a_{n-1},b_{n-1}]=\frac{1}{2^2}[a_{n-2},b_{n-2}]=\cdots=\frac{1}{2^n}[a,b]$
@@ -1414,7 +1415,7 @@ $f(b)$异号．当我们把它二
 
 换言之，得到满足下面性质的夹逼数列$\{a_n\}$, $\{b_n\}$:
 \begin{enumerate}
-    \item $a=1\le a_1=1\le a_2=1\le a_3=1.1875\le a_4=1.1875  \le  a_5=1.203  \le  a_6=1.211  \le  a_7=1.211  \le  a_8=1.213  \le\cdots\le a_n\le\cdots\le b_n\le \cdots \le  b_8=1.215  \le  b_7=1.215  \le  b_6=1.2188  \le  b_5=1.2188   \le  b_4= 1.2188  \le  b_3= 1.25 \le  b_2=1.25  \le  b_1=1.5  \le  b=2$
+    \item $a=1\le a_1=1\le a_2=1\le a_3=1.125\le a_4=1.1875\le a_5=1.1875  \le  a_6=1.203  \le  a_7=1.211  \le  a_8=1.211  \le  a_9=1.213  \le\cdots\le a_n\le\cdots\le b_n\le \cdots \le  b_9=1.215  \le  b_8=1.215  \le  b_7=1.2188  \le  b_6=1.2188   \le  b_5= 1.2188  \le  b_4= 1.25 \le  b_3= 1.25 \le  b_2=1.25  \le  b_1=1.5  \le  b=2$
     
     并且$(b_n-a_n)=\frac{1}{2^n}\to 0$．
 
@@ -1426,7 +1427,7 @@ $f(b)$异号．当我们把它二
 再由函数$f(x)=x^3+x-3$的到处连续性，即有
 \[\lim_{n\to\infty}  f(a_n)=f(k) \qquad  \lim_{n\to\infty}  f(b_n)=f(k)\]
 \begin{itemize}
-    \item 由$f(a_n)<0$得知$f(k)\le 0$,
+    \item 由$f(a_n)<0$得知$f(k)\le 0$（第七章第二节定理2）,
     \item 由$f(b_n)>0$得知$f(k)\ge 0$．
 \end{itemize}
 所以只有$f(k)=0$才能同时满足上述两种条件．
@@ -1444,7 +1445,7 @@ $f(a)>f(b)$时，我们可以对$-f(x)$和$-c$来作同
 \begin{itemize}
     \item 若
 $f\left(\frac{a_1+b_1}{2}\right)=c$, 则
-就是一个所求的$x_0$, 自
+$\frac{a_1+b_1}{2}$就是一个所求的$x_0$, 自
 然不必再费任何手脚了；
 \item 若
 $f\left(\frac{a_1+b_1}{2}\right)<c$,
@@ -1563,8 +1564,8 @@ $\varphi(x)=\frac{a_1}{x}+\frac{a_2}{x^2}+\cdots+\frac{a_n}{x^n},\; (x\ne 0)$是
 有一个根． 
 \end{blk}
 
-\section*{习题8.2}
-\addcontentsline{toc}{subsection}{习题8.2}
+\section*{习题8.3}
+\addcontentsline{toc}{subsection}{习题8.3}
 \begin{enumerate}
     \item 证明下列各函数是到处连续的函数：
 \begin{multicols}{2}
@@ -1678,18 +1679,16 @@ $f:\; y=x^2,\; x\in (-\infty,+\infty)$是$X\mapsto Y$的函数．但是，如果
 \draw (0,0) ellipse [x radius=1, y radius=1.5];
 \draw (4,0) ellipse [x radius=1 ,y radius=1.5];
 
-\draw(0,1)to [bend left=15] node[above]{$f$} (4,.7);
-\draw (0,.5)to [bend left=-15]node[above]{$f$} (4,.7);
-\draw (0,-1)to [bend left=-15]node[below]{$f$}(4,-.7);
-\draw (0,-.5)to [bend left=15]node[below]{$f$} (4,-.7);
-
-\draw[->](1.75,0)--(2.25,0);
+\draw[->] (0,1)to [bend left=15] node[above]{$f$} (3.95,.7);
+\draw[->] (0,.5)to [bend left=-15]node[above]{$f$} (3.95,.7);
+\draw[->] (0,-1)to [bend left=-15]node[below]{$f$}(3.95,-.7);
+\draw[->] (0,-.5)to [bend left=15]node[below]{$f$} (3.95,-.7);
 
 \foreach \x/\xtext in {1/2,.5/-2,-.5/a,-1/-a}
 {
     \draw (0,\x) [fill=white]circle (1.5pt)node[left]{$\xtext$};
 }
-\foreach \x/\xtext in {.7/4,-.7/2}
+\foreach \x/\xtext in {.7/4,-.7/a^2}
 {
     \draw (4,\x) [fill=white]circle (1.5pt)node[right]{$\xtext$};
 }
@@ -1806,11 +1805,11 @@ $y=x$对称．因此，为了得到反函数$y=f^{-1}(x)$的图象，我
     \draw [domain=exp(-1):exp(1.3), samples=100,  very thick]plot(\x, {ln(\x)});
 \draw[dashed] (-1.5,-1.5)--(3.5,3.5)node[right]{$y=x$};
 \draw[dashed] (2.46,0)--(2.46,.9)node[right]{$(b,a)$}--(0,.9);
-\draw[dashed] (.9,0)--(.9,2.46)node[right]{$(a,b)$}--(0,2.46);
+\draw[dashed] (.9,0)--(.9,2.46)node[right]{$(a,b=f(a))$}--(0,2.46);
 \draw[dashed]  (-.7,.5)--(.5,-.7);
 \node at (.25,-.25){$O$};
 \node at (3.67,1.3)[right]{$y=f^{-1}(x)$};
-\node at (1.3,3.67)[above]{$y=f(x)$};
+\node at (1.3,3.67)[above right]{$y=f(x)$或$x=f^{-1}(y)$};
 \end{tikzpicture}
     \caption{}
 \end{figure}
@@ -1839,7 +1838,7 @@ $f(x)$的值域是$[\alpha,\beta]$, 因此，连续递增函数$f:[a,b]\mapsto [
 条件：$$x_1<x_2\quad \Rightarrow\quad f(x_1)<f(x_2)$$ 即自变数的值与函数值是一对
 一的，所以$f$是单射的．
 
-由上可知函数$f$是可逆的，因此存在一个反
+由1、2知函数$f$是可逆的，因此存在一个反
 函数$f^{-1}:[\alpha,\beta]\mapsto [a,b]$, 其中$x=f^{-1}(y)$.
 \item 证明$f^{-1}$的递增性．
 
@@ -1950,8 +1949,8 @@ $[-b,0]\subset (-\infty,0]$，这个$b$是任意大的正数，因此$y=x^2,\; x
 
 
 
-\section*{习题8.3}
-\addcontentsline{toc}{subsection}{习题8.3}
+\section*{习题8.4}
+\addcontentsline{toc}{subsection}{习题8.4}
 \begin{enumerate}
 \item 下列函数在哪些范围内是严格单调的？
 \begin{multicols}{2}
@@ -1966,12 +1965,12 @@ $[-b,0]\subset (-\infty,0]$，这个$b$是任意大的正数，因此$y=x^2,\; x
 
 
 \item 对于下列各函数分别找出它们的最大定义域和值域
-使得它们有反函数，并分别写出它们的变数$x$表出的反
+使得它们有反函数，并分别写出它们的用变数$x$表出的反
 函数．
 \begin{multicols}{2}
     \begin{enumerate}
       \item $y=\sqrt{2x+1}$
-      \item $y=x^{\tfrac{3}{2}}$
+      \item $y=x^{\tfrac{2}{3}}$
       \item $y=x^2-1$
       \item $y=\sqrt{1-x^2}$
       \item $f(x)=\frac{x}{1-x^2},\quad -1<x<1$
@@ -1981,7 +1980,7 @@ $[-b,0]\subset (-\infty,0]$，这个$b$是任意大的正数，因此$y=x^2,\; x
 \item 作出下列各函数和它的反函数的图象：
 \begin{multicols}{2}
     \begin{enumerate}
-      \item $y=x^{\tfrac{1}{2}}\quad (x\ge 0)$
+      \item $y=x^{\tfrac{3}{2}}\quad (x\ge 0)$
       \item $y=\frac{x+1}{x}\quad (x\ne 0)$
       \item $y=\frac{x}{x+1}\quad (x\ne -1)$
   \end{enumerate}  
