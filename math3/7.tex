@@ -12,10 +12,10 @@
 \begin{tabular}{c|ccccccc}
     \hline
 $x$ & 0& $\frac{\pi}{6}$& $\frac{\pi}{3}$& $\frac{\pi}{2}$& $\frac{2\pi}{3}$& $\frac{5\pi}{6}$& $\pi$\\
-$\sin x$ & 0  & $\frac{1}{2}$  & $\frac{\sqrt{3}}{2}$  & 1  & $\frac{\sqrt{3}}{2}$  & $\frac{1}{2}$ & 0\\
+$\sin x$ & 0  & $\frac{1}{2}=0.5$  & $\frac{\sqrt{3}}{2}\approx 0.87$  & 1  & $\frac{\sqrt{3}}{2}\approx 0.87$  & $\frac{1}{2}=0.5$ & 0\\
 \hline
 $x$ && $\frac{7\pi}{6}$& $\frac{4\pi}{3}$& $\frac{3\pi}{2}$& $\frac{5\pi}{3}$& $\frac{11\pi}{6}$&$2\pi$\\
-$\sin x$ && $-\frac{1}{2}$  & $-\frac{\sqrt{3}}{2}$  & $-1$  & $-\frac{\sqrt{3}}{2}$  & $-\frac{1}{2}$  & 0\\
+$\sin x$ && $-\frac{1}{2}=-0.5$  & $-\frac{\sqrt{3}}{2}\approx -0.87$  & $-1$  & $-\frac{\sqrt{3}}{2}\approx -0.87$  & $-\frac{1}{2}=-0.5$  & 0\\
 \hline
 \end{tabular}
 \end{center}
@@ -251,7 +251,7 @@ $\sin x$ && $-\frac{1}{2}$  & $-\frac{\sqrt{3}}{2}$  & $-1$  & $-\frac{\sqrt{3}}
 
     \item 增减性\quad 由正弦曲线容易看出，随着$x$增加正弦函数在区间$\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$内是递增的；在区间$\left(\frac{\pi}{2},\frac{3\pi}{2}\right)$内是递减的．一般的情况是$\sin x$在区间$\left(-\frac{\pi}{2}+2k\pi,\frac{\pi}{2}+2k\pi\right)$内是递增的，在区间$\left(\frac{\pi}{2}+2k\pi,\frac{\pi}{2}+(2k+1)\pi\right)$内是递减的，这里$k\in \mathbb{Z}$．
     
-    由$\sin x$的增减性看出，在$x=\frac{\pi}{2}$一处，正弦函数由递增变为递减，因此在$x=\frac{\pi}{2}$处，$\sin x$取得极大值1. 一般地，当$x=\frac{\pi}{2}+2k\pi\;\; (k\in\mathbb{Z})$时，$\sin x=1$是极大值．同时还看
+    由$\sin x$的增减性看出，在$x=\frac{\pi}{2}$处，正弦函数由递增变为递减，因此在$x=\frac{\pi}{2}$处，$\sin x$取得极大值1. 一般地，当$x=\frac{\pi}{2}+2k\pi\;\; (k\in\mathbb{Z})$时，$\sin x=1$是极大值．同时还看
     出，在$x=\frac{3\pi}{2}$处，正弦函数由递减变为递增，因此在
     $x=\frac{3\pi}{2}$处，$\sin x$取得极小值$-1$, 一般地，当
     $x=\frac{3\pi}{2}+2k\pi\;\; (k\in\mathbb{Z})$
@@ -323,7 +323,7 @@ $$\sin (2x+2T') =\sin2x$$
 
 
 
-\item 由于：
+\item 因为
 \[\begin{split}
     2\sin\left(4x-\frac{\pi}{6}\right)&=2\sin\left(4x-\frac{\pi}{6}+2\pi\right)\\
     &=2\sin\left[4\left(x+\frac{\pi}{2}\right)-\frac{\pi}{6}\right]\quad (x\in\mathbb{R})
@@ -418,7 +418,7 @@ $\therefore\quad \sin 165^{\circ}>\sin 217^{\circ}$，即
     \caption{}
 \end{figure}
 
-    于是，菱形面积$S=2r\cdot \frac{2r}{\sin\theta}$，当$\sin\theta=1$时，菱形面积$S$最小，这时$\theta=90^{\circ}\;\;(0^{\circ}<\theta<180^{\circ})$.
+    于是，菱形面积$S=2r\cdot \frac{2r}{\sin\theta}=\frac{4r^2}{\sin\theta}$，当$\sin\theta=1$时，菱形面积$S$最小，这时$\theta=90^{\circ}\;\;(0^{\circ}<\theta<180^{\circ})$.
     
 因此，定圆的外切菱形中以正方形的面积最小．
 \end{solution}
@@ -429,7 +429,7 @@ $\therefore\quad \sin 165^{\circ}>\sin 217^{\circ}$，即
 \end{example}
 
 \begin{solution}
-    把$y$看作$\sin x$的二次函数，这样问题变成求闭区间$-1\le \sin x\le 1$上的$y$的最大值和最小值．也就是要把开区间$(-1, 1)$内的极值和两端点处的函数值作比较．
+    把$y$看作$\sin x$的二次函数，这样问题变成求闭区间$-1\le \sin x\le 1$上的$y$的最大值和最小值．也就是要把区间$(-1, 1)$内的极值和两端点处的函数值作比较．
 
 \begin{enumerate}
     \item 当$\sin x=-1$时，$y=\left(-1-\frac{1}{2}\right)^2+2=4\frac{1}{4}$
@@ -471,7 +471,7 @@ $\therefore\quad \sin 165^{\circ}>\sin 217^{\circ}$，即
     \end{enumerate}
 \end{multicols}
 
-\item 求下列函数的最大值和最小值，又在何时有最大值
+\item 求下面函数的最大值和最小值，又在何时有最大值
 或最小值:
 \begin{multicols}{2}
     \begin{enumerate}
@@ -488,7 +488,7 @@ $\therefore\quad \sin 165^{\circ}>\sin 217^{\circ}$，即
 的面积最大．
 \item $y=|\sin x|$是周期函
 数吗？如果是，说出它的最小正周期．
-\item 作$y=\sin|x|$的图象，试从它的图象说明函数$y=\sin|x|$不是周期函数：
+\item 作$y=\sin|x|$的图象，试从它的图象说明函数$y=\sin|x|$不是周期函数．
 
 \item 利用单位圆，容易看出$\sin x<\frac{1}{2}$的解的范围，如下图所示．
 \[\frac{5\pi}{6}+2k\pi<x<\frac{\pi}{6}+2(k+1)\pi\]
@@ -512,6 +512,8 @@ $\therefore\quad \sin 165^{\circ}>\sin 217^{\circ}$，即
 
 \node at (30:1)[right]{$P_{\tfrac{\pi}{6}}$};
 \node at (150:1)[left]{$P_{\tfrac{5\pi}{6}}$};
+\node at (1,0)[below right]{$(1,0)$};
+\node at (0,0)[above left]{$O$};
 
 
 \end{tikzpicture}    
@@ -583,10 +585,10 @@ $y=\sin x$沿着$x$轴向左平移$\frac{\pi}{2}$个单位就得到余弦函数$
 \begin{tabular}{c|ccccccc}
     \hline
 $x$ & $-\frac{\pi}{2}$& $-\frac{\pi}{3}$& $-\frac{\pi}{6}$& 0 & $\frac{\pi}{6}$& $\frac{\pi}{3}$& $\frac{\pi}{2}$\\
-$y=\cos x$ & 0  & $\frac{1}{2}$  & $\frac{\sqrt{3}}{2}$  & 1  & $\frac{\sqrt{3}}{2}$  & $\frac{1}{2}$ & 0\\
+$y=\cos x$ & 0  & $\frac{1}{2}=0.5$  & $\frac{\sqrt{3}}{2}\approx 0.87$  & 1  & $\frac{\sqrt{3}}{2}\approx 0.87$  & $\frac{1}{2}=0.5$ & 0\\
 \hline
 $x$ && $\frac{2\pi}{3}$& $\frac{5\pi}{6}$& $\pi$& $\frac{7\pi}{6}$& $\frac{4\pi}{3}$&$\frac{3\pi}{2}$\\
-$y=\cos x$ && $-\frac{1}{2}$  & $-\frac{\sqrt{3}}{2}$  & $-1$  & $-\frac{\sqrt{3}}{2}$  & $-\frac{1}{2}$  & 0\\
+$y=\cos x$ && $-\frac{1}{2}=-0.5$  & $-\frac{\sqrt{3}}{2}\approx -0.87$  & $-1$  & $-\frac{\sqrt{3}}{2}\approx -0.87$  & $-\frac{1}{2}=-0.5$  & 0\\
 \hline
 \end{tabular}
 \end{center}
@@ -790,7 +792,7 @@ $$y=-\sin x,     \qquad y=1+\cos x,\qquad  y=1+|\cos x|$$
     \item $y=3 \sin \frac{x}{4}$
     \item $y=\sin \left(x+\frac{\pi}{10}\right)$
     \item $y=\cos \left(2 x+\frac{\pi}{3}\right)$
-    \item $y=\sqrt{8} \sin \left(\frac{1}{2} x-\frac{\pi}{4}\right) $
+    \item $y=\sqrt{3} \sin \left(\frac{1}{2} x-\frac{\pi}{4}\right) $
 \end{enumerate}
 \end{multicols}
 
@@ -943,7 +945,7 @@ $y=\tan x$   & 0  & $0.27$  & $0.58$  & $1$  & $1.73$ & 3.73 & 不存在  \\
     \item 若$x\in\left(\frac{\pi}{2}+2k\pi,(2k+1)\pi\right)$或$\left(\frac{\pi}{2}+(2k+1)\pi, (2k+2)\pi\right)$时，$\tan x<0$．（这里$k\in\mathbb{Z}$）
 \end{itemize}
 
- \item 增减性\quad 正切函数$y=tan x$在$x\in\left(-\frac{\pi}{2}+k\pi,\frac{\pi}{2}+k\pi\right)\;\; (k\in\mathbb{Z})$的每一个开区间内，都是递增的．
+ \item 增减性\quad 正切函数$y=\tan x$在$x\in\left(-\frac{\pi}{2}+k\pi,\frac{\pi}{2}+k\pi\right)\;\; (k\in\mathbb{Z})$的每一个开区间内，都是递增的．
 
  但是要注意，正切函数在整个定义域内并不是增函数．事实上，设$x_1=\frac{\pi}{4}$, $x_2=\frac{3\pi}{4}$，那么
  \[\begin{split}
@@ -999,7 +1001,7 @@ $\frac{\pi}{2}$时，$\tan x$取负值减小但其绝对值增
     \item 证明$y=\tan\left(x-\frac{\pi}{2}\right)$是奇函数，作出它的图象．
     \item 作$y=-|\tan x|$的图象，并说出它的周期．
     \item 求下列函数的周期：
-    \[\tan\left(2x-\frac{x}{4}\right),\qquad \tan \frac{x}{2} \]
+    \[\tan\left(2x-\frac{\pi}{4}\right),\qquad \tan \frac{x}{2} \]
 \end{enumerate}
 \end{ex}
 
@@ -1059,11 +1061,11 @@ $\frac{\pi}{2}$时，$\tan x$取负值减小但其绝对值增
 \begin{center}
 \begin{tabular}{c|ccccccc}
 \hline
-$x$  &    $\frac{6\pi}{12}$  &    $\frac{7\pi}{12}$  &    $\frac{8\pi}{12}$  &    $\frac{9\pi}{12}$  &    $\frac{10\pi}{12}$  &    $\frac{11\pi}{12}$  \\    
+$x$  &    $\frac{\pi}{2}=\frac{6\pi}{12}$  &    $\frac{7\pi}{12}$  &    $\frac{8\pi}{12}$  &    $\frac{9\pi}{12}$  &    $\frac{10\pi}{12}$  &    $\frac{11\pi}{12}$  \\    
 \hline
 $y=\tan x$   & 不存在  & $-3.73$  & $-1.73$  & $-1$  & $-0.58$  & $-0.27$  \\
 \hline
-$x$  &    $\pi$  &    $\frac{13\pi}{12}$  &    $\frac{14\pi}{12}$  &    $\frac{15\pi}{12}$  &    $\frac{16\pi}{12}$  &    $\frac{17\pi}{12}$ & $\frac{18\pi}{12}$ \\    
+$x$  &    $\pi$  &    $\frac{13\pi}{12}$  &    $\frac{14\pi}{12}$  &    $\frac{15\pi}{12}$  &    $\frac{16\pi}{12}$  &    $\frac{17\pi}{12}$ & $\frac{3\pi}{2}$ \\    
 \hline
 $y=\tan x$   & 0  & $0.27$  & $0.58$  & $1$  & $1.73$ & 3.73 & 不存在  \\
 \hline
@@ -1138,7 +1140,7 @@ $y=\cot x$   & 0  & $-0.27$  & $-0.58$  & $-1$  & $-1.73$ & -3.73 & 不存在  \
 
 \item 周期性\quad 余切函数的周期是$\pi$．
 
-事实上，假设$p>0$是$\cot x$的一个周期，根据周期$p$的定义，有$\cot (x+p)=\cot x$,这里x是$\cot x$的定义域中任何一个数．
+事实上，假设$p>0$是$\cot x$的一个周期，根据周期$p$的定义，有$\cot (x+p)=\cot x$, 这里$x$是$\cot x$的定义域中任何一个数．
 
 令$x=\frac{\pi}{2}$，则
 \[\cot\left(\frac{\pi}{2}+p\right)=\cot\frac{\pi}{2}\]
@@ -1149,7 +1151,7 @@ $\therefore\quad p=k\pi\quad (k\in\mathbb{Z},\; k\ne 0)$
 
 \begin{itemize}
     \item 函数$y=\cot \omega x$的最小正周期是$\frac{\pi}{|\omega|}$，（$\omega\ne 0, \omega x$为定义域内的数）．
-    \item 函数$y=A\cot (\omega x+\varphi)$的最小正周期是$\frac{\pi}{|\omega|}$，（$\omega,\varphi$为常数，$\omega\ne 0, \omega x$为定义域内的数）．
+    \item 函数$y=A\cot (\omega x+\varphi)$的最小正周期是$\frac{\pi}{|\omega|}$，（$\omega,\varphi$为常数，且$\omega\ne 0, \omega x$为定义域内的数）．
 \end{itemize}
 
 \item 渐近线\quad 因为
@@ -1209,7 +1211,7 @@ $\therefore\quad p=k\pi\quad (k\in\mathbb{Z},\; k\ne 0)$
 为了便于比较和查阅，我们把正弦函数，余弦函数，正切函数，余切函数的主要性质列表如下：
 
 {\small
-\begin{longtable}{p{.1\textwidth}|p{.18\textwidth}p{.18\textwidth}p{.18\textwidth}p{.18\textwidth}}
+\begin{longtable}{p{.09\textwidth}|p{.19\textwidth}p{.19\textwidth}p{.19\textwidth}p{.19\textwidth}}
     \hline
 函数 & $y=\sin x$ & $y=\cos x$    & $y=\tan x$ & $y=\cot x$\\
 \hline
@@ -1219,25 +1221,32 @@ $\therefore\quad p=k\pi\quad (k\in\mathbb{Z},\; k\ne 0)$
 \hline
 奇偶性 & 奇函数 &偶函数& 奇函数 &奇函数\\
 \hline
-函数的符号 & 在一、二象限为正；在三、四象限为负
-& 在一、四象限为正；在二、三象限为负
-& 在一、三象限为正；在二、四象限为负
-& 在一、三象限为正；在二、四象限为负\\
+函数的符号 & 在一、二象限，即 $x\in\bigl(2k\pi$, $(2k+1)\pi\bigr)$ 时，$\sin x>0$；在三、四象限，即 $x\in\bigl((2k+1)\pi$, $2(k+1)\pi\bigr)$ 时，$\sin x<0$
+& 在一、四象限，即 $x\in\bigl(-\frac{\pi}{2}+2k\pi$, $\frac{\pi}{2}+2k\pi\bigr)$ 时，$\cos x>0$；在二、三象限，即 $x\in\bigl(\frac{\pi}{2}+2k\pi$, $\frac{\pi}{2}+(2k+1)\pi\bigr)$ 时，$\cos x<0$
+& 在一、三象限，即 $x\in\bigl(2k\pi$, $\frac{\pi}{2}+2k\pi\bigr)$ 或 $\bigl((2k+1)\pi$, $\frac{\pi}{2}+(2k+1)\pi\bigr)$ 时，$\tan x>0$；在二、四象限，即 $x\in\bigl(\frac{\pi}{2}+2k\pi$, $(2k+1)\pi\bigr)$ 或 $\bigl(\frac{\pi}{2}+(2k+1)\pi$, $(2k+2)\pi\bigr)$ 时，$\tan x<0$
+& 在一、三象限，即 $x\in\bigl(2k\pi$, $\frac{\pi}{2}+2k\pi\bigr)$ 或 $\bigl((2k+1)\pi$, $\frac{\pi}{2}+(2k+1)\pi\bigr)$ 时，$\cot x>0$；在二、四象限，即 $x\in\bigl(\frac{\pi}{2}+2k\pi$, $(2k+1)\pi\bigr)$ 或 $\bigl(\frac{\pi}{2}+(2k+1)\pi$, $(2k+2)\pi\bigr)$ 时，$\cot x<0$\\
 \hline
-增减性 & 在一、四象限是增函数；在二、三象限是减函数 
-& 在一、二象限是减函数；在三、四象限是增函数 
-& 在各象限都为增函数 
-& 在各象限都为减函数 \\
+增减性 & 在一、四象限，即 $x\in\bigl(-\frac{\pi}{2}+2k\pi$, $\frac{\pi}{2}+2k\pi\bigr)$ 时，$\sin x$是增函数；在二、三象限，即 $x\in\bigl(\frac{\pi}{2}+2k\pi$, $\frac{\pi}{2}+(2k+1)\pi\bigr)$ 时，$\sin x$是减函数
+& 在一、二象限，即 $x\in\bigl(2k\pi$, $(2k+1)\pi\bigr)$ 时，$\cos x$是减函数；在三、四象限，即 $x\in\bigl((2k+1)\pi$, $2(k+1)\pi\bigr)$ 时，$\cos x$是增函数
+& 在各象限都为增函数，即 $x\in\bigl(-\frac{\pi}{2}+k\pi$, $\frac{\pi}{2}+k\pi\bigr)$ 时，$\tan x$是增函数
+& 在各象限都为减函数，即 $x\in\bigl(k\pi$, $(k+1)\pi\bigr)$ 时，$\cot x$是减函数 \\
 \hline
-函数的极值& $x=\frac{\pi}{2}+2k\pi$时，取极大值1；$x=\frac{3\pi}{2}+2k\pi$时，取极小值$-1$
-& $x=2k\pi$时，取极大值1；$x=(2k+1)\pi$时，取极小值$-1$&无& 无\\
+函数的极值& 当$x=\frac{\pi}{2}+2k\pi$时，$\sin x=1$是极大值；当$x=\frac{3\pi}{2}+2k\pi$时，$\sin x=-1$是极小值
+& 当$x=2k\pi$时，$\cos x=1$是极大值；当$x=(2k+1)\pi$时，$\cos x=-1$是极小值&无& 无\\
 \hline
-周期性& $2\pi$& $2\pi$& $\pi$& $\pi$\\
+周期性& $\because\ \sin(x+2\pi)=\sin x$，$\therefore\ T=2\pi$（$2\pi$是最小正值）
+& $\because\ \cos(x+2\pi)=\cos x$，$\therefore\ T=2\pi$（$2\pi$是最小正值）
+& $\because\ \tan(x+\pi)=\tan x$，$\therefore\ T=\pi$（$\pi$是最小正值）
+& $\because\ \cot(x+\pi)=\cot x$，$\therefore\ T=\pi$（$\pi$是最小正值）\\
 \hline
 渐近线 & 无& 无& 直线$x=(2k+1)\frac{\pi}{2}$& 直线$x=k\pi$\\
 \hline
 \end{longtable}
 }
+\vspace{-\baselineskip}
+\begin{flushright}
+（表内$k\in\mathbb{Z}$）
+\end{flushright}
 
 \section{正弦型曲线}
 在这一节，我们来研究正弦型曲线，即函数$y=A\sin(mx+a)$的图象，这个图象在学习物理、电工和力学时将会遇到，下面我们先研究几种特殊正弦型曲线的作法，然后再归结到一般情形．
@@ -1324,7 +1333,7 @@ $\cdots$ & $\cdots$&$\cdots$&$\cdots$\\
     压缩到$\frac{1}{2}$，就得到曲线$y=\frac{1}{2}\sin x$; 沿纵轴方向拉长2
 倍，就得到曲线$y=2\sin x$．
 
-\item $y=\sin x$的最大纵坐标是1; $y=2\sin x$的最大纵坐标是2; $y=\frac{1}{2}\sin x$的最大纵坐标是$\frac{1}{2}$. 我们这个最大的纵坐标叫做该曲线的振幅．
+\item $y=\sin x$的最大纵坐标是1; $y=2\sin x$的最大纵坐标是2; $y=\frac{1}{2}\sin x$的最大纵坐标是$\frac{1}{2}$. 我们把这个最大的纵坐标叫做该曲线的振幅．
 \item 它们的周期相同，都是$2\pi$．
 \end{enumerate}
 
@@ -1338,8 +1347,8 @@ $\cdots$ & $\cdots$&$\cdots$&$\cdots$\\
 
 我们取$m=\frac{1}{2}$, $m=1$, $m=2$三种情形来讨论，即讨论$y=\sin\frac{x}{2}$, $y=\sin x$, $y=\sin2x$．
 
-三个函数的周期分别是$4\pi$, $2\pi$和$\pi$, 它们有相同的振
-幅$A=1$. 所有这些函数在自变量$mx$取相同值的变化过程中对应的函数值也相同，但现在$m$值不同，因此，只有当$x$取不同的值时，才能使这些函数的对应值相同．
+函数 (1) $y=\sin\frac{x}{2}$; (2) $y=\sin x$; (3) $y=\sin 2x$的周期分别是$\frac{2\pi}{\frac{1}{2}}=4\pi$, $2\pi$和$\frac{2\pi}{2}=\pi$, 它们有相同的振
+幅$A=1$. 所有这些函数在自变量$mx$取相同值的变化过程中对应的函数值也相同，但现在$m$值不同，因此，只有当$x$取不同的值时，才能使这些函数$y=\sin\frac{x}{2}$, $y=\sin x$和$y=\sin 2x$的对应值相同．
 比如，
 \begin{itemize}
     \item 当$x=\frac{\pi}{6}$时，$\sin x$的值为0.5；
@@ -1416,11 +1425,11 @@ $y=\sin\frac{1}{2}x$ &      &  $-0.5$   &  $-0.87$    &   $-1$    & $-0.87$     
 \begin{enumerate}
     \item 当$y=\sin\frac{1}{2}x$的横坐标为$y=\sin x$的横坐标的2倍时，它们的纵坐标相等．
     \item 它们的振幅相同，都是1.
-    \item $y=\sin\frac{1}{2}x$的周期是$4\pi=\frac{2\pi}{1/2}$，
+    \item $y=\sin\frac{x}{2}$的周期是$4\pi\left(=\frac{2\pi}{\frac{1}{2}}\right)$，
 二倍于$y=\sin x$的周期．
 \end{enumerate}
 
-因此，$y=\sin\frac{1}{2}x$的图象是把$y=\sin x$的图象沿横轴方向拉长2倍而得到．
+因此，$y=\sin\frac{1}{2}x$的图象是把$y=\sin x$的图象沿横轴方向拉长$\frac{1}{\frac{1}{2}}=2$倍而得到．
 
 将$y=\sin x$的函数值表里的$x$取值分别除以2, 得到$y=\sin 2x$的函数值如下：
 \begin{center}
@@ -1538,11 +1547,11 @@ $y=1.5\sin 2t$ & 0   &   1.07 &  1.5 & 1.07   & 0  & $-$1.07   &  $-$1.5 & $-$1.
 \begin{tabular}{c|ccccc}
     \hline
 $t$  &  $-\frac{\pi}{8}$ & 0 & $\frac{\pi}{8}$   & $\frac{\pi}{4}$  & $\frac{3\pi}{8}$   \\     \hline
-$y=1.5\sin \left(2t+\frac{\pi}{4}\right)$  & 0   &   1.07 &  1.5 & 1.07   & 0 \\
+\begin{tabular}{@{}l@{}}$y=1.5\sin \left(2t+\frac{\pi}{4}\right)$\\ $\phantom{y}=1.5\sin 2\left(t+\frac{\pi}{8}\right)$\end{tabular}  & 0   &   1.07 &  1.5 & 1.07   & 0 \\
     \hline
     $t$  && $\frac{\pi}{2}$  & $\frac{5\pi}{8}$   & $\frac{3\pi}{4}$ &$\frac{7\pi}{8}$ \\
     \hline
-    $y=1.5\sin \left(2t+\frac{\pi}{4}\right)$  &  & $-$1.07   &  $-$1.5 & $-$1.07   & 0\\
+    \begin{tabular}{@{}l@{}}$y=1.5\sin \left(2t+\frac{\pi}{4}\right)$\\ $\phantom{y}=1.5\sin 2\left(t+\frac{\pi}{8}\right)$\end{tabular}  &  & $-$1.07   &  $-$1.5 & $-$1.07   & 0\\
     \hline
 \end{tabular}
 \end{center}
@@ -1577,6 +1586,10 @@ $y=1.5\sin \left(2t+\frac{\pi}{4}\right)$  & 0   &   1.07 &  1.5 & 1.07   & 0 \\
 
 \draw[dashed](pi/4,1.5)--(0,1.5);  \draw[dashed](pi/4,1)--(0,1);
 \draw[dashed](3*pi/4,-1.5)--(0,-1.5);  \draw[dashed](3*pi/4,-1)--(0,-1);
+\node at (pi/8,1.5)[above left]{$\left(\frac{\pi}{8},1.5\right)$};
+\node at (pi/4,1.5)[above right]{$\left(\frac{\pi}{4},1.5\right)$};
+\node at (5*pi/8,-1.5)[below left]{$\left(\frac{5\pi}{8},-1.5\right)$};
+\node at (3*pi/4,-1.5)[below right]{$\left(\frac{3\pi}{4},-1.5\right)$};
 
 \foreach \x in {-1.5,-1,1,1.5}
 {
@@ -1590,7 +1603,7 @@ $y=1.5\sin \left(2t+\frac{\pi}{4}\right)$  & 0   &   1.07 &  1.5 & 1.07   & 0 \\
 上面这种作图方法，把几种曲线之间的关系明确的揭露出来，使我们能够了解到它们之间的内在联系，但是，这样作图比较费事，在实际问题中往往只须知道函数
 $y=A\sin(mx+\alpha)$的草图，只要这个图能够表示出它的
 三个特征量：
-振幅$A$, 周期$\frac{2\pi}{m}$，起点$\left(-\frac{\alpha}{m},0\right)$就可以了．
+(1) 振幅$A$, (2) 周期$\frac{2\pi}{m}$，(3) 起点$\left(-\frac{\alpha}{m},0\right)$就可以了．
 
 $y=A\sin(mx+\alpha)$的图象的简便作法如下：
 \begin{enumerate}
@@ -1738,7 +1751,7 @@ $\frac{1}{m}$倍，（周期变为$\frac{2\pi}{m}$）, 沿$x$轴向左或向右�
     \item $y=\sin 4x$
     \item $y=\cos\frac{x}{2}$
     \item $y=\tan ax \quad (a>0)$
-    \item $y=\sin\left(x+\frac{\pi}{8}\right)$
+    \item $y=\sin\left(x+\frac{\pi}{3}\right)$
     \item $y=\cos\left(2x-\frac{\pi}{6}\right)$
     \item $y=3\tan\left(\frac{x}{2}+\frac{\pi}{4}\right)$
 \end{enumerate}
@@ -1764,7 +1777,7 @@ $\frac{1}{m}$倍，（周期变为$\frac{2\pi}{m}$）, 沿$x$轴向左或向右�
     \item $y=\frac{1}{2}\sin 3x$
     \item $y=2\sin\left(x+\frac{\pi}{4}\right)$
     \item $y=\sin\left(2x+\frac{\pi}{2}\right)$
-    \item $y=2\sin\left(3x-\frac{\pi}{8}\right)$
+    \item $y=2\sin\left(3x-\frac{\pi}{3}\right)$
 \end{enumerate}
 \end{multicols}
 
@@ -1783,7 +1796,7 @@ $O$为$CC'$中点，又$CC'=16$cm, 设$P$点离开原点$O$的坐
 标$x$是时间$t$的函数$x=8\sin\left(\frac{\pi}{4}t+\frac{\pi}{6}\right)$
 \begin{center}
     \begin{tikzpicture}
-   \draw (-5,0)--(5,0);
+   \draw[->, >=latex] (-5,0)--(5,0)node[right]{$x$};
 \foreach \x/\xtext in {-4/C,0/O,4/C'}
 {
     \draw (\x,0) [fill=black] circle(1.5pt)node[below]{$\xtext$};
