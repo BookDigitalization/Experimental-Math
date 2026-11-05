@@ -1826,6 +1826,102 @@ $$\cos\frac{A}{2}+\cos \frac{B}{2}+\cos \frac{C}{2}=4\cos\frac{\pi-A}{4}\cos\fra
 \end{multicols}
 \end{enumerate}
 
+% 原书第60页的整页附表（“本章内容要点”中提到的“附表”）
+\begin{figure}[p]
+\noindent 附三角函数公式表：
+
+\medskip
+\centering
+\begin{tikzpicture}[font=\small, >=stealth,
+  box/.style={draw, thick, inner xsep=0pt, inner ysep=2pt}]
+% 第二行：两角差、两角和、倍角
+\node[box, anchor=north west] (D) at (0,0) {\begin{tabular}{c}
+  两\quad 角\quad 差\\ \hline
+  $\begin{aligned}
+  &\sin(\alpha-\beta)\\ &=\sin\alpha\cos\beta\\ &\quad -\cos\alpha\sin\beta\\
+  &\cos(\alpha-\beta)\\ &=\cos\alpha\cos\beta\\ &\quad +\sin\alpha\sin\beta
+  \end{aligned}$
+  \end{tabular}};
+\node[box, anchor=north west] (S) at ([xshift=16mm]D.north east) {\begin{tabular}{c}
+  两\quad 角\quad 和\\ \hline
+  $\begin{aligned}
+  &\sin(\alpha+\beta)\\ &=\sin\alpha\cos\beta\\ &\quad +\cos\alpha\sin\beta\\
+  &\cos(\alpha+\beta)\\ &=\cos\alpha\cos\beta\\ &\quad -\sin\alpha\sin\beta
+  \end{aligned}$
+  \end{tabular}};
+\node[box, anchor=north west] (B) at ([xshift=12mm]S.north east) {\begin{tabular}{c}
+  倍\qquad 角\\ \hline
+  $\begin{aligned}
+  &\sin2\alpha\\ &=2\sin\alpha\cos\alpha\\ &\cos2\alpha\\
+  &=\cos^2\alpha-\sin^2\alpha\\ &=2\cos^2\alpha-1\\ &=1-2\sin^2\alpha
+  \end{aligned}$
+  \end{tabular}};
+% 第一行：正切
+\node[box, anchor=south] (TD) at ([yshift=10mm]D.north) {\begin{tabular}{c}
+  $\tan(\alpha-\beta)$\\[2pt]
+  $=\dfrac{\tan\alpha-\tan\beta}{1+\tan\alpha\tan\beta}$
+  \end{tabular}};
+\node[box, anchor=south] (TS) at ([yshift=10mm]S.north) {\begin{tabular}{c}
+  $\tan(\alpha+\beta)$\\[2pt]
+  $=\dfrac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}$
+  \end{tabular}};
+\node[box, anchor=south] (TB) at ([yshift=10mm]B.north) {\begin{tabular}{c}
+  $\tan2\alpha$\\[2pt]
+  $=\dfrac{2\tan\alpha}{1-\tan^2\alpha}$
+  \end{tabular}};
+\foreach \a/\b in {D/TD, S/TS, B/TB}
+  \draw[->] (\a.north) -- (\b.south) node[midway, left]{两式} node[midway, right]{相除};
+\draw[<->] (D.east) -- (D.east -| S.west)
+  node[midway, above]{用$-\beta$} node[midway, below]{代$\beta$};
+\draw[<->] (S.east) -- (S.east -| B.west) node[midway, above]{$\beta=\alpha$};
+\draw[<->] (TD.east) -- (TD.east -| TS.west)
+  node[midway, above]{用$-\beta$} node[midway, below]{代$\beta$};
+\draw[<->] (TS.east) -- (TS.east -| TB.west) node[midway, above]{$\beta=\alpha$};
+% 第三行：积化和差、半角
+\node[box, anchor=north] (P) at ([yshift=-13mm]$(D.south west)!.5!(S.south east)$) {\begin{tabular}{c}
+  积\quad 化\quad 和\quad 差\\ \hline
+  $\begin{aligned}
+  \sin\alpha\cos\beta&=\tfrac12[\sin(\alpha+\beta)+\sin(\alpha-\beta)]\\[2pt]
+  \cos\alpha\sin\beta&=\tfrac12[\sin(\alpha+\beta)-\sin(\alpha-\beta)]\\[2pt]
+  \cos\alpha\cos\beta&=\tfrac12[\cos(\alpha+\beta)+\cos(\alpha-\beta)]\\[2pt]
+  \sin\alpha\sin\beta&=-\tfrac12[\cos(\alpha+\beta)-\cos(\alpha-\beta)]
+  \end{aligned}$
+  \end{tabular}};
+\draw[->] (D.south) -- (D.south |- P.north);
+\draw[->] (S.south) -- (S.south |- P.north);
+\node[align=left, anchor=west] at ([xshift=1mm, yshift=-6.5mm]D.south) {同名函数相加\\与相减};
+\node[box, anchor=north] (H) at ([yshift=-13mm]B.south) {\begin{tabular}{c}
+  半\qquad 角\\ \hline
+  $\begin{aligned}
+  &\sin\frac\alpha2=\pm\sqrt{\frac{1-\cos\alpha}{2}}\\[2pt]
+  &\cos\frac\alpha2=\pm\sqrt{\frac{1+\cos\alpha}{2}}
+  \end{aligned}$
+  \end{tabular}};
+\draw[->] (B.south) -- (H.north) node[midway, left]{变} node[midway, right]{形};
+% 第四行：和差化积、半角的正切
+\node[box, anchor=north] (Q) at ([yshift=-18mm]P.south) {\begin{tabular}{c}
+  和\quad 差\quad 化\quad 积\\ \hline
+  $\begin{aligned}
+  \sin x+\sin y&=2\sin\frac{x+y}{2}\cos\frac{x-y}{2}\\
+  \sin x-\sin y&=2\cos\frac{x+y}{2}\sin\frac{x-y}{2}\\
+  \cos x+\cos y&=2\cos\frac{x+y}{2}\cos\frac{x-y}{2}\\
+  \cos x-\cos y&=-2\sin\frac{x+y}{2}\sin\frac{x-y}{2}
+  \end{aligned}$
+  \end{tabular}};
+\draw[->] (P.south) -- (Q.north)
+  node[midway, left, align=right]{以$x$代$\alpha+\beta$\\ $y$代$\alpha-\beta$}
+  node[midway, right, align=left]{以$\frac{x+y}{2}$代$\alpha$\\ 以$\frac{x-y}{2}$代$\beta$};
+\node[box, anchor=north] (T) at ([yshift=-18mm]H.south) {\begin{tabular}{c}
+  $\begin{aligned}
+  \tan\frac\alpha2&=\pm\sqrt{\frac{1-\cos\alpha}{1+\cos\alpha}}\\[2pt]
+  &=\frac{\sin\alpha}{1+\cos\alpha}\\[2pt]
+  &=\frac{1-\cos\alpha}{\sin\alpha}
+  \end{aligned}$
+  \end{tabular}};
+\draw[->] (H.south) -- (T.north) node[midway, left]{变} node[midway, right]{形};
+\end{tikzpicture}
+\end{figure}
+
 \section{简单三角方程}
 在初中我们曾经学习过这样的问题：已知三角函数值求角．如，已知$\sin x=\frac{1}{2}$, 求$x$的值，像这样条件等式$\sin x=\frac{1}{2}$的样子，我们把\textbf{含有未知数的三角函数的等式，叫做三角方程}．例如：$\sin x-1=-\frac{1}{2}$, 
 $2\sin^2x+3\cos x=0$, $\sin5x=\cos4x$, 等等
