@@ -184,7 +184,7 @@ $(2.9)-(2.11)\x16$后，再乘以$\frac{1}{61}$，得
     \text{原方程组}& \Rightarrow \begin{cases}
       \quad   x+4y+7z=0\\-x+2y-3z=2\\\qquad \;\;3y+2z=1
     \end{cases} \Rightarrow \begin{cases}
-        x+4y+7z=0\\\qquad  6y+4z=1\\\qquad  3y+2z=1
+        x+4y+7z=0\\\qquad  6y+4z=2\\\qquad  3y+2z=1
     \end{cases}\\
     &\Rightarrow \begin{cases}
         x+4y+7z=0\\\qquad \;\; y+\frac{2}{3}z=\frac{1}{3}\\\qquad \;3y+2z=1 
@@ -214,7 +214,7 @@ $(2.9)-(2.11)\x16$后，再乘以$\frac{1}{61}$，得
         2x-3y+4z=8\\ 5x-y-8z=-21\\3x+5y-7z=-8
     \end{cases}$
     \item $\begin{cases}
-      \qquad   y+2z=4\\x-3y\qquad =-8\\4x\quad\;\;\; -5z=7
+      \qquad   y+2z=4\\x-3y\qquad =-3\\4x\quad\;\;\; -5z=7
     \end{cases}$
     \item $\begin{cases}
         7x-y+2z=1\\\qquad 5y-3z=0\\14x-2y+4z=1
@@ -276,7 +276,7 @@ x+\frac{b_1}{a_1}y=\frac{c_1}{a_1}\\
     a_1x+b_1y=c_1\\
     a_2x+b_2y=c_2
 \end{cases}$
-其中$a_1$与$b_1$, $a_2$与$b_2$, $b_1$与$b_2$分别不同时为零．
+其中$a_1$与$b_1$, $a_2$与$b_2$, $a_1$与$a_2$, $b_1$与$b_2$分别不同时为零．
 \begin{enumerate}
     \item 当$a_1b_2-a_2b_1\ne 0$，它有唯一解；
     \[x=\frac{c_1b_2-c_2b_1}{a_1b_2-a_2b_1} ,\qquad 
@@ -380,19 +380,19 @@ mx+y=m+1\\x+my=2m
 \begin{multicols}{2}
 \begin{enumerate}
     \item $\begin{cases}
-        2x+8y-5z=3\\x-2y+z=0\\x+y+3z=7
+        2x+3y-5z=3\\x-2y+z=0\\x+y+3z=7
     \end{cases}$
     \item $\begin{cases}
         x+y+2z=4\\2x-y+3z=4\\x+y+2z=3
     \end{cases}$
     \item $\begin{cases}
-         x+2y-8z=5\\8x-2y+z=4\\-3x-6y+9z=15
+         x+2y-3z=5\\3x-2y+z=4\\-3x-6y+9z=15
     \end{cases}$
     \item $\begin{cases}
          x+2y-3z=5\\ -2x-4y+6z=-10\\ \frac{1}{2}x+y-\frac{3}{2}z=\frac{5}{2}
     \end{cases}$
     \item $\begin{cases}
-        x_1+8x_2+5x_3+7x_4=12\\ 8x_1+5x_2+7x_3+x_4 =0\\
+        x_1+3x_2+5x_3+7x_4=12\\ 3x_1+5x_2+7x_3+x_4 =0\\
     5x_1+7x_2+x_3+3x_4=4\\ 7x_1+x_2+3x_3+5x_4=16
     \end{cases}$
     
@@ -417,7 +417,7 @@ mx+y=m+1\\x+my=2m
     \end{cases}$
 \end{enumerate}    
 \end{multicols}
-    \item 一个两位数的两数字之和为 $a$, 若颠倒这两个数字的顺序，所得新的两位数比原数小36, 问$a$可能取那些值？原来的两位数是什么？
+    \item 一个两位数的两数字之和为 $a$, 若颠倒这两个数字的顺序，所得新的两位数比原数小36, 问$a$可能取哪些值？原来的两位数是什么？
     \item 试判断$m$取何值时，下列方程组有唯一解：
 \begin{enumerate}
     \item $\begin{cases}
@@ -638,7 +638,7 @@ x-(m^2-5)y=-1\\ (m+1)x -(m+1)^2y=1
 在使用行列式方法解二元线性方程组时，如果出现$D=0$时，解的公式不适用，这时可以仿照前文中对方程组解的讨论，得到以下结论：
 \begin{itemize}
     \item 当$D=0$, 且$D_x\ne 0$(或$D_y\ne 0$)时，方程组的解集是空集$\emptyset$；
-    \item 当$D=0$, 且$D_x=D_y＝0$时，方程组有无限多个解，它的解集可引进一个参数表示．
+    \item 当$D=0$, 且$D_x=D_y=0$时，方程组有无限多个解，它的解集可引进一个参数表示．
 \end{itemize}
 
 注意，我们这里所指的二元线性方程组，限定其中的
@@ -785,7 +785,7 @@ $\begin{cases}
         mx+y=2m+1\\x-my=2-m
     \end{cases}$
     \item $\begin{cases}
-        mx+y=-1\\8mx-my=2m+3
+        mx+y=-1\\3mx-my=2m+3
     \end{cases}$
     \item $\begin{cases}
         (a-1)x-(a^2-1)y=1\\
@@ -946,7 +946,7 @@ $\begin{cases}
 \end{blk} 
 
 \begin{proof}
-    只要以对调第一、二行为例证明结论，其它行（列）对调的证明是类似的．
+    只要以对调第一、二行为例证明结论，其他行（列）对调的证明是类似的．
     仍由三阶行列式的对角线法则可得
     \[\begin{split}
         \Delta&=a_1b_2c_3+a_2b_3c_1+a_3b_1c_2-a_3b_2c_1-a_2b_1c_3-a_1b_3c_2\\
@@ -1180,7 +1180,7 @@ $\begin{cases}
     \end{vmatrix} \tag{定理5}\\
     &=2\x3\x \begin{vmatrix}
         3&1+2&2\\
-        7&5+3&3\\
+        8&5+3&3\\
         6&-1+7&7
     \end{vmatrix} \tag{定理9}\\
     &=2\x3\x \begin{vmatrix}
@@ -1529,7 +1529,7 @@ A_{12}&=(-1)^{1+2}\begin{vmatrix}
 \begin{enumerate}
     \item 试应用定理9、10，计算下列行列式
 \[\begin{vmatrix}
-2 & 1 & 8 \\
+2 & 1 & 3 \\
 5 & 0 & 7 \\
 4 & -3 & -2
 \end{vmatrix}\qquad  \begin{vmatrix}
@@ -1837,7 +1837,7 @@ $t,R$可取任意值，由于$R,t$的任意性，方程组有无限多个解．
     \item $\begin{vmatrix}3 & -5 & 1 \\ 2 & 3 & -6 \\ -7 & 2 & 4\end{vmatrix}$
     \item $\begin{vmatrix}1 & 2 & 3 \\ 2 & 1 & 3 \\ 3 & 1 & 2\end{vmatrix}$
     \item $\begin{vmatrix}a & b & c \\ 0 & d & e \\ 0 & 0 & f\end{vmatrix}$
-    \item $\begin{vmatrix}0 & \cos \alpha & \cos \beta \\ -\cos \alpha & 0 & \cos r \\ -\cos \beta & -\cos r & 0\end{vmatrix}$
+    \item $\begin{vmatrix}0 & \cos \alpha & \cos \beta \\ -\cos \alpha & 0 & \cos \gamma \\ -\cos \beta & -\cos \gamma & 0\end{vmatrix}$
     \item $\begin{vmatrix}a & h & g \\ h & b & f \\ g & f & c\end{vmatrix}$
     \item $\begin{vmatrix}x & y & x+y \\ y & x+y & x \\ x+y & x & y\end{vmatrix}$
 \end{enumerate}
@@ -1913,7 +1913,7 @@ $$
 \begin{multicols}{2}
     \begin{enumerate}
     \item $\begin{cases}2 x+y+3 z-4=0 \\ 3 x-2 y-5 z=11 \\ 1-5 x+4 y+z=0\end{cases}$
-    \item $\begin{cases}4 x-y-2 z=4 \\ 2 x+y-4=8 \\ x+2 y+z-1=0\end{cases}$
+    \item $\begin{cases}4 x-y-2 z=4 \\ 2 x+y-4z=8 \\ x+2 y+z-1=0\end{cases}$
     \item $\begin{cases} x-y+z =a \\ x+y-z =b \\-x+y+z =c \end{cases}$
     \item $\begin{cases}b x-a y=-2 a b \\ -2 c y+3 b z=b c \\ c x+a z=0\end{cases} $
    
@@ -2093,7 +2093,7 @@ a_{31}&a_{32}&a_{33}
 \end{blk}
 
 \begin{blk}
-    {定理8}如果（四阶）行列式中某一行（或某一列）都是两个数的和，则这个行列式就等于两个行列式的和，这两个行列式分别以这两个数中的前一个数与后一个数为这一行（这一列）的元素，而除去这一行（这一列）以外，这两个行列式的其它各行（其它各列）与原来行列式的对应各行（对应各列）都是相同的．
+    {定理8}如果（四阶）行列式中某一行（或某一列）都是两个数的和，则这个行列式就等于两个行列式的和，这两个行列式分别以这两个数中的前一个数与后一个数为这一行（这一列）的元素，而除去这一行（这一列）以外，这两个行列式的其他各行（其他各列）与原来行列式的对应各行（对应各列）都是相同的．
 \end{blk}
 
 \begin{blk}
@@ -2376,7 +2376,7 @@ $\begin{vmatrix}
    1&2&3&4\\2&3&4&1\\3&4&1&2\\4&1&2&3     
     \end{vmatrix}$
     \item $\begin{vmatrix}
-        2&1&0&2\\-1&0&6&8\\2&0&2&3\\-2&-2&0&1
+        2&1&0&2\\-1&0&6&3\\2&0&2&3\\-2&-2&0&1
     \end{vmatrix}$
     \item $\begin{vmatrix}
         a&1&0&0\\0&b&1&0\\0&0&c&1\\0&0&0&d
@@ -2392,7 +2392,7 @@ $\begin{vmatrix}
         b+1&b+2&b+3&b+4
     \end{vmatrix}$
     \item $\begin{vmatrix}
-        1&a&b&d+c\\a&b&c&a+d\\1&c&d&a+b\\1&d&a&b+c
+        1&a&b&d+c\\1&b&c&a+d\\1&c&d&a+b\\1&d&a&b+c
     \end{vmatrix}$
 \end{enumerate}
 \end{multicols}
@@ -2537,11 +2537,11 @@ x-2y+z=0\\
 \end{enumerate}
 
 \item 当“部分方程组”有无限多个解时，就将它的解
-用参数形式表示，并代入其它各方程中去，得到几个关于参数的方程．
+用参数形式表示，并代入其他各方程中去，得到几个关于参数的方程．
 \begin{enumerate}
-    \item 若参数无论取什么值，都无法同时满足其它各方程，则原方程组无解；
-    \item 若参数无论取什么值，都能同时满足其它各方程，则原方程组有无限多个解，“部分方程组”的解就是原方程组的解（如例2.31）；
-    \item 若参数只有取某个特定值，才能同时满足其它各方程，则由参数的这个特定值所确定的“部分方程组”解集中的特定解，才能是原方程组的解（如例2.30）．
+    \item 若参数无论取什么值，都无法同时满足其他各方程，则原方程组无解；
+    \item 若参数无论取什么值，都能同时满足其他各方程，则原方程组有无限多个解，“部分方程组”的解就是原方程组的解（如例2.31）；
+    \item 若参数只有取某个特定值，才能同时满足其他各方程，则由参数的这个特定值所确定的“部分方程组”解集中的特定解，才能是原方程组的解（如例2.30）．
 \end{enumerate}
 
 \end{enumerate}
@@ -2901,7 +2901,13 @@ a_{31}x_1+a_{32}x_2+a_{33}x_3=0
         a_2x_0+b_2y_0+c_2\cdot 1=0\\  
         a_3x_0+b_3y_0+c_3\cdot 1=0\\  
       \end{cases}\]
-      这就告诉我们，这个三元齐次线性方程组有一个非零解$(x_0,y_0,1)$．
+      这就告诉我们，三元齐次线性方程组
+      \[\begin{cases}
+        a_1x+b_1y+c_1z=0\\
+        a_2x+b_2y+c_2z=0\\
+        a_3x+b_3y+c_3z=0
+      \end{cases}\]
+      有一个非零解$(x_0,y_0,1)$．
 
       但由于齐次线性方程组有非零解的必要条件是它的系数行列式等于零，因而可以推出
       \[\begin{vmatrix}
@@ -2938,14 +2944,14 @@ a_{31}x_1+a_{32}x_2+a_{33}x_3=0
 \begin{multicols}{2}
 \begin{enumerate}
     \item $\begin{cases}
-2x+4y-3=7\\
+2x+4y-z=7\\
 x-y+2z=-1\\
 3x-7y+3z=10\\
 -4x+3y-5z=-4        
     \end{cases}$
     \item $\begin{cases}
 -x+3y-2z=-8\\
-7x+y-2=4\\ 5x-5y+3z=16\\ -x-2y+z=0        
+7x+y-z=4\\ 5x-5y+3z=16\\ -x-2y+z=0        
     \end{cases}$
     \item $\begin{cases}
  x_1+2x_2+3x_3-x_4=1\\
@@ -3086,8 +3092,7 @@ ax_1-4x_2+3x_3=0\\
 \end{enumerate}
 
 \section*{本章内容要点}
-一、本章主要内容是线性方程组的高斯消元法，行列式（重点是二，三阶行列式）及其重要性质．
-二、三元线性方程组的解的讨论；用克莱姆法则求线性方程组的唯一解；齐次线性方程组有非零解的充要条件等．同时，还学习了四元线性方程组以及方程个数与未知数个数不等的线性方程组．
+一、本章主要内容是线性方程组的高斯消元法，行列式（重点是二，三阶行列式）及其重要性质；二、三元线性方程组的解的讨论；用克莱姆法则求线性方程组的唯一解；齐次线性方程组有非零解的充要条件等．同时，还学习了四元线性方程组以及方程个数与未知数个数不等的线性方程组．
 
 二、高斯消元法实质上就是加减消元法，只是运用三种基本变换进行有一定程序的消元，便于计算，便于运用电子计算机．
 
@@ -3109,10 +3114,10 @@ ax_1-4x_2+3x_3=0\\
     a_{11}&a_{12}&a_{13}\\a_{21}&a_{22}&a_{23}\\a_{31}&a_{32}&a_{33}
 \end{vmatrix}\]
 也可以简化表示为
-\[\Delta =|a_{i,j}|\qquad i=1,2,3;\; j=1,2,3.\]
+\[\Delta =|a_{ij}|\qquad i=1,2,3;\; j=1,2,3.\]
 余子式与代数余子式是两个重要的概念，尤其是代数余子式，在进行行列式的恒等变形和计算中有广泛的应用．
 
-某个元素$a_{ij}$的代数余子式是一个低一阶的行列式，用$A_{i,j}$表示，如，在三阶行列式中，元素$a_{23}$的代数余子式为
+某个元素$a_{ij}$的代数余子式是一个低一阶的行列式，用$A_{ij}$表示，如，在三阶行列式中，元素$a_{23}$的代数余子式为
 \[A_{23}=(-1)^{2+3}\begin{vmatrix}
     a_{11}&a_{12}\\a_{31}&a_{32}
 \end{vmatrix}\]
@@ -3309,7 +3314,7 @@ x&y&x+y\\y&x+y&x\\x+y&x&y
 
 \item 解不等式
 \[\begin{vmatrix}
-    x-a&b&c\\a&x-b&c\\-a&b&x-c
+    x-a&b&-c\\a&x-b&c\\-a&b&x-c
 \end{vmatrix}>0\]
 
 \item 求证：
@@ -3440,7 +3445,7 @@ x&y&x+y\\y&x+y&x\\x+y&x&y
 \begin{enumerate}
     \item $\begin{cases}
         (\lambda+3) x+y+2z=\lambda\\
-        \lambda x+ (\lambda-1) y+2=2\lambda\\
+        \lambda x+ (\lambda-1) y+z=2\lambda\\
 3 (\lambda+1)x +\lambda y+ (\lambda+3) z=3
     \end{cases}$
     \item $\begin{cases}
@@ -3461,9 +3466,9 @@ x&y&x+y\\y&x+y&x\\x+y&x&y
     \cos^2C& \sin C &1
 \end{vmatrix}=0\]
 
-\item 已知$2x+5y+4z=0$, $3x+y-7z=0$, 求证：
+\staritem 已知$2x+5y+4z=0$, $3x+y-7z=0$, 求证：
 $x+y-z=0$．
-\item 已知$a,b,c$是互不相同的数，且设
+\staritem 已知$a,b,c$是互不相同的数，且设
 \[p (x) =\begin{vmatrix}
     1&x&x^2&x^3\\
     1&a&a^2&a^3\\
