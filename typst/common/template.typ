@@ -50,6 +50,9 @@
 // 章号：例题、公式编号都带章号，如“例 1.3”“(7.7)”
 #let chapter-number() = counter(heading).get().first()
 
+// 高于此值的陈列公式允许在行间跨页（约六行公式）
+#let tall-block = 12em
+
 // ---- 例题、解答等 ----
 #let example-counter = counter("example")
 
@@ -176,20 +179,19 @@
       set enum(numbering: lab)
       set enum(indent: 0pt) if not fits
       // 逐行排：同一行的格子等高，左右两栏的小题对齐（编号仍按列：第 1 栏 1…per，第 2 栏 per+1…）
-      let cells = ()
-      for r in range(per) {
-        for c in range(n) {
-          let k = c * per + r
-          cells.push(if k < total { enum(start: k + 1, items.at(k)) } else { [] })
+      // order(r, c)：第 r 行第 c 栏放第几题
+      let make(order) = {
+        let cells = ()
+        for r in range(per) {
+          for c in range(n) {
+            let k = order(r, c)
+            cells.push(if k < total { enum(start: k + 1, items.at(k)) } else { [] })
+          }
         }
+        grid(columns: (1fr,) * n, column-gutter: gutter, row-gutter: enum.spacing, ..cells)
       }
-      // 整组不跨页（同 multicols 的短内容）
-      block(breakable: false, grid(
-        columns: (1fr,) * n,
-        column-gutter: gutter,
-        row-gutter: enum.spacing,
-        ..cells,
-      ))
+      // 整组不跨页（同 multicols 的短内容）。不改成逐行编号来换取跨页：那样阅读顺序与 LaTeX 版不同
+      block(breakable: false, make((r, c) => c * per + r))
     })
   } else { cols-by-height(n, body, gutter: gutter) }
 }
@@ -383,7 +385,9 @@
   let marks = rows.map(((l, r, n)) => if n == true { eq-number(none) } else if type(n) == label { eq-number(n) }
     else if n == false { none } else { box(n) })
   let rows = rows.map(((l, r, n)) => (l, r, if type(n) == label { true } else { n }))
-  block(width: 100%, above: disp-above, below: disp-below, layout(size => {
+  // 较高时允许在行间跨页（同陈列公式）
+  let tall = rows.len() > 6
+  block(width: 100%, above: disp-above, below: disp-below, breakable: tall, layout(size => {
     let lw = calc.max(..rows.map(((l, r, n)) => measure(l).width))
     let rw = calc.max(..rows.map(((l, r, n)) => measure(r).width))
     // 公式块居中后右侧剩下的宽度。说明放不下时同 amsmath：先把公式块左移，还放不下才移到下一行靠右排
@@ -575,7 +579,12 @@
   // 宽于版心的独立公式缩小到版心宽度（LaTeX 版中这些公式排得下）
   // 独立公式上下的间距（LaTeX 的 \abovedisplayskip、\belowdisplayskip）。套在 fit-width 外面，
   // 否则公式在 fit-width 的 layout 里，自身的间距在容器边上被吞掉
-  show math.equation.where(block: true): it => block(width: 100%, above: disp-above, below: disp-below, fit-width(it))
+  // 较高的陈列公式（多行推导）允许在行间跨页，否则整块推到下一页、前一页留下大片空白；短的仍不拆开
+  show math.equation.where(block: true): set block(breakable: true)
+  show math.equation.where(block: true): it => context {
+    let tall = measure(it).height > tall-block.to-absolute()
+    block(width: 100%, above: disp-above, below: disp-below, breakable: tall, fit-width(it))
+  }
   // \verb：Typst 的 raw 默认缩小到 0.8em，LaTeX 的 \verb 与正文同大
   show raw: set text(size: 1.25em)
   // 短的行内公式不在中间断行。Typst 在关系符、运算符后都可以断行，LaTeX 则因 \relpenalty、\binoppenalty
@@ -583,7 +592,7 @@
   show math.equation.where(block: false): it => context {
     let w = measure(it).width
     // 盒子要给定宽度，否则公式在盒子里照样折行
-    if w < 9em.to-absolute() { box(width: w + 0.01pt, it) } else { it }
+    if w < 6em.to-absolute() { box(width: w + 0.01pt, it) } else { it }
   }
   show table: set block(breakable: false)
 
