@@ -423,6 +423,7 @@ class Picture:
         self.clip_rect = None   # 当前 scope 中 \clip 的轴对齐矩形 (x0, y0, x1, y1)，只用于裁剪直线段
         self.label_points: dict[str, tuple[float, float]] = {}
         self.text_nodes: dict[str, tuple[float, float]] = {}   # 有文字、有名字的节点
+        self.node_size: dict[str, tuple] = {}   # 这些节点的估计大小（形状, 半宽, 半高），画布单位
 
     # ---- 点 ----
     def ident(self, name: str) -> str:
@@ -745,7 +746,7 @@ class Picture:
                 else:
                     rest.append((k, v))
             self.apply_options(rest, self.style)
-        body = expand_foreach(strip_comments(body))
+        body = expand_ifnum(expand_foreach(strip_comments(body)))
         for m2 in re.finditer(r"\\tkzDefPoints\{([^}]*)\}", body):
             for item in split_top(m2.group(1)):
                 xs = split_top(item.strip(), "/")
@@ -855,6 +856,7 @@ class Picture:
         shape = None
         rotate = 0.0
         font = st.font
+        text_align = None
         node_opts = list(st.node.items()) + opts
         for k, v in node_opts:
             base = k.split(" of")[0]
@@ -878,8 +880,10 @@ class Picture:
                 rotate += a
             elif k == "font":
                 font = v
+            elif k == "align" and v in ("center", "right", "left"):
+                text_align = v
             elif k in ("pos", "midway", "near start", "near end", "at start", "at end", "inner sep",
-                       "outer sep", "scale", "text width", "align", "minimum size", "shape", "label"):
+                       "outer sep", "scale", "text width", "minimum size", "shape", "label"):
                 pass
             elif parse_color(k) is not None:
                 pass
@@ -889,6 +893,8 @@ class Picture:
         body = self.labels.add(text, font)
         if body is None:
             return
+        if text_align and "\\\\" in text:   # 多行节点 [align=center]：各行居中
+            body = "align(%s, %s)" % (text_align, body)
         args = [self.xy(p), body]
         if anchor:
             m = {"north": "north", "south": "south", "east": "east", "west": "west", "center": "center",
@@ -909,10 +915,21 @@ class Picture:
             # 有名字的节点：路径连到它时截到边框上（见 PathBuilder.emit_sub）
             extra += ', name: "%s"' % name
             self.text_nodes[name] = p
+            self.node_size[name] = node_extent(text, shape if draw or shape else "rectangle", self.length)
         if rotate:
             self.out.append("node(%s, %s%s, rotate: %sdeg)" % (args[0], body, extra, fmt(rotate)))
         else:
             self.out.append("node(%s, %s%s)" % (args[0], body, extra))
+
+
+def node_extent(text: str, shape: str, length: float):
+    """估计节点的大小：汉字按 1em、其他可见字符按 0.5em 宽，高约 1em，四周加 inner sep（.3333em）。
+    返回 (形状, 半宽, 半高)，单位为画布单位（cm / canvas 的 length）"""
+    plain = re.sub(r"\\[a-zA-Z]+|[{}$\\^_]", "", text)
+    w = sum(1.0 if "㐀" <= ch <= "鿿" else 0.5 for ch in plain if not ch.isspace())
+    em = 10.5 / 72.27 * 2.54   # cm
+    hw, hh = (w / 2 + 0.3333) * em / length, (0.5 + 0.3333) * em / length
+    return ("circle" if shape == "circle" else "rectangle", hw, hh)
 
 
 def fmt(x: float) -> str:
@@ -1159,6 +1176,8 @@ class PathBuilder:
                         rx = ry = num(r)
                     rot_e = 0.0
                 self.close_sub(False)
+                if self.cur is None:   # \draw circle(.9)：没有起点时以原点为中心（同 TikZ）
+                    self.cur = self.pic.tf.apply((0, 0))
                 self.subpaths.append(([("ellipse", self.cur, rx, ry, rot_e, self.pic.tf)], True))
                 continue
             if s.startswith("arc", i):
@@ -1276,6 +1295,20 @@ class PathBuilder:
             self.node_refs[p] = inner.strip()
         return p, i
 
+    def node_border(self, q, ang):
+        """q 是有名字的节点时，返回其边框上 ang 方向的点（按估计的节点大小）；否则原样返回"""
+        name = self.node_refs.get(q)
+        size = self.pic.node_size.get(name) if name else None
+        if not size:
+            return q
+        shape, hw, hh = size
+        c, s = math.cos(math.radians(ang)), math.sin(math.radians(ang))
+        if shape == "circle":
+            r = math.hypot(hw, hh)
+            return (q[0] + r * c, q[1] + r * s)
+        t = min(hw / abs(c) if abs(c) > 1e-9 else 1e9, hh / abs(s) if abs(s) > 1e-9 else 1e9)
+        return (q[0] + t * c, q[1] + t * s)
+
     def segment(self, op, p, op_nodes, to_opts, controls):
         a = self.cur
         if a is None:
@@ -1305,10 +1338,13 @@ class PathBuilder:
                     if "relative" in d:
                         out_a += base
                         in_a += base + 180
-                k = 0.3915 * L  # TikZ 的 looseness=1
-                c1 = add(a, polar(out_a, k))
-                c2 = add(p, polar(in_a, k))
-                seg = ("bezier", a, c1, c2, p)
+                # 连到有名字的节点时，TikZ 从节点边框上出射、入射角方向的点起止，控制点距离也按这两点算
+                a2 = self.node_border(a, out_a)
+                p2 = self.node_border(p, in_a)
+                k = 0.3915 * norm(sub(p2, a2))  # TikZ 的 looseness=1
+                c1 = add(a2, polar(out_a, k))
+                c2 = add(p2, polar(in_a, k))
+                seg = ("bezier", a2, c1, c2, p2)
             else:
                 seg = ("line", a, p)
         else:
@@ -1478,7 +1514,9 @@ class PathBuilder:
         dec = st.decoration
         if st.decorate and dec.get("kind") in ("coil", "zigzag", "brace") and self.draw:
             # 装饰（弹簧圈、锯齿、花括号）：用 CeTZ 的 decorations；路径只取折线的各点
-            amp = num(dec.get("amplitude", "2.5pt"))
+            # 不带单位的 amplitude=5 在 TikZ 中是 5pt
+            amp_s = dec.get("amplitude", "2.5pt").strip()
+            amp = num(amp_s + "pt" if re.fullmatch(r"[\d.]+", amp_s) else amp_s)
             stroke = pic.stroke(st)
             for pieces, closed in self.subpaths:
                 pts = [pieces[0][1]] + [q for pc in pieces for q in pc[2:]] if pieces[0][0] in ("line", "poly") else None
@@ -2353,6 +2391,19 @@ class LabelBatch:
         return re.sub(r"@@L(\d+)@@", lambda m: conv[int(m.group(1))], text)
 
 
+def expand_ifnum(body: str) -> str:
+    """\foreach 展开后的 \ifnum 3<7 … \else … \fi：按数值比较取其中一支"""
+    pat = re.compile(r"\\ifnum\s*(-?[\d.]+)\s*([<>=])\s*(-?[\d.]+)\s*((?:(?!\\ifnum).)*?)\\fi", re.S)
+    def repl(m: re.Match) -> str:
+        a, op, b = float(m.group(1)), m.group(2), float(m.group(3))
+        yes, _, no = m.group(4).partition("\\else")
+        ok = a < b if op == "<" else a > b if op == ">" else a == b
+        return yes if ok else no
+    while pat.search(body):
+        body = pat.sub(repl, body)
+    return body
+
+
 def unshadow(typ: str) -> str:
     """公式中的 arrow、dot、circle 等符号被 fig.typ / CeTZ 的同名函数遮住，改写为 sym.…"""
     def fix_math(m: re.Match) -> str:
@@ -2421,15 +2472,15 @@ def main() -> None:
     for fid, src in pictures(volume):
         if only and fid not in only:
             continue
-        for pat, rep in VOLUME_TEX.get(volume, []):   # 本册专用命令，如第四册的 \arccot
-            src = re.sub(pat, rep, src)
+        for item in VOLUME_TEX.get(volume, []):   # 本册专用命令，如第四册的 \arccot
+            src = item(src) if callable(item) else re.sub(item[0], item[1], src)
         code, err = convert(fid, src, labels)
         if err:
             failures.append((fid, err))
         results.append((fid, code))
     text = "\n".join("@@FIG %s@@\n%s" % r for r in results)
     text = labels.resolve(text)
-    chunks = re.split(r"@@FIG ([\d-]+)@@\n", text)[1:]
+    chunks = re.split(r"@@FIG ([\w-]+)@@\n", text)[1:]
     pairs = list(zip(chunks[0::2], chunks[1::2]))
     if only:
         for fid, code in pairs:

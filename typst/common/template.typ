@@ -435,6 +435,12 @@
   })
 }
 
+// 分册（LaTeX 版第六册的 \volume{第六册（上）}）：单独一页的标题，列入目录；之后的章从第一章编起
+#let volume-part(title) = {
+  heading(level: 1, numbering: none, supplement: [part], title)
+  counter(heading).update(0)
+}
+
 // 章节编号：第一章、第一节、一、（一）
 #let heading-numbering(..n) = {
   let n = n.pos()
@@ -583,6 +589,14 @@
   // 标题中的汉字用黑体，西文字母和数字用粗体（同 LaTeX 的 \bfseries）
   show heading: set text(font: fonts.sans, weight: "bold")
   show heading.where(level: 1): it => {
+    // 分册标题（第六册合订本的“第六册（上）”等，见 volume-part）：单独一页，题目居中
+    if it.supplement == [part] {
+      pagebreak(weak: true)
+      v(30%)
+      align(center, text(size: 26pt, it.body))
+      pagebreak()
+      return
+    }
     pagebreak(weak: true)
     counter(math.equation).update(0)
     example-counter.update(0)

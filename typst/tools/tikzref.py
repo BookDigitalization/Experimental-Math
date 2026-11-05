@@ -27,13 +27,20 @@ def volume_preamble(volume: int) -> str:
 
 def pictures(volume: int):
     vdir = ROOT / ("math%d" % volume)
+    chs = []
     for ch in range(1, 100):
-        p = vdir / ("%d.tex" % ch)
-        if not p.exists():
+        if not (vdir / ("%d.tex" % ch)).exists():
             break
-        tex = strip_comments(p.read_text(encoding="utf-8"))
+        chs.append(str(ch))
+    if (vdir / "app.tex").exists():   # 第六册上册末尾的附录，图记作 app-01 等
+        chs.append("app")
+    for ch in chs:
+        tex = strip_comments((vdir / ("%s.tex" % ch)).read_text(encoding="utf-8"))
         for k, m in enumerate(re.finditer(r"\\begin\{tikzpicture\}.*?\\end\{tikzpicture\}", tex, re.S), 1):
-            yield "%d-%02d" % (ch, k), m.group(0)
+            yield "%s-%02d" % (ch, k), m.group(0)
+        # circuitikz 电路图另行编号（3-c1 等），不打乱 tikzpicture 的序号；tikz2cetz 不支持，要手工画
+        for k, m in enumerate(re.finditer(r"\\begin\{circuitikz\}.*?\\end\{circuitikz\}", tex, re.S), 1):
+            yield "%s-c%d" % (ch, k), m.group(0)
 
 
 def main() -> None:

@@ -946,7 +946,7 @@
     node((2, 2), [$A$], pos: "left")
     node((-1, 2), [$C$], pos: "above")
     node((1, -2), [$D$], pos: "below")
-    node((2.1, 2.6), [$y = x^3 - 3 x$ \ 的图象草图], pos: "right")
+    node((2.1, 2.6), align(left, [$y = x^3 - 3 x$ \ 的图象草图]), pos: "right")
   })
   ,
   "5-45": canvas(length: 1.2cm, {

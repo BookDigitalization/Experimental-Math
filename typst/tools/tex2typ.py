@@ -58,6 +58,13 @@ class Converter:
     # ---- 预处理 ----
     def preprocess(self, tex: str) -> str:
         tex = strip_comments(tex)
+        # 换行 \\ 后紧跟公式（\\$F=$）：后面各步的正则会把 \$ 当成转义的美元符号，$ 的配对就乱了
+        tex = re.sub(r"(?<!\\)\\\\\$", r"\\\\ $", tex)
+        # 标签名中可能有 ( ) = | 空格等字符（如第六册的 fig:f(x)=|x^2-1|），Typst 的标签不能用，统一改写
+        tex = re.sub(r"\\(label|ref)\{([^{}]*)\}", lambda m: "\\%s{%s}" % (m.group(1), safe_label(m.group(2))), tex)
+        # \addtocounter{figure}{1}：跳过一个图号（第六册第五章，原书缺一幅图）
+        tex = re.sub(r"\\addtocounter\{figure\}\{(-?\d+)\}",
+                     lambda m: self.slot("#counter(figure.where(kind: image)).update(n => n + %s)" % m.group(1)), tex)
         tex = mark_lr_braces(tex)
         tex = self.replace_tikz(tex)
         # 单独的 \includegraphics[scale=s]{f}：pandoc 会套上带图号的 figure，LaTeX 版没有图号
@@ -408,10 +415,14 @@ class Converter:
             caps = [re.search(r"\\caption\{([^}]*)\}", p) for _, p in parts]
             bodies = [re.sub(r"\\caption\{[^}]*\}|\\centering|\\label\{[^}]*\}|\\(?:h|v)space\*?\{[^}]*\}", "", p).strip() for _, p in parts]
             conv = convert_fragments(bodies + [c.group(1) if c else "" for c in caps])
+            labels = [re.search(r"\\label\{([^}]*)\}", p) for _, p in parts]
             figs = []
             for k, cap in enumerate(caps):
                 body, caption = conv[k], conv[len(caps) + k]
-                figs.append("figure([%s], caption: [%s])" % (body, caption) if cap else "[%s]" % body)
+                f = "figure([%s], caption: [%s])" % (body, caption) if cap else "[%s]" % body
+                if cap and labels[k]:   # 分图的 \label：给这个 figure 加标签，供 ref-num 引用
+                    f = "[#%s#%s]" % (f, typst_label(labels[k].group(1)))
+                figs.append(f)
             widths = ", ".join("%g%%" % (float(w or 1) * 100) for w, _ in parts)
             # 整组不跨页（否则图与下面的“第 n 题”可能分在两页）
             grid = "block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (%s,), column-gutter: 1em, align: center + bottom, %s))" % (
@@ -434,12 +445,16 @@ class Converter:
         sizes = {"small": 9 / 10.5, "large": 12 / 10.5, "Large": 14.4 / 10.5, "LARGE": 17.28 / 10.5}
         def repl(m: re.Match) -> str:
             self.fig_count += 1
-            ref = '#fig("%d-%02d")' % (self.chapter, self.fig_count)
+            ref = '#fig("%s-%02d")' % (self.chapter, self.fig_count)
             if m.group(1):   # \begin{center}\Large 中的图：节点文字随之放大
                 return "\\begin{center}" + self.slot("#text(size: %.4gem, %s)" % (sizes[m.group(1)], ref[1:]))
             return self.slot(ref)
-        return re.sub(r"(?:\\begin\{center\}\s*\\(small|large|Large|LARGE)\s*)?\\begin\{tikzpicture\}.*?\\end\{tikzpicture\}",
-                      repl, tex, flags=re.S)
+        tex = re.sub(r"(?:\\begin\{center\}\s*\\(small|large|Large|LARGE)\s*)?\\begin\{tikzpicture\}.*?\\end\{tikzpicture\}",
+                     repl, tex, flags=re.S)
+        # circuitikz 电路图：另行编号（同 tikzref.py），手工画在 figs/ch<章>.typ 中
+        circuits = iter(range(1, 1000))
+        return re.sub(r"\\begin\{circuitikz\}.*?\\end\{circuitikz\}",
+                      lambda m: self.slot('#fig("%s-c%d")' % (self.chapter, next(circuits))), tex, flags=re.S)
 
     def wideparen(self, args: list[str]) -> str:
         body = args[0].strip()
@@ -928,6 +943,11 @@ def take_label(s: str) -> tuple[str, str | None]:
     return s, (labels[0] if labels else None)
 
 
+def safe_label(name: str) -> str:
+    """标签名中字母、数字和 _ - : . 以外的字符写成 -xx-（十六进制码），保证 Typst 能用、且各章一致"""
+    return re.sub(r"[^A-Za-z0-9_:.-]", lambda c: "-%x-" % ord(c.group(0)), name)
+
+
 def typst_label(name: str) -> str:
     """LaTeX 的标签名 → Typst 的 label(…)（标签名中可能有 : ( = | 等字符，不能写成 <…>）"""
     return "label(%s)" % json.dumps(name, ensure_ascii=False)
@@ -1142,22 +1162,44 @@ VOLUME_TEX = {
         # \expval 定义成 \left\langle…\right\rangle，但 LaTeX 中这些尖括号都是正常大小；Typst 的 lr 会随箭头放大
         (r"\\expval\{((?:[^{}]|\{[^{}]*\})*)\}", r"\\langle \1 \\rangle"),
         (r"\$\\bf\{([^{}]*)\}\$", r"$\\mathbf{\1}$")],   # 3.tex 的 $\bf{a}$
+    6: [(r"\\dd(?![a-zA-Z])", r"\\,\\mathrm{d}"),
+        (r"\\(arccot|arcsec)(?![a-zA-Z])", r"\\operatorname{\1}"),
+        (r"\\NC(?![a-zA-Z])", r"\\text{N}/\\text{C}"),
+        (r"\\msq(?![a-zA-Z])", r"\\text{m}/\\text{s}^2"), (r"\\cmsq(?![a-zA-Z])", r"\\text{cm}/\\text{s}^2"),
+        (r"\\ms(?![a-zA-Z])", r"\\text{m}/\\text{s}"), (r"\\cms(?![a-zA-Z])", r"\\text{cm}/\\text{s}"),
+        (r"\\kmh(?![a-zA-Z])", r"\\text{km}/\\text{h}"),
+        (r"\\([RNZ])(?![a-zA-Z])", r"\\mathbb{\1}"),
+        (r"\\VEC(?![a-zA-Z])", r"\\overrightarrow"),
+        lambda tex: expand_volume6(tex)],
 }
+
+
+def expand_volume6(tex: str) -> str:
+    """第六册带参数的宏（参数中花括号可能多层嵌套，用 replace_command 按花括号配对）"""
+    # \comb{m}{n} = {\rm C}^{m}_{n}，\perm、\rep 同（P、H）
+    for name, letter in (("comb", "C"), ("perm", "P"), ("rep", "H")):
+        tex = replace_command(tex, name, 2, lambda a, l=letter: r"{\rm %s}^{%s}_{%s}" % (l, a[0], a[1]))
+    # \pcx{x} = \cos\left(x\right)+i\sin\left(x\right)，\pc{x} = \cos{x}+i\sin{x}
+    tex = replace_command(tex, "pcx", 1, lambda a: r"\cos\left(%s\right)+i\sin\left(%s\right)" % (a[0], a[0]))
+    tex = replace_command(tex, "pc", 1, lambda a: r"\cos{%s}+i\sin{%s}" % (a[0], a[0]))
+    return tex
 # 各册专用、要直接写成 Typst 公式的命令（pandoc 会丢掉 \displaystyle、\limits）
 VOLUME_SLOTS = {
     4: {"Lim": "limits(lim)"},   # \newcommand{\Lim}{\displaystyle\lim}：行内也把下标排在正下方
+    # 第六册：\Lim 同上；\newcommand{\Int}{\displaystyle\int}
+    6: {"Lim": "limits(lim)", "Int": "display(integral)"},
 }
 
 
-def convert(volume: int, chapter: int, src: Path) -> str:
+def convert(volume: int, chapter: int | str, src: Path) -> str:
     conv = Converter(chapter)
     tex = src.read_text(encoding="utf-8")
     for name, ident in VOLUME_MACROS.get(volume, {}).items():
         tex = re.sub(r"\\%s(?![a-zA-Z])\s*" % name, lambda m, i=ident: conv.math_slot(i) + " ", tex)
     for name, typ_ in VOLUME_SLOTS.get(volume, {}).items():
         tex = re.sub(r"\\%s(?![a-zA-Z])\s*" % name, lambda m, t=typ_: conv.math_slot(t) + " ", tex)
-    for pat, rep in VOLUME_TEX.get(volume, []):
-        tex = re.sub(pat, rep, tex)
+    for item in VOLUME_TEX.get(volume, []):
+        tex = item(tex) if callable(item) else re.sub(item[0], item[1], tex)
     tex = conv.preprocess(tex)
     typ = conv.postprocess(pandoc(MACROS + tex))
     # 插图沿用 LaTeX 版目录中的图片文件（编译时 --root 为仓库根目录）
@@ -1169,7 +1211,8 @@ def convert(volume: int, chapter: int, src: Path) -> str:
         + ('#import "defs.typ": *\n' if volume in VOLUME_MACROS else "")
         + "\n"
     )
-    if chapter == 0:
+    # 前言（0）、附录（app，第六册上册末尾 \appendixchapters 之后的章）不编号
+    if chapter in (0, "app"):
         typ = re.sub(r"^= (.*)$", lambda m: "#heading(numbering: none)[%s]" % m.group(1).replace("\u00a0", "#h(1em)").replace("  ", "#h(1em)"),
                      typ, count=1, flags=re.M)
     return header + typ
@@ -1178,7 +1221,7 @@ def convert(volume: int, chapter: int, src: Path) -> str:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("volume", type=int)
-    ap.add_argument("chapters", type=int, nargs="*")
+    ap.add_argument("chapters", nargs="*", help="章号；0 为前言，app 为附录")
     ap.add_argument("--force", action="store_true", help="覆盖已有的 .typ 文件")
     a = ap.parse_args()
 
@@ -1186,10 +1229,11 @@ def main() -> None:
     out_dir = ROOT / "typst" / f"math{a.volume}"
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    chapters = a.chapters or [0] + sorted(int(p.stem) for p in src_dir.glob("[0-9]*.tex"))
+    chapters = [c if c == "app" else int(c) for c in a.chapters] or (
+        [0] + sorted(int(p.stem) for p in src_dir.glob("[0-9]*.tex")) + (["app"] if (src_dir / "app.tex").exists() else []))
     for ch in chapters:
         src = src_dir / ("preface.tex" if ch == 0 else f"{ch}.tex")
-        dst = out_dir / ("preface.typ" if ch == 0 else f"ch{ch}.typ")
+        dst = out_dir / ("preface.typ" if ch == 0 else "app.typ" if ch == "app" else f"ch{ch}.typ")
         if dst.exists() and not a.force:
             print(f"跳过 {dst.relative_to(ROOT)}（已存在，加 --force 覆盖）")
             continue
