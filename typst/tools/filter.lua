@@ -154,6 +154,7 @@ end
 local simple = {
   ex = "#exercise",
   example = "#example",
+  starexample = "#starexample",
   solution = "#solution",
   analyze = "#analyze",
   rmk = "#rmk",

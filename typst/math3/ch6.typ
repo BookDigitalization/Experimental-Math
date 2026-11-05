@@ -56,7 +56,7 @@
 再来规定角和它所对应弧的量数．在平面几何里，我们曾规定把圆周分成360等分，每一份叫做一度的弧，一度弧所对的圆心角叫做一度的角．因此，一个圆弧含有多少度、分、秒，它所对圆心角也含有多少度、分、秒，即弧与其所对应的圆心角有完全相同的量数．例如圆心角是 $500 degree$ 的角时，它所对的弧就是 $500 degree$ 的弧；圆心角是 $- 300 degree$ 时，它所对的弧也是 $- 300 degree$.
 
 === 角的度量
-角的度量是取一个确定的角作为度量单位，利用它来量所有的角．用周角的 $1 / 360$ 作为度量单位的叫做“度”．在高等数学和其它基础科学理论系统中也常用弧度作为度量圆弧和角的单位．
+角的度量是取一个确定的角作为度量单位，利用它来量所有的角．用周角的 $1 / 360$ 作为度量单位的叫做“度”．在高等数学和其他基础科学理论系统中也常用弧度作为度量圆弧和角的单位．
 
 在弧度制中，取等于半径长的圆弧作为单位弧长．这样的弧叫做一弧度弧．用一弧度弧度量同一个圆上的圆弧所得到的量数叫做这个圆弧的弧度数，这也就是说给定圆弧的弧度数等于圆弧的弧长和半径的比值：#numbered-eq($ alpha = ell / R $);#noindent;这里 $alpha$ 是圆弧的弧度数，$ell$ 是弧长，$R$ 是圆的半径．
 
@@ -100,7 +100,7 @@ upright("直角") & = 1 / 4 upright("周角") = pi / 2 upright("弧度")\
 
 因为平角 $= 180 degree = pi$, 所以 $1 degree = pi / 180 approx 0.017453$⁠．$A degree$ 的角相应的弧度数：$ alpha & = frac(A pi, 180)\
 1' & = (1 / 60) degree = 1 / 60 (pi / 180) approx 0.00029088\
-1 upright("(弧度)") & = (180 degree) / pi = 57.295 degree approx 3438' approx 206265'' = 57 degree 17' 45'' $ #noindent;$alpha$ 弧度的角相应的度数：$ A degree = frac(alpha dot.op 180 degree, pi) $
+upright("又") med 1 upright("(弧度)") & = (180 degree) / pi = 57.295 degree approx 3438' approx 206265'' approx 57 degree 17' 45'' $ #noindent;$alpha$ 弧度的角相应的度数：$ A degree = frac(alpha dot.op 180 degree, pi) $
 
 下表给出一些常见角的弧度和它们的近似值：
 
@@ -318,7 +318,7 @@ dots.h.c dots.h.c #h(2em) & #h(2em) #h(2em) dots.h.c dots.h.c $ #noindent;所有
 
 + 终边落在 $x$ 轴的正向上，这些角的量数为 $ 2 n pi quad\(n in bb(Z)\) $
 
-+ 终边落在x轴的负向上，这些角的量数 $ 2 n pi + pi =\(2 n + 1\)pi quad\(n in bb(Z)\) $ #noindent;把1、2结合起来，量数为 $k pi thick\(k in bb(Z)\)$ 的角的终边落在 $x$ 轴上，在 $k$ 为偶数时，终边落在 $x$ 轴的正向上；在 $k$ 为奇数时，终边落在 $x$ 轴的负向上．
++ 终边落在 $x$ 轴的负向上，这些角的量数 $ 2 n pi + pi =\(2 n + 1\)pi quad\(n in bb(Z)\) $ #noindent;把1、2结合起来，量数为 $k pi thick\(k in bb(Z)\)$ 的角的终边落在 $x$ 轴上，在 $k$ 为偶数时，终边落在 $x$ 轴的正向上；在 $k$ 为奇数时，终边落在 $x$ 轴的负向上．
 
 + 终边落在 $y$ 轴的正向上，这些角的量数为 $ 2 n pi + pi / 2 quad\(n in bb(Z)\) $
 
@@ -498,7 +498,7 @@ tan 300 degree = - sqrt(3)\,#h(2em) cot 300 degree = - 1 / sqrt(3) = - sqrt(3) /
 ]
 #example[
 $ cos 0 = 1\,#h(2em) sin 0 = 0\,#h(2em) cos pi / 2 = 0\,#h(2em) sin pi / 2 = 1\
-cos pi = - 1\,#h(2em) sin pi = 0\,#h(2em) cos frac(3 pi, 2) = 0\,#h(2em) sin frac(3 pi, 2) = - 1 $
+cos pi = - 1\,#h(2em) sin pi = 0\,#h(2em) cos frac(3 pi, 2) = 0\,#h(2em) sin frac(3 pi, 2) = - 1 $ #noindent;为什么？
 
 ]
 === 数值变数的三角函数与三角函数的定义域
@@ -538,13 +538,13 @@ sec alpha = 1 / x = frac(1, cos alpha)\,#h(2em) csc alpha = 1 / y = frac(1, sin 
 
 + 函数 $cos alpha$ 和 $sin alpha$ 的定义域是开区间 $- oo < alpha < + oo$, 即 $\(- oo\,+ oo\)$, 这是因为 $cos alpha$ 和 $sin alpha$ 是单位圆上对应于数 $alpha$ 的点 $P$ 的横坐标和纵坐标，它们对于任何实数 $alpha$ 都有明确的值．
 
-+ 函数 $tan alpha$ 的定义域是除去形如 $pi / 2 + k pi thick\(k in bb(Z)\)$ 的数的实数集：$ lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha in bb(R) \, thick alpha eq.not pi / 2 + k pi \, thick k in bb(Z) \}) $ #noindent;即正切的定义域是无限个开区间组成的一个集：$ dots.h.c\,(- frac(3 pi, 2) \, - pi / 2)\,(- pi / 2 \, pi / 2)\,(pi / 2 \, frac(3 pi, 2))\,(frac(3 pi, 2) \, frac(5 pi, 2))\,dots.h.c $ #noindent;这是因为 $tan alpha = y / x$ 是单位圆上 $P$ 点的纵坐标对横坐标之比，唯有当 $x = 0$ 时它失去意义，单位圆上与 $x = 0$ 对应的点只有 $\(0\,1\)$ 和 $\(0\,- 1\)$, 与 $\(0\,1\)$ 点对应的一切实数是 $alpha = pi / 2 + 2 k pi thick\(k in bb(Z)\)$, 与 $\(0\,- 1\)$ 点对应的一切实数是 $alpha = - pi / 2 + 2 k pi thick\(k in bb(Z)\)$, 和 $\(0\,1\)$ 点、$\(0\,- 1\)$ 点这两点对应的一切实数可以合并写成：$ alpha = pi / 2 + k pi #h(2em)\(k in bb(Z)\) $
++ 函数 $tan alpha$ 的定义域是除去形如 $pi / 2 + k pi thick\(k in bb(Z)\)$ 的数的实数集：$ lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha in bb(R) med upright("但") med alpha eq.not pi / 2 + k pi \, thick k in bb(Z) \}) $ #noindent;即正切的定义域是无限个开区间组成的一个集：$ dots.h.c\,(- frac(3 pi, 2) \, - pi / 2)\,(- pi / 2 \, pi / 2)\,(pi / 2 \, frac(3 pi, 2))\,(frac(3 pi, 2) \, frac(5 pi, 2))\,dots.h.c $ #noindent;这是因为 $tan alpha = y / x$ 是单位圆上 $P$ 点的纵坐标对横坐标之比，唯有当 $x = 0$ 时它失去意义，单位圆上与 $x = 0$ 对应的点只有 $\(0\,1\)$ 和 $\(0\,- 1\)$, 与 $\(0\,1\)$ 点对应的一切实数是 $alpha = pi / 2 + 2 k pi thick\(k in bb(Z)\)$, 与 $\(0\,- 1\)$ 点对应的一切实数是 $alpha = - pi / 2 + 2 k pi thick\(k in bb(Z)\)$, 和 $\(0\,1\)$ 点、$\(0\,- 1\)$ 点这两点对应的一切实数可以合并写成：$ alpha = pi / 2 + k pi #h(2em)\(k in bb(Z)\) $
 
-+ 函数 $cot alpha$ 的定义域是除去形如 $k pi thick\(k in bb(Z)\)$ 的数的实数集：$\{ alpha\|alpha in bb(R)\,thick alpha eq.not k pi\,k in bb(Z) \}$, 即余切的定义域是无限个开区间组成的一个集：$ dots.h.c\,\(- pi\,0\)\,\(0\,pi\)\,\(pi\,2 pi\)\,dots.h.c $
++ 函数 $cot alpha$ 的定义域是除去形如 $k pi thick\(k in bb(Z)\)$ 的数的实数集：$\{ alpha\|alpha in bb(R) med upright("但") med alpha eq.not k pi\,k in bb(Z) \}$, 即余切的定义域是无限个开区间组成的一个集：$ dots.h.c\,\(- pi\,0\)\,\(0\,pi\)\,\(pi\,2 pi\)\,dots.h.c $
 
-+ 函数 $sec alpha$ 的定义域与正切函数 $tan alpha$ 的定义域 $lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha in bb(R) \, thick alpha eq.not pi / 2 + k pi \, k in bb(Z) \})$ 相同．
++ 函数 $sec alpha$ 的定义域与正切函数 $tan alpha$ 的定义域 $lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha in bb(R) med upright("但") med alpha eq.not pi / 2 + k pi \, k in bb(Z) \})$ 相同．
 
-+ 函数 $csc alpha$ 的定义域与余切函数 $cot alpha$ 的定义域 $\{ alpha\|alpha in bb(R)\,thick alpha eq.not k pi\,k in bb(Z) \}$ 相同．
++ 函数 $csc alpha$ 的定义域与余切函数 $cot alpha$ 的定义域 $\{ alpha\|alpha in bb(R) med upright("但") med alpha eq.not k pi\,k in bb(Z) \}$ 相同．
 
 === 三角函数的正负
 设单位圆上点 $P$ 与数 $alpha$ 对应，以后我们把与 $alpha$ 对应，处在标准位置，以 $alpha$（弧度）为量数的角 $angle A O P$ 简称为角 $alpha$⁠．
@@ -579,7 +579,7 @@ sec alpha = 1 / x = frac(1, cos alpha)\,#h(2em) csc alpha = 1 / y = frac(1, sin 
 
 ]
 #example[
-如果 $alpha$ 是第四象限的角，那么 $sin alpha tan alpha$ 和 $frac(c o s alpha, cot alpha)$ 各取什么符号？
+如果 $alpha$ 是第四象限的角，那么 $sin alpha tan alpha$ 和 $frac(cos alpha, cot alpha)$ 各取什么符号？
 
 ]
 #solution[
@@ -590,7 +590,7 @@ sec alpha = 1 / x = frac(1, cos alpha)\,#h(2em) csc alpha = 1 / y = frac(1, sin 
 若 $alpha$ 是第三象限的角，求证：$tan alpha + cot alpha gt.eq 2$
 
 ]
-#solution[
+#proof[
 $because quad alpha$ 是第三象限的角，$tan alpha > 0$, $cot alpha > 0$. 根据两个正数的算术平均值不小于它的几何平均值，因此有：$ frac(tan alpha + cot alpha, 2) gt.eq sqrt(tan alpha cot alpha) $ #noindent;即：$frac(tan alpha + cot alpha, 2) gt.eq 1$
 
 $therefore quad tan alpha + cot alpha gt.eq 2$
@@ -603,7 +603,7 @@ $therefore quad tan alpha + cot alpha gt.eq 2$
 
 + $sec alpha$ 能否小于 $tan alpha$? $csc alpha$ 能否小于 $cot alpha$?
 
-+ 就绝对值而言能否 $cos alpha$ 大于 $cot alpha$? $sin alpha$ 大于 $tan alpha$?
++ 就绝对值而言能否 (a) $cos alpha$ 大于 $cot alpha$? (b) $sin alpha$ 大于 $tan alpha$?
 
 + $x$ 为何值，不等式 $\|sin x\|+\|cos x\|< 1$ 成立？
 
@@ -611,7 +611,15 @@ $therefore quad tan alpha + cot alpha gt.eq 2$
 
 + 若 $cos A < 0$ 且 $tan A < 0$, 试决定 $A$ 为何象限角？
 
-+ 设 $frac(sin alpha, tan alpha) < 0$, $frac(cot alpha, cos alpha) < 0$, $sin alpha cos alpha < 0$, 角 $alpha$ 的终边应当在哪些象限？
++ 设
+
+  + $frac(sin alpha, tan alpha) < 0$⁠；
+
+  + $frac(cot alpha, cos alpha) < 0$⁠；
+
+  + $sin alpha cos alpha < 0$⁠，
+
+  #noindent;角 $alpha$ 的终边应当在哪些象限？
 
 + #block(sticky: true)[设 $alpha$ 的终边在第三象限内，决定下列各式的符号：]
 
@@ -651,7 +659,7 @@ $therefore quad tan alpha + cot alpha gt.eq 2$
 
 - 当 $alpha = pi$ 时，则 $P$ 的坐标是 $\(- 1\,0\)$, 那么，$cos pi = - 1$, $sin pi = 0$, $tan pi = 0$, $cot pi$ 不存在，$sec pi = - 1$, $csc pi$ 不存在．
 
-- 当 $alpha = frac(3 pi, 2)$ 时，则P的坐标是 $\(0\,- 1\)$, 那么，$cos frac(3 pi, 2) = 0$, $sin frac(3 pi, 2) = - 1$, $tan frac(3 pi, 2)$ 不存在, $cot frac(3 pi, 2) = 0$⁠，$sec frac(3 pi, 2)$ 不存在, $csc frac(3 pi, 2) = - 1$⁠．
+- 当 $alpha = frac(3 pi, 2)$ 时，则 $P$ 的坐标是 $\(0\,- 1\)$, 那么，$cos frac(3 pi, 2) = 0$, $sin frac(3 pi, 2) = - 1$, $tan frac(3 pi, 2)$ 不存在, $cot frac(3 pi, 2) = 0$⁠，$sec frac(3 pi, 2)$ 不存在, $csc frac(3 pi, 2) = - 1$⁠．
 
 把上面结果列成表．要记着表上结果并不难，只要记着特殊点 $P$ 的相应位置，根据三角函数的定义就很快得到函数值．
 
@@ -947,7 +955,7 @@ tan\(2 pi - alpha\)= - tan alpha\, & #h(2em) cot\(2 pi - alpha\)= - cot alpha $)
 
 ]
 === $pi / 2 plus.minus alpha$ 与 $alpha$ 的三角函数间的关系
-$pi / 2 plus.minus alpha$ 与 $alpha$ 的三角函数间有下述关系：#numbered-eq($ sin (pi / 2 + alpha) = cos alpha\, & #h(2em) cos (pi / 2 + alpha) = - sin alpha\
+$pi / 2 + alpha$ 与 $alpha$ 的三角函数间有下述关系：#numbered-eq($ sin (pi / 2 + alpha) = cos alpha\, & #h(2em) cos (pi / 2 + alpha) = - sin alpha\
 tan (pi / 2 + alpha) = - cot alpha\, & #h(2em) cot (pi / 2 + alpha) = - tan alpha $);
 
 #proof[
@@ -1021,60 +1029,70 @@ cos (- frac(19 pi, 6)) & = cos frac(19 pi, 6) = cos (2 pi + frac(7 pi, 6))\
 
 #align(center)[
 #table(
-  columns: (auto, auto, auto, auto, auto,),
-  align: (center + horizon, center + horizon, center + horizon, center + horizon, center + horizon,),
+  columns: (auto, auto, auto, auto, auto, auto,),
+  align: (center + horizon, center + horizon, center + horizon, center + horizon, center + horizon, center + horizon,),
   table.hline(),
   [],
   [$cos$],
   [$sin$],
   [$tan$],
   [$cot$],
+  [],
   table.hline(),
   [$- alpha$],
   [$cos alpha$],
   [$- sin alpha$],
   [$- tan alpha$],
   [$- cot alpha$],
-  [$pi / 2 + alpha$],
+  [#fig("6-17");],
+  [$pi / 2 + alpha med\(90 degree + alpha\)$],
   [$- sin alpha$],
   [$cos alpha$],
   [$- cot alpha$],
   [$- tan alpha$],
-  [$pi / 2 - alpha$],
+  [#fig("6-18");],
+  [$pi / 2 - alpha med\(90 degree - alpha\)$],
   [$sin alpha$],
   [$cos alpha$],
   [$cot alpha$],
   [$tan alpha$],
-  [$pi + alpha$],
+  [#fig("6-19");],
+  [$pi + alpha med\(180 degree + alpha\)$],
   [$- cos alpha$],
   [$- sin alpha$],
   [$tan alpha$],
   [$cot alpha$],
-  [$pi - alpha$],
+  [#fig("6-20");],
+  [$pi - alpha med\(180 degree - alpha\)$],
   [$- cos alpha$],
   [$sin alpha$],
   [$- tan alpha$],
   [$- cot alpha$],
-  [$frac(3 pi, 2) + alpha$],
+  [#fig("6-21");],
+  [$frac(3 pi, 2) + alpha med\(270 degree + alpha\)$],
   [$sin alpha$],
   [$- cos alpha$],
   [$- cot alpha$],
   [$- tan alpha$],
-  [$frac(3 pi, 2) - alpha$],
+  [#fig("6-22");],
+  [$frac(3 pi, 2) - alpha med\(270 degree - alpha\)$],
   [$- sin alpha$],
   [$- cos alpha$],
   [$cot alpha$],
   [$tan alpha$],
-  [$2 pi + alpha$],
+  [#fig("6-23");],
+  [$2 pi + alpha med\(360 degree + alpha\)$],
   [$cos alpha$],
   [$sin alpha$],
   [$tan alpha$],
   [$cot alpha$],
-  [$2 pi - alpha$],
+  [#fig("6-24");],
+  [$2 pi - alpha med\(360 degree - alpha\)$],
   [$cos alpha$],
   [$- sin alpha$],
   [$- tan alpha$],
   [$- cot alpha$],
+  [#fig("6-25");],
   table.hline(),
 );
 
@@ -1325,7 +1343,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 过单位圆与坐标系的横轴 $O x$ 的交点 $A\(1\,0\)$ 的切线叫做正切函数线，简称正切线；而过单位圆与坐标系纵轴 $O y$ 的交点 $B\(0\,1\)$ 的切线叫做余切函数线，简称余切线（图6.18）．
 
 ]
-#figure([#fig("6-17");
+#figure([#fig("6-26");
 
   ],
   caption: [
@@ -1343,14 +1361,14 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 #proof[
 如果角 $alpha$ 的终边 $O P$ 在 $O y$ 轴的右侧，射线 $O P$ 与正切线交于 $L$ 点．设 $P$ 点坐标为 $\(x\,y\)$, $L$ 点坐标为 $\(1\,y_1\)$⁠，这时 $ tan alpha = y / x = frac(A L, 1) = y_1 $ #noindent;这里 $A L$ 是有向线段 $accent(A L, ⃗)$ 的数量（图6.19(a)）．
 
-#figure([#fig("6-18");
+#figure([#fig("6-27");
 
   ],
   caption: [
   ]
 )
 
-如果角 $alpha$ 的终边 $O P$ 在 $O y$ 轴的左侧，反向延长 $O P$ 与正切线交于 $L$ 点．设 $P$ 点、$L$ 点的坐标分别是 $\(x\,y\)$⁠、$\(x_1\,y_1\)$⁠，这时 $P$ 点和 $L$ 点的同名称坐标的符号相反，但由于 $triangle.stroked.t O P M tilde.op triangle.stroked.t O L A$, 所以它们的坐标的比相同（图6.19(b)），即 $ tan alpha = y / x = frac(M P, O M) = frac(A L, O A) = y_1 / 1 = y_1 $
+如果角 $alpha$ 的终边 $O P$ 在 $O y$ 轴的左侧，反向延长 $O P$ 与正切线交于 $L$ 点．设 $P$ 点、$L$ 点的坐标分别是 $\(x\,y\)$⁠、$\(1\,y_1\)$⁠，这时 $P$ 点和 $L$ 点的同名称坐标的符号相反，但由于 $triangle.stroked.t O P M tilde.op triangle.stroked.t O L A$, 所以它们的坐标的比相同（图6.19(b)），即 $ tan alpha = y / x = frac(M P, O M) = frac(A L, O A) = y_1 / 1 = y_1 $
 
 如果 $P$ 点在 $O y$ 轴上则 $L$ 点不存在，$tan alpha$ 不存在．
 
@@ -1363,7 +1381,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 角 $alpha$ 的余切等于角 $alpha$ 终边所在直线与余切线交点的横坐标（图6.20）．
 
 ]
-#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-19");], caption: []), figure([#fig("6-20");], caption: []))));
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-28");], caption: []), figure([#fig("6-29");], caption: []))));
 
 （证明留给读者去完成）
 
@@ -1392,7 +1410,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 
 + 在单位圆上，纵坐标等于 $- sqrt(3) / 2$ 的点，分别是在第三象限的点 $P_1$ 和第四象限的点 $P_2$ (如图6.22)
 
-  #figure([#fig("6-21");
+  #figure([#fig("6-30");
 
     ],
     caption: [
@@ -1413,7 +1431,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 
 + 在单位圆上，横坐标等于 $- 1 / 2$ 的点分别是在第二象限的 $P_1$ 点和第三象限的 $P_2$ 点（如图6.23）．
 
-  #figure([#fig("6-22");
+  #figure([#fig("6-31");
 
     ],
     caption: [
@@ -1438,7 +1456,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 
   在正切线上纵坐标等于 $- sqrt(3) / 3$ 的点 $L$ 对应着单位圆上第二象限的 $P_1$ 点和第四象限的 $P_2$ 点（如图6.24）．
 
-  #figure([#fig("6-23");
+  #figure([#fig("6-32");
 
     ],
     caption: [
@@ -1510,10 +1528,10 @@ frac(cos alpha, sin alpha) & = frac(x / r, y / r) = x / y = cot alpha\,quad alph
 #proof[
 根据任意角三角函数定义，得 $ sin^2 alpha + cos^2 alpha = (y / r)^2 + (x / r)^2 = frac(x^2 + y^2, r^2) $ #noindent;因为 $y^2 + x^2 = r^2$⁠，所以 $sin^2 alpha + cos^2 alpha = 1$⁠．
 
-把 $sin^2 alpha + cos^2 alpha = 1$ 的两边同除以 $cos^2 alpha\,thick alpha eq.not pi / 2 + k pi quad\(k in bb(Z)\)$, 便得到 $ tan^2 alpha + 1 = sec^2 alpha $ #noindent;或 $ 1 + tan^2 alpha = s e c^2 alpha $ #noindent;把 $sin^2 alpha + cos^2 alpha = 1$ 的两边同除以 $sin^2 alpha$,$alpha eq.not k pi quad\(k in bb(Z)\)$⁠，便得到 $ 1 + cot^2 alpha = csc^2 alpha $
+把 $sin^2 alpha + cos^2 alpha = 1$ 的两边同除以 $cos^2 alpha\,thick alpha eq.not pi / 2 + k pi quad\(k in bb(Z)\)$, 便得到 $ tan^2 alpha + 1 = sec^2 alpha $ #noindent;或 $ 1 + tan^2 alpha = sec^2 alpha $ #noindent;把 $sin^2 alpha + cos^2 alpha = 1$ 的两边同除以 $sin^2 alpha$,$alpha eq.not k pi quad\(k in bb(Z)\)$⁠，便得到 $ 1 + cot^2 alpha = csc^2 alpha $
 
 ]
-上面八个公式，除去使公式中的函数不存在的那些 $alpha$ 的值以外，对于 $alpha$ 其它的值都成立，因此，把它们叫做三角函数的基本恒等式．
+上面八个公式，除去使公式中的函数不存在的那些 $alpha$ 的值以外，对于 $alpha$ 其他的值都成立，因此，把它们叫做三角函数的基本恒等式．
 
 利用这些恒等式，可以进行同角的三角函数式的恒等变换，使较繁的式子化为简单的形式；或利用它们，根据给出的一个角的某一个三角函数值，推导出该角的其余三角函数值．
 
@@ -1537,7 +1555,8 @@ $ upright("原式") & = sin^3 alpha (1 + frac(cos alpha, sin alpha)) + cos^3 alp
 如果直接把 $alpha$ 的值代入，查表计算将很烦琐，因此最好先把式子进行化简．$ upright("原式") & = frac(cos alpha\(2 sin alpha - 1\), 1 + sin^2 alpha -\(1 - sin^2 alpha\)- sin alpha)\
  & = frac(cos alpha\(2 sin alpha - 1\), 2 sin^2 alpha - sin alpha)\
  & = frac(cos alpha\(2 sin alpha - 1\), sin alpha\(2 sin alpha - 1\))\
- & = frac(cos alpha, sin alpha) = cot alpha $ #noindent;最后把 $alpha$ 值代入，查表可得：$ cot 24 degree 30' = 2.194 $
+ & = frac(cos alpha, sin alpha) #h(2em)\(because med alpha = 24 degree 30' upright("时，") 2 sin alpha - 1 eq.not 0\)\
+ & = cot alpha $ #noindent;最后把 $alpha$ 值代入，查表可得：$ cot 24 degree 30' = 2.194 $
 
 ]
 #example[
@@ -1585,6 +1604,8 @@ $ upright("原式") & = sqrt(cos^2 alpha) dot.op tan alpha\
 
 化简下列各式：
 
+#block[
+#set enum(numbering: enum-at(1, none, start: 6))
 + #lead-list(none, 2)[
   + $sqrt(1 - cos^2 alpha) dot.op cot alpha$
 
@@ -1596,10 +1617,11 @@ $ upright("原式") & = sqrt(cos^2 alpha) dot.op tan alpha\
 + 已知 $sin alpha + cos alpha = sqrt(2)$⁠，求：$ sin alpha cos alpha\,#h(2em) sin^3 alpha + cos^3 alpha\,#h(2em) sin^4 alpha + cos^4 alpha $
 
 + 把 $sin^4 alpha - sin^2 alpha + cos^2 alpha$ 化为只含 $cos alpha$ 的式子．
+]
 
 ]
 === 根据一个三角函数计算其余各三角函数
-根据前面中所推导出的三角函数间的基本公式，可以从一个已知的三角函数值，计算其余的三角函数值．
+根据上一小节中所推导出的三角函数间的基本公式，可以从一个已知的三角函数值，计算其余的三角函数值．
 
 #example[
 已知 $cos alpha = 12 / 13$⁠，求 $alpha$ 角的其余的三角函数．
@@ -1684,9 +1706,9 @@ sec alpha & = frac(1, cos alpha) = - sqrt(1 + m^2) / m $
 
 + 已知 $cot alpha = 3 41 / 60$, $pi < alpha < frac(3 pi, 2)$⁠，计算 $cos alpha$⁠．
 
-+ 已知 $tan alpha = 1.4$, $pi < alpha < frac(3 pi, 2)$⁠，计算 $alpha$ 角的其它三角函数值（准确到0.01）．
++ 已知 $tan alpha = 1.4$, $pi < alpha < frac(3 pi, 2)$⁠，计算 $alpha$ 角的其他三角函数值（准确到0.01）．
 
-+ 已知 $cot alpha = - 52 / 173$ 和 $0 degree < alpha < 180 degree$⁠，计算 $tan alpha - sec alpha$ 的值．
++ 已知 $cos alpha = - 52 / 173$ 和 $0 degree < alpha < 180 degree$⁠，计算 $tan alpha - sec alpha$ 的值．
 
 + 已知 $tan alpha = - 1.5$⁠，$100 degree < alpha < 200 degree$⁠，计算 $cos alpha$⁠．
 
@@ -1733,7 +1755,7 @@ sec alpha & = frac(1, cos alpha) = - sqrt(1 + m^2) / m $
 
   + $cos\(- 2200 degree\)$
 
-  + $tan (- 3 / 11 pi)$
+  + $tan (- 3 / 10 pi)$
 
   + $cot 10$
 
@@ -1752,7 +1774,7 @@ sec alpha & = frac(1, cos alpha) = - sqrt(1 + m^2) / m $
 
 + 求下列各式的值：
 
-  + $csc 180 degree + sin 60 degree + tan 45 degree - cos 230 degree + sin 30 degree + cot 90 degree$
+  + $csc 180 degree + sin 60 degree + tan 45 degree - cos^2 30 degree + sin 30 degree + cot 90 degree$
 
   + $4 sin pi - 2 cos frac(3 pi, 2) + 3 sin 2 pi - tan pi$
 
@@ -1783,7 +1805,7 @@ sec alpha & = frac(1, cos alpha) = - sqrt(1 + m^2) / m $
 
   + $5 sin 90 degree + 2 cos 0 degree - 2 sin 270 degree + 10 cos 180 degree$
 
-  + $cos pi / 8 - sin^2 pi / 4 cos pi - 1 / 8 tan^2 pi / 3 sin frac(3 pi, 2) + cos 0$
+  + $cos pi / 3 - sin^2 pi / 4 cos pi - 1 / 3 tan^2 pi / 3 sin frac(3 pi, 2) + cos 0$
 
   + $8 sin 510 degree dot.op cos (- 300 degree) dot.op tan 240 degree$
 
@@ -1817,9 +1839,9 @@ sec alpha & = frac(1, cos alpha) = - sqrt(1 + m^2) / m $
 
   + $3 tan x + sqrt(3) = 0\,#h(2em)\(0 < x < 2 pi\)$
 
-  + $2 cos x - sqrt(3) = 0\,#h(2em)\(0 < x < 2 pi\)$
+  + $2 cos x - sqrt(3) = 0$
 
-  + $sqrt(3) cot x - 1 = 0\,#h(2em)\(0 < x < 2 pi\)$
+  + $sqrt(3) cot x - 1 = 0$
 
 + 证明下列各恒等式：
 

@@ -27,7 +27,7 @@
   ]
 )
 
-表示有向线段，一般是将始点写在终点的左边，并在两个字母上面加一个箭头．如以 $A$ 为始点，$B$ 为终点的有向线段记作 $accent(A B, ⃗)$, 以 $B$ 为始点．$A$ 为终点的有向线段记为 $accent(B A, ⃗)$⁠．
+表示有向线段，一般是将始点写在终点的左边，并在两个字母上面加一个箭头．如以 $A$ 为始点，$B$ 为终点的有向线段记作 $accent(A B, ⃗)$, 以 $B$ 为始点，$A$ 为终点的有向线段记为 $accent(B A, ⃗)$⁠．
 
 我们可以用一个有正负号的实数来同时表达在有向直线上的有向线段的长度和它的正、负方向．这个实数称为该有向线段的数量．
 
@@ -72,7 +72,7 @@
 正数或零的绝对值是它们自己；负数的绝对值是它的相反数．
 
 ]
-用符号表示如下：$ \|x\|= display(cases(x\, & quad x gt.eq 0, - x\, & quad x < 0)) $
+用符号表示如下：$ \|x\|= display(cases(x\, & quad upright("若") x gt.eq 0, - x\, & quad upright("若") x < 0)) $
 
 借助于数轴，我们可以对一个数的绝对值作出几何解释：把这个数用数轴上的点表示出来，那么这个数的绝对值就是原点到表示这个数的点的距离．从这里看出，除零以外，正数和负数的绝对值都是正数，而且两个相反数的绝对值相等．
 
@@ -95,7 +95,7 @@ $therefore quad A B = O B - O A = x_2 - x_1$
 
 但不管哪一种情况，都可证得 $A B = x_2 - x_1$⁠．譬如在图2.5的 (2) 中，$A B =\|accent(A B, ⃗)\|$, $O A = -\|accent(O A, ⃗)\|$, $O B =\|accent(O B, ⃗)\|$, 而 $ \|accent(A B, ⃗)\|=\|accent(O A, ⃗)\|+\|accent(O B, ⃗)\| $ #noindent;$therefore quad A B = - O A + O B$⁠，就是 $ A B = O B - O A = x_2 - x_1 $
 
-其它情形，同样地可以证明，这就是说，#strong[在数轴上任意一条有向线段的数量等于其终点坐标与始点坐标的差]．
+其他情形，同样地可以证明，这就是说，#strong[在数轴上任意一条有向线段的数量等于其终点坐标与始点坐标的差]．
 
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题2.1]
 
@@ -193,8 +193,8 @@ $therefore quad\|A B\|=\|B C\|=\|C D\|=\|D A\|= 5$
 又有向线段 $accent(A B, ⃗)$ 在 $x$ 轴上的射影 $accent(A_x B_x, ⃗)$ 的数量是#numbered-eq($ A_x B_x = A H =\|A B\|cos 45 degree = 24 times sqrt(2) / 2 = 12 sqrt(2) $);#noindent;有向线段 $accent(A B, ⃗)$ 在 $y$ 轴上射影的数量是#numbered-eq($ A_y B_y = A K =\|A B\|cos 45 degree = 24 times sqrt(2) / 2 = 12 sqrt(2) $);
 
 另一方面，$ A_x B_x & = O B_x - O A_x = x - x_A = x - 20 sqrt(3)\
-A_y B_y & = O B_y - O A_y = y - y_A = y - 20 $ #noindent;将 (2.3), (2.4) 分别代入上面两个等式的左端，得 $ display(cases(12 sqrt(2) = x - 20 sqrt(3), 12 sqrt(2) = y - 20)) $ #noindent;因此：$ x & = 20 sqrt(3) + 12 sqrt(2) approx 20 times 1.73 + 12 times 1.41 approx 51.52 approx 52\
-y & = 20 + 12 sqrt(2) approx 20 + 12 times 1.41 approx 36.9 approx 37 $ #noindent;答：船在起点东面约52公里，在北面约37公里的地方．
+A_y B_y & = O B_y - O A_y = y - y_A = y - 20 $ #noindent;将 (2.3), (2.4) 分别代入上面两个等式的左端，得 $ display(cases(12 sqrt(2) = x - 20 sqrt(3), 12 sqrt(2) = y - 20)) $ #noindent;因此：$ x & = 20 sqrt(3) + 12 sqrt(2) approx 20 times 1.73 + 12 times 1.41 approx 34.6 + 16.9 = 51.5 approx 52\
+y & = 20 + 12 sqrt(2) approx 20 + 12 times 1.41 approx 20 + 16.9 = 36.9 approx 37 $ #noindent;答：船在起点东面约52公里，在北面约37公里的地方．
 
 ]
 #exercise[
@@ -202,7 +202,7 @@ y & = 20 + 12 sqrt(2) approx 20 + 12 times 1.41 approx 36.9 approx 37 $ #noinden
 
 + 已知矩形相邻两边的长分别为 $a\,b$, 各在 $x$ 轴及 $y$ 轴上，试求其各顶点坐标．
 
-+ 已知正方形的边长为 $2 a$, 一顶点为原点 $O thick\(0\,0\)$, 一对角线在 $x$ 轴的正方向上，试求其它顶点的坐标．
++ 已知正方形的边长为 $2 a$, 一顶点为原点 $O thick\(0\,0\)$, 一对角线在 $x$ 轴的正方向上，试求其他顶点的坐标．
 
 + 正三角形的边长为 $b$, 一顶点为原点 $O thick\(0\,0\)$, 其高在 $y$ 轴上，试求其余两顶点的坐标．
 
@@ -212,7 +212,7 @@ y & = 20 + 12 sqrt(2) approx 20 + 12 times 1.41 approx 36.9 approx 37 $ #noinden
 
 ]
 === 两点间的距离
-若两点为 $P_1 thick\(x_1\,y_1\)$, $P_2 thick\(x_2\,y_2\)$, 则这两点间的距离为；$ \|accent(P_1 P_2, ⃗)\|= sqrt(\(x_2 - x_1\)^2 +\(y_2 - y_1\)^2) $
+若两点为 $P_1 thick\(x_1\,y_1\)$, $P_2 thick\(x_2\,y_2\)$, 则这两点间的距离为：$ \|accent(P_1 P_2, ⃗)\|= sqrt(\(x_2 - x_1\)^2 +\(y_2 - y_1\)^2) $
 
 #figure([#fig("2-10");
 

@@ -245,6 +245,8 @@
     line((0, 0), (0.9511, -0.309), stroke: (paint: black, thickness: 0.4pt))
     node((0.866, 0.5), [$P_(tfrac(pi, 6))$], pos: "right")
     node((-0.866, 0.5), [$P_(tfrac(5 pi, 6))$], pos: "left")
+    node((1, 0), [$\(1\,0\)$], pos: "below right")
+    node((0, 0), [$O$], pos: "above left")
   })
   ,
   "7-07": canvas(length: 1.3cm, {
@@ -618,6 +620,10 @@
     line((1.5708, 1), (0, 1), stroke: (paint: black, thickness: 0.4pt, dash: (3pt, 3pt,)))
     line((4.7124, -1.5), (0, -1.5), stroke: (paint: black, thickness: 0.4pt, dash: (3pt, 3pt,)))
     line((4.7124, -1), (0, -1), stroke: (paint: black, thickness: 0.4pt, dash: (3pt, 3pt,)))
+    node((0.7854, 1.5), [$(pi / 8 \, 1.5)$], pos: "above left")
+    node((1.5708, 1.5), [$(pi / 4 \, 1.5)$], pos: "above right")
+    node((3.927, -1.5), [$(frac(5 pi, 8) \, - 1.5)$], pos: "below left")
+    node((4.7124, -1.5), [$(frac(3 pi, 4) \, - 1.5)$], pos: "below right")
     line((0, -1.5), (0.1, -1.5), stroke: (paint: black, thickness: 0.4pt))
     node((0, -1.5), [$- 1.5$], pos: "left")
     line((0, -1), (0.1, -1), stroke: (paint: black, thickness: 0.4pt))
@@ -675,7 +681,8 @@
   })
   ,
   "7-19": canvas({
-    line((-5, 0), (5, 0), stroke: (paint: black, thickness: 0.4pt))
+    line((-5, 0), (5, 0), stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
+    node((5, 0), [$x$], pos: "right")
     circle((-4, 0), radius: 0.0527, fill: black, stroke: (paint: black, thickness: 0.4pt))
     node((-4, 0), [$C$], pos: "below")
     circle((0, 0), radius: 0.0527, fill: black, stroke: (paint: black, thickness: 0.4pt))

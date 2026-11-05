@@ -111,7 +111,7 @@
     line((0, -2), (0, 2), stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
     node((0, 2), [$y$], pos: "right")
     line((0, 0), (2.1651, 1.25), stroke: (paint: black, thickness: 0.4pt))
-    node((2.1651, 1.25), [$B$], pos: "right")
+    node((2.1651, 1.25), [$B_1$], pos: "right")
     arc((0.75, 0), start: 0deg, stop: 30deg, radius: 0.75, stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
     arc((1, 0), start: 0deg, stop: -330deg, radius: 1, stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
     node((0.2, -0.2), [$O$])
@@ -126,7 +126,7 @@
     line((6, -2), (6, 2), stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
     node((6, 2), [$y$], pos: "right")
     line((6, 0), (7.25, -2.1651), stroke: (paint: black, thickness: 0.4pt))
-    node((7.25, -2.1651), [$B$], pos: "right")
+    node((7.25, -2.1651), [$B_1$], pos: "right")
     arc((6.75, 0), start: 0deg, stop: -60deg, radius: 0.75, stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
     arc((7, 0), start: 0deg, stop: 300deg, radius: 1, stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
     node((6.2, 0.2), [$O$])
@@ -165,6 +165,7 @@
     node((0, 2.2), [$B$], pos: "left")
     node((0, -2.2), [$B_1$], pos: "left")
     node((0.25, -0.25), [$O$])
+    node((6, 4), [$0 #sym.arrow.r A$])
     node((6, 3), [$pi / 6 #sym.arrow.r P_1\,#h(2em) pi / 3 #sym.arrow.r P_2$])
     node((6, 2), [$pi / 2 #sym.arrow.r B\,#h(2em) frac(2 pi, 3) #sym.arrow.r P_3$])
     node((6, 1), [$frac(5 pi, 6) #sym.arrow.r P_4\,#h(2em) pi #sym.arrow.r A_1$])
@@ -343,7 +344,95 @@
     node((0.35, 0.6062), [$alpha + tfrac(pi, 2)$])
   })
   ,
-  "6-17": canvas({
+  "6-17": canvas(length: 0.36cm, {
+    circle((0, 0), radius: 1, stroke: (paint: black, thickness: 0.4pt))
+    line((-1.3, 0), (1.3, 0), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -1.3), (0, 1.3), stroke: (paint: black, thickness: 0.4pt))
+    line((0, 0), (0.866, 0.5), (0.866, 0), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((0.866, 0.5), radius: 0.0527, fill: black, stroke: none)
+    line((0, 0), (0.866, -0.5), (0.866, 0), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((0.866, -0.5), radius: 0.0527, fill: black, stroke: none)
+  })
+  ,
+  "6-18": canvas(length: 0.36cm, {
+    circle((0, 0), radius: 1, stroke: (paint: black, thickness: 0.4pt))
+    line((-1.3, 0), (1.3, 0), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -1.3), (0, 1.3), stroke: (paint: black, thickness: 0.4pt))
+    line((0, 0), (0.866, 0.5), (0.866, 0), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((0.866, 0.5), radius: 0.0527, fill: black, stroke: none)
+    line((0, 0), (-0.5, 0.866), (0, 0.866), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((-0.5, 0.866), radius: 0.0527, fill: black, stroke: none)
+  })
+  ,
+  "6-19": canvas(length: 0.36cm, {
+    circle((0, 0), radius: 1, stroke: (paint: black, thickness: 0.4pt))
+    line((-1.3, 0), (1.3, 0), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -1.3), (0, 1.3), stroke: (paint: black, thickness: 0.4pt))
+    line((0, 0), (0.866, 0.5), (0.866, 0), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((0.866, 0.5), radius: 0.0527, fill: black, stroke: none)
+    line((0, 0), (0.5, 0.866), (0, 0.866), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((0.5, 0.866), radius: 0.0527, fill: black, stroke: none)
+  })
+  ,
+  "6-20": canvas(length: 0.36cm, {
+    circle((0, 0), radius: 1, stroke: (paint: black, thickness: 0.4pt))
+    line((-1.3, 0), (1.3, 0), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -1.3), (0, 1.3), stroke: (paint: black, thickness: 0.4pt))
+    line((0, 0), (0.866, 0.5), (0.866, 0), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((0.866, 0.5), radius: 0.0527, fill: black, stroke: none)
+    line((0, 0), (-0.866, -0.5), (-0.866, 0), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((-0.866, -0.5), radius: 0.0527, fill: black, stroke: none)
+  })
+  ,
+  "6-21": canvas(length: 0.36cm, {
+    circle((0, 0), radius: 1, stroke: (paint: black, thickness: 0.4pt))
+    line((-1.3, 0), (1.3, 0), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -1.3), (0, 1.3), stroke: (paint: black, thickness: 0.4pt))
+    line((0, 0), (0.866, 0.5), (0.866, 0), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((0.866, 0.5), radius: 0.0527, fill: black, stroke: none)
+    line((0, 0), (-0.866, 0.5), (-0.866, 0), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((-0.866, 0.5), radius: 0.0527, fill: black, stroke: none)
+  })
+  ,
+  "6-22": canvas(length: 0.36cm, {
+    circle((0, 0), radius: 1, stroke: (paint: black, thickness: 0.4pt))
+    line((-1.3, 0), (1.3, 0), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -1.3), (0, 1.3), stroke: (paint: black, thickness: 0.4pt))
+    line((0, 0), (0.866, 0.5), (0.866, 0), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((0.866, 0.5), radius: 0.0527, fill: black, stroke: none)
+    line((0, 0), (0.5, -0.866), (0, -0.866), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((0.5, -0.866), radius: 0.0527, fill: black, stroke: none)
+  })
+  ,
+  "6-23": canvas(length: 0.36cm, {
+    circle((0, 0), radius: 1, stroke: (paint: black, thickness: 0.4pt))
+    line((-1.3, 0), (1.3, 0), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -1.3), (0, 1.3), stroke: (paint: black, thickness: 0.4pt))
+    line((0, 0), (0.866, 0.5), (0.866, 0), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((0.866, 0.5), radius: 0.0527, fill: black, stroke: none)
+    line((0, 0), (-0.5, -0.866), (0, -0.866), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((-0.5, -0.866), radius: 0.0527, fill: black, stroke: none)
+  })
+  ,
+  "6-24": canvas(length: 0.36cm, {
+    circle((0, 0), radius: 1, stroke: (paint: black, thickness: 0.4pt))
+    line((-1.3, 0), (1.3, 0), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -1.3), (0, 1.3), stroke: (paint: black, thickness: 0.4pt))
+    line((0, 0), (0.866, 0.5), (0.866, 0), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((0.866, 0.5), radius: 0.0527, fill: black, stroke: none)
+  })
+  ,
+  "6-25": canvas(length: 0.36cm, {
+    circle((0, 0), radius: 1, stroke: (paint: black, thickness: 0.4pt))
+    line((-1.3, 0), (1.3, 0), stroke: (paint: black, thickness: 0.4pt))
+    line((0, -1.3), (0, 1.3), stroke: (paint: black, thickness: 0.4pt))
+    line((0, 0), (0.866, 0.5), (0.866, 0), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((0.866, 0.5), radius: 0.0527, fill: black, stroke: none)
+    line((0, 0), (0.866, -0.5), (0.866, 0), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
+    circle((0.866, -0.5), radius: 0.0527, fill: black, stroke: none)
+  })
+  ,
+  "6-26": canvas({
     line((-2, 0), (2.5, 0), stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
     node((2.5, 0), [$x$], pos: "right")
     line((0, -2), (0, 2.5), stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
@@ -358,7 +447,7 @@
     node((0.5, 1.5), [$B\(0\,1\)$], pos: "above")
   })
   ,
-  "6-18": canvas({
+  "6-27": canvas({
     line((-2, 0), (2.5, 0), stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
     node((2.5, 0), [$x$], pos: "right")
     line((0, -2), (0, 2.5), stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
@@ -390,7 +479,7 @@
     node((6, -2.75), [\(b)])
   })
   ,
-  "6-19": canvas({
+  "6-28": canvas({
     line((-2, 0), (2.5, 0), stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
     node((2.5, 0), [$x$], pos: "right")
     line((0, -2), (0, 2.5), stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
@@ -402,11 +491,11 @@
     node((0.6467, 0.2679), [$alpha$])
     node((-0.25, -0.25), [$O$])
     node((0, 1.7), [$B\(0\,1\)$], pos: "left")
-    node((1.5, 1.5), [$L_1\(x_1\,1\)$], pos: "above")
+    node((1.5, 1.5), [$L\(x_1\,1\)$], pos: "above")
     node((1.0607, 1.0607), [$P\(x\,y\)$], pos: "right")
   })
   ,
-  "6-20": canvas({
+  "6-29": canvas({
     line((-0.75, 0), (-0.75, 1.299), stroke: (paint: black, thickness: 0.4pt), mark: (start: "stealth", end: "stealth", fill: black))
     node((-0.75, 0.6495), [$tfrac(sqrt(3), 2)$], fill: white)
     line((-2, 0), (2.5, 0), stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
@@ -423,7 +512,7 @@
     node((2, 0), [$A\(1\,0\)$], pos: "below")
   })
   ,
-  "6-21": canvas(length: 1.3cm, {
+  "6-30": canvas(length: 1.3cm, {
     line((-2, 0), (2.5, 0), stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
     node((2.5, 0), [$x$], pos: "right")
     line((0, -2), (0, 2), stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
@@ -444,7 +533,7 @@
     node((0.25, -0.2), [$O$])
   })
   ,
-  "6-22": canvas(length: 1.3cm, {
+  "6-31": canvas(length: 1.3cm, {
     line((-2, 0), (2.5, 0), stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
     node((2.5, 0), [$x$], pos: "right")
     line((0, -2), (0, 2), stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
@@ -465,7 +554,7 @@
     node((-0.375, 0.2), [$1 / 2$], pos: "above")
   })
   ,
-  "6-23": canvas(length: 1.3cm, {
+  "6-32": canvas(length: 1.3cm, {
     line((-2, 0), (2.5, 0), stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))
     node((2.5, 0), [$x$], pos: "right")
     line((0, -2), (0, 2), stroke: (paint: black, thickness: 0.4pt), mark: (end: "stealth", fill: black))

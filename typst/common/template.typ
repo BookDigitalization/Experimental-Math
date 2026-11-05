@@ -278,9 +278,11 @@
   rest.join()
 }
 
-#let example(body) = {
+#let example(body, star: false) = {
   example-counter.step()
-  let label = context box(strong[例 #chapter-number().#example-counter.display()])
+  // star：选学的例题，“例”字左侧加“*”（伸进左边距，同 LaTeX 版的 \llap{*}）
+  let mark = if star { context box(width: 0pt, move(dx: -measure(strong[\*]).width, strong[\*])) }
+  let label = context { mark; box(strong[例 #chapter-number().#example-counter.display()]) }
   block(width: 100%, above: 1em, below: 1em, {
     let b = trim-start(body)
     let f = first-content(b)
@@ -297,6 +299,9 @@
     }
   })
 }
+
+// 选学的例题（LaTeX 的 starexample）。不能写成 #example.with(star: true)[…]：后面的 […] 会被当作 with 的参数
+#let starexample(body) = example(body, star: true)
 
 // “解：”“证明：”等：内容以列表、独立公式等块开头时，标签单独成行，并与后面的块排在同一页（不孤零零留在页底）
 #let labeled(label) = body => block(width: 100%, above: 0.8em, below: 0.8em, {

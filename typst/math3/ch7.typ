@@ -27,11 +27,11 @@
   [$pi$],
   [$sin x$],
   [0],
-  [$1 / 2$],
-  [$sqrt(3) / 2$],
+  [$1 / 2 = 0.5$],
+  [$sqrt(3) / 2 approx 0.87$],
   [1],
-  [$sqrt(3) / 2$],
-  [$1 / 2$],
+  [$sqrt(3) / 2 approx 0.87$],
+  [$1 / 2 = 0.5$],
   [0],
   table.hline(),
   [$x$],
@@ -44,11 +44,11 @@
   [$2 pi$],
   [$sin x$],
   [],
-  [$- 1 / 2$],
-  [$- sqrt(3) / 2$],
+  [$- 1 / 2 = - 0.5$],
+  [$- sqrt(3) / 2 approx - 0.87$],
   [$- 1$],
-  [$- sqrt(3) / 2$],
-  [$- 1 / 2$],
+  [$- sqrt(3) / 2 approx - 0.87$],
+  [$- 1 / 2 = - 0.5$],
   [0],
   table.hline(),
 );
@@ -162,7 +162,7 @@
 
 + 增减性#h(1em);由正弦曲线容易看出，随着 $x$ 增加正弦函数在区间 $(- pi / 2 \, pi / 2)$ 内是递增的；在区间 $(pi / 2 \, frac(3 pi, 2))$ 内是递减的．一般的情况是 $sin x$ 在区间 $(- pi / 2 + 2 k pi \, pi / 2 + 2 k pi)$ 内是递增的，在区间 $(pi / 2 + 2 k pi \, pi / 2 + \( 2 k + 1 \) pi)$ 内是递减的，这里 $k in bb(Z)$⁠．
 
-  由 $sin x$ 的增减性看出，在 $x = pi / 2$ 一处，正弦函数由递增变为递减，因此在 $x = pi / 2$ 处，$sin x$ 取得极大值1. 一般地，当 $x = pi / 2 + 2 k pi thick thick\(k in bb(Z)\)$ 时，$sin x = 1$ 是极大值．同时还看出，在 $x = frac(3 pi, 2)$ 处，正弦函数由递减变为递增，因此在 $x = frac(3 pi, 2)$ 处，$sin x$ 取得极小值 $- 1$, 一般地，当 $x = frac(3 pi, 2) + 2 k pi thick thick\(k in bb(Z)\)$ 时，$sin x = - 1$ 是极小值．
+  由 $sin x$ 的增减性看出，在 $x = pi / 2$ 处，正弦函数由递增变为递减，因此在 $x = pi / 2$ 处，$sin x$ 取得极大值1. 一般地，当 $x = pi / 2 + 2 k pi thick thick\(k in bb(Z)\)$ 时，$sin x = 1$ 是极大值．同时还看出，在 $x = frac(3 pi, 2)$ 处，正弦函数由递减变为递增，因此在 $x = frac(3 pi, 2)$ 处，$sin x$ 取得极小值 $- 1$, 一般地，当 $x = frac(3 pi, 2) + 2 k pi thick thick\(k in bb(Z)\)$ 时，$sin x = - 1$ 是极小值．
 
 + 周期性#h(1em);当横坐标 $x$ 每隔 $2 pi$ 时，曲线重复出现，也就是说，正弦曲线上任何一点的横坐标加上或减去 $2 pi$ 时，对应的纵坐标相等，即 $ sin\(x plus.minus 2 pi\)= sin x $ #noindent;一般地：$ sin\(x + 2 k pi\)= sin x quad\(k in bb(Z)\) $
 
@@ -207,7 +207,7 @@
 
   今验知，$sin 2 (x + pi / 2) = sin\(2 x + pi\)= - sin 2 x$. 故 $T'$ 不是 $y = sin 2 x$ 的周期，因此得到矛盾．这就是说 $sin 2 x$ 的最小正周期是 $pi$⁠．
 
-+ 由于：$ 2 sin (4 x - pi / 6) & = 2 sin (4 x - pi / 6 + 2 pi)\
++ 因为 $ 2 sin (4 x - pi / 6) & = 2 sin (4 x - pi / 6 + 2 pi)\
    & = 2 sin [4 (x + pi / 2) - pi / 6] quad\(x in bb(R)\) $ #noindent;即当自变量 $x$ 改变成 $x + pi / 2$ 时，函数值不变，所以 $y = 2 sin (4 x - pi / 6)$ 的周期 $T = pi / 2$. 再证 $T = pi / 2$ 是 $y = 2 sin (4 x - pi / 6)$ 的最小正周期．
 
   假设 $y = 2 sin (4 x - pi / 6)$ 还有一个比 $pi / 2$ 小的正周期 $T'$⁠，即 $0 < T' < pi / 2$⁠，从而得到#numbered-eq($ 0 < 4 T' < 2 pi $);
@@ -262,7 +262,7 @@
   ]
 )
 
-于是，菱形面积 $S = 2 r dot.op frac(2 r, sin theta)$⁠，当 $sin theta = 1$ 时，菱形面积 $S$ 最小，这时 $theta = 90 degree thick thick\(0 degree < theta < 180 degree\)$.
+于是，菱形面积 $S = 2 r dot.op frac(2 r, sin theta) = frac(4 r^2, sin theta)$⁠，当 $sin theta = 1$ 时，菱形面积 $S$ 最小，这时 $theta = 90 degree thick thick\(0 degree < theta < 180 degree\)$.
 
 因此，定圆的外切菱形中以正方形的面积最小．
 
@@ -272,7 +272,7 @@
 
 ]
 #solution[
-把 $y$ 看作 $sin x$ 的二次函数，这样问题变成求闭区间 $- 1 lt.eq sin x lt.eq 1$ 上的 $y$ 的最大值和最小值．也就是要把开区间 $\(- 1\,1\)$ 内的极值和两端点处的函数值作比较．
+把 $y$ 看作 $sin x$ 的二次函数，这样问题变成求闭区间 $- 1 lt.eq sin x lt.eq 1$ 上的 $y$ 的最大值和最小值．也就是要把区间 $\(- 1\,1\)$ 内的极值和两端点处的函数值作比较．
 
 + 当 $sin x = - 1$ 时，$y = (- 1 - 1 / 2)^2 + 2 = 4 1 / 4$
 
@@ -314,7 +314,7 @@
 
   ]
 
-+ #block(sticky: true)[求下列函数的最大值和最小值，又在何时有最大值或最小值:]
++ #block(sticky: true)[求下面函数的最大值和最小值，又在何时有最大值或最小值:]
 
   #cols(2)[
   + $y =\|sin x\|$
@@ -335,7 +335,7 @@
 
 + $y =\|sin x\|$ 是周期函数吗？如果是，说出它的最小正周期．
 
-+ 作 $y = sin\|x\|$ 的图象，试从它的图象说明函数 $y = sin\|x\|$ 不是周期函数：
++ 作 $y = sin\|x\|$ 的图象，试从它的图象说明函数 $y = sin\|x\|$ 不是周期函数．
 
 + 利用单位圆，容易看出 $sin x < 1 / 2$ 的解的范围，如下图所示．$ frac(5 pi, 6) + 2 k pi < x < pi / 6 + 2\(k + 1\)pi $
 
@@ -380,11 +380,11 @@
   [$pi / 2$],
   [$y = cos x$],
   [0],
-  [$1 / 2$],
-  [$sqrt(3) / 2$],
+  [$1 / 2 = 0.5$],
+  [$sqrt(3) / 2 approx 0.87$],
   [1],
-  [$sqrt(3) / 2$],
-  [$1 / 2$],
+  [$sqrt(3) / 2 approx 0.87$],
+  [$1 / 2 = 0.5$],
   [0],
   table.hline(),
   [$x$],
@@ -397,11 +397,11 @@
   [$frac(3 pi, 2)$],
   [$y = cos x$],
   [],
-  [$- 1 / 2$],
-  [$- sqrt(3) / 2$],
+  [$- 1 / 2 = - 0.5$],
+  [$- sqrt(3) / 2 approx - 0.87$],
   [$- 1$],
-  [$- sqrt(3) / 2$],
-  [$- 1 / 2$],
+  [$- sqrt(3) / 2 approx - 0.87$],
+  [$- 1 / 2 = - 0.5$],
   [0],
   table.hline(),
 );
@@ -574,7 +574,7 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
 
   + $y = cos (2 x + pi / 3)$
 
-  + $y = sqrt(8) sin (1 / 2 x - pi / 4)$
+  + $y = sqrt(3) sin (1 / 2 x - pi / 4)$
 
   ]
 
@@ -676,7 +676,7 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
 
   - 若 $x in (pi / 2 + 2 k pi \, \( 2 k + 1 \) pi)$ 或 $(pi / 2 + \( 2 k + 1 \) pi \, \( 2 k + 2 \) pi)$ 时，$tan x < 0$⁠．（这里 $k in bb(Z)$⁠）
 
-+ 增减性#h(1em);正切函数 $y = t a n x$ 在 $x in (- pi / 2 + k pi \, pi / 2 + k pi) thick thick\(k in bb(Z)\)$ 的每一个开区间内，都是递增的．
++ 增减性#h(1em);正切函数 $y = tan x$ 在 $x in (- pi / 2 + k pi \, pi / 2 + k pi) thick thick\(k in bb(Z)\)$ 的每一个开区间内，都是递增的．
 
   但是要注意，正切函数在整个定义域内并不是增函数．事实上，设 $x_1 = pi / 4$, $x_2 = frac(3 pi, 4)$⁠，那么 $ tan x_1 & = tan pi / 4 = 1\
   tan x_2 & = tan frac(3 pi, 4) = tan (pi - pi / 4) = - tan pi / 4 = - 1 $ #noindent;这样，$x_1 < x_2$ 时，有 $tan x_1 > tan x_2$⁠．当 $x = k pi$ 时 ($k in bb(Z)$), $tan x = 0$.
@@ -710,7 +710,7 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
 
 + 作 $y = -\|tan x\|$ 的图象，并说出它的周期．
 
-+ 求下列函数的周期：$ tan (2 x - x / 4)\,#h(2em) tan x / 2 $
++ 求下列函数的周期：$ tan (2 x - pi / 4)\,#h(2em) tan x / 2 $
 
 ]
 == 余切函数的图象和性质
@@ -737,7 +737,7 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
   table.vline(x: 1),
   table.hline(),
   [$x$],
-  [$frac(6 pi, 12)$],
+  [$pi / 2 = frac(6 pi, 12)$],
   [$frac(7 pi, 12)$],
   [$frac(8 pi, 12)$],
   [$frac(9 pi, 12)$],
@@ -761,7 +761,7 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
   [$frac(15 pi, 12)$],
   [$frac(16 pi, 12)$],
   [$frac(17 pi, 12)$],
-  [$frac(18 pi, 12)$],
+  [$frac(3 pi, 2)$],
   table.hline(),
   [$y = tan x$],
   [0],
@@ -854,7 +854,7 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
 
 + 周期性#h(1em);余切函数的周期是 $pi$⁠．
 
-  事实上，假设 $p > 0$ 是 $cot x$ 的一个周期，根据周期 $p$ 的定义，有 $cot\(x + p\)= cot x$, 这里x是 $cot x$ 的定义域中任何一个数．
+  事实上，假设 $p > 0$ 是 $cot x$ 的一个周期，根据周期 $p$ 的定义，有 $cot\(x + p\)= cot x$, 这里 $x$ 是 $cot x$ 的定义域中任何一个数．
 
   令 $x = pi / 2$⁠，则 $ cot (pi / 2 + p) = cot pi / 2 $ #noindent;即$ tan p = 0 $ #noindent;$therefore quad p = k pi quad\(k in bb(Z)\,thick k eq.not 0\)$
 
@@ -862,7 +862,7 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
 
   - 函数 $y = cot omega x$ 的最小正周期是 $frac(pi, \|omega\|)$⁠，（$omega eq.not 0\,omega x$ 为定义域内的数）．
 
-  - 函数 $y = A cot\(omega x + phi\)$ 的最小正周期是 $frac(pi, \|omega\|)$⁠，（$omega\,phi$ 为常数，$omega eq.not 0\,omega x$ 为定义域内的数）．
+  - 函数 $y = A cot\(omega x + phi\)$ 的最小正周期是 $frac(pi, \|omega\|)$⁠，（$omega\,phi$ 为常数，且 $omega eq.not 0\,omega x$ 为定义域内的数）．
 
 + 渐近线#h(1em);因为 $ lim_(x arrow.r 0^(+)) cot x = + oo\, & #h(2em) lim_(x arrow.r 0^(-)) cot x = - oo\
   lim_(x arrow.r pi^(-)) cot x = - oo\, & #h(2em) lim_(x arrow.r pi^(+)) cot x = + oo $ #noindent;故 $x = 0$, $x = pi$ 的直线就是余切曲线的渐近线．
@@ -915,7 +915,7 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
 
 #text(size: 0.9em)[#block(breakable: true)[#show table: set block(breakable: true)
 #table(
-  columns: (10% + 12pt, 18% + 12pt, 18% + 12pt, 18% + 12pt, 18% + 12pt,),
+  columns: (9% + 12pt, 19% + 12pt, 19% + 12pt, 19% + 12pt, 19% + 12pt,),
   align: (left + horizon, left + horizon, left + horizon, left + horizon, left + horizon,),
   table.vline(x: 1),
   table.hline(),
@@ -944,28 +944,28 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
   [奇函数],
   table.hline(),
   [函数的符号],
-  [在一、二象限为正；在三、四象限为负],
-  [在一、四象限为正；在二、三象限为负],
-  [在一、三象限为正；在二、四象限为负],
-  [在一、三象限为正；在二、四象限为负],
+  [在一、二象限，即 $x in #scale(x: 120%, y: 120%)[$\($] 2 k pi$, $\(2 k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$sin x > 0$⁠；在三、四象限，即 $x in #scale(x: 120%, y: 120%)[$\($]\(2 k + 1\)pi$, $2\(k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$sin x < 0$],
+  [在一、四象限，即 $x in #scale(x: 120%, y: 120%)[$\($] - pi / 2 + 2 k pi$, $pi / 2 + 2 k pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$cos x > 0$⁠；在二、三象限，即 $x in #scale(x: 120%, y: 120%)[$\($] pi / 2 + 2 k pi$, $pi / 2 +\(2 k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$cos x < 0$],
+  [在一、三象限，即 $x in #scale(x: 120%, y: 120%)[$\($] 2 k pi$, $pi / 2 + 2 k pi #scale(x: 120%, y: 120%)[$\)$]$ 或 $#scale(x: 120%, y: 120%)[$\($]\(2 k + 1\)pi$, $pi / 2 +\(2 k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$tan x > 0$⁠；在二、四象限，即 $x in #scale(x: 120%, y: 120%)[$\($] pi / 2 + 2 k pi$, $\(2 k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 或 $#scale(x: 120%, y: 120%)[$\($] pi / 2 +\(2 k + 1\)pi$, $\(2 k + 2\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$tan x < 0$],
+  [在一、三象限，即 $x in #scale(x: 120%, y: 120%)[$\($] 2 k pi$, $pi / 2 + 2 k pi #scale(x: 120%, y: 120%)[$\)$]$ 或 $#scale(x: 120%, y: 120%)[$\($]\(2 k + 1\)pi$, $pi / 2 +\(2 k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$cot x > 0$⁠；在二、四象限，即 $x in #scale(x: 120%, y: 120%)[$\($] pi / 2 + 2 k pi$, $\(2 k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 或 $#scale(x: 120%, y: 120%)[$\($] pi / 2 +\(2 k + 1\)pi$, $\(2 k + 2\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$cot x < 0$],
   table.hline(),
   [增减性],
-  [在一、四象限是增函数；在二、三象限是减函数],
-  [在一、二象限是减函数；在三、四象限是增函数],
-  [在各象限都为增函数],
-  [在各象限都为减函数],
+  [在一、四象限，即 $x in #scale(x: 120%, y: 120%)[$\($] - pi / 2 + 2 k pi$, $pi / 2 + 2 k pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$sin x$ 是增函数；在二、三象限，即 $x in #scale(x: 120%, y: 120%)[$\($] pi / 2 + 2 k pi$, $pi / 2 +\(2 k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$sin x$ 是减函数],
+  [在一、二象限，即 $x in #scale(x: 120%, y: 120%)[$\($] 2 k pi$, $\(2 k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$cos x$ 是减函数；在三、四象限，即 $x in #scale(x: 120%, y: 120%)[$\($]\(2 k + 1\)pi$, $2\(k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$cos x$ 是增函数],
+  [在各象限都为增函数，即 $x in #scale(x: 120%, y: 120%)[$\($] - pi / 2 + k pi$, $pi / 2 + k pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$tan x$ 是增函数],
+  [在各象限都为减函数，即 $x in #scale(x: 120%, y: 120%)[$\($] k pi$, $\(k + 1\)pi #scale(x: 120%, y: 120%)[$\)$]$ 时，$cot x$ 是减函数],
   table.hline(),
   [函数的极值],
-  [$x = pi / 2 + 2 k pi$ 时，取极大值1；$x = frac(3 pi, 2) + 2 k pi$ 时，取极小值 $- 1$],
-  [$x = 2 k pi$ 时，取极大值1；$x =\(2 k + 1\)pi$ 时，取极小值 $- 1$],
+  [当 $x = pi / 2 + 2 k pi$ 时，$sin x = 1$ 是极大值；当 $x = frac(3 pi, 2) + 2 k pi$ 时，$sin x = - 1$ 是极小值],
+  [当 $x = 2 k pi$ 时，$cos x = 1$ 是极大值；当 $x =\(2 k + 1\)pi$ 时，$cos x = - 1$ 是极小值],
   [无],
   [无],
   table.hline(),
   [周期性],
-  [$2 pi$],
-  [$2 pi$],
-  [$pi$],
-  [$pi$],
+  [$because med sin\(x + 2 pi\)= sin x$⁠，$therefore med T = 2 pi$（$2 pi$ 是最小正值）],
+  [$because med cos\(x + 2 pi\)= cos x$⁠，$therefore med T = 2 pi$（$2 pi$ 是最小正值）],
+  [$because med tan\(x + pi\)= tan x$⁠，$therefore med T = pi$（$pi$ 是最小正值）],
+  [$because med cot\(x + pi\)= cot x$⁠，$therefore med T = pi$（$pi$ 是最小正值）],
   table.hline(),
   [渐近线],
   [无],
@@ -975,6 +975,10 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
   table.hline(),
 )]]
 
+#align(right)[
+（表内 $k in bb(Z)$⁠）
+
+]
 == 正弦型曲线
 在这一节，我们来研究正弦型曲线，即函数 $y = A sin\(m x + a\)$ 的图象，这个图象在学习物理、电工和力学时将会遇到，下面我们先研究几种特殊正弦型曲线的作法，然后再归结到一般情形．
 
@@ -1070,7 +1074,7 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
 
 + 对于同一横坐标 $x$, $y = 1 / 2 sin x$ 的纵坐标为 $y = sin x$ 的纵坐标的 $1 / 2$⁠，$y = 2 sin x$ 的纵坐标为 $y = sin x$ 的纵坐标的2倍，因此，可以说，把曲线 $y = sin x$ 沿纵轴方向压缩到 $1 / 2$⁠，就得到曲线 $y = 1 / 2 sin x$\; 沿纵轴方向拉长2倍，就得到曲线 $y = 2 sin x$⁠．
 
-+ $y = sin x$ 的最大纵坐标是1; $y = 2 sin x$ 的最大纵坐标是2; $y = 1 / 2 sin x$ 的最大纵坐标是 $1 / 2$. 我们这个最大的纵坐标叫做该曲线的振幅．
++ $y = sin x$ 的最大纵坐标是1; $y = 2 sin x$ 的最大纵坐标是2; $y = 1 / 2 sin x$ 的最大纵坐标是 $1 / 2$. 我们把这个最大的纵坐标叫做该曲线的振幅．
 
 + 它们的周期相同，都是 $2 pi$⁠．
 
@@ -1083,7 +1087,7 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
 === 函数 $y = sin m x$ 的图象
 我们取 $m = 1 / 2$, $m = 1$, $m = 2$ 三种情形来讨论，即讨论 $y = sin x / 2$, $y = sin x$, $y = sin 2 x$⁠．
 
-三个函数的周期分别是 $4 pi$, $2 pi$ 和 $pi$, 它们有相同的振幅 $A = 1$. 所有这些函数在自变量 $m x$ 取相同值的变化过程中对应的函数值也相同，但现在 $m$ 值不同，因此，只有当 $x$ 取不同的值时，才能使这些函数的对应值相同．比如，
+函数 (1) $y = sin x / 2$\; (2) $y = sin x$\; (3) $y = sin 2 x$ 的周期分别是 $frac(2 pi, 1 / 2) = 4 pi$, $2 pi$ 和 $frac(2 pi, 2) = pi$, 它们有相同的振幅 $A = 1$. 所有这些函数在自变量 $m x$ 取相同值的变化过程中对应的函数值也相同，但现在 $m$ 值不同，因此，只有当 $x$ 取不同的值时，才能使这些函数 $y = sin x / 2$, $y = sin x$ 和 $y = sin 2 x$ 的对应值相同．比如，
 
 - 当 $x = pi / 6$ 时，$sin x$ 的值为0.5；
 
@@ -1212,9 +1216,9 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
 
 + 它们的振幅相同，都是1.
 
-+ $y = sin 1 / 2 x$ 的周期是 $4 pi = frac(2 pi, 1\/2)$⁠，二倍于 $y = sin x$ 的周期．
++ $y = sin x / 2$ 的周期是 $4 pi (= frac(2 pi, 1 / 2))$⁠，二倍于 $y = sin x$ 的周期．
 
-因此，$y = sin 1 / 2 x$ 的图象是把 $y = sin x$ 的图象沿横轴方向拉长2倍而得到．
+因此，$y = sin 1 / 2 x$ 的图象是把 $y = sin x$ 的图象沿横轴方向拉长 $frac(1, 1 / 2) = 2$ 倍而得到．
 
 将 $y = sin x$ 的函数值表里的 $x$ 取值分别除以2, 得到 $y = sin 2 x$ 的函数值如下：
 
@@ -1395,7 +1399,7 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
   [$pi / 4$],
   [$frac(3 pi, 8)$],
   table.hline(),
-  [$y = 1.5 sin (2 t + pi / 4)$],
+  [$y = 1.5 sin (2 t + pi / 4)$ \ $#hide[$⁠y$] = 1.5 sin 2 (t + pi / 8)$],
   [0],
   [1.07],
   [1.5],
@@ -1409,7 +1413,7 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
   [$frac(3 pi, 4)$],
   [$frac(7 pi, 8)$],
   table.hline(),
-  [$y = 1.5 sin (2 t + pi / 4)$],
+  [$y = 1.5 sin (2 t + pi / 4)$ \ $#hide[$⁠y$] = 1.5 sin 2 (t + pi / 8)$],
   [],
   [$-$1.07],
   [$-$1.5],
@@ -1429,7 +1433,7 @@ $1 - cos alpha$ 的最小值为0, 最大值为2, 故知 $4 - 2 cos alpha - sin^2
 )
 
 ]
-上面这种作图方法，把几种曲线之间的关系明确的揭露出来，使我们能够了解到它们之间的内在联系，但是，这样作图比较费事，在实际问题中往往只须知道函数 $y = A sin\(m x + alpha\)$ 的草图，只要这个图能够表示出它的三个特征量：振幅 $A$, 周期 $frac(2 pi, m)$⁠，起点 $(- alpha / m \, 0)$ 就可以了．
+上面这种作图方法，把几种曲线之间的关系明确的揭露出来，使我们能够了解到它们之间的内在联系，但是，这样作图比较费事，在实际问题中往往只须知道函数 $y = A sin\(m x + alpha\)$ 的草图，只要这个图能够表示出它的三个特征量：\(1) 振幅 $A$, (2) 周期 $frac(2 pi, m)$⁠，(3) 起点 $(- alpha / m \, 0)$ 就可以了．
 
 $y = A sin\(m x + alpha\)$ 的图象的简便作法如下：
 
@@ -1578,7 +1582,7 @@ $ y = A sin\(m x + alpha\)+ ell = A sin m (x + alpha / m) + ell quad\(A > 0\,thi
 
   + $y = tan a x quad\(a > 0\)$
 
-  + $y = sin (x + pi / 8)$
+  + $y = sin (x + pi / 3)$
 
   + $y = cos (2 x - pi / 6)$
 
@@ -1609,7 +1613,7 @@ $ y = A sin\(m x + alpha\)+ ell = A sin m (x + alpha / m) + ell quad\(A > 0\,thi
 
   + $y = sin (2 x + pi / 2)$
 
-  + $y = 2 sin (3 x - pi / 8)$
+  + $y = 2 sin (3 x - pi / 3)$
 
   ]
 

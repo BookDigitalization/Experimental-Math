@@ -153,13 +153,24 @@ class Converter:
                      tex, flags=re.S)
         tex = self.replace_inline_envs(tex)
         tex = self.replace_text_spaces(tex)
+        # 表格的行距（Typst 版的表格另有内边距，不需要）
+        tex = re.sub(r"\\renewcommand\{\\arraystretch\}\{[\d.]+\}", "", tex)
         tex = self.replace_tabular(tex)
         # table 环境中的表格：pandoc 不认得已换成占位符的表格，图注会丢掉。改为 #figure(kind: table)
         def table_env(m: re.Match) -> str:
             cap = re.search(r"\\caption\{([^}]*)\}", m.group(1))
             body = re.sub(r"\\caption\{[^}]*\}|\\centering|\\label\{[^}]*\}", "", m.group(1)).strip()
+            # 浮动体里的 \small：整个表格用小字号
+            size = re.match(r"\\(small|footnotesize)(?![a-zA-Z])\s*", body)
+            if size:
+                body = body[size.end():]
             body = re.sub(r"\\textsc\{(PH\d+)\}", r"#smallcaps[\1]", body)
-            caption = convert_fragments([cap.group(1)])[0] if cap and cap.group(1).strip() else ""
+            if size:
+                body = "#text(size: %s)[%s]" % ("0.9em" if size.group(1) == "small" else "0.8em", body)
+            if not cap:
+                # 没有 \caption 的 table：LaTeX 版不编号，只是居中
+                return "\n\n" + self.slot("#align(center)[%s]" % body) + "\n\n"
+            caption = convert_fragments([cap.group(1)])[0] if cap.group(1).strip() else ""
             return "\n\n" + self.slot("#figure(kind: table, caption: [%s], [%s])" % (caption, body)) + "\n\n"
         tex = re.sub(r"\\begin\{table\}(?:\[[^\]]*\])?(.*?)\\end\{table\}", table_env, tex, flags=re.S)
         # \resizebox{\textwidth}{!}{表格}：pandoc 会连内容一起丢掉。表格此时已是占位符，套上 fit-width
@@ -233,14 +244,17 @@ class Converter:
 
     def replace_tabular(self, tex: str) -> str:
         """tabular、longtable 自行转换：pandoc 会丢掉大部分 \\hline 和竖线（longtable 的 p{} 列宽也丢）"""
-        out, pos = [], 0
+        # 单元格里用 \begin{tabular}{@{}l@{}}…\\…\end{tabular} 排成几行的：直接换成用 \newline 分行
+        tex = re.sub(r"\\begin\{tabular\}\{@\{\}[lcr]@\{\}\}(.*?)\\end\{tabular\}",
+                     lambda m: m.group(1).replace("\\\\", "\\newline "), tex, flags=re.S)
+        # 其余的嵌套表格：从最后一个表格往前处理，内层的先换成占位符，外层按单元格拆分时就不会被拆坏
         pat = re.compile(r"(\{\\(small|footnotesize)\s*)?\\begin\{(tabular|longtable)\}")
         while True:
-            m = pat.search(tex, pos)
-            if not m:
-                out.append(tex[pos:])
-                return "".join(out)
-            out.append(tex[pos : m.start()])
+            ms = list(pat.finditer(tex))
+            if not ms:
+                return tex
+            m = ms[-1]
+            out = [tex[: m.start()]]
             env = m.group(3)
             spec, j = read_group(tex, m.end())
             end = tex.index(r"\end{%s}" % env, j)
@@ -263,6 +277,7 @@ class Converter:
                 else:   # 花括号里还有别的内容：照原样留下 {\small
                     out.append(m.group(1))
             out.append(self.slot(typ))
+            tex = "".join(out) + tex[pos:]
 
     def tabular(self, spec: str, body: str) -> str:
         cols, vlines = parse_colspec(spec)
@@ -285,10 +300,14 @@ class Converter:
                 continue
             width = 0
             for c in split_top(r, "&"):
-                mc = re.match(r"\\multicolumn\{(\d+)\}\{([^}]*)\}", c)
+                mc = re.match(r"\s*\\multicolumn\{(\d+)\}\s*", c)
                 if mc:
-                    content, _ = read_group(c, mc.end())
-                    al = parse_colspec(mc.group(2))[0]
+                    # 列格式可能带嵌套的花括号，如 {p{0.62\textwidth}|}
+                    spec, j = read_group(c, mc.end())
+                    while j < len(c) and c[j].isspace():
+                        j += 1
+                    content, _ = read_group(c, j)
+                    al = parse_colspec(spec)[0]
                     layout.append(("cell", len(cells), int(mc.group(1)), al[0][0] if al else "center"))
                     cells.append(content)
                     width += int(mc.group(1))
@@ -455,6 +474,8 @@ class Converter:
         typ = re.sub(r"#underline\[#h\(([\d.]+em)\);?\]", r"#box(width: \1, stroke: (bottom: 0.4pt), outset: (bottom: 2pt))", typ)
         # pandoc 把 \square 转成很小的 □，\bigcirc 转成普通大小的 ○
         typ = typ.replace("square.stroked.tiny", "square.stroked")
+        # \hfill：pandoc 写成无效的 #h(\fill)
+        typ = typ.replace("#h(\\fill)", "#h(1fr)")
         # \bigstar：数学字体中的 star.filled 很小，改用正文的实心大星
         typ = typ.replace("$star.filled$", "★")
         typ = re.sub(r"(?<![\w.])circle\.stroked(?![\w.])", "circle.stroked.big", typ)

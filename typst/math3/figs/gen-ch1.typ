@@ -20,7 +20,7 @@
     node((1.1495, 4.3507), [$B$], pos: "above")
     line((5, 0), (0, 0), stroke: (paint: black, thickness: 0.4pt))
     node((5, 0), [$C$], pos: "right")
-    node((2.5, 0), [30.5m], pos: "below")
+    node((2.5, 0), [30.5米], pos: "below")
   })
   ,
   "1-03": canvas(length: 1.5cm, {
@@ -53,7 +53,7 @@
     arc((4, 1), start: 180deg, stop: 148deg, radius: 1, stroke: (paint: black, thickness: 0.4pt), mark: (start: "stealth", end: "stealth", fill: black))
     node((4.152, 1.5299), [$beta$], pos: "left", dist: 5pt)
     line((5, 0.7), (3, 0.7), stroke: (paint: black, thickness: 0.4pt), mark: (start: "stealth", end: "stealth", fill: black))
-    node((4, 0.7), [118m], pos: "below")
+    node((4, 0.7), [118米], pos: "below")
   })
   ,
   "1-05": canvas(length: 1.7cm, {
@@ -91,7 +91,7 @@
     line((0, 0), (0, -1), stroke: (paint: black, thickness: 0.4pt))
     line((5, 0), (5, -1), stroke: (paint: black, thickness: 0.4pt))
     line((0, -0.5), (5, -0.5), stroke: (paint: black, thickness: 0.4pt), mark: (start: "stealth", end: "stealth", fill: black))
-    node((2.5, -0.5), [32.6m], fill: white)
+    node((2.5, -0.5), [32.6米], fill: white)
     node((0, -0.2), [$D$], pos: "left")
     node((5, -0.2), [$C$], pos: "right")
     line((0, 4), (5, 0), stroke: (paint: black, thickness: 0.4pt))

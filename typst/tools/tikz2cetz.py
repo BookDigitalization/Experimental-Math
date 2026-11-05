@@ -1115,6 +1115,12 @@ class PathBuilder:
                     op_nodes.append((nopts, text, name))
                     continue
                 p = at if at is not None else self.cur
+                # 写在目标坐标之后、但带 pos= 等的节点（如 --(1,2) node[pos=0]{…}）：TikZ 仍放在上一段上
+                dn = dict(nopts)
+                if at is None and self.pieces and any(k in dn for k in ("pos", "midway", "near start", "near end", "at start")):
+                    t = num(dn["pos"]) if "pos" in dn else {"midway": .5, "near start": .25, "near end": .75, "at start": 0}[
+                        next(k for k in ("midway", "near start", "near end", "at start") if k in dn)]
+                    p, _ = point_on(self.pieces[-1], t)
                 if p is None:
                     p = pic.tf.apply((0, 0))
                 if name:
