@@ -318,7 +318,7 @@ $\overline{AH}=\frac{1}{3} \overline{AC},\qquad \overline{MH}=\frac{1}{3} \overl
 \tkzLabelPoints[below](A,M,B)
 \tkzLabelPoints[above](C,D)
 \tkzInterLL(A,C)(D,M) \tkzGetPoint{H}
-\tkzLabelPoints[above](H))
+\tkzLabelPoints[above](H)
 \tkzDrawSegments[->](M,H A,H)
     \end{tikzpicture}
     \caption{}
@@ -1478,9 +1478,9 @@ $\Vec{OP}$、$\Vec{OQ}$、$\Vec{OR}$. 并证明$P$、$Q$、$R$三点共线．
 \draw[thick,->](0,0)--node[below]{$\vec{v}$}(1,0);
 \draw[thick,->](0,0)--node[above]{$\vec{u}$}(40:1);
 
-\tkzInterLL(A_1,B_2)(A_2,B_1) \tkzGetPoint{P};
-\tkzInterLL(A_1,C_2)(A_2,C_1) \tkzGetPoint{Q};
-\tkzInterLL(C_1,B_2)(C_2,B_1) \tkzGetPoint{R};
+\tkzInterLL(A_1,B_2)(A_2,B_1) \tkzGetPoint{P}
+\tkzInterLL(A_1,C_2)(A_2,C_1) \tkzGetPoint{Q}
+\tkzInterLL(C_1,B_2)(C_2,B_1) \tkzGetPoint{R}
 \tkzDrawPoints(P,Q,R)
 \tkzLabelPoints[right](R)
 \tkzLabelPoints[left](P)
