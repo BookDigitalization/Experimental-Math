@@ -38,10 +38,11 @@
 
 如果让自变量的变化区间的长度无限地缩短，也就是让$x$无限地接近于$x_1$时，平均变化率所趋向的极限
 \[\lim_{x\to x_1} \frac{f (x) -f (x_1)}{x-x_1} =k\]
+就表达了函数$f(x)$在$x=x_1$处的变率．因此，一次函数$f(x)=kx+b$在变量$x$的每个值处的变率都是一样的．我们可以这样说，一次函数就是在其各点的变率恒为常数$k$的函数．
 
 \subsection{平滑曲线的切线与变率}
 一般的函数$y=f(x)$的图象通常不是直线，由于函数
-和它的图象的多样性，为了讨论的方便起见，我们先把讨论的范围限制在“平滑”的曲线上，常用的函数$y=f(x)$的图象往往是“平滑的”，平滑性的直观内涵是：用愈高倍的显微镜去观察曲线的微段，就愈象直线段，比较明确的几何说法是：一条曲线在$P$点的平滑性就是存在唯一的一条过$P$点的切线，它无限地逼近曲线在$P$点邻近的微段，于是，当$y=f(x)$的图象$C$在$P$点存在唯一的一条切线时，我们就说曲线$C$在$P$点平滑，而$P$点叫做曲线的平滑点，一条在每点都平滑的曲线叫做平滑的曲线，一个函数的图象是平滑曲线时，我们就称这种函数为平滑函数．
+和它的图象的多样性，为了讨论的方便起见，我们先把讨论的范围限制在“平滑”的曲线上，常用的函数$y=f(x)$的图象往往是“平滑的”，平滑性的直观内涵是：用愈高倍的显微镜去观察曲线的微段，就愈像直线段，比较明确的几何说法是：一条曲线在$P$点的平滑性就是存在唯一的一条过$P$点的切线，它无限地逼近曲线在$P$点邻近的微段，于是，当$y=f(x)$的图象$C$在$P$点存在唯一的一条切线时，我们就说曲线$C$在$P$点平滑，而$P$点叫做曲线的平滑点，一条在每点都平滑的曲线叫做平滑的曲线，一个函数的图象是平滑曲线时，我们就称这种函数为平滑函数．
 
 同学可能会问这样一个问题：在曲线的点$P$存在唯一的一条切线的含义是什么？因为迄今我们对于一般的曲线的切
 线还未下过定义呢！
@@ -124,7 +125,7 @@
 \end{example}
 
 \begin{solution}
-    解依题意$(x_0,f(x_0)=ax_0^2+bx_0+c)$在抛物线上，并设$(x_0+h,f(x_0+h))$是抛物线上点$(x_0,f(x_0))$的附近的一点，我们有
+    依题意$(x_0,f(x_0)=ax_0^2+bx_0+c)$在抛物线上，并设$(x_0+h,f(x_0+h))$是抛物线上点$(x_0,f(x_0))$的附近的一点，我们有
 \begin{align*}
 &\qquad \lim_{h\to 0}\frac{f(x_0+h)-f(x_0)}{(x_0+h)-x_0}\\
 &=\lim_{h\to 0}\frac{[a(x_0+h)^2+b(x_0+h)+c]-[ax^2_0+bx_0+c]}{h}    \\
@@ -162,6 +163,8 @@
 \node at (-2,0)[below]{$-2$};
 \node at (1,0)[below]{$1$};
 \node at (0,0)[below left]{$O$};
+\node at (.6,2.76)[right]{$P$};
+\node at (1.2,6.24)[left]{$Q$};
     \end{tikzpicture}
 
     \caption{}
@@ -239,7 +242,7 @@ $\frac{\dd y}{\dd x}\Big|_{x=x_0}$.
 从微商的定义可以看出：
 \begin{enumerate}
 \item 曲线在一点的切线的斜率，就是函数在这一点的变率（微商或导数）．    
-\item 微商所涉及的是函数的“局部”性质，也就是说，函数$y=f(x)$在一点$x_0$处是否可微只与函数$y=f(x)$在$x=x_0$处及其近旁的性质有关，而与其它地方无关．    
+\item 微商所涉及的是函数的“局部”性质，也就是说，函数$y=f(x)$在一点$x_0$处是否可微只与函数$y=f(x)$在$x=x_0$处及其近旁的性质有关，而与其他地方无关．    
 \item 如果$f(x)$在点$x$可微，按照极限存在的条件，必须且只须
 \[\lim_{\Delta x\to 0^+}\frac{f (x+\Delta x) -f (x)}{\Delta x},\qquad \lim_{\Delta x\to 0^-}\frac{f (x+\Delta x) -f (x)}{\Delta x}\]
 同时存在而且相等．
@@ -251,7 +254,7 @@ $\frac{\dd y}{\dd x}\Big|_{x=x_0}$.
 今有一个正在膨胀的肥皂泡，
 \begin{enumerate}
 \item 求肥皂泡的体积对于半径的增大率，
-\item 如果肥皂泡的半径每秒增大0.1cm，问当半径为2cm时，体积的增大率是多少？
+\item 如果肥皂泡的半径每秒增大0.1寸，问当半径为2寸时，体积的增大率是多少？
 \end{enumerate}
 \end{example}
 
@@ -270,8 +273,8 @@ $\frac{\dd y}{\dd x}\Big|_{x=x_0}$.
 上式表示在$r=2$时，肥皂泡体积对于半径的增大率是$16\pi$, 它
 的含义也可以这样理解，体积增大的快慢在$r=2$时，是$16\pi$倍于半径增大的快慢．
 
-由于半径的增大率是每秒0.1cm，故体积在半径等于2时的增大率是
-\[16\pi \x0.1=1.6\pi ({\rm cm^3/s})\]
+由于半径的增大率是每秒0.1寸，故体积在半径等于2时的增大率是
+\[16\pi \x0.1=1.6\pi (\text{寸}^3/\text{秒})\]
 \end{solution}
 
 \begin{ex}
@@ -319,6 +322,7 @@ $\frac{\dd y}{\dd x}\Big|_{x=x_0}$.
     &=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}\cdot \lim_{x\to x_0}(x-x_0)\\
 &=f'(x_0)\cdot 0=0
 \end{align*}
+因此，$f(x)$在点$x_0$处是连续的．
 \end{proof}
 
 上面的定理说明函数在其有导数的点一定连续，在其不
@@ -454,7 +458,7 @@ $f(x)$在$x=-1$点的右导数是
 \[\frac{\Delta y}{\Delta x}=\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}>0\]
 而且当$\Delta x\to 0$时，割线的倾斜角$\varphi$（$0^{\circ}\le \varphi\le 180^{\circ}$）便以$\pi/2$为极限，从而
 \[\lim_{\Delta x\to 0}\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}=\lim_{\varphi\to \tfrac{\pi^-}{2}}\tan\varphi=+\infty\]
-可见$f(x)$在点$x_0$不可微（不存在有限导数），但是我们常常把这种情况：当$\Delta x\to 0$时，$\frac{\Delta y}{\Delta x}\to\infty$简略地叙述为函
+可见$f(x)$在点$x_0$不可微（不存在有限导数），但是我们常常把这种情况：当$\Delta x\to 0$时，$\frac{\Delta y}{\Delta x}\to+\infty$简略地叙述为函
 数$f(x)$在$x_0$的导数为正无穷大，记作$f'(x_0)=+\infty$．
 
 图(b)表示的函数$f$在点$x_0$的邻近递减，因此过曲线上$P(x_0,y_0)$和$Q(x_0+\Delta x,y_0+\Delta y)$两点的割线，无论$Q$点在$P$点的哪一侧，$\Delta x$与$\Delta y$都有相反的正、负号，于是
@@ -493,9 +497,9 @@ $x_0+\Delta x$，于是由$\Delta x$所引起的相应的函数的改变量$\Del
 \end{example}
 
 \begin{solution}
-在第一章，我们已经说明了
+在第一章2.1中，我们已经说明了
 \[\lim_{x\to 0}x\sin\frac{1}{x}=0=f(0)\]
-因此，$f(x)$在点$x=0$连续，很明显$f(x)$在其它各点处也都连续，所以说$f(x)$是一个到处连续的函数，我们将说明它在原点不存在导数．
+因此，$f(x)$在点$x=0$连续，很明显$f(x)$在其他各点处也都连续，所以说$f(x)$是一个到处连续的函数，我们将说明它在原点不存在导数．
 
 因为
 \[\frac{f(0+\Delta x)-f(0)}{\Delta x}=\frac{\Delta x\sin\frac{1}{\Delta x}}{\Delta x}=\sin\frac{1}{\Delta x}\]
@@ -573,7 +577,7 @@ $x_0+\Delta x$，于是由$\Delta x$所引起的相应的函数的改变量$\Del
 
 \subsubsection{一次函数（直线函数）的导数是常数}
 
-若$f(x)=kx+b$, 则$f'(x)=k$. 
+若$f(x)=kx+b$, 则$f'(x)=k$. （在1.1中已证）
 
 \subsubsection{若$f(x)=x^n$ （$n$是正整数），则$f'(x)=nx^{n-1}$}
 
@@ -595,7 +599,7 @@ $x_0+\Delta x$，于是由$\Delta x$所引起的相应的函数的改变量$\Del
 
 \begin{proof}
     \[\frac{\Delta y}{\Delta x}=\frac{(x+\Delta x)^{\mu}-x^{\mu}}{\Delta x}=x^{\mu-1}\cdot \frac{\left(1+\frac{\Delta x}{x}\right)^{\mu}-1}{\frac{\Delta x}{x}}\]
-利用第一章中已经算出的极限
+利用第一章2.2中已经算出的极限
 \[\lim_{x\to 0}\frac{(1+x)^{\mu}-1}{x}=\mu\]
 就得到
 \[f'(x)=\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}=\mu x^{\mu-1}\]
@@ -691,12 +695,13 @@ $f' (x) =\cos x$.
     \item $\frac{\dd x^\mu}{\dd x}=\mu x^{\mu-1}$\quad （$\mu$为任意实数）
     \item $\frac{\dd\log_a x}{\dd x}=\frac{\log_a e}{x},\qquad \frac{\dd \ln x}{\dd x}=\frac{1}{x}$
     \item $\frac{\dd a^x}{\dd x}=a^x\cdot \ln a,\qquad \frac{\dd e^x}{\dd x}=e^x$
-    \item $\frac{\dd\sin x}{\dd x}=\cos x,\qquad \frac{\dd \cos x}{\dd x}=-\sin x$
+    \item $\frac{\dd\sin x}{\dd x}=\cos x$
+    \item $\frac{\dd \cos x}{\dd x}=-\sin x$
 \end{enumerate}
 
 \subsection{求导的基本法则}
 
-现在要建立一些求导数的公式，用这些公式求函数的导数．
+现在要建立一些求导数的公式，用这些公式可求每个初等函数的导数．
 
 \begin{blk}
 {定理1} 函数和的导数等于各函数的导数的和，即：
@@ -881,7 +886,7 @@ f'(x)&=\left[\sqrt{x}(x^2-3)\right]'\\
 
 
 \begin{example}
-求证：$(\tan x)'=\sec^2 x,\qquad (\cot x)'=-csc^2 x$
+求证：$(\tan x)'=\sec^2 x,\qquad (\cot x)'=-\csc^2 x$
 \end{example}
 
 \begin{proof}    
@@ -960,7 +965,7 @@ f'(x)&=\left[\sqrt{x}(x^2-3)\right]'\\
 有不相等的三根$2,\alpha,\beta$, 若$f'(\alpha)=f'(\beta)$, $f'(1)=0$, 求$a,b,c$.
 \item 求三次函数$y=f(x)$, 使它同时满足下面的条件：
 \begin{enumerate}
-    \item 用$x+1$去除$f(x)$与用$(x-1)(x-2)$去除，$f(x)$所得余式相同；
+    \item 用$x+1$去除$f(x)$与用$(x-1)(x-2)$去除$f(x)$所得余式相同；
     \item 过曲线$y=f(x)$上的点$(1,f(1))$的切线方程是
 $y=-2x+1$
 \end{enumerate}
@@ -1079,7 +1084,7 @@ $y=-2x+1$
 {推论1} 如果函数有两个以上的中间变量，上面的求导法则可以推广使用．
 \end{blk}
 
-例如，设$y=f(u)$, $u=g(v)$, $v=h(x)$, 那么对于复合函数．$y=\varphi (x)=f\{g[h(x)]\}$的导数可以这样来求：
+例如，设$y=f(u)$, $u=g(v)$, $v=h(x)$, 那么对于复合函数$y=\varphi (x)=f\{g[h(x)]\}$的导数可以这样来求：
 \[\frac{\dd y}{\dd x}=\frac{\dd y}{\dd u}\cdot \frac{\dd u}{\dd v}\cdot \frac{\dd v}{\dd x}\]
 即：$y'_x=y'_u\cdot u'_v\cdot v'_x$
 
@@ -1108,7 +1113,7 @@ $y=-2x+1$
 
 求复合函数的导数，关键在于分析清楚函数的复合关系，适当选定中间变量，根据复合函数求导法则由外向里逐层求导，直到最后一个中间变量对自变量求导为止，每次求导时，必须明确是哪个变量对哪个变量求导，所有这些导数的乘积就是复合函数的导数．
 
-\begin{blk}{推论}
+\begin{blk}{推论2}
     \[(\ln|g(x)|)'=\frac{g'(x)}{g(x)}\quad (g(x)\ne 0)\]
 \end{blk}
 
@@ -1318,7 +1323,7 @@ $AB$边中点时，$CP$长度的变率是多少？
 我们除去了数值$x=\pm 1$, 因为在它的对应值$y=\pm\frac{\pi}{2}$
 处导数$(\sin y)'=\cos y=0$.
 
-在第四册， 我们已经证明$\arcsin x+\arccos x=\frac{\pi}{2}$，所以
+在第四册（下），我们已经证明$\arcsin x+\arccos x=\frac{\pi}{2}$，所以
 \[(\arccos x)'=\left(\frac{\pi}{2}-\arcsin x\right)'=-\frac{1}{\sqrt{1-x^2}},\qquad -1<x<1\]
 其余同理可证．
 \end{proof}
@@ -1614,7 +1619,7 @@ $y=\sqrt{16-x^2}$和$y=-\sqrt{16-x^2},\; x\in [-4, 4]$. 求每一个函数的导
 即
 \begin{align*}
     \left(\sqrt{16-x^2}\right)'&=-\frac{x}{\sqrt{16-x^2}}\\
-    \left(-\sqrt{16-x^2}\right)'&=\frac{x}{\sqrt{16-x^2}},\qquad x\in[-4,4]
+    \left(-\sqrt{16-x^2}\right)'&=\frac{x}{\sqrt{16-x^2}},\qquad x\in(-4,4)
 \end{align*}
 \end{solution}
 
@@ -1774,7 +1779,7 @@ $\therefore\quad b^2x_0^2+a^2y^2_0=a^2b^2$，因此，所求切线方程是
 原点，过$P$点的切线与曲线交于另一点$Q$的坐标．
 \item \begin{enumerate}
     \item 求证直线$\ell x +my+n=0$与椭圆$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$, 双曲线$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$, 抛物线$y^2=2px$相切的条件分别是$a^2\ell^2+b^2m^2=n^2$, $a^2\ell^2-b^2m^2=n^2$, $pm^2=2n\ell$.
-    \item 证明对于任意$k$, 直线$y=kx+\sqrt{a^2k^2+b^2}$是椭圆曲线$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$的切线．    
+    \item 证明对于任意$k$, 直线$y=kx+\sqrt{a^2k^2+b^2}$是椭圆$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$的切线．    
 \end{enumerate}
 \item \begin{enumerate}
     \item 求过$P(5, 3)$点与椭圆$\frac{x^2}{16}+{y^2}=1$相切的直线
@@ -2017,7 +2022,7 @@ f^{(n)}(a+h)&=n!C_n
 
 曲线最直接和最灵活的描述法是参数表示．我们不把直角坐标$x$或$y$中的一个看成另一个的函数，而把两个坐标$x$和$y$都看成为第三个自变量$t$的函数，$t$叫做\textbf{参数}或\textbf{参变量}．当$t$在$t$轴上或$t$轴上的一个区间$[a,b]$变化时，由$t$轴上的原象点，通过参数方程$x=\varphi(t)$, $y=\psi(t)$映射到曲线$C$上的一点$(x,y)=(\varphi(t),\psi(t))$, 使得对应于$t$的某个区间$[a,b]$或$(-\infty, \infty)$, 一对函数值$x=\varphi(t)$, $y=\psi(t)$定义的点集
 $$\Big\{\big(\varphi(t), \psi(t)\big)\Big|t\in [a,b]\Big\}$$
-就是曲线$C$上的全部点，而且没有其它点．
+就是曲线$C$上的全部点，而且没有其他点．
 
 在解析几何中，我们已经知道：
 
@@ -2050,7 +2055,7 @@ $$\Big\{\big(\varphi(t), \psi(t)\big)\Big|t\in [a,b]\Big\}$$
     \caption{}
 \end{figure}
 
-曲线$C$可以有许多参数表示法，就好象同一条路可以有许多不同走法，例如抛物线$y^2=2px$可以用在其上的点$(x,y)$的切线的斜率作参数，由于
+曲线$C$可以有许多参数表示法，就好像同一条路可以有许多不同走法，例如抛物线$y^2=2px$可以用在其上的点$(x,y)$的切线的斜率作参数，由于
 $2yy'=2p$, 所以抛物线$y^2=2px$的参数方程是
 \[x=\frac{p}{2(y')^2},\qquad y=\frac{p}{y'}\]
 其中$y'\in (-\infty,0)\cup (0, \infty)$.
@@ -2094,7 +2099,7 @@ $2yy'=2p$, 所以抛物线$y^2=2px$的参数方程是
 
 事实上，$x=\sin t$在闭区间$[0,2\pi]$上处处连续，且在闭区间$\left[\frac{\pi}{2},\frac{3\pi}{2}\right]$上由1单调递减到$-1$，因此根据反函数存在定理，对于每一个$x\in[-1,1]$，存在唯一的一个$t$，使得$\sin t=x$成立，从而得到
 \[y=1-x^2=1-\sin^2 t=\cos^2 t\in [0,1]\]
-这就说明了，点$(x,1-x^2)\; (x\in [-1, 1])$在曲线$C$上，而且只有这些点在曲线$C$上，换言之，在(2.12)上的除去这些点的其它任何一点不在曲线$C$上．
+这就说明了，点$(x,1-x^2)\; (x\in [-1, 1])$在曲线$C$上，而且只有这些点在曲线$C$上，换言之，在(2.12)上的除去这些点的其他任何一点不在曲线$C$上．
 \end{solution}
 
 在参数方程$x=\varphi(t)$, $y=\psi(t)$中，由于$t$轴是有序的，我们可以用明显的方式把曲线$C$的点规定一个次序或“指向”，即如果$t_1<t_2$，那么由$t_1$映射的点在由$t_2$映射的点的前面．例如例2.38的曲线上的动点$P$随着$t$增加的方向这样运动：$P$点在$t=0$时，由点$(0,1)$开始移动到在$t=\frac{\pi}{2}$时的$(1,0)$点，然后沿原路线返回移动到$t=\pi$时的$(0,1)$点，再继续移动到在$t=\frac{3\pi}{2}$时的$(-1, 0)$点，最后又返回到在$t=2\pi$时的$(0, 1)$点．
@@ -2104,7 +2109,7 @@ $2yy'=2p$, 所以抛物线$y^2=2px$的参数方程是
 
 如果曲线$C$上的始点$P(\varphi(a),\psi(a))$与终点$P(\varphi(b),\psi(b))$相同，并且除$t=a$和$t=b$外，在$[a,b]$上没有另外一对不同值对应曲线上同一点，那么曲线$C$叫做\textbf{简单闭曲线}．$x=a\cos t$, $y=a\sin t,\; t\in [-\pi,\pi]$就是简单的闭曲线．
 
-有时我们使用$y=f(x)$表示曲线$C$或$C$的一部分是方便的，如果$C$用参数方程$x=\varphi(t)$, $y=\psi(t)$给出，而对于曲线的一部分$t_2\le t\le t_1$, 函数$\varphi(t),\psi(t)$中的一个，譬如说$x=\varphi(t)$是单调的和连续的，那么这样的表示法总是可能的，办法是先由$x=\varphi(t)$解出它的反函数$t=\varphi^{-1}(x)$, 再代入$y=\psi(t)$中，便得到
+有时我们使用$y=f(x)$表示曲线$C$或$C$的一部分是方便的，如果$C$用参数方程$x=\varphi(t)$, $y=\psi(t)$给出，而对于曲线的一部分$t_0\le t\le t_1$, 函数$\varphi(t),\psi(t)$中的一个，譬如说$x=\varphi(t)$是单调的和连续的，那么这样的表示法总是可能的，办法是先由$x=\varphi(t)$解出它的反函数$t=\varphi^{-1}(x)$, 再代入$y=\psi(t)$中，便得到
 \[y=\psi\left(\varphi^{-1}(x)\right)=f(x)\]
 即$y=f(x)$是由$y=\psi(t)$和$t=\varphi^{-1}(x)$复合而成的复合函数．
 
@@ -2183,6 +2188,7 @@ x}=\frac{1}{\varphi'(t)}$.
     这是$T$的三次方程，它表示切线与曲线相交于三个点，由于切点的$t$值是它的二重根，根据根和系数的关系，得
 \[2t+T=-\frac{-3t}{2}\quad \Rightarrow\quad T=-\frac{1}{2}t\]
 故切线与曲线的另一交点的坐标是$\left(\frac{1}{4}t^2,-\frac{1}{8}t^3\right)$
+\end{solution}
 
 如果再假定$\varphi''(t)$，$\psi''(t)$存在，则$y$对$x$的二阶导数可按照复合函数求导法及商的导数法来求：
 \begin{align*}
@@ -2190,7 +2196,6 @@ x}=\frac{1}{\varphi'(t)}$.
     &=\frac{\dd }{\dd t}\left(\frac{\psi'(t)}{\varphi'(t)}\right)\cdot \frac{1}{\varphi'(t)}\\
     &=\frac{\varphi'(t)\psi''(t)-\psi'(t)\varphi''(t)}{\big\{\varphi'(t)\big\}^3}
 \end{align*}
-\end{solution}
 
 \begin{ex}
 \begin{enumerate}
@@ -2276,7 +2281,7 @@ y}{\Delta x}$与$f'(x_0)$的差，那么，我们可以写出
 \begin{equation}
 \frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}=f'(x_0)+\varepsilon(x_0,\Delta x)
 \end{equation}
-这里因为(2.19)，而有$\Lim_{\Delta x\to 0}\Delta x \cdot \varepsilon(x_0,\Delta x)=0$.
+这里因为(2.19)，而有$\Lim_{\Delta x\to 0}\varepsilon(x_0,\Delta x)=0$.
 
 将(2.20)的两边乘以$\Delta x$，我们得到
 \begin{equation}
@@ -2390,7 +2395,7 @@ $\Delta y$.
 
 \subsubsection{微分的几何意义}
 
-从几何的观点来说，变率的根本想法就是以直代曲，即以在点$x_0$处的切线$y=f(x_0)＋f'(x_0)(x-x_0)$来逼近曲线$y=f(x)$的微段．因此，$f'(x_0)\Delta x$的几何意义可以从图2.17看出．
+从几何的观点来说，变率的根本想法就是以直代曲，即以在点$x_0$处的切线$y=f(x_0)+f'(x_0)(x-x_0)$来逼近曲线$y=f(x)$的微段．因此，$f'(x_0)\Delta x$的几何意义可以从图2.17看出．
 
 \begin{figure}[htp]
     \centering
@@ -2592,7 +2597,7 @@ $\dd y=f' (x) \dd x$
 \begin{ex}
 \begin{enumerate}
     \item 边长4cm的正方形铁皮，在加热中边长增加了0.001cm, 
-求此时刻面积的可能误差$\Delta S$, 和可能误差的近似值$\dd s$, 又正方形的面积近似值是多少？
+求此时刻面积的可能误差$\Delta S$, 和可能误差的近似值$\dd S$, 又正方形的面积近似值是多少？
 \item 半径为10cm的球，在冷却中$R$缩短了0.001cm, 求此时
 刻体积的微分$\dd V$和体积的近似值．
 \item 当$|x|$很小时，导出下列近似公式：
@@ -2648,7 +2653,7 @@ $\dd y=f' (x) \dd x$
     \item 求下列函数的导函数：
 	\begin{enumerate}
     	\begin{multicols}{2}
-			\item $f(x)=2 x^{3}-3 x^{3}+4 x-5 $
+			\item $f(x)=2 x^{3}-3 x^{2}+4 x-5 $
 			\item $f(x)=x^{5}-6 x^{2}+13$
 			\item $f(x)=\frac{x^{3}-4 x}{x^{2}+1} $
 			\item $f(x)=\cos m x \sin n x$       
