@@ -43,7 +43,7 @@
 
 表示有向线段，一般是将始点写在终点的左边，并在两
 个字母上面加一个箭头．如以$A$为始点，$B$为终点的有向线
-段记作$\Vec{AB}$, 以$B$为始点．$A$为终点的有向线段记为$\Vec{BA}$．
+段记作$\Vec{AB}$, 以$B$为始点，$A$为终点的有向线段记为$\Vec{BA}$．
 
 我们可以用一个有正负号的实数来同时表达在有向直线
 上的有向线段的长度和它的正、负方向．这个实数称为该有
@@ -158,8 +158,8 @@ $\sqrt{3}$; $C$点的坐标是$-3.5$, 而有向线段$\Vec{OC}$的数量是$-3.5
 
 用符号表示如下：
 \[|x|=\begin{cases}
-    x, & x\ge 0\\
-    -x, & x<0
+    x, & \text{若}x\ge 0\\
+    -x, & \text{若}x<0
 \end{cases}\]
 
 借助于数轴，我们可以对一个数的绝对值作出几何解
@@ -237,7 +237,7 @@ $\therefore\quad AB=OB-OA=x_2-x_1$
 $\therefore\quad AB=-OA+OB$，就是
 \[AB=OB-OA=x_2-x_1\]
 
-其它情形，同样地可以证明，这就是说，\textbf{在数轴上任意一
+其他情形，同样地可以证明，这就是说，\textbf{在数轴上任意一
 条有向线段的数量等于其终点坐标与始点坐标的差}．
 
 \section*{习题2.1}
@@ -299,6 +299,8 @@ b,c$, 求证：$AB+BC+CA=0$
     \draw[->,thick] (-3,0)--(3,0) node[right]{$x$};
     \draw[->,thick]  (0,-3)--(0,3)node[right]{$y$};
 \node at (-.3,-.3){$O$};
+\draw (1,0)--(1,.1) node[below=3pt]{\small 1};
+\draw (0,1)--(.1,1) node[left=3pt]{\small 1};
 \node at (1.5,1.5){一};\node at (-1.5,1.5){二};
 \node at (-1.5,-1.5){三};\node at (1.5,-1.5){四};
 \node at (1.5,1){$(+,+)$};\node at (-1.5,1){$(-,+)$};
@@ -312,6 +314,8 @@ b,c$, 求证：$AB+BC+CA=0$
     \draw[->,thick] (-1,0)--(3,0)node[right]{$x$};
     \draw [->,thick] (0,-1)--(0,3)node[right]{$y$};
     \node at (-.2,-.2){$O$};
+    \draw (.7,0)--(.7,.1) node[below=3pt]{\small 1};
+    \draw (0,.7)--(.1,.7) node[left=3pt]{\small 1};
 \draw (2,0)node[below]{$M$}--(2,2)node[right]{$P(x,y)$}--(0,2)node[left]{$N$};
 
 \end{tikzpicture}
@@ -459,8 +463,8 @@ A_xB_x=AH=|AB|\cos45^{\circ}=24\x\frac{\sqrt{2}}{2}=12\sqrt{2}
 \end{cases}\]
 因此：
 \[\begin{split}
-    x&=20\sqrt{3}+12\sqrt{2}\approx 20\x 1.73+12\x 1.41 \approx 51.52\approx 52\\
-    y&=20+12\sqrt{2}\approx 20+12\x 1.41\approx 36.9\approx 37
+    x&=20\sqrt{3}+12\sqrt{2}\approx 20\x 1.73+12\x 1.41 \approx 34.6+16.9=51.5\approx 52\\
+    y&=20+12\sqrt{2}\approx 20+12\x 1.41\approx 20+16.9=36.9\approx 37
 \end{split}\]
 答：船在起点东面约52公里，在北面约37公里的地方．
 \end{solution}
@@ -472,7 +476,7 @@ A_xB_x=AH=|AB|\cos45^{\circ}=24\x\frac{\sqrt{2}}{2}=12\sqrt{2}
     \item 已知矩形相邻两边的长分别为$a,b$, 各在$x$轴及$y$轴上，
     试求其各顶点坐标．
     \item 已知正方形的边长为$2a$, 一顶点为原点$O\;(0,0)$, 一对角线
-    在$x$轴的正方向上，试求其它顶点的坐标．
+    在$x$轴的正方向上，试求其他顶点的坐标．
     \item 正三角形的边长为$b$, 一顶点为原点$O\;(0,0)$, 其高在$y$
     轴上，试求其余两顶点的坐标．
     \item 有一边长是$a$的正三角形$ABC$, $AB$边在$x$轴上，$AB$边的
@@ -484,7 +488,7 @@ A_xB_x=AH=|AB|\cos45^{\circ}=24\x\frac{\sqrt{2}}{2}=12\sqrt{2}
 \end{ex}
 
 \subsection{两点间的距离}
-若两点为$P_1\;(x_1,y_1)$, $P_2\;(x_2,y_2)$, 则这两点间的距离为；
+若两点为$P_1\;(x_1,y_1)$, $P_2\;(x_2,y_2)$, 则这两点间的距离为：
 $$|\Vec{P_1P_2}|=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$$
 
 \begin{figure}[htp]
