@@ -221,7 +221,7 @@ $\therefore\quad \vec{c}=\left(2\sqrt{3},-2\right)$
 已知$\vec{a}=(a_x,a_y)$, $\vec{b}=(b_x,b_y)$, 则
 \[\begin{split}
     \vec{a}\cdot \vec{b}&=(a_x\eX+a_y\eY)\cdot (b_x\eX+b_y\eY)\\
-    &=a_xb_x\eX\cdot \eX+a_xb_y\eY\cdot \eX+a_yb_x\eY\eX+a_yb_y\eY\cdot \eY
+    &=a_xb_x\eX\cdot \eX+a_xb_y\eY\cdot \eX+a_yb_x\eY\cdot \eX+a_yb_y\eY\cdot \eY
 \end{split}\]
 由于$\eX\cdot \eX=\eY\cdot \eY=1$, $\eX\cdot \eY=\eY\cdot \eX=0$，所以
 \[\vec{a}\cdot \vec{b}=(a_x,a_y)\cdot (b_x,b_y)=a_xb_x+a_yb_y\]
@@ -449,12 +449,11 @@ a_y=\lambda b_y
 \[\Vec{AB}=(x_2-x_1,y_2-y_1),\qquad \Vec{AC}=(x_3-x_1,y_3-y_1)\]
 由于$A$、$B$、$C$三点共线的充要条件是
 $\Vec{AB}\parallel \Vec{AC}$，所以，由上述定理便得到
-\[\frac{x_2-x_1}{x_3-x_1}=\frac{y_2-y_1}{y_3-y_1}\]
-即：$\begin{vmatrix}
-    x_1&y_1&1\\
-    x_2&y_2&1\\
-    x_3&y_3&1\\
-\end{vmatrix}=0$
+\[\frac{x_2-x_1}{y_2-y_1}=\frac{x_3-x_1}{y_3-y_1}\]
+即：\[\begin{vmatrix}
+    x_2-x_1&x_3-x_1\\
+    y_2-y_1&y_3-y_1
+\end{vmatrix}=0\]
 从行列式计算法则容易证明：
 \[\begin{vmatrix}
     x_2-x_1&x_3-x_1\\
@@ -555,7 +554,7 @@ $\triangle ABC$是直角三角形．
 \end{ex}
 
 \subsection{有向线段定比分点的坐标}
-已知点$P$按定比$\mu$分割有向线段$P_1P_2$(图5.8). 
+已知点$P$按定比$\mu$分割有向线段$\Vec{P_1P_2}$(图5.8). 
 即
 \[\begin{split}
      \Vec{P_1P}&=\mu \Vec{PP_2}\\
@@ -882,7 +881,7 @@ $C\left(\frac{\sqrt{3}}{2},\frac{1}{2}\right)$,
 所唯一确定．$\varphi$角通常叫做向量
 $\vec{a}$的\textbf{方向角}．由三角学可知，$\varphi$
 有无穷多值，因此平面上同一个
-方向可以和无穷多个角相对应．如果约定$\varphi$在$[0,2\pi]$内
+方向可以和无穷多个角相对应．如果约定$\varphi$在$[0,2\pi)$内
 取值，一个向量的方向角就被唯一确定了．
 
 \begin{figure}[htp]
@@ -913,7 +912,7 @@ $\vec{a}$的\textbf{方向角}．由三角学可知，$\varphi$
 \sin\varphi$. 任给一单位向量$\vec{e}$, 若方向角为$\varphi$, 则
 \[\vec{e}=(\cos\varphi,\; \sin\varphi)\]
 
-在(5.10)式两边相除可得
+在上面$\cos\varphi=\cos\alpha$, $\sin\varphi=\cos\beta$两式两边相除可得
 \[\tan \varphi =\frac{a_y}{a_x}\]
 
 \begin{figure}[htp]
@@ -960,7 +959,7 @@ $OB$之间的旋转角，也可说$\varphi$
 \[\cos\varphi =\cos\expval{\vec{a},\vec{b}}=\frac{a_xb_x+a_yb_y}{|\vec{a}|\left|\vec{b}\right|}\]
 两式相除又可得
 \[\tan\varphi =\frac{a_xb_y-a_yb_x}{a_xb_x+a_yb_y}\]
-为了便于记忆，(5.10)、(5.11)两式还可用行列式写出：
+为了便于记忆，(5.10)式及上面的正切公式还可用行列式写出：
 \[\sin\varphi=\frac{\begin{vmatrix}
     a_x& a_y\\b_x&b_y
 \end{vmatrix}}{|\vec{a}|\left|\vec{b}\right|},\qquad \tan\varphi=\frac{\begin{vmatrix}
@@ -987,7 +986,7 @@ $OB$之间的旋转角，也可说$\varphi$
 所以
 \[\cos\varphi=\frac{a_xb_x+a_yb_y}{|\vec{a}|\left|\vec{b}\right|}=\frac{\sqrt{3}\cdot \frac{\sqrt{3}}{2}+0\cdot \left(-\frac{1}{2}\right)}{\sqrt{3}\cdot 1}=\frac{\sqrt{3}}{2}\]
 于是$\varphi=\frac{\pi}{6}$, 或$\varphi=\frac{11}{6}\pi$. 又因为
-\[\sin\varphi=\frac{a_xb_y-a_yb_x}{|\vec{a}|\left|\vec{b}\right|}=\frac{\sqrt{3}\x \left(-\frac{1}{2}\right)+0\x \frac{\sqrt{3}}{2}}{\sqrt{3}\cdot 1}=-\frac{1}{2}\]
+\[\sin\varphi=\frac{a_xb_y-a_yb_x}{|\vec{a}|\left|\vec{b}\right|}=\frac{\sqrt{3}\x \left(-\frac{1}{2}\right)-0\x \frac{\sqrt{3}}{2}}{\sqrt{3}\cdot 1}=-\frac{1}{2}\]
 所以：$\varphi=\frac{11}{6}\pi$.
 \end{solution}
 
@@ -1073,6 +1072,7 @@ $OB$之间的旋转角，也可说$\varphi$
 \tkzDrawSegments(A,C B,D)
 \tkzAutoLabelPoints[center=E](A,C,B,D)
 \tkzDrawSegments[dashed](O,E)
+\draw[<->](-.5,1.4) arc (90:270:.4);
 \tkzLabelPoints[above left](E)
 
     \end{tikzpicture}
@@ -1137,7 +1137,7 @@ $\cos(\alpha-\beta) = \cos\alpha\cos\beta+\sin\alpha\sin\beta$.
 \begin{ex}
 \begin{enumerate}
     \item 已知$\vec{a}=(-2,2)$, 求$\vec{a}$的方向角$\varphi$.
-    \item 已知$\vec{R}=(\sqrt{3},-1)$, 求$R$的方向角$\varphi$.
+    \item 已知$\vec{R}=(\sqrt{3},-1)$, 求$\vec{R}$的方向角$\varphi$.
     
     \item 已知$\vec{a}=(-\sqrt{3},0)$, $\vec{b}=\left(\frac{\sqrt{3}}{2},1\right)$, 
     求$\vec{a}$到$\vec{b}$的旋转角．
@@ -1263,7 +1263,7 @@ $B(-5,4)$, $C(-6,-3)$, 求$\triangle ABC$的面积.
     \item 在坐标平面上，已知边长为$a$的正方形$ABCD$, $A$与原点重合，$\Vec{AB}$, $\Vec{AD}$的方向分别与$X$轴和$Y$轴的正方向一致，求四个顶点的坐标．
     \item 分别求点$(a,b)$关于$X$轴、$Y$轴的对称点的坐标．
     \item 已知$|\Vec{OA}|=7$、$|\Vec{OB}|=6$, 点$A$在第四象限，点$B$在第二象限，且$\expval{\Vec{OA},\eX}=45^{\circ}$, $\expval{\Vec{OB},\eY}=30^{\circ}$. 求$A$点、$B$点的坐标．
-    \item $\parallelogram{ABCD}$中的$\Vec{AB}=8$, $\Vec{AD}=5$, $\angle A=60^{\circ}$，如果取$A$作原点，$X$轴正方向与$\Vec{AB}$同向，$C$点所在的象
+    \item $\parallelogram{ABCD}$中的$\overline{AB}=8$, $\overline{AD}=5$, $\angle A=60^{\circ}$，如果取$A$作原点，$X$轴正方向与$\Vec{AB}$同向，$C$点所在的象
     限为第一象限，求它各顶点的坐标．
     \item 已知
 \begin{multicols}{2}
@@ -1615,7 +1615,7 @@ $P_1P_2$的方程为
 
 \begin{solution}
     因$\Vec{AB}=(-a,b)$, 由两点式可得
-\[\frac{x-a}{-a}=\frac{y}{b}\]
+\[\frac{x-a}{-a}=\frac{y-0}{b}\]
 整理得
 \begin{equation}
     \frac{x}{a}+\frac{y}{b}=1
@@ -1890,7 +1890,7 @@ $\Vec{OP}=(2,1)$, $\vec{n}=(2,-3)$,
 中$\frac{y_2-y_1}{x_2-x_1}$
 始终是个定值．容易
 看出，如果我们设$\ell$向上的方向与$X$轴正向的夹角为$\alpha$
-（$0\le \alpha\le \pi$），则
+（$0\le \alpha< \pi$），则
 \[\frac{y_2-y_1}{x_2-x_1}=\tan\alpha\]
 定值$\tan\alpha$叫做直线$\ell$的\textbf{斜率}，$\alpha$叫做直线的\textbf{倾角}．令$\tan\alpha=k$，则两点式方程就可写为
 \[y-y_1=k(x-x_1)\]
@@ -1906,7 +1906,7 @@ $(x_2,y_2)$是$\ell$上任意两个不同的点，则
     ax_1+by_1+c=0\\
 ax_2+by_2+c=0
 \end{align}
-$(5.24)-(5.25)$得：
+$(5.25)-(5.24)$得：
 \[a(x_2-x_1)+b(y_2-y_1)=0\]
 当$b\ne 0$可得
 \[\frac{y_2-y_1}{x_2-x_1}=-\frac{a}{b}\]
@@ -2337,10 +2337,7 @@ $\vec{n}_2=(a_2,b_2)$,
      \item 求出直线$a_1x+b_1y+c_1=0$与$\frac{x-x_0}{a_2}=\frac{y-y_0}{b_2}$
     垂直的条件．
     \item 下面直线中，哪两条互相垂直？
-\begin{enumerate}
-    \item $2x-3y=0,\qquad 2x+3y=0$
-    \item $3x+2y=0,\qquad 3x-2y=0$
-\end{enumerate}
+\[2x-3y=0,\qquad 2x+3y=0,\qquad 3x+2y=0,\qquad 3x-2y=0\]
 
     \item 求直线$\ell_1:\; x-y+2=0$与$\ell_2:\; x+y-4=0$的交
     点坐标，并绘图验证．
@@ -2384,6 +2381,8 @@ $a_2x+b_2y+c_2=0$的交点的充要条件是存在两个不全为零
 线的交点．所以$\lambda_1$和$\lambda_2$不能
 同时为零．
 \end{proof}
+
+平面内通过一定点的所有直线的集合，叫做\textbf{直线束}，那个定点叫做\textbf{束心}．方程(5.26)叫做通过两直线交点的\textbf{直线束方程}．
 
 \begin{figure}[htp]
     \centering
@@ -2641,7 +2640,7 @@ $\begin{cases}
 \begin{multicols}{2}
 \begin{enumerate}
 \item $\begin{cases}
-    x-y>0\\2x-<0
+    x-y>0\\2x-y<0
 \end{cases}$
 \item $\begin{cases}
     x+y-1<0\\x-y+2>0
@@ -2690,7 +2689,7 @@ $\begin{cases}
 \end{enumerate}
 \end{multicols}
 
-\item 用解析法证明等边三角形经一边上的一点到其它两边的
+\item 用解析法证明等边三角形经一边上的一点到其他两边的
 距离和等于这个边上的高．
 \item 正方形的一个顶点在原点，它的一边倾角为$\alpha$, 边长等
 于$a$, 求这个正方形的各边的直线方程．
@@ -2733,7 +2732,7 @@ $ap+bq=0$.
 半径的圆的方程（图5.37）.
 
 设$P(x,y)$是一动点，由圆的定义可知，点$P$在圆上当
-且仅当$|CP|=r$
+且仅当$|\Vec{CP}|=r$
 或$\Vec{CP}\cdot \Vec{CP}=r^2$．
 用坐标表示，可写为
 \begin{equation}\label{circle1}
@@ -3266,7 +3265,7 @@ $\overline{AP}^2+\overline{BP}^2=82$, 证明$P$点的轨迹是半径等于6的�
 \[(1+m^2)(x^2+y^2)-2a(x+my)=0\]
 \item 如果$a,b$是常数，$\theta$是一动角，求证两直线$x\cos\theta+
 y\sin\theta=a$与$x\sin\theta-y\cos\theta=b$的交点的轨迹是一个圆
-圆心在原点．半径等于$\sqrt{a^2+b^2}$.
+且圆心在原点，半径等于$\sqrt{a^2+b^2}$.
 \item 已知一圆与$Y$轴相切于$A(0,-3)$且半径$r=2$, 求
 此圆的方程．
 \item 已知一圆与两坐标轴相切且通过$A(2,9)$, 求它的方
@@ -3293,7 +3292,7 @@ y\sin\theta=a$与$x\sin\theta-y\cos\theta=b$的交点的轨迹是一个圆
     \item 已知一个三角形三边中点的坐标分别是$(x_1,y_1)$, $(x_2,
     y_2)$, $(x_3,y_3)$, 求三个顶点的坐标．
     \item 已知$A(-1,3)$, $B(4,1)$, 直线$AB$与$X$轴，$Y$轴
-    分别相交于$C$、$D$两点，求$C$、$D$两点分割$AB$的比
+    分别相交于$C$、$D$两点，求$C$、$D$两点分割$\Vec{AB}$的比
     值．
     \item 已知$P(x,y)$, $A(x_1,y_1)$, $B(x_2,y_2)$且
     \[x=x_1+t(x_2-x_1),\qquad y=y_1+t(y_2-y_1)\]
@@ -3309,7 +3308,7 @@ $-\frac{ax_1+by_1+c}{ax_2+by_2+c}$分割．
 和，用坐标法证明：两条对角线互相垂直．
 \item 已知$G$是$\triangle P_1P_2P_3$的重心，用坐标法证明：
 \[S_{GP_2P_3}=\frac{1}{3}S_{P_1P_2P_3}\]
-\item 已知$A(1,2)$、$B(8,4)$、$C(4,10)$, 求一点
+\item 已知$A(1,2)$、$B(8,4)$、$C(4,10)$, 求一点$P$
 使$\triangle PAB$、$\triangle PBC$、$\triangle PCA$的面积相等，并解释
 这个结果的几何意义．
 \item 一条直线经过点$P(1,-1)$, 它的倾角等于直线
@@ -3413,7 +3412,7 @@ $C_1:\; x^2+y^2-4x-3=0$和$C_2:\; x^2+y^2-4y-3
 \item 一动点到已知正方形的各顶点的距离平方和是一个常
 数，求这动点的轨迹方程，并说明轨迹是什么图形．
 \item 已知点$Q(4,0)$, 点$P(x,y)$是圆：$x^2+y^2=4$上一
-动点，求$PQ$中点的轨迹方程．
+动点，求$\overline{PQ}$中点的轨迹方程．
 \item 当$\lambda$为何值时，直线$\lambda x-y-\lambda-1=0$与圆$x^2+y^2-
 4x-2y+1=0$相交，相切或相离．
 \end{enumerate}

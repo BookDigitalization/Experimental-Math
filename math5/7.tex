@@ -243,7 +243,7 @@ $\therefore\quad $点$M$的极坐标为$\left(\sqrt{2},\frac{5}{4}\pi\right)$
     \begin{tikzpicture}[>=latex, scale=.8]
 \draw[->, thick](0,0)node[below]{$O$}--(3,0)node[right]{$A$};
 \draw[very thick](0,0) circle (1.5); 
-\draw[->](0,0)--node[right]{$a$}(120:1.5);
+\draw[->](0,0)--node[right]{$a$}(120:1.5)node[above left]{$P$};
     \end{tikzpicture}
     \caption{}
     \end{minipage}
@@ -350,7 +350,7 @@ $r$ & 0&  $0.78a$ & $1.57a$ & $2.36a$ & $3.14a$ & $3.93a$ & $4.71a$ & $5.50a$ & 
 \begin{figure}[htp]
     \centering
 \begin{tikzpicture}[>=latex, scale=.8]
-    \draw[->](0,0)--(5,0)node[right]{$A$};
+    \draw[->](0,0)node[below]{$O$}--(5,0)node[right]{$A$};
 \draw[domain=0:2.25*pi, samples=1000, thick]plot({\x r}: {.5*\x});
 \draw[domain=-2.25*pi:0, samples=1000, thick, dashed]plot({\x r}: {.5*\x});
 \end{tikzpicture}
@@ -400,7 +400,7 @@ $r$ & 0&  $0.78a$ & $1.57a$ & $2.36a$ & $3.14a$ & $3.93a$ & $4.71a$ & $5.50a$ & 
 \end{ex}
 
 \subsection{圆锥曲线的极坐标方程}
-在第六章中，我们给圆锥曲线下了一个统一的定
+在第六章1.4节中，我们给圆锥曲线下了一个统一的定
 义，现在我们根据这个定义来求圆锥曲线统一的极方程．
 
 已知圆锥曲线的焦点$F$和准线$\ell$, 过$F$作$\ell$的垂线，设
@@ -535,8 +535,8 @@ $\ell$是它的右准线（图7.10）．
     \item $r^2=\frac{4}{\cos^2\theta-\sin^2\theta}$
     \item $r^2=\frac{6}{2\cos^2\theta+3\sin^2\theta}$
     \item $r^2=\frac{1}{\cos^2\theta-2\sin^2\theta}$
-    \item $r^2=\frac{4\cos\theta}{\sin^2\theta}$
-    \item $r^2=\frac{4\sin\theta}{\cos^2\theta}$
+    \item $r=\frac{4\cos\theta}{\sin^2\theta}$
+    \item $r=\frac{4\sin\theta}{\cos^2\theta}$
 \end{enumerate}
 \end{multicols}
 
@@ -814,7 +814,7 @@ $$\varphi  =\tan\alpha$$
 
 
 \begin{solution}
-列表
+(1) 列表
 \begin{center}
 \begin{tabular}{ccccccccc}
 \hline
@@ -826,7 +826,7 @@ $y$&$\cdots$ & $-27$&$-8$ &0&1&8&27  &$\cdots$ \\
 \end{tabular}
 \end{center}
 
-用表中的数对$(x,y)$描点作图，就可
+(2) 用表中的数对$(x,y)$描点作图，就可
 得到方程的曲线（图7.16）．这条曲线叫做\textbf{半立方抛物线}．
 
 \begin{figure}[htp]
@@ -865,7 +865,7 @@ $y$&$\cdots$ & $-27$&$-8$ &0&1&8&27  &$\cdots$ \\
 \end{enumerate}
 \item 一质点沿方向$\vec{S}=\left(\cos\frac{\pi}{6},\sin\frac{\pi}{6}\right)$, 
 从点$P_0(1,2)$, 
-以3m/s的速率运动，写出运动轨迹的参数方程．
+以3米/秒的速率运动，写出运动轨迹的参数方程．
 \item 已知一条直线上两点$M_1(x_1,y_1)$, $M_2(x_2,y_2)$, 以
 分点$M(x,y)$分$\overline{M_1M_2}$所成的比$\lambda$为参数．写出这条直线的参数方程．
 \item 已知抛物线$x=2pt^2$, $y=2pt$, 写出通过对应于参数
