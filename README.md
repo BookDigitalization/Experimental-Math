@@ -1,6 +1,6 @@
 # 中学数学实验教材（第一至六册）重排本
 
-本项目用 LaTeX 重排了 1980 年代初出版发行的《中学数学实验教材》第一至六册。
+本项目用 LaTeX 重排了 1980 年代初出版发行的《中学数学实验教材》第一至六册，并对照原书逐页校对过；另有一个与之并存的 Typst 版（见[下文](#typst-版)）。
 
 这一套中学数学实验教材是教育部委托北京师范大学、中国科学院数学研究所、人民教育出版社、北京师范学院、北京景山学校等单位组成的领导小组组织“中学数学实验教材编写组”，根据美国加州大学伯克利分校数学系项武义教授的《关于中学实验数学教材的设想》编写的。书中部分内容从现在看来已经超纲或过时，请阅读时仔细甄别。
 
@@ -27,6 +27,11 @@
 - `fig/`：从扫描版中截取的点阵图（矢量图均直接以 TikZ / tkz-euclide / CircuiTikZ 绘制在正文中）。
 
 第六册的上、下册在原书中各自从第一章编号，合订本沿用这一编号方式，详见 [`math6/README.md`](math6/README.md)。
+
+其他目录：
+
+- [`typst/`](typst/)：Typst 版，包括六册的正文、插图、共用模板和 LaTeX → Typst 转换工具；
+- [`review/`](review/)：各册的审阅报告和存疑条目核对清单（见[来源与修订](#来源与修订)）。
 
 ## 编译
 
@@ -61,9 +66,11 @@ $env:PAPER = "a4paper"; just book 3    # Windows PowerShell
 
 书中不少 TikZ 插图是固定尺寸。B5 和 A4 都检查过；比 B5 小的纸（如 `a5paper`）会有大量插图超出版心，不建议使用。
 
-### Typst 版（试验中）
+### Typst 版
 
-[`typst/`](typst/) 中是与 LaTeX 版并存的 Typst 重排本，六册都已完成，用 `just typst 1` … `just typst 6` 编译，详见 [`typst/README.md`](typst/README.md)。
+[`typst/`](typst/) 中是与 LaTeX 版并存的 Typst 重排本，六册都已完成。需要 [Typst](https://typst.app/) 0.15 或更高版本（插图用 CeTZ 绘制，编译时自动下载），用 `just typst 1` … `just typst 6` 编译。
+
+LaTeX 版是底本：第一册的 Typst 正文是转换后人工校对的，第二至六册的正文和插图都由 `typst/tools/` 中的脚本从 LaTeX 源码生成。两版的内容一致，版式相近，但分页不逐页相同。详见 [`typst/README.md`](typst/README.md)。
 
 ### 手动编译
 
@@ -105,7 +112,8 @@ CI 在 Linux 上编译，中文字体使用 ctex 的 `ubuntu` 字体集（Noto C
 
 ## 来源与修订
 
-本仓库原为第一册的重排项目，现整合了原作者 [jamesfang8499](https://github.com/jamesfang8499) 已停止维护的各册仓库：
+本仓库整合了原作者 [jamesfang8499](https://github.com/jamesfang8499) 的各册仓库：
+[math1](https://github.com/jamesfang8499/math1)、
 [math2](https://github.com/jamesfang8499/math2)、
 [math3](https://github.com/jamesfang8499/math3)、
 [math4](https://github.com/jamesfang8499/math4)、
@@ -113,9 +121,22 @@ CI 在 Linux 上编译，中文字体使用 ctex 的 `ubuntu` 字体集（Noto C
 [math6-1](https://github.com/jamesfang8499/math6-1)、
 [math6-2](https://github.com/jamesfang8499/math6-2)。
 
+这些上游仓库中有 issue 多年无人处理（最早的提于 2023 年初，至今没有回复），因此判定原作者已停止维护，改为在本仓库继续修订。
+
 整合时相对上游所做的修订：
 
 - **math2**：修正若干排版与数学错误（如 `\alpha=\beta` → `\alpha\Rightarrow\beta`、不等号方向等），`\tkzDrawLine[bisector]` 改为 `\tkzDefLine[bisector]`，并补充 `fig/` 图片；
 - **math3、math5**：上游仓库缺少 `fig/` 目录导致无法编译，已从原作者发布的 PDF 中按原尺寸提取补全（math3 共 1 张，math5 共 35 张）；
 - **math6**：将上游 math6-1、math6-2 合并为与其他各册相同的结构（合订本 + 上、下册拆分版；下册 `1~4.tex` 改名为 `4~7.tex`）。合订本统一导言区时不再加载 `physics` 宏包（它会把上册中表示除号的 `\div` 改为散度），下册用到的 `\dd`、`\arccot`、`\arcsec` 单独定义；
 - **math6（下册）**：修正 `\node at (0,0);` 缺少标签文本的错误（上游 [#9](https://github.com/jamesfang8499/math6-2/issues/9)），以及 `tkz-base` / `tkz-euclide` 加载顺序颠倒的问题（上游 [#11](https://github.com/jamesfang8499/math6-2/issues/11)）。
+
+整合之后又对全部六册做了两轮校对：
+
+1. **审阅**：逐行精读正文，重算例题与推导，找出录入笔误、数学错误、编号与引用错误等，各册的报告是 [`review/math1.md`](review/math1.md) … [`review/math6.md`](review/math6.md)，共约 1700 条；
+2. **对照原书校对**：对照原书扫描件逐页核对文字、公式和插图。审阅中存疑的条目逐条在原书中核实，结论记在 [`review/存疑条目核对清单.md`](review/存疑条目核对清单.md)。
+
+校对的原则：
+
+- 原书也可能有错，先做数学判断：重排本对、原书错时保留重排本并记录；明显的印刷错误直接改正；
+- 统一用现代用字，如“象”→“像”、“那末”→“那么”、“其它”→“其他”（“图象”“象限”等词不改）；
+- 原书带“\*”的选学节、小节标题也加“\*”，选做题、选学例题同样标出。
