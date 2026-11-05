@@ -280,6 +280,8 @@ $A'B'C'D'$就是正方形$ABCD$的直观图．（图1.2）．
 \end{example}
 
 第一种画法：
+
+画法：
 \begin{enumerate}
     \item 在水平平面上画$X'$轴和$Y'$轴，两轴交于$O'$点，
     且使$\angle X'O'Y'=135^{\circ}$.
@@ -311,6 +313,8 @@ $A'B'C'D'$就是正方形$ABCD$的直观图．（图1.2）．
 \end{figure}
 
 第二种画法
+
+画法：
 \begin{enumerate}
     \item 作$\angle X'O'Y'=120^{\circ}$, 并取$X'$轴和$Y'$轴的对称
     轴$Z'$轴为铅直线．
@@ -583,7 +587,7 @@ $X'O'Y'$表示水平平面，$Y'O'Z'$平面和$X'O'Z'$平面都表
 \tkzDrawPolygon[thick](A,B,C)
 \tkzDrawPolygon[thick](A',B',C')
 \tkzDrawSegments[dashed](A,A' B,B' C,C')
-\draw[thick](C)--(2,1.5);
+\draw[thick](C)--(2,.5);
 \draw[thick](C')--(2,-1.5)--(B');
 \draw[thick](2,-1.5)--(A');
 \node at (2,-3){(2)};
@@ -676,7 +680,7 @@ $X'O'Y'$表示水平平面，$Y'O'Z'$平面和$X'O'Z'$平面都表
     \end{figure}   
 
 
-    \item 根据三视图，用两种方法画出它们所表示的立体直观图．
+    \item 根据下列三视图，用两种方法画出它们所表示的立体直观图．
     \begin{figure}[htp]
       \centering
     \includegraphics[scale=.5]{fig/ch1-tu7.png}
@@ -771,8 +775,8 @@ $a$和$b$的值分别是多少？
     \item $    A\cap A=A,\qquad     A\cup A=A$
 \item $    A\cap I=A,\qquad    A\cup I=I$
 \item $    A\cap \emptyset=\emptyset,\qquad  A\cup \emptyset=A$
-\item $    A\cap B\subset A \quad \text{且}\quad A\cap B\subset B$
-\item $A\subset A\cup B \quad \text{且}\quad B\subset A\cup B$
+\item $    A\cap B\subseteq A \quad \text{且}\quad A\cap B\subseteq B$
+\item $A\subseteq A\cup B \quad \text{且}\quad B\subseteq A\cup B$
 \item $A\cup \bar{A}=I,\qquad A\cap \bar{A}=\emptyset,\qquad \overline{\bar{A}}=A$    
 \end{itemize}
 \end{blk}
@@ -1398,13 +1402,13 @@ $B$\\
 
 
 \begin{blk}
-  {基本性质3}经过不在同一直线上三点，有且只有一个平面．（图1.21(1)）
+  {基本性质3}经过不在同一直线上三点，有且只有一个平面．（图1.21(2)）
 \end{blk}
  
 这条基本性质换个说法就是：“经过不在同一条直线上的任
 意三点，可以作一个平面，且只可以作一个平面”，也可以说：“不共线三点确定一个平面”．
 
-例如，一扇门当在门框安上两个合页（如$A$、$B$两个点）门可以自由转动，但再锁上一把锁之后（如$C$点），门就被固定了，这就是利用了上述平面的基本性质．（图1.21(2)）
+例如，一扇门当在门框安上两个合页（如$A$、$B$两个点）门可以自由转动，但再锁上一把锁之后（如$C$点），门就被固定了，这就是利用了上述平面的基本性质．（图1.21(1)）
 
 \begin{figure}[htp]
   \centering
@@ -1520,7 +1524,7 @@ $\because\quad $经过直线$AB$上的两点$A$、$B$与$C$点可以作一个平
   有了平面的定义，我们就可以判定空间的一个点的集合是否是平面了．
 
   \begin{example}
-设集合$A=\{x|ox=4{\rm cm},\; \text{$o$点是空间$V$的一个定点}\}$，试问$A$是否是平面？ 
+设集合$A=\{X|OX=4{\rm cm},\; \text{$O$点是空间$V$的一个定点}\}$，试问$A$是否是平面？ 
   \end{example}
 
   \begin{solution}
@@ -1541,7 +1545,9 @@ $\therefore\quad \angle OPN>\angle ONP$
 
 $\therefore\quad ON>OP$
 
-$\therefore\quad P\notin A$\footnote{如果$MN$过$O$点，则$O\notin A$.} 
+$\therefore\quad P\notin A$\footnote{如果$MN$过$O$点，则$O\notin A$.}
+
+因为集合$A$不满足平面定义之第三条特征性质，所以集合$A$不是一个平面．
   \end{solution}
 
 \begin{figure}[htp]
@@ -1600,11 +1606,11 @@ $\therefore\quad P\notin A$\footnote{如果$MN$过$O$点，则$O\notin A$.}
   \begin{proof}
 $\because\quad \ell_1\cap\ell_2=A$
 
-$\therefore\quad \ell_1$和$\ell_2$确定一个平面$\pi$
+$\therefore\quad \ell_1$和$\ell_2$确定一个平面$\pi$（为什么？）
 
 $\because\quad B\in\ell_2,\quad  C\in\ell_1$
 
-$\therefore\quad \ell_3\subset$平面$\pi$
+$\therefore\quad \ell_3\subset$平面$\pi$（为什么？）
 
 $\therefore\quad \ell_1,\ell_2, \ell_3\subset \pi$
 
@@ -1648,13 +1654,13 @@ $\therefore\quad \ell_1,\ell_2, \ell_3\subset \pi$
 \begin{proof}
 $\because\quad A$、$B$、$D$三点不共线，
 
-$\therefore\quad $过$A$、$B$、$D$三点可以确定一个平面$ABD$.
+$\therefore\quad $过$A$、$B$、$D$三点可以确定一个平面$ABD$.（为什么？）
 
-同理，过$C$、$B$、$D$三点可以确定一个平面$CBD$. 并且，平面$ABD\cap $平面$CBD=BD$
+同理，过$C$、$B$、$D$三点可以确定一个平面$CBD$. 并且，平面$ABD\cap $平面$CBD=BD$（为什么？）
 
 又$\because\quad E,H\in$平面$ABD$
 
-$\therefore\quad EH\subset $平面$ABD$
+$\therefore\quad EH\subset $平面$ABD$（为什么？）
 
 同理$\because\quad F,G\in$平面$CBD$
 
@@ -1998,11 +2004,11 @@ $\therefore\quad P\in BD$.
 
 \begin{blk}{定义}
 \begin{enumerate}
-  \item  空间两条直线$\ell_1$和$\ell_2$相交$\Longleftarrow\ell_1\cap\ell_2=P$
+  \item  空间两条直线$\ell_1$和$\ell_2$相交$\Longleftrightarrow\ell_1\cap\ell_2=P$
   （$P$是$\ell_1$与$\ell_2$的唯一公共点）
-  \item  空间两条直线$\ell_1$和$\ell_2$平行（$\ell_1\parallel \ell_2$）$\Longleftarrow \ell_1$和$\ell_2$
+  \item  空间两条直线$\ell_1$和$\ell_2$平行（$\ell_1\parallel \ell_2$）$\Longleftrightarrow \ell_1$和$\ell_2$
   共面且$\ell_1\cap\ell_2=\emptyset$或$\ell_1=\ell_2$（重合）
-  \item  空间两条直线$\ell_1$和$\ell_2$异面$\Longleftarrow \ell_1$和$\ell_2$不共面．
+  \item  空间两条直线$\ell_1$和$\ell_2$异面$\Longleftrightarrow \ell_1$和$\ell_2$不共面．
 \end{enumerate}
 \end{blk}
 
@@ -2225,7 +2231,7 @@ $\therefore\quad BB'O'O$是平行四边形
 
 $\therefore\quad AA'\displaystyle\mathop{=}^{\parallel} OO',\quad BB'\displaystyle\mathop{=}^{\parallel}OO'$
 
-$\therefore\quad AA'\displaystyle\mathop{=}^{\parallel}BB'$
+$\therefore\quad AA'\displaystyle\mathop{=}^{\parallel}BB'$（为什么？）
 
 $\therefore\quad AA'B'B$是平行四边形
 
@@ -2382,6 +2388,9 @@ $c$，设$a\parallel b$，$a\bot c$，那么$b$与$c$是什么关
     \tkzLabelPoints[above](C,D)
     \tkzLabelPoints[left](A,D_1)
     \tkzLabelPoints[right](B,C_1)
+    \tkzDefPoints{2.1/2.6/P}
+    \tkzDrawPoints(P)
+    \tkzLabelPoints[above](P)
   \end{tikzpicture}
   \caption*{第3题}
   \end{minipage}
