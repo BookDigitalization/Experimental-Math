@@ -2021,7 +2021,7 @@ $\therefore\quad P\in BD$.
 \begin{tikzpicture}
 \begin{scope}
 \tkzDefPoints{0/0/A, 2/0/B, 3.5/1.5/C, -.5/1.2/A'}
-\tkzDefPointsBy[translation= from A to A'](B,C,D){B',C',D'}
+\tkzDefPointsBy[translation= from A to A'](B,C){B',C'}
 \tkzDrawPolygon(A,B,C,C',B',A')
 \tkzDrawSegments(B,B')
 \tkzLabelPoint[above right](A){$M$}
@@ -5974,7 +5974,7 @@ $\ell\subset \pi$, $\ell\bot PQ$, 则$\ell\bot MQ$.
 \end{enumerate}
 
 此外还可利用：
-\begin{enumerate}[start=5]
+\begin{enumerate}\setcounter{enumi}{4}
 \item 过平面外一点作已知平面的平行平面．
 \item 过平面上一条直线作已知平面的相交平面等．
 \end{enumerate}
