@@ -280,6 +280,8 @@ $A'B'C'D'$就是正方形$ABCD$的直观图．（图1.2）．
 \end{example}
 
 第一种画法：
+
+画法：
 \begin{enumerate}
     \item 在水平平面上画$X'$轴和$Y'$轴，两轴交于$O'$点，
     且使$\angle X'O'Y'=135^{\circ}$.
@@ -311,6 +313,8 @@ $A'B'C'D'$就是正方形$ABCD$的直观图．（图1.2）．
 \end{figure}
 
 第二种画法
+
+画法：
 \begin{enumerate}
     \item 作$\angle X'O'Y'=120^{\circ}$, 并取$X'$轴和$Y'$轴的对称
     轴$Z'$轴为铅直线．
@@ -583,7 +587,7 @@ $X'O'Y'$表示水平平面，$Y'O'Z'$平面和$X'O'Z'$平面都表
 \tkzDrawPolygon[thick](A,B,C)
 \tkzDrawPolygon[thick](A',B',C')
 \tkzDrawSegments[dashed](A,A' B,B' C,C')
-\draw[thick](C)--(2,1.5);
+\draw[thick](C)--(2,.5);
 \draw[thick](C')--(2,-1.5)--(B');
 \draw[thick](2,-1.5)--(A');
 \node at (2,-3){(2)};
@@ -676,7 +680,7 @@ $X'O'Y'$表示水平平面，$Y'O'Z'$平面和$X'O'Z'$平面都表
     \end{figure}   
 
 
-    \item 根据三视图，用两种方法画出它们所表示的立体直观图．
+    \item 根据下列三视图，用两种方法画出它们所表示的立体直观图．
     \begin{figure}[htp]
       \centering
     \includegraphics[scale=.5]{fig/ch1-tu7.png}
@@ -771,8 +775,8 @@ $a$和$b$的值分别是多少？
     \item $    A\cap A=A,\qquad     A\cup A=A$
 \item $    A\cap I=A,\qquad    A\cup I=I$
 \item $    A\cap \emptyset=\emptyset,\qquad  A\cup \emptyset=A$
-\item $    A\cap B\subset A \quad \text{且}\quad A\cap B\subset B$
-\item $A\subset A\cup B \quad \text{且}\quad B\subset A\cup B$
+\item $    A\cap B\subseteq A \quad \text{且}\quad A\cap B\subseteq B$
+\item $A\subseteq A\cup B \quad \text{且}\quad B\subseteq A\cup B$
 \item $A\cup \bar{A}=I,\qquad A\cap \bar{A}=\emptyset,\qquad \overline{\bar{A}}=A$    
 \end{itemize}
 \end{blk}
@@ -1398,13 +1402,13 @@ $B$\\
 
 
 \begin{blk}
-  {基本性质3}经过不在同一直线上三点，有且只有一个平面．（图1.21(1)）
+  {基本性质3}经过不在同一直线上三点，有且只有一个平面．（图1.21(2)）
 \end{blk}
  
 这条基本性质换个说法就是：“经过不在同一条直线上的任
 意三点，可以作一个平面，且只可以作一个平面”，也可以说：“不共线三点确定一个平面”．
 
-例如，一扇门当在门框安上两个合页（如$A$、$B$两个点）门可以自由转动，但再锁上一把锁之后（如$C$点），门就被固定了，这就是利用了上述平面的基本性质．（图1.21(2)）
+例如，一扇门当在门框安上两个合页（如$A$、$B$两个点）门可以自由转动，但再锁上一把锁之后（如$C$点），门就被固定了，这就是利用了上述平面的基本性质．（图1.21(1)）
 
 \begin{figure}[htp]
   \centering
@@ -1520,7 +1524,7 @@ $\because\quad $经过直线$AB$上的两点$A$、$B$与$C$点可以作一个平
   有了平面的定义，我们就可以判定空间的一个点的集合是否是平面了．
 
   \begin{example}
-设集合$A=\{x|ox=4{\rm cm},\; \text{$o$点是空间$V$的一个定点}\}$，试问$A$是否是平面？ 
+设集合$A=\{X|OX=4{\rm cm},\; \text{$O$点是空间$V$的一个定点}\}$，试问$A$是否是平面？ 
   \end{example}
 
   \begin{solution}
@@ -1541,7 +1545,9 @@ $\therefore\quad \angle OPN>\angle ONP$
 
 $\therefore\quad ON>OP$
 
-$\therefore\quad P\notin A$\footnote{如果$MN$过$O$点，则$O\notin A$.} 
+$\therefore\quad P\notin A$\footnote{如果$MN$过$O$点，则$O\notin A$.}
+
+因为集合$A$不满足平面定义之第三条特征性质，所以集合$A$不是一个平面．
   \end{solution}
 
 \begin{figure}[htp]
@@ -1600,11 +1606,11 @@ $\therefore\quad P\notin A$\footnote{如果$MN$过$O$点，则$O\notin A$.}
   \begin{proof}
 $\because\quad \ell_1\cap\ell_2=A$
 
-$\therefore\quad \ell_1$和$\ell_2$确定一个平面$\pi$
+$\therefore\quad \ell_1$和$\ell_2$确定一个平面$\pi$（为什么？）
 
 $\because\quad B\in\ell_2,\quad  C\in\ell_1$
 
-$\therefore\quad \ell_3\subset$平面$\pi$
+$\therefore\quad \ell_3\subset$平面$\pi$（为什么？）
 
 $\therefore\quad \ell_1,\ell_2, \ell_3\subset \pi$
 
@@ -1648,13 +1654,13 @@ $\therefore\quad \ell_1,\ell_2, \ell_3\subset \pi$
 \begin{proof}
 $\because\quad A$、$B$、$D$三点不共线，
 
-$\therefore\quad $过$A$、$B$、$D$三点可以确定一个平面$ABD$.
+$\therefore\quad $过$A$、$B$、$D$三点可以确定一个平面$ABD$.（为什么？）
 
-同理，过$C$、$B$、$D$三点可以确定一个平面$CBD$. 并且，平面$ABD\cap $平面$CBD=BD$
+同理，过$C$、$B$、$D$三点可以确定一个平面$CBD$. 并且，平面$ABD\cap $平面$CBD=BD$（为什么？）
 
 又$\because\quad E,H\in$平面$ABD$
 
-$\therefore\quad EH\subset $平面$ABD$
+$\therefore\quad EH\subset $平面$ABD$（为什么？）
 
 同理$\because\quad F,G\in$平面$CBD$
 
@@ -1998,11 +2004,11 @@ $\therefore\quad P\in BD$.
 
 \begin{blk}{定义}
 \begin{enumerate}
-  \item  空间两条直线$\ell_1$和$\ell_2$相交$\Longleftarrow\ell_1\cap\ell_2=P$
+  \item  空间两条直线$\ell_1$和$\ell_2$相交$\Longleftrightarrow\ell_1\cap\ell_2=P$
   （$P$是$\ell_1$与$\ell_2$的唯一公共点）
-  \item  空间两条直线$\ell_1$和$\ell_2$平行（$\ell_1\parallel \ell_2$）$\Longleftarrow \ell_1$和$\ell_2$
+  \item  空间两条直线$\ell_1$和$\ell_2$平行（$\ell_1\parallel \ell_2$）$\Longleftrightarrow \ell_1$和$\ell_2$
   共面且$\ell_1\cap\ell_2=\emptyset$或$\ell_1=\ell_2$（重合）
-  \item  空间两条直线$\ell_1$和$\ell_2$异面$\Longleftarrow \ell_1$和$\ell_2$不共面．
+  \item  空间两条直线$\ell_1$和$\ell_2$异面$\Longleftrightarrow \ell_1$和$\ell_2$不共面．
 \end{enumerate}
 \end{blk}
 
@@ -2225,7 +2231,7 @@ $\therefore\quad BB'O'O$是平行四边形
 
 $\therefore\quad AA'\displaystyle\mathop{=}^{\parallel} OO',\quad BB'\displaystyle\mathop{=}^{\parallel}OO'$
 
-$\therefore\quad AA'\displaystyle\mathop{=}^{\parallel}BB'$
+$\therefore\quad AA'\displaystyle\mathop{=}^{\parallel}BB'$（为什么？）
 
 $\therefore\quad AA'B'B$是平行四边形
 
@@ -2382,6 +2388,9 @@ $c$，设$a\parallel b$，$a\bot c$，那么$b$与$c$是什么关
     \tkzLabelPoints[above](C,D)
     \tkzLabelPoints[left](A,D_1)
     \tkzLabelPoints[right](B,C_1)
+    \tkzDefPoints{2.1/2.6/P}
+    \tkzDrawPoints(P)
+    \tkzLabelPoints[above](P)
   \end{tikzpicture}
   \caption*{第3题}
   \end{minipage}
@@ -2547,11 +2556,11 @@ $AB\displaystyle\mathop{=}^{\parallel}EF$.
 \subsection{直线与平面平行}
 \begin{blk}
   {定理}
-  若直线$a\not\subset$平面$\alpha$，直线$a\subset$平面$\beta$，$\alpha\cap \beta=b$，则$\alpha\parallel a$的充要条件是$a\parallel b$.
+  若直线$a\not\subset$平面$\alpha$，直线$a\subset$平面$\beta$，$\alpha\cap \beta=b$，则$a\parallel\alpha$的充要条件是$a\parallel b$.
 \end{blk}
 
 \begin{proof}
-先证必要性．
+（1）先证必要性．
 设 $a\parallel\alpha$，$a\subset \beta$，$\alpha\cap\beta=b$（图1.33）
 由于：
 \[a\cap b=a\cap(\alpha\cap \beta)=(a\cap\alpha)\cap \beta=\emptyset\cap\beta=\emptyset\]
@@ -2582,7 +2591,7 @@ $\therefore\quad  a\parallel b$.
   \caption{}
 \end{figure}
 
-再证充分性．借助上图，由于
+（2）再证充分性．借助上图，由于
 \[a\cap\alpha\subset \beta\cap\alpha=b\]
 
 $\therefore\quad a$若与$\alpha$相交，其交点必在$b$上，
@@ -2595,7 +2604,7 @@ $\therefore\quad a\cap\alpha=\emptyset,\quad a\parallel\alpha$.
 \end{proof}
 
 
-\begin{example}
+\begin{example}\label{ex:1-fig34}
   如图1.34，已知：$\alpha\cap\beta=c$，$a\parallel \alpha$，$b\parallel \beta$，$a\parallel b$，求证：$a\parallel c$，$b\parallel c$.
 \end{example}
 
@@ -2714,6 +2723,8 @@ $\therefore\quad  B_1O\parallel$ 平面$A_1C_1D$．
 \tkzLabelPoints[below](A_1,B_1)
 \tkzLabelPoints[left](A,D_1)
 \tkzLabelPoints[right](B,C_1)
+\tkzDefPoint(2.2,1.9){P}\tkzDrawPoint(P)
+\tkzLabelPoints[left](P)
 \end{tikzpicture}
   \caption*{第3题}
 \end{figure}
@@ -2778,7 +2789,7 @@ $\therefore\quad  B_1O\parallel$ 平面$A_1C_1D$．
 \begin{blk}
    {定理} 在空间$V$中，和相异两点$P$、$P'$距离相等的点的
 集合是一个平面$\pi$, 它和线段$PP'$相交于$PP'$的中点$M$, 而且
-$PP'$和$\pi$内的任何直线都垂直（我们称$\pi$为线段$PP'$的垂直平分
+$PP'$和$\pi$的任何直线都垂直（我们称$\pi$为线段$PP'$的垂直平分
 面）．
 \end{blk}
 
@@ -2817,7 +2828,8 @@ $\therefore\quad C\in\pi$.
 
 现在我们来证明$PP'$垂直于$\pi$内任何一条直线．
 
-设 $\pi\cap PP'=M$
+设 $\pi\cap PP'=M$（$\because\ M\in PP'$，$M\in\pi$，同时$P\notin\pi$）
+
 令$NM$是$\pi$上的任一直线，如果$PP'$, $NM$所确定的平面
 为$\pi'$, 那么连接$PN$, $P'N$, 则在平面$\pi'$上，
 $\triangle PMN\cong \triangle P'MN$
@@ -3016,7 +3028,7 @@ $\therefore\quad \ell_2'=\ell_2$, 即$\ell_2\parallel \ell_1$\footnote{这里同
 
 \begin{example}
 如图1.40(1), $A_1$、$A_2$是空间一点$A$在主视图平面$\alpha$
-和俯视平面$\beta$上的主视图和俯视图。求证$A_1A_2\bot XY$.
+和俯视图平面$\beta$上的主视图和俯视图。求证$A_1A_2\bot XY$.
 
 为证明方便起见，我们把$A$点二视图（图1.40(1)）改画
 成图1.40(2). $\alpha$在铅直位置，$\beta$在水平位置，$A$点在$\alpha,\beta$上的
@@ -3199,7 +3211,7 @@ $\therefore\quad PD\bot \alpha$.
   \tkzLabelPoints[above](C,A,B)
   \tkzLabelPoints[below](C',A',B')
   \tkzLabelPoints[right](D)
-  \tkzLabelPoints[right](D')
+  \tkzLabelPoints[below left](D')
   \node at (2,-2.5){(4)};
   
   \tkzDrawSegments[dashed](A,A' B,B' C,C' D,D')
@@ -3337,8 +3349,7 @@ $\therefore\quad \ell$在$\alpha$上的射影是直线$A'B'$.
 \end{blk}
 
 
-\begin{example}
-  已知：$AB$、$AC$是平面$\alpha$的两条
+已知：$AB$、$AC$是平面$\alpha$的两条
 斜线段，$AO\bot\alpha$, $OC$、
 $OB$分别是$AC$、$AB$在$\alpha$内的射影．（图1.44）
 
@@ -3347,7 +3358,6 @@ $OB$分别是$AC$、$AB$在$\alpha$内的射影．（图1.44）
   \item $AB=AC\quad \Longleftrightarrow \quad OC=OB$
   \item $AB>AC\quad \Longleftrightarrow \quad OC<OB$
 \end{enumerate}
-\end{example}
 
 \begin{figure}[htp]
   \centering
@@ -3508,7 +3518,7 @@ $\therefore\quad AA'\parallel BB'$
 $\therefore\quad AA'$和$BB'$确定一个平面
 $\beta$, 过$A$引$AB''\parallel A'B'$交
 $BB'$于$B''$，则$\angle BAB''=\theta$，
-且AA'B'B”是矩形，
+且$AA'B'B''$是矩形，
 
 $\therefore\quad A'B'=AB''=AB\cos\theta$.
 \end{proof}
@@ -3688,7 +3698,7 @@ $\triangle ABC$所在的平面$\alpha$, $OP=h$，$AB=a$, 求$P$点到$\triangle 
 $\because\quad BC\subset \alpha$, $OD$是$PD$
 在$\alpha$内的射影。
 
-$\therefore\quad PD\bot BC$
+$\therefore\quad PD\bot BC$（为什么？）
 
 $\therefore\quad PD$之长就是$P$点到$BC$边的距离。
 
@@ -3930,7 +3940,7 @@ $\therefore\quad PD=\sqrt{OP^2+OD^2}=\sqrt{h^2+\frac{3a^2}{6^2}}=\frac{1}{6}\sqr
   
   $\therefore\quad P_3P_2\bot\pi,\quad P_3P_2\bot \ell_2$, 
   
-  又$P_3P_2\bot l_1$
+  又$P_3P_2\bot \ell_1$
   
   $\therefore\quad P_3P_2$是$\ell_1$和$\ell_2$的公垂线． 
   \end{proof}
@@ -4098,7 +4108,7 @@ $\therefore\quad CD$等于对角线的三分之一．
 
 \begin{enumerate}
   \item 矩形$ABCD$的一边$AB$在平面$\pi$内转动时，$AB$的对边$CD$
-  是否总和面$\pi$平行？为什么？
+  是否总和平面$\pi$平行？为什么？
   \item “一条直线与一个平面平行时，这条直线就平行于平面
   内的任何直线”的说法正确吗？
   \item 求证：和三角形两边同时垂直的直线，也和第三边垂直．
@@ -4178,7 +4188,7 @@ $AB\bot BC$, $AB\bot BD$, $BC,BD\subset $平面$\pi$, $E\in\pi$, $BE=7$cm. 试�
 \end{enumerate}
 \item 从平面外一点$D$向平面$\pi$引垂线$DA$及斜线$DB$、$DC$, 
 $A$为垂足，$B$、$C$均为斜足，已知 $DA=a$, $\angle BDA=\angle CDA=60^{\circ}$，$\angle BDC=90^{\circ}$，求$BC$的长.
-\item 求证：两条平行线和同一个平面所成角相等．其逆命
+\item 求证：两条平行线和同一个平面所成的角相等．其逆命
 题成立吗？
 \item 求证：如果平面$\pi'$和直线$a$都垂直于平面$\pi$, 并且$a\not\subset\pi'$，那么$a\parallel \pi'$.
 
@@ -4371,7 +4381,7 @@ $PB$, $O$、$A$、$B$分别为垂足和斜足，已知 $PA=8$cm, $PB=5$cm, 它�
 \begin{ex}
 \begin{enumerate}
   \item 如果平面$\alpha\parallel$平面$\beta$, $\ell\subset \alpha$, 求证 $\ell\parallel \beta$.
-  \item 平面上相异三条直线可有如下各种位置关系．如果把各组的三条直线换成空间的三个平面，那么这三个平面可有哪几种位置关系？试画图说明之．
+  \item 平面上相异三条直线可有如下各种位置关系．如果把上述三条直线换成空间的三个平面，那么这三个平面可有哪几种位置关系？试画图说明之．
   \item 空间两个平面在各种位置关系的情况下，把空间分成哪几部分？试画出图形，并说明差集$V-(\pi_1\cup \pi_2)$是哪几块空间区域？
   \item 如果$\pi_1$、$\pi_2$、$\pi_3$是空间$V$中三个平面，那么差集$V-(\pi_1\cup \pi_2\cup \pi_3)$是哪几块空间区域？
 \end{enumerate}
@@ -4422,7 +4432,7 @@ $\alpha\cap\beta=\ell\ne \emptyset$
 
 $\because\quad a\parallel \beta,\quad b\parallel \beta$ 且$\ell\subset\alpha$,
 
-$\therefore\quad \ell \parallel a$且 $\ell\parallel b$
+$\therefore\quad \ell \parallel a$且 $\ell\parallel b$（为什么？）
 
 $\therefore\quad a\parallel b$，这和题设$a\cap b=P$矛盾，
 
@@ -4444,8 +4454,8 @@ $\therefore\quad \alpha\parallel \beta$.
 \tkzDrawArc[color=black, thick](O,B)(B')
 \tkzDrawArc[color=black, thick](O',C)(C')
 \tkzInterLC(C,D)(O,B) \tkzGetPoints{t1}{t2}
-\tkzDrawSegments(t2,D)
-\tkzDrawSegments[dashed](t2,C)
+\tkzDrawSegments(t1,D)
+\tkzDrawSegments[dashed](t1,C)
 \tkzLabelPoint[above right](A){$\beta$}
 \tkzLabelPoint[above right](A'){$\alpha$}
 \tkzDefPoints{0.2/1.7/b', 2/2.3/b, 0.3/2.3/a', 2/1.7/a}
@@ -4646,7 +4656,7 @@ $\therefore\quad AB\parallel A'B'$.
 
   同理，$BC\parallel B'C'$,
 
-$\therefore\quad$ 平面$ABC\parallel $ 平面$A'B'C'$.
+$\therefore\quad$ 平面$ABC\parallel $ 平面$A'B'C'$（为什么？）.
   \end{proof}
 
 \begin{figure}[htp]\centering
@@ -4740,7 +4750,7 @@ $\therefore\quad$ 平面$ABC\parallel $ 平面$A'B'C'$.
 
 
 
-\begin{example}
+\begin{example}\label{ex:1-fig61}
   已知如图1.61, 平面$\alpha\parallel$ 平面$\beta\parallel$平面$\gamma$，直线$\ell_1$和$\ell_2$分别交$\alpha$、$\beta$、$\gamma$于$A_1$、$A_2$、$A_3$和$A_1'$、$A_2'$、$A_3'$.
 
   求证：$\frac{A_1A_2}{A_2A_3}=\frac{A_1'A_2'}{A_2'A_3'}$
@@ -4862,8 +4872,8 @@ $a\parallel m$, $b\parallel m$, 但$a\cap b=P$, 与平行公理矛盾，因此�
 \tkzDrawArc[color=black, thick](O,B)(B')
 \tkzDrawArc[color=black, thick](O',C)(C')
 \tkzInterLC(C,D)(O,B) \tkzGetPoints{t1}{t2}
-\tkzDrawSegments(t2,D)
-\tkzDrawSegments[dashed](t2,C)
+\tkzDrawSegments(t1,D)
+\tkzDrawSegments[dashed](t1,C)
 \tkzLabelPoint[above right](A){$\beta$}
 \tkzLabelPoint[above right](A'){$\alpha$}
 \tkzDefPointsBy[translation= from A to A''](B,C,D){B'',C'',D''}
@@ -4988,7 +4998,7 @@ $OB\parallel O'B'$, 则$\angle AOB=\angle A'O'B'$. 因此，过二面角的棱�
 
 
 \begin{blk}
- {定义} 以二面角的棱上任意一点为端点，在它的两个面内
+ {定义} 以二面角棱上任意一点为端点，在它的两个面内
 分别作垂直于棱的两条射线，这两条射线所成的角叫做二面
 角的平面角。在图1.65中$\angle AOB$就是二面角$\alpha-\ell-\beta$的平面
 角。 
@@ -5429,7 +5439,7 @@ $\therefore\quad $在直角三角形$CED$中，
 \addcontentsline{toc}{subsection}{习题1.6}
 \begin{enumerate}
   \item 画两个相交平面，在这两个相交平面内，各画一条直
-  线，使它们成为平行直线；相交直线；异面直线。
+  线，使它们成为(1)平行直线；(2)相交直线；(3)异面直线。
   \item 画两个相交平面，在一个平面内画一条直线和另一个平
   面平行。
   \item 在共点$O$的三条不共面直线$a$、$b$、$c$上，在$O$点的两侧分别
@@ -5528,7 +5538,7 @@ $\pi$
  {定义} 设有两个集合$A$、$B$, 如果按某种对应关系使集合
 $A$的任一元素$a$都有集合$B$中的唯一的一个元素$b$和它相对应，
 那么我们就说这种对应关系为集合$A$到集合$B$的映射，并说$b$
-是$a$的象，$a$是$b$的原象。 
+是$a$的像，$a$是$b$的原像。
 \end{blk}
 
 例如，设有两个集合$A$、$B$, 
@@ -5571,7 +5581,7 @@ $y$轴上的线段$A'B'$的映射。
 
 \begin{blk}
   {定义} 空间$V$对给定平面$\pi$的对称是一具有下列性质的
-映射$R_{\pi}:V\mapsto V$, 对任何点$P\in V$, 它的像是$R_{\pi}(P)=P'$, 
+映射$R_{\pi}:V\to V$, 对任何点$P\in V$, 它的像是$R_{\pi}(P)=P'$, 
 线段$PP'$被平面$\pi$垂直平分。
 \end{blk}
 
@@ -5623,8 +5633,9 @@ $y$轴上的线段$A'B'$的映射。
   \end{figure}
 
 \begin{proof}
+设$R_{\pi}(P)=P'$, $R_{\pi}(Q)=Q'$, 以下分几种情况来证明．
 \begin{enumerate}
-  \item 若$P,Q\in \pi$, 则$P'=P$, 
+  \item 若$P,Q\in \pi$, 则$P'=P$,
   $Q'=Q$, 显然有：$d(P',Q')=  d(P,Q)$. (图1.73)
   
   \item 若$P\in\pi$, $Q\notin\pi$, 由定义可
@@ -5740,6 +5751,7 @@ $y$轴上的线段$A'B'$的映射。
 \tkzLabelPoints[right](P)
 \tkzLabelPoints[left](P')
 \tkzLabelPoint[right](D){$\pi_1$}
+\tkzLabelPoint[below left](B){$\ell$}
 
 
 
@@ -5784,7 +5796,7 @@ $y$轴上的线段$A'B'$的映射。
 \begin{blk}
   {定义} 空间图形$F$对于给定平面
 $\pi$的对称是一个具有下列性质的映射
-$R_{\pi}:\; F\mapsto F$, 对于任何点$P\in F$, 其像
+$R_{\pi}:\; F\to F$, 对于任何点$P\in F$, 其像
 为$R_{\pi}(P)=P'$, 线段$PP'$被$\pi$垂直平分。$\pi$称为$F$的对称面，
 $P$和$P'$互称关于$\pi$的对称点。
 \end{blk}
@@ -5797,8 +5809,8 @@ $P$和$P'$互称关于$\pi$的对称点。
   1.78）。
 \end{example}
 
-\begin{solution}
-  正方体$ABCD-  A'B'C'D'$上任取一点$P$(不妨
+\begin{proof}
+  在正方体$ABCD-  A'B'C'D'$上任取一点$P$(不妨
   取点$P\in$面$BAA'B'$) 
   
   设对角面
@@ -5831,7 +5843,7 @@ $\therefore\quad PP'$
   
   因此，平面$\pi$是正方体
   $ABCD-A'B'C'D'$的对称面。
-\end{solution}
+\end{proof}
 
 
 \section*{习题1.7}
@@ -5936,7 +5948,7 @@ $\ell\subset \pi$, $\ell\bot PQ$, 则$\ell\bot MQ$.
 
 \begin{blk}
     {定义} 空间$V$对给定平面$\pi$的对称是一个具有下列性质
-的映射$R_{\pi}:\; V\mapsto V$; 对于任何点$P\in V$, 它的像是$R_{\pi}(P)=P'$, 
+的映射$R_{\pi}:\; V\to V$; 对于任何点$P\in V$, 它的像是$R_{\pi}(P)=P'$, 
 线段$PP'$被平面$\pi$垂直平分．
 \end{blk}
 
@@ -5951,7 +5963,7 @@ $\ell\subset \pi$, $\ell\bot PQ$, 则$\ell\bot MQ$.
 为一平面上的问题来解决，如定理：经平面外一点唯一存在
 一个平面和已知平面平行的证明中，就把直线$a,b,m$集中
 到一个平面$\pi'$上，从而用平面几何的知识加以解决．有的问
-题则需要一个以上的辅助平面，如图1.61之例2, 就利用了
+题则需要一个以上的辅助平面，如图1.61之例\ref{ex:1-fig61}, 就利用了
 两个相交的辅助平面来解决的．作辅助平面的方法取决于平
 面的确定条件：
 \begin{enumerate}
@@ -5962,7 +5974,7 @@ $\ell\subset \pi$, $\ell\bot PQ$, 则$\ell\bot MQ$.
 \end{enumerate}
 
 此外还可利用：
-\begin{enumerate}
+\begin{enumerate}[start=5]
 \item 过平面外一点作已知平面的平行平面．
 \item 过平面上一条直线作已知平面的相交平面等．
 \end{enumerate}
@@ -5973,7 +5985,7 @@ $\ell\subset \pi$, $\ell\bot PQ$, 则$\ell\bot MQ$.
 性定理的证明，就利用了辅助集合$\pi_1$. 
 
 另外在论证问题过程，如果直接证法不易解决就利用间
-接证法，如反证法和同一法等，如图1.34的例1,就是利用
+接证法，如反证法和同一法等，如图1.34的例\ref{ex:1-fig34},就是利用
 同一法使直线$c=a'=b'$解决的．而在平行平面的传递性中
 又用反证法．反证法和同一法常常是解数学问题的有利工
 具．
@@ -6145,7 +6157,7 @@ $AC\subset \pi_1$, 且$AC$与$\ell$的交角为$\theta_2$,
 
 求证：$\sin\theta=\sin\theta_1\cdot \sin\theta_2$.
 
-提示：分$0<\theta_1<\frac{\pi}{2},\; \theta_1=\frac{\pi}{2},\; \frac{\pi}{2}<\theta_1<\pi$画图证明）
+（分$0<\theta_1<\frac{\pi}{2},\; \theta_1=\frac{\pi}{2},\; \frac{\pi}{2}<\theta_1<\pi$画图证明）
 \item 已知：一个直角三角形的两直角边为$a,b$, 把这个三角
 形沿斜边上的高折成直二面角，求两直角边夹角的余
 弦．

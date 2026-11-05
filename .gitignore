@@ -36,3 +36,6 @@ __pycache__/
 
 # tools/tikzref.py 默认的输出目录（LaTeX 版插图的对照 PNG）
 typst/*/_ref/
+
+# Claude Code 的个人提示词（只在本机，不提交）
+CLAUDE.local.md

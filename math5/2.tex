@@ -12,7 +12,7 @@
 
 \begin{blk}{定义}
     一条直线$\ell$在空间作平行于固定方向的运动，但
-总和任一固定的曲线$C$相交，所产生的曲面叫做柱面、移动
+总和任一固定的曲线$C$相交，所产生的曲面叫做柱面．移动
 的直线$\ell$所在的每个位置叫做柱面的母线，而在移动中始终
 和母线相交的曲线$C$叫做柱面的准线．
 \end{blk}
@@ -192,7 +192,7 @@ B'C'D'E'$. 也有用棱柱一条对角线的两
 \begin{blk}{定义} 
     底面是平行四边形的四棱柱叫
     做平行六面体．其中侧棱和底面斜交的叫
-    斜平行六面体，侧棱和底垂直的叫直平行六面体．底面是
+    斜平行六面体，侧棱和底面垂直的叫直平行六面体．底面是
     矩形的直平行六面体叫做长方体．交于一个顶点的三条棱的
     长相等的长方体叫做正方体，也叫立方体．（图2.6）
 \end{blk}
@@ -360,27 +360,33 @@ $\therefore\quad {DB'}^2={AA'}^2+{BD}^2={AA'}^2+AB^2+AD^2$
 
 \begin{blk}
    {定理} 正棱柱两底中心的连线垂直于底面（请读者自证）
-   
-   圆柱体的两个底面是相等的圆面，它们所在的平
+\end{blk}
+
+\begin{enumerate}\setcounter{enumi}{3}
+\item 圆柱体的两个底面是相等的圆面，它们所在的平
 面平行．
-\end{blk}
+\end{enumerate}
 
-\begin{blk}{定义} 
+\begin{blk}{定义}
     圆柱体两底面之间的距离叫做圆柱的高．
-
-    圆柱体的母线平行且相等，并且垂直于两个底
-面，母线的长等于圆柱的高．
 \end{blk}
+
+\begin{enumerate}\setcounter{enumi}{4}
+\item 圆柱体的母线平行且相等，并且垂直于两个底
+面，母线的长等于圆柱的高．
+\end{enumerate}
 
 \begin{blk}{定义}
 空间图形$F$对给定直线$\ell$为轴的轴对称是具有如
 下性质的映射$R_1:F\mapsto F$, 对于任意点$P\in F$, 有它的像$R_1(P)
 =P'\in F$, 并且线段$PP'$被$\ell$垂直平分．这时$\ell$称为$F$的对
 称轴．$P$、$P'$叫做关于$\ell$的对称点．
-
-圆柱两底圆心连线垂直于底面，并且是圆柱的对
-称轴（简称圆柱的轴）．
 \end{blk}
+
+\begin{enumerate}\setcounter{enumi}{5}
+\item 圆柱两底圆心连线垂直于底面，并且是圆柱的对
+称轴（简称圆柱的轴）．
+\end{enumerate}
 
 已知：如图2.9圆柱$AD$\footnote{圆柱可用它的两个底面内不在同一条母线上的两个点的字母来
 表示．}中，
@@ -423,7 +429,7 @@ $BD$ ($O'\in BD$).
 
 $\because\quad $圆柱的两个底面平行．
 
-$\therefore\quad AC\parallel BD$ 且AC、BD分别为两底面圆的直径．
+$\therefore\quad AC\parallel BD$ 且$AC$、$BD$分别为两底面圆的直径．
 
 $\because\quad $圆柱的两底面是全等的圆面．
 
@@ -690,7 +696,7 @@ $\therefore\quad X_1O_1\parallel X_2O_2$
 锥的侧棱．
 
 如果棱锥的底面是三角形、四边形……$n$边形，那么棱锥
-就分别叫做\textbf{三棱锥，四棱锥，五棱锥……$n$棱锥}（见图2.15）、棱锥的表示法可以用表示顶点和底面顶点的
+就分别叫做\textbf{三棱锥，四棱锥，五棱锥……$n$棱锥}（见图2.15的(1)、(2)、(3)）．棱锥的表示法可以用表示顶点和底面顶点的
 几个字母来表示，例如棱锥$S-ACD$. 
 \end{blk}
 
@@ -755,7 +761,7 @@ $\therefore\quad X_1O_1\parallel X_2O_2$
 正多边形的边）、高、斜高、侧棱和底面的夹角、侧面和底
 面所成的角、斜高和高所成的角等等．在这些元素中只要给
 出其中两个元素（至少有一线段），就可以通过解直角三角
-形和底面正多边形来求出其它元素．
+形和底面正多边形来求出其他元素．
 
 \begin{example}
 已知棱锥底面是边长为12的三角形，它的各个侧
@@ -817,8 +823,8 @@ $\therefore\quad SO=OD=2\sqrt{3}$ (cm)
     \centering
 \begin{tikzpicture}[yscale=.4]
 \tkzDefPoints{1.5/0/C, -1.5/0/A, 0/8/S, 0/0/O}
-\tkzDefPoint(-45:1.5){D}
-\tkzDefPoint(-45-90:1.5){B}
+\tkzDefPoint(-45:1.5){B}
+\tkzDefPoint(-45-90:1.5){D}
 \draw[dashed](1.5,0) arc (0:180:1.5);
 \draw(1.5,0) arc (0:-180:1.5);
 
@@ -931,7 +937,7 @@ $\therefore\quad OA\bot AT$
     
     \item 证明：六条棱长相等三棱锥是正三棱锥．
     \item 试用两种画法分别画出底面边长为6cm, 高为15cm的
-    正六棱锥的直观图，比例尺为
+    正六棱锥的直观图，比例尺为$\dfrac{1}{3}$．
     \item 用第二种画法画出底面半径是2cm, 母线为3cm的圆锥的
     直观图．
     \item 用第一种画法画出底面边长为2cm, 高为4cm的正五棱锥
@@ -1242,8 +1248,7 @@ $\therefore\quad DF=OD-O_1D_1=\frac{5}{6}{\sqrt{3}}-\frac{\sqrt{3}}{3}=\frac{\sq
     \item 下图是正四棱台的二视图，
     （图中所标尺寸单位是cm）
     试用两种画法画出它的直观
-    图，比例尺为
-    1/3.
+    图，比例尺为$\dfrac{1}{3}$．
 \end{enumerate}
 \end{ex}
 
@@ -1337,7 +1342,7 @@ $XOZ$、$YOZ$三个平面的画出表示半径是$R$的圆的三个椭圆，再
 球有下列一些性质：
 \begin{enumerate}
     \item 同球的半径（或直径）相等．
-    \item 球被平面所截得截面是一圆面．
+    \item 球被平面所截得截面是一个圆面．
 \end{enumerate}
 
 \begin{figure}[htp]
@@ -1459,8 +1464,8 @@ $A$、$B$两点间的球面距离．
 \tkzDefPointsBy[translation= from b to c](a){d}
 \tkzDrawPolygon(a,b,c,d)
 \tkzInterLC(a,b)(O,M) \tkzGetPoints{t1}{t2}
-\tkzDrawArc[thick, color=black](O,t1)(t2)
-\tkzDrawArc[dashed, color=black](O,t2)(t1)
+\tkzDrawArc[dashed, color=black](O,t1)(t2)
+\tkzDrawArc[color=black](O,t2)(t1)
 \tkzLabelPoint[above right](a){$\alpha$}
 \tkzDefPoints{0/1.8/K, .75/1.75/K'}
 \tkzLabelPoints[left](K',K)
@@ -1582,7 +1587,7 @@ $\therefore\quad AM=AO\cos45^{\circ}\approx 6370\x0.7071\approx 4504$
     如图2.31, $O$为球心，过半径
 $OA$和$OB$作平面，则这个平面所截
 的圆为大圆，在这个圆上已知圆心角
-$\angle AOB=50^{\circ}$, $AB=5\pi$cm. 设球的半
+$\angle AOB=50^{\circ}$, $\wideparen{AB}=5\pi$cm. 设球的半
 径为$R$, 则
 \[5\pi=\left(\frac{50\pi}{180}\right)\cdot R\quad \Rightarrow\quad R=18\]
 
@@ -1693,7 +1698,7 @@ $\angle AOB=50^{\circ}$, $AB=5\pi$cm. 设球的半
 \end{figure}
 
 
-多面体的面至少有四个顶点，多面体依照它的面数分别
+多面体至少有四个面，多面体依照它的面数分别
 称为\textbf{四面体、五面体、……$n$面体}等等．
 
 多面体中最简单的是凸多面体，所谓凸多面体是指对它
@@ -1765,7 +1770,7 @@ $n$&3&4&5&3&3\\
     \item 试证：以正八面体各面中心为顶点，可成一个正六面体．
     \item \begin{enumerate}
         \item 说出正四面体、正六面体、正八面体、正十二面
-    体、正二十面体各多少个顶点数，棱数和面数．
+    体、正二十面体各有多少个顶点数，棱数和面数．
     \item 如果以$F$表示正多面体的面数，$V$表示顶点数，以
     $E$表示棱数，那么你能发现$F$、$V$和$E$的关系式吗？
 \end{enumerate}
@@ -1871,7 +1876,7 @@ $\therefore\quad BC\bot$截面$AVM$
 $\therefore\quad DM\bot BC,\qquad \angle AMD$为二面角$D-BC-A$的平面角．
 
 已知$\angle AMD=\angle AVO=90^{\circ}-\alpha$，
-又在$\triangle ADM$中，$\angle ADM=(90^{\circ}-\alpha)+\alpha=90^{\circ}$
+又在$\triangle ADM$中，$\angle ADM=180^{\circ}-[(90^{\circ}-\alpha)+\alpha]=90^{\circ}$
 
 $\therefore\quad \triangle ADM$是直角三角形，
 
@@ -2303,7 +2308,7 @@ $120^{\circ}$, 这两个切点的球面距离是$12\pi$cm, 求这个球的半
 垂直，它们的长都等于2m, 求棱台的高和对角面的面
 积．
 \item 已知圆锥的底面的面积$Q=324\pi{\rm cm^2}$, 平行于底面截面
-的面积$Q'=182\frac{1}{4}{\rm cm^2}$, 截面与底面间的距离$OO'$为
+的面积$Q'=182\frac{1}{4}\pi{\rm cm^2}$, 截面与底面间的距离$OO'$为
 30cm, 求圆锥的顶角（母线间最大夹角）．
 \item 圆锥底面半径为$r$, 高为$h$, 在它里面作各侧面都是正方
 形的内接正三棱柱，求这棱柱的每条棱的长．
@@ -2389,7 +2394,7 @@ N$）
     S_{\text{棱柱侧}}&=\ell\cdot FG+\ell\cdot GL+\cdots+\ell\cdot NF\\
     &=\ell(FG+GL+\cdots+NF)=\ell\cdot p
 \end{split}\]
-其中：$p$是直截面周长．
+（其中，$p=$直截面周长）
 
 棱柱的侧面积也可以从它的表面展开图得出，图2.43是
 斜棱柱与直棱柱的侧面展开图．
@@ -2399,7 +2404,7 @@ N$）
 
 斜棱柱的侧面展开图如图2.43(1)所示，将直线$FG\cdots F$
 （即直截面周长展开所在的直线）下方的部分图形向上平
-移，使$AB$与$A_1B_1$, $BC$与$B_1C_1$，$EA$与$E_1A_1$分别重合，便
+移，使$AB$与$A_1B_1$, $BC$与$B_1C_1$……$EA$与$E_1A_1$分别重合，便
 拼得一个矩形．这个矩形的长为棱柱直截面的周长，它的宽
 等于斜棱柱的侧棱，因此矩形的面积就是斜棱柱的侧面积．
 \end{proof}
@@ -2508,13 +2513,13 @@ N$）
 \begin{solution}
 设棱柱底面边长是$x$cm, 侧棱长为$y$cm, 根据已知条件，有
 \begin{numcases}{}
-    2x^2+y^2=81\\
+    2x^2+y^2=9^2\\
 4xy+2x^2=144
 \end{numcases}
 $(2.6)+(2.7)$, 得
-\[4x^2+4xy+y^2=225\]
-即：$(2x+y)^2=225$ 两边开方，得
-\[2x+y=15\]
+\[4x^2+4xy+y^2=15^2\]
+即：$(2x+y)^2=15^2$ 两边开方，得
+\[2x+y=15\qquad (\because\ x>0,\ y>0,\ 2x+y>0)\]
 (2.7)的两边除以2, 有
 \begin{equation}
     2xy+x^2=72
@@ -2522,15 +2527,17 @@ $(2.6)+(2.7)$, 得
 $(2.6)-(2.8)$, 有
 \[x^2-2xy+y^2=9\]
 即$(x-y)^2=9$, 两边开方，得$x-y=\pm 3$
+
+解：
 \[\begin{cases}
     2x+y=15\\x-y=3
-\end{cases},\qquad \begin{cases}
+\end{cases}\quad\text{或}\quad \begin{cases}
     2x+y=15\\x-y=-3
 \end{cases}\]
-解得：
+得
 \[\begin{cases}
     x=6\\y=3
-\end{cases},\qquad \begin{cases}
+\end{cases}\quad\text{或}\quad \begin{cases}
     x=4\\y=7
 \end{cases}\]
 
@@ -2900,7 +2907,7 @@ S_{\triangle VAC}&=\frac{1}{2}AC\cdot VF=\frac{1}{2}\cdot 10\cdot 2\sqrt{37}=10\
     设内接圆柱的底面半径为$r$, 圆锥的底面半径为$R$. 那么内接
     圆柱的侧面积
  \[   S_{\text{圆柱侧}}=2\pi rx\]
-又$\because\quad \frac{r}{R}=\frac{H-x}{H}$
+又$\because\quad \frac{r}{R}=\frac{H-x}{H}$（为什么？）
 
 $\therefore\quad r=R-\frac{R}{H}x$
 
@@ -3421,6 +3428,7 @@ $\therefore\quad S_{\text{圆台侧}}=2\pi MR\cdot CD$
 \tkzLabelPoints[below](H)
 \tkzLabelPoints[above](H')
 \tkzDrawSegments(O,H')
+\tkzLabelSegment[above, pos=.4](O,H){$h_n$}
 
 \end{tikzpicture}   
     \caption{}
@@ -3465,7 +3473,7 @@ $\therefore\quad S_{\text{圆台侧}}=2\pi MR\cdot CD$
 \[\sigma_n=2\pi h_n\cdot h<S_{\text{球带}}<2\pi R(a'e')=S_n\]
 且当$n$增大时，$h_n\to R$, $a'e'\to h$.
 
-最后，我们要说明，当$n$增大时，$S_n-\sigma_n$可以小到
+（3）最后，我们要说明，当$n$增大时，$S_n-\sigma_n$可以小到
 任意小．
 
 $\because\quad \frac{S_n}{\sigma_n}=\frac{R(a'e')}{h_n\cdot h}=\frac{R}{h_n}\cdot \frac{a'e'}{h}=\frac{R^2}{h^2_n},\quad \frac{S_n-\sigma_n}{S_n}=\frac{R^2-h^2_n}{R^2}$
@@ -3703,7 +3711,7 @@ $a=6.25$cm, $b=11.2$cm, 求它的侧面积．
 \item 在一个正四棱台内，有一个以它的上底为底面，下底的
 中心为顶点的棱锥，如果棱台上、下底面边长分别为3cm和4cm，棱锥与棱台的侧面积相等，求棱台的高．
 \item 若圆台的上、下底面半径分别是$r_1$、$r_2$, 它的侧面积等于两底面积之和，试求圆台的母线长．
-\item 若圆台的上、下底半径分别是$r_1$、$r_2$, 母线长为$m$, 若$r_1:r_2:m=2:1:3$, 圆台的侧面积为$144\pi{\rm cm^2}$, 求$r_1$, $r_2$和$m$.
+\item 圆台的上、下底半径分别是$r_1$、$r_2$, 母线长为$m$, 若$r_1:r_2:m=2:1:3$, 圆台的侧面积为$144\pi{\rm cm^2}$, 求$r_1$, $r_2$和$m$.
 \item 旋转轴在正方形所在平面内且通过它的一个顶点，并和以此点为端点的对角线垂直，求旋转面的面积．
 \item 设圆台的上、下底面半径分别是$r'$、$r$, 母线长是$\ell$, 圆台侧面积展开后所得扇环的圆心角是$\theta$, 求证：
 \[\theta=\frac{r-r'}{\ell}\cdot 360^{\circ}\]
@@ -3780,7 +3788,7 @@ $\therefore\quad  V (B) > V (A)$
     \caption{}
 \end{figure}
 
-我国古数学家祖暅早在公元五世纪，便提出了性质
+我国古代数学家祖暅早在公元五世纪，便提出了性质
 3, 他说：“缘幂势既同，则积不容异”．并首先应用
 这个原理推得球体积的计算公式．因而我们把性质3叫
 做祖暅原理．在欧洲直到十七世纪才有意大利的卡发雷利提
@@ -4056,8 +4064,8 @@ $\therefore\quad V_{\text{斜棱柱}AD'}=V_{\text{直棱柱}FI'}$
 \tkzDefPointsBy[translation = from B to C](A){D}
 \tkzDefPointsBy[translation = from A to A_1](B,C,D){B_1,C_1,D_1}
 \tkzDrawPolygon(A_1,B_1,C_1,D_1)
-\tkzDrawSegments(A,B B,C A,A_1 B,B_1 C,C_1)
-\tkzDrawSegments[dashed](D,B B_1,D_1 A,D C,D D,D_1)
+\tkzDrawSegments(A,B B,C A,A_1 B,B_1 C,C_1 B_1,D_1)
+\tkzDrawSegments[dashed](D,B A,D C,D D,D_1)
 \tkzDefPoints{.5/1.5/Q, 2.3/1/P}
 \tkzDrawSegments[dashed](P,Q)
 \tkzLabelPoints[below](A,B)
@@ -4747,7 +4755,7 @@ $ABCD$相切于$CD$边上一点$E$.
 \tkzLabelPoints[above right](E,H)
 \tkzDrawSegments(C,O D,O F,J)
 \tkzDrawLines[dashdotted](E,O)
-\tkzInterLC(F,J)(O,A)  \tkzGetPoints{K}{L}
+\tkzInterLC(F,J)(O,A)  \tkzGetPoints{L}{K}
 \tkzLabelPoints[below](K,L)
 \tkzLabelPoints[below right](O)
 \end{tikzpicture}
@@ -4819,8 +4827,8 @@ $\therefore\quad V_{\text{球}}=\frac{4}{3}\pi R^3$
 \tkzInterLL(D,O)(A,B)\tkzGetPoint{M} 
 \tkzInterLL(C,O)(F,F')\tkzGetPoint{G'} 
 \tkzInterLL(C,O)(A,B)\tkzGetPoint{N} 
-\tkzInterLC(A,B)(O,E) \tkzGetPoints{P}{Q}
-\tkzInterLC(F,F')(O,E) \tkzGetPoints{K}{K'}
+\tkzInterLC(A,B)(O,E) \tkzGetPoints{Q}{P}
+\tkzInterLC(F,F')(O,E) \tkzGetPoints{K'}{K}
 \tkzInterLL(E,O)(F,F')\tkzGetPoint{H}
 \tkzInterLL(E,O)(A,B)\tkzGetPoint{S}
 \tkzDrawPolygon(A,B,C,D)
@@ -5222,7 +5230,7 @@ $\frac{1}{2}$cm, 求截得球缺的球
 \addcontentsline{toc}{section}{复习题二}
 
 \begin{enumerate}
-    \item 证明：三棱锥的对棱互相垂直．
+    \item 证明：正三棱锥的对棱互相垂直．
     \item 证明：正$n$棱柱每相邻两个侧面所成二面角等于
 \[\frac{(n-2)\x 180^{\circ}}{n}\]
 
@@ -5287,7 +5295,7 @@ $\pi L^2\sin\theta \tan\theta$
 \item 两个圆锥有公共高，且它们的顶点为公共高的两端，若
 第一个圆锥的母线为$\ell$, 顶角为$2\alpha$, 第二个圆锥的顶角
 为$2\beta$, 求这两个圆锥公共部分的体积．
-（提示，两个圆锥的交线是一圆，圆的半径$r$满足
+（提示，两个圆锥的交线是一个圆，圆的半径$r$满足
 $r(\cot\alpha+\cot\beta)=\ell\cos\alpha$）
 \item 若球冠的顶点和底面圆上一点间的距离是$a$, 求球冠的
 面积．
@@ -5343,6 +5351,7 @@ $V_2$.
 \fill[pattern=north east lines, draw](0,0)--(4,0)--(2,5.656)--(0,5.656)--(0,0);
 \draw[fill=white](0,0) arc (-90:90:2.828);
 \draw[->](0,2.828)--node[fill=white]{$r$}+(30:2.828);
+\node at (0,5.656)[above left]{$\ell$};
     \end{tikzpicture}
     \caption*{第37题}
     \end{minipage}
@@ -5453,7 +5462,7 @@ $F_2$叫做椭圆的焦点．
 式．
 
 \subsection{圆锥曲线的性质}
-在一中前面我们用平面斜截圆柱面而得椭圆这一类型的曲
+在一中我们用平面斜截圆柱面而得椭圆这一类型的曲
 线，并且利用上、下切球和定点到球面的切线长相等来推导
 它的性质：
 $PF_1+PF_2=$定长．
@@ -5464,7 +5473,8 @@ $PF_1+PF_2=$定长．
 明．现在我们把一中的证明略作
 修改，证明如下：
 
-我们依然可以作一个
+\setcounter{subsubsection}{1}%
+（一）我们依然可以作一个
 上切球，它和圆锥面相切于圆
 $C_1$, 和截割平面相切于$F_1$点，
 也可以作一个下切球，它和圆锥

@@ -135,7 +135,7 @@ $\Vec{OA}=\vec{a}$, $\Vec{OB}=\vec{b}$, $\Vec{OA_1}=\alpha_1\vec{a}$, $\Vec{OA_2
     \item 如果$\Vec{OA}=\vec{a}$, $\Vec{OB}=\vec{b}$, $\Vec{OC}=\vec{c}$, 那么，$A$、$B$、
     $C$三点共线的充要条件是存在三个不全为零的实数$\alpha$、
     $\beta$、$\gamma$使
-  \[  \alpha\vec{a}+\beta\vec{b}+\gamma\vec{c}=0\quad \text{且}\quad \alpha+\beta+\gamma=0\]
+  \[  \alpha\vec{a}+\beta\vec{b}+\gamma\vec{c}=\vec{0}\quad \text{且}\quad \alpha+\beta+\gamma=0\]
     （提示：应用直线的向量方程(4.1)）
 \end{enumerate}
 \end{ex}
@@ -425,7 +425,7 @@ $\overline{AH}=\frac{1}{3} \overline{AC},\qquad \overline{MH}=\frac{1}{3} \overl
 \tkzInterLL(A',B')(A,B) \tkzGetPoint{P}
 \tkzInterLL(A',C')(A,C) \tkzGetPoint{R}
 \tkzInterLL(C',B')(C,B) \tkzGetPoint{Q}
-\tkzLabelPoints[right](O')
+\tkzLabelPoint[right](O'){$O$}
 \tkzLabelPoints[above](P,R)
 \tkzLabelPoints[below](Q)
 \tkzDrawSegments(Q,B' Q,B Q,P P,A' P,A R,A' R,A)
@@ -476,7 +476,7 @@ $\Vec{PR}$与$\Vec{PQ}$共
 \[x\Vec{OP}+y\Vec{OQ}+z\Vec{OR}=\vec{0}\]
 并且$x+y+z=0$．
 
-$x$、$y$、$z$至少有一不为0, 
+$x$、$y$、$z$至少有一不为0（由本节“直线的向量方程”练习第5题），
 这便证明了$P$、$Q$、$R$三点共线．
 \end{proof}
 
@@ -764,7 +764,7 @@ a^2&=b^2+c^2-2bc\cos A
 \tkzDrawSegments(B,C)
 \tkzLabelPoints[below](B,P,C)
 \tkzLabelPoints[above](A)
-\draw[->](P)--node[above]{$\vec{a}$}+(160:1);
+\draw[->](P)--node[above]{$\vec{e}$}+(160:1);
 
     \end{tikzpicture}
     \caption{}
@@ -784,7 +784,7 @@ $\vec{e}\bot \Vec{AP}$（图4.14）
   \Vec{AB}\cdot \vec{e}&=|\Vec{AB} |\cos(90^{\circ}-\alpha)=|\Vec{AB} |\sin\alpha\\
   \Vec{AC}\cdot \vec{e}&=|\Vec{AC}|\cos(90^{\circ}+\alpha)=-|\Vec{AC}|\sin\alpha  
 \end{split}\]
-\[\frac{\Vec{AB}}{\Vec{AC}}=\frac{\Vec{AB}\cdot \vec{e}}{\Vec{AC}\cdot \vec{e}}=\frac{|(\Vec{AP}+\Vec{PB})\cdot \vec{e}|}{|(\Vec{AP}+\Vec{PC})\cdot \vec{e}|}=\frac{|\Vec{PB}\cdot \vec{e}|}{\Vec{PC}\cdot \vec{e}}=\frac{\Vec{PB}}{\Vec{PC}}\]
+\[\frac{|\Vec{AB}|}{|\Vec{AC}|}=\frac{|\Vec{AB}\cdot \vec{e}|}{|\Vec{AC}\cdot \vec{e}|}=\frac{|(\Vec{AP}+\Vec{PB})\cdot \vec{e}|}{|(\Vec{AP}+\Vec{PC})\cdot \vec{e}|}=\frac{|\Vec{PB}\cdot \vec{e}|}{|\Vec{PC}\cdot \vec{e}|}=\frac{|\Vec{PB}|}{|\Vec{PC}|}\]
 \end{proof}
 
 
@@ -1295,7 +1295,7 @@ $P$点引圆割线交圆于$B$、$C$点，则有$\Vec{PB}\cdot \Vec{PC}=|OP|^2-R
 \tkzDefPoint(80:.5){C1}
 \tkzDefPoint(60:1){C2}
 \draw(O) circle(1);
-\tkzInterLC(C1,P)(O,C2) \tkzGetPoints{B}{C}
+\tkzInterLC(C1,P)(O,C2) \tkzGetPoints{C}{B}
 
 \tkzDefPointWith[linear, K=0.8](B,C) \tkzGetPoint{X}
 \tkzDrawSegments[->](P,C O,X)
@@ -1396,12 +1396,12 @@ $\therefore\quad $过$P$点的任一割线与$T_1T_2$的交
 \tkzDefPoints{0/0/O, -2.5/-1/P,0/-1/T}
 \tkzDefPoint(-15:1){C} \tkzDefPoint(60:1){C'}
 \draw(0,0) circle (1);
-\tkzInterLC(C,P)(O,C')  \tkzGetPoints{B'}{B}
+\tkzInterLC(C,P)(O,C')  \tkzGetPoints{B}{B'}
 \tkzInterLL(C',B)(P,T)  \tkzGetPoint{P'}
 \tkzDrawSegments[thick](C,T C',T C,B C',B P,T P,C B,T B,P')
 \tkzLabelPoints[below](P,T,P')
 \tkzLabelPoints[right](C,C')
-\tkzLabelPoints[above](B)
+\tkzLabelPoints[left](B)
     \end{tikzpicture}
     \caption{}
     \end{minipage}
@@ -1409,14 +1409,13 @@ $\therefore\quad $过$P$点的任一割线与$T_1T_2$的交
 
 
 如图4.27由圆幂定理，在
-$\triangle PTB$与$\triangle PCT$中，
-由于$\frac{\Vec{PT}}{\Vec{PB}}=\frac{\Vec{PC}}{\Vec{PT}}$
+$\triangle PBT$与$\triangle PCT$中，
+由于$\frac{|\Vec{PT}|}{|\Vec{PB}|}=\frac{|\Vec{PC}|}{|\Vec{PT}|}$
 ，$\angle P$是公共角，
 
 $\therefore\quad \triangle PTB \backsim \triangle PCT$
 
-得$\angle PTB=\angle PCT$，
-, 这就是弦切角定理．
+得$\angle PTB=\angle BCT$，这就是弦切角定理．
 
 同理$\angle P'TB=\angle BC'T$，
 则$\angle BCT=\angle BC'T$, 这就是圆周

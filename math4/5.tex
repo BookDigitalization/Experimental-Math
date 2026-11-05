@@ -589,7 +589,7 @@ $\because\quad \frac{1}{(3i-2)(3i+1)}=\frac{1}{3}\left(\frac{1}{3i-2}-\frac{1}{3
 \end{split}\]
 \end{solution}
 
-如果数列的通项是以其它形式的$k$次多项式给出的，我
+如果数列的通项是以其他形式的$k$次多项式给出的，我
 们可以用待定系数法把它变形为例5.8的形式．
 
 
@@ -636,7 +636,7 @@ $S_n=a_0+a_1x+a_2x^2+a_3x^3+\cdots+a_nx^n$的和．
 \[(1-x)^2 S_n=a_0+(a_1-2a_0)x+0+\cdots+0+(a_{n-1}-2a_n)x^{n+1}+a_nx^{n+2}\]
 由(5.8)可知在上面等式中，其余各项为0, 若$x\ne1$, 两边
 除以$(1-x)^2$, 得
-\[S_n=\frac{a_0+(a_1-2a_0)x+0+\cdots+0+(a_{n-1}-2a_n)x^{n+1}+a_nx^{n+2}}{(1-x)^2}\]
+\[S_n=\frac{a_0+(a_1-2a_0)x+(a_{n-1}-2a_n)x^{n+1}+a_nx^{n+2}}{(1-x)^2}\]
 若$x=1$，原题就变成求等差数列前$n$项的和，这时，
 \[S_n=\frac{n(a_1+a_n)}{2}\]
 \end{solution}
@@ -723,8 +723,14 @@ $S_2=a_2+a_4+\cdots+a_{2n-2}=33$, 求$a_n$．
 
 \item 在等比数列里
 \begin{enumerate}
+    \item $a_8=384$, $q=2$，求$a_1$；
+    \item $a_8=\frac{4}{9}$, $q=-\frac{1}{3}$，求$a_1$．
+\end{enumerate}
+
+\item 在等比数列里
+\begin{enumerate}
     \item $a_1=36$, $a_5=2\frac{1}{4}$，求$q$和$S_5$；
-    \item $a_n=1296$, $q=6$, $S_n=625$，求$a_0$和$a_1$；
+    \item $a_n=1296$, $q=6$, $S_n=625$，求$a_1$和$n$；
     \item $a_1=3$, $q=\frac{1}{3}$, $n=8$，求$S_8$；
     \item $S_5=242$, $q=3$，求$a_5$．
 \end{enumerate}
@@ -784,8 +790,8 @@ $S_{10}$．
     \item $\displaystyle \sum^{n-1}_{i=0} i^3$
     \item $\displaystyle \sum^{n-1}_{i=0} i^4$
     \item $\displaystyle \sum^{n-1}_{i=0} (i-1)i$
-    \item $\displaystyle \sum^{n-1}_{i=0} (2i-1)^2$
-    \item $\displaystyle \sum^{n-1}_{i=0} \frac{2i+1}{i^2\cdot (i+1)^2}$
+    \item $\displaystyle \sum^{n}_{i=1} (2i-1)^2$
+    \item $\displaystyle \sum^{n}_{i=1} \frac{2i+1}{i^2\cdot (i+1)^2}$
 \end{enumerate}
 \end{multicols}
 
@@ -859,7 +865,7 @@ $n=1,2,3,\ldots$），所说的不同形状的三角形有多少个？求
 成立的自然数是自然数集$\mathbb{N}$中的子集$A$, 即$A\subseteq \mathbb{N}$．
 
 根据数学归纳法中的1, $1\in A$; 再根据数学归纳法中
-的2，若$n\in A$，则$n+1\in A$．于是，根据自然数的基
+的2，若$n=k\in A$，那么$k+1\in A$．于是，根据自然数的基
 本性质，得到
 $$A=\mathbb{N}$$
 因此，命题$p(n)$对于一切自然数成立．
@@ -964,7 +970,7 @@ $p(n)$正确．
     根据1和2，可以断定$n$为任何大于7的自然数，命
     题正确．
 \end{enumerate}
-
+\end{proof}
 
 数学归纳法这两步骤，是缺一不可的，从求函数$f(n)=
 (n^2-5n+5)^2$的值可知，缺少了步骤2就得出不正确的结
@@ -987,7 +993,6 @@ $2+4+6+\cdots+2k=k^2+k+1$
 
 事实上，当$n=1$时，等式左边$=2$, 右边$=1^2+1+1=
 3$，因此，上面的等式是错误的．
-\end{proof}
 
 \begin{example}
     证明：
