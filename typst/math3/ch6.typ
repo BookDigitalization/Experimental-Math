@@ -21,7 +21,7 @@
   ]
 )
 
-射线旋转所形成的角可以是任意大小的角，这也就是说，一条射线旋转所成的角可以是锐角，钝角，平角，也可以大于一个平角(图6.2a), 也可以绕端点若干周后和开始的位置重合(图6.2b), 也可以旋转若干周又一周的部分\(图6.2c)．
+射线旋转所形成的角可以是任意大小的角，这也就是说，一条射线旋转所成的角可以是锐角，钝角，平角，也可以大于一个平角 (图6.2a), 也可以绕端点若干周后和开始的位置重合 (图6.2b), 也可以旋转若干周又一周的部分 (图6.2c)．
 
 我们还看到射线有两种相反的旋转方向：逆时针方向和顺时针方向．为了加以区别，我们把按逆时针方向旋转所形成的角叫做正角，按顺时针方向旋转所形成的角叫做负角．例如图6.3中以 $O A$ 为始边的角 $alpha = 210 degree$, $beta = - 150 degree$, $gamma = - 660 degree$.
 
@@ -62,7 +62,7 @@
 
 我们指出圆心角所张的圆弧的弧度数由这个角的大小决定，而和圆的半径长短无关．
 
-事实上，从几何里知道，在圆心角相同时，两个圆上的弧长的比等于它们的半径长的比(图6.5), 即 $ wideparen(A_1 B_1) / wideparen(A_2 B_2) = R_1 / R_2 $ #noindent;或$ wideparen(A_1 B_1) / R_1 = wideparen(A_2 B_2) / R_2 $ #noindent;这就是说，两个圆弧 $wideparen(A_1 B_1)$, $wideparen(A_2 B_2)$ 的弧度数是相同的．
+事实上，从几何里知道，在圆心角相同时，两个圆上的弧长的比等于它们的半径长的比 (图6.5), 即 $ wideparen(A_1 B_1) / wideparen(A_2 B_2) = R_1 / R_2 $ #noindent;或$ wideparen(A_1 B_1) / R_1 = wideparen(A_2 B_2) / R_2 $ #noindent;这就是说，两个圆弧 $wideparen(A_1 B_1)$, $wideparen(A_2 B_2)$ 的弧度数是相同的．
 
 #figure([#fig("6-05");
 
@@ -81,9 +81,9 @@
 
 长度等于半径的圆弧所对的圆心角叫做1弧度角．换言之，一弧度圆弧所对的圆心角叫做1弧度角．
 
-这样，由(6.1) 推得#numbered-eq($ ell = alpha R $);#noindent;即圆弧长等于这圆弧的弧度数（或这弧所对圆心角的弧度数）和半径长的乘积．特别地，单位圆上的弧长等于它的弧度数．
+这样，由 (6.1) 推得#numbered-eq($ ell = alpha R $);#noindent;即圆弧长等于这圆弧的弧度数（或这弧所对圆心角的弧度数）和半径长的乘积．特别地，单位圆上的弧长等于它的弧度数．
 
-利用(6.1) 还可以直接计算一些特殊角的弧度数．
+利用 (6.1) 还可以直接计算一些特殊角的弧度数．
 
 当弧长等于圆周长 $C = 2 pi R$ 时，这个比值等于 $2 pi$, 因此，$ upright("周角") & = frac(2 pi R, R) = 2 pi upright("弧度")\
 upright("平角") & = 1 / 2 upright("周角") = pi upright("弧度")\
@@ -93,12 +93,12 @@ upright("直角") & = 1 / 4 upright("周角") = pi / 2 upright("弧度")\
 60 degree & = 1 / 3 upright("平角") = pi / 3 upright("弧度") $
 
 #rmk[
-角的量数是以弧度数表示的，通常只写出数值不写出单位，以后我们都将单位“弧度”二字省略不写．例如平角 $= pi$ 弧度就写成平角 $= pi$．但是千万不要误解平角就是圆周率 $3.1415926 dots.h.c$．
+角的量数是以弧度数表示的，通常只写出数值不写出单位，以后我们都将单位“弧度”二字省略不写．例如平角 $= pi$ 弧度就写成平角 $= pi$⁠．但是千万不要误解平角就是圆周率 $3.1415926 dots.h.c$⁠．
 
 ]
 度与弧度的互化．
 
-因为平角 $= 180 degree = pi$, 所以 $1 degree = pi / 180 approx 0.017453$．$A degree$ 的角相应的弧度数：$ alpha & = frac(A pi, 180)\
+因为平角 $= 180 degree = pi$, 所以 $1 degree = pi / 180 approx 0.017453$⁠．$A degree$ 的角相应的弧度数：$ alpha & = frac(A pi, 180)\
 1' & = (1 / 60) degree = 1 / 60 (pi / 180) approx 0.00029088\
 1 upright("(弧度)") & = (180 degree) / pi = 57.295 degree approx 3438' approx 206265'' = 57 degree 17' 45'' $ #noindent;$alpha$ 弧度的角相应的度数：$ A degree = frac(alpha dot.op 180 degree, pi) $
 
@@ -155,7 +155,7 @@ $ 3 / 5 pi = (180 degree) / pi times 3 / 5 pi = 108 degree $
 
 ]
 #example[
-两皮带轮的半径 $R_1 = 20$, $R_2 = 30$, 求它们的转速之比(图6.6)．
+两皮带轮的半径 $R_1 = 20$, $R_2 = 30$, 求它们的转速之比 (图6.6)．
 
 #figure([#fig("6-06");
 
@@ -181,11 +181,11 @@ $therefore quad alpha_1 : alpha_2 = 3 : 2$
  & approx 0.0234 times 3438'\
  & approx 1 degree 20' $
 
-答: 两地纬度差为 $1 degree 20'$．
+答: 两地纬度差为 $1 degree 20'$⁠．
 
 ]
 #exercise[
-+ 把下列各角的度数化为弧度数：
++ #block(sticky: true)[把下列各角的度数化为弧度数：]
 
   #cols(3)[
   + $2 degree$
@@ -210,7 +210,7 @@ $therefore quad alpha_1 : alpha_2 = 3 : 2$
 
   ]
 
-+ 把下列各角的弧度数化为度数：
++ #block(sticky: true)[把下列各角的弧度数化为度数：]
 
   #cols(3)[
   + $0.4800$
@@ -283,7 +283,7 @@ dots.h.c dots.h.c #h(2em) & #h(2em) #h(2em) dots.h.c dots.h.c $ #noindent;所有
 
 ]
 #solution[
-+ $S = \{beta #scale(x: 180%, y: 180%)[$\|$] beta = 2 k pi + pi / 3 \, thick k in bb(Z)\}$
++ $S = lr(\{ beta #scale(x: 180%, y: 180%)[$\|$] beta = 2 k pi + pi / 3 \, thick k in bb(Z) \})$
 
   $S$ 中在 $- 2 pi$ 到 $4 pi$ 间的角：
 
@@ -293,7 +293,7 @@ dots.h.c dots.h.c #h(2em) & #h(2em) #h(2em) dots.h.c dots.h.c $ #noindent;所有
 
   - 当 $k = 1$ 时，$beta = 2 pi + pi / 3 = frac(7 pi, 3)$
 
-+ $S = \{beta #scale(x: 180%, y: 180%)[$\|$] beta = 2 k pi - pi / 4 \, thick k in bb(Z)\}$
++ $S = lr(\{ beta #scale(x: 180%, y: 180%)[$\|$] beta = 2 k pi - pi / 4 \, thick k in bb(Z) \})$
 
   $S$ 中在 $- 2 pi$ 到 $4 pi$ 间的角：
 
@@ -303,7 +303,7 @@ dots.h.c dots.h.c #h(2em) & #h(2em) #h(2em) dots.h.c dots.h.c $ #noindent;所有
 
   - 当 $k = 2$ 时，$beta = 4 pi - pi / 4 = frac(15 pi, 4)$
 
-+ $S = \{beta #scale(x: 180%, y: 180%)[$\|$] beta = 2 k pi + frac(15 pi, 7) \, thick k in bb(Z)\}$
++ $S = lr(\{ beta #scale(x: 180%, y: 180%)[$\|$] beta = 2 k pi + frac(15 pi, 7) \, thick k in bb(Z) \})$
 
   $S$ 中在 $- 2 pi$ 到 $4 pi$ 间的角：
 
@@ -331,7 +331,7 @@ dots.h.c dots.h.c #h(2em) & #h(2em) #h(2em) dots.h.c dots.h.c $ #noindent;所有
 以上这些表示法希望大家熟悉，因为以后经常要用到．
 
 #exercise[
-+ 在度数制下，写出下面处在标准位置的终边相同的角．
++ #block(sticky: true)[在度数制下，写出下面处在标准位置的终边相同的角．]
 
   #cols(2)[
   + $30 degree$
@@ -370,7 +370,7 @@ dots.h.c dots.h.c #h(2em) & #h(2em) #h(2em) dots.h.c dots.h.c $ #noindent;所有
 以坐标原点为圆心，半径长为1的圆叫做单位圆．它上面任一弧的长度恰好等于弧度数．
 
 ]
-如图6.8, 单位圆交坐标轴于四个点 $A\(1\,0\)$、$B\(0\,1\)$、$A_1\(- 1\,0\)$、$B_1\(0\,- 1\)$．过 $A$ 作单位圆的切线 $ell$, 在 $ell$ 上这样来建立坐标系：取 $A$ 为原点，取向上的方向为正向，单位等于半径长，这样 $ell$ 就是一条实数轴．我们已经知道实数轴上的点和全体实数是一一对应的．
+如图6.8, 单位圆交坐标轴于四个点 $A\(1\,0\)$⁠、$B\(0\,1\)$⁠、$A_1\(- 1\,0\)$⁠、$B_1\(0\,- 1\)$⁠．过 $A$ 作单位圆的切线 $ell$, 在 $ell$ 上这样来建立坐标系：取 $A$ 为原点，取向上的方向为正向，单位等于半径长，这样 $ell$ 就是一条实数轴．我们已经知道实数轴上的点和全体实数是一一对应的．
 
 #figure([#scale(60%, reflow: true, image("/math3/fig/6-8.PNG"));
 
@@ -392,7 +392,7 @@ dots.h.c dots.h.c #h(2em) & #h(2em) #h(2em) dots.h.c dots.h.c $ #noindent;所有
 
 ]
 #solution[
-这些数中每相邻两数的差是 $pi / 6$，即在单位圆上以相邻两数为端点的弧都相等，因此我们将单位圆12等分后，就得到对应于上列各数的点（图6.9）．
+这些数中每相邻两数的差是 $pi / 6$⁠，即在单位圆上以相邻两数为端点的弧都相等，因此我们将单位圆12等分后，就得到对应于上列各数的点（图6.9）．
 
 #figure([#fig("6-08");
 
@@ -407,17 +407,19 @@ dots.h.c dots.h.c #h(2em) & #h(2em) #h(2em) dots.h.c dots.h.c $ #noindent;所有
 
 ]
 #solution[
-在单位圆上 $B$ 点的坐标是 $\(0\,1\)$, $wideparen(A B)$ 的弧长是 $pi / 2$，因此在数轴 $ell$ 上和 $\(0\,1\)$ 点对应的一切实数是：$pi / 2 + 2 k pi thick\(k in bb(Z)\)$．
+在单位圆上 $B$ 点的坐标是 $\(0\,1\)$, $wideparen(A B)$ 的弧长是 $pi / 2$⁠，因此在数轴 $ell$ 上和 $\(0\,1\)$ 点对应的一切实数是：$pi / 2 + 2 k pi thick\(k in bb(Z)\)$⁠．
 
 ]
 #exercise[
-+ 在单位圆上找出与实数0, $pi / 2$, $- pi / 2$，$pi$ 对应的点 $P_1$、$P_2$、$P_3$、$P_4$. 并写出与 $angle A O P_1$、$angle A O P_2$、$angle A O P_3$、$angle A O P_4$ 对应的一切实数的一般形式．
++ 在单位圆上找出与实数0, $pi / 2$, $- pi / 2$⁠，$pi$ 对应的点 $P_1$⁠、$P_2$⁠、$P_3$⁠、$P_4$. 并写出与 $angle A O P_1$⁠、$angle A O P_2$⁠、$angle A O P_3$⁠、$angle A O P_4$ 对应的一切实数的一般形式．
 
-+ + 在单位圆上找出分别与下面各实数0、$pi / 6$、$pi / 4$、$pi / 3$、$pi / 2$ 对应的点 $P_0$、$P_1$、$P_2$、$P_3$、$P_4$．
++ #lead-list(none, 2)[
+  + 在单位圆上找出分别与下面各实数0、$pi / 6$⁠、$pi / 4$⁠、$pi / 3$⁠、$pi / 2$ 对应的点 $P_0$⁠、$P_1$⁠、$P_2$⁠、$P_3$⁠、$P_4$⁠．
 
-  + 分别写出 $P_0$、$P_1$、$P_2$、$P_3$、$P_4$ 各点的直角坐标．
+  + 分别写出 $P_0$⁠、$P_1$⁠、$P_2$⁠、$P_3$⁠、$P_4$ 各点的直角坐标．
 
-  + 与下面各实数对应的点，哪些和 $P_0$、$P_1$、$P_2$、$P_3$、$P_4$ 关于坐标轴对称？哪些关于原点对称？并写出它们的直角坐标．
+  + 与下面各实数对应的点，哪些和 $P_0$⁠、$P_1$⁠、$P_2$⁠、$P_3$⁠、$P_4$ 关于坐标轴对称？哪些关于原点对称？并写出它们的直角坐标．
+  ]
 
 $ frac(2 pi, 3)\,quad frac(3 pi, 4)\,quad frac(5 pi, 6)\,quad pi\,quad frac(7 pi, 6)\,quad frac(5 pi, 4)\,quad frac(4 pi, 3)\,quad frac(3 pi, 2)\,quad frac(5 pi, 3)\,quad - pi / 4\,quad frac(11 pi, 6) $
 
@@ -440,20 +442,20 @@ $ frac(2 pi, 3)\,quad frac(3 pi, 4)\,quad frac(5 pi, 6)\,quad pi\,quad frac(7 pi
 )
 
 #blk[定义][
-+ $y / r$ 叫做角 $alpha$ 的正弦，记作 $sin alpha$, 即 $sin alpha = y / r$；
++ $y / r$ 叫做角 $alpha$ 的正弦，记作 $sin alpha$, 即 $sin alpha = y / r$⁠；
 
-+ $x / r$ 叫做角 $alpha$ 的余弦，记作 $cos alpha$, 即 $cos alpha = x / r$；
++ $x / r$ 叫做角 $alpha$ 的余弦，记作 $cos alpha$, 即 $cos alpha = x / r$⁠；
 
-+ $y / x$ 叫做角 $alpha$ 的正切，记作 $tan alpha$, 即 $tan alpha = y / x$；
++ $y / x$ 叫做角 $alpha$ 的正切，记作 $tan alpha$, 即 $tan alpha = y / x$⁠；
 
-+ $x / y$ 叫做角 $alpha$ 的余切，记作 $cot alpha$, 即 $cot alpha = x / y$；
++ $x / y$ 叫做角 $alpha$ 的余切，记作 $cot alpha$, 即 $cot alpha = x / y$⁠；
 
-+ $r / x$ 叫做角 $alpha$ 的正割，记作 $sec alpha$, 即 $sec alpha = r / x$；
++ $r / x$ 叫做角 $alpha$ 的正割，记作 $sec alpha$, 即 $sec alpha = r / x$⁠；
 
-+ $r / y$ 叫做角 $alpha$ 的余割，记作 $csc alpha$, 即 $csc alpha = r / y$．
++ $r / y$ 叫做角 $alpha$ 的余割，记作 $csc alpha$, 即 $csc alpha = r / y$⁠．
 
 ]
-对于确定的角 $alpha$，$y / r\,thick x / r\,thick y / x\,thick x / y\,thick r / x\,thick r / y$ 这六个比值的大小，和我们在 $alpha$ 角的终边上所取 $P$ 点的位置没有关系，如图6.11中，$P_1\(x_1\,y_1\)$ 点为角 $alpha$ 终边上另一点，$P_1$ 到原点 $O$ 的距离为 $r_1$，$x$ 和 $x_1$、$y$ 和 $y_1$ 的符号相同，因为 $triangle.stroked.t P O M tilde.op triangle.stroked.t P_1 O M_1$，所以 $  & y_1 / r_1 = y / r\,#h(2em) x_1 / r_1 = x / r\,#h(2em) y_1 / x_1 = y / x\
+对于确定的角 $alpha$⁠，$y / r\,thick x / r\,thick y / x\,thick x / y\,thick r / x\,thick r / y$ 这六个比值的大小，和我们在 $alpha$ 角的终边上所取 $P$ 点的位置没有关系，如图6.11中，$P_1\(x_1\,y_1\)$ 点为角 $alpha$ 终边上另一点，$P_1$ 到原点 $O$ 的距离为 $r_1$⁠，$x$ 和 $x_1$⁠、$y$ 和 $y_1$ 的符号相同，因为 $triangle.stroked.t P O M tilde.op triangle.stroked.t P_1 O M_1$⁠，所以 $  & y_1 / r_1 = y / r\,#h(2em) x_1 / r_1 = x / r\,#h(2em) y_1 / x_1 = y / x\
  & x_1 / y_1 = x / y\,#h(2em) r_1 / x_1 = r / x\,#h(2em) r_1 / y_1 = r / y $
 
 #figure([#fig("6-10");
@@ -463,16 +465,16 @@ $ frac(2 pi, 3)\,quad frac(3 pi, 4)\,quad frac(5 pi, 6)\,quad pi\,quad frac(7 pi
   ]
 )
 
-这就是说，对于确定的角 $alpha$, $sin alpha$、$cos alpha$、$tan alpha$、$cot alpha$、$sec alpha$、$csc alpha$ 都有确定的值，因为它们的值是随着 $alpha$ 变化而变化的，当 $alpha$ 角取确定值的时候，它们的值也相应地唯一确定，所以，角 $alpha$ 的正弦、余弦、正切、余切、正割和余割都是角 $alpha$ 的函数，这些函数都叫做三角函数．
+这就是说，对于确定的角 $alpha$, $sin alpha$⁠、$cos alpha$⁠、$tan alpha$⁠、$cot alpha$⁠、$sec alpha$⁠、$csc alpha$ 都有确定的值，因为它们的值是随着 $alpha$ 变化而变化的，当 $alpha$ 角取确定值的时候，它们的值也相应地唯一确定，所以，角 $alpha$ 的正弦、余弦、正切、余切、正割和余割都是角 $alpha$ 的函数，这些函数都叫做三角函数．
 
 很明显，当角 $alpha$ 是锐角或钝角时，上面三角函数的定义和锐角、钝角三角函数的定义完全一样，所以锐角、钝角三角函数定义是任意角三角函数定义的特例．
 
 根据任意角三角函数定义，可以看出 $ sec alpha = frac(1, cos alpha)\,#h(2em) csc alpha = frac(1, sin alpha)\,#h(2em) cot alpha = frac(1, tan alpha) $
 
-今后我们主要研究 $sin alpha$、$cos alpha$、$tan alpha$、$cot alpha$ 四个函数．
+今后我们主要研究 $sin alpha$⁠、$cos alpha$⁠、$tan alpha$⁠、$cot alpha$ 四个函数．
 
 #example[
-已知单位圆中旋转半径 $O P$ 和 $O X$ 轴正方向成 $300 degree$ 角，求 $sin 300 degree$, $cos 300 degree$, $tan 300 degree$, $cot 300 degree$．
+已知单位圆中旋转半径 $O P$ 和 $O X$ 轴正方向成 $300 degree$ 角，求 $sin 300 degree$, $cos 300 degree$, $tan 300 degree$, $cot 300 degree$⁠．
 
 ]
 #solution[
@@ -513,7 +515,7 @@ cos pi = - 1\,#h(2em) sin pi = 0\,#h(2em) cos frac(3 pi, 2) = 0\,#h(2em) sin fra
 
 ]
 #solution[
-因为 $sin 1.54 = sin 1.54 upright("弧度")$，又 $1.54 upright("弧度") approx 88 degree 14'$，
+因为 $sin 1.54 = sin 1.54 upright("弧度")$⁠，又 $1.54 upright("弧度") approx 88 degree 14'$⁠，
 
 所以 $sin 1.54 approx sin 88 degree 14' approx 0.9995$
 
@@ -536,16 +538,16 @@ sec alpha = 1 / x = frac(1, cos alpha)\,#h(2em) csc alpha = 1 / y = frac(1, sin 
 
 + 函数 $cos alpha$ 和 $sin alpha$ 的定义域是开区间 $- oo < alpha < + oo$, 即 $\(- oo\,+ oo\)$, 这是因为 $cos alpha$ 和 $sin alpha$ 是单位圆上对应于数 $alpha$ 的点 $P$ 的横坐标和纵坐标，它们对于任何实数 $alpha$ 都有明确的值．
 
-+ 函数 $tan alpha$ 的定义域是除去形如 $pi / 2 + k pi thick\(k in bb(Z)\)$ 的数的实数集：$ \{alpha #scale(x: 180%, y: 180%)[$\|$] alpha in bb(R) \, thick alpha eq.not pi / 2 + k pi \, thick k in bb(Z)\} $ #noindent;即正切的定义域是无限个开区间组成的一个集：$ dots.h.c\,(- frac(3 pi, 2) \, - pi / 2)\,(- pi / 2 \, pi / 2)\,(pi / 2 \, frac(3 pi, 2))\,(frac(3 pi, 2) \, frac(5 pi, 2))\,dots.h.c $ #noindent;这是因为 $tan alpha = y / x$ 是单位圆上 $P$ 点的纵坐标对横坐标之比，唯有当 $x = 0$ 时它失去意义，单位圆上与 $x = 0$ 对应的点只有 $\(0\,1\)$ 和 $\(0\,- 1\)$, 与 $\(0\,1\)$ 点对应的一切实数是 $alpha = pi / 2 + 2 k pi thick\(k in bb(Z)\)$, 与 $\(0\,- 1\)$ 点对应的一切实数是 $alpha = - pi / 2 + 2 k pi thick\(k in bb(Z)\)$, 和 $\(0\,1\)$ 点、$\(0\,- 1\)$ 点这两点对应的一切实数可以合并写成：$ alpha = pi / 2 + k pi #h(2em)\(k in bb(Z)\) $
++ 函数 $tan alpha$ 的定义域是除去形如 $pi / 2 + k pi thick\(k in bb(Z)\)$ 的数的实数集：$ lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha in bb(R) \, thick alpha eq.not pi / 2 + k pi \, thick k in bb(Z) \}) $ #noindent;即正切的定义域是无限个开区间组成的一个集：$ dots.h.c\,(- frac(3 pi, 2) \, - pi / 2)\,(- pi / 2 \, pi / 2)\,(pi / 2 \, frac(3 pi, 2))\,(frac(3 pi, 2) \, frac(5 pi, 2))\,dots.h.c $ #noindent;这是因为 $tan alpha = y / x$ 是单位圆上 $P$ 点的纵坐标对横坐标之比，唯有当 $x = 0$ 时它失去意义，单位圆上与 $x = 0$ 对应的点只有 $\(0\,1\)$ 和 $\(0\,- 1\)$, 与 $\(0\,1\)$ 点对应的一切实数是 $alpha = pi / 2 + 2 k pi thick\(k in bb(Z)\)$, 与 $\(0\,- 1\)$ 点对应的一切实数是 $alpha = - pi / 2 + 2 k pi thick\(k in bb(Z)\)$, 和 $\(0\,1\)$ 点、$\(0\,- 1\)$ 点这两点对应的一切实数可以合并写成：$ alpha = pi / 2 + k pi #h(2em)\(k in bb(Z)\) $
 
 + 函数 $cot alpha$ 的定义域是除去形如 $k pi thick\(k in bb(Z)\)$ 的数的实数集：$\{ alpha\|alpha in bb(R)\,thick alpha eq.not k pi\,k in bb(Z) \}$, 即余切的定义域是无限个开区间组成的一个集：$ dots.h.c\,\(- pi\,0\)\,\(0\,pi\)\,\(pi\,2 pi\)\,dots.h.c $
 
-+ 函数 $sec alpha$ 的定义域与正切函数 $tan alpha$ 的定义域 $\{alpha #scale(x: 180%, y: 180%)[$\|$] alpha in bb(R) \, thick alpha eq.not pi / 2 + k pi \, k in bb(Z)\}$ 相同．
++ 函数 $sec alpha$ 的定义域与正切函数 $tan alpha$ 的定义域 $lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha in bb(R) \, thick alpha eq.not pi / 2 + k pi \, k in bb(Z) \})$ 相同．
 
 + 函数 $csc alpha$ 的定义域与余切函数 $cot alpha$ 的定义域 $\{ alpha\|alpha in bb(R)\,thick alpha eq.not k pi\,k in bb(Z) \}$ 相同．
 
 === 三角函数的正负
-设单位圆上点 $P$ 与数 $alpha$ 对应，以后我们把与 $alpha$ 对应，处在标准位置，以 $alpha$（弧度）为量数的角 $angle A O P$ 简称为角 $alpha$．
+设单位圆上点 $P$ 与数 $alpha$ 对应，以后我们把与 $alpha$ 对应，处在标准位置，以 $alpha$（弧度）为量数的角 $angle A O P$ 简称为角 $alpha$⁠．
 
 + 若 $P$ 点在第一象限（或者角 $alpha$ 终边在第一象限），则 $P$ 点的横坐标 $x > 0$, 纵坐标 $y > 0$, 因此，$ cos alpha > 0\,#h(2em) sin alpha > 0\,#h(2em) tan alpha = frac(sin alpha, cos alpha) > 0\,#h(2em) cot alpha = frac(cos alpha, sin alpha) > 0 $
 
@@ -595,9 +597,9 @@ $therefore quad tan alpha + cot alpha gt.eq 2$
 
 ]
 #exercise[
-+ 图示下列各点位置，并求出与原点的距离．写出角的终边通过这些点的三角函数值：$P_1\(- 3\,4\)$, $P_2\(4\,- 5\)$, $P_3\(- 5\,- 3\)$．
++ 图示下列各点位置，并求出与原点的距离．写出角的终边通过这些点的三角函数值：$P_1\(- 3\,4\)$, $P_2\(4\,- 5\)$, $P_3\(- 5\,- 3\)$⁠．
 
-+ 若 $P$ 点的坐标为 $\(- 4\,y\)$、$O P$ 长为5, 试求 $y$ 值，并写出角的终边通过 $P$ 点的三角函数值．
++ 若 $P$ 点的坐标为 $\(- 4\,y\)$⁠、$O P$ 长为5, 试求 $y$ 值，并写出角的终边通过 $P$ 点的三角函数值．
 
 + $sec alpha$ 能否小于 $tan alpha$? $csc alpha$ 能否小于 $cot alpha$?
 
@@ -611,7 +613,7 @@ $therefore quad tan alpha + cot alpha gt.eq 2$
 
 + 设 $frac(sin alpha, tan alpha) < 0$, $frac(cot alpha, cos alpha) < 0$, $sin alpha cos alpha < 0$, 角 $alpha$ 的终边应当在哪些象限？
 
-+ 设 $alpha$ 的终边在第三象限内，决定下列各式的符号：
++ #block(sticky: true)[设 $alpha$ 的终边在第三象限内，决定下列各式的符号：]
 
   #cols(2)[
   + $sin alpha + cos alpha$
@@ -624,7 +626,7 @@ $therefore quad tan alpha + cot alpha gt.eq 2$
 
   ]
 
-+ $alpha$ 为何值时，下面式子失去意义：
++ #block(sticky: true)[$alpha$ 为何值时，下面式子失去意义：]
 
   #cols(2)[
   + $cos alpha + frac(1, cos alpha)$
@@ -645,11 +647,11 @@ $therefore quad tan alpha + cot alpha gt.eq 2$
 
 - 当 $alpha = 0$ 时，则 $P$ 的坐标是 $\(1\,0\)$, 那么，$cos 0 = 1$, $sin 0 = 0$, $tan 0 = 0$, $cot 0$ 不存在，$sec 0 = 1$, $csc 0$ 不存在．
 
-- 当 $alpha = pi / 2$ 时，则 $P$ 的坐标是 $\(0\,1\)$, 那么，$cos pi / 2 = 0$, $sin pi / 2 = 1$, $tan pi / 2$ 不存在, $cot pi / 2 = 0$，$sec pi / 2$ 不存在, $csc pi / 2 = 1$．
+- 当 $alpha = pi / 2$ 时，则 $P$ 的坐标是 $\(0\,1\)$, 那么，$cos pi / 2 = 0$, $sin pi / 2 = 1$, $tan pi / 2$ 不存在, $cot pi / 2 = 0$⁠，$sec pi / 2$ 不存在, $csc pi / 2 = 1$⁠．
 
 - 当 $alpha = pi$ 时，则 $P$ 的坐标是 $\(- 1\,0\)$, 那么，$cos pi = - 1$, $sin pi = 0$, $tan pi = 0$, $cot pi$ 不存在，$sec pi = - 1$, $csc pi$ 不存在．
 
-- 当 $alpha = frac(3 pi, 2)$ 时，则P的坐标是 $\(0\,- 1\)$, 那么，$cos frac(3 pi, 2) = 0$, $sin frac(3 pi, 2) = - 1$, $tan frac(3 pi, 2)$ 不存在, $cot frac(3 pi, 2) = 0$，$sec frac(3 pi, 2)$ 不存在, $csc frac(3 pi, 2) = - 1$．
+- 当 $alpha = frac(3 pi, 2)$ 时，则P的坐标是 $\(0\,- 1\)$, 那么，$cos frac(3 pi, 2) = 0$, $sin frac(3 pi, 2) = - 1$, $tan frac(3 pi, 2)$ 不存在, $cot frac(3 pi, 2) = 0$⁠，$sec frac(3 pi, 2)$ 不存在, $csc frac(3 pi, 2) = - 1$⁠．
 
 把上面结果列成表．要记着表上结果并不难，只要记着特殊点 $P$ 的相应位置，根据三角函数的定义就很快得到函数值．
 
@@ -714,11 +716,11 @@ $therefore quad tan alpha + cot alpha gt.eq 2$
   ]
 )
 
-- 设 $alpha = pi / 6\(= 30 degree\)$, 根据直角三角形性质（$30 degree$ 角的对边等于斜边的一半），得 $P$ 点坐标 $P (sqrt(3) / 2 \, 1 / 2)$，那么 $ cos pi / 6 = sqrt(3) / 2\,#h(2em) sin pi / 6 = 1 / 2\,#h(2em) tan pi / 6 = 1 / sqrt(3) = sqrt(3) / 3\,#h(2em) cot pi / 6 = sqrt(3) $
+- 设 $alpha = pi / 6\(= 30 degree\)$, 根据直角三角形性质（$30 degree$ 角的对边等于斜边的一半），得 $P$ 点坐标 $P (sqrt(3) / 2 \, 1 / 2)$⁠，那么 $ cos pi / 6 = sqrt(3) / 2\,#h(2em) sin pi / 6 = 1 / 2\,#h(2em) tan pi / 6 = 1 / sqrt(3) = sqrt(3) / 3\,#h(2em) cot pi / 6 = sqrt(3) $
 
-- 设 $alpha = pi / 4\(= 45 degree\)$, 这时得 $P (sqrt(2) / 2 \, sqrt(2) / 2)$，那么 $ cos pi / 4 = sqrt(2) / 2\,#h(2em) sin pi / 4 = sqrt(2) / 2\,#h(2em) tan pi / 4 = 1\,#h(2em) cot pi / 4 = 1 $
+- 设 $alpha = pi / 4\(= 45 degree\)$, 这时得 $P (sqrt(2) / 2 \, sqrt(2) / 2)$⁠，那么 $ cos pi / 4 = sqrt(2) / 2\,#h(2em) sin pi / 4 = sqrt(2) / 2\,#h(2em) tan pi / 4 = 1\,#h(2em) cot pi / 4 = 1 $
 
-- 设 $alpha = pi / 3\(= 60 degree\)$, 这时得 $P (1 / 2 \, sqrt(3) / 2)$，那么 $ cos pi / 3 = 1 / 2\,#h(2em) sin pi / 3 = sqrt(3) / 2\,#h(2em) tan pi / 3 = sqrt(3)\,#h(2em) cot pi / 3 = 1 / sqrt(3) = sqrt(3) / 3 $
+- 设 $alpha = pi / 3\(= 60 degree\)$, 这时得 $P (1 / 2 \, sqrt(3) / 2)$⁠，那么 $ cos pi / 3 = 1 / 2\,#h(2em) sin pi / 3 = sqrt(3) / 2\,#h(2em) tan pi / 3 = sqrt(3)\,#h(2em) cot pi / 3 = 1 / sqrt(3) = sqrt(3) / 3 $
 
 把上述结果列表如下：
 
@@ -802,9 +804,9 @@ tan\(- alpha\)= - tan alpha\, & #h(2em) cot\(- alpha\)= - cot alpha $);
 
 根据三角函数的定义，
 
-- $P_alpha$ 点的坐标是 $\(cos alpha\,sin alpha\)$；
+- $P_alpha$ 点的坐标是 $\(cos alpha\,sin alpha\)$⁠；
 
-- $P_(- alpha)$ 点的坐标是 $\(cos\(- alpha\)\,sin\(- alpha\)\)$．
+- $P_(- alpha)$ 点的坐标是 $\(cos\(- alpha\)\,sin\(- alpha\)\)$⁠．
 
 因此，由它们关于 $O x$ 轴的对称性便知道它们的横坐标相等，纵坐标是相反数，也就是说 $ cos\(- alpha\)= cos alpha\,#h(2em) sin\(- alpha\)= - sin alpha $
 
@@ -813,7 +815,7 @@ cot\(- alpha\) & = frac(cos\(- alpha\), sin\(- alpha\)) = frac(cos alpha, - sin 
 
 ]
 #example[
-求 $cos (- pi / 6)$，$sin (- pi / 6)$，$tan (- pi / 6)$，$cot (- pi / 6)$ 的值．
+求 $cos (- pi / 6)$⁠，$sin (- pi / 6)$⁠，$tan (- pi / 6)$⁠，$cot (- pi / 6)$ 的值．
 
 ]
 #solution[
@@ -879,7 +881,7 @@ cot (- pi / 6) & = - cot pi / 6 = - sqrt(3) $
 ]
 === $2 pi plus.minus alpha$ 与 $alpha$ 的三角函数间的关系
 根据三角函数的定义可以知道，终边相同的角的同一三角函数的值相等，即#numbered-eq($ sin\(alpha + 2 k pi\)= sin alpha\, & #h(2em) cos\(alpha + 2 k pi\)= cos alpha\
-tan\(alpha + 2 k pi\)= tan alpha\, & #h(2em) cot\(alpha + 2 k pi\)= cot alpha $);#noindent;其中 $k in bb(Z)$．
+tan\(alpha + 2 k pi\)= tan alpha\, & #h(2em) cot\(alpha + 2 k pi\)= cot alpha $);#noindent;其中 $k in bb(Z)$⁠．
 
 利用上面的公式可以把求任意角的三角函数值的问题，转化为求0到 $2 pi$ 间角的三角函数值的问题．
 
@@ -949,7 +951,7 @@ $pi / 2 plus.minus alpha$ 与 $alpha$ 的三角函数间有下述关系：#numbe
 tan (pi / 2 + alpha) = - cot alpha\, & #h(2em) cot (pi / 2 + alpha) = - tan alpha $);
 
 #proof[
-设 $P$ 和 $P'$ 是单位圆上的点，且 $angle P O P' = pi / 2$．若 $P$ 点分别在第一、二、三、四象限，那么 $P'$ 点就依次在第二、三、四、一象限，如图6.17所示．
+设 $P$ 和 $P'$ 是单位圆上的点，且 $angle P O P' = pi / 2$⁠．若 $P$ 点分别在第一、二、三、四象限，那么 $P'$ 点就依次在第二、三、四、一象限，如图6.17所示．
 
 #figure([#fig("6-16");
 
@@ -958,23 +960,23 @@ tan (pi / 2 + alpha) = - cot alpha\, & #h(2em) cot (pi / 2 + alpha) = - tan alph
   ]
 )
 
-从 $P$ 点和 $P'$ 点分别向 $O x$ 轴和 $O y$ 轴引垂线 $P M$, $P' M'$．从直角三角形 $O M P$ 和 $O M' P'$ 全等得 $ \|O M\|=\|O M'\|\,#h(2em)\|M P\|=\|M' P'\| $
+从 $P$ 点和 $P'$ 点分别向 $O x$ 轴和 $O y$ 轴引垂线 $P M$, $P' M'$⁠．从直角三角形 $O M P$ 和 $O M' P'$ 全等得 $ \|O M\|=\|O M'\|\,#h(2em)\|M P\|=\|M' P'\| $
 
-由上面等式和对于任意角 $alpha$ 的 $P\,P'$ 两点所在象限知道：$P$ 点的横坐标 $x_P = O M$，恒与 $P'$ 点的纵坐标 $y_(P') = O M'$ 相等，即它们的绝对值和符号都相同，也就是 $x_P = y_(P')$，因此 $cos alpha = sin (alpha + pi / 2)$．
+由上面等式和对于任意角 $alpha$ 的 $P\,P'$ 两点所在象限知道：$P$ 点的横坐标 $x_P = O M$⁠，恒与 $P'$ 点的纵坐标 $y_(P') = O M'$ 相等，即它们的绝对值和符号都相同，也就是 $x_P = y_(P')$⁠，因此 $cos alpha = sin (alpha + pi / 2)$⁠．
 
-又 $P$ 点的纵坐标 $y_P = M P$ 是 $P'$ 点的横坐标 $x_(P') = M' P'$ 的相反数，即 $y_P = M P = - M' P' = - x_(P')$，因此，$sin alpha = - cos (alpha + pi / 2)$．这样就得到：$ sin (pi / 2 + alpha) & = cos alpha\
+又 $P$ 点的纵坐标 $y_P = M P$ 是 $P'$ 点的横坐标 $x_(P') = M' P'$ 的相反数，即 $y_P = M P = - M' P' = - x_(P')$⁠，因此，$sin alpha = - cos (alpha + pi / 2)$⁠．这样就得到：$ sin (pi / 2 + alpha) & = cos alpha\
 cos (pi / 2 + alpha) & = - sin alpha\
 tan (pi / 2 + alpha) & = frac(sin (pi / 2 + alpha), cos (pi / 2 + alpha)) = frac(cos alpha, - sin alpha) = - cot alpha\
 cot (pi / 2 + alpha) & = frac(cos (pi / 2 + alpha), sin (pi / 2 + alpha)) = frac(- sin alpha, cos alpha) = - tan alpha $
 
 ]
-由公式(6.7) 我们可以得到，对于任意角 $alpha$，$ sin (pi / 2 - alpha) & = sin [pi / 2 + \( - alpha \)] = cos\(- alpha\)= cos alpha\
+由公式 (6.7) 我们可以得到，对于任意角 $alpha$⁠，$ sin (pi / 2 - alpha) & = sin [pi / 2 + \( - alpha \)] = cos\(- alpha\)= cos alpha\
 cos (pi / 2 - alpha) & = cos [pi / 2 + \( - alpha \)] = - sin\(- alpha\)= sin alpha\
 tan (pi / 2 - alpha) & = tan [pi / 2 + \( - alpha \)] = - cot\(- alpha\)= cot alpha\
 cot (pi / 2 - alpha) & = cot [pi / 2 + \( - alpha \)] = - tan\(- alpha\)= tan alpha $ #noindent;于是有#numbered-eq($ sin (pi / 2 - alpha) = cos alpha\, & #h(2em) cos (pi / 2 - alpha) = sin alpha\
 tan (pi / 2 - alpha) = cot alpha\, & #h(2em) cot (pi / 2 - alpha) = tan alpha $);
 
-=== $pi plus.minus alpha$、$frac(3 pi, 2) plus.minus alpha$ 与 $alpha$ 的三角函数间的关系
+=== $pi plus.minus alpha$⁠、$frac(3 pi, 2) plus.minus alpha$ 与 $alpha$ 的三角函数间的关系
 由于 $ sin\(pi + alpha\) & = sin [pi / 2 + (pi / 2 + alpha)] = cos (pi / 2 + alpha) = - sin alpha\
 cos\(pi + alpha\) & = cos [pi / 2 + (pi / 2 + alpha)] = - sin (pi / 2 + alpha) = - cos alpha\
 tan\(pi + alpha\) & = tan [pi / 2 + (pi / 2 + alpha)] = - cot (pi / 2 + alpha) = -\(- tan alpha\)= tan alpha\
@@ -1002,7 +1004,7 @@ cot (frac(3 pi, 2) - alpha) & = cot [frac(3 pi, 2) + \( - alpha \)] = - tan\(- a
 tan (frac(3 pi, 2) - alpha) = cot alpha\, & #h(2em) cot (frac(3 pi, 2) - alpha) = tan alpha $);
 
 #example[
-求 $sin\(- 1650 degree\)$，$cos (- frac(19 pi, 6))$ 的值．
+求 $sin\(- 1650 degree\)$⁠，$cos (- frac(19 pi, 6))$ 的值．
 
 ]
 #solution[
@@ -1015,7 +1017,7 @@ cos (- frac(19 pi, 6)) & = cos frac(19 pi, 6) = cos (2 pi + frac(7 pi, 6))\
 
 ]
 === 三角函数的诱导公式
-把上面的自变数是 $- alpha$、$pi / 2 plus.minus alpha$、$pi plus.minus alpha$、$frac(3 pi, 2) plus.minus alpha$、$2 pi plus.minus alpha$ 的三角函数表示为自变数就是 $alpha$ 的三角函数的公式，叫做三角函数的诱导公式．为便于查阅和比较，我们把三角函数的诱导公式全部都列于下表中．
+把上面的自变数是 $- alpha$⁠、$pi / 2 plus.minus alpha$⁠、$pi plus.minus alpha$⁠、$frac(3 pi, 2) plus.minus alpha$⁠、$2 pi plus.minus alpha$ 的三角函数表示为自变数就是 $alpha$ 的三角函数的公式，叫做三角函数的诱导公式．为便于查阅和比较，我们把三角函数的诱导公式全部都列于下表中．
 
 #align(center)[
 #table(
@@ -1077,13 +1079,13 @@ cos (- frac(19 pi, 6)) & = cos frac(19 pi, 6) = cos (2 pi + frac(7 pi, 6))\
 );
 
 ]
-比如要计算 $tan (pi / 2 + alpha)$ 的值，在表中找到标记 $pi / 2 + alpha$ 的第二行与标记 $tan$ 的第三列，它们相交之处，标记着 $- cot alpha$, 于是，相应的诱导公式可以写成 $tan (pi / 2 + alpha) = - cot alpha$．
+比如要计算 $tan (pi / 2 + alpha)$ 的值，在表中找到标记 $pi / 2 + alpha$ 的第二行与标记 $tan$ 的第三列，它们相交之处，标记着 $- cot alpha$, 于是，相应的诱导公式可以写成 $tan (pi / 2 + alpha) = - cot alpha$⁠．
 
 表中最后一列，给出对于锐角 $alpha$（带斜条的全等直角三角形的顶点在圆心的锐角）的三角函数诱导公式的几何解释．
 
 我们称正弦与余弦，正切与余切互为余函数．
 
-从表中，可知 $- alpha$、$pi / 2 plus.minus alpha$、$pi plus.minus alpha$、$frac(3 pi, 2) plus.minus alpha$ 和 $2 pi plus.minus alpha$ 都可以化成 $k pi / 2 plus.minus alpha$ $\(k = 0\,1\,2\,3\,4\)$ 的形式，并且这些角的三角函数和角 $alpha$ 的三角函数之间的关系，可以总结出下面的法则．
+从表中，可知 $- alpha$⁠、$pi / 2 plus.minus alpha$⁠、$pi plus.minus alpha$⁠、$frac(3 pi, 2) plus.minus alpha$ 和 $2 pi plus.minus alpha$ 都可以化成 $k pi / 2 plus.minus alpha$ $\(k = 0\,1\,2\,3\,4\)$ 的形式，并且这些角的三角函数和角 $alpha$ 的三角函数之间的关系，可以总结出下面的法则．
 
 + 符号
 
@@ -1110,7 +1112,7 @@ cos (- frac(19 pi, 6)) & = cos frac(19 pi, 6) = cos (2 pi + frac(7 pi, 6))\
 #solution[
 + 假定 $alpha$ 是锐角，则 $frac(3 pi, 2) + alpha$ 是第四象限的角，而第四象限的角的余弦是正的，所以结果应取正号．
 
-+ 因为 $frac(3 pi, 2) = 3 dot.op pi / 2$，3是奇数，所以，结果中函数名称应由余弦变为正弦，因此，有 $ cos (frac(3 pi, 2) + alpha) = cos (3 dot.op pi / 2 + alpha) = sin alpha $
++ 因为 $frac(3 pi, 2) = 3 dot.op pi / 2$⁠，3是奇数，所以，结果中函数名称应由余弦变为正弦，因此，有 $ cos (frac(3 pi, 2) + alpha) = cos (3 dot.op pi / 2 + alpha) = sin alpha $
 
 ]
 #example[
@@ -1120,7 +1122,7 @@ cos (- frac(19 pi, 6)) & = cos frac(19 pi, 6) = cos (2 pi + frac(7 pi, 6))\
 #solution[
 + 假定 $alpha$ 是锐角，则 $pi - alpha$ 是第二象限的角，而第二象限的角的正切是负的，所以结果应取负号．
 
-+ 因为 $pi = 2 dot.op pi / 2$，2是偶数，所以，结果中函数名称与原来的相同，仍为正切，因此，有 $ tan\(pi - alpha\)= - tan alpha $
++ 因为 $pi = 2 dot.op pi / 2$⁠，2是偶数，所以，结果中函数名称与原来的相同，仍为正切，因此，有 $ tan\(pi - alpha\)= - tan alpha $
 
 ]
 利用三角函数的诱导公式，我们可以把求任意角的三角函数值的问题化为求锐角三角函数值的问题．下面分三种情形举例说明．
@@ -1143,7 +1145,7 @@ $tan frac(4 pi, 3) = tan (pi + pi / 3) = tan pi / 3 = sqrt(3)$
 $cot 313 degree 25' = cot\(360 degree - 46 degree 35'\)= - cot 46 degree 35' = - 0.9463$
 
 ]
-第二种情形：大于 $2 pi$ (或大于 $360 degree$) 的角的三角函数，可利用公式(6.4), 化为上述第一种情形，然后求值．
+第二种情形：大于 $2 pi$ (或大于 $360 degree$) 的角的三角函数，可利用公式 (6.4), 化为上述第一种情形，然后求值．
 
 #example[
 $sin 510 degree = sin\(360 degree + 150 degree\)= sin 150 degree = sin 30 degree = 1 / 2$
@@ -1182,7 +1184,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 ]
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题6.1]
 
-+ 用余角的三角函数来替换下面的三角函数．
++ #block(sticky: true)[用余角的三角函数来替换下面的三角函数．]
 
   #cols(2)[
   + $sin 75 degree 30'$
@@ -1199,7 +1201,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 
   ]
 
-+ 查表求下列三角函数值：
++ #block(sticky: true)[查表求下列三角函数值：]
 
   #cols(2)[
   + $sin 105 degree 45'$
@@ -1212,7 +1214,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 
   ]
 
-+ 查表求下列三角函数值：
++ #block(sticky: true)[查表求下列三角函数值：]
 
   #cols(2)[
   + $sin frac(5 pi, 8)$
@@ -1227,7 +1229,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 
   ]
 
-+ 查表求下列三角函数值：
++ #block(sticky: true)[查表求下列三角函数值：]
 
   #cols(2)[
   + $sin\(- 1640 degree\)$
@@ -1240,7 +1242,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 
   ]
 
-+ 查表求下列三角函数值：
++ #block(sticky: true)[查表求下列三角函数值：]
 
   #cols(2)[
   + $sin 2$
@@ -1253,7 +1255,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 
   ]
 
-+ 查表求下列三角函数值：
++ #block(sticky: true)[查表求下列三角函数值：]
 
   #cols(2)[
   + $sin 1160 degree$
@@ -1274,7 +1276,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 
   ]
 
-+ 已知 $sin\(180 degree + alpha\)= - 1 / 2$，计算：
++ #block(sticky: true)[已知 $sin\(180 degree + alpha\)= - 1 / 2$⁠，计算：]
 
   #cols(2)[
   + $sin\(270 degree + alpha\)$
@@ -1295,7 +1297,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 
   + $sin 110 degree + sin 130 degree + sin 150 degree + sin 170 degree + sin 190 degree + sin 210 degree + sin 230 degree + sin 250 degree + sin 270 degree$
 
-+ 确定下列各式的符号：
++ #block(sticky: true)[确定下列各式的符号：]
 
   #cols(2)[
   + $sin 100 degree + cos 100 degree$
@@ -1332,14 +1334,14 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 
 正切线与 $O y$ 轴平行，在正切线上，规定它的正方向与 $O y$ 轴的正方向一致，它上面的单位长等于单位圆的半径．
 
-令 $P$ 是角 $alpha$ 的终边与单位圆的交点，延长旋转半径 $O P$ 或反向延长旋转半径 $O P$ 与正切线交于 $L$ 点（当 $P$ 点位于 $O y$ 轴上时，过 $O$、$P$ 两点的直线就不与正切线相交），如图6.19所示．
+令 $P$ 是角 $alpha$ 的终边与单位圆的交点，延长旋转半径 $O P$ 或反向延长旋转半径 $O P$ 与正切线交于 $L$ 点（当 $P$ 点位于 $O y$ 轴上时，过 $O$⁠、$P$ 两点的直线就不与正切线相交），如图6.19所示．
 
 #blk[定理][
 角 $alpha$ 的正切等于它的终边所在直线与正切线的交点的纵坐标．
 
 ]
 #proof[
-如果角 $alpha$ 的终边 $O P$ 在 $O y$ 轴的右侧，射线 $O P$ 与正切线交于 $L$ 点．设 $P$ 点坐标为 $\(x\,y\)$, $L$ 点坐标为 $\(1\,y_1\)$，这时 $ tan alpha = y / x = frac(A L, 1) = y_1 $ #noindent;这里 $A L$ 是有向线段 $accent(A L, ⃗)$ 的数量（图6.19(a)）．
+如果角 $alpha$ 的终边 $O P$ 在 $O y$ 轴的右侧，射线 $O P$ 与正切线交于 $L$ 点．设 $P$ 点坐标为 $\(x\,y\)$, $L$ 点坐标为 $\(1\,y_1\)$⁠，这时 $ tan alpha = y / x = frac(A L, 1) = y_1 $ #noindent;这里 $A L$ 是有向线段 $accent(A L, ⃗)$ 的数量（图6.19(a)）．
 
 #figure([#fig("6-18");
 
@@ -1348,7 +1350,7 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
   ]
 )
 
-如果角 $alpha$ 的终边 $O P$ 在 $O y$ 轴的左侧，反向延长 $O P$ 与正切线交于 $L$ 点．设 $P$ 点、$L$ 点的坐标分别是 $\(x\,y\)$、$\(x_1\,y_1\)$，这时 $P$ 点和 $L$ 点的同名称坐标的符号相反，但由于 $triangle.stroked.t O P M tilde.op triangle.stroked.t O L A$, 所以它们的坐标的比相同（图6.19(b)），即 $ tan alpha = y / x = frac(M P, O M) = frac(A L, O A) = y_1 / 1 = y_1 $
+如果角 $alpha$ 的终边 $O P$ 在 $O y$ 轴的左侧，反向延长 $O P$ 与正切线交于 $L$ 点．设 $P$ 点、$L$ 点的坐标分别是 $\(x\,y\)$⁠、$\(x_1\,y_1\)$⁠，这时 $P$ 点和 $L$ 点的同名称坐标的符号相反，但由于 $triangle.stroked.t O P M tilde.op triangle.stroked.t O L A$, 所以它们的坐标的比相同（图6.19(b)），即 $ tan alpha = y / x = frac(M P, O M) = frac(A L, O A) = y_1 / 1 = y_1 $
 
 如果 $P$ 点在 $O y$ 轴上则 $L$ 点不存在，$tan alpha$ 不存在．
 
@@ -1382,11 +1384,11 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
 #solution[
 + 在单位圆上，纵坐标等于 $sqrt(3) / 2$ 的点，分别是在第一象限的点 $P_1$ 和第二象限的点 $P_2$（如图6.21）．
 
-  $because quad sin pi / 3 = sqrt(3) / 2$，故通过 $P_1$ 点的一切角 $ alpha_1 = pi / 3 + 2 k pi\,#h(2em) k in bb(Z) $ #noindent;通过 $P_2$ 点的一切角 $ alpha_2 = (pi - pi / 3) + 2 k pi = frac(2 pi, 3) + 2 k pi\,#h(2em) k in bb(Z) $
+  $because quad sin pi / 3 = sqrt(3) / 2$⁠，故通过 $P_1$ 点的一切角 $ alpha_1 = pi / 3 + 2 k pi\,#h(2em) k in bb(Z) $ #noindent;通过 $P_2$ 点的一切角 $ alpha_2 = (pi - pi / 3) + 2 k pi = frac(2 pi, 3) + 2 k pi\,#h(2em) k in bb(Z) $
 
   #strong[另解：]$because quad sin alpha = sqrt(3) / 2 > 0$
 
-  $therefore quad alpha$ 角终边在第一或第二象限．但知 $sin pi / 3 = sqrt(3) / 2$，根据诱导公式得到 $ sin (pi / 3 + 2 k pi) = sin [(pi - pi / 3) + 2 k pi] = sin pi / 3 = sqrt(3) / 2 $ #noindent;所以 $sin alpha = sqrt(3) / 2$ 的解集是 $ \{alpha #scale(x: 180%, y: 180%)[$\|$] alpha = pi / 3 + 2 k pi \, thick k in bb(Z)\} union.big \{alpha #scale(x: 180%, y: 180%)[$\|$] alpha = frac(2 pi, 3) + 2 k pi \, thick k in bb(Z)\} $
+  $therefore quad alpha$ 角终边在第一或第二象限．但知 $sin pi / 3 = sqrt(3) / 2$⁠，根据诱导公式得到 $ sin (pi / 3 + 2 k pi) = sin [(pi - pi / 3) + 2 k pi] = sin pi / 3 = sqrt(3) / 2 $ #noindent;所以 $sin alpha = sqrt(3) / 2$ 的解集是 $ lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha = pi / 3 + 2 k pi \, thick k in bb(Z) \}) union.big lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha = frac(2 pi, 3) + 2 k pi \, thick k in bb(Z) \}) $
 
 + 在单位圆上，纵坐标等于 $- sqrt(3) / 2$ 的点，分别是在第三象限的点 $P_1$ 和第四象限的点 $P_2$ (如图6.22)
 
@@ -1397,17 +1399,17 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
     ]
   )
 
-  $because quad sin pi / 3 = sqrt(3) / 2$，故通过 $P_1$ 点的一切 $2 alpha_1$ 角：$ 2 alpha_1 = (pi + pi / 3) + 2 k pi = frac(4 pi, 3) + 2 k pi $ #noindent;由此得 $alpha_1 = frac(2 pi, 3) + k pi\,quad k in bb(Z)$．
+  $because quad sin pi / 3 = sqrt(3) / 2$⁠，故通过 $P_1$ 点的一切 $2 alpha_1$ 角：$ 2 alpha_1 = (pi + pi / 3) + 2 k pi = frac(4 pi, 3) + 2 k pi $ #noindent;由此得 $alpha_1 = frac(2 pi, 3) + k pi\,quad k in bb(Z)$⁠．
 
   通过 $P_2$ 点的一切 $2 alpha_2$ 角：$ 2 alpha_2 = (2 pi - pi / 3) + 2 k pi = frac(5 pi, 3) + 2 k pi $ #noindent;由此得 $alpha_2 = frac(5 pi, 6) + k pi\,quad k in bb(Z)$
 
-  所以 $sin 2 alpha = - sqrt(3) / 2$ 的解集是 $ \{alpha #scale(x: 180%, y: 180%)[$\|$] alpha = frac(2 pi, 3) + k pi \, thick k in bb(Z)\} union.big \{alpha #scale(x: 180%, y: 180%)[$\|$] alpha = frac(5 pi, 6) + k pi \, thick k in bb(Z)\} $
+  所以 $sin 2 alpha = - sqrt(3) / 2$ 的解集是 $ lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha = frac(2 pi, 3) + k pi \, thick k in bb(Z) \}) union.big lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha = frac(5 pi, 6) + k pi \, thick k in bb(Z) \}) $
 
   #strong[另解：]$because quad sin 2 alpha = - sqrt(3) / 2 < 0$
 
   $therefore quad$ 角 $2 alpha$ 终边在第三或第四象限．
 
-  $because quad sin pi / 3 = sqrt(3) / 2$，根据诱导公式 $ sin [(pi + pi / 3) + 2 k pi] = sin [(2 pi - pi / 3) + 2 k pi] = - sin pi / 3 = - sqrt(3) / 2 $ #noindent;得知 $ 2 alpha = frac(4 pi, 3) + 2 k pi #h(2em) upright("或") #h(2em) 2 alpha = frac(5 pi, 3) + 2 k pi quad\(k in bb(Z)\) $ #noindent;$therefore quad alpha = frac(2 pi, 3) + k pi #h(2em) upright("或") #h(2em) alpha = frac(5 pi, 6) + k pi quad\(k in bb(Z)\)$
+  $because quad sin pi / 3 = sqrt(3) / 2$⁠，根据诱导公式 $ sin [(pi + pi / 3) + 2 k pi] = sin [(2 pi - pi / 3) + 2 k pi] = - sin pi / 3 = - sqrt(3) / 2 $ #noindent;得知 $ 2 alpha = frac(4 pi, 3) + 2 k pi #h(2em) upright("或") #h(2em) 2 alpha = frac(5 pi, 3) + 2 k pi quad\(k in bb(Z)\) $ #noindent;$therefore quad alpha = frac(2 pi, 3) + k pi #h(2em) upright("或") #h(2em) alpha = frac(5 pi, 6) + k pi quad\(k in bb(Z)\)$
 
 + 在单位圆上，横坐标等于 $- 1 / 2$ 的点分别是在第二象限的 $P_1$ 点和第三象限的 $P_2$ 点（如图6.23）．
 
@@ -1418,17 +1420,17 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
     ]
   )
 
-  $because quad cos pi / 3 = 1 / 2$，故通过 $P_1$ 点的一切 $alpha_1 / 2$ 角：$ alpha_1 / 2 = (pi - pi / 3) + 2 k pi = frac(2 pi, 3) + 2 k pi $ #noindent;由此得：$alpha_1 = frac(4 pi, 3) + 4 k pi quad\(k in bb(Z)\)$．
+  $because quad cos pi / 3 = 1 / 2$⁠，故通过 $P_1$ 点的一切 $alpha_1 / 2$ 角：$ alpha_1 / 2 = (pi - pi / 3) + 2 k pi = frac(2 pi, 3) + 2 k pi $ #noindent;由此得：$alpha_1 = frac(4 pi, 3) + 4 k pi quad\(k in bb(Z)\)$⁠．
 
-  通过 $P_2$ 点的一切 $alpha_2 / 2$ 角：$ alpha_2 / 2 = (pi + pi / 3) + 2 k pi = frac(4 pi, 3) + 2 k pi $ #noindent;由此得：$alpha_2 = frac(8 pi, 3) + 4 k pi quad\(k in bb(Z)\)$．
+  通过 $P_2$ 点的一切 $alpha_2 / 2$ 角：$ alpha_2 / 2 = (pi + pi / 3) + 2 k pi = frac(4 pi, 3) + 2 k pi $ #noindent;由此得：$alpha_2 = frac(8 pi, 3) + 4 k pi quad\(k in bb(Z)\)$⁠．
 
-  所以解集是：$ \{alpha #scale(x: 180%, y: 180%)[$\|$] alpha = frac(4 pi, 3) + 4 k pi \, thick k in bb(Z)\} union.big \{alpha #scale(x: 180%, y: 180%)[$\|$] alpha = frac(8 pi, 3) + 4 k pi \, thick k in bb(Z)\} $
+  所以解集是：$ lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha = frac(4 pi, 3) + 4 k pi \, thick k in bb(Z) \}) union.big lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha = frac(8 pi, 3) + 4 k pi \, thick k in bb(Z) \}) $
 
-  #strong[另解：]$because quad cos alpha / 2 = - 1 / 2 < 0$，
+  #strong[另解：]$because quad cos alpha / 2 = - 1 / 2 < 0$⁠，
 
   $therefore quad$ 角 $alpha / 2$ 的终边在第二象限或第三象限．
 
-  $because quad cos pi / 3 = 1 / 2$，根据诱导公式 $ cos [(pi - pi / 3) + 2 k pi] = cos [(pi + pi / 3) + 2 k pi] = - cos pi / 3 = - 1 / 2 $ #noindent;得知：$alpha / 2 = frac(2 pi, 3) + 2 k pi quad upright("或") quad alpha / 2 = frac(4 pi, 3) + 2 k pi$
+  $because quad cos pi / 3 = 1 / 2$⁠，根据诱导公式 $ cos [(pi - pi / 3) + 2 k pi] = cos [(pi + pi / 3) + 2 k pi] = - cos pi / 3 = - 1 / 2 $ #noindent;得知：$alpha / 2 = frac(2 pi, 3) + 2 k pi quad upright("或") quad alpha / 2 = frac(4 pi, 3) + 2 k pi$
 
   $ therefore quad alpha = frac(4 pi, 3) + 4 k pi #h(2em) upright("或") #h(2em) alpha = frac(8 pi, 3) + 4 k pi quad\(k in bb(Z)\) $
 
@@ -1443,15 +1445,15 @@ $ tan\(alpha - 270 degree\)= tan\[-\(270 degree - alpha\)\]= - tan\(270 degree -
     ]
   )
 
-  因为 $tan pi / 6 = sqrt(3) / 3$，所以通过 $P_2$ 点和 $P_1$ 点的一切角 $alpha = - pi / 6 + k pi\,thick\(k in bb(Z)\)$
+  因为 $tan pi / 6 = sqrt(3) / 3$⁠，所以通过 $P_2$ 点和 $P_1$ 点的一切角 $alpha = - pi / 6 + k pi\,thick\(k in bb(Z)\)$
 
-  所以解集是：$\{alpha #scale(x: 180%, y: 180%)[$\|$] alpha = - pi / 6 + k pi \, quad k in bb(Z)\}$
+  所以解集是：$lr(\{ alpha #scale(x: 180%, y: 180%)[$\|$] alpha = - pi / 6 + k pi \, quad k in bb(Z) \})$
 
   #strong[另解：]$because quad tan alpha = - sqrt(3) / 3 < 0$
 
   $therefore quad$ 角 $alpha$ 终边在第二象限或第四象限．
 
-  $because quad tan pi / 6 = sqrt(3) / 3$，根据诱导公式 $ tan [(pi - pi / 6) + 2 k pi] = tan [(2 pi - pi / 6) + 2 k pi] = - tan pi / 6 = - sqrt(3) / 3 $ #noindent;得知：$ alpha = frac(5 pi, 6) + 2 k pi #h(2em) upright("或") #h(2em) alpha = frac(5 pi, 6) +\(2 k + 1\)pi quad\(k in bb(Z)\) $
+  $because quad tan pi / 6 = sqrt(3) / 3$⁠，根据诱导公式 $ tan [(pi - pi / 6) + 2 k pi] = tan [(2 pi - pi / 6) + 2 k pi] = - tan pi / 6 = - sqrt(3) / 3 $ #noindent;得知：$ alpha = frac(5 pi, 6) + 2 k pi #h(2em) upright("或") #h(2em) alpha = frac(5 pi, 6) +\(2 k + 1\)pi quad\(k in bb(Z)\) $
 
 ]
 #exercise[
@@ -1493,8 +1495,8 @@ tan alpha dot.op cot alpha & = y / x dot.op x / y = 1\,quad alpha eq.not k dot.o
 
 ]
 #proof[
-$ frac(sin alpha, cos alpha) & = y / r / x / r = y / x = tan alpha\,quad alpha eq.not pi / 2 + k pi #h(2em)\(k in bb(Z)\)\
-frac(cos alpha, sin alpha) & = x / r / y / r = x / y = cot alpha\,quad alpha eq.not k pi #h(2em)\(k in bb(Z)\) $
+$ frac(sin alpha, cos alpha) & = frac(y / r, x / r) = y / x = tan alpha\,quad alpha eq.not pi / 2 + k pi #h(2em)\(k in bb(Z)\)\
+frac(cos alpha, sin alpha) & = frac(x / r, y / r) = x / y = cot alpha\,quad alpha eq.not k pi #h(2em)\(k in bb(Z)\) $
 
 ]
 #blk[平方关系][
@@ -1506,9 +1508,9 @@ frac(cos alpha, sin alpha) & = x / r / y / r = x / y = cot alpha\,quad alpha eq.
 
 ]
 #proof[
-根据任意角三角函数定义，得 $ sin^2 alpha + cos^2 alpha = (y / r)^2 + (x / r)^2 = frac(x^2 + y^2, r^2) $ #noindent;因为 $y^2 + x^2 = r^2$，所以 $sin^2 alpha + cos^2 alpha = 1$．
+根据任意角三角函数定义，得 $ sin^2 alpha + cos^2 alpha = (y / r)^2 + (x / r)^2 = frac(x^2 + y^2, r^2) $ #noindent;因为 $y^2 + x^2 = r^2$⁠，所以 $sin^2 alpha + cos^2 alpha = 1$⁠．
 
-把 $sin^2 alpha + cos^2 alpha = 1$ 的两边同除以 $cos^2 alpha\,thick alpha eq.not pi / 2 + k pi quad\(k in bb(Z)\)$, 便得到 $ tan^2 alpha + 1 = sec^2 alpha $ #noindent;或 $ 1 + tan^2 alpha = s e c^2 alpha $ #noindent;把 $sin^2 alpha + cos^2 alpha = 1$ 的两边同除以 $sin^2 alpha$,$alpha eq.not k pi quad\(k in bb(Z)\)$，便得到 $ 1 + cot^2 alpha = csc^2 alpha $
+把 $sin^2 alpha + cos^2 alpha = 1$ 的两边同除以 $cos^2 alpha\,thick alpha eq.not pi / 2 + k pi quad\(k in bb(Z)\)$, 便得到 $ tan^2 alpha + 1 = sec^2 alpha $ #noindent;或 $ 1 + tan^2 alpha = s e c^2 alpha $ #noindent;把 $sin^2 alpha + cos^2 alpha = 1$ 的两边同除以 $sin^2 alpha$,$alpha eq.not k pi quad\(k in bb(Z)\)$⁠，便得到 $ 1 + cot^2 alpha = csc^2 alpha $
 
 ]
 上面八个公式，除去使公式中的函数不存在的那些 $alpha$ 的值以外，对于 $alpha$ 其它的值都成立，因此，把它们叫做三角函数的基本恒等式．
@@ -1551,35 +1553,47 @@ $ upright("原式") & = sqrt(cos^2 alpha) dot.op tan alpha\
 #exercise[
 证明恒等式：
 
-+ + $\(tan^2 alpha - sin^2 alpha\)cot^2 alpha = sin^2 alpha$
++ #lead-list(none, 2)[
+  + $\(tan^2 alpha - sin^2 alpha\)cot^2 alpha = sin^2 alpha$
 
   + $frac(1, 1 - cos alpha) dot.op frac(1, csc alpha + 1) + frac(1, 1 + cos alpha) dot.op frac(1, csc alpha - 1) = sec^2 alpha$
+  ]
 
-+ + $frac(tan alpha - sin alpha, tan alpha) = 1 - cos alpha$
++ #lead-list(none, 2)[
+  + $frac(tan alpha - sin alpha, tan alpha) = 1 - cos alpha$
 
   + $frac(tan alpha + cot alpha - 2, tan alpha + cot alpha + 2) = (frac(tan alpha - 1, tan alpha + 1))^2$
+  ]
 
-+ + $frac(tan alpha + tan beta, cot alpha + cot beta) = tan alpha tan beta$
++ #lead-list(none, 2)[
+  + $frac(tan alpha + tan beta, cot alpha + cot beta) = tan alpha tan beta$
 
   + $frac(cos alpha + cot alpha, cot alpha) - 1 = tan alpha cos alpha$
+  ]
 
-+ + $frac(1 + tan^4 alpha, tan^2 alpha + cot^2 alpha) = tan^2 alpha$
++ #lead-list(none, 2)[
+  + $frac(1 + tan^4 alpha, tan^2 alpha + cot^2 alpha) = tan^2 alpha$
 
   + $frac(1, sin^2 alpha - cos^2 alpha) = frac(1 + cot^2 alpha, 1 - cot^2 alpha)$
+  ]
 
-+ + $frac(\(cos alpha + sin alpha\)^2 - 1, cot alpha - sin alpha cos alpha) = 2 tan^2 alpha$
++ #lead-list(none, 2)[
+  + $frac(\(cos alpha + sin alpha\)^2 - 1, cot alpha - sin alpha cos alpha) = 2 tan^2 alpha$
 
   + $sqrt(2 tan alpha + sec^2 alpha) = 1 + tan alpha$,（$alpha$ 是正锐角）
+  ]
 
 化简下列各式：
 
-+ + $sqrt(1 - cos^2 alpha) dot.op cot alpha$
++ #lead-list(none, 2)[
+  + $sqrt(1 - cos^2 alpha) dot.op cot alpha$
 
   + $sqrt(frac(1 - cos alpha, 1 + cos alpha))$
 
   + $sqrt(sin^2 alpha\(1 + cot alpha\)+ cos^2 alpha\(1 + tan alpha\))$
+  ]
 
-+ 已知 $sin alpha + cos alpha = sqrt(2)$，求：$ sin alpha cos alpha\,#h(2em) sin^3 alpha + cos^3 alpha\,#h(2em) sin^4 alpha + cos^4 alpha $
++ 已知 $sin alpha + cos alpha = sqrt(2)$⁠，求：$ sin alpha cos alpha\,#h(2em) sin^3 alpha + cos^3 alpha\,#h(2em) sin^4 alpha + cos^4 alpha $
 
 + 把 $sin^4 alpha - sin^2 alpha + cos^2 alpha$ 化为只含 $cos alpha$ 的式子．
 
@@ -1588,23 +1602,23 @@ $ upright("原式") & = sqrt(cos^2 alpha) dot.op tan alpha\
 根据前面中所推导出的三角函数间的基本公式，可以从一个已知的三角函数值，计算其余的三角函数值．
 
 #example[
-已知 $cos alpha = 12 / 13$，求 $alpha$ 角的其余的三角函数．
+已知 $cos alpha = 12 / 13$⁠，求 $alpha$ 角的其余的三角函数．
 
 ]
 #solution[
-因为 $cos alpha = 12 / 13 > 0$，所以 $alpha$ 角的终边在第一象限或在第四象限．
+因为 $cos alpha = 12 / 13 > 0$⁠，所以 $alpha$ 角的终边在第一象限或在第四象限．
 
-从公式 $sec alpha = frac(1, cos alpha)$，有 $sec alpha = 1 / 12 / 13 = 13 / 12$．
+从公式 $sec alpha = frac(1, cos alpha)$⁠，有 $sec alpha = frac(1, 12 / 13) = 13 / 12$⁠．
 
-其次，从公式 $sin^2 alpha + cos^2 alpha = 1$ 得 $ sin alpha = plus.minus sqrt(1 - (12 / 13)^2) = plus.minus 5 / 13 $ #noindent;因为 $csc alpha = frac(1, sin alpha)$，所以 $ csc alpha = frac(1, plus.minus 5 / 13) = plus.minus 13 / 5 $ #noindent;从公式 $tan alpha = frac(sin alpha, cos alpha)$ 求得 $ tan alpha = frac(plus.minus 5 / 13, 12 / 13) = plus.minus 5 / 12 $ #noindent;最后 $ cot alpha = frac(1, tan alpha) = plus.minus 12 / 5 $
+其次，从公式 $sin^2 alpha + cos^2 alpha = 1$ 得 $ sin alpha = plus.minus sqrt(1 - (12 / 13)^2) = plus.minus 5 / 13 $ #noindent;因为 $csc alpha = frac(1, sin alpha)$⁠，所以 $ csc alpha = frac(1, plus.minus 5 / 13) = plus.minus 13 / 5 $ #noindent;从公式 $tan alpha = frac(sin alpha, cos alpha)$ 求得 $ tan alpha = frac(plus.minus 5 / 13, 12 / 13) = plus.minus 5 / 12 $ #noindent;最后 $ cot alpha = frac(1, tan alpha) = plus.minus 12 / 5 $
 
 ]
 #example[
-已知 $sin alpha = 3 / 5$，求 $alpha$ 角的其余各三角函数值．
+已知 $sin alpha = 3 / 5$⁠，求 $alpha$ 角的其余各三角函数值．
 
 ]
 #solution[
-因为 $sin alpha = 3 / 5 > 0$，所以 $alpha$ 角是第一象限角或第二象限角．$ csc alpha & = frac(1, sin alpha) = 5 / 3\
+因为 $sin alpha = 3 / 5 > 0$⁠，所以 $alpha$ 角是第一象限角或第二象限角．$ csc alpha & = frac(1, sin alpha) = 5 / 3\
 cos alpha & = plus.minus sqrt(1 - sin^2 alpha) = plus.minus sqrt(1 - (3 / 5)^2) = plus.minus 4 / 5\
 sec alpha & = frac(1, cos alpha) = plus.minus 5 / 4\
 tan alpha & = frac(sin alpha, cos alpha) = frac(3 / 5, plus.minus 4 / 5) = plus.minus 3 / 4\
@@ -1612,7 +1626,7 @@ cot alpha & = frac(1, tan alpha) = plus.minus 4 / 3 $
 
 ]
 #example[
-已知 $tan phi.alt = 7 / 8$, $pi < phi.alt < frac(3 pi, 2)$，求 $phi.alt$ 角的其余三角函数值，准确到0.01．
+已知 $tan phi.alt = 7 / 8$, $pi < phi.alt < frac(3 pi, 2)$⁠，求 $phi.alt$ 角的其余三角函数值，准确到0.01．
 
 ]
 #solution[
@@ -1621,17 +1635,17 @@ $cot phi.alt = frac(1, tan phi.alt) = 8 / 7 approx 1.14$
 $because quad phi.alt$ 是第三象限角，$therefore quad sec phi.alt < 0$
 
 因此：$ sec phi.alt & = - sqrt(1 + (7 / 8)^2) approx - 1.33\
-cos phi.alt & = - 1 / sqrt(1 + (7 / 8)^2) approx - 1 / 1.33 approx - 0.75\
+cos phi.alt & = - frac(1, sqrt(1 + (7 / 8)^2)) approx - 1 / 1.33 approx - 0.75\
 sin phi.alt & = tan phi.alt dot.op cos phi.alt approx 7 / 8\(- 0.753\)approx - 0.66\
 csc phi.alt & = - 1 / 0.658 approx - 1.52 $
 
 ]
 #example[
-已知 $cot alpha = m$，$- pi / 2 < alpha < 0$，求 $alpha$ 角的其余各三角函数值．
+已知 $cot alpha = m$⁠，$- pi / 2 < alpha < 0$⁠，求 $alpha$ 角的其余各三角函数值．
 
 ]
 #solution[
-因为 $- pi / 2 < alpha < 0$，所以 $cot alpha = m eq.not 0$，$csc alpha < 0$，于是 $ tan alpha & = 1 / m\
+因为 $- pi / 2 < alpha < 0$⁠，所以 $cot alpha = m eq.not 0$⁠，$csc alpha < 0$⁠，于是 $ tan alpha & = 1 / m\
 csc alpha & = - sqrt(1 + cot^2 alpha) = - sqrt(1 + m^2)\
 sin alpha & = - 1 / sqrt(1 + m^2)\
 cos alpha & = cot alpha dot.op sin alpha = m (- 1 / sqrt(1 + m^2)) = - m / sqrt(1 + m^2)\
@@ -1639,7 +1653,7 @@ sec alpha & = frac(1, cos alpha) = - sqrt(1 + m^2) / m $
 
 ]
 #example[
-已知 $tan alpha = - 3$，求：
+已知 $tan alpha = - 3$⁠，求：
 
 + $frac(sin alpha - cos alpha, cos alpha + sin alpha)$ 的值；
 
@@ -1647,48 +1661,52 @@ sec alpha & = frac(1, cos alpha) = - sqrt(1 + m^2) / m $
 
 ]
 #solution[
-+ 因为 $tan alpha = - 3$，所以 $alpha eq.not pi / 2 + k pi$，即 $cos alpha eq.not 0$．分子、分母分别除以 $cos alpha eq.not 0$，则 $ frac(sin alpha - cos alpha, cos alpha + sin alpha) = frac(tan alpha - 1, 1 + tan alpha) = frac(- 3 - 1, 1 +\(- 3\)) = 2 $
++ 因为 $tan alpha = - 3$⁠，所以 $alpha eq.not pi / 2 + k pi$⁠，即 $cos alpha eq.not 0$⁠．分子、分母分别除以 $cos alpha eq.not 0$⁠，则 $ frac(sin alpha - cos alpha, cos alpha + sin alpha) = frac(tan alpha - 1, 1 + tan alpha) = frac(- 3 - 1, 1 +\(- 3\)) = 2 $
 
 + $frac(1, sin^2 alpha - cos^2 alpha) = frac(sin^2 alpha + cos^2 alpha, sin^2 alpha - cos^2 alpha)$
 
-  分子、分母分别除以 $cos^2 alpha eq.not 0$，则 $ frac(1, sin^2 alpha - cos^2 alpha) = frac(tan^2 alpha + 1, tan^2 alpha - 1) = frac(\(- 3\)^2 + 1, \(- 3\)^2 - 1) = 5 / 4 $
+  分子、分母分别除以 $cos^2 alpha eq.not 0$⁠，则 $ frac(1, sin^2 alpha - cos^2 alpha) = frac(tan^2 alpha + 1, tan^2 alpha - 1) = frac(\(- 3\)^2 + 1, \(- 3\)^2 - 1) = 5 / 4 $
 
 ]
 #rmk[
-+ 在包含有函数 $tan alpha$ 或 $sec alpha$ 的一切公式里，要除去 $alpha = pi / 2 + k pi$ 的诸值，其中 $k in bb(Z)$；在包含有 $cot alpha$ 或 $csc alpha$ 的一切公式里，要除去 $alpha = k pi$, 其中 $k in bb(Z)$．
++ 在包含有函数 $tan alpha$ 或 $sec alpha$ 的一切公式里，要除去 $alpha = pi / 2 + k pi$ 的诸值，其中 $k in bb(Z)$⁠；在包含有 $cot alpha$ 或 $csc alpha$ 的一切公式里，要除去 $alpha = k pi$, 其中 $k in bb(Z)$⁠．
 
-+ 在包含有根号的那些公式里，一般的情形在根号之前应置双号“$plus.minus$”，若已给出 $alpha$ 角终边所在象限，则可选择确定的符号，根号前面符号的选择，依赖于 $alpha$ 角终边所在的象限所求三角函数的符号．
++ 在包含有根号的那些公式里，一般的情形在根号之前应置双号“$plus.minus$⁠”，若已给出 $alpha$ 角终边所在象限，则可选择确定的符号，根号前面符号的选择，依赖于 $alpha$ 角终边所在的象限所求三角函数的符号．
 
 + 含有 $sin alpha$ 和 $cos alpha$ 的有理式，当分子和分母都是关于 $sin alpha$ 和 $cos alpha$ 的同次的齐次多项式时，可以化为只含有 $tan alpha$ 的有理式．
 
 ]
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题6.2]
 
-+ 已知 $sin alpha = - 24 / 25$，计算 $cos alpha\,tan alpha\,cot alpha$．
++ 已知 $sin alpha = - 24 / 25$⁠，计算 $cos alpha\,tan alpha\,cot alpha$⁠．
 
-+ 已知 $cos alpha = - 9 / 41$，$90 degree < alpha < 180 degree$，计算 $sin alpha\,tan alpha\,cot alpha\,sec alpha\,csc alpha$．
++ 已知 $cos alpha = - 9 / 41$⁠，$90 degree < alpha < 180 degree$⁠，计算 $sin alpha\,tan alpha\,cot alpha\,sec alpha\,csc alpha$⁠．
 
-+ 已知 $cot alpha = 3 41 / 60$, $pi < alpha < frac(3 pi, 2)$，计算 $cos alpha$．
++ 已知 $cot alpha = 3 41 / 60$, $pi < alpha < frac(3 pi, 2)$⁠，计算 $cos alpha$⁠．
 
-+ 已知 $tan alpha = 1.4$, $pi < alpha < frac(3 pi, 2)$，计算 $alpha$ 角的其它三角函数值（准确到0.01）．
++ 已知 $tan alpha = 1.4$, $pi < alpha < frac(3 pi, 2)$⁠，计算 $alpha$ 角的其它三角函数值（准确到0.01）．
 
-+ 已知 $cot alpha = - 52 / 173$ 和 $0 degree < alpha < 180 degree$，计算 $tan alpha - sec alpha$ 的值．
++ 已知 $cot alpha = - 52 / 173$ 和 $0 degree < alpha < 180 degree$⁠，计算 $tan alpha - sec alpha$ 的值．
 
-+ 已知 $tan alpha = - 1.5$，$100 degree < alpha < 200 degree$，计算 $cos alpha$．
++ 已知 $tan alpha = - 1.5$⁠，$100 degree < alpha < 200 degree$⁠，计算 $cos alpha$⁠．
 
-+ 已知 $sin alpha = a / sqrt(a^2 + b^2)$，计算 $tan alpha - cot alpha$ 的值．
++ 已知 $sin alpha = a / sqrt(a^2 + b^2)$⁠，计算 $tan alpha - cot alpha$ 的值．
 
-+ 已知 $cot alpha = 3$, $pi < alpha < frac(3 pi, 2)$，求积 $sin alpha cos alpha$．
++ 已知 $cot alpha = 3$, $pi < alpha < frac(3 pi, 2)$⁠，求积 $sin alpha cos alpha$⁠．
 
-+ + 设 $tan alpha = 2$，计算 $frac(sin alpha + cos alpha, sin alpha - cos alpha)$；
++ #lead-list(none, 2)[
+  + 设 $tan alpha = 2$⁠，计算 $frac(sin alpha + cos alpha, sin alpha - cos alpha)$⁠；
 
-  + 设 $cot alpha = - 2$，计算 $frac(1, sin^2 alpha - sin alpha cos alpha + cos^2 alpha)$．
+  + 设 $cot alpha = - 2$⁠，计算 $frac(1, sin^2 alpha - sin alpha cos alpha + cos^2 alpha)$⁠．
+  ]
 
-+ + 若 $0 < alpha < pi$，化简 $sqrt(frac(1 + sin alpha, 1 - sin alpha)) - sqrt(frac(1 - sin alpha, 1 + sin alpha))$；
++ #lead-list(none, 2)[
+  + 若 $0 < alpha < pi$⁠，化简 $sqrt(frac(1 + sin alpha, 1 - sin alpha)) - sqrt(frac(1 - sin alpha, 1 + sin alpha))$⁠；
 
-  + 若 $frac(3 pi, 2) < alpha < 2 pi$，化简 $sqrt(frac(1 - cos alpha, 1 + cos alpha)) + sqrt(frac(1 + cos alpha, 1 - cos alpha))$．
+  + 若 $frac(3 pi, 2) < alpha < 2 pi$⁠，化简 $sqrt(frac(1 - cos alpha, 1 + cos alpha)) + sqrt(frac(1 + cos alpha, 1 - cos alpha))$⁠．
+  ]
 
-#heading(level: 2, numbering: none, outlined: false)[复习题六]
+#heading(level: 2, numbering: none, outlined: true)[复习题六]
 
 + $cos 1 degree$ 和 $cos 1$ 哪个大？又 $tan 1 degree$ 和 $tan 1$ 哪个大？
 
@@ -1708,7 +1726,7 @@ sec alpha & = frac(1, cos alpha) = - sqrt(1 + m^2) / m $
 
 + 设 $A$ 为三角形的一个内角，下列函数中哪些可以是负值，哪些只能是正值．$ sin A\,#h(2em) cos A\,#h(2em) tan A\,#h(2em) cot A / 2 $
 
-+ 确定下列各函数的符号：
++ #block(sticky: true)[确定下列各函数的符号：]
 
   #cols(2)[
   + $sin 1000 degree$
@@ -1721,7 +1739,7 @@ sec alpha & = frac(1, cos alpha) = - sqrt(1 + m^2) / m $
 
   ]
 
-+ 求下列各函数的定义域：
++ #block(sticky: true)[求下列各函数的定义域：]
 
   #cols(2)[
   + $y = sqrt(- frac(sin x, cos x))$
@@ -1738,7 +1756,7 @@ sec alpha & = frac(1, cos alpha) = - sqrt(1 + m^2) / m $
 
   + $4 sin pi - 2 cos frac(3 pi, 2) + 3 sin 2 pi - tan pi$
 
-+ 下面函数哪些是偶函数，哪些是奇函数，哪些都不是？
++ #block(sticky: true)[下面函数哪些是偶函数，哪些是奇函数，哪些都不是？]
 
   #cols(2)[
   + $y = tan 2 x$
@@ -1779,7 +1797,7 @@ sec alpha & = frac(1, cos alpha) = - sqrt(1 + m^2) / m $
 
   + $sqrt(sin^2 30 degree + sin^2 35 degree - 2 sin 30 degree + cos^2 35 degree)$
 
-+ 证明对于任何角 $alpha$，下面各等式都成立：
++ 证明对于任何角 $alpha$⁠，下面各等式都成立：
 
   + $frac(sin\(2 pi - alpha\)tan (pi / 2 + alpha) cot (frac(3 pi, 2) - alpha), cos\(2 pi + alpha\)tan\(pi + alpha\)) = 1$
 
@@ -1829,16 +1847,18 @@ sec alpha & = frac(1, cos alpha) = - sqrt(1 + m^2) / m $
 
   + $frac(1 - 2 sin alpha cos alpha, cos^2 alpha - sin^2 alpha) = frac(cos^2 alpha - sin^2 alpha, 1 + 2 sin alpha cos alpha)$
 
-+ + 已知 $sin theta = 15 / 17\,90 degree < theta < 180 degree$, 求 $cos theta\,tan theta$ 和 $cot theta$．
++ #lead-list(none, 2)[
+  + 已知 $sin theta = 15 / 17\,90 degree < theta < 180 degree$, 求 $cos theta\,tan theta$ 和 $cot theta$⁠．
 
-  + 已知 $cot theta = - sqrt(3) / 3$, $theta$ 在第四象限, 求 $sin theta$ 和 $cos theta$．
+  + 已知 $cot theta = - sqrt(3) / 3$, $theta$ 在第四象限, 求 $sin theta$ 和 $cos theta$⁠．
+  ]
 
 + $x$ 取 $0 degree$ 到 $720 degree$ 之间的哪些值时，下面等式成立：$ sqrt(1 - sin^2 x / 2) = cos x / 2 $
 
-+ 已知 $sin alpha cos alpha = 60 / 169$，并且 $pi / 4 < alpha < pi / 2$，求 $sin alpha$ 和 $cos alpha$ 的值．
++ 已知 $sin alpha cos alpha = 60 / 169$⁠，并且 $pi / 4 < alpha < pi / 2$⁠，求 $sin alpha$ 和 $cos alpha$ 的值．
 
-+ 已知 $sin\(180 degree + alpha\)= - 1 / 3$，且 $0 degree < alpha < 90 degree$，计算 $cot\(alpha - 180 degree\)$ 的值．
++ 已知 $sin\(180 degree + alpha\)= - 1 / 3$⁠，且 $0 degree < alpha < 90 degree$⁠，计算 $cot\(alpha - 180 degree\)$ 的值．
 
-+ 已知 $tan x = - 2$，求 $cot\(3 pi - x\)$, $cos\(x - 4 pi\)$ 的值．
++ 已知 $tan x = - 2$⁠，求 $cot\(3 pi - x\)$, $cos\(x - 4 pi\)$ 的值．
 
-+ 已知 $tan A = frac(2 m n, m^2 - n^2) thick\(0 degree < A < 180 degree\)$，求 $sin A$．
++ 已知 $tan A = frac(2 m n, m^2 - n^2) thick\(0 degree < A < 180 degree\)$⁠，求 $sin A$⁠．

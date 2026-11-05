@@ -57,6 +57,7 @@ class Converter:
     # ---- 预处理 ----
     def preprocess(self, tex: str) -> str:
         tex = strip_comments(tex)
+        tex = mark_lr_braces(tex)
         tex = self.replace_tikz(tex)
         # 单独的 \includegraphics[scale=s]{f}：pandoc 会套上带图号的 figure，LaTeX 版没有图号
         tex = re.sub(r"\\includegraphics\[scale=([\d.]+)\]\{([^}]*)\}",
@@ -97,7 +98,7 @@ class Converter:
         # 后面跟 \addcontentsline{toc}{section} 的（复习题）与“第X节”同级列入目录
         tex = re.sub(r"\\section\*\{([^}]*)\}\s*\\addcontentsline\{toc\}\{(sub)?section\}\{[^}]*\}",
                      lambda m: "\n\n" + self.slot("#heading(level: 2, numbering: none%s)[%s]" % (
-                         ", supplement: [toc-sub]" if m.group(2) else "", m.group(1))) + "\n\n", tex)
+                         ", supplement: [toc-sub]" if m.group(2) else ", outlined: true", m.group(1))) + "\n\n", tex)
         tex = re.sub(r"\\section\*\{([^}]*)\}(?!\s*\\addcontentsline)",
                      lambda m: "\n\n" + self.slot("#heading(level: 2, numbering: none, outlined: false)[%s]" % m.group(1)) + "\n\n", tex)
         tex = re.sub(r"\\addcontentsline\{[^}]*\}\{[^}]*\}\{[^}]*\}", "", tex)
@@ -231,19 +232,37 @@ class Converter:
         return "".join(out)
 
     def replace_tabular(self, tex: str) -> str:
-        """tabular 自行转换：pandoc 会丢掉大部分 \\hline 和竖线"""
+        """tabular、longtable 自行转换：pandoc 会丢掉大部分 \\hline 和竖线（longtable 的 p{} 列宽也丢）"""
         out, pos = [], 0
-        pat = re.compile(r"\\begin\{tabular\}")
+        pat = re.compile(r"(\{\\(small|footnotesize)\s*)?\\begin\{(tabular|longtable)\}")
         while True:
             m = pat.search(tex, pos)
             if not m:
                 out.append(tex[pos:])
                 return "".join(out)
             out.append(tex[pos : m.start()])
+            env = m.group(3)
             spec, j = read_group(tex, m.end())
-            end = tex.index(r"\end{tabular}", j)
-            out.append(self.slot(self.tabular(spec, tex[j:end])))
-            pos = end + len(r"\end{tabular}")
+            end = tex.index(r"\end{%s}" % env, j)
+            body = tex[j:end]
+            if env == "longtable":
+                # 表头的重复部分（\endfirsthead 与 \endhead 之间）只要一份
+                body = re.sub(r"\\endfirsthead.*?\\endhead", "", body, flags=re.S)
+                body = re.sub(r"\\end(firsthead|head|foot|lastfoot)\b", "", body)
+            typ = self.tabular(spec, body)
+            if env == "longtable":
+                # 长表可以跨页（模板中表格默认不跨页）
+                typ = "#block(breakable: true)[#show table: set block(breakable: true)\n%s]" % typ
+            pos = end + len(r"\end{%s}" % env)
+            if m.group(1):
+                k = re.match(r"\s*\}", tex[pos:])
+                if k:
+                    # {\small \begin{longtable}…\end{longtable}}：整表用小字号
+                    typ = "#text(size: %s)[%s]" % ("0.9em" if m.group(2) == "small" else "0.8em", typ)
+                    pos += k.end()
+                else:   # 花括号里还有别的内容：照原样留下 {\small
+                    out.append(m.group(1))
+            out.append(self.slot(typ))
 
     def tabular(self, spec: str, body: str) -> str:
         cols, vlines = parse_colspec(spec)
@@ -448,9 +467,32 @@ class Converter:
         typ = re.sub(r"^( *)\+ \$ ", lambda m: "%s+ #h(0pt)\n%s  $ " % (m.group(1), m.group(1)), typ, flags=re.M)
         typ = re.sub(r'^( *)#set enum\(numbering: "([^"]*)", start: (\d+)\)', enum_at, typ, flags=re.M)
         typ = number_staritems(typ)
+        typ = lead_nested_items(typ)
+        typ = stick_stems(typ)
         typ = escape_after_calls(typ)
         typ = re.sub(r"\n{3,}", "\n\n", typ)
         return typ
+
+
+LR_OPEN, LR_CLOSE = r"\mathrm{LBM}", r"\mathrm{RBM}"
+
+
+def mark_lr_braces(tex: str) -> str:
+    """成对的 \\left\\{ … \\right\\} 两端插入标记。pandoc 把它和普通的 \\{ \\} 都转成 { }，
+    fix_inline_math 为了让 \\{ \\} 不随内容放大会把花括号都转义，靠这对标记认出要放大的"""
+    toks = list(re.finditer(r"\\(left|right)\s*(\\\{|\\\}|\\[a-zA-Z]+|.)", tex))
+    stack, marks = [], []
+    for t in toks:
+        if t.group(1) == "left":
+            stack.append(t)
+        elif stack:
+            o = stack.pop()
+            if o.group(2) == r"\{" and t.group(2) == r"\}":
+                marks.append((o.end(), LR_OPEN))
+                marks.append((t.start(), LR_CLOSE))
+    for pos, s in sorted(marks, reverse=True):
+        tex = tex[:pos] + s + tex[pos:]
+    return tex
 
 
 def fix_inline_math(typ: str) -> str:
@@ -460,10 +502,17 @@ def fix_inline_math(typ: str) -> str:
     out, pos = [], 0
     for m in re.finditer(r"(?<!\\)\$(?:[^$\\]|\\.)*?(?<!\\)\$", typ, flags=re.S):
         out.append(typ[pos : m.start()])
-        seg = re.sub(r"(?<![\\#])([{}])", r"\\\1", m.group(0))
+        # \left\{ … \right\}（见 mark_lr_braces）随内容放大，其余的花括号转义
+        seg = re.sub(r"\{\s*upright\(L B M\)\s*", "\x01", m.group(0))
+        seg = re.sub(r"\s*upright\(R B M\)\s*\}", "\x02", seg)
+        seg = re.sub(r"(?<![\\#])([{}])", r"\\\1", seg)
+        seg = seg.replace("\x01", "lr(\\{ ").replace("\x02", " \\})")
         out.append(seg)
         pos = m.end()
         if seg[1:2] != " " and re.match(r"[A-Za-z]", typ[pos : pos + 1]):
+            out.append("⁠")
+        # 公式后紧跟的中文标点（；，。等）不能挪到下一行行首（公式套了 box 后，Typst 允许在这里断行）
+        elif re.match(r"[，。；：、）！？”．』」]", typ[pos : pos + 1]):
             out.append("⁠")
     out.append(typ[pos:])
     return "".join(out)
@@ -536,6 +585,51 @@ def split_item_multicols(tex: str) -> str:
     return "".join(out)
 
 
+def stick_stems(typ: str) -> str:
+    """题干后面紧跟分栏的小题（#cols 整组不跨页）时，题干放进 sticky 的块里，免得题干孤零零留在页底"""
+    lines = typ.split("\n")
+    for i, line in enumerate(lines):
+        m = re.match(r"^( *)\+ (?!#lead-list)(\S.*)$", line)
+        if not m:
+            continue
+        j = i + 1
+        while j < len(lines) and not lines[j].strip():
+            j += 1
+        if j < len(lines) and lines[j].startswith(m.group(1) + "  #cols(") and j > i + 1:
+            lines[i] = "%s+ #block(sticky: true)[%s]" % (m.group(1), m.group(2))
+    return "\n".join(lines)
+
+
+def lead_nested_items(typ: str) -> str:
+    """题号后直接是小题（pandoc 输出“+ + …”）：改为 + #lead-list(none, 层数)[ 小题… ]，
+    让第一个小题与题号同一行、按基线对齐（见 template.typ 的 lead-list）"""
+    lines = typ.split("\n")
+    out = []
+    i = 0
+    while i < len(lines):
+        m = re.match(r"^( *)\+ \+ (.*)$", lines[i])
+        if not m:
+            out.append(lines[i])
+            i += 1
+            continue
+        ind = m.group(1)
+        level = len(ind) // 2 + 2
+        out.append("%s+ #lead-list(none, %d)[" % (ind, level))
+        out.append("%s  + %s" % (ind, m.group(2)))
+        i += 1
+        # 外层这一项的其余内容：比外层题号缩进更深的行（及其间的空行）
+        while i < len(lines) and (not lines[i].strip() or lines[i].startswith(ind + "  ")):
+            j = i
+            while j < len(lines) and not lines[j].strip():
+                j += 1
+            if j >= len(lines) or not lines[j].startswith(ind + "  "):
+                break
+            out.extend(lines[i : j + 1])
+            i = j + 1
+        out.append("%s  ]" % ind)
+    return "\n".join(out)
+
+
 def number_staritems(typ: str) -> str:
     """给每个 #staritem; 填上它的题号：#staritem(13);，模板据此把“*”紧贴在题号左侧。
     按 pandoc 输出的缩进追踪各层列表：同一缩进的“+ ”是同一列表的各项；
@@ -599,6 +693,11 @@ def fix_strings(typ: str) -> str:
 
 
 def fix_math(typ: str) -> str:
+    # \dot{x}（循环小数的点）：模板中 dot 被定义成了 dot.o 等符号的字典（见 template.typ），重音要写 std.math.dot
+    typ = re.sub(r"(?<![\w.#])dot\(", "std.math.dot(", typ)
+    # 多行对齐公式的续行以 & + 或 & - 开头：LaTeX（amsmath 在右栏开头补 {}）按二元运算排，
+    # Typst 当作正负号紧贴后面的项；前面补一个空的普通符号 eqph（见 template.typ）
+    typ = re.sub(r"(\\\n\s*&\s*)([+-])(?=\s)", r"\1eqph \2", typ)
     typ = re.sub(r"\^compose\b", " degree", typ)
     typ = re.sub(r"\^\(compose\)", " degree", typ)
     # \boxed：pandoc 在框内又套了一层独立公式
@@ -644,8 +743,9 @@ def replace_command(tex: str, name: str, nargs: int, fn) -> str:
                 j += 1
             if j < len(tex) and tex[j] == "{":
                 arg, j = read_group(tex, j)
-            else:  # 如 \tfrac12
-                arg, j = tex[j], j + 1
+            else:  # 如 \tfrac12、\frac\pi2
+                mc = re.match(r"\\[a-zA-Z]+|\\.|.", tex[j:], flags=re.S)
+                arg, j = mc.group(0), j + mc.end()
             args.append(arg)
         out.append(fn(args))
         pos = j
@@ -762,7 +862,25 @@ def polylongdiv(dividend: str, divisor: str, style: str) -> str:
     return "#polylongdiv(%s, %s%s)" % (fmt(a), fmt(b), opts)
 
 
+def fix_nested_frac(tex: str) -> str:
+    """\\frac{\\frac{a}{b}}{\\frac{c}{d}}：pandoc 写成 a / b / c / d（成了 ((a/b)/c)/d，数学上就错了）。
+    作分子、分母的分式包上 \\mathord{…}，pandoc 就改写为 frac(a / b, c / d)"""
+    def fn(name):
+        def f(args):
+            args = [fix_nested_frac(a) for a in args]
+            args = [r"\mathord{%s}" % a if re.search(r"\\[dt]?frac(?![a-zA-Z])", a) else a for a in args]
+            return "\\%s{%s}{%s}" % (name, args[0], args[1])
+        return f
+    for name in ("frac", "dfrac"):
+        tex = replace_command(tex, name, 2, fn(name))
+    return tex
+
+
 def pandoc(tex: str) -> str:
+    # TeX 的 _23 是下标 2 后接 3，pandoc 却写成 Typst 的 _23（整串下标）；先写成 _{2}3
+    tex = re.sub(r"(?<!\\)([_^])\s*(\d)(?=\d)", r"\1{\2}", tex)
+    if re.search(r"\\d?frac\s*\{[^{}]*\\[dt]?frac", tex) or re.search(r"\\d?frac\s*\{(?:[^{}]|\{[^{}]*\})*\}\s*\{[^{}]*\\[dt]?frac", tex):
+        tex = fix_nested_frac(tex)
     r = subprocess.run(
         ["pandoc", "-f", "latex-smart", "-t", "typst", "--wrap=none", "--lua-filter", str(FILTER)],
         input=tex, capture_output=True, text=True, encoding="utf-8",
@@ -794,7 +912,7 @@ def aligned_rows(body: str, numbered: bool) -> str:
         rows.append("($%s$, $%s$, %s)" % (tex_math_to_typst(left) if left.strip() else "",
                                          # 右半以 = 开头时前面补一个普通符号类的空占位 eqph（见 template.typ），否则 Typst 会去掉 = 左侧的间距
                                          # 左半为空的续行也要补，否则这些行的 = 比首行偏左
-                                         ("eqph " if left.strip() or re.match(r"\s*[=<>]|\s*\\(?:ne|le|ge|approx|equiv|sim)", right) else "")
+                                         ("eqph " if left.strip() or re.match(r"\s*[=<>+-]|\s*\\(?:ne|le|ge|approx|equiv|sim)", right) else "")
                                          + tex_math_to_typst(right) if right.strip() else "",
                                          mark))
     return "#numbered-align(%s)" % ", ".join(rows)

@@ -737,9 +737,9 @@ $because$ 查 $sqrt(40) = 6.325$,#h(2em);$therefore thick sqrt(0.00004) = 0.0063
 
 ]
 #exercise[
-+ 指出下列实数中，哪些是有理数，哪些是无理数：$ 3.1416\,quad - 0.2\,quad sqrt(0.09)\,quad - sqrt(7)\,quad pi\,quad 0 . dot(0) dot(1)\,quad 0.010010001 dots.h.c $
++ 指出下列实数中，哪些是有理数，哪些是无理数：$ 3.1416\,quad - 0.2\,quad sqrt(0.09)\,quad - sqrt(7)\,quad pi\,quad 0 . std.math.dot(0) std.math.dot(1)\,quad 0.010010001 dots.h.c $
 
-+ 指出下列各实数的相反数，倒数及绝对值都是什么：$ - 1.41\,quad sqrt(3)\,quad - pi\,quad - sqrt(5)\,quad 0\,quad 1 / sqrt(2)\,quad - 0 . dot(2) dot(3)\,quad 2.40 dot(1)\,quad - sqrt(16) $
++ 指出下列各实数的相反数，倒数及绝对值都是什么：$ - 1.41\,quad sqrt(3)\,quad - pi\,quad - sqrt(5)\,quad 0\,quad 1 / sqrt(2)\,quad - 0 . std.math.dot(2) std.math.dot(3)\,quad 2.40 std.math.dot(1)\,quad - sqrt(16) $
 
 ]
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题3.1]

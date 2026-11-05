@@ -546,7 +546,7 @@
     line((0, 0), (2, 0), (1, 1.732), (0, 0), stroke: (paint: black, thickness: 0.4pt))
     line((0.5, 0), (1.5, 0), (1.5, 0.866), (0.5, 0.866), fill: hatch-ne, stroke: (paint: black, thickness: 0.4pt), close: true)
     node((1, -1), [第8题])
-    line((0.75, 1.832), (-0.25, 0.1), stroke: (paint: black, thickness: 0.4pt), mark: (start: ("|", "stealth"), end: ("|", "stealth"), fill: black))
+    line((0.75, 1.832), (-0.25, 0.1), stroke: (paint: black, thickness: 0.4pt), mark: (start: ("|", "stealth"), end: ("|", "stealth"), fill: black, sep: 0))
     node((0.25, 0.966), [$a$], fill: white)
     circle((5, 1), radius: 1.5, stroke: (paint: black, thickness: 0.4pt))
     line((5, 1), (6.5, 1), (4.25, 2.299), (3.5, 1), (5.75, -0.299), (6.5, 1), stroke: (paint: black, thickness: 0.4pt))

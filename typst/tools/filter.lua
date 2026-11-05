@@ -43,6 +43,8 @@ local function space_after_punct(s)
   local out, prev = {}, nil
   for _, c in utf8.codes(s) do
     if prev and is_ascii_punct(prev) and is_cjk_char(c) then out[#out + 1] = " " end
+    -- 汉字后接半角左括号（如“由(3.1)”）：xeCJK 也加间距
+    if prev and is_cjk_char(prev) and c == 0x28 then out[#out + 1] = " " end
     out[#out + 1] = utf8.char(c)
     prev = c
   end
@@ -84,6 +86,8 @@ function Inlines(inlines)
       -- 半角标点结尾的元素后直接接汉字开头的文字
       if prev and el.t == "Str" and prev.t == "Str" and is_ascii_punct(last_char(prev) or 0)
         and is_cjk_char(first_char(el) or 0) then out:insert(pandoc.Space()) end
+      if prev and el.t == "Str" and prev.t == "Str" and is_cjk_char(last_char(prev) or 0)
+        and first_char(el) == 0x28 then out:insert(pandoc.Space()) end
       out:insert(el)
     end
   end
@@ -97,7 +101,9 @@ function Para(p)
   local last_display = nil
   for _, el in ipairs(p.content) do
     -- 紧挨着的两个独立公式 \[..\]\[..\] 合成一个多行公式，否则 Typst 中间会多出一个空段落
-    if el.t == "Math" and el.mathtype == "DisplayMath" and after_display and last_display then
+    -- （一个有 & 对齐、一个没有时不合并：合并后没有 & 的行会和对齐的行错开）
+    if el.t == "Math" and el.mathtype == "DisplayMath" and after_display and last_display
+        and (last_display.text:find("&", 1, true) ~= nil) == (el.text:find("&", 1, true) ~= nil) then
       last_display.text = "\\begin{gathered}" .. last_display.text:gsub("^\\begin{gathered}(.*)\\end{gathered}$", "%1")
         .. "\\\\" .. el.text .. "\\end{gathered}"
       while #out > 0 and is_space(out[#out]) do out:remove() end

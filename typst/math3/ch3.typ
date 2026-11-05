@@ -7,7 +7,7 @@
 === 大小关系与次序关系
 “数系”的概念由于对于各种“量”的问题作了系统的讨论而产生．由于计算个数和度量各种量的需要而产生了整数系和实数系．日常生活的量与量的问题除了可以运算之外，还常有很自然的“大小”关系，将这些关系抽象化，即得数与数之间的大小关系，运算与大小关系是数系的两种基本结构．本章将以数系在大小关系上的基本性质为出发点，逐步讨论不等式的性质．
 
-在日常生活中，我们说 $A$ 量大于 $B$ 量的意义是：“从 $A$ 量减去 $B$ 量后还有剩余”，所以在数系中我们定义“$a$ 大于 $b$”的意义为 $a - b$ 是一个正数．也就是：
+在日常生活中，我们说 $A$ 量大于 $B$ 量的意义是：“从 $A$ 量减去 $B$ 量后还有剩余”，所以在数系中我们定义“$a$ 大于 $b$⁠”的意义为 $a - b$ 是一个正数．也就是：
 
 #blk[定义][
 $ a - b upright("是一个正数") & arrow.l.r.double.long a > b\
@@ -24,7 +24,7 @@ a < 0 & arrow.l.r.double.long a upright("是一个负数") $ #noindent;这种正
 
 我们可以这么来比着看：
 
-+ 0这个数把实数集 $bb(R)$ 分成三部分：$bb(R)_(+)$, $\{ 0 \}$,$bb(R)_(-)$，原点 $O$ 这个点把数轴 $ell$ 分成三段：不含原点的正向射线 $ell_(+)$，原点和不含原点的负向射线 $ell_(-)$；
++ 0这个数把实数集 $bb(R)$ 分成三部分：$bb(R)_(+)$, $\{ 0 \}$,$bb(R)_(-)$⁠，原点 $O$ 这个点把数轴 $ell$ 分成三段：不含原点的正向射线 $ell_(+)$⁠，原点和不含原点的负向射线 $ell_(-)$⁠；
 
 + 在数轴上任给两个点 $A\,B$, 我们在第二章1.2中已经知道有向线段 $accent(A B, ⃗)$ 的数量 $ A B = x_B - x_A $ #noindent;这里 $x_A\,x_B$ 分别为 $A\,B$ 的坐标，于是 $ B upright("点在") A upright("点之右") & arrow.l.r.double.long A B = x_B - x_A > 0 arrow.l.r.double.long x_B > x_A\
   B upright("点与") A upright("点重合") & arrow.l.r.double.long A B = x_B - x_A = 0 arrow.l.r.double.long x_B = x_A\
@@ -32,11 +32,11 @@ a < 0 & arrow.l.r.double.long a upright("是一个负数") $ #noindent;这种正
 
 基于上述实数的大小关系和数轴上点的次序关系之间的密切对应，一切实数按照由小而大的顺序从左往右排列在数轴上，这就使得我们可以由坐标的大小来确定直线上点的次序，反过来，也用数轴上的点的次序来把数的大小关系形象化．
 
-两个数或两个代数式用不等号“$>$”或“$<$”联结起来，以表示它们的数量关系就构成不等式．
+两个数或两个代数式用不等号“$>$⁠”或“$<$⁠”联结起来，以表示它们的数量关系就构成不等式．
 
 例如 $5 > 3$, $- 7 < - 4$, $x + 1 > 3$, $a > b$ 等都是不等式．如果不等式中含有变数，那么使不等式成立的变数值叫做不等式的解，例如 $x = 2.1$ 是不等式 $x + 1 > 3$ 的一个解．使不等式成立的变数值的全体，称为这个不等式的解集．一般来说，不等式的解集是实数集的子集．例如不等式 $x + 1 > 3$ 的解集是：$\{ x\|x in bb(R)\,thick thick x > 2 \}$\. 如果不等式的解集是全体实数集 $bb(R)$ 的话，那么这种不等式称为恒不等式．例如 $x^2 + 1 > 0$, 就是一个恒不等式，如果不等式的解集是空集 $nothing$ 的话，那么这种不等式是不成立的或者说是矛盾的不等式，例如 $x - 1 > x + 1$, 就是矛盾的不等式，由上面所说可以明白：一个含有变数的不等式，只有在它的解集上才是成立的，譬如我们说 $x + 1 > 3$, 它只在 $x > 2$ 的条件下才是正确的．
 
-有时我们会遇到用不等号“$gt.eq$”或“$lt.eq$”联结的不等式，例如 $\|x\|gt.eq 2$, 其中“$gt.eq$”表示“$>$ 或 $=$”，即其解集是 $ \{ x\|x in bb(R)\,thick thick\|x\|> 2 \} union \{ x\|x in bb(R)\,thick thick\|x\|= 2 \} $ #noindent;也就是$ \{ x\|x in bb(R)\,thick thick x gt.eq 2 \} union \{ x\|x in bb(R)\,x lt.eq - 2 \} $ #noindent;同样地“$lt.eq$”表示“$<$ 或 $=$”．我们也常写 $a < b < c$ 来表示 $a < b$ 和 $b < c$\; $a < b lt.eq c$ 表示 $a < b$ 和 $b lt.eq c$．
+有时我们会遇到用不等号“$gt.eq$⁠”或“$lt.eq$⁠”联结的不等式，例如 $\|x\|gt.eq 2$, 其中“$gt.eq$⁠”表示“$>$ 或 $=$⁠”，即其解集是 $ \{ x\|x in bb(R)\,thick thick\|x\|> 2 \} union \{ x\|x in bb(R)\,thick thick\|x\|= 2 \} $ #noindent;也就是$ \{ x\|x in bb(R)\,thick thick x gt.eq 2 \} union \{ x\|x in bb(R)\,x lt.eq - 2 \} $ #noindent;同样地“$lt.eq$⁠”表示“$<$ 或 $=$⁠”．我们也常写 $a < b < c$ 来表示 $a < b$ 和 $b < c$\; $a < b lt.eq c$ 表示 $a < b$ 和 $b lt.eq c$⁠．
 
 我们可以把不等式解集用数轴或平面上的对应点集直观地表示出来，如：不等式 $x + 1 > 3$ 的解集可用图3.1表示，解点集是一条以坐标是2的点为端点的开射线，由于2不包括在内，故用空圈表示．
 
@@ -105,7 +105,7 @@ a < 0 & arrow.l.r.double.long a upright("是一个负数") $ #noindent;这种正
 
 ]
 #proof[
-$a > b$, $b > c$ 就是 $a - b > 0$, $b - c > 0$．由于 $ a - c =\(a - b\)+\(b - c\)> 0 $ #noindent;这就是说：$a > c$
+$a > b$, $b > c$ 就是 $a - b > 0$, $b - c > 0$⁠．由于 $ a - c =\(a - b\)+\(b - c\)> 0 $ #noindent;这就是说：$a > c$
 
 ]
 #blk[性质2][
@@ -124,10 +124,10 @@ $a > b$, 就是 $a - b > 0$, 由于 $ \(a + c\)-\(b + c\)= a - b $ #noindent;所
 如果 $a > b$, $c > d$, 那么 $a + c > b + d$（同向不等式的两端相加仍得同向不等式）．
 
 ]
-这是因为，根据性质2, 可得 $a + c > b + c$，$b + c > b + d$ 再根据性质1，可得 $a + c > b + d$．
+这是因为，根据性质2, 可得 $a + c > b + c$⁠，$b + c > b + d$ 再根据性质1，可得 $a + c > b + d$⁠．
 
 #blk[性质3][
-如果 $a > b$，$c > 0$，那么 $a c > b c$，如果 $c < 0$, 那么 $a c < b c$,（不等式两端乘以正数得同向不等式，乘以负数得反向不等式）．
+如果 $a > b$⁠，$c > 0$⁠，那么 $a c > b c$⁠，如果 $c < 0$, 那么 $a c < b c$,（不等式两端乘以正数得同向不等式，乘以负数得反向不等式）．
 
 ]
 #proof[
@@ -135,7 +135,7 @@ $a > b$ 就是 $a - b > 0$, 由于 $ a c - b c =\(a - b\)c $ #noindent;所以当
 
 ]
 #blk[推论1][
-$a > b$ 和 $b < a$ 是等价的，即：如果 $a > b$, 那么 $b < a$；反过来，如果 $b < a$, 那么 $a > b$.
+$a > b$ 和 $b < a$ 是等价的，即：如果 $a > b$, 那么 $b < a$⁠；反过来，如果 $b < a$, 那么 $a > b$.
 
 ]
 这是因为 $a > b$ 就是 $a - b > 0$, 不等式两边乘以 $- 1$, 得 $-\(a - b\)< 0$, 即 $b - a < 0$, 这就是 $b < a$, 同理可证后半个结论．
@@ -144,7 +144,7 @@ $a > b$ 和 $b < a$ 是等价的，即：如果 $a > b$, 那么 $b < a$；反过
 如果 $a > b > 0$, $c > d > 0$, 那么 $a c > b d$.
 
 ]
-这是因为 $a > b$, $c > 0$, 根据性质3, 可得：#numbered-eq($ a c > b c $);#noindent;又 $c > d$, $b > 0$, 同理得#numbered-eq($ b c > b d $);#noindent;由(3.1)，(3.2) 得：
+这是因为 $a > b$, $c > 0$, 根据性质3, 可得：#numbered-eq($ a c > b c $);#noindent;又 $c > d$, $b > 0$, 同理得#numbered-eq($ b c > b d $);#noindent;由 (3.1)，(3.2) 得：
 
 #numbered-align(($a c > b d$, $$, [(性质1)]));
 
@@ -152,13 +152,13 @@ $a > b$ 和 $b < a$ 是等价的，即：如果 $a > b$, 那么 $b < a$；反过
 如果 $a > b$, 并且 $a\,b$ 同号，那么 $1 / a < 1 / b$
 
 ]
-因为 $1 / b - 1 / a = frac(a - b, a b)$，再由假设得到：$ a - b > 0\,quad a b > 0 $ #noindent;所以 $1 / b - 1 / a > 0$，即 $1 / a < 1 / b$．
+因为 $1 / b - 1 / a = frac(a - b, a b)$⁠，再由假设得到：$ a - b > 0\,quad a b > 0 $ #noindent;所以 $1 / b - 1 / a > 0$⁠，即 $1 / a < 1 / b$⁠．
 
 #blk[推论4][
 如果 $a > b > 0$, 那么 $a^n > b^n$ ($n$ 是大于1的整数）．
 
 ]
-- 当 $n = 2$ 时，由 $a > b > 0$，根据推论2得到：$a^2 > b^2$
+- 当 $n = 2$ 时，由 $a > b > 0$⁠，根据推论2得到：$a^2 > b^2$
 
 - 当 $n = 3$ 时，由 $a > b > 0$ 和 $a^2 > b^2$, 同理得到：$a^3 > b^3$
 
@@ -172,17 +172,17 @@ $a > b$ 和 $b < a$ 是等价的，即：如果 $a > b$, 那么 $b < a$；反过
 ]
 因为 $root(n, a)$, $root(n, b)$ 是 $n$ 次算术根，所以它们都是正数．
 
-假设 $a^(tfrac(1, n)) = b^(tfrac(1, n))$，于是 $(a^(tfrac(1, n)))^n = (b^(tfrac(1, n)))^n$，因而 $a = b$，这就与已知 $a > b$ 矛盾．
+假设 $a^(tfrac(1, n)) = b^(tfrac(1, n))$⁠，于是 $(a^(tfrac(1, n)))^n = (b^(tfrac(1, n)))^n$⁠，因而 $a = b$⁠，这就与已知 $a > b$ 矛盾．
 
-假设 $a^(tfrac(1, n)) < b^(tfrac(1, n))$，于是 $(a^(tfrac(1, n)))^n < (b^(tfrac(1, n)))^n$，即 $a < b$，这又与已知条件矛盾．但是 $root(n, a)$ 和 $root(n, b)$ 的大小关系，只有三种可能，而且仅有一种成立，因此 $root(n, a) > root(n, b)$．这样正数之间的不等式可以进行开 $n$ 次方运算，仍得同向不等式．
+假设 $a^(tfrac(1, n)) < b^(tfrac(1, n))$⁠，于是 $(a^(tfrac(1, n)))^n < (b^(tfrac(1, n)))^n$⁠，即 $a < b$⁠，这又与已知条件矛盾．但是 $root(n, a)$ 和 $root(n, b)$ 的大小关系，只有三种可能，而且仅有一种成立，因此 $root(n, a) > root(n, b)$⁠．这样正数之间的不等式可以进行开 $n$ 次方运算，仍得同向不等式．
 
 下面我们从不等式的定义和不等式的基本性质及其推论出发来证明一些恒不等式．在推导不等式时，我们常利用实数的平方不会是负的这个事实．我们首先证明下面的命题：
 
 #blk[命题][
-若 $a$ 是任意实数，那么 $a^2 gt.eq 0$．
+若 $a$ 是任意实数，那么 $a^2 gt.eq 0$⁠．
 
 ]
-事实上，$a$ 或是正数，或是零，或是负数．如果 $a > 0$, 那么 $a^2 = a times a > 0$\; 如果 $a = 0$, 那么 $a^2 = 0 times 0 = 0$\; 如果 $a < 0$, 于是 $a = -\|a\|$, $a^2 =\(-\|a\|\)dot.op\(-\|a\|\)=\|a\|^2 > 0$, 无论哪种情形都有 $a^2 gt.eq 0$．
+事实上，$a$ 或是正数，或是零，或是负数．如果 $a > 0$, 那么 $a^2 = a times a > 0$\; 如果 $a = 0$, 那么 $a^2 = 0 times 0 = 0$\; 如果 $a < 0$, 于是 $a = -\|a\|$, $a^2 =\(-\|a\|\)dot.op\(-\|a\|\)=\|a\|^2 > 0$, 无论哪种情形都有 $a^2 gt.eq 0$⁠．
 
 ==== 比较法
 为证明某一个不等式成立，常用“大于”定义，即要证 $a > b$, 我们常证 $a - b > 0$, 这种方法叫做比较法．用比较法证明不等式时，常常要把式子配方或把式子分解成恒取正值或负值的因式的乘积．
@@ -194,7 +194,7 @@ $a > b$ 和 $b < a$ 是等价的，即：如果 $a > b$, 那么 $b < a$；反过
 #proof[
 $because quad a^2 + b^2 - 2 a b =\(a - b\)^2 gt.eq 0$
 
-$therefore quad a^2 + b^2 gt.eq 2 a b$，当且仅当 $a = b$ 时，取等号．
+$therefore quad a^2 + b^2 gt.eq 2 a b$⁠，当且仅当 $a = b$ 时，取等号．
 
 ]
 #example[
@@ -207,14 +207,14 @@ $  & quad a^2 + b^2 + c^2 - a b - b c - c a\
  & = 1 / 2 [\( a^2 - 2 a b + b^2 \) + \( b^2 - 2 b c + c^2 \) + \( c^2 - 2 c a + a^2 \)]\
  & = 1 / 2 [\( a - b \)^2 + \( b - c \)^2 + \( c - a \)^2] gt.eq 0 $
 
-这里等于关系成立等同于 $\(a - b\)^2 =\(b - c\)^2 =\(c - a\)^2 = 0$．即 $a = b = c$, 因此，$a^2 + b^2 + c^2 gt.eq a b + b c + c a$ 这里当且仅当 $a = b = c$ 时取等号．
+这里等于关系成立等同于 $\(a - b\)^2 =\(b - c\)^2 =\(c - a\)^2 = 0$⁠．即 $a = b = c$, 因此，$a^2 + b^2 + c^2 gt.eq a b + b c + c a$ 这里当且仅当 $a = b = c$ 时取等号．
 
 #strong[另证：]$  & quad a^2 + b^2 + c^2 - a b - b c - c a\
  & = a^2 -\(b + c\)a + b^2 + c^2 - b c\
  & = [a^2 - \( b + c \) a + (frac(b + c, 2))^2] + b^2 + c^2 - b c - frac(\(b + c\)^2, 4)\
  & = (a - frac(b + c, 2))^2 + 3 / 4\(b - c\)^2 gt.eq 0 $
 
-这里等于关系当且仅当 $b = c$ 和 $a = frac(b + c, 2)$ 时，即 $a = b = c$ 时成立，因此，$a^2 + b^2 + c^2 gt.eq a b + b c + c a$．
+这里等于关系当且仅当 $b = c$ 和 $a = frac(b + c, 2)$ 时，即 $a = b = c$ 时成立，因此，$a^2 + b^2 + c^2 gt.eq a b + b c + c a$⁠．
 
 ]
 #example[
@@ -227,7 +227,7 @@ $ a / sqrt(b) + b / sqrt(a) - sqrt(a) - sqrt(b) & = frac(a sqrt(a) + b sqrt(b) -
  & = frac((sqrt(a) - sqrt(b))\(a - b\), sqrt(a b))\
  & = frac((sqrt(a) - sqrt(b))^2 (sqrt(a) + sqrt(b)), sqrt(a b)) > 0 $
 
-因为算术根式 $sqrt(a b)$, $sqrt(a) + sqrt(b)$ 在 $a\,b$ 是正数的条件下是正数，又 $a eq.not b$，因此 $(sqrt(a) - sqrt(b))^2 > 0$．
+因为算术根式 $sqrt(a b)$, $sqrt(a) + sqrt(b)$ 在 $a\,b$ 是正数的条件下是正数，又 $a eq.not b$⁠，因此 $(sqrt(a) - sqrt(b))^2 > 0$⁠．
 
 所以，$a / sqrt(b) + b / sqrt(a) > sqrt(a) + sqrt(b)$
 
@@ -244,7 +244,7 @@ $ a / sqrt(b) + b / sqrt(a) - sqrt(a) - sqrt(b) & = frac(a sqrt(a) + b sqrt(b) -
 
 ]
 #example[
-$a_1$, $a_2$ 是任意正数，试证：#numbered-eq($ frac(a_1 + a_2, 2) gt.eq sqrt(a_1 a_2) $);#noindent;这里当且仅当 $a_1 = a_2$ 时，取“$=$”号．
+$a_1$, $a_2$ 是任意正数，试证：#numbered-eq($ frac(a_1 + a_2, 2) gt.eq sqrt(a_1 a_2) $);#noindent;这里当且仅当 $a_1 = a_2$ 时，取“$=$⁠”号．
 
 ]
 #proof[
@@ -267,7 +267,7 @@ $a_1$, $a_2$ 是任意正数，试证：#numbered-eq($ frac(a_1 + a_2, 2) gt.eq 
   ]
 )
 
-以 $a_1 + a_2$ 为直径作圆\(图3.4), 设 $A D = a_1$, $D B = a_2$, 过 $D$ 点作线段 $A B$ 的垂直线交半圆于 $C$ 点，于是 $angle A C B = 90 degree$, 设 $D C = h$, 由勾股定理知：$ A D^2 + D C^2 = A C^2\,#h(2em) D C^2 + D B^2 = B C^2\,#h(2em) A C^2 + B C^2 = A B^2 $ #noindent;即：$\(a_1^2 + h^2\)+\(a_2^2 + h^2\)=\(a_1 + a_2\)^2$ 从而：$ h = sqrt(a_1 a_2) $
+以 $a_1 + a_2$ 为直径作圆 (图3.4), 设 $A D = a_1$, $D B = a_2$, 过 $D$ 点作线段 $A B$ 的垂直线交半圆于 $C$ 点，于是 $angle A C B = 90 degree$, 设 $D C = h$, 由勾股定理知：$ A D^2 + D C^2 = A C^2\,#h(2em) D C^2 + D B^2 = B C^2\,#h(2em) A C^2 + B C^2 = A B^2 $ #noindent;即：$\(a_1^2 + h^2\)+\(a_2^2 + h^2\)=\(a_1 + a_2\)^2$ 从而：$ h = sqrt(a_1 a_2) $
 
 另一方面，$D C$ 无论如何是不会超过圆的半径的，即：$ h = sqrt(a_1 a_2) lt.eq frac(a_1 + a_2, 2) $ #noindent;此外，当且仅当 $D$ 点与圆心 $O$ 点重合时，即 $a_1 = a_2$ 时，$D C$ 等于圆的半径，即 $h = sqrt(a_1 a_2) = frac(a_1 + a_2, 2)$
 
@@ -276,7 +276,7 @@ $a_1$, $a_2$ 是任意正数，试证：#numbered-eq($ frac(a_1 + a_2, 2) gt.eq 
 
 ]
 #proof[
-设两个正数是 $x$ 和 $y$, 由题设知#numbered-eq($ x + y = A $);#noindent;而其积依例3.5应该适合不等式：$ sqrt(x y) lt.eq frac(x + y, 2) $ #noindent;也即：$x y lt.eq (frac(x + y, 2))^2$ 将条件(3.7) 代入上面不等式中，得 $ x y lt.eq (A / 2)^2 $ #noindent;这表示其和等于 $A$ 的两个正数，无论怎样取法，它们的积都不大于常数 $(A / 2)^2$．由于这里等式当且仅当两个正数相等时，即 $x = y = A / 2$ 时，才能成立，因此当且仅当两个正数相等时，它们的积才能达到最大值 $(A / 2)^2$．
+设两个正数是 $x$ 和 $y$, 由题设知#numbered-eq($ x + y = A $);#noindent;而其积依例3.5应该适合不等式：$ sqrt(x y) lt.eq frac(x + y, 2) $ #noindent;也即：$x y lt.eq (frac(x + y, 2))^2$ 将条件 (3.7) 代入上面不等式中，得 $ x y lt.eq (A / 2)^2 $ #noindent;这表示其和等于 $A$ 的两个正数，无论怎样取法，它们的积都不大于常数 $(A / 2)^2$⁠．由于这里等式当且仅当两个正数相等时，即 $x = y = A / 2$ 时，才能成立，因此当且仅当两个正数相等时，它们的积才能达到最大值 $(A / 2)^2$⁠．
 
 ]
 #example[
@@ -284,20 +284,20 @@ $a_1\,a_2\,a_3$ 为任意正数，求证：#numbered-eq($ frac(a_1 + a_2 + a_3, 
 
 ]
 #proof[
-如果令 $b_1 > 0$, $b_2 > 0$, $b_3 > 0$, 使得 $ a_1 = b_1^3\,#h(2em) a_2 = b_2^3\,#h(2em) a_3 = b_3^3 $ #noindent;这样一来，我们就要证明：$ b_1^3 + b_2^3 + b_3^3 gt.eq 3 b_1 b_2 b_3 $ #noindent;由于 $b_1^3 + b_2^3 =\(b_1 + b_2\)\(b_1^2 - b_1 b_2 + b_2^2\)$ 利用不等式(3.3) 或(3.6), 就有：$ b_1^2 - b_1 b_2 + b_2^2 gt.eq b_1 b_2 $ #noindent;所以我们有：$ b_1^3 + b_2^3 gt.eq b_1 b_2\(b_1 + b_2\)= b_1^2 b_2 + b_1 b_2^2 $ #noindent;同样地可证明：$ b_2^3 + b_3^3 gt.eq b_2^2 b_3 + b_2 b_3^2 $ #noindent;以及 $ b_3^3 + b_1^3 gt.eq b_3^2 b_1 + b_3 b_1^2 $ #noindent;从而 $ 2\(b_1^3 + b_2^3 + b_3^3\) & gt.eq b_1\(b_2^2 + b_3^2\)+ b_2\(b_3^2 + b_1^2\)+ b_3\(b_1^2 + b_2^2\)\
+如果令 $b_1 > 0$, $b_2 > 0$, $b_3 > 0$, 使得 $ a_1 = b_1^3\,#h(2em) a_2 = b_2^3\,#h(2em) a_3 = b_3^3 $ #noindent;这样一来，我们就要证明：$ b_1^3 + b_2^3 + b_3^3 gt.eq 3 b_1 b_2 b_3 $ #noindent;由于 $b_1^3 + b_2^3 =\(b_1 + b_2\)\(b_1^2 - b_1 b_2 + b_2^2\)$ 利用不等式 (3.3) 或 (3.6), 就有：$ b_1^2 - b_1 b_2 + b_2^2 gt.eq b_1 b_2 $ #noindent;所以我们有：$ b_1^3 + b_2^3 gt.eq b_1 b_2\(b_1 + b_2\)= b_1^2 b_2 + b_1 b_2^2 $ #noindent;同样地可证明：$ b_2^3 + b_3^3 gt.eq b_2^2 b_3 + b_2 b_3^2 $ #noindent;以及 $ b_3^3 + b_1^3 gt.eq b_3^2 b_1 + b_3 b_1^2 $ #noindent;从而 $ 2\(b_1^3 + b_2^3 + b_3^3\) & gt.eq b_1\(b_2^2 + b_3^2\)+ b_2\(b_3^2 + b_1^2\)+ b_3\(b_1^2 + b_2^2\)\
  & gt.eq b_1\(2 b_2 b_3\)+ b_2\(2 b_3 b_1\)+ b_3\(2 b_1 b_2\)\
  & = 6 b_1 b_2 b_3 $ #noindent;即：$b_1^3 + b_2^3 + b_3^3 gt.eq 3 b_1 b_2 b_3$
 
 因而，$frac(a_1 + a_2 + a_3, 3) gt.eq root(3, a_1 a_2 a_3)$
 
-此外，从上面的过程可见，等式成立，等同于要求 $ b_1^2 - b_1 b_2 + b_2^2 = b_1 b_2\,#h(2em) b_2^2 - b_2 b_3 + b_3^2 = b_2 b_3\,#h(2em) b_3^2 - b_3 b_1 + b_1^2 = b_3 b_1 $ #noindent;三个式子成立，这就等同于要求 $b_1 = b_2 = b_3$．
+此外，从上面的过程可见，等式成立，等同于要求 $ b_1^2 - b_1 b_2 + b_2^2 = b_1 b_2\,#h(2em) b_2^2 - b_2 b_3 + b_3^2 = b_2 b_3\,#h(2em) b_3^2 - b_3 b_1 + b_1^2 = b_3 b_1 $ #noindent;三个式子成立，这就等同于要求 $b_1 = b_2 = b_3$⁠．
 
 ]
 #rmk[
-如果我们注意下面的因式分解：$ b_1^3 + b_2^3 + b_3^3 - 3 b_1 b_2 b_3 =\(b_1 + b_2 + b_3\)\(b_1^2 + b_2^2 + b_3^2 - b_1 b_2 - b_2 b_3 - b_3 b_1\) $ #noindent;那么，我们就立即可得不等式(3.8) 的证明．但是这样的因式分解不易使人想到，而且也不能进一步推广．
+如果我们注意下面的因式分解：$ b_1^3 + b_2^3 + b_3^3 - 3 b_1 b_2 b_3 =\(b_1 + b_2 + b_3\)\(b_1^2 + b_2^2 + b_3^2 - b_1 b_2 - b_2 b_3 - b_3 b_1\) $ #noindent;那么，我们就立即可得不等式 (3.8) 的证明．但是这样的因式分解不易使人想到，而且也不能进一步推广．
 
 ]
-由不等式(3.6) 和(3.8) 使人猜想，对于 $n$ 个正数：$a_1\,a_2\,dots.h\,a_n$ 是不是有：$ frac(a_1 + a_2 + dots.h.c + a_n, n) gt.eq root(n, a_1 a_2 dots.h.c a_n) $ #noindent;其中 $n$ 是大于1的整数，当且仅当 $a_1 = a_2 = dots.h.c = a_n$ 时取等号．
+由不等式 (3.6) 和 (3.8) 使人猜想，对于 $n$ 个正数：$a_1\,a_2\,dots.h\,a_n$ 是不是有：$ frac(a_1 + a_2 + dots.h.c + a_n, n) gt.eq root(n, a_1 a_2 dots.h.c a_n) $ #noindent;其中 $n$ 是大于1的整数，当且仅当 $a_1 = a_2 = dots.h.c = a_n$ 时取等号．
 
 我们说这个一般的结论“$n$ 个正数的算术平均不小于几何平均”是成立的，不过这里我们略去它的证明．
 
@@ -306,23 +306,23 @@ $a_1\,a_2\,a_3$ 为任意正数，求证：#numbered-eq($ frac(a_1 + a_2 + a_3, 
 
 ]
 #proof[
-设三角形边长为 $a\,b\,c$, 则周长为 $a + b + c = 2 L$, 设面积为 $S$, 于是依不等式(3.8) $ S^2 & = L\(L - a\)\(L - b\)\(L - c\)\
+设三角形边长为 $a\,b\,c$, 则周长为 $a + b + c = 2 L$, 设面积为 $S$, 于是依不等式 (3.8) $ S^2 & = L\(L - a\)\(L - b\)\(L - c\)\
  & lt.eq L [frac(\(L - a\)+\(L - b\)+\(L - c\), 3)]^3\
  & = L^4 / 27 $
 
-因此这样的三角形面积不会超过 $L^2 / sqrt(27)$，同时要达到这个数值必须且只须 $L - a = L - b = L - c$, 即为等边三角形．
+因此这样的三角形面积不会超过 $L^2 / sqrt(27)$⁠，同时要达到这个数值必须且只须 $L - a = L - b = L - c$, 即为等边三角形．
 
 ]
 #example[
 若 $x\,y\,z$ 是不都相等的正数，且 $x + y + z = 1$
 
-求证 $\(1 - x\)\(1 - y\)\(1 - z\)> 8 x y z$．
+求证 $\(1 - x\)\(1 - y\)\(1 - z\)> 8 x y z$⁠．
 
 ]
 #proof[
 由于：$ 1 - z & = x + y gt.eq 2 sqrt(x y)\
 1 - y & = x + z gt.eq 2 sqrt(x z)\
-1 - x & = y + z gt.eq 2 sqrt(y z) $ #noindent;因为 $x\,y\,z$ 不都相等，即至少有两个数不相等，所以上面三个不等式中至少有一个不等式只能成立“$>$”关系，将上面不等式的两端相乘得到 $ \(1 - x\)\(1 - y\)\(1 - z\)> 8 sqrt(x^2 y^2 z^2) = 8 x y z $
+1 - x & = y + z gt.eq 2 sqrt(y z) $ #noindent;因为 $x\,y\,z$ 不都相等，即至少有两个数不相等，所以上面三个不等式中至少有一个不等式只能成立“$>$⁠”关系，将上面不等式的两端相乘得到 $ \(1 - x\)\(1 - y\)\(1 - z\)> 8 sqrt(x^2 y^2 z^2) = 8 x y z $
 
 ]
 ==== 分析法
@@ -333,9 +333,9 @@ $a_1\,a_2\,a_3$ 为任意正数，求证：#numbered-eq($ frac(a_1 + a_2 + a_3, 
 
 ]
 #proof[
-要证#numbered-eq($ (sqrt(2) + 1)^2 < 3.4 sqrt(3) $);#noindent;成立即要证：$3 + 2 sqrt(2) < 17 / 5 sqrt(3)$．
+要证#numbered-eq($ (sqrt(2) + 1)^2 < 3.4 sqrt(3) $);#noindent;成立即要证：$3 + 2 sqrt(2) < 17 / 5 sqrt(3)$⁠．
 
-两边乘以5，只须证：#numbered-eq($ 15 + 10 sqrt(2) < 17 sqrt(3) $);#noindent;两边平方，可证：#numbered-eq($ 225 + 200 + 300 sqrt(2) < 867 $);#noindent;移项#numbered-eq($ 300 sqrt(2) < 442 $);#noindent;两边除以300，即要证：#numbered-eq($ sqrt(2) < 1.47 $);#noindent;显然(3.13) 成立，而由(3.9) 推出(3.13) 的每一步都可逆，所以 $(sqrt(2) + 1)^2 < 3.4 sqrt(3)$ 成立．
+两边乘以5，只须证：#numbered-eq($ 15 + 10 sqrt(2) < 17 sqrt(3) $);#noindent;两边平方，可证：#numbered-eq($ 225 + 200 + 300 sqrt(2) < 867 $);#noindent;移项#numbered-eq($ 300 sqrt(2) < 442 $);#noindent;两边除以300，即要证：#numbered-eq($ sqrt(2) < 1.47 $);#noindent;显然 (3.13) 成立，而由 (3.9) 推出 (3.13) 的每一步都可逆，所以 $(sqrt(2) + 1)^2 < 3.4 sqrt(3)$ 成立．
 
 ]
 #example[
@@ -345,9 +345,9 @@ $a_1\,a_2\,a_3$ 为任意正数，求证：#numbered-eq($ frac(a_1 + a_2 + a_3, 
 #proof[
 （分析法）要证：$frac(a + b, 2) - sqrt(a b) < 1 / 8 frac(\(a - b\)^2, b)$ 成立，只须证：$ (sqrt(a) - sqrt(b))^2 / 2 < 1 / 8 frac(\(a - b\)^2, b) $
 
-$because quad a > b > 0\,#h(2em) therefore quad (sqrt(a) - sqrt(b))^2 eq.not 0$，两边除以 $(sqrt(a) - sqrt(b))^2$，可证：$ frac((sqrt(a) + sqrt(b))^2, 8 b) > 1 / 2 $ #noindent;但是，$frac((sqrt(a) + sqrt(b))^2, 8 b) = 1 / 8 (1 + sqrt(a / b))^2$，即要证：$ 1 / 8 (1 + sqrt(a / b))^2 > 1 / 2\,quad upright("或") quad (1 + sqrt(a / b))^2 > 4 $
+$because quad a > b > 0\,#h(2em) therefore quad (sqrt(a) - sqrt(b))^2 eq.not 0$⁠，两边除以 $(sqrt(a) - sqrt(b))^2$⁠，可证：$ frac((sqrt(a) + sqrt(b))^2, 8 b) > 1 / 2 $ #noindent;但是，$frac((sqrt(a) + sqrt(b))^2, 8 b) = 1 / 8 (1 + sqrt(a / b))^2$⁠，即要证：$ 1 / 8 (1 + sqrt(a / b))^2 > 1 / 2\,quad upright("或") quad (1 + sqrt(a / b))^2 > 4 $
 
-两边开平方取算术根，可证：$ 1 + sqrt(a / b) > 2\,quad upright("或") quad sqrt(a / b) > 1 $ #noindent;即要证：$a > b$．
+两边开平方取算术根，可证：$ 1 + sqrt(a / b) > 2\,quad upright("或") quad sqrt(a / b) > 1 $ #noindent;即要证：$a > b$⁠．
 
 但是，$a > b > 0$ 成立，并且上面推理的每一步可逆，所以，$frac(a + b, 2) - sqrt(a b) < 1 / 8 frac(\(a - b\)^2, b)$ 成立．
 
@@ -370,7 +370,7 @@ $because quad a > b > 0\,#h(2em) therefore quad (sqrt(a) - sqrt(b))^2 eq.not 0$�
 ]
 #proof[
 $ a x^2 + b x + c & = a [x^2 + b / a x + (frac(b, 2 a))^2] + c - frac(b^2, 4 a)\
- & = a (x + frac(b, 2 a))^2 + frac(4 a c - b^2, 4 a) $ #noindent;因为不论 $x$ 为何值，$(x + frac(b, 2 a))^2 gt.eq 0$, 又因为：$b^2 - 4 a c lt.eq 0$，故 $4 a c - b^2 gt.eq 0$，因而：$ a x^2 + b x + c = a (x + frac(b, 2 a))^2 + frac(4 a c - b^2, 4 a) $ #noindent;的值的正、负与 $a$ 的值的正、负相同，并且当且仅当 $b^2 - 4 a c = 0$ 和 $x = - frac(b, 2 a)$ 时，其值为零，故在 $a > 0$, $b^2 - 4 a c lt.eq 0$ 的条件下，不论 $x$ 为何值，$a x^2 + b x + c gt.eq 0$.
+ & = a (x + frac(b, 2 a))^2 + frac(4 a c - b^2, 4 a) $ #noindent;因为不论 $x$ 为何值，$(x + frac(b, 2 a))^2 gt.eq 0$, 又因为：$b^2 - 4 a c lt.eq 0$⁠，故 $4 a c - b^2 gt.eq 0$⁠，因而：$ a x^2 + b x + c = a (x + frac(b, 2 a))^2 + frac(4 a c - b^2, 4 a) $ #noindent;的值的正、负与 $a$ 的值的正、负相同，并且当且仅当 $b^2 - 4 a c = 0$ 和 $x = - frac(b, 2 a)$ 时，其值为零，故在 $a > 0$, $b^2 - 4 a c lt.eq 0$ 的条件下，不论 $x$ 为何值，$a x^2 + b x + c gt.eq 0$.
 
 ]
 #rmk[
@@ -391,10 +391,10 @@ $  & quad\(a_1^2 + a_2^2 + a_3^2\)\(b_1^2 + b_2^2 + b_3^2\)-\(a_1 b_1 + a_2 b_2 
  & gt.eq 0 $ #noindent;这里不等式当且仅当 $a_1 b_2 - a_2 b_1 = a_1 b_3 - a_3 b_1 = a_2 b_3 - a_3 b_2 = 0$ 时，即在 $a_1 / b_1 = a_2 / b_2 = a_3 / b_3$ 时取等号．
 
 ]
-不等式(3.15) 可以推广到下面的情形：
+不等式 (3.15) 可以推广到下面的情形：
 
 #blk[][
-对于 $a_1\,a_2\,dots.h\,a_n$\; $b_1\,b_2\,dots.h\,b_n$ 的一切实数值，下列不等式成立：$ \(a_1 b_1 + a_2 b_2 + dots.h.c + a_n b_n\)^2 lt.eq\(a_1^2 + a_2^2 + dots.h.c + a_n^2\)\(b_1^2 + b_2^2 + dots.h.c + b_n^2\) $ #noindent;等式当且仅当 $a_1 / b_1 = a_2 / b_2 = dots.h.c = a_n / b_n$ 时成立，这个不等式称为柯西不等式，不等式(3.15) 是柯西不等式 $n = 3$ 的特例．
+对于 $a_1\,a_2\,dots.h\,a_n$\; $b_1\,b_2\,dots.h\,b_n$ 的一切实数值，下列不等式成立：$ \(a_1 b_1 + a_2 b_2 + dots.h.c + a_n b_n\)^2 lt.eq\(a_1^2 + a_2^2 + dots.h.c + a_n^2\)\(b_1^2 + b_2^2 + dots.h.c + b_n^2\) $ #noindent;等式当且仅当 $a_1 / b_1 = a_2 / b_2 = dots.h.c = a_n / b_n$ 时成立，这个不等式称为柯西不等式，不等式 (3.15) 是柯西不等式 $n = 3$ 的特例．
 
 ]
 #example[
@@ -402,12 +402,12 @@ $  & quad\(a_1^2 + a_2^2 + a_3^2\)\(b_1^2 + b_2^2 + b_3^2\)-\(a_1 b_1 + a_2 b_2 
 
 ]
 #proof[
-根据柯西不等式，有 $ \(a x + b y + c z\)^2 <\(a^2 + b^2 + c^2\)\(x^2 + y^2 + z^2\) $#noindent;（因为 $a\,b\,c$ 不分别等于 $x\,y\,z$, 故不能取等号）．由此 $ \(a x + b y + c z\)^2 < 1 $ #noindent;即：$\|a x + b y + c z\|< 1$，但是 $ a x + b y + c z lt.eq\|a x + b y + c z\| $ #noindent;所以：$a x + b y + c z < 1$
+根据柯西不等式，有 $ \(a x + b y + c z\)^2 <\(a^2 + b^2 + c^2\)\(x^2 + y^2 + z^2\) $#noindent;（因为 $a\,b\,c$ 不分别等于 $x\,y\,z$, 故不能取等号）．由此 $ \(a x + b y + c z\)^2 < 1 $ #noindent;即：$\|a x + b y + c z\|< 1$⁠，但是 $ a x + b y + c z lt.eq\|a x + b y + c z\| $ #noindent;所以：$a x + b y + c z < 1$
 
 ]
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题3.1]
 
-+ 如果 $a > b$, $e > f$, $c > 0$, 求证 $f - a c < e - b c$．
++ 如果 $a > b$, $e > f$, $c > 0$, 求证 $f - a c < e - b c$⁠．
 
 + 如果 $a > b$, $g < 0$, $c$ 是任何数，求证：$ g\(a - c\)< g\(b - c\) $
 
@@ -419,7 +419,7 @@ $  & quad\(a_1^2 + a_2^2 + a_3^2\)\(b_1^2 + b_2^2 + b_3^2\)-\(a_1 b_1 + a_2 b_2 
 
 + 回答下列问题，并说明理由（“是”的给予证明；“不是”的举一反例）．
 
-  + 如果 $a > b$, $c = d$ 是否一定有 $a c > b d$？
+  + 如果 $a > b$, $c = d$ 是否一定有 $a c > b d$⁠？
 
   + 如果 $a / c^2 < b / c^2$, 是否一定有 $a < b$?
 
@@ -449,7 +449,7 @@ $  & quad\(a_1^2 + a_2^2 + a_3^2\)\(b_1^2 + b_2^2 + b_3^2\)-\(a_1 b_1 + a_2 b_2 
 
   #strong[用综合法证明下面不等式：]
 
-+ 证明 $a / b + b / a gt.eq 2$，其中 $a\,b$ 是正数．
++ 证明 $a / b + b / a gt.eq 2$⁠，其中 $a\,b$ 是正数．
 
 + 若 $a\,b\,c$ 是正数，求证：$ frac(a b\(a + b\)+ a c\(a + c\)+ b c\(b + c\), a b c) gt.eq 6 $
 
@@ -461,7 +461,7 @@ $  & quad\(a_1^2 + a_2^2 + a_3^2\)\(b_1^2 + b_2^2 + b_3^2\)-\(a_1 b_1 + a_2 b_2 
 
 + 若 $a_1\,a_2\,a_3\,a_4$ 都是正数，求证：$ frac(a_1 + a_2 + a_3 + a_4, 4) gt.eq root(4, a_1 a_2 a_3 a_4) $
 
-+ 在上题中，令 $a_4 = frac(a_1 + a_2 + a_3, 3)$，试由$ (frac(a_1 + a_2 + a_3 + a_4, 4))^4 gt.eq a_1 a_2 a_3 a_4 $ #noindent;推出 $frac(a_1 + a_2 + a_3, 3) gt.eq root(3, a_1 a_2 a_3)$
++ 在上题中，令 $a_4 = frac(a_1 + a_2 + a_3, 3)$⁠，试由$ (frac(a_1 + a_2 + a_3 + a_4, 4))^4 gt.eq a_1 a_2 a_3 a_4 $ #noindent;推出 $frac(a_1 + a_2 + a_3, 3) gt.eq root(3, a_1 a_2 a_3)$
 
 + 若 $a\,b\,c$ 是正数，求证：$a + b + c gt.eq sqrt(a b) + sqrt(b c) + sqrt(c a)$
 
@@ -479,7 +479,7 @@ $  & quad\(a_1^2 + a_2^2 + a_3^2\)\(b_1^2 + b_2^2 + b_3^2\)-\(a_1 b_1 + a_2 b_2 
 
   #strong[用综合法或分析法证明下面不等式：]
 
-+ 求证：
++ #block(sticky: true)[求证：]
 
   #cols(2)[
   + $sqrt(2) + sqrt(3) < 4$
@@ -509,13 +509,13 @@ $  & quad\(a_1^2 + a_2^2 + a_3^2\)\(b_1^2 + b_2^2 + b_3^2\)-\(a_1 b_1 + a_2 b_2 
 + 若 $a > 0$, $b > 0$ 且 $a + b = 1$, 求证：$(a + 1 / a) (b + 1 / b) gt.eq 25 / 4$
 
 == 解不等式
-解不等式就是要找出使不等式成立的变数值的全体，即不等式的解集，在上节1.1中我们已经知道含有一个变数的不等式的解集，或是整个实数集 $bb(R)$, 或是实数集 $bb(R)$ 的一个子集，或是空集 $nothing$．
+解不等式就是要找出使不等式成立的变数值的全体，即不等式的解集，在上节1.1中我们已经知道含有一个变数的不等式的解集，或是整个实数集 $bb(R)$, 或是实数集 $bb(R)$ 的一个子集，或是空集 $nothing$⁠．
 
 解不等式的方法如同解方程一样，在于应用不等式的性质，逐步将它变形到最简单的不等式，在变形过程中要特别注意合理地应用不等式的性质，以保证每次得到的不等式的解集和原来的不等式的解集都相同．现在让我们分析一下怎样的变形可以保证解集相同，设不等式 $alpha\(x\)> 0$ 和 $beta\(x\)> 0$ 的对应解集是 $A$ 和 $B$, 这里 $alpha\(x\)$, $beta\(x\)$ 代表含有一个变数的代数式．
 
 假设任意给出 $x in A$ 使 $alpha\(x\)> 0$ 成立，根据不等式的性质作变形推出 $beta\(x\)> 0$ 成立，于是 $x in B$, 那么 $A subset.eq B$, 反过来，假设任给 $x in B$ 使 $beta\(x\)> 0$ 成立，根据不等式的性质作逆变形推出 $alpha\(x\)> 0$ 成立，于是 $x in A$, 那么 $B subset.eq A$, 从 $A subset.eq B$ 和 $B subset.eq A$ 都成立，就可以说 $A = B$, 这也就是说 $A = B$ 的充要条件是 $alpha\(x\)> 0$ 成立 $arrow.l.r.double.long beta\(x\)> 0$ 成立，所以我们在解不等式的过程中要求每步推理都是可逆的，这样才能保证它们的解集相同．
 
-问题：说明能否由不等式 $sqrt(x) + x > - 3 + sqrt(x)$ 推出 $x > - 3$，又能否由不等式 $x > - 3$ 推出 $sqrt(x) + x > - 3 + sqrt(x)$, 它们的解集有何关系？
+问题：说明能否由不等式 $sqrt(x) + x > - 3 + sqrt(x)$ 推出 $x > - 3$⁠，又能否由不等式 $x > - 3$ 推出 $sqrt(x) + x > - 3 + sqrt(x)$, 它们的解集有何关系？
 
 根据不等式的性质，容易验证下面的不等式的变形是同解变形，即能保持它们的解集相同．
 
@@ -532,9 +532,9 @@ $  & quad\(a_1^2 + a_2^2 + a_3^2\)\(b_1^2 + b_2^2 + b_3^2\)-\(a_1 b_1 + a_2 b_2 
 
 由于这第二种类型的一元一次不等式 $a x + b < 0$ 的两端乘以 $\(- 1\)$ 后，总可以变成第一种类型的同解不等式 $- a x - b > 0$, 所以我们只讨论第一种类型的一元一次不等式的解集：
 
-- 当 $a > 0$ 时，那么 $a x + b > 0$ 的解集是：$\{x #scale(x: 180%, y: 180%)[$\|$] x > - b / a\}$，解集是数轴上不含点 $- b / a$ 的正向射线．
+- 当 $a > 0$ 时，那么 $a x + b > 0$ 的解集是：$lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x > - b / a \})$⁠，解集是数轴上不含点 $- b / a$ 的正向射线．
 
-- 当 $a < 0$ 时，那么 $a x + b > 0$ 的解集是：$\{x #scale(x: 180%, y: 180%)[$\|$] x < - b / a\}$，解集是数轴上不含点 $- b / a$ 的负向射线．
+- 当 $a < 0$ 时，那么 $a x + b > 0$ 的解集是：$lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x < - b / a \})$⁠，解集是数轴上不含点 $- b / a$ 的负向射线．
 
 #example[
 解不等式 $frac(x - 1, 6) - frac(2 x + 1, 4) < frac(2 x, 15) - 1$
@@ -543,7 +543,7 @@ $  & quad\(a_1^2 + a_2^2 + a_3^2\)\(b_1^2 + b_2^2 + b_3^2\)-\(a_1 b_1 + a_2 b_2 
 #solution[
 两边同乘以60，得：$ 10\(x - 1\)- 15\(2 x + 1\) & < 8 x - 60\
 - 20 x - 25 & < 8 x - 60\
-- 28 x & < - 35 $ #noindent;因此：$x > 5 / 4$，所以它的解集是：$\{x #scale(x: 180%, y: 180%)[$\|$] x > 5 / 4\}$
+- 28 x & < - 35 $ #noindent;因此：$x > 5 / 4$⁠，所以它的解集是：$lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x > 5 / 4 \})$
 
 ]
 #example[
@@ -553,10 +553,10 @@ $  & quad\(a_1^2 + a_2^2 + a_3^2\)\(b_1^2 + b_2^2 + b_3^2\)-\(a_1 b_1 + a_2 b_2 
 #solution[
 有时我们可以采用另一种书写方式，即采用一系列相等的集合把原不等式的解集找出来．
 
-原不等式的解集：$  & quad \{x \| 3 \( x - 5 \) gt.eq x^2 - 5 x + 3 - \( x^2 - 8 x \)\}\
- & = \{x \| 3 x - 15 gt.eq 3 x + 3\}\
- & = \{x \| 0 x gt.eq 18\}\
- & = nothing $#noindent;“$nothing$”表示空集，这说明原不等式不能成立．
+原不等式的解集：$  & quad lr(\{ x \| 3 \( x - 5 \) gt.eq x^2 - 5 x + 3 - \( x^2 - 8 x \) \})\
+ & = lr(\{ x \| 3 x - 15 gt.eq 3 x + 3 \})\
+ & = lr(\{ x \| 0 x gt.eq 18 \})\
+ & = nothing $#noindent;“$nothing$⁠”表示空集，这说明原不等式不能成立．
 
 解不等式组就是先分别求不等式组中各个不等式的解集，然后再求这些解集的交集．
 
@@ -567,12 +567,12 @@ $  & quad\(a_1^2 + a_2^2 + a_3^2\)\(b_1^2 + b_2^2 + b_3^2\)-\(a_1 b_1 + a_2 b_2 
 ]
 #solution[
 先解第一个不等式，化简得：$ 3 x - 6 + 1 & < 6 x + 6\
-3 x & > - 11 $ #noindent;所以 $x > - 11 / 3$．
+3 x & > - 11 $ #noindent;所以 $x > - 11 / 3$⁠．
 
 再解第二个不等式，化简得 $ 7 - 4 x + 12 & > 5 x - 10\
 9 x & < 29 $ #noindent;所以 $x < 29 / 9$
 
-最后求两个解集的公共部分 $- 11 / 3 < x < 29 / 9$，这就是不等式组的解(图3.5)．
+最后求两个解集的公共部分 $- 11 / 3 < x < 29 / 9$⁠，这就是不等式组的解 (图3.5)．
 
 #figure([#fig("3-05");
 
@@ -581,10 +581,10 @@ $  & quad\(a_1^2 + a_2^2 + a_3^2\)\(b_1^2 + b_2^2 + b_3^2\)-\(a_1 b_1 + a_2 b_2 
   ]
 )
 
-求解的过程也可以用集合的符号来书写，即 $  & quad \{x #scale(x: 180%, y: 180%)[$\|$] display(cases(3\(x - 2\)+ 1 < 6\(x + 1\), 7 - 4\(x - 3\)> 5 x - 10))\}\
- & = \{x #scale(x: 180%, y: 180%)[$\|$] 3 \( x - 2 \) + 1 < 6 \( x + 1 \)\} inter \{x #scale(x: 180%, y: 180%)[$\|$] 7 - 4 \( x - 3 \) > 5 x - 10\}\
+求解的过程也可以用集合的符号来书写，即 $  & quad lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(3\(x - 2\)+ 1 < 6\(x + 1\), 7 - 4\(x - 3\)> 5 x - 10)) \})\
+ & = lr(\{ x #scale(x: 180%, y: 180%)[$\|$] 3 \( x - 2 \) + 1 < 6 \( x + 1 \) \}) inter lr(\{ x #scale(x: 180%, y: 180%)[$\|$] 7 - 4 \( x - 3 \) > 5 x - 10 \})\
  & = \{ x\|3 x > - 11 \} inter \{ x\|9 x < 29 \}\
- & = \{x #scale(x: 180%, y: 180%)[$\|$] - 11 / 3 < x < 29 / 9\} $
+ & = lr(\{ x #scale(x: 180%, y: 180%)[$\|$] - 11 / 3 < x < 29 / 9 \}) $
 
 ]
 #example[
@@ -592,9 +592,9 @@ $  & quad\(a_1^2 + a_2^2 + a_3^2\)\(b_1^2 + b_2^2 + b_3^2\)-\(a_1 b_1 + a_2 b_2 
 
 ]
 #solution[
-$  & quad \{x #scale(x: 180%, y: 180%)[$\|$] display(cases(5\(x - 3\)> 3\(2 x - 3\), 5\(x - 2\)< 3\(x - 1\)))\}\
- & = \{x #scale(x: 180%, y: 180%)[$\|$] 5 \( x - 3 \) > 3 \( 2 x - 3 \)\} inter \{x #scale(x: 180%, y: 180%)[$\|$] 5 \( x - 2 \) < 3 \( x - 1 \)\}\
- & = \{ x\|x < - 6 \} inter \{x #scale(x: 180%, y: 180%)[$\|$] x < 7 / 2\}\
+$  & quad lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(5\(x - 3\)> 3\(2 x - 3\), 5\(x - 2\)< 3\(x - 1\))) \})\
+ & = lr(\{ x #scale(x: 180%, y: 180%)[$\|$] 5 \( x - 3 \) > 3 \( 2 x - 3 \) \}) inter lr(\{ x #scale(x: 180%, y: 180%)[$\|$] 5 \( x - 2 \) < 3 \( x - 1 \) \})\
+ & = \{ x\|x < - 6 \} inter lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x < 7 / 2 \})\
  & = \{ x\|x < - 6 \} $
 
 #figure([#fig("3-06");
@@ -612,8 +612,8 @@ $  & quad \{x #scale(x: 180%, y: 180%)[$\|$] display(cases(5\(x - 3\)> 3\(2 x - 
 
 ]
 #solution[
-$  & quad \{x #scale(x: 180%, y: 180%)[$\|$] display(cases(7 x - 3 > 5 x + 1, 1 / 2 x > x + 1 / 2))\}\
- & = \{ x\|7 x - 3 > 5 x + 1 \} inter \{x \| 1 / 2 x > x + 1 / 2\}\
+$  & quad lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(7 x - 3 > 5 x + 1, 1 / 2 x > x + 1 / 2)) \})\
+ & = \{ x\|7 x - 3 > 5 x + 1 \} inter lr(\{ x \| 1 / 2 x > x + 1 / 2 \})\
  & = \{ x\|x > 2 \} inter \{ x\|x < - 1 \} = nothing $
 
 #figure([#fig("3-07");
@@ -637,23 +637,23 @@ $  & quad \{x #scale(x: 180%, y: 180%)[$\|$] display(cases(7 x - 3 > 5 x + 1, 1 
 #solution[
 移项、化简得：$ \(m - 1\)x > 2 - 3 m $ #noindent;因为 $m - 1$ 可能是正数或零或负数，故需分三种情形来讨论：
 
-- 当 $m > 1$ 时，则 $x > frac(2 - 3 m, m - 1)$；
+- 当 $m > 1$ 时，则 $x > frac(2 - 3 m, m - 1)$⁠；
 
 - 当 $m = 1$ 时，原不等式化为 $0 x > - 1$, 这个不等式的解集是所有实数；
 
-- 当 $m < 1$ 时，则 $x < frac(2 - 3 m, m - 1)$．
+- 当 $m < 1$ 时，则 $x < frac(2 - 3 m, m - 1)$⁠．
 
 答：不等式的解集是：
 
-- 当 $m > 1$ 时，$\{x #scale(x: 180%, y: 180%)[$\|$] x > frac(2 - 3 m, m - 1)\}$
+- 当 $m > 1$ 时，$lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x > frac(2 - 3 m, m - 1) \})$
 
-- 当 $m = 1$ 时，$\{x #scale(x: 180%, y: 180%)[$\|$] x in bb(R)\}$
+- 当 $m = 1$ 时，$lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x in bb(R) \})$
 
-- 当 $m < 1$ 时，$\{x #scale(x: 180%, y: 180%)[$\|$] x < frac(2 - 3 m, m - 1)\}$
+- 当 $m < 1$ 时，$lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x < frac(2 - 3 m, m - 1) \})$
 
 ]
 #exercise[
-+ 解下列不等式，并在数轴上表示出它的解集：
++ #block(sticky: true)[解下列不等式，并在数轴上表示出它的解集：]
 
   #cols(2)[
   + $3 x - 2 > 5 x + 8$
@@ -678,7 +678,7 @@ $  & quad \{x #scale(x: 180%, y: 180%)[$\|$] display(cases(7 x - 3 > 5 x + 1, 1 
 
   ]
 
-+ 解下列不等式组，并把它们的解集在数轴上表示出来：
++ #block(sticky: true)[解下列不等式组，并把它们的解集在数轴上表示出来：]
 
   #cols(2)[
   + $display(cases(frac(x + 2, 6) > frac(x - 9, 6) + frac(x + 5, 2), 6 - (frac(x - 2, 4) + 2 / 3) < x / 6))$
@@ -691,7 +691,7 @@ $  & quad \{x #scale(x: 180%, y: 180%)[$\|$] display(cases(7 x - 3 > 5 x + 1, 1 
 
   ]
 
-+ 解下列不等式：
++ #block(sticky: true)[解下列不等式：]
 
   #cols(2)[
   + $\(a - b\)x < 2 a x - b$
@@ -732,13 +732,13 @@ x & gt.eq 189 / 52 = 3 33 / 52 $ #noindent;大于 $3 33 / 52$ 的最小自然数
 
 ]
 #solution[
-设这个班有学生 $x$ 人，从人和笔记本册数的关系，得：#numbered-eq($ 123 - 3 x gt.eq 10 $);#noindent;从人和铅笔支数的关系，得#numbered-eq($ 8 x - 12 times 23 gt.eq 8 $);#noindent;解联立不等式(3.16) 和(3.17)：
+设这个班有学生 $x$ 人，从人和笔记本册数的关系，得：#numbered-eq($ 123 - 3 x gt.eq 10 $);#noindent;从人和铅笔支数的关系，得#numbered-eq($ 8 x - 12 times 23 gt.eq 8 $);#noindent;解联立不等式 (3.16) 和 (3.17)：
 
-由(3.16) 得 $ x lt.eq 37 2 / 3 $
+由 (3.16) 得 $ x lt.eq 37 2 / 3 $
 
-由(3.17) 得 $ x gt.eq 35 1 / 2 $
+由 (3.17) 得 $ x gt.eq 35 1 / 2 $
 
-所以#numbered-eq($ 35 1 / 2 lt.eq x lt.eq 37 2 / 3 $);#noindent;表示班级人数的数是自然数，所以使(3.18) 成立的自然数有36和37.
+所以#numbered-eq($ 35 1 / 2 lt.eq x lt.eq 37 2 / 3 $);#noindent;表示班级人数的数是自然数，所以使 (3.18) 成立的自然数有36和37.
 
 答：36人或37人．
 
@@ -748,7 +748,7 @@ x & gt.eq 189 / 52 = 3 33 / 52 $ #noindent;大于 $3 33 / 52$ 的最小自然数
 
 ]
 #solution[
-设掺入浓度3%的盐水 $x$ 克，由盐水重量关系，得#numbered-eq($ 100 + x gt.eq 1200 $);#noindent;由盐的重量关系，得#numbered-eq($ 100 times 8 % + x times 3 % lt.eq 84 $);#noindent;把(3.19), (3.20) 联立起来，由(3.19) 得 $ x gt.eq 1100 $ #noindent;由(3.20) 得 $ 0.03 x lt.eq 76 quad arrow.r.double quad x lt.eq 2533 1 / 3 $ #noindent;所以 $ 1100 lt.eq x lt.eq 2533 1 / 3 $
+设掺入浓度3%的盐水 $x$ 克，由盐水重量关系，得#numbered-eq($ 100 + x gt.eq 1200 $);#noindent;由盐的重量关系，得#numbered-eq($ 100 times 8 % + x times 3 % lt.eq 84 $);#noindent;把 (3.19), (3.20) 联立起来，由 (3.19) 得 $ x gt.eq 1100 $ #noindent;由 (3.20) 得 $ 0.03 x lt.eq 76 quad arrow.r.double quad x lt.eq 2533 1 / 3 $ #noindent;所以 $ 1100 lt.eq x lt.eq 2533 1 / 3 $
 
 答：掺入3%的盐水的重量在1100克到 $2533 1 / 3$ 克的范围内．
 
@@ -775,29 +775,29 @@ x & gt.eq 189 / 52 = 3 33 / 52 $ #noindent;大于 $3 33 / 52$ 的最小自然数
 ]
 === 不等式 $\(a x + b\)\(c x + d\)> 0 thick\(< 0\)$, $frac(a x + b, c x + d) > 0 thick\(< 0\)$ 的解法举例
 #example[
-解不等式 $\(0.5 x - 1\)\(4 - x\)> 0$．
+解不等式 $\(0.5 x - 1\)\(4 - x\)> 0$⁠．
 
 ]
 #solution[
 两个因式的积的值为正，当且仅当这两个因式的值同号，即原不等式成立的充分必要条件是下列不等式组之一成立：$ display(cases(0.5 x - 1 > 0, 4 - x > 0)) quad upright("或") quad display(cases(0.5 x - 1 < 0, 4 - x < 0)) $ #noindent;由此得 $ display(cases(x > 2, x < 4)) quad upright("或") quad display(cases(x < 2, x > 4)) $
 
-前一个不等式组化为 $2 < x < 4$, 后一个不等式组的解集合是空集 $nothing$．
+前一个不等式组化为 $2 < x < 4$, 后一个不等式组的解集合是空集 $nothing$⁠．
 
-答：原不等式的解集 $= \{ x\|2 < x < 4 \} union nothing = \{ x\|2 < x < 4 \}$．
+答：原不等式的解集 $= \{ x\|2 < x < 4 \} union nothing = \{ x\|2 < x < 4 \}$⁠．
 
 ]
 #example[
-解不等式 $frac(2 x - 3, 5 - 4 x) < 0$．
+解不等式 $frac(2 x - 3, 5 - 4 x) < 0$⁠．
 
 ]
 #solution[
-分式的值为负，当且仅当分子和分母的值有不同符号，即原不等式成立的充分必要条件是下列不等式组之一成立：#numbered-eq($ display(cases(2 x - 3 > 0, 5 - 4 x < 0)) arrow.r.double quad display(cases(x > 3 / 2, x > 5 / 4)) $);#noindent;或#numbered-eq($ display(cases(2 x - 3 < 0, 5 - 4 x > 0)) arrow.r.double quad display(cases(x < 3 / 2, x < 5 / 4)) $);#noindent;因为 $3 / 2 > 5 / 4$, 不等式组(3.21) 的解集 $= \{x #scale(x: 180%, y: 180%)[$\|$] x > 3 / 2\}$, 不等式组(3.22) 的解集 $= \{x #scale(x: 180%, y: 180%)[$\|$] x < 5 / 4\}$．
+分式的值为负，当且仅当分子和分母的值有不同符号，即原不等式成立的充分必要条件是下列不等式组之一成立：#numbered-eq($ display(cases(2 x - 3 > 0, 5 - 4 x < 0)) arrow.r.double quad display(cases(x > 3 / 2, x > 5 / 4)) $);#noindent;或#numbered-eq($ display(cases(2 x - 3 < 0, 5 - 4 x > 0)) arrow.r.double quad display(cases(x < 3 / 2, x < 5 / 4)) $);#noindent;因为 $3 / 2 > 5 / 4$, 不等式组 (3.21) 的解集 $= lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x > 3 / 2 \})$, 不等式组 (3.22) 的解集 $= lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x < 5 / 4 \})$⁠．
 
-答：原不等式的解集 $= \{x #scale(x: 180%, y: 180%)[$\|$] x > 3 / 2\} union.big \{x #scale(x: 180%, y: 180%)[$\|$] x < 5 / 4\}$
+答：原不等式的解集 $= lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x > 3 / 2 \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x < 5 / 4 \})$
 
 ]
 #example[
-解不等式 $frac(3 x + 1, x - 3) < 1$．
+解不等式 $frac(3 x + 1, x - 3) < 1$⁠．
 
 ]
 #solution[
@@ -805,13 +805,13 @@ x & gt.eq 189 / 52 = 3 33 / 52 $ #noindent;大于 $3 33 / 52$ 的最小自然数
 
 移项$ frac(3 x + 1, x - 3) - 1 < 0 $ #noindent;化简得$ frac(2 x + 4, x - 3) < 0 $
 
-同解于：#numbered-eq($ display(cases(2 x + 4 > 0, x - 3 < 0)) arrow.r.double quad display(cases(x > - 2, x < 3)) $);#noindent;或#numbered-eq($ display(cases(2 x + 4 < 0, x - 3 > 0)) arrow.r.double quad display(cases(x < - 2, x > 3)) $);#noindent;不等式组(3.23) 的解集 $= \{ x\|- 2 < x < 3 \}$, 不等式组(3.24) 的解集 $= diameter$．
+同解于：#numbered-eq($ display(cases(2 x + 4 > 0, x - 3 < 0)) arrow.r.double quad display(cases(x > - 2, x < 3)) $);#noindent;或#numbered-eq($ display(cases(2 x + 4 < 0, x - 3 > 0)) arrow.r.double quad display(cases(x < - 2, x > 3)) $);#noindent;不等式组 (3.23) 的解集 $= \{ x\|- 2 < x < 3 \}$, 不等式组 (3.24) 的解集 $= diameter$⁠．
 
 答：原不等式的解集 $= \{ x\|- 2 < x < 3 \}$
 
 ]
 #exercise[
-+ 解不等式：
++ #block(sticky: true)[解不等式：]
 
   #cols(2)[
   + $x\(10 x - 3\)> 0$
@@ -824,7 +824,7 @@ x & gt.eq 189 / 52 = 3 33 / 52 $ #noindent;大于 $3 33 / 52$ 的最小自然数
 
   ]
 
-+ 解不等式：
++ #block(sticky: true)[解不等式：]
 
   #cols(2)[
   + $frac(12, x - 7.2) > 0$
@@ -839,7 +839,7 @@ x & gt.eq 189 / 52 = 3 33 / 52 $ #noindent;大于 $3 33 / 52$ 的最小自然数
 
   ]
 
-+ 解不等式：
++ #block(sticky: true)[解不等式：]
 
   #cols(2)[
   + $frac(x - 17, 9 - x) > 0$
@@ -872,7 +872,7 @@ x & gt.eq 189 / 52 = 3 33 / 52 $ #noindent;大于 $3 33 / 52$ 的最小自然数
 
 我们知道，$\|x\|$ 可以看作数轴上表示 $x$ 的点与原点的距离，由此可知：
 
-如果 $a > 0$, 那么绝对值不等式 $\|x\|< a$ 的解就是 $- a < x < a$ 的解(图3.8); $\|x\|> a$ 的解就是 $x < - a$ 或 $x > a$ 的解\(图3.9)，也就是：$ \{ x\|thick\|x\|< a \} & = \{ x\|thick - a < x < a \}\
+如果 $a > 0$, 那么绝对值不等式 $\|x\|< a$ 的解就是 $- a < x < a$ 的解 (图3.8); $\|x\|> a$ 的解就是 $x < - a$ 或 $x > a$ 的解 (图3.9)，也就是：$ \{ x\|thick\|x\|< a \} & = \{ x\|thick - a < x < a \}\
 \{ x\|thick\|x\|> a \} & = \{ x\|thick x < - a \} union \{ x\|thick x > a \} $
 
 #figure([#fig("3-08");
@@ -892,13 +892,13 @@ x & gt.eq 189 / 52 = 3 33 / 52 $ #noindent;大于 $3 33 / 52$ 的最小自然数
 现在让我们转到要解的不等式 $\|x - 10\|lt.eq 0.05$ 上来，其意义就是数轴上表示 $x$ 的点与坐标为10的点的距离不超过0.05．根据上面的结论，它和下面不等式同解：$ - 0.05 lt.eq x - 10 lt.eq 0.05 $ #noindent;也就是 $ 9.95 lt.eq x lt.eq 10.05 $
 
 #example[
-解不等式 $\|x + 4\|> 9$．
+解不等式 $\|x + 4\|> 9$⁠．
 
 ]
 #solution[
 $  & quad \{ x\|thick\|x + 4\|> 9 \}\
  & = \{ x\|x + 4 > 9 \} union \{ x\|x + 4 < - 9 \}\
- & = \{ x\|x > 5 \} union \{ x\|x < - 13 \} $ #noindent;这个绝对值不等式，其意义就是数轴上表示 $x$ 的点与坐标为 $- 4$ 的点的距离大于9, 这些解点只能是以5为端点的右开射线，和以 $- 13$ 为端点的左开射线(图3.10)．
+ & = \{ x\|x > 5 \} union \{ x\|x < - 13 \} $ #noindent;这个绝对值不等式，其意义就是数轴上表示 $x$ 的点与坐标为 $- 4$ 的点的距离大于9, 这些解点只能是以5为端点的右开射线，和以 $- 13$ 为端点的左开射线 (图3.10)．
 
 #figure([#fig("3-10");
 
@@ -912,7 +912,7 @@ $  & quad \{ x\|thick\|x + 4\|> 9 \}\
 
 按照绝对值的定义，$ \|x - 10\|= display(cases(x - 10\, & quad x gt.eq 10, -\(x - 10\)\, & quad x < 10)) $
 
-由此可见，$x = 10$ 是个分界点，我们称它为 $x - 10$ 的零点，零点把数轴分成三段即零点的右开射线，零点和零点的左开射线．在这里我们约定把零点归于右开射线的左端点，于是零点左侧任意一点和零点的距离：$ \|x - 10\|= -\(x - 10\)\,#h(2em) x < 10 $ #noindent;零点或零点右侧任意一点和零点的距离：$ \|x - 10\|= x - 10\,#h(2em) x gt.eq 10 $ #noindent;这样有下图(图3.11) 的情况：
+由此可见，$x = 10$ 是个分界点，我们称它为 $x - 10$ 的零点，零点把数轴分成三段即零点的右开射线，零点和零点的左开射线．在这里我们约定把零点归于右开射线的左端点，于是零点左侧任意一点和零点的距离：$ \|x - 10\|= -\(x - 10\)\,#h(2em) x < 10 $ #noindent;零点或零点右侧任意一点和零点的距离：$ \|x - 10\|= x - 10\,#h(2em) x gt.eq 10 $ #noindent;这样有下图 (图3.11) 的情况：
 
 #figure([#fig("3-11");
 
@@ -922,26 +922,26 @@ $  & quad \{ x\|thick\|x + 4\|> 9 \}\
 )
 
 从而得到不等式 $\|x - 10\|lt.eq 0.05$ 的解集：$  & quad \{ x\|thick\|x - 10\|lt.eq 0.05 \}\
- & = \{x #scale(x: 180%, y: 180%)[$\|$] display(cases(-\(x - 10\)lt.eq 0.05, x < 10))\} union.big \{x #scale(x: 180%, y: 180%)[$\|$] display(cases(x - 10 lt.eq 0.05, x gt.eq 10))\}\
+ & = lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(-\(x - 10\)lt.eq 0.05, x < 10)) \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(x - 10 lt.eq 0.05, x gt.eq 10)) \})\
  & = #scale(x: 180%, y: 180%)[$\[$] \{ x\|-\(x - 10\)lt.eq 0.05 \} inter \{ x\|x < 10 \} #scale(x: 180%, y: 180%)[$\]$] union.big #scale(x: 180%, y: 180%)[$\[$] \{ x\|x - 10 lt.eq 0.05 \} inter \{ x\|x gt.eq 10 \} #scale(x: 180%, y: 180%)[$\]$]\
  & = \{ x\|9.95 lt.eq x < 10 \} union \{ x\|10 lt.eq x lt.eq 10.05 \}\
  & = \{ x\|9.95 lt.eq x lt.eq 10.05 \} $
 
-同理可解例3.28：$\|x + 4\|> 9$，在这里零点是 $x = - 4$, 它把数轴分成两段：
+同理可解例3.28：$\|x + 4\|> 9$⁠，在这里零点是 $x = - 4$, 它把数轴分成两段：
 
 - 当 $x gt.eq - 4$ 时，$\|x + 4\|= x + 4$\;
 
 - 当 $x < - 4$ 时，$\|x + 4\|= -\(x + 4\)$.
 
 #noindent;于是不等式的解集为：$  & quad \{ x\|thick\|x + 4\|> 9 \}\
- & = \{x #scale(x: 180%, y: 180%)[$\|$] display(cases(-\(x + 4\)> 9, x < - 4))\} union.big \{x #scale(x: 180%, y: 180%)[$\|$] display(cases(x + 4 > 9, x gt.eq - 4))\}\
+ & = lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(-\(x + 4\)> 9, x < - 4)) \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(x + 4 > 9, x gt.eq - 4)) \})\
  & = #scale(x: 180%, y: 180%)[$\[$] \{ x\|-\(x + 4\)> 9 \} inter \{ x\|x < - 4 \} #scale(x: 180%, y: 180%)[$\]$] union.big #scale(x: 180%, y: 180%)[$\[$] \{ x\|x + 4 > 9 \} inter \{ x\|x gt.eq - 4 \} #scale(x: 180%, y: 180%)[$\]$]\
  & = \{ x\|x < - 13 \} union \{ x\|x > 5 \} $
 
 当然这种方法对解含一个绝对值的不等式不如前法方便、但它具有一般性，且它可推广到解含二个、三个……绝对值的不等式．
 
 #example[
-解不等式 $\|x - 2\|+\|x + 3\|> 7$．
+解不等式 $\|x - 2\|+\|x + 3\|> 7$⁠．
 
 ]
 #solution[
@@ -954,8 +954,8 @@ $  & quad \{ x\|thick\|x + 4\|> 9 \}\
   ]
 )
 
-所以原不等式的解就是这三个解集的并集，即 $  & quad \{x #scale(x: 180%, y: 180%)[$\|$] display(cases(-\(x - 2\)+\[-\(x + 3\)\]> 7, x < - 3))\} union.big \{x #scale(x: 180%, y: 180%)[$\|$] display(cases(-\(x - 2\)+\(x + 3\)> 7, - 3 lt.eq x < 2))\}\
- & #h(2em) union.big \{x #scale(x: 180%, y: 180%)[$\|$] display(cases(\(x - 2\)+\(x + 3\)> 7, x gt.eq 2))\}\
+所以原不等式的解就是这三个解集的并集，即 $  & quad lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(-\(x - 2\)+\[-\(x + 3\)\]> 7, x < - 3)) \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(-\(x - 2\)+\(x + 3\)> 7, - 3 lt.eq x < 2)) \})\
+ & #h(2em) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(\(x - 2\)+\(x + 3\)> 7, x gt.eq 2)) \})\
  & = \{ x\|x < - 4 \} union nothing union \{ x\|x > 3 \}\
  & = \{ x\|x < - 4 \} union \{ x\|x > 3 \} $
 
@@ -968,7 +968,7 @@ $  & quad \{ x\|thick\|x + 4\|> 9 \}\
 
 ]
 #exercise[
-+ 解下列不等式：
++ #block(sticky: true)[解下列不等式：]
 
   #cols(2)[
   + $\|x - 2\|< 5$
@@ -989,7 +989,7 @@ $  & quad \{ x\|thick\|x + 4\|> 9 \}\
 
   ]
 
-+ 解下列不等式：
++ #block(sticky: true)[解下列不等式：]
 
   #cols(2)[
   + $\|x + 1\|+\|x - 1\|> 0$
@@ -1012,7 +1012,7 @@ $  & quad \{ x\|thick\|x + 4\|> 9 \}\
 
 ]
 === 一元二次不等式
-形如 $ a x^2 + b x + c > 0 #h(2em) upright("或") #h(2em) a x^2 + b x + c < 0 $ #noindent;的不等式称为一元二次不等式．这里 $a eq.not 0$．
+形如 $ a x^2 + b x + c > 0 #h(2em) upright("或") #h(2em) a x^2 + b x + c < 0 $ #noindent;的不等式称为一元二次不等式．这里 $a eq.not 0$⁠．
 
 我们首先说明下面的定理：
 
@@ -1032,11 +1032,11 @@ $  & quad \{ x\|thick\|x + 4\|> 9 \}\
 
 根据这个结论，我们知道不等式：
 
-+ $a x^2 + b x + c > 0$ $\(a > 0\,thick b^2 - 4 a c < 0\)$ 的解集是：$\{ x\|x in bb(R) \}$．
++ $a x^2 + b x + c > 0$ $\(a > 0\,thick b^2 - 4 a c < 0\)$ 的解集是：$\{ x\|x in bb(R) \}$⁠．
 
-+ $a x^2 + b x + c > 0$ $\(a > 0\,thick b^2 - 4 a c = 0\)$ 的解集是：$\{x #scale(x: 180%, y: 180%)[$\|$] x in bb(R) \, thick x eq.not - frac(b, 2 a)\}$
++ $a x^2 + b x + c > 0$ $\(a > 0\,thick b^2 - 4 a c = 0\)$ 的解集是：$lr(\{ x #scale(x: 180%, y: 180%)[$\|$] x in bb(R) \, thick x eq.not - frac(b, 2 a) \})$
 
-+ $a x^2 + b x + c < 0$ $\(a > 0\,thick b^2 - 4 a c < 0\)$ 的解集是空集 $nothing$．
++ $a x^2 + b x + c < 0$ $\(a > 0\,thick b^2 - 4 a c < 0\)$ 的解集是空集 $nothing$⁠．
 
 但当 $b^2 - 4 a c > 0$ 时，$a x^2 + b x + c$ 的值的情形是怎样的呢？这时 $a x^2 + b x + c$ 的值的符号要因 $x$ 的值不同而改变，现在我们就来讨论它的值的符号怎样随 $x$ 的取值改变．
 
@@ -1107,7 +1107,7 @@ $  & quad \{ x\|thick\|x + 4\|> 9 \}\
 
 ]
 #solution[
-由于 $b^2 - 4 a c =\(- 4\)^2 - 4 times 2 times\(- 5\)= 56 > 0$，所以对应的二次方程有两个实根：$ x_1 = frac(2 - sqrt(14), 2)\,#h(2em) x_2 = frac(2 + sqrt(14), 2) $ #noindent;又 $a = 2 > 0$, 所以要使原不等式成立，它的解必须且只须在二根之间，或等于二根．因此解集为：$ \{x #scale(x: 180%, y: 180%)[$\|$] frac(2 - sqrt(14), 2) lt.eq x lt.eq frac(2 + sqrt(14), 2)\} $
+由于 $b^2 - 4 a c =\(- 4\)^2 - 4 times 2 times\(- 5\)= 56 > 0$⁠，所以对应的二次方程有两个实根：$ x_1 = frac(2 - sqrt(14), 2)\,#h(2em) x_2 = frac(2 + sqrt(14), 2) $ #noindent;又 $a = 2 > 0$, 所以要使原不等式成立，它的解必须且只须在二根之间，或等于二根．因此解集为：$ lr(\{ x #scale(x: 180%, y: 180%)[$\|$] frac(2 - sqrt(14), 2) lt.eq x lt.eq frac(2 + sqrt(14), 2) \}) $
 
 ]
 #example[
@@ -1115,7 +1115,7 @@ $  & quad \{ x\|thick\|x + 4\|> 9 \}\
 
 ]
 #solution[
-由于 $b^2 - 4 a c =\(- 12\)^2 - 4 times 4 times 9 = 0$, 故 $ 4 x^2 - 12 x + 9 =\(2 x - 3\)^2 $ #noindent;因此解集只能是 $\{3 / 2\}$．
+由于 $b^2 - 4 a c =\(- 12\)^2 - 4 times 4 times 9 = 0$, 故 $ 4 x^2 - 12 x + 9 =\(2 x - 3\)^2 $ #noindent;因此解集只能是 $lr(\{ 3 / 2 \})$⁠．
 
 ]
 #example[
@@ -1125,13 +1125,13 @@ $p$ 为何值时，二次三项式 $x^2 +\(p - 2\)x + 2 p + 1$ 对于任何 $x$ 
 #solution[
 只有当判别式 $Delta < 0$ 时，$x^2 +\(p - 2\)x + 2 p + 1$ 的值才能保持正号，因此 $ Delta =\(p - 2\)^2 - 4\(2 p + 1\)< 0 $ #noindent;即 $p\(p - 12\)< 0$.
 
-解 $p\(p - 12\)= 0$, 得到二根 $p_1 = 0$, $p_2 = 12$, 又 $p^2$ 的系数是 $1 > 0$, 因此上面不等式的解满足 $0 < p < 12$．
+解 $p\(p - 12\)= 0$, 得到二根 $p_1 = 0$, $p_2 = 12$, 又 $p^2$ 的系数是 $1 > 0$, 因此上面不等式的解满足 $0 < p < 12$⁠．
 
 答：在 $0 < p < 12$ 的条件下，$x^2 +\(p - 2\)x + 2 p + 1$ 对于任何 $x$ 值都取正值．
 
 ]
 #exercise[
-+ 解下列不等式：
++ #block(sticky: true)[解下列不等式：]
 
   #cols(2)[
   + $\(x - 2\)^2 + 1 > 0$
@@ -1156,7 +1156,7 @@ $p$ 为何值时，二次三项式 $x^2 +\(p - 2\)x + 2 p + 1$ 对于任何 $x$ 
 
   ]
 
-+ $m$ 为何值使得下面的二次三项式的值对于任何 $x$ 值都是正的或都是负的：
++ #block(sticky: true)[$m$ 为何值使得下面的二次三项式的值对于任何 $x$ 值都是正的或都是负的：]
 
   #cols(2)[
   + $x^2 - 8 x + m + 10$
@@ -1200,7 +1200,7 @@ $p$ 为何值时，二次三项式 $x^2 +\(p - 2\)x + 2 p + 1$ 对于任何 $x$ 
 
   所以解原不等式，就相当于解不等式 $ \(x + 3\)(x + sqrt(2)) (x - sqrt(2)) > 0 $
 
-+ 各个因子的零点是 $- 3\,- sqrt(2)\,sqrt(2)$．
++ 各个因子的零点是 $- 3\,- sqrt(2)\,sqrt(2)$⁠．
 
   4, 5, 6三步可列表进行：
 
@@ -1245,8 +1245,8 @@ $p$ 为何值时，二次三项式 $x^2 +\(p - 2\)x + 2 p + 1$ 对于任何 $x$ 
 
 ]
 #solution[
-解法1：用化为不等式组的方法解 $  & quad \{x #scale(x: 180%, y: 180%)[$\|$] frac(9 - x^2, x^2 - x - 2) gt.eq 0\}\
- & = \{x #scale(x: 180%, y: 180%)[$\|$] display(cases(9 - x^2 gt.eq 0, x^2 - x - 2 > 0))\} union.big \{x #scale(x: 180%, y: 180%)[$\|$] display(cases(9 - x^2 lt.eq 0, x^2 - x - 2 < 0))\}\
+解法1：用化为不等式组的方法解 $  & quad lr(\{ x #scale(x: 180%, y: 180%)[$\|$] frac(9 - x^2, x^2 - x - 2) gt.eq 0 \})\
+ & = lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(9 - x^2 gt.eq 0, x^2 - x - 2 > 0)) \}) union.big lr(\{ x #scale(x: 180%, y: 180%)[$\|$] display(cases(9 - x^2 lt.eq 0, x^2 - x - 2 < 0)) \})\
  & = #scale(x: 180%, y: 180%)[$\[$] \{ x\|- 3 lt.eq x lt.eq 3 \} inter \{ x\|x < - 1 upright(" 或 ") x > 2 \} #scale(x: 180%, y: 180%)[$\]$]\
  & #h(2em) union.big #scale(x: 180%, y: 180%)[$\[$] \{ x\|x lt.eq - 3 upright(" 或 ") x gt.eq 3 \} inter \{ x\|- 1 < x < 2 \} #scale(x: 180%, y: 180%)[$\]$]\
  & = #scale(x: 180%, y: 180%)[$\[$] \{ x\|- 3 lt.eq x < - 1 \} union \{ x\|2 < x lt.eq 3 \} #scale(x: 180%, y: 180%)[$\]$] union #scale(x: 120%, y: 120%)[$\[$] nothing union nothing #scale(x: 120%, y: 120%)[$\]$]\
@@ -1274,7 +1274,7 @@ $p$ 为何值时，二次三项式 $x^2 +\(p - 2\)x + 2 p + 1$ 对于任何 $x$ 
 
   + $x^3 + 7 x^2 + 6 x lt.eq 0$
 
-+ 解下列不等式：
++ #block(sticky: true)[解下列不等式：]
 
   #cols(2)[
   + $frac(2 x - 7, x - 5) > 0$
@@ -1288,11 +1288,11 @@ $p$ 为何值时，二次三项式 $x^2 +\(p - 2\)x + 2 p + 1$ 对于任何 $x$ 
   ]
 
 ]
-#heading(level: 2, numbering: none, outlined: false)[复习题三]
+#heading(level: 2, numbering: none, outlined: true)[复习题三]
 
-+ 设 $a\,b\,m$ 都是正数，如果 $a < b$, 则 $frac(a + m, b + m) > a / b$；如果 $a > b$，则 $frac(a + m, b + m) < a / b$ 试证之．
++ 设 $a\,b\,m$ 都是正数，如果 $a < b$, 则 $frac(a + m, b + m) > a / b$⁠；如果 $a > b$⁠，则 $frac(a + m, b + m) < a / b$ 试证之．
 
-+ 已知 $a eq.not b$, 求证：
++ #block(sticky: true)[已知 $a eq.not b$, 求证：]
 
   #cols(2)[
   + $a^2 + 3 b^2 > 2 b\(a + b\)$
@@ -1305,7 +1305,7 @@ $p$ 为何值时，二次三项式 $x^2 +\(p - 2\)x + 2 p + 1$ 对于任何 $x$ 
 
   ]
 
-+ 已知 $a$、$b$、$c$ 是不相等的正数，求证：
++ 已知 $a$⁠、$b$⁠、$c$ 是不相等的正数，求证：
 
   + $\(a + b\)\(b + c\)\(c + a\)> 8 a b c$
 
@@ -1313,19 +1313,21 @@ $p$ 为何值时，二次三项式 $x^2 +\(p - 2\)x + 2 p + 1$ 对于任何 $x$ 
 
   + $\(a b + a + b + 1\)\(a b + a c + b c + c^2\)> 16 a b c$
 
-+ 已知 $a^2 + b^2 = 1$, $x^2 + y^2 = 1$, 求证：$a x + b y lt.eq 1$．
++ 已知 $a^2 + b^2 = 1$, $x^2 + y^2 = 1$, 求证：$a x + b y lt.eq 1$⁠．
 
-+ 若 $x\,y\,z$ 是正数，且 $x + y + z = 1$，求证：$x^2 + y^2 + z^2 gt.eq 1 / 3$．
++ 若 $x\,y\,z$ 是正数，且 $x + y + z = 1$⁠，求证：$x^2 + y^2 + z^2 gt.eq 1 / 3$⁠．
 
-+ + 试证：两正数之和与此两正数的倒数之和的乘积不小于4．
++ #lead-list(none, 2)[
+  + 试证：两正数之和与此两正数的倒数之和的乘积不小于4．
 
-  + 试证：$frac(lg^2 x + 2, sqrt(lg^2 x + 1)) gt.eq 2$．
+  + 试证：$frac(lg^2 x + 2, sqrt(lg^2 x + 1)) gt.eq 2$⁠．
+  ]
 
-+ 已知 $triangle.stroked.t A B C$ 的三边为 $a$、$b$、$c$ 且 $ c = frac(a^2 + 3, 4)\,#h(2em) b = frac(a^2 - 2 a - 3, 4) $ #noindent;求证 $c$ 边最大．
++ 已知 $triangle.stroked.t A B C$ 的三边为 $a$⁠、$b$⁠、$c$ 且 $ c = frac(a^2 + 3, 4)\,#h(2em) b = frac(a^2 - 2 a - 3, 4) $ #noindent;求证 $c$ 边最大．
 
 + 已知直角三角形斜边为定值，求这个直角三角形面积的最大值，并指出取得最大值的条件．
 
-+ 解下列关于 $x$ 的不等式：
++ #block(sticky: true)[解下列关于 $x$ 的不等式：]
 
   #cols(2)[
   + $a x + b^2 > b x + a^3 quad\(a < b\)$
@@ -1346,7 +1348,7 @@ $p$ 为何值时，二次三项式 $x^2 +\(p - 2\)x + 2 p + 1$ 对于任何 $x$ 
 
   + $display(cases(\(x + 2\)^3 -\(x - 1\)^3 < 9 x^2, \(x + 2\)^2 -\(x - 1\)^2 > 9))$
 
-+ 求下列不等式组的整数解：
++ #block(sticky: true)[求下列不等式组的整数解：]
 
   #cols(2)[
   + $display(cases(2 x - 7 > 0, 3 x - 5 < 15))$
@@ -1359,7 +1361,7 @@ $p$ 为何值时，二次三项式 $x^2 +\(p - 2\)x + 2 p + 1$ 对于任何 $x$ 
 
   ]
 
-+ 解下列不等式，并在数轴上把解集表示出来：
++ #block(sticky: true)[解下列不等式，并在数轴上把解集表示出来：]
 
   #cols(2)[
   + $\|x + 2\|-\|x - 3\|< 4$
@@ -1376,7 +1378,7 @@ $p$ 为何值时，二次三项式 $x^2 +\(p - 2\)x + 2 p + 1$ 对于任何 $x$ 
 
 + 一个两位数，它大于22而小于36, 并且它的十位数字比个位数字大3, 求这数．
 
-+ 一个分数的分子、分母都是自然数，分子比分母小1, 如果分子，分母都加上1, 所得就大于 $1 / 2$，如果分子，分母都减去1所得就小于 $6 / 7$, 求这个分数．
++ 一个分数的分子、分母都是自然数，分子比分母小1, 如果分子，分母都加上1, 所得就大于 $1 / 2$⁠，如果分子，分母都减去1所得就小于 $6 / 7$, 求这个分数．
 
 + 当 $m$ 是什么实数时，方程 $m x^2 -\(m + 1\)x + 3 = 0$ 有实数根？没有实数根．
 
@@ -1406,7 +1408,7 @@ $p$ 为何值时，二次三项式 $x^2 +\(p - 2\)x + 2 p + 1$ 对于任何 $x$ 
 
   + $\(m^2 + 4 m - 5\)x^2 - 2\(m + 1\)x + 3 > 0$
 
-+ 解下列不等式：
++ #block(sticky: true)[解下列不等式：]
 
   #cols(2)[
   + $frac(\(x - 1\)\(x - 2\), x - 3) gt.eq 0$

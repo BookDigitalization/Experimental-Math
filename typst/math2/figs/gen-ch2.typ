@@ -160,13 +160,13 @@
   ,
   "2-17": canvas({
     let A = (-3, 2)
-    node(A, [原命题：若 $alpha$，则 $beta$], frame: "rect", name: "A")
+    node(A, [原命题：若 $alpha$⁠，则 $beta$], frame: "rect", name: "A")
     let B = (3, 2)
-    node(B, [逆命题：若 $beta$，则 $alpha$], frame: "rect", name: "B")
+    node(B, [逆命题：若 $beta$⁠，则 $alpha$], frame: "rect", name: "B")
     let C = (-3, -2)
-    node(C, [否命题：若 $macron(alpha)$，则 $macron(beta)$], frame: "rect", name: "C")
+    node(C, [否命题：若 $macron(alpha)$⁠，则 $macron(beta)$], frame: "rect", name: "C")
     let D = (3, -2)
-    node(D, [逆否命题：若 $macron(beta)$，则 $macron(alpha)$], frame: "rect", name: "D")
+    node(D, [逆否命题：若 $macron(beta)$⁠，则 $macron(alpha)$], frame: "rect", name: "D")
     let E = (0, 0)
     node(E, [互为逆否], frame: "rect", name: "E")
     line((name: "A", anchor: 0deg), (name: "B", anchor: 180deg), stroke: (paint: black, thickness: 1.6pt), mark: (start: "stealth", end: "stealth", fill: black))

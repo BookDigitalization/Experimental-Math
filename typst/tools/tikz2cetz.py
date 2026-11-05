@@ -374,6 +374,8 @@ class Style:
         self.opacity = None
         self.node = {}            # every node 的样式
         self.font = None
+        self.decorate = False     # decorate 选项（decoration= 只有和它一起才起作用）
+        self.decoration = {}      # decoration={coil, segment length=4pt, …}
         # plot 的参数（TikZ 默认 domain=-5:5、samples=25、变量 \x）
         self.plot = {"domain": (-5.0, 5.0), "samples": 25, "var": r"\x", "smooth": False, "tension": 0.55}
 
@@ -574,6 +576,8 @@ class Picture:
                     style.color = parse_color(k)
                 elif k == "smooth":
                     style.plot["smooth"] = True
+                elif k == "decorate":
+                    style.decorate = True
                 elif k in ("rounded corners", "sharp corners", "line cap=round", "transform shape"):
                     pass
                 else:
@@ -644,6 +648,11 @@ class Picture:
                     self.tf = Transform(a, b, *self.tf.vec(p), e, f)
             elif k in ("every node/.style", "nodes"):
                 style.node.update(dict(parse_options(v)))
+            elif k == "decoration":
+                d = parse_options(v)
+                style.decoration = {"kind": d[0][0] if d and d[0][1] is None else None}
+                style.decoration.update({kk: vv for kk, vv in d if vv is not None})
+                style.decoration.update({kk: True for kk, vv in d[1:] if vv is None})
             elif k == "domain":
                 a, b = split_top(v, ":")
                 style.plot["domain"] = (num(a), num(b))
@@ -654,7 +663,7 @@ class Picture:
             elif k == "tension":
                 style.plot["tension"] = num(v)
             elif k in ("baseline", "inner sep", "outer sep", "rounded corners", "ball color", "every node/.append style",
-                       "decoration", "postaction", "mark"):
+                       "postaction", "mark"):
                 if k == "ball color":
                     col = parse_color(v) or (.5, .5, .5)
                     style.fill = "gradient.radial(white, %s, %s, center: (35%%, 30%%), radius: 75%%)" % (
@@ -705,6 +714,9 @@ class Picture:
             d.append("end: %s" % tip(right))
         if any(t not in ("|",) for t in (left, right) if t):
             d.append("fill: black")
+        # |<->|：箭头尖顶在端线上（CeTZ 多个记号之间默认留有间隔）
+        if any("|" in t and t.strip("|") for t in (left, right) if t):
+            d.append("sep: 0")
         return "(%s)" % ", ".join(d)
 
     # ---- 主循环 ----
@@ -1430,6 +1442,35 @@ class PathBuilder:
                 pic.notes.append("忽略 \\clip")
             else:
                 pic.clip_rect = rect
+            return
+        dec = st.decoration
+        if st.decorate and dec.get("kind") in ("coil", "zigzag", "brace") and self.draw:
+            # 装饰（弹簧圈、锯齿、花括号）：用 CeTZ 的 decorations；路径只取折线的各点
+            amp = num(dec.get("amplitude", "2.5pt"))
+            stroke = pic.stroke(st)
+            for pieces, closed in self.subpaths:
+                pts = [pieces[0][1]] + [q for pc in pieces for q in pc[2:]] if pieces[0][0] in ("line", "poly") else None
+                if not pts:
+                    continue
+                if dec["kind"] == "brace":
+                    # TikZ 的花括号凸向路径方向的左侧（mirror 时右侧），raise 是整体向外移开的距离
+                    a, b = pts[0], pts[-1]
+                    d = sub(b, a)
+                    L = norm(d)
+                    nrm = (-d[1] / L, d[0] / L)
+                    mirror = bool(dec.get("mirror"))
+                    if mirror:
+                        nrm = (-nrm[0], -nrm[1])
+                    r = num(dec.get("raise", "0pt"))
+                    a, b = add(a, mul(nrm, r)), add(b, mul(nrm, r))
+                    pic.out.append("cetz.decorations.brace(%s, %s, amplitude: %s, flip: %s, stroke: %s)" % (
+                        pic.xy(a), pic.xy(b), fmt(amp), "true" if mirror else "false", stroke))
+                else:
+                    seg = num(dec.get("segment length", "10pt"))
+                    pic.out.append("cetz.decorations.%s(line(%s), amplitude: %s, segment-length: %s, stroke: %s)" % (
+                        dec["kind"], ", ".join(pic.xy(p) for p in pts), fmt(amp), fmt(seg), stroke))
+            for p, text, nopts, ang, name in self.nodes_later:
+                pic.node(p, text, nopts, st, ang, name=name if text.strip() else None)
             return
         if self.draw or self.fill:
             for k, (pieces, closed) in enumerate(self.subpaths):
@@ -2194,6 +2235,10 @@ class LabelBatch:
         tex = re.sub(r"\$\\rm\s+([^$]*?)(['^][^$]*)?\$", lambda m: "$\\mathrm{%s}%s$" % (m.group(1), m.group(2) or ""), tex)
         tex = re.sub(r"(?<!\\)\\x(?![a-zA-Z])", r"\\times ", tex)
         simple = simple_label(tex)
+        if re.fullmatch(r"\$\s*-\s*\$", tex):
+            # 单独的“−”：Typst 按字形实际边界定盒子，比“+”“0”的矮，节点居中后偏高；
+            # TeX 中“−”与“+”的盒子一样高，用一个看不见的“+”撑出同样的盒子
+            simple = "#box[#std.hide[$+$]#std.place(center + horizon)[$-$]]"
         if simple is not None:
             body = "[%s]" % simple
         else:

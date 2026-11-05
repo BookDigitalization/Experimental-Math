@@ -14,7 +14,7 @@
 具有性质 $alpha$ 的所有点构成的集合，叫做具有性质 $alpha$ 的点的轨迹．
 
 ]
-设 $X = \{ upright("具有性质") alpha upright("的点") \}$．由上述定义，当我们要证明某图形 $A$ 是具有某种性质 $alpha$ 的点的轨迹时，也就是要证明集合 $A = X$. 要证明 $A = X$, 就必须从以下两方面进行证明：
+设 $X = \{ upright("具有性质") alpha upright("的点") \}$⁠．由上述定义，当我们要证明某图形 $A$ 是具有某种性质 $alpha$ 的点的轨迹时，也就是要证明集合 $A = X$. 要证明 $A = X$, 就必须从以下两方面进行证明：
 
 + $P$ 点 $in A arrow.r.double P$ 点具有性质 $alpha$ $\(P in X\)$.
 
@@ -31,7 +31,7 @@
 
 + 在证轨迹命题时，为什么既要证轨迹的纯粹性，又要证轨迹的完备性？
 
-+ 如果我们证明了 $overline(A B)$ 的垂直平分线上的任一点到 $A$、$B$ 两点的距离相等，能否就说与 $A$、$B$ 两点距离相等的点的轨迹是 $overline(A B)$ 的垂直平分线？
++ 如果我们证明了 $overline(A B)$ 的垂直平分线上的任一点到 $A$⁠、$B$ 两点的距离相等，能否就说与 $A$⁠、$B$ 两点距离相等的点的轨迹是 $overline(A B)$ 的垂直平分线？
 
 ]
 === 基本轨迹
@@ -41,9 +41,9 @@
 与两个已知点距离相等的点的轨迹是连结这两点的线段的垂直平分线．
 
 ]
-已知：两定点 $A$、$B$, 直线 $M N$ 是 $overline(A B)$ 的垂直平分线（图5.1）．
+已知：两定点 $A$⁠、$B$, 直线 $M N$ 是 $overline(A B)$ 的垂直平分线（图5.1）．
 
-求证：与 $A$、$B$ 两点距离相等的点的轨迹是直线 $M N$.
+求证：与 $A$⁠、$B$ 两点距离相等的点的轨迹是直线 $M N$.
 
 #figure([#fig("5-01");
 
@@ -53,7 +53,7 @@
 )
 
 #proof[
-+ 设 $P$ 是直线 $M N$ 上的任一点，作 $overline(P A)$、$overline(P B)$, 在 $triangle.stroked.t A O P$ 与 $triangle.stroked.t B O P$ 中，
++ 设 $P$ 是直线 $M N$ 上的任一点，作 $overline(P A)$⁠、$overline(P B)$, 在 $triangle.stroked.t A O P$ 与 $triangle.stroked.t B O P$ 中，
 
   $because quad overline(A O) = overline(B O)\,quad angle A O P = angle B O P\,quad overline(O P) = overline(O P)$
 
@@ -61,11 +61,11 @@
 
   这就说明了直线 $M N$ 上的点，都与两点的距离相等．
 
-+ 设 $Q$ 为与 $A$、$B$ 等距的点，即 $overline(Q A) = overline(Q B)$. 过 $A B$ 的中点 $O$ 与 $Q$ 作直线 $O Q$, 根据等腰三角形的性质，直线 $O Q$ 垂直平分 $overline(A B)$, 但 $overline(A B)$ 的垂直平分线只有一条，
++ 设 $Q$ 为与 $A$⁠、$B$ 等距的点，即 $overline(Q A) = overline(Q B)$. 过 $A B$ 的中点 $O$ 与 $Q$ 作直线 $O Q$, 根据等腰三角形的性质，直线 $O Q$ 垂直平分 $overline(A B)$, 但 $overline(A B)$ 的垂直平分线只有一条，
 
   $therefore quad M N$ 与 $O Q$ 重合，$Q in M N$.
 
-于是由1、2可知，与 $A$、$B$ 两点距离相等的点的轨迹是直线 $M N$.
+于是由1、2可知，与 $A$⁠、$B$ 两点距离相等的点的轨迹是直线 $M N$.
 
 ]
 #blk[基本轨迹2][
@@ -80,7 +80,7 @@
 与一条直线的距离等于定长的点的轨迹，是平行于这条直线，并和这条直线的距离等于定长的两条直线．
 
 ]
-已知：直线 $C D pll$ 直线 $A B$\; 直线 $E F pll$ 直线 $A B$\; $C D$、$E F$ 和 $A B$ 之间的距离都是 $d$（图5.2）．
+已知：直线 $C D pll$ 直线 $A B$\; 直线 $E F pll$ 直线 $A B$\; $C D$⁠、$E F$ 和 $A B$ 之间的距离都是 $d$（图5.2）．
 
 求证：与 $A B$ 的距离等于 $d$ 的点的轨迹是 $C D$ 和 $E F$.
 
@@ -100,19 +100,19 @@
 
   这就是说 $C D$ 上的任一点和 $A B$ 的距离都等于 $d$, 同理可证 $E F$ 上的任一点和 $A B$ 的距离也都等于 $d$.
 
-+ 设 $P'$ 点是不在 $C D$ 或 $E F$ 上的任一点．经过 $P'$ 点作垂直于 $A B$ 的直线，分别交 $A B$、$C D$、$E F$ 于 $L'$、$M'$、$N'$, 则 $overline(M' L') = overline(N' L') = d$.
++ 设 $P'$ 点是不在 $C D$ 或 $E F$ 上的任一点．经过 $P'$ 点作垂直于 $A B$ 的直线，分别交 $A B$⁠、$C D$⁠、$E F$ 于 $L'$⁠、$M'$⁠、$N'$, 则 $overline(M' L') = overline(N' L') = d$.
 
   $because quad P'$ 不在 $C D$ 或 $E F$ 上
 
-  $therefore quad P'$ 不和 $M'$、$N'$ 重合
+  $therefore quad P'$ 不和 $M'$⁠、$N'$ 重合
 
-  $because quad$ 在直线 $M' N'$ 上和 $L'$ 距离等于 $d$ 的点只有 $M'$、$N'$
+  $because quad$ 在直线 $M' N'$ 上和 $L'$ 距离等于 $d$ 的点只有 $M'$⁠、$N'$
 
   $therefore quad overline(P' L') eq.not d$
 
   这就是说，不在 $C D$ 和 $E F$ 上的任何一点和 $A B$ 的距离都不等于 $d$.
 
-于是由1、2可知，和 $A B$ 的距离等于 $d$ 的点的轨迹是 $C D$ 和 $E F$．
+于是由1、2可知，和 $A B$ 的距离等于 $d$ 的点的轨迹是 $C D$ 和 $E F$⁠．
 
 ]
 #blk[基本轨迹5][
@@ -141,7 +141,7 @@
 )
 
 #solution[
-如图5.3, 设 $overline(A B)$ 是 $dot.o\(O\,r\)$ 内等于定长 $a$ 的弦，$M$ 是它的中点，作 $overline(O M)$, 那么，$overline(O M) tack.t overline(A B)$．$ overline(A M) = 1 / 2 overline(A B) = a / 2 $ #noindent;所以 $ overline(O M) = sqrt(overline(O A)^2 - overline(A M)^2) = sqrt(r^2 - (a / 2)^2) $ #noindent;设 $r' = sqrt(r^2 - (a / 2)^2)$，则 $r'$ 为定长，以 $O$ 为圆心，$r'$ 为半径画 $dot.o\(O\,r'\)$, 那么，$dot.o\(O\,r\)$ 内等于定长 $a$ 的弦的中点都在 $dot.o\(O\,r'\)$ 上．另外，在 $dot.o\(O\,r'\)$ 上任取一点 $P$, 作 $overline(O P)$, 再作弦 $overline(C D) tack.t overline(O P)$ 于 $P$ 点，则 $P$ 点是 $overline(C D)$ 弦的中点，且 $ overline(C D) = 2 overline(C P) = 2 sqrt(r^2 - r'^2) = 2 sqrt(r^2 - [r^2 - (a / 2)^2]) = 2 dot.op a / 2 = a $ #noindent;这就是说 $dot.o\(O\,r'\)$ 上的任一点都是 $dot.o\(O\,r\)$ 内等于定长 $a$ 的一条弦的中点，所以我们所求的轨迹就是 $dot.o\(O\,r'\)$．
+如图5.3, 设 $overline(A B)$ 是 $dot.o\(O\,r\)$ 内等于定长 $a$ 的弦，$M$ 是它的中点，作 $overline(O M)$, 那么，$overline(O M) tack.t overline(A B)$⁠．$ overline(A M) = 1 / 2 overline(A B) = a / 2 $ #noindent;所以 $ overline(O M) = sqrt(overline(O A)^2 - overline(A M)^2) = sqrt(r^2 - (a / 2)^2) $ #noindent;设 $r' = sqrt(r^2 - (a / 2)^2)$⁠，则 $r'$ 为定长，以 $O$ 为圆心，$r'$ 为半径画 $dot.o\(O\,r'\)$, 那么，$dot.o\(O\,r\)$ 内等于定长 $a$ 的弦的中点都在 $dot.o\(O\,r'\)$ 上．另外，在 $dot.o\(O\,r'\)$ 上任取一点 $P$, 作 $overline(O P)$, 再作弦 $overline(C D) tack.t overline(O P)$ 于 $P$ 点，则 $P$ 点是 $overline(C D)$ 弦的中点，且 $ overline(C D) = 2 overline(C P) = 2 sqrt(r^2 - r'^2) = 2 sqrt(r^2 - [r^2 - (a / 2)^2]) = 2 dot.op a / 2 = a $ #noindent;这就是说 $dot.o\(O\,r'\)$ 上的任一点都是 $dot.o\(O\,r\)$ 内等于定长 $a$ 的一条弦的中点，所以我们所求的轨迹就是 $dot.o\(O\,r'\)$⁠．
 
 ]
 #example[
@@ -160,13 +160,13 @@
 )
 
 #solution[
-由于轨迹是具有某种性质 $alpha$ 的点的集合，求轨迹时，可先按照“性质”画出一些点，看看这些点可能构成什么样的图形，如图5.4, 过 $P$ 点作 $dot.o O$ 的割线，与 $dot.o O$ 相交于 $C$、$C'$, 作弦 $overline(C C')$ 的中点 $M$, 我们证割线 $P C C'$ 绕 $P$ 点旋转，看这条变动的割线被 $dot.o O$ 截下的弦的中点经过什么路线．大概可以看出，可能是一段圆弧，究竟是不是圆弧，如果是圆弧，又如何把它作出来，还要进一步分析．
+由于轨迹是具有某种性质 $alpha$ 的点的集合，求轨迹时，可先按照“性质”画出一些点，看看这些点可能构成什么样的图形，如图5.4, 过 $P$ 点作 $dot.o O$ 的割线，与 $dot.o O$ 相交于 $C$⁠、$C'$, 作弦 $overline(C C')$ 的中点 $M$, 我们证割线 $P C C'$ 绕 $P$ 点旋转，看这条变动的割线被 $dot.o O$ 截下的弦的中点经过什么路线．大概可以看出，可能是一段圆弧，究竟是不是圆弧，如果是圆弧，又如何把它作出来，还要进一步分析．
 
 $because quad M$ 是弦 $overline(C C')$ 的中点，作 $overline(O M)$
 
-则 $overline(O M) tack.t overline(C C')$，即：$angle O M P$ 是直角．
+则 $overline(O M) tack.t overline(C C')$⁠，即：$angle O M P$ 是直角．
 
-这就是说，过 $P$ 点作 $dot.o O$ 的任一条割线被 $dot.o O$ 截下的弦的中点与 $O$、$P$ 的连线的夹角等于直角，因此，符合题中条件的弦的中点都在以 $overline(O P)$ 为直径的圆上，以 $overline(O P)$ 为直径作 $dot.o O'$, 我们所作的 $dot.o O'$ 是不是就是所求的轨迹呢？这还要看 $dot.o O'$ 上有没有不符合条件的点．设 $dot.o O'$ 与 $dot.o O$ 相交于 $A$、$B$ 两点．显然，在 $dot.o O'$ 上 $wideparen(A O B)$ 外的点都是不合条件的（包括 $A$、$B$），我们再来看 $wideparen(A O B)$ 上的点是不是都是合条件的点．在 $wideparen(A O B)$ 上任取一点 $X$, 设 $P X$ 与 $dot.o O$ 相交于 $D$、$D'$, 作 $overline(O X)$, 则 $overline(O X) tack.t overline(D D')$, 所以 $X$ 是 $overline(D D')$ 的中点，这就是说 $wideparen(A O B)$ 上的点都是过 $P$ 点的某条割线被 $dot.o O$ 截下的弦的中点．
+这就是说，过 $P$ 点作 $dot.o O$ 的任一条割线被 $dot.o O$ 截下的弦的中点与 $O$⁠、$P$ 的连线的夹角等于直角，因此，符合题中条件的弦的中点都在以 $overline(O P)$ 为直径的圆上，以 $overline(O P)$ 为直径作 $dot.o O'$, 我们所作的 $dot.o O'$ 是不是就是所求的轨迹呢？这还要看 $dot.o O'$ 上有没有不符合条件的点．设 $dot.o O'$ 与 $dot.o O$ 相交于 $A$⁠、$B$ 两点．显然，在 $dot.o O'$ 上 $wideparen(A O B)$ 外的点都是不合条件的（包括 $A$⁠、$B$⁠），我们再来看 $wideparen(A O B)$ 上的点是不是都是合条件的点．在 $wideparen(A O B)$ 上任取一点 $X$, 设 $P X$ 与 $dot.o O$ 相交于 $D$⁠、$D'$, 作 $overline(O X)$, 则 $overline(O X) tack.t overline(D D')$, 所以 $X$ 是 $overline(D D')$ 的中点，这就是说 $wideparen(A O B)$ 上的点都是过 $P$ 点的某条割线被 $dot.o O$ 截下的弦的中点．
 
 ]
 综合以上分析我们可得：过定圆外一定点引圆的割线，割线被圆截下的弦的中点的轨迹是以定点与圆心间的线段为直径的圆被夹在定圆内的一段弧．
@@ -184,7 +184,7 @@ $because quad M$ 是弦 $overline(C C')$ 的中点，作 $overline(O M)$
 
 + 与 $angle A O B$ 的两边都相切的圆的圆心的轨迹．
 
-+ 与距离是3cm的两条平行直线 $A B$、$C D$ 的距离相等的点的轨迹．
++ 与距离是3cm的两条平行直线 $A B$⁠、$C D$ 的距离相等的点的轨迹．
 
 + 与距离是3cm的两条平行直线都相切的圆的圆心的轨迹．
 
@@ -223,7 +223,7 @@ $because quad M$ 是弦 $overline(C C')$ 的中点，作 $overline(O M)$
 
 + 作出下列各题中给出的两个点集，问它们的交集各含有几个元素．
 
-  + 和距离等于3cm的两条已知平行线 $A B$、$C D$ 的距离相等的点集；和直线 $A B$ 上的一定点 $E$ 的距离是2cm的点集．
+  + 和距离等于3cm的两条已知平行线 $A B$⁠、$C D$ 的距离相等的点集；和直线 $A B$ 上的一定点 $E$ 的距离是2cm的点集．
 
   + 和已知 $angle A O B$ 的两边的距离相等的点集；和边 $O A$ 的距离等于 $d$ 的点集．
 
@@ -237,7 +237,7 @@ $because quad M$ 是弦 $overline(C C')$ 的中点，作 $overline(O M)$
 === 基本作图
 在前几章中，我们曾用直尺、圆规解过不少作图题．在这一节里，我们将进一步学习解作图题的一些重要方法，下面列出我们已经学过的一些作图题（具体作法不再写出，由同学自己复习、研究），这些作图题一般叫做#strong[基本作图题]，它们是进一步解较复杂的作图题的基础．
 
-+ 作一条线段等于已知线段，作一条线段等于 $n$ 条线段的和（$n gt.eq 2$ 且 $n in bb(N)^(+)$）．
++ 作一条线段等于已知线段，作一条线段等于 $n$ 条线段的和（$n gt.eq 2$ 且 $n in bb(N)^(+)$⁠）．
 
 + 作一条线段等于两条已知线段的差．
 
@@ -267,11 +267,11 @@ $because quad M$ 是弦 $overline(C C')$ 的中点，作 $overline(O M)$
 
 + 已知线段 $a$, 作一线段 $x = m / n a$. (其中 $m / n$ 是正有理数）．
 
-+ 作已知三条线段 $a$、$b$、$c$ 的比例第四项．
++ 作已知三条线段 $a$⁠、$b$⁠、$c$ 的比例第四项．
 
-+ 已知线段 $a$、$b$, 作 $a$、$b$ 的比例中项．
++ 已知线段 $a$⁠、$b$, 作 $a$⁠、$b$ 的比例中项．
 
-+ 已知线段 $a$、$b$ $\(a > b\)$, 作线段 $x = sqrt(a^2 + b^2)$ 或 $x = sqrt(a^2 - b^2)$．
++ 已知线段 $a$⁠、$b$ $\(a > b\)$, 作线段 $x = sqrt(a^2 + b^2)$ 或 $x = sqrt(a^2 - b^2)$⁠．
 
 + 已知线段 $a$, 作线段 $x = sqrt(m / n) a$（$m / n$ 为正有理数）．
 
@@ -286,7 +286,7 @@ $because quad M$ 是弦 $overline(C C')$ 的中点，作 $overline(O M)$
 #exercise[
 + 作一直角三角形 $A B C$, 使 $angle C = 90 degree$, $overline(A B) = 3$⁠cm, $overline(B C) = 2$⁠cm. 你能想出几种作法？
 
-+ 已知线段 $a$、$b$，你能用几种方法作线段 $x = sqrt(a b)$．
++ 已知线段 $a$⁠、$b$⁠，你能用几种方法作线段 $x = sqrt(a b)$⁠．
 
 + 已知线段 $a$, 作线段 $x = sqrt(2 / 3) a$
 
@@ -296,13 +296,13 @@ $because quad M$ 是弦 $overline(C C')$ 的中点，作 $overline(O M)$
 === 轨迹法作图
 我们在解作图题时，常常归结为要确定某些点的位置，而这些点所要满足的条件又往往不是一个，我们只要根据点所满足的各个条件，分别作出相应的轨迹，那么，这些轨迹交集中的点，就是我们所要求作的点．
 
-例如，已知两个定点 $B$、$C$, 且 $overline(B C) = 3$⁠cm（图5.5），以 $B$、$C$ 为两个顶点，求作一三角形，使第三个顶点与 $B$ 的距离是2cm, 与 $C$ 的距离是4cm, 这个作图题，实际上就是确定三角形的第三个顶点的位置．第三个顶点要满足两个条件：
+例如，已知两个定点 $B$⁠、$C$, 且 $overline(B C) = 3$⁠cm（图5.5），以 $B$⁠、$C$ 为两个顶点，求作一三角形，使第三个顶点与 $B$ 的距离是2cm, 与 $C$ 的距离是4cm, 这个作图题，实际上就是确定三角形的第三个顶点的位置．第三个顶点要满足两个条件：
 
 + 和 $B$ 点的距离是2cm
 
 + 和 $C$ 点的距离是4cm
 
-#noindent;满足第一个条件的点的轨迹是 $dot.o\(B\,2 upright(c m)\)$，满足第二个条件的点的轨迹是 $dot.o\(C\,4 upright(c m)\)$，所以第三个顶点就应该是 $dot.o\(B\,2 upright(c m)\)$ 与 $dot.o\(C\,4 upright(c m)\)$ 的交集中的点．由作图可知：$ dot.o\(B\,2 upright(c m)\)inter dot.o\(C\,4 upright(c m)\)= \{ A\,A' \} $ #noindent;于是，$A$ 点和 $A'$ 点都是我们所要求作的点，$triangle.stroked.t A B C$ 与 $triangle.stroked.t A' B C$ 都是我们所要求作的三角形．像这样应用轨迹的交集来确定点的位置，从而来解作图题的方法，就叫做#strong[轨迹法]．
+#noindent;满足第一个条件的点的轨迹是 $dot.o\(B\,2 upright(c m)\)$⁠，满足第二个条件的点的轨迹是 $dot.o\(C\,4 upright(c m)\)$⁠，所以第三个顶点就应该是 $dot.o\(B\,2 upright(c m)\)$ 与 $dot.o\(C\,4 upright(c m)\)$ 的交集中的点．由作图可知：$ dot.o\(B\,2 upright(c m)\)inter dot.o\(C\,4 upright(c m)\)= \{ A\,A' \} $ #noindent;于是，$A$ 点和 $A'$ 点都是我们所要求作的点，$triangle.stroked.t A B C$ 与 $triangle.stroked.t A' B C$ 都是我们所要求作的三角形．像这样应用轨迹的交集来确定点的位置，从而来解作图题的方法，就叫做#strong[轨迹法]．
 
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-05");], caption: []), figure([#fig("5-06");], caption: []))));
 
@@ -310,17 +310,17 @@ $because quad M$ 是弦 $overline(C C')$ 的中点，作 $overline(O M)$
 已知一条定直线和直线外两个定点，求作一个圆，使圆心在这条直线上，并且经过这两个定点．
 
 ]
-已知：定直线 $ell$ 和两定点 $A$、$B$, 且 $A in.not ell$, $B in.not ell$（图5.6）．
+已知：定直线 $ell$ 和两定点 $A$⁠、$B$, 且 $A in.not ell$, $B in.not ell$（图5.6）．
 
-求作：一圆使圆心在 $ell$ 上，且经过 $A$、$B$ 两点．
+求作：一圆使圆心在 $ell$ 上，且经过 $A$⁠、$B$ 两点．
 
 分析：假定 $dot.o O$ 为所求作的圆；那么，圆心 $O$ 应满足两个条件：
 
-+ $O in ell$；
++ $O in ell$⁠；
 
-+ $O$ 点到 $A$、$B$ 两点等距离．
++ $O$ 点到 $A$⁠、$B$ 两点等距离．
 
-#noindent;因为 $ell$ 是已知的直线，而到 $A$、$B$ 两点等距离的点的轨迹是 $overline(A B)$ 的垂直平分线，所以，圆心 $O$ 应是 $ell inter overline(A B)$ 的垂直平分线中的点，于是得作法如下：
+#noindent;因为 $ell$ 是已知的直线，而到 $A$⁠、$B$ 两点等距离的点的轨迹是 $overline(A B)$ 的垂直平分线，所以，圆心 $O$ 应是 $ell inter overline(A B)$ 的垂直平分线中的点，于是得作法如下：
 
 作法：
 
@@ -331,18 +331,18 @@ $because quad M$ 是弦 $overline(C C')$ 的中点，作 $overline(O M)$
 + 以 $O$ 为圆心，$overline(O A)$ 为半径作 $dot.o O$, 则 $dot.o O$ 即为所求作的圆．
 
 #proof[
-作 $overline(O A)$、$overline(O B)$,
+作 $overline(O A)$⁠、$overline(O B)$,
 
 $because quad m$ 是 $overline(A B)$ 的垂直平分线，且 $O in m$.
 
 $therefore quad overline(O A) = overline(O B)$
 
 #cols(2)[
-$because quad A$ 点 $in dot.o O$，
+$because quad A$ 点 $in dot.o O$⁠，
 
-$therefore quad B$ 点 $in dot.o O$，
+$therefore quad B$ 点 $in dot.o O$⁠，
 
-又知 $O$ 点 $in ell$，
+又知 $O$ 点 $in ell$⁠，
 
 $therefore dot.o O$ 为所求作的圆．
 
@@ -358,7 +358,7 @@ $therefore dot.o O$ 为所求作的圆．
 已知三角形的一边和这条边上的中线及高，求作三角形．
 
 ]
-已知：线段 $a$、$m$、$h$（图5.7）．
+已知：线段 $a$⁠、$m$⁠、$h$（图5.7）．
 
 #figure([#fig("5-07");
 
@@ -369,7 +369,7 @@ $therefore dot.o O$ 为所求作的圆．
 
 求作：三角形使它的一边等于 $a$, 且这边上的中线等于 $m$, 高等于 $h$.
 
-分析：画一草图（图5.7），假设 $triangle.stroked.t A B C$ 为所求作的三角形，且 $overline(B C) = a$, $overline(B C)$ 上的中线 $overline(A M) = m$, 高 $overline(A D) = h$, $B$、$C$ 两个顶点由条件 $overline(B C) = a$, 很容易确定；$A$ 点的位置应该满足条件：
+分析：画一草图（图5.7），假设 $triangle.stroked.t A B C$ 为所求作的三角形，且 $overline(B C) = a$, $overline(B C)$ 上的中线 $overline(A M) = m$, 高 $overline(A D) = h$, $B$⁠、$C$ 两个顶点由条件 $overline(B C) = a$, 很容易确定；$A$ 点的位置应该满足条件：
 
 + 与 $overline(B C)$ 的中点 $M$ 的距离等于 $m$ 的长；
 
@@ -392,7 +392,7 @@ $therefore dot.o O$ 为所求作的圆．
 
 + 作 $overline(B C)$ 的中点 $M$, 作 $dot.o\(M\,m\)$ 交 $ell$ 于 $A$ 点
 
-+ 作 $overline(A B)$、$overline(A C)$, 则 $triangle.stroked.t A B C$ 为所求作的三角形．
++ 作 $overline(A B)$⁠、$overline(A C)$, 则 $triangle.stroked.t A B C$ 为所求作的三角形．
 
 #proof[
 （略）
@@ -420,7 +420,7 @@ $therefore dot.o O$ 为所求作的圆．
 
 + 与 $angle A B C$ 的两边等距离；
 
-+ 与边 $B A$ 或 $B C$ 的距离等于 $r$．
++ 与边 $B A$ 或 $B C$ 的距离等于 $r$⁠．
 
 #noindent;但满足1或2的轨迹都可作，故所求的圆的圆心可以作出．
 
@@ -450,7 +450,7 @@ $dot.o O$ 与 $B A$ 和 $B C$ 都相切，$dot.o O$ 为所求作的圆．
 ]
 讨论：由于 $angle A B C$ 的平分线 $B F$ 与直线 $ell$ 不会平行，所以它们总有一个唯一的交点，所以此题只有一解．
 
-从例5.5中可以看到，$wideparen(D E)$ 把 $angle A B C$ 的两边在切点 $D$、$E$ 处连接起来了，这种连结叫做#strong[直线与圆弧的平滑连接]．
+从例5.5中可以看到，$wideparen(D E)$ 把 $angle A B C$ 的两边在切点 $D$⁠、$E$ 处连接起来了，这种连结叫做#strong[直线与圆弧的平滑连接]．
 
 #example[
 已知：$dot.o\(O_1\,r_1\)$ 和 $dot.o\(O_2\,r_2\)$ 外离，且 $r_1 = 10$⁠mm, $r_2 = 8$⁠mm（图5.11）．
@@ -486,11 +486,11 @@ overline(O O_2) & = 20 upright(m m) - r_2 = 12 upright(m m) $
 从例5.6中的图5.11, 我们可看出 $dot.o O_1$ 的 $wideparen(A B)$ 与 $dot.o O$ 的 $wideparen(B C)$ 在切点 $B$ 处连接起来了，这种连结叫做#strong[圆弧与圆弧的平滑连接]．
 
 #exercise[
-+ 已知两定点 $A$、$B$, 且直线 $A B$ 与定直线 $ell$ 平行，在 $ell$ 上求作与 $A$、$B$ 两点距离相等的点．
++ 已知两定点 $A$⁠、$B$, 且直线 $A B$ 与定直线 $ell$ 平行，在 $ell$ 上求作与 $A$⁠、$B$ 两点距离相等的点．
 
 + 求作和两条相交直线 $ell$ 和 $m$ 的距离相等，且和它们的交点的距离等于定长 $d$ 的点．
 
-+ 求作和已知直线 $ell$ 的距离等于定长 $d$，并且和 $ell$ 上的一个定点的距离等于 $2 d$ 的点．
++ 求作和已知直线 $ell$ 的距离等于定长 $d$⁠，并且和 $ell$ 上的一个定点的距离等于 $2 d$ 的点．
 
 + 求作和 $overline(A B)$ 的两端的距离相等，且和 $overline(A B)$ 的两端的连线所夹的角等于定角 $alpha$ 的点．
 
@@ -515,7 +515,7 @@ overline(O O_2) & = 20 upright(m m) - r_2 = 12 upright(m m) $
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-13");], caption: []), figure([#fig("5-14");], caption: []))));
 
 #analyze[
-画一草图（图5.14），已知正方形 $A B C D$, 假设 $P$ 点是所求作的点，即 $P in overline(C D)$, 且 $overline(A P) = overline(B C) + overline(C P)$, 设 $overline(C P) = x$, $overline(B C) = a$, 故 $overline(A P) = a + x$, $overline(D P) = overline(D C) - overline(C P) = overline(B C) - overline(C P) = a - x$, 又因 $triangle.stroked.t A D P$ 是直角三角形，所以根据勾股定理有：$overline(A P)^2 = overline(A D)^2 + overline(D P)^2$, 即：$\(a + x\)^2 = a^2 +\(a - x\)^2$. 解此方程得 $x = a / 4$；$a$ 为已知，$a / 4$ 可作出，故 $P$ 点也可作出．
+画一草图（图5.14），已知正方形 $A B C D$, 假设 $P$ 点是所求作的点，即 $P in overline(C D)$, 且 $overline(A P) = overline(B C) + overline(C P)$, 设 $overline(C P) = x$, $overline(B C) = a$, 故 $overline(A P) = a + x$, $overline(D P) = overline(D C) - overline(C P) = overline(B C) - overline(C P) = a - x$, 又因 $triangle.stroked.t A D P$ 是直角三角形，所以根据勾股定理有：$overline(A P)^2 = overline(A D)^2 + overline(D P)^2$, 即：$\(a + x\)^2 = a^2 +\(a - x\)^2$. 解此方程得 $x = a / 4$⁠；$a$ 为已知，$a / 4$ 可作出，故 $P$ 点也可作出．
 
 ]
 作法：（图5.13）．
@@ -597,13 +597,13 @@ $therefore quad overline(O C')^2 = overline(O A) dot.op overline(A C')$
 ]
 这个结果告诉我们，$C'$ 点恰好把半径 $overline(O A)$ 分成中外比且 $overline(O C')$ 是较长的一段．故应用黄金分割法由已知圆的半径作出正十边形的边长，从而圆内接正十边形可以作出来．
 
-作法\(图5.17).
+作法 (图5.17).
 
 + 作半径 $overline(O A)$.
 
 + 作 $C'$ 点分 $overline(O A)$ 成中外比，使 $overline(O C')$ 为较长的一段，
 
-+ 以 $A$ 为起点，顺次作 $dot.o O$ 的弦 $overline(A B)$、$overline(B C)$、$overline(C D)$、$overline(D E)$、$overline(E F)$、$overline(F G)$、$overline(G H)$、$overline(H I)$、$overline(I J)$、$overline(J A)$, 且使它们都等于 $overline(O C')$, 则 $A B C D E F G H I J$ 为所求作的圆内接正十边形．
++ 以 $A$ 为起点，顺次作 $dot.o O$ 的弦 $overline(A B)$⁠、$overline(B C)$⁠、$overline(C D)$⁠、$overline(D E)$⁠、$overline(E F)$⁠、$overline(F G)$⁠、$overline(G H)$⁠、$overline(H I)$⁠、$overline(I J)$⁠、$overline(J A)$, 且使它们都等于 $overline(O C')$, 则 $A B C D E F G H I J$ 为所求作的圆内接正十边形．
 
 #proof[
 （略）
@@ -633,7 +633,7 @@ $therefore quad overline(O C')^2 = overline(O A) dot.op overline(A C')$
 - 第五步，完成作图．即得所求作的图形．
 
 #exercise[
-+ 已知线段 $a$、$b$ ($a > b$), 求作下列线段 $x$
++ #block(sticky: true)[已知线段 $a$⁠、$b$ ($a > b$), 求作下列线段 $x$]
 
   #cols(2)[
   + $x = frac(a b, a + b)$
@@ -661,13 +661,13 @@ $therefore quad overline(O C')^2 = overline(O A) dot.op overline(A C')$
 ]
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题5.2]
 
-+ 已知线段 $a$、$b$、$c$ 且 $a > b$, 求作线段 $x = sqrt(a^2 - b^2) + c$.
++ 已知线段 $a$⁠、$b$⁠、$c$ 且 $a > b$, 求作线段 $x = sqrt(a^2 - b^2) + c$.
 
-+ 已知五条线段 $a$、$b$、$c$、$d$、$e$, 求作线段 $x = frac(a b c, d e)$．
++ 已知五条线段 $a$⁠、$b$⁠、$c$⁠、$d$⁠、$e$, 求作线段 $x = frac(a b c, d e)$⁠．
 
 + 已知线段 $a$, 求作一条线段 $x = frac(sqrt(5) - 1, 2) a$
 
-+ 已知线段 $a$、$b$, 且 $a > b$, 求作 $a + b$ 和 $a - b$ 的比例中项．
++ 已知线段 $a$⁠、$b$, 且 $a > b$, 求作 $a + b$ 和 $a - b$ 的比例中项．
 
 + 求作与一个已知圆相切于已知点，且经过已知圆外的一个定点的圆．
 
@@ -677,31 +677,31 @@ $therefore quad overline(O C')^2 = overline(O A) dot.op overline(A C')$
 
 + 求作一个三角形，使它同已知三角形等积，又同另一个已知的三角形相似．
 
-+ 求作直径是 $d$ 的圆内接矩形，使它的面积等于每边是 $a$ 的已知正方形面积（提示：设矩形的长、宽各为 $x$、$y$, 列出含有 $x$、$y$ 的方程组解之）．
++ 求作直径是 $d$ 的圆内接矩形，使它的面积等于每边是 $a$ 的已知正方形面积（提示：设矩形的长、宽各为 $x$⁠、$y$, 列出含有 $x$⁠、$y$ 的方程组解之）．
 
 + 从已知圆外的一个已知点，作圆的割线，使它在圆外的部分与圆内的部分的比是 $1 : 2$.
 
 + 求作过两定点，且在一条定直线上截取定长弦的圆（提示：利用切割线定理）．
 
-#heading(level: 2, numbering: none, outlined: false)[复习题五]
+#heading(level: 2, numbering: none, outlined: true)[复习题五]
 
 + 连结一定直线上的点和线外一定点的线段，求这线段中点的轨迹．
 
 + 求具有公共底边，且这边上的高相等的三角形顶点的轨迹．
 
-+ 三定点 $A$、$B$、$C$ 在一直线上，且 $overline(A B) = overline(B C)$, 求与 $A$、$B$ 两点和与 $B$、$C$ 两点连线夹角相等点的轨迹．
++ 三定点 $A$⁠、$B$⁠、$C$ 在一直线上，且 $overline(A B) = overline(B C)$, 求与 $A$⁠、$B$ 两点和与 $B$⁠、$C$ 两点连线夹角相等点的轨迹．
 
 + 从一定点 $A$ 向通过另一定点 $B$ 的动直线引垂线，求垂足 $P$ 的轨迹．
 
-+ 求到两定点 $A$、$B$ 的距离的平方和等于 $overline(A B)^2$ 的点的轨迹．
++ 求到两定点 $A$⁠、$B$ 的距离的平方和等于 $overline(A B)^2$ 的点的轨迹．
 
 + 求到一定圆引切线，切线长等于定长的点的轨迹．
 
 + 求对相交的两定圆有等幂的点的轨迹．
 
-+ 求到两定点 $A$、$B$ 的距离的平方差等于 $overline(A B)^2$ 的点的轨迹．
++ 求到两定点 $A$⁠、$B$ 的距离的平方差等于 $overline(A B)^2$ 的点的轨迹．
 
-+ 已知三点 $A$、$B$、$C$ 在一条直线上，求与 $A$、$B$ 两点和 $B$、$C$ 两点连线夹角相等的点的轨迹．
++ 已知三点 $A$⁠、$B$⁠、$C$ 在一条直线上，求与 $A$⁠、$B$ 两点和 $B$⁠、$C$ 两点连线夹角相等的点的轨迹．
 
 + 求作一个圆使和两条已知平行线都相切，并且经过两平行线间一个已知点．
 
@@ -725,6 +725,6 @@ $therefore quad overline(O C')^2 = overline(O A) dot.op overline(A C')$
 
 + 作一个正五角星（只画出图形）．
 
-+ 已知 $A$、$B$、$C$ 为定直线 $ell$ 上的三个定点，求作 $dot.o A$、$dot.o B$、$dot.o C$ 使它们两两均相切，但不切于同一点．
++ 已知 $A$⁠、$B$⁠、$C$ 为定直线 $ell$ 上的三个定点，求作 $dot.o A$⁠、$dot.o B$⁠、$dot.o C$ 使它们两两均相切，但不切于同一点．
 
 + 在已知矩形内作两个互相外切的等圆，使各切于这矩形一组对角的两边．

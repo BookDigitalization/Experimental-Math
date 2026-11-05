@@ -4,21 +4,20 @@
 #import "../../common/template.typ": todo-fig, tfrac
 
 #let figures = (
-  // 忽略选项 decorate
   "4-01": canvas({
     line((-0.5, 0), (0.5, 0), stroke: (paint: black, thickness: 0.4pt))
     line((4, 0), (3, 0), stroke: (paint: black, thickness: 0.4pt))
-    line((0, 0), (0, -3), stroke: (paint: black, thickness: 0.4pt))
-    line((3.5, 0), (3.5, -1.3), stroke: (paint: black, thickness: 0.4pt))
+    cetz.decorations.coil(line((0, 0), (0, -3)), amplitude: 0.0879, segment-length: 0.1406, stroke: (paint: black, thickness: 0.4pt))
+    cetz.decorations.coil(line((3.5, 0), (3.5, -1.3)), amplitude: 0.0879, segment-length: 0.1054, stroke: (paint: black, thickness: 0.4pt))
     line((-0.2, -3), (0.2, -3), (0.2, -3.4), (-0.2, -3.4), stroke: (paint: black, thickness: 0.4pt), close: true)
     node((0.5, -3.2), [$m$])
-    line((-1, 0), (-1, -3), stroke: (paint: black, thickness: 0.4pt), mark: (start: ("|", "stealth"), end: ("|", "stealth"), fill: black))
+    line((-1, 0), (-1, -3), stroke: (paint: black, thickness: 0.4pt), mark: (start: ("|", "stealth"), end: ("|", "stealth"), fill: black, sep: 0))
     node((-1, -1.5), [$ell$], fill: white)
-    line((1, 0), (1, -1.3), stroke: (paint: black, thickness: 0.4pt), mark: (start: ("|", "stealth"), end: ("|", "stealth"), fill: black))
+    line((1, 0), (1, -1.3), stroke: (paint: black, thickness: 0.4pt), mark: (start: ("|", "stealth"), end: ("|", "stealth"), fill: black, sep: 0))
     node((1, -0.65), [$ell_0$], fill: white)
-    line((1, -1.3), (1, -3), stroke: (paint: black, thickness: 0.4pt), mark: (start: ("|", "stealth"), end: ("|", "stealth"), fill: black))
+    line((1, -1.3), (1, -3), stroke: (paint: black, thickness: 0.4pt), mark: (start: ("|", "stealth"), end: ("|", "stealth"), fill: black, sep: 0))
     node((1, -2.15), [$k m$], fill: white)
-    line((4.5, 0), (4.5, -1.3), stroke: (paint: black, thickness: 0.4pt), mark: (start: ("|", "stealth"), end: ("|", "stealth"), fill: black))
+    line((4.5, 0), (4.5, -1.3), stroke: (paint: black, thickness: 0.4pt), mark: (start: ("|", "stealth"), end: ("|", "stealth"), fill: black, sep: 0))
     node((4.5, -0.65), [$ell_0$], fill: white)
   })
   ,
@@ -137,7 +136,7 @@
     node((4, -0.6), [$d$], fill: white)
     line((5, -0.3), (8, -0.3), stroke: (paint: black, thickness: 0.4pt), mark: (start: "stealth", end: "stealth", fill: black))
     node((6.5, -0.3), [$x$], fill: white)
-    line((8.3, 0), (8.3, 4), stroke: (paint: black, thickness: 0.4pt), mark: (start: ("|", "stealth"), end: ("|", "stealth"), fill: black))
+    line((8.3, 0), (8.3, 4), stroke: (paint: black, thickness: 0.4pt), mark: (start: ("|", "stealth"), end: ("|", "stealth"), fill: black, sep: 0))
     node((8.3, 2), [$ell$], fill: white)
   })
   ,
@@ -224,11 +223,10 @@
     node((5, 6), [$y = 1 / 2 x^2$])
   })
   ,
-  // 忽略选项 decorate
   "4-10": canvas(length: 1.3cm, {
     line((-1, 0.25), (1, 0.25), (1, 0), (-1, 0), fill: hatch-ne, stroke: none, close: true)
     line((-1, 0), (1, 0), stroke: (paint: black, thickness: 0.4pt))
-    line((0, 0), (0, -1.5), stroke: (paint: black, thickness: 0.4pt))
+    cetz.decorations.zigzag(line((0, 0), (0, -1.5)), amplitude: 0.0879, segment-length: 0.2812, stroke: (paint: black, thickness: 0.4pt))
     circle((0, -2), radius: 0.2, stroke: (paint: black, thickness: 0.4pt, dash: (3pt, 3pt,)))
     line((0, -1.5), (0, -3), stroke: (paint: black, thickness: 0.4pt))
     line((0, -3), (0, -4), stroke: (paint: black, thickness: 0.4pt, dash: (3pt, 3pt,)))

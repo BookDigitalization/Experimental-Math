@@ -27,11 +27,11 @@
   ]
 )
 
-表示有向线段，一般是将始点写在终点的左边，并在两个字母上面加一个箭头．如以 $A$ 为始点，$B$ 为终点的有向线段记作 $accent(A B, ⃗)$, 以 $B$ 为始点．$A$ 为终点的有向线段记为 $accent(B A, ⃗)$．
+表示有向线段，一般是将始点写在终点的左边，并在两个字母上面加一个箭头．如以 $A$ 为始点，$B$ 为终点的有向线段记作 $accent(A B, ⃗)$, 以 $B$ 为始点．$A$ 为终点的有向线段记为 $accent(B A, ⃗)$⁠．
 
 我们可以用一个有正负号的实数来同时表达在有向直线上的有向线段的长度和它的正、负方向．这个实数称为该有向线段的数量．
 
-如图2.2. 设有向线段 $accent(A B, ⃗)$ 的数量是 $alpha thick\(alpha > 0\)$, 则有向线段 $accent(B A, ⃗)$ 的数量是 $- alpha$．有时也用 $A B$ 表示有向线段 $accent(A B, ⃗)$ 的数量，用 $B A$ 表示有向线段 $accent(B A, ⃗)$ 的数量．显然有向线段 $accent(A B, ⃗)$ 与 $accent(B A, ⃗)$ 的数量有下列关系：$ A B = - B A $ #noindent;或$ A B + B A = 0 $
+如图2.2. 设有向线段 $accent(A B, ⃗)$ 的数量是 $alpha thick\(alpha > 0\)$, 则有向线段 $accent(B A, ⃗)$ 的数量是 $- alpha$⁠．有时也用 $A B$ 表示有向线段 $accent(A B, ⃗)$ 的数量，用 $B A$ 表示有向线段 $accent(B A, ⃗)$ 的数量．显然有向线段 $accent(A B, ⃗)$ 与 $accent(B A, ⃗)$ 的数量有下列关系：$ A B = - B A $ #noindent;或$ A B + B A = 0 $
 
 符号 $\|accent(A B, ⃗)\|$ 表示只考虑有向线段 $accent(A B, ⃗)$ 的长度而不考虑方向．符号 $\|accent(A B, ⃗)\|$ 也称有向线段 $accent(A B, ⃗)$ 的数量的绝对值．
 
@@ -50,7 +50,7 @@
 
 ]
 #solution[
-先画数轴，然后在数轴上找出相应的点．图2.4中的 $A\,B\,C\,D\,E\,F$ 分别表示 $2\,thick - 2\,thick - 3.5\,thick 3.5\,thick sqrt(2)\,thick sqrt(3)$．
+先画数轴，然后在数轴上找出相应的点．图2.4中的 $A\,B\,C\,D\,E\,F$ 分别表示 $2\,thick - 2\,thick - 3.5\,thick 3.5\,thick sqrt(2)\,thick sqrt(3)$⁠．
 
 #figure([#fig("2-04");
 
@@ -76,7 +76,7 @@
 
 借助于数轴，我们可以对一个数的绝对值作出几何解释：把这个数用数轴上的点表示出来，那么这个数的绝对值就是原点到表示这个数的点的距离．从这里看出，除零以外，正数和负数的绝对值都是正数，而且两个相反数的绝对值相等．
 
-前面已说明在数轴上的一点 $P$ 的坐标 $x$ 就是以原点 $O$ 为始点，以 $P$ 点为终点的有向线段 $accent(O P, ⃗)$ 的数量 $O P = x$．
+前面已说明在数轴上的一点 $P$ 的坐标 $x$ 就是以原点 $O$ 为始点，以 $P$ 点为终点的有向线段 $accent(O P, ⃗)$ 的数量 $O P = x$⁠．
 
 现在进一步研究在数轴上任意一条有向线段的数量表示法；在数轴上任取不同的两点 $A\,B$, 设 $A$ 点的坐标为 $x_1$, $B$ 点的坐标为 $x_2$. 如图2.5(1), 现在要求 $A B = ?$
 
@@ -93,13 +93,13 @@ $therefore quad A B = O B - O A = x_2 - x_1$
   ]
 )
 
-但不管哪一种情况，都可证得 $A B = x_2 - x_1$．譬如在图2.5的(2) 中，$A B =\|accent(A B, ⃗)\|$, $O A = -\|accent(O A, ⃗)\|$, $O B =\|accent(O B, ⃗)\|$, 而 $ \|accent(A B, ⃗)\|=\|accent(O A, ⃗)\|+\|accent(O B, ⃗)\| $ #noindent;$therefore quad A B = - O A + O B$，就是 $ A B = O B - O A = x_2 - x_1 $
+但不管哪一种情况，都可证得 $A B = x_2 - x_1$⁠．譬如在图2.5的 (2) 中，$A B =\|accent(A B, ⃗)\|$, $O A = -\|accent(O A, ⃗)\|$, $O B =\|accent(O B, ⃗)\|$, 而 $ \|accent(A B, ⃗)\|=\|accent(O A, ⃗)\|+\|accent(O B, ⃗)\| $ #noindent;$therefore quad A B = - O A + O B$⁠，就是 $ A B = O B - O A = x_2 - x_1 $
 
 其它情形，同样地可以证明，这就是说，#strong[在数轴上任意一条有向线段的数量等于其终点坐标与始点坐标的差]．
 
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题2.1]
 
-+ 在数轴上 $A\,B$ 两点的坐标分别是 $x_1\,x_2$, 设：
++ #block(sticky: true)[在数轴上 $A\,B$ 两点的坐标分别是 $x_1\,x_2$, 设：]
 
   #cols(2)[
   + $x_1 = - 2\,quad x_2 = 2$
@@ -141,9 +141,9 @@ $therefore quad A B = O B - O A = x_2 - x_1$
 
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("2-06");], caption: []), figure([#fig("2-07");], caption: []))));
 
-在平面上任取一点 $P$\(图2.7), 过点 $P$ 分别作 $y$ 轴，$x$ 轴的平行线 $P M$, $P N$, 于是得到有向线段 $accent(O M, ⃗)$, $accent(O N, ⃗)$, 而有向线段 $accent(O M, ⃗)$, $accent(O N, ⃗)$ 分别在 $x$ 轴，$y$ 轴上的数量是 $x\,y$, 也就是说，在平面上任取一点 $P$, 可以找到与之对应的一对实数 $x\,y$．反过来说，任取一对实数 $x\,y$, 在 $x$ 轴，$y$ 轴上可以分别找到与之对应的以原点 $O$ 为始点，以 $M\,N$ 为终点的有向线段 $accent(O M, ⃗)$, $accent(O N, ⃗)$, 过 $M\,N$ 各作 $y$ 轴、$x$ 轴的平行线，这两条平行线必交于与之对应的一点 $P$. 这样，平面内的点和所有的有序实数对 $\(x\,y\)$ 之间就建立了一一对应的关系．我们就用这样一对有序实数 $x\,y$ 作为点 $P$ 在平面内位置的标记，称为点 $P$ 的坐标．
+在平面上任取一点 $P$\(图2.7), 过点 $P$ 分别作 $y$ 轴，$x$ 轴的平行线 $P M$, $P N$, 于是得到有向线段 $accent(O M, ⃗)$, $accent(O N, ⃗)$, 而有向线段 $accent(O M, ⃗)$, $accent(O N, ⃗)$ 分别在 $x$ 轴，$y$ 轴上的数量是 $x\,y$, 也就是说，在平面上任取一点 $P$, 可以找到与之对应的一对实数 $x\,y$⁠．反过来说，任取一对实数 $x\,y$, 在 $x$ 轴，$y$ 轴上可以分别找到与之对应的以原点 $O$ 为始点，以 $M\,N$ 为终点的有向线段 $accent(O M, ⃗)$, $accent(O N, ⃗)$, 过 $M\,N$ 各作 $y$ 轴、$x$ 轴的平行线，这两条平行线必交于与之对应的一点 $P$. 这样，平面内的点和所有的有序实数对 $\(x\,y\)$ 之间就建立了一一对应的关系．我们就用这样一对有序实数 $x\,y$ 作为点 $P$ 在平面内位置的标记，称为点 $P$ 的坐标．
 
-有向线段 $accent(O M, ⃗)$ 的数量 $x$ 称为点 $P$ 的横坐标或横标，有向线段 $accent(O N, ⃗)$ 的数量 $y$ 称为点 $P$ 的纵坐标或纵标，点 $P$ 的坐标记为 $\(x\,y\)$．
+有向线段 $accent(O M, ⃗)$ 的数量 $x$ 称为点 $P$ 的横坐标或横标，有向线段 $accent(O N, ⃗)$ 的数量 $y$ 称为点 $P$ 的纵坐标或纵标，点 $P$ 的坐标记为 $\(x\,y\)$⁠．
 
 横、纵两轴把平面分为四部分，按逆时针次序分别叫做第一象限、第二象限、第三象限和第四象限．显然，在第一象限点的横标、纵标都是正数；在第二象限点的横标为负，纵标为正；在第三象限点的横标、纵标都是负数；在第四象限点的横标为正、纵标为负．反过来也对（图2.6）．
 
@@ -154,7 +154,7 @@ $therefore quad A B = O B - O A = x_2 - x_1$
 
 ]
 #solution[
-因为菱形的对角线互相垂直平分．设菱形顶点分别为 $A\,B\,C\,D$. 根据已知条件，设长对角线在 $x$ 轴上，则知 $A\,C$ 坐标各为 $\(4\,0\)$, $\(- 4\,0\)$. 设 $B\,D$ 坐标各为 $\(0\,b\)$, $\(0\,- b\)$．
+因为菱形的对角线互相垂直平分．设菱形顶点分别为 $A\,B\,C\,D$. 根据已知条件，设长对角线在 $x$ 轴上，则知 $A\,C$ 坐标各为 $\(4\,0\)$, $\(- 4\,0\)$. 设 $B\,D$ 坐标各为 $\(0\,b\)$, $\(0\,- b\)$⁠．
 
 $therefore quad\|A B\|=\|B C\|=\|C D\|=\|D A\|= 5$
 
@@ -182,7 +182,7 @@ $therefore quad\|A B\|=\|B C\|=\|C D\|=\|D A\|= 5$
 )
 
 #solution[
-建立直角坐标系 $x - O - y$, 如图2.9．设起点在原点 $O$，$y$ 轴代表正北方向，$x$ 轴代表正东方向，船向北偏东 $60 degree$ 航行40公里的位移用有向线段 $accent(O A, ⃗)$ 代表，再向北偏东 $45 degree$ 航行24公里的位移用有向线段 $accent(A B, ⃗)$ 代表，这时船在 $B$ 点的坐标是 $\(x\,y\)$.
+建立直角坐标系 $x - O - y$, 如图2.9．设起点在原点 $O$⁠，$y$ 轴代表正北方向，$x$ 轴代表正东方向，船向北偏东 $60 degree$ 航行40公里的位移用有向线段 $accent(O A, ⃗)$ 代表，再向北偏东 $45 degree$ 航行24公里的位移用有向线段 $accent(A B, ⃗)$ 代表，这时船在 $B$ 点的坐标是 $\(x\,y\)$.
 
 因为 $A$ 点的横坐标 $x_A$ 是有向线段 $accent(O A, ⃗)$ 在 $x$ 轴上的射影 $accent(O A, ⃗)_x$ 的数量，即#numbered-eq($ x_A = O A_x & =\|O A\|cos\(90 degree - 60 degree\)\
  & = 40 cos 30 degree\
@@ -193,7 +193,7 @@ $therefore quad\|A B\|=\|B C\|=\|C D\|=\|D A\|= 5$
 又有向线段 $accent(A B, ⃗)$ 在 $x$ 轴上的射影 $accent(A_x B_x, ⃗)$ 的数量是#numbered-eq($ A_x B_x = A H =\|A B\|cos 45 degree = 24 times sqrt(2) / 2 = 12 sqrt(2) $);#noindent;有向线段 $accent(A B, ⃗)$ 在 $y$ 轴上射影的数量是#numbered-eq($ A_y B_y = A K =\|A B\|cos 45 degree = 24 times sqrt(2) / 2 = 12 sqrt(2) $);
 
 另一方面，$ A_x B_x & = O B_x - O A_x = x - x_A = x - 20 sqrt(3)\
-A_y B_y & = O B_y - O A_y = y - y_A = y - 20 $ #noindent;将(2.3), (2.4) 分别代入上面两个等式的左端，得 $ display(cases(12 sqrt(2) = x - 20 sqrt(3), 12 sqrt(2) = y - 20)) $ #noindent;因此：$ x & = 20 sqrt(3) + 12 sqrt(2) approx 20 times 1.73 + 12 times 1.41 approx 51.52 approx 52\
+A_y B_y & = O B_y - O A_y = y - y_A = y - 20 $ #noindent;将 (2.3), (2.4) 分别代入上面两个等式的左端，得 $ display(cases(12 sqrt(2) = x - 20 sqrt(3), 12 sqrt(2) = y - 20)) $ #noindent;因此：$ x & = 20 sqrt(3) + 12 sqrt(2) approx 20 times 1.73 + 12 times 1.41 approx 51.52 approx 52\
 y & = 20 + 12 sqrt(2) approx 20 + 12 times 1.41 approx 36.9 approx 37 $ #noindent;答：船在起点东面约52公里，在北面约37公里的地方．
 
 ]
@@ -221,7 +221,7 @@ y & = 20 + 12 sqrt(2) approx 20 + 12 times 1.41 approx 36.9 approx 37 $ #noinden
   ]
 )
 
-事实上，由 $P_1$, $P_2$ 引 $y$ 轴、$x$ 轴的平行线 $P_1 M_1$, $P_2 M_2$, $P_1 N_1$, $P_2 N_2$, 延长 $P_1 N_1$ 与 $P_2 M_2$ 相交于 $S$\(图2.10), 在直角三角形 $P_1 S P_2$ 中，由勾股定理得：$ \|accent(P_1 P_2, ⃗)\|^2 =\|accent(P_1 S, ⃗)\|^2 +\|accent(S P_2, ⃗)\|^2 $ #noindent;其中，$\|accent(P_1 S, ⃗)\|=\|accent(M_1 M_2, ⃗)\|=\|x_2 - x_1\|$，$\|accent(S P_2, ⃗)\|=\|accent(N_1 N_2, ⃗)\|=\|y_2 - y_1\|$．
+事实上，由 $P_1$, $P_2$ 引 $y$ 轴、$x$ 轴的平行线 $P_1 M_1$, $P_2 M_2$, $P_1 N_1$, $P_2 N_2$, 延长 $P_1 N_1$ 与 $P_2 M_2$ 相交于 $S$\(图2.10), 在直角三角形 $P_1 S P_2$ 中，由勾股定理得：$ \|accent(P_1 P_2, ⃗)\|^2 =\|accent(P_1 S, ⃗)\|^2 +\|accent(S P_2, ⃗)\|^2 $ #noindent;其中，$\|accent(P_1 S, ⃗)\|=\|accent(M_1 M_2, ⃗)\|=\|x_2 - x_1\|$⁠，$\|accent(S P_2, ⃗)\|=\|accent(N_1 N_2, ⃗)\|=\|y_2 - y_1\|$⁠．
 
 于是$ \|accent(P_1 P_2, ⃗)\|^2 =\|x_2 - x_1\|^2 +\|y_2 - y_1\|^2 $ #noindent;开平方得：$ \|accent(P_1 P_2, ⃗)\|= sqrt(\(x_2 - x_1\)^2 +\(y_2 - y_1\)^2) $ #noindent;这就是平面上任意两点间的距离公式．
 
@@ -268,10 +268,10 @@ $therefore quad triangle.stroked.t A B C$ 的三边的长分别为 $sqrt(10 - 4 
 
 ]
 #solution[
-设矩形的四个顶点分别为 $A\(0\,0\)$, $B\(0\,b\)$, $C\(a\,b\)$, $D\(a\,0\)$，其对角线为 $A C$，$B D$．
+设矩形的四个顶点分别为 $A\(0\,0\)$, $B\(0\,b\)$, $C\(a\,b\)$, $D\(a\,0\)$⁠，其对角线为 $A C$⁠，$B D$⁠．
 
 由两点距离公式，得：$ \|accent(A C, ⃗)\| & = sqrt(\(a - 0\)^2 +\(b - 0\)^2) = sqrt(a^2 + b^2)\
-\|accent(B D, ⃗)\| & = sqrt(\(a - 0\)^2 +\(0 - b\)^2) = sqrt(a^2 + b^2) $ #noindent;故知：$\|accent(A C, ⃗)\|=\|accent(B D, ⃗)\|$．
+\|accent(B D, ⃗)\| & = sqrt(\(a - 0\)^2 +\(0 - b\)^2) = sqrt(a^2 + b^2) $ #noindent;故知：$\|accent(A C, ⃗)\|=\|accent(B D, ⃗)\|$⁠．
 
 ]
 #example[
@@ -297,9 +297,11 @@ $therefore quad triangle.stroked.t A B C$ 的三边的长分别为 $sqrt(10 - 4 
 
 + 证明以 $A\(3\,8\)$, $B\(- 11\,3\)$, $C\(- 8\,- 2\)$ 为顶点的三角形是等腰三角形．
 
-+ + 证明以 $A\(7\,5\)$, $B\(2\,3\)$, $C\(6\,- 7\)$ 为顶点的三角形是一直角三角形；
++ #lead-list(none, 2)[
+  + 证明以 $A\(7\,5\)$, $B\(2\,3\)$, $C\(6\,- 7\)$ 为顶点的三角形是一直角三角形；
 
   + 求这直角三角形的面积．
+  ]
 
 + 证明 $A\(- 3\,- 2\)$, $B\(5\,2\)$, $C\(9\,4\)$ 三个点在一条直线上．
 
@@ -309,13 +311,13 @@ $therefore quad triangle.stroked.t A B C$ 的三边的长分别为 $sqrt(10 - 4 
 
 + 一个动点 $P\(x\,y\)$ 与定点 $Q\(- 3\,4\)$ 的距离永远等于5, $x\,y$ 应当满足什么条件．
 
-#heading(level: 2, numbering: none, outlined: false)[复习题二]
+#heading(level: 2, numbering: none, outlined: true)[复习题二]
 
 + 设 $A_1\,A_2\,A_3\,A_4$ 是同一条有向直线上的四个点，求证不论它们的位置怎样，都有：$ A_1 A_2 + A_2 A_3 + A_3 A_4 + A_4 A_1 = 0 $
 
 + 设 $A\,B\,C\,D$ 是同一条直线上的四个点，求证不论它们的位置排列的顺序怎样，关系式 $ A B dot.op C D + B C dot.op A D = A C dot.op B D $ #noindent;总是成立的．
 
-  （提示：设 $A$、$B$、$C$、$D$ 是同一条直线上的四个点，其坐标分别是 $a\,b\,c\,d$．利用坐标计算）
+  （提示：设 $A$⁠、$B$⁠、$C$⁠、$D$ 是同一条直线上的四个点，其坐标分别是 $a\,b\,c\,d$⁠．利用坐标计算）
 
 + 南北向的直道上有一车站，一人原在车站南面离车站5里之处，他向北走了9里，后又回过身来向南走了3里，问此人最后到达的地点离车站多远，又在车站哪一面？用计算方法并在直线坐标轴上表明此人最后到达的地点．
 

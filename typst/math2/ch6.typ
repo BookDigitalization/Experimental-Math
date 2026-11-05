@@ -21,7 +21,7 @@
 === 定义
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-02");], caption: []), figure([#fig("6-03");], caption: []))));
 
-取任意锐角 $angle X A Y$, 在边 $A Y$ 上任取一点 $B$, 作 $overline(B C) tack.t A X$ 于 $C$\(图6.2). 在直角 $triangle.stroked.t A B C$ 中，设 $angle A$、$angle B$、$angle C$ 的对边分别用 $a$、$b$、$c$ 表示，对锐角 $A$ 来说，$a$ 叫做 $angle A$ 的#strong[对边]，$b$ 叫做 $angle A$ 的相邻的直角边（简称#strong[邻边]）我们定义：
+取任意锐角 $angle X A Y$, 在边 $A Y$ 上任取一点 $B$, 作 $overline(B C) tack.t A X$ 于 $C$\(图6.2). 在直角 $triangle.stroked.t A B C$ 中，设 $angle A$⁠、$angle B$⁠、$angle C$ 的对边分别用 $a$⁠、$b$⁠、$c$ 表示，对锐角 $A$ 来说，$a$ 叫做 $angle A$ 的#strong[对边]，$b$ 叫做 $angle A$ 的相邻的直角边（简称#strong[邻边]）我们定义：
 
 + $angle A$ 的对边与斜边的比值，叫做 $angle A$ 的正弦，用符号 $sin A$ 来表示，即 $ sin A = frac(angle A upright("的对边"), upright("斜边")) = a / c $
 
@@ -67,7 +67,7 @@ tan 40 degree = 1.8 / 2.1 approx 0.8\,#h(2em) cot 40 degree = 2.1 / 1.8 approx 1
 )
 
 #solution[
-作一个直角 $triangle.stroked.t A B C$, 使直角边 $overline(A C) = 2$ 个单位长，$overline(C B) = 1$ 个单位长（图6.6），于是，$ tan A = 1 / 2 $ #noindent;用量角器量 $angle A$, 得之 $angle A approx 26 degree$．
+作一个直角 $triangle.stroked.t A B C$, 使直角边 $overline(A C) = 2$ 个单位长，$overline(C B) = 1$ 个单位长（图6.6），于是，$ tan A = 1 / 2 $ #noindent;用量角器量 $angle A$, 得之 $angle A approx 26 degree$⁠．
 
 ]
 #exercise[
@@ -112,9 +112,9 @@ tan 40 degree = 1.8 / 2.1 approx 0.8\,#h(2em) cot 40 degree = 2.1 / 1.8 approx 1
 
   ]
 
-+ 已知 $sin alpha = 3 / 4$，用作图法求 $angle alpha$.
++ 已知 $sin alpha = 3 / 4$⁠，用作图法求 $angle alpha$.
 
-+ 已知 $cos beta = 2 / 5$，用作图法求 $angle beta$.
++ 已知 $cos beta = 2 / 5$⁠，用作图法求 $angle beta$.
 
 + 已知 $tan A = 3 / 5$, 用作图法求 $angle A$.
 
@@ -129,7 +129,7 @@ tan 40 degree = 1.8 / 2.1 approx 0.8\,#h(2em) cot 40 degree = 2.1 / 1.8 approx 1
   ]
 )
 
-画单位圆 $dot.o O$\(图6.7), 通过单位圆的圆心 $O$ 作互相垂直的两条直线，其中一条是水平的，另一条是铅直的，以 $O$ 为原点，单位圆的半径为长度单位，在两条直线上建立数轴，其中水平轴向右为正，铅直轴向上为正；水平轴用 $x$ 表示，又叫做 $x$ 轴，铅直的轴用 $y$ 表示，又叫做 $y$ 轴．以 $O$ 为顶点，$x$ 轴的正方向为一边，作 $angle A O P$ 等于已知角 $alpha$, $angle A O P$ 的两边分别与单位圆相交于 $A$、$P$ 两点，过 $P$ 点作 $overline(P M) tack.t O A$ 于 $M$ 点，
+画单位圆 $dot.o O$\(图6.7), 通过单位圆的圆心 $O$ 作互相垂直的两条直线，其中一条是水平的，另一条是铅直的，以 $O$ 为原点，单位圆的半径为长度单位，在两条直线上建立数轴，其中水平轴向右为正，铅直轴向上为正；水平轴用 $x$ 表示，又叫做 $x$ 轴，铅直的轴用 $y$ 表示，又叫做 $y$ 轴．以 $O$ 为顶点，$x$ 轴的正方向为一边，作 $angle A O P$ 等于已知角 $alpha$, $angle A O P$ 的两边分别与单位圆相交于 $A$⁠、$P$ 两点，过 $P$ 点作 $overline(P M) tack.t O A$ 于 $M$ 点，
 
 $because quad overline(O P) = 1$
 
@@ -156,13 +156,13 @@ $therefore quad sin alpha = overline(M P) / overline(O P) = overline(M P) uprigh
 我们使角 $alpha$ 从 $0 degree$ 增加到 $90 degree$, 于是从角 $alpha$ 的正切线和余切线的变化规律可以看到，#strong[当 ]$alpha$#strong[ 增大时，]$tan alpha$#strong[ 也随着增大，而 ]$cot alpha$#strong[ 则随着减小．反之当 ]$alpha$#strong[ 减小时，]$tan alpha$#strong[ 也随着减小，而 ]$cot alpha$#strong[ 则随着增大．]
 
 #exercise[
-+ 在横线上填入不等号（$alpha$、$beta$ 都是锐角）．
++ 在横线上填入不等号（$alpha$⁠、$beta$ 都是锐角）．
 
-  + 当 $alpha > beta$ 时，$sin alpha underline(quad) sin beta$，$cos alpha underline(quad) cos beta$，$tan alpha underline(quad) tan beta$，$cot alpha underline(quad) cot beta$.
+  + 当 $alpha > beta$ 时，$sin alpha underline(quad) sin beta$⁠，$cos alpha underline(quad) cos beta$⁠，$tan alpha underline(quad) tan beta$⁠，$cot alpha underline(quad) cot beta$.
 
-  + 当 $alpha < beta$ 时，$sin alpha underline(quad) sin beta$，$cos alpha underline(quad) cos beta$，$tan alpha underline(quad) tan beta$，$cot alpha underline(quad) cot beta$.
+  + 当 $alpha < beta$ 时，$sin alpha underline(quad) sin beta$⁠，$cos alpha underline(quad) cos beta$⁠，$tan alpha underline(quad) tan beta$⁠，$cot alpha underline(quad) cot beta$.
 
-+ 指出下列差的符号：
++ #block(sticky: true)[指出下列差的符号：]
 
   #cols(2)[
   + $sin 34 degree - sin 33 degree$
@@ -184,8 +184,8 @@ $therefore quad sin alpha = overline(M P) / overline(O P) = overline(M P) uprigh
   ]
 
 ]
-=== $30 degree$、$45 degree$、$60 degree$ 角的三角比
-我们根据锐角三角比的定义和直角三角形中的一些边角特殊关系，可以计算出 $30 degree$、$45 degree$、$60 degree$ 角的三角比的精确值．
+=== $30 degree$⁠、$45 degree$⁠、$60 degree$ 角的三角比
+我们根据锐角三角比的定义和直角三角形中的一些边角特殊关系，可以计算出 $30 degree$⁠、$45 degree$⁠、$60 degree$ 角的三角比的精确值．
 
 作 $triangle.stroked.t A B C$, 使 $angle C = 90 degree$, $angle A = 30 degree$ (图6.8), 那么 $angle B = 60 degree$, 设 $overline(B C) = a$, 则 $overline(A B) = 2 a$, $overline(A C) = sqrt(overline(A B)^2 - overline(B C)^2) = sqrt(\(2 a\)^2 - a^2) = sqrt(3) a$. 由此得：$ sin 30 degree = frac(a, 2 a) = 1 / 2\, & #h(2em) sin 60 degree = frac(sqrt(3) a, 2 a) = sqrt(3) / 2\
 cos 30 degree = frac(sqrt(3) a, 2 a) = sqrt(3) / 2\, & #h(2em) cos 60 degree = frac(a, 2 a) = 1 / 2\
@@ -239,7 +239,7 @@ $ 4 cot 30 degree - 2 sin 60 degree + 2 cos 60 degree = 4 times sqrt(3) - 2 time
 
 ]
 #example[
-计算 $cos^2 30 degree + sin^2 45 degree - tan^2 45 degree$ 其中：$sin^2 alpha$、$cos^2 alpha$ $tan^2 alpha$、$cot^2 alpha$ 分别表示 $\(sin alpha\)^2$、$\(cos alpha\)^2$、$\(tan alpha\)^2$、$\(cot alpha\)^2$
+计算 $cos^2 30 degree + sin^2 45 degree - tan^2 45 degree$ 其中：$sin^2 alpha$⁠、$cos^2 alpha$ $tan^2 alpha$⁠、$cot^2 alpha$ 分别表示 $\(sin alpha\)^2$⁠、$\(cos alpha\)^2$⁠、$\(tan alpha\)^2$⁠、$\(cot alpha\)^2$
 
 ]
 #solution[
@@ -285,7 +285,7 @@ $ cos^2 30 degree + sin^2 45 degree - tan^2 45 degree = (sqrt(3) / 2)^2 + (sqrt(
 + $cot 42 degree 42'\,quad cot 20 degree 48'\,quad cot 9 degree 36'\,quad cot 5 degree 30'$
 
 ]
-在三角比值表中，最右边的三列是修正值，它是用来求在左边表里找不到的角的三角比，这三列的上端和下端都标有 $1'$、$2'$、$3'$, 三列中的数是小数的简写，每一个数都代表一个小数，它的末位数相当于表中间同一行小数的末位数，$1'$、$2'$、$3'$ 各列中的各数，分别是它所在的行的角度分别相差 $1'$、$2'$、$3'$ 时的三角比的修正值，下面举例说明查法：
+在三角比值表中，最右边的三列是修正值，它是用来求在左边表里找不到的角的三角比，这三列的上端和下端都标有 $1'$⁠、$2'$⁠、$3'$, 三列中的数是小数的简写，每一个数都代表一个小数，它的末位数相当于表中间同一行小数的末位数，$1'$⁠、$2'$⁠、$3'$ 各列中的各数，分别是它所在的行的角度分别相差 $1'$⁠、$2'$⁠、$3'$ 时的三角比的修正值，下面举例说明查法：
 
 例如，要求 $sin 20 degree 19'$, 先从表中查得 $sin 20 degree 18'$ 的值是0.3469, 因为 $20 degree 19'$ 比 $20 degree 18'$ 大 $1'$, 查修正值是0.0003. 因为角度大，它的正弦值也大，所以 $sin 20 degree 19'$ 就比 $sin 20 degree 18'$ 大0.0003, 因此，$sin 20 degree 19' = 0.3469 + 0.0003 = 0.3472$. 要求 $sin 20 degree 46'$, 先从表中查得 $sin 20 degree 48'$ 的值是0.3551, $20 degree 46'$ 比 $20 degree 48'$ 小 $2'$, 查得 $2'$ 的修正值是0.0005, 角度小，正弦值也小，所以 $sin 20 degree 46' = 0.3551 - 0.0005 = 0.3546$. 要求 $cos 28 degree 26'$, 先从表中查得 $cos 28 degree 24' = 0.8796$, $28 degree 26'$ 比 $28 degree 24'$ 大 $2'$, 查表得修正值是0.0003, 角大余弦值反而小，所以 $cos 28 degree 26' = 0.8796 - 0.0003 = 0.8793$.
 
@@ -328,7 +328,7 @@ $ cos^2 30 degree + sin^2 45 degree - tan^2 45 degree = (sqrt(3) / 2)^2 + (sqrt(
 
 ]
 #example[
-$tan x = 14.30$, $cot y = 1.4715$, 求 $x$、$y$.
+$tan x = 14.30$, $cot y = 1.4715$, 求 $x$⁠、$y$.
 
 ]
 #solution[
@@ -356,7 +356,7 @@ $cos y = 0.9841$, 求 $y$.
 
 ]
 #example[
-$tan x = 1.3773$, $cot y = 0.1950$, 求 $x$、$y$.
+$tan x = 1.3773$, $cot y = 0.1950$, 求 $x$⁠、$y$.
 
 ]
 #solution[
@@ -437,7 +437,7 @@ tan A = a / b = cot B = cot\(90 degree - A\)\, & #h(2em) cot A = b / a = tan B =
 #exercise[
 + 为什么三角比值表中，锐角 $alpha$ 的正弦和 $90 degree - alpha$ 角的余弦共用一个表．
 
-+ 把下列各角的三角比化为小于 $45 degree$ 的锐角的三角比．
++ #block(sticky: true)[把下列各角的三角比化为小于 $45 degree$ 的锐角的三角比．]
 
   #cols(2)[
   + $sin 73 degree\,#h(2em) sin 77 degree 18'$
@@ -450,7 +450,7 @@ tan A = a / b = cot B = cot\(90 degree - A\)\, & #h(2em) cot A = b / a = tan B =
 
   ]
 
-+ 下列各式中的 $x$ 应为多少度？
++ #block(sticky: true)[下列各式中的 $x$ 应为多少度？]
 
   #cols(2)[
   + $sin 75 degree = cos x$
@@ -463,7 +463,7 @@ tan A = a / b = cot B = cot\(90 degree - A\)\, & #h(2em) cot A = b / a = tan B =
 
   ]
 
-+ 下列等式是否成立（$x$、$alpha$ 的取值都使各三角比有意义）．
++ #block(sticky: true)[下列等式是否成立（$x$⁠、$alpha$ 的取值都使各三角比有意义）．]
 
   #cols(2)[
   + $sin\(75 degree + alpha\)= cos\(15 degree - alpha\)$
@@ -502,15 +502,15 @@ tan A = a / b = cot B = cot\(90 degree - A\)\, & #h(2em) cot A = b / a = tan B =
 
   $therefore quad (a / c)^2 + (b / c)^2 = 1$
 
-  又 $because quad a / c = sin alpha\,quad b / c = cos alpha$，
+  又 $because quad a / c = sin alpha\,quad b / c = cos alpha$⁠，
 
-  $therefore quad sin^2 alpha + cos^2 alpha = 1$，即：#strong[一锐角的正弦和余弦的平方和等于1.] 该式也就是勾股定理的三角比的表示式．
+  $therefore quad sin^2 alpha + cos^2 alpha = 1$⁠，即：#strong[一锐角的正弦和余弦的平方和等于1.] 该式也就是勾股定理的三角比的表示式．
 
-+ $because quad tan alpha = a / b\,quad frac(sin alpha, cos alpha) = a / c / b / c = a / b$，
++ $because quad tan alpha = a / b\,quad frac(sin alpha, cos alpha) = frac(a / c, b / c) = a / b$⁠，
 
   $therefore quad tan alpha = frac(sin alpha, cos alpha)$
 
-  又 $because quad cot alpha = b / a\,quad frac(cos alpha, sin alpha) = b / c / a / c = b / a$，
+  又 $because quad cot alpha = b / a\,quad frac(cos alpha, sin alpha) = frac(b / c, a / c) = b / a$⁠，
 
   $therefore quad cot alpha = frac(cos alpha, sin alpha)$
 
@@ -526,7 +526,7 @@ tan A = a / b = cot B = cot\(90 degree - A\)\, & #h(2em) cot A = b / a = tan B =
 
 ]
 #solution[
-从公式 $sin^2 alpha + cos^2 alpha = 1$ 可得 $ cos alpha = plus.minus sqrt(1 - sin^2 alpha) $ #noindent;由于锐角的三角比都是正数，所以根号前应取正号，把 $sin alpha = 3 / 5$ 代入上式，得 $ cos alpha = sqrt(1 - (3 / 5)^2) = sqrt(frac(25 - 9, 5^2)) = 4 / 5 $ #noindent;根据 $tan alpha = frac(sin alpha, cos alpha)$，可得 $ tan alpha = 3 / 5 / 4 / 5 = 3 / 4 $ #noindent;再根据 $tan alpha dot.op cot alpha = 1$，可得 $ cot alpha = 4 / 3 $
+从公式 $sin^2 alpha + cos^2 alpha = 1$ 可得 $ cos alpha = plus.minus sqrt(1 - sin^2 alpha) $ #noindent;由于锐角的三角比都是正数，所以根号前应取正号，把 $sin alpha = 3 / 5$ 代入上式，得 $ cos alpha = sqrt(1 - (3 / 5)^2) = sqrt(frac(25 - 9, 5^2)) = 4 / 5 $ #noindent;根据 $tan alpha = frac(sin alpha, cos alpha)$⁠，可得 $ tan alpha = frac(3 / 5, 4 / 5) = 3 / 4 $ #noindent;再根据 $tan alpha dot.op cot alpha = 1$⁠，可得 $ cot alpha = 4 / 3 $
 
 ]
 #example[
@@ -558,17 +558,17 @@ $  & \(sin alpha + cos alpha\)^2 +\(sin alpha - cos alpha\)^2\
 
 ]
 #exercise[
-+ 证明 $sin^2 alpha + cos^2 alpha = 1$，$tan alpha = frac(sin alpha, cos alpha)$
++ 证明 $sin^2 alpha + cos^2 alpha = 1$⁠，$tan alpha = frac(sin alpha, cos alpha)$
 
-+ 已知 $sin alpha = 5 / 13$，求 $cos alpha\,tan alpha\,cot alpha$
++ 已知 $sin alpha = 5 / 13$⁠，求 $cos alpha\,tan alpha\,cot alpha$
 
-+ 已知 $cos alpha = 4 / 5$，求 $sin alpha\,tan alpha\,cot alpha$
++ 已知 $cos alpha = 4 / 5$⁠，求 $sin alpha\,tan alpha\,cot alpha$
 
-+ 已知 $tan alpha = 3 / 4$，求 $sin alpha\,cos alpha$．
++ 已知 $tan alpha = 3 / 4$⁠，求 $sin alpha\,cos alpha$⁠．
 
-  提示：$tan^2 alpha = frac(sin^2 alpha, 1 - sin^2 alpha) = 9 / 16$，令 $sin alpha = x$，解方程．
+  提示：$tan^2 alpha = frac(sin^2 alpha, 1 - sin^2 alpha) = 9 / 16$⁠，令 $sin alpha = x$⁠，解方程．
 
-+ 化简
++ #block(sticky: true)[化简]
 
   #cols(2)[
   + $frac(1 - sin^2 alpha, cos^2 alpha)$
@@ -592,7 +592,7 @@ $  & \(sin alpha + cos alpha\)^2 +\(sin alpha - cos alpha\)^2\
 
 + 在直角 $triangle.stroked.t A B C$ 中，$angle C = 90 degree$, $a = 3$, $b = 2$, 求 $angle A$ 的四个三角比．
 
-+ 在直角 $triangle.stroked.t A B C$ 中，$angle C = 90 degree$,$overline(A B) = 10$, $overline(B C) = 8$, 求：$sin A$、$cos A$.
++ 在直角 $triangle.stroked.t A B C$ 中，$angle C = 90 degree$,$overline(A B) = 10$, $overline(B C) = 8$, 求：$sin A$⁠、$cos A$.
 
 + 在直角 $triangle.stroked.t A B C$ 中，$angle C = 90 degree$, $overline(C D)$ 为 $overline(A B)$ 边上的高，问图中哪些线段的比可以表示 $angle A$ 的正弦？哪些线段的比可以表示 $angle B$ 的正弦？
 
@@ -633,7 +633,7 @@ $  & \(sin alpha + cos alpha\)^2 +\(sin alpha - cos alpha\)^2\
 
 + 已知互为余角的两角的正切的和等于3, 求两角正切的平方和．
 
-+ 求下列各题中的未知锐角 $x$:
++ #block(sticky: true)[求下列各题中的未知锐角 $x$:]
 
   #cols(2)[
   + $sin x = 1 / 2$
@@ -650,7 +650,7 @@ $  & \(sin alpha + cos alpha\)^2 +\(sin alpha - cos alpha\)^2\
 
   ]
 
-+ 已知 $cos^2 x = 1 / 4$，求 $x$.
++ 已知 $cos^2 x = 1 / 4$⁠，求 $x$.
 
 + 已知 $cos^2 x - sin^2 x = 1 / 2$, 求 $x$.
 
@@ -735,11 +735,11 @@ b & = c cos A = 18 times cos 62 degree 20' = 18 times 0.4643 approx 8.36 $
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-14");], caption: []), figure([#fig("6-15");], caption: []))));
 
 #example[
-已知 $c = 27.5$, $a = 22.6$, 求 $b$、$angle A$、$angle B$ (图6.14).
+已知 $c = 27.5$, $a = 22.6$, 求 $b$⁠、$angle A$⁠、$angle B$ (图6.14).
 
 ]
 #solution[
-$ b = sqrt(c^2 - a^2) = sqrt(27.5^2 - 22.6^2) approx 15.7 $ #noindent;由于 $sin A = a / c = 22.6 / 27.5 approx 0.8218$，因此：$ angle A & approx 55 degree 16'\
+$ b = sqrt(c^2 - a^2) = sqrt(27.5^2 - 22.6^2) approx 15.7 $ #noindent;由于 $sin A = a / c = 22.6 / 27.5 approx 0.8218$⁠，因此：$ angle A & approx 55 degree 16'\
 angle B & = 90 degree - angle A = 90 degree - 55 degree 16' = 34 degree 44' $
 
 ]
@@ -756,11 +756,11 @@ c & = frac(a, sin A) = frac(3.8, sin 42 degree) approx 5.68 $
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-16");], caption: []), figure([#fig("6-17");], caption: []))));
 
 #example[
-已知 $a = 3$、$b = 4$, 求 $c$、$angle A$、$angle B$ (图6.16)
+已知 $a = 3$⁠、$b = 4$, 求 $c$⁠、$angle A$⁠、$angle B$ (图6.16)
 
 ]
 #solution[
-$ c = sqrt(a^2 + b^2) = sqrt(3^2 + 4^2) = 5 $ #noindent;由于 $tan A = 3 / 4 = 0.75$，因此：$ angle A approx 36 degree 52'\,#h(2em) angle B approx 90 degree - 36 degree 52' = 53 degree 8' $
+$ c = sqrt(a^2 + b^2) = sqrt(3^2 + 4^2) = 5 $ #noindent;由于 $tan A = 3 / 4 = 0.75$⁠，因此：$ angle A approx 36 degree 52'\,#h(2em) angle B approx 90 degree - 36 degree 52' = 53 degree 8' $
 
 ]
 #exercise[
@@ -817,7 +817,7 @@ $therefore quad overline(A B) = a dot.op tan alpha + b$
 
 ]
 #example[
-如图6.19, 已知 $C$、$D$ 两点与物体“$overline(A B)$”的底端 $B$ 点共线，且 $overline(C D) = a$, 仪器 $overline(C C')$、$overline(D D')$ 的高都等于 $b$, 在 $C'$、$D'$ 两点测得物体的顶端 $A$ 的仰角分别是 $alpha$、$beta$, 求物体的高 $overline(A B)$
+如图6.19, 已知 $C$⁠、$D$ 两点与物体“$overline(A B)$⁠”的底端 $B$ 点共线，且 $overline(C D) = a$, 仪器 $overline(C C')$⁠、$overline(D D')$ 的高都等于 $b$, 在 $C'$⁠、$D'$ 两点测得物体的顶端 $A$ 的仰角分别是 $alpha$⁠、$beta$, 求物体的高 $overline(A B)$
 
 ]
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#image("/math2/fig/6-19.png", width: 100%);], caption: []), figure([#fig("6-19");], caption: []))));
@@ -845,7 +845,7 @@ $therefore quad overline(A B) = b + frac(a, cot beta - cot alpha)$
 
 ]
 #solution[
-路面的坡度 $i = h / ell$，已知 $h = 4$ 米，$ell = 100$ 米，
+路面的坡度 $i = h / ell$⁠，已知 $h = 4$ 米，$ell = 100$ 米，
 
 $therefore quad i = 4 / 100 = 0.04$
 
@@ -883,7 +883,7 @@ upright("起重机的最大高度") = upright("机身高") + overline(B C) = 21 
 
 + 选择底部不能到达的建筑物或树木，测量它的高度．
 
-+ 如图，要求河两岸 $B$、$C$ 两点间的距离，在 $B$ 点这一岸垂直于 $B C$ 方向上找一点 $A$, 测出 $angle B A C = 58 degree 12'$, $overline(A B) = 25$ 米，求 $B$、$C$ 两点间的距离．
++ 如图，要求河两岸 $B$⁠、$C$ 两点间的距离，在 $B$ 点这一岸垂直于 $B C$ 方向上找一点 $A$, 测出 $angle B A C = 58 degree 12'$, $overline(A B) = 25$ 米，求 $B$⁠、$C$ 两点间的距离．
 
 + 如图，从山顶 $D$ 测得地平面上同一方向的两点 $A$ 和 $B$ 的俯角分别是 $18 degree$ 和 $23 degree$, 已知 $overline(A B) = 140$ 米，求山高 $overline(C D)$（得数保留整数米）．
 
@@ -920,19 +920,19 @@ upright("起重机的最大高度") = upright("机身高") + overline(B C) = 21 
 
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题6.2]
 
-+ 已知等腰 $triangle.stroked.t A B C$, 腰长为5cm, 底边长为8cm, 求 $angle A$、$angle B$、$angle C$.
++ 已知等腰 $triangle.stroked.t A B C$, 腰长为5cm, 底边长为8cm, 求 $angle A$⁠、$angle B$⁠、$angle C$.
 
 + 把2米的竹杆，垂直于地面的时候，影长1.6米，这时太阳的仰角大约是多少度？
 
 + 已知等腰 $triangle.stroked.t A B C$, 腰长 $overline(A B) = overline(A C) = 10$⁠cm, 底角为 $40 degree$, 求高 $overline(A D)$, 底边 $overline(B C)$ 和面积 $S$.
 
-+ 在 $triangle.stroked.t A B C$ 中，$angle B$、$angle C$ 是锐角，$overline(A B) = c$, $overline(A C) = b$, $overline(A D)$ 是 $overline(B C)$ 边上的高，求证：
++ 在 $triangle.stroked.t A B C$ 中，$angle B$⁠、$angle C$ 是锐角，$overline(A B) = c$, $overline(A C) = b$, $overline(A D)$ 是 $overline(B C)$ 边上的高，求证：
 
   + $overline(A D) = b sin C = c sin B$
 
   + $frac(b, sin B) = frac(c, sin C)$
 
-+ 已知正 $n$ 边形的半径是 $r$，周长是 $ell$，求证：$ ell = 2 n r sin (180 degree) / n $
++ 已知正 $n$ 边形的半径是 $r$⁠，周长是 $ell$⁠，求证：$ ell = 2 n r sin (180 degree) / n $
 
 + 一架战斗机从3300米高空以每秒150米的速度向轰炸目标俯冲，俯冲角为 $42 degree$, 在离地面1300米时投弹，击中目标，问飞机开始俯冲到投弹共用几秒钟？
 
@@ -948,7 +948,7 @@ upright("起重机的最大高度") = upright("机身高") + overline(B C) = 21 
   
   ]])));
 
-+ 东西两炮台 $A$、$B$ 相距2km, 同时发现入侵敌舰 $C$, 炮台 $A$ 测得敌舰 $C$ 在它的南偏东 $40 degree$ 的方向，炮台 $B$ 测得敌舰 $C$ 在它的正南方，试求敌舰与两炮台的距离．
++ 东西两炮台 $A$⁠、$B$ 相距2km, 同时发现入侵敌舰 $C$, 炮台 $A$ 测得敌舰 $C$ 在它的南偏东 $40 degree$ 的方向，炮台 $B$ 测得敌舰 $C$ 在它的正南方，试求敌舰与两炮台的距离．
 
 + 从圆外一点向圆引两条切线，已知切线长等于21.8cm, 圆的半径等于10.6cm, 求这两条切线间的夹角．
 
@@ -956,13 +956,13 @@ upright("起重机的最大高度") = upright("机身高") + overline(B C) = 21 
 === 正弦定理
 为了解任意的三角形，下面我们用三角比来研究任意三角形中的边角关系．
 
-我们约定在 $triangle.stroked.t A B C$ 中，$angle A$、$angle B$、$angle C$ 分别用 $alpha$、$beta$、$gamma$ 来表示；$angle A$、$angle B$、$angle C$ 的对边分别用 $a$、$b$、$c$ 来表示；外接圆的半径用 $r$ 来表示．
+我们约定在 $triangle.stroked.t A B C$ 中，$angle A$⁠、$angle B$⁠、$angle C$ 分别用 $alpha$⁠、$beta$⁠、$gamma$ 来表示；$angle A$⁠、$angle B$⁠、$angle C$ 的对边分别用 $a$⁠、$b$⁠、$c$ 来表示；外接圆的半径用 $r$ 来表示．
 
 假定 $alpha$ 是锐角（图6.22），作 $triangle.stroked.t A B C$ 的外接圆 $dot.o O$, 再作 $dot.o O$ 的直径 $overline(C A')$, 弦 $overline(B A')$, 在 $triangle.stroked.t A' B C$ 中，$angle A' B C$ 是直角，因此 $a = 2 r sin A'$
 
 $because quad angle A' = angle A = alpha$
 
-$therefore quad a = 2 r sin alpha$，因此：#numbered-eq($ frac(a, sin alpha) = 2 r $);
+$therefore quad a = 2 r sin alpha$⁠，因此：#numbered-eq($ frac(a, sin alpha) = 2 r $);
 
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-24");], caption: []), figure([#fig("6-25");], caption: []))));
 
@@ -974,9 +974,9 @@ $therefore quad angle A' = 180 degree - angle A$, $angle A'$ 是一个锐角，
 
 在直角 $triangle.stroked.t A' B C$ 中，$angle A' B C$ 是直角．
 
-$therefore quad a = 2 r sin A' = 2 r sin\(180 degree - A\)= 2 r sin\(180 degree - alpha\)$，因此：#numbered-eq($ frac(a, sin\(180 degree - alpha\)) = 2 r $);
+$therefore quad a = 2 r sin A' = 2 r sin\(180 degree - A\)= 2 r sin\(180 degree - alpha\)$⁠，因此：#numbered-eq($ frac(a, sin\(180 degree - alpha\)) = 2 r $);
 
-我们比较(6.3)、(6.4) 两式，可以看出，如果我们定义一个钝角的正弦等于它的补角的正弦，即 $ sin alpha = sin\(180 degree - alpha\) $ #noindent;其中：$alpha$ 是钝角．那么(6.4) 式在形式上就与(6.3) 式相同了，这就是说，$alpha$ 不论是锐角还是钝角都有：$ frac(a, sin alpha) = 2 r $
+我们比较 (6.3)、(6.4) 两式，可以看出，如果我们定义一个钝角的正弦等于它的补角的正弦，即 $ sin alpha = sin\(180 degree - alpha\) $ #noindent;其中：$alpha$ 是钝角．那么 (6.4) 式在形式上就与 (6.3) 式相同了，这就是说，$alpha$ 不论是锐角还是钝角都有：$ frac(a, sin alpha) = 2 r $
 
 #figure([#fig("6-26");
 
@@ -1000,7 +1000,7 @@ $therefore quad frac(a, sin alpha) = 2 r$ 仍然成立．
 
 ]
 #example[
-已知等边 $triangle.stroked.t A B C$ 的边长是 $a$, 求 $r$．
+已知等边 $triangle.stroked.t A B C$ 的边长是 $a$, 求 $r$⁠．
 
 ]
 #solution[
@@ -1024,7 +1024,7 @@ $therefore quad c / b = frac(sin gamma, sin beta)\,quad b / c = c / b\,quad b^2 
 
 $because quad b > 0\,quad c > 0$
 
-$therefore quad b = c$，$triangle.stroked.t A B C$ 是等腰三角形．
+$therefore quad b = c$⁠，$triangle.stroked.t A B C$ 是等腰三角形．
 
 ]
 #example[
@@ -1067,23 +1067,23 @@ $therefore quad sin angle A P B = sin angle A P C\,#h(2em) overline(B P) / overl
 
 ]
 === 余弦定理
-在 $triangle.stroked.t A B C$ 中，如果 $beta$、$gamma$ 都是锐角（图6.26），作 $overline(B C)$ 边上的高 $overline(A D)$, 则 $a = overline(B D) + overline(D C)$.
+在 $triangle.stroked.t A B C$ 中，如果 $beta$⁠、$gamma$ 都是锐角（图6.26），作 $overline(B C)$ 边上的高 $overline(A D)$, 则 $a = overline(B D) + overline(D C)$.
 
-但 $overline(B D) = c cos beta$, $overline(D C) = b cos gamma$，因此：#numbered-eq($ a = c cos beta + b cos gamma $);
+但 $overline(B D) = c cos beta$, $overline(D C) = b cos gamma$⁠，因此：#numbered-eq($ a = c cos beta + b cos gamma $);
 
-如果 $beta$、$gamma$ 中有一个是钝角，设 $gamma$ 是钝角（图6.27）作 $overline(B C)$ 边上的高 $overline(A D)$, 这时垂足 $D$ 落在 $overline(B C)$ 的延长线上，则 $a = overline(B D) - overline(C D)$．但 $overline(B D) = c cos beta$, $overline(C D) = b cos\(180 degree - gamma\)$，因此：#numbered-eq($ a = c cos beta - b cos\(180 degree - gamma\) $);
+如果 $beta$⁠、$gamma$ 中有一个是钝角，设 $gamma$ 是钝角（图6.27）作 $overline(B C)$ 边上的高 $overline(A D)$, 这时垂足 $D$ 落在 $overline(B C)$ 的延长线上，则 $a = overline(B D) - overline(C D)$⁠．但 $overline(B D) = c cos beta$, $overline(C D) = b cos\(180 degree - gamma\)$⁠，因此：#numbered-eq($ a = c cos beta - b cos\(180 degree - gamma\) $);
 
-比较(6.5)、(6.6) 两式，为了使它们在形式上得到一致，我们定义钝角 $gamma$ 的余弦为：$ cos gamma = - cos\(180 degree - gamma\)#h(2em) upright("(") gamma upright("为钝角)") $ #noindent;这样，不论 $gamma$ 是锐角还是钝角都有关系式 $ a = c cos beta + b cos gamma $ #noindent;如果 $beta$ 是钝角，由 $cos beta = - cos\(180 degree - beta\)$ 同样可以得到：$ a = c cos beta + b cos gamma $
+比较 (6.5)、(6.6) 两式，为了使它们在形式上得到一致，我们定义钝角 $gamma$ 的余弦为：$ cos gamma = - cos\(180 degree - gamma\)#h(2em) upright("(") gamma upright("为钝角)") $ #noindent;这样，不论 $gamma$ 是锐角还是钝角都有关系式 $ a = c cos beta + b cos gamma $ #noindent;如果 $beta$ 是钝角，由 $cos beta = - cos\(180 degree - beta\)$ 同样可以得到：$ a = c cos beta + b cos gamma $
 
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (32%, 32%, 32%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-28");], caption: []), figure([#fig("6-29");], caption: []), figure([#fig("6-30");], caption: []))));
 
-如果 $beta$、$gamma$ 中有一个是直角，设 $gamma = 90 degree$ (图6.28),
+如果 $beta$⁠、$gamma$ 中有一个是直角，设 $gamma = 90 degree$ (图6.28),
 
 $because quad cos gamma = cos 90 degree = 0$
 
 $therefore quad a = c cos beta + b cos gamma$ 仍然成立．
 
-若分别作 $overline(A B)$、$overline(A C)$ 边上的高，同样还可证明 $ b & = a cos gamma + c cos alpha\
+若分别作 $overline(A B)$⁠、$overline(A C)$ 边上的高，同样还可证明 $ b & = a cos gamma + c cos alpha\
 c & = b cos alpha + a cos beta $
 
 总结上面的讨论，我们得到：
@@ -1103,7 +1103,7 @@ c^2 & = a^2 + b^2 - 2 a b cos gamma $
 
 ]
 #proof[
-由上面的定理的(6.7) 式得，$ cos beta = frac(a - b cos gamma, c) $ #noindent;由(6.8) 式得 $ cos alpha = frac(b - a cos gamma, c) $ #noindent;把 $cos beta$、$cos alpha$ 代入(6.9) 得 $ c = a frac(a - b cos gamma, c) + b frac(b - a cos gamma, c) = frac(a^2 + b^2 - 2 a b cos gamma, c) $ #noindent;$therefore quad c^2 = a^2 + b^2 - 2 a b cos gamma$
+由上面的定理的 (6.7) 式得，$ cos beta = frac(a - b cos gamma, c) $ #noindent;由 (6.8) 式得 $ cos alpha = frac(b - a cos gamma, c) $ #noindent;把 $cos beta$⁠、$cos alpha$ 代入 (6.9) 得 $ c = a frac(a - b cos gamma, c) + b frac(b - a cos gamma, c) = frac(a^2 + b^2 - 2 a b cos gamma, c) $ #noindent;$therefore quad c^2 = a^2 + b^2 - 2 a b cos gamma$
 
 用同样的办法我们可证：$ b^2 & = c^2 + a^2 - 2 c a cos beta\
 a^2 & = b^2 + c^2 - 2 b c cos alpha $
@@ -1122,7 +1122,7 @@ cos gamma & = frac(a^2 + b^2 - c^2, 2 a b) $
 
 ]
 #example[
-分别求出 $120 degree$、$135 degree$、$150 degree$、$140 degree$ 的余弦．
+分别求出 $120 degree$⁠、$135 degree$⁠、$150 degree$⁠、$140 degree$ 的余弦．
 
 ]
 #solution[
@@ -1164,13 +1164,13 @@ $\(6.10\)+\(6.11\)$ 则得：$ overline(A C)^2 + overline(B D)^2 = overline(A B)
 #exercise[
 + 在 $triangle.stroked.t A B C$ 中，已知 $a = 4$, $b = 7$, $gamma = 40 degree$, 求 $c$.
 
-+ 在 $triangle.stroked.t A B C$ 中，已知 $a = 2$, $b = 3$, $c = 4$, 求 $cos alpha$、$cos beta$、$cos gamma$.
++ 在 $triangle.stroked.t A B C$ 中，已知 $a = 2$, $b = 3$, $c = 4$, 求 $cos alpha$⁠、$cos beta$⁠、$cos gamma$.
 
 + 已知 $triangle.stroked.t A B C$ 的三边：
 
   + 56, 65, 33, 求最大角；
 
-  + 7、$4 sqrt(3)$、$sqrt(13)$, 求最小角．
+  + 7、$4 sqrt(3)$⁠、$sqrt(13)$, 求最小角．
 
 + 在 $triangle.stroked.t A B C$ 中，$angle A = 120 degree$, 求证：
 
@@ -1197,7 +1197,7 @@ $\(6.10\)+\(6.11\)$ 则得：$ overline(A C)^2 + overline(B D)^2 = overline(A B)
 下面我们分别举例说明每种情形的解法．
 
 #example[
-已知：$c = 100$、$alpha = 40 degree$, $beta = 60 degree$ (图6.30), 求 $gamma$、$a$、$b$.
+已知：$c = 100$⁠、$alpha = 40 degree$, $beta = 60 degree$ (图6.30), 求 $gamma$⁠、$a$⁠、$b$.
 
 ]
 #figure([#fig("6-32");
@@ -1230,7 +1230,7 @@ b & = frac(c sin beta, sin gamma) = frac(100 times sin 60 degree, sin 80 degree)
 
 ]
 #example[
-已知 $b = 60$、$c = 34$、$alpha = 41 degree$ (图6.31)．求 $a$, $beta$，$gamma$.
+已知 $b = 60$⁠、$c = 34$⁠、$alpha = 41 degree$ (图6.31)．求 $a$, $beta$⁠，$gamma$.
 
 ]
 #figure([#fig("6-33");
@@ -1243,7 +1243,7 @@ b & = frac(c sin beta, sin gamma) = frac(100 times sin 60 degree, sin 80 degree)
 #solution[
 $ a^2 & = b^2 + c^2 - 2 b c cos alpha\
  & = 60^2 + 34^2 - 2 times 60 times 34 cos 41 degree\
- & = 3600 + 1156 - 4080 times 0.755 approx 1676 $ #noindent;查平方根表，得：$a approx 41$．$ sin gamma = frac(c sin alpha, a) = frac(34 times sin 41 degree, 41) = frac(34 times 0.6561, 41) approx 0.5441 $
+ & = 3600 + 1156 - 4080 times 0.755 approx 1676 $ #noindent;查平方根表，得：$a approx 41$⁠．$ sin gamma = frac(c sin alpha, a) = frac(34 times sin 41 degree, 41) = frac(34 times 0.6561, 41) approx 0.5441 $
 
 $therefore quad gamma approx 32 degree 58'$
 
@@ -1265,7 +1265,7 @@ $ beta = 180 degree -\(alpha + gamma\)= 180 degree -\(41 degree + 32 degree 58'\
 
 ]
 #example[
-已知 $a = 134.6$, $b = 87.8$, $c = 161.7$\(图6.32)，求 $alpha$、$beta$、$gamma$.
+已知 $a = 134.6$, $b = 87.8$, $c = 161.7$\(图6.32)，求 $alpha$⁠、$beta$⁠、$gamma$.
 
 ]
 #figure([#fig("6-34");
@@ -1285,7 +1285,7 @@ $ cos beta = frac(134.6^2 + 161.7^2 - 87.8^2, 2 times 134.6 times 161.7) approx 
 $ sin beta = b / a sin alpha = frac(87.8 times sin 56 degree 18', 134.6) approx 0.5427 $ #noindent;$therefore quad beta = 32 degree 51'\,quad gamma = 180 degree -\(56 degree 18' + 32 degree 51'\)= 90 degree 51'$
 
 ]
-由例6.33可知，如果已知三边 $a$、$b$、$c$, 可用余弦定理求出两个较短的边所对的角的余弦；或由余弦定理求出一角后，再改用正弦定理求另一角的正弦．一般地说后一种方法比较方便．我们所以要先求较短边所对的角，主要还是避免在计算中出现求钝角的情况．
+由例6.33可知，如果已知三边 $a$⁠、$b$⁠、$c$, 可用余弦定理求出两个较短的边所对的角的余弦；或由余弦定理求出一角后，再改用正弦定理求另一角的正弦．一般地说后一种方法比较方便．我们所以要先求较短边所对的角，主要还是避免在计算中出现求钝角的情况．
 
 #exercise[
 已知下列条件，解三角形
@@ -1300,7 +1300,7 @@ $ sin beta = b / a sin alpha = frac(87.8 times sin 56 degree 18', 134.6) approx 
 
 ]
 #example[
-在锐角 $triangle.stroked.t A B C$ 中，已知 $a = 12$, $b = 20$, $alpha = 34 degree$, 求：$beta$、$gamma$ 和 $c$ (图6.33).
+在锐角 $triangle.stroked.t A B C$ 中，已知 $a = 12$, $b = 20$, $alpha = 34 degree$, 求：$beta$⁠、$gamma$ 和 $c$ (图6.33).
 
 ]
 #figure([#fig("6-35");
@@ -1324,7 +1324,7 @@ $therefore quad gamma = 180 degree -\(alpha + beta\)= 180 degree -\(34 degree + 
 $therefore quad c = frac(a sin gamma, sin alpha) = frac(12 times sin 77 degree 15', sin 34 degree) = frac(12 times 0.9753, 0.5592) = 20.93$
 
 ]
-如果在例6.34中，不限 $triangle.stroked.t A B C$ 是锐角三角形，那么 $beta$ 角就可能是钝角（图6.33中的 $angle A B' C$），这样 $beta$ 角就有两个解．对于已知 $a$、$b$、$alpha$ 解三角形这种情形，我们详细讨论如下：
+如果在例6.34中，不限 $triangle.stroked.t A B C$ 是锐角三角形，那么 $beta$ 角就可能是钝角（图6.33中的 $angle A B' C$⁠），这样 $beta$ 角就有两个解．对于已知 $a$⁠、$b$⁠、$alpha$ 解三角形这种情形，我们详细讨论如下：
 
 + 如果已知 $alpha$ 角是钝角或直角，那么必须 $a > b$ 才能有解（为什么？），这时从 $sin beta = frac(b sin alpha, a)$ 求 $beta$ 角的时候，只能取锐角的值，因此只有一个解．
 
@@ -1332,7 +1332,7 @@ $therefore quad c = frac(a sin gamma, sin alpha) = frac(12 times sin 77 degree 1
 
   #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-36");], caption: []), figure([#fig("6-37");], caption: []))));
 
-+ 如果已知的 $alpha$ 角是锐角，并且 $a < b$，我们再分下面三种情况来讨论：
++ 如果已知的 $alpha$ 角是锐角，并且 $a < b$⁠，我们再分下面三种情况来讨论：
 
   + $a > b sin alpha$, 这时从 $sin beta = frac(b sin alpha, a)$ 求得 $sin beta < 1$, $beta$ 可以取一个锐角的值和一个钝角的值，因此可以有两个解（图6.36）．
 
@@ -1400,7 +1400,7 @@ S_triangle.stroked.t & = 1 / 2 a c sin beta\
 S_triangle.stroked.t & = 1 / 2 a b sin gamma $
 
 #proof[
-+ 当 $alpha$、$beta$ 都为锐角时图（6.39），设 $overline(A B)$ 上的高 $overline(C D) = h$. 那么，$ S_triangle.stroked.t = 1 / 2 c h $ #noindent;在直角 $triangle.stroked.t A C D$ 中，$h = b sin alpha$. 代入上式得 $ S_triangle.stroked.t = 1 / 2 b c sin alpha $
++ 当 $alpha$⁠、$beta$ 都为锐角时图（6.39），设 $overline(A B)$ 上的高 $overline(C D) = h$. 那么，$ S_triangle.stroked.t = 1 / 2 c h $ #noindent;在直角 $triangle.stroked.t A C D$ 中，$h = b sin alpha$. 代入上式得 $ S_triangle.stroked.t = 1 / 2 b c sin alpha $
 
   #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("6-41");], caption: []), figure([#fig("6-42");], caption: []))));
 
@@ -1426,10 +1426,10 @@ S_triangle.stroked.t & = 1 / 2 a b sin gamma $
  & = sqrt(frac(\(b + c\)^2 - a^2, 2 b c) dot.op frac(a^2 -\(b - c\)^2, 2 b c))\
  & = frac(1, 2 b c) dot.op sqrt(\(b + c + a\)\(b + c - a\)\(a + b - c\)\(a - b + c\)) $
 
-令 $p = 1 / 2\(a + b + c\)$，则 $2 p = a + b + c$ $ b + c - a =\(a + b + c\)- 2 a = 2 p - 2 a = 2\(p - a\) $ #noindent;同理：$ a + c - b = 2\(p - b\)\,#h(2em) a + b - c = 2\(p - c\) $ #noindent;因此：$ sin alpha & = frac(1, 2 b c) sqrt(16 p\(p - a\)\(p - b\)\(p - c\))\
+令 $p = 1 / 2\(a + b + c\)$⁠，则 $2 p = a + b + c$ $ b + c - a =\(a + b + c\)- 2 a = 2 p - 2 a = 2\(p - a\) $ #noindent;同理：$ a + c - b = 2\(p - b\)\,#h(2em) a + b - c = 2\(p - c\) $ #noindent;因此：$ sin alpha & = frac(1, 2 b c) sqrt(16 p\(p - a\)\(p - b\)\(p - c\))\
  & = frac(2, b c) sqrt(p\(p - a\)\(p - b\)\(p - c\)) $
 
-由于 $S_triangle.stroked.t = 1 / 2 b c sin alpha$，因此：$ S_triangle.stroked.t & = 1 / 2 b c times frac(2, b c) sqrt(p\(p - a\)\(p - b\)\(p - c\))\
+由于 $S_triangle.stroked.t = 1 / 2 b c sin alpha$⁠，因此：$ S_triangle.stroked.t & = 1 / 2 b c times frac(2, b c) sqrt(p\(p - a\)\(p - b\)\(p - c\))\
  & = sqrt(p\(p - a\)\(p - b\)\(p - c\)) $
 
 这个公式，我国叫做#strong[三斜求积公式]，国外又叫做#strong[海伦公式]．
@@ -1441,7 +1441,7 @@ S_triangle.stroked.t & = frac(b^2 sin alpha dot.op sin gamma, 2 sin\(alpha + gam
 S_triangle.stroked.t & = frac(c^2 sin alpha dot.op sin beta, 2 sin\(alpha + beta\)) $
 
 #proof[
-已知 $S_triangle.stroked.t = 1 / 2 b c sin alpha$，由正弦定理，$ b = frac(a sin beta, sin alpha)\,#h(2em) c = frac(a sin gamma, sin alpha) $
+已知 $S_triangle.stroked.t = 1 / 2 b c sin alpha$⁠，由正弦定理，$ b = frac(a sin beta, sin alpha)\,#h(2em) c = frac(a sin gamma, sin alpha) $
 
 因此：$ S_triangle.stroked.t = 1 / 2 (frac(a sin beta, sin alpha)) dot.op (frac(a sin gamma, sin alpha)) dot.op sin alpha = frac(a^2 sin beta dot.op sin gamma, 2 sin alpha) $ #noindent;但 $sin alpha = sin\[180 degree -\(beta + gamma\)\]= sin\(beta + gamma\)$
 
@@ -1457,7 +1457,7 @@ $therefore quad S_triangle.stroked.t = frac(a^2 sin beta dot.op sin gamma, 2 sin
 
   + 三边长各为2、4、4.
 
-  + $alpha = 60 degree$、$beta = 80 degree$、$c = 12$,
+  + $alpha = 60 degree$⁠、$beta = 80 degree$⁠、$c = 12$,
 
   #noindent;求它们的面积各等于多少？
 
@@ -1465,9 +1465,9 @@ $therefore quad S_triangle.stroked.t = frac(a^2 sin beta dot.op sin gamma, 2 sin
 
 + $r$ 为 $triangle.stroked.t A B C$ 的外接圆的半径，求证：$ S_triangle.stroked.t = 2 r^2 sin alpha dot.op sin beta dot.op sin gamma $
 
-+ 已知三角形的三边 $a$、$b$、$c$, 且 $p = 1 / 2\(a + b + c\)$, 求证：内切圆半径 $ r = sqrt(frac(\(p - a\)\(p - b\)\(p - c\), p)) $
++ 已知三角形的三边 $a$⁠、$b$⁠、$c$, 且 $p = 1 / 2\(a + b + c\)$, 求证：内切圆半径 $ r = sqrt(frac(\(p - a\)\(p - b\)\(p - c\), p)) $
 
-+ 设 $h_a$、$h_b$、$h_c$ 分别表示 $triangle.stroked.t A B C$ 的三边 $overline(B C)$、$overline(C A)$、$overline(A B)$ 上的高，求证：$ h_a & = 2 / a sqrt(p\(p - a\)\(p - b\)\(p - c\))\
++ 设 $h_a$⁠、$h_b$⁠、$h_c$ 分别表示 $triangle.stroked.t A B C$ 的三边 $overline(B C)$⁠、$overline(C A)$⁠、$overline(A B)$ 上的高，求证：$ h_a & = 2 / a sqrt(p\(p - a\)\(p - b\)\(p - c\))\
   h_b & = 2 / b sqrt(p\(p - a\)\(p - b\)\(p - c\))\
   h_c & = 2 / c sqrt(p\(p - a\)\(p - b\)\(p - c\)) $
 
@@ -1475,7 +1475,7 @@ $therefore quad S_triangle.stroked.t = frac(a^2 sin beta dot.op sin gamma, 2 sin
 === 解三角形在测量中的应用
 利用解三角形的原理，可以解许多实际测量问题．下面我们来研究如何计算不便测量的两点间的距离．
 
-测量工作者，为了测量远方某个目标 $C$ 的距离（图6.41），总先选定适当长的基线 $overline(A B)$, 然后从基线两端 $A$、$B$, 分别测得目标 $C$ 的方向与 $A B$ 的夹角为 $alpha$、$beta$. 那么，根据基线 $overline(A B)$ 的长度和 $alpha$、$beta$ 的值就可算出 $C$ 点与 $A$ 点、$B$ 点的距离．以及 $C$ 点与基线 $overline(A B)$ 的距离，计算方法如下：
+测量工作者，为了测量远方某个目标 $C$ 的距离（图6.41），总先选定适当长的基线 $overline(A B)$, 然后从基线两端 $A$⁠、$B$, 分别测得目标 $C$ 的方向与 $A B$ 的夹角为 $alpha$⁠、$beta$. 那么，根据基线 $overline(A B)$ 的长度和 $alpha$⁠、$beta$ 的值就可算出 $C$ 点与 $A$ 点、$B$ 点的距离．以及 $C$ 点与基线 $overline(A B)$ 的距离，计算方法如下：
 
 $because quad frac(overline(A C), sin beta) = frac(overline(A B), sin\(alpha + beta\))\,#h(2em) frac(overline(B C), sin alpha) = frac(overline(A B), sin\(alpha + beta\))$
 
@@ -1489,7 +1489,7 @@ $therefore quad x = frac(overline(A B), cot alpha + cot beta)$
 
 在测量中，基线越长，量得越准确，测的精确度就越高．
 
-天文学家曾用了这个方法测出了地球和月亮间的距离．1671年两个法国天文学家拉让德和拉卡伊，一个在柏林，一个在好望角（这两个城市差不多位于同一子午线上），测出了 $alpha$、$beta$ 的大小和 $A B$ 的长度（图6.42）．从而确切地算出了地月平均距离为385400公里．
+天文学家曾用了这个方法测出了地球和月亮间的距离．1671年两个法国天文学家拉让德和拉卡伊，一个在柏林，一个在好望角（这两个城市差不多位于同一子午线上），测出了 $alpha$⁠、$beta$ 的大小和 $A B$ 的长度（图6.42）．从而确切地算出了地月平均距离为385400公里．
 
 在地球上，我们可使用的最长基线是地球的直径，由于地球绕太阳按椭圆形轨道运行，当我们要测量其他星球到地球的距离时，可使用的最长基线是地球椭圆轨道的长轴（图6.43）．
 
@@ -1503,11 +1503,11 @@ $therefore quad x = frac(overline(A B), cot alpha + cot beta)$
 从以上的分析我们知道，当我们应用解三角形原理在地球上测量地球与其他星球的距离时，可使用的基线是有限的，所以星球离地球越远、视角也越小，相对基线就越短，测的结果也就越不精确了．
 
 #exercise[
-+ 要测量一条河两岸的两点 $A$、$B$ 之间的距离，在 $A$ 点所在的岸边选择一条基线 $overline(A C) = 380$ 米，测出 $angle B A C = 75 degree 32'$, $angle B C A = 45 degree 35'$, 求 $A$、$B$ 间的距离．
++ 要测量一条河两岸的两点 $A$⁠、$B$ 之间的距离，在 $A$ 点所在的岸边选择一条基线 $overline(A C) = 380$ 米，测出 $angle B A C = 75 degree 32'$, $angle B C A = 45 degree 35'$, 求 $A$⁠、$B$ 间的距离．
 
-+ 如图，$A$、$B$ 两地不能直接测量，选同时能看到 $A$、$B$ 的一点 $C$, 测得 $overline(A C) = 280$ 米，$overline(B C) = 470$ 米，$angle A C B = 80 degree 21'$, 求 $A$、$B$ 两地的距离．
++ 如图，$A$⁠、$B$ 两地不能直接测量，选同时能看到 $A$⁠、$B$ 的一点 $C$, 测得 $overline(A C) = 280$ 米，$overline(B C) = 470$ 米，$angle A C B = 80 degree 21'$, 求 $A$⁠、$B$ 两地的距离．
 
-+ 河对岸有两个目标 $A$、$B$, 若不准过河，如何测量才能算出 $A$、$B$ 两点间的距离？
++ 河对岸有两个目标 $A$⁠、$B$, 若不准过河，如何测量才能算出 $A$⁠、$B$ 两点间的距离？
 
 ]
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, [#image("/math2/fig/6-ti1.PNG", width: 100%);
@@ -1534,15 +1534,15 @@ $therefore quad x = frac(overline(A B), cot alpha + cot beta)$
 
 + 在 $triangle.stroked.t A B C$ 中，
 
-  + 已知 $a = 8$、$beta = 40 degree$、$gamma = 90 degree$, 求 $b$.
+  + 已知 $a = 8$⁠、$beta = 40 degree$⁠、$gamma = 90 degree$, 求 $b$.
 
-  + 已知 $a = 25$、$b = 31$、$gamma = 90 degree$, 求 $alpha$、$c$.
+  + 已知 $a = 25$⁠、$b = 31$⁠、$gamma = 90 degree$, 求 $alpha$⁠、$c$.
 
-  + 已知 $a = 6$、$beta = 40 degree$、$gamma = 80 degree$, 求 $b$.
+  + 已知 $a = 6$⁠、$beta = 40 degree$⁠、$gamma = 80 degree$, 求 $b$.
 
-  + 已知 $a = 8$、$b = 6$、$alpha = 75 degree$, 求 $beta$、$c$.
+  + 已知 $a = 8$⁠、$b = 6$⁠、$alpha = 75 degree$, 求 $beta$⁠、$c$.
 
-  + 已知 $a = 3$、$b = 4$、$c = 5$, 求 $gamma$.
+  + 已知 $a = 3$⁠、$b = 4$⁠、$c = 5$, 求 $gamma$.
 
 + 已知下列条件，求 $S_triangle.stroked.t$.
 
@@ -1556,7 +1556,7 @@ $therefore quad x = frac(overline(A B), cot alpha + cot beta)$
 
 + 设 $D$ 把 $triangle.stroked.t A B C$ 的边 $overline(B C)$ 分成 $m : n$, 求证：$ n overline(A B)^2 + m overline(A C)^2 =\(m + n\)overline(A D)^2 + n overline(B D)^2 + m overline(C D)^2 $
 
-+ 已知 $triangle.stroked.t A B C$, 且 $frac(a + b, 6) = frac(b + c, 4) = frac(c + a, 5)$，求证：
++ 已知 $triangle.stroked.t A B C$, 且 $frac(a + b, 6) = frac(b + c, 4) = frac(c + a, 5)$⁠，求证：
 
   + $frac(sin alpha, 7) = frac(sin beta, 5) = frac(sin gamma, 3)$
 
@@ -1582,11 +1582,11 @@ $therefore quad x = frac(overline(A B), cot alpha + cot beta)$
 
 + 如果已知四边形 $A B C D$ 的 $angle A = 90 degree$, $overline(A B) = 32$, $overline(B C) = 27$, $overline(C D) = 35$, $overline(D A) = 24$, 那么它的面积是多少？
 
-+ 已知一四边形的两条对角线的长分别为 $x$、$y$, 夹角为 $theta$, 面积为 $S$, 求证：$ S = 1 / 2 x y sin theta $
++ 已知一四边形的两条对角线的长分别为 $x$⁠、$y$, 夹角为 $theta$, 面积为 $S$, 求证：$ S = 1 / 2 x y sin theta $
 
-#heading(level: 2, numbering: none, outlined: false)[复习题六]
+#heading(level: 2, numbering: none, outlined: true)[复习题六]
 
-+ 用作图法求锐角 $x$.
++ #block(sticky: true)[用作图法求锐角 $x$.]
 
   #cols(2)[
   + $sin x = 4 / 5$
@@ -1599,9 +1599,9 @@ $therefore quad x = frac(overline(A B), cot alpha + cot beta)$
 
   ]
 
-+ 已知：$tan alpha = m\,thick m gt.eq 0$, 求 $cos alpha$、$sin alpha$.
++ 已知：$tan alpha = m\,thick m gt.eq 0$, 求 $cos alpha$⁠、$sin alpha$.
 
-+ 已知 $sin alpha + cos alpha = 1.2$, 求 $sin alpha$、$cos alpha$ 的值．
++ 已知 $sin alpha + cos alpha = 1.2$, 求 $sin alpha$⁠、$cos alpha$ 的值．
 
 + 计算：
 
@@ -1619,19 +1619,19 @@ $therefore quad x = frac(overline(A B), cot alpha + cot beta)$
 
 + 在四边形 $A B C D$ 中，$overline(A B) = 2 a$, $overline(B C) =\(sqrt(3) + 1\)a$, $overline(C D) = sqrt(2) a$, $angle B = 60 degree$, $angle C = 75 degree$, 求 $overline(A C)$ 的长和四边形 $A B C D$ 的面积．
 
-+ 已知在 $triangle.stroked.t A B C$ 中，$a = 4$、$b = 5$、$c = 6$, 求 $cos alpha$、$sin gamma$、$sin beta$、$sin alpha$, 问 $alpha$、$beta$、$gamma$ 是锐角还是钝角？
++ 已知在 $triangle.stroked.t A B C$ 中，$a = 4$⁠、$b = 5$⁠、$c = 6$, 求 $cos alpha$⁠、$sin gamma$⁠、$sin beta$⁠、$sin alpha$, 问 $alpha$⁠、$beta$⁠、$gamma$ 是锐角还是钝角？
 
 + 一个三角形的三边的长分别为3尺，4尺及 $sqrt(37)$ 尺，求此三角形的最大角的度数．
 
 + 在 $triangle.stroked.t A B C$ 中，求证：$ frac(a, sin alpha) = frac(b + c, sin beta + sin gamma) = frac(b - c, sin beta - sin gamma) $
 
-+ 设 $P$ 是等边三角形 $A B C$ 外接圆的 $wideparen(B C)$ 上的一点，求证 $ overline(P A)^2 = overline(A B)^2 + overline(P B) dot.op overline(P C) $#noindent;（提示：求 $cos angle A B P$, $cos angle A C P$，利用 $cos angle A B P = - cos angle A C P$ 化简即得）．
++ 设 $P$ 是等边三角形 $A B C$ 外接圆的 $wideparen(B C)$ 上的一点，求证 $ overline(P A)^2 = overline(A B)^2 + overline(P B) dot.op overline(P C) $#noindent;（提示：求 $cos angle A B P$, $cos angle A C P$⁠，利用 $cos angle A B P = - cos angle A C P$ 化简即得）．
 
 + 在 $triangle.stroked.t A B C$ 中，已知 $gamma = 60 degree$, $overline(A C) = 4$, 面积为 $sqrt(3)$, 求 $overline(A B)$ 及 $overline(B C)$ 的长．
 
 + 如图，为求得河对岸某建筑物的高 $overline(A B)$, 在地面上引一条基线 $overline(C D) = a$, 测得 $angle A C B = alpha$, $angle B C D = beta$, $angle B D C = gamma$, 求 $overline(A B)$.
 
-+ 已知 $dot.o\(A\,sqrt(3)\)$、$dot.o\(B\,2 - sqrt(3)\)$、$dot.o\(C\,1\)$．$dot.o A$ 分别与 $dot.o B$ 和 $dot.o C$ 相外切．$angle B A C = 60 degree$, 求 $overline(B C)$ 的长和 $angle A C B$ 的度数．
++ 已知 $dot.o\(A\,sqrt(3)\)$⁠、$dot.o\(B\,2 - sqrt(3)\)$⁠、$dot.o\(C\,1\)$⁠．$dot.o A$ 分别与 $dot.o B$ 和 $dot.o C$ 相外切．$angle B A C = 60 degree$, 求 $overline(B C)$ 的长和 $angle A C B$ 的度数．
 
   #fig-center[
   #scale(70%, reflow: true, image("/math2/fig/6-14ti.png"));
@@ -1644,7 +1644,7 @@ $therefore quad x = frac(overline(A B), cot alpha + cot beta)$
 
 + 外国船只除特许者外，不得进入离我海岸 $d$ 海里以内的区域，设 $A$ 和 $B$ 是我们的两个观测站，$A$ 与 $B$ 之间的距离为 $S$ 海里，海岸线是过 $A$ 点及 $B$ 点的直线，一外国船在 $P$ 点，在 $A$ 站测得 $angle B A P = alpha$, 同时在 $B$ 站测得 $angle A B P = beta$, 问 $alpha$ 及 $beta$ 满足什么简单的三角比的不等式，就应当向此未经特许的外国船发出警告，命令退出我海域．
 
-+ 已知 $I$ 是 $triangle.stroked.t A B C$ 的内心，$I_a$、$I_b$、$I_c$ 为 $triangle.stroked.t A B C$ 的三个旁心，$r\,r'\,r_a\,r_b\,r_c$ 分别为 $triangle.stroked.t A B C$ 的外接圆、内切圆和三个旁切圆的半径；设 $p = 1 / 2\(a + b + c\)$, $S_triangle.stroked.t$ 为 $triangle.stroked.t A B C$ 的面积；求证：
++ 已知 $I$ 是 $triangle.stroked.t A B C$ 的内心，$I_a$⁠、$I_b$⁠、$I_c$ 为 $triangle.stroked.t A B C$ 的三个旁心，$r\,r'\,r_a\,r_b\,r_c$ 分别为 $triangle.stroked.t A B C$ 的外接圆、内切圆和三个旁切圆的半径；设 $p = 1 / 2\(a + b + c\)$, $S_triangle.stroked.t$ 为 $triangle.stroked.t A B C$ 的面积；求证：
 
   + $S_triangle.stroked.t = r' p = r_a\(p - a\)= r_b\(p - b\)= r_c\(p - c\)$
 

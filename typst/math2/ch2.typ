@@ -14,7 +14,7 @@
 
 第二，集合是指构成集合的全体元素，而不是个别元素．作为整体的集合和集合中的每个元素都是不同的．
 
-例如，集合 $A = \{ a\,b\,c\,d \}$, $A$ 代表的是字母 $a$、$b$、$c$、$d$ 的全体，而不是代表其中的个别字母，因此，作为字母 $a$、$b$、$c$、$d$ 的整体的集合 $A$ 与 $A$ 中的个别元素如 $a\,b\,c\,d$ 不能混为一谈．
+例如，集合 $A = \{ a\,b\,c\,d \}$, $A$ 代表的是字母 $a$⁠、$b$⁠、$c$⁠、$d$ 的全体，而不是代表其中的个别字母，因此，作为字母 $a$⁠、$b$⁠、$c$⁠、$d$ 的整体的集合 $A$ 与 $A$ 中的个别元素如 $a\,b\,c\,d$ 不能混为一谈．
 
 第三，集合中所含的元素必须是“确定”的，是可以判断的．例如，由“比较小的实数”的全体就不能构成一个集合，因为到底什么叫做比较小的实数，没有判断的标准．但是“比80小的实数”是完全可以确定的，这就有了检验一个实数是否是这个集合的元素的标准．
 
@@ -31,9 +31,9 @@
   ]
 )
 
-我们通常用大写字母 $A\,B\,C\,dots.h$ 等表示某一个集合，用小写字母 $a\,b\,c\,dots.h$ 表示集合的元素．如果 $a$ 是集合 $A$ 的一个元素，我们就记为 $a in A$，读作 $a$ 属于 $A$, 或说 $a$ 是 $A$ 中的一个元素．例如，$2 in \{ 2\,3 \}$, 表示 $2$ 是集合 $\{ 2\,3 \}$ 中的一个元素．
+我们通常用大写字母 $A\,B\,C\,dots.h$ 等表示某一个集合，用小写字母 $a\,b\,c\,dots.h$ 表示集合的元素．如果 $a$ 是集合 $A$ 的一个元素，我们就记为 $a in A$⁠，读作 $a$ 属于 $A$, 或说 $a$ 是 $A$ 中的一个元素．例如，$2 in \{ 2\,3 \}$, 表示 $2$ 是集合 $\{ 2\,3 \}$ 中的一个元素．
 
-如果 $a$ 不是集合 $A$ 的元素，记作 $a in.not A$ 读作 $a$ 不属于 $A$．
+如果 $a$ 不是集合 $A$ 的元素，记作 $a in.not A$ 读作 $a$ 不属于 $A$⁠．
 
 应该注意的是：几何图形中的元素“点”我们仍用大写字母 $A\,B\,C\,dots.h$ 表示，这一点请同学们务必注意，不要混淆．如 $X$ 点在直线 $A B$ 上，也可以说 $X$ 点属于直线 $A B$, 可写成 $X in upright("直线") A B$. $Y$ 点不在直线 $A B$ 上，也可以说 $Y$ 点不属于直线 $A B$, 可写成 $Y in.not upright("直线") A B$（图2.2）．
 
@@ -56,7 +56,7 @@
 ==== 列举法
 如果一个集合 $A$ 只含有很少几个元素，那么可以直截了当地把这个集合含有的所有元素逐一列举出来，并用大括号 $\{ quad \}$ 把它们括起来，这种描述法叫做#strong[列举法]．
 
-例如 $\{ 0\,1 \}$ 是由0,1这两个元素所构成的集合；$\{ +\,-\,times\,div \}$ 表示由 $+$、$-$、$times$、$div$ 四个运算符号所构成的集合．用列举法描述集合时，描述方法与元素在括号内的排列顺序无关，即 $\{ 3\,7\,10 \}$、$\{ 10\,3\,7 \}$ 与 $\{ 7\,3\,10 \}$ 都表示同一个集合．
+例如 $\{ 0\,1 \}$ 是由0,1这两个元素所构成的集合；$\{ +\,-\,times\,div \}$ 表示由 $+$⁠、$-$⁠、$times$⁠、$div$ 四个运算符号所构成的集合．用列举法描述集合时，描述方法与元素在括号内的排列顺序无关，即 $\{ 3\,7\,10 \}$⁠、$\{ 10\,3\,7 \}$ 与 $\{ 7\,3\,10 \}$ 都表示同一个集合．
 
 ==== 特征性质描述法
 当集合的元素稍多一些时，如小于100的质数所构成的集合：$ \{ 2\,3\,5\,7\,11\,13\,17\,19\,23\,29\,31\,37\,41\,43\,47\,53\,59\,61\,67\,71\,73\,79\,83\,89\,97 \} $ #noindent;逐一列举已是很麻烦的了，而对于含有无穷多个元素的集合，例如全体整数所构成的集合，逐一列举它的元素更是不可能的，这时我们可用某集合所含的元素的“特征性质”去描述这个集合，这种方法叫做#strong[特征性质描述法]．如：
@@ -65,7 +65,7 @@
 
 + 集合元素为 $plus.minus 1\,plus.minus 3\,plus.minus 5\,plus.minus 7\,dots.h\,plus.minus\(2 n + 1\)dots.h$ 的集合，可描述为{奇数}或{被2除余1的数}．
 
-+ $\{ - sqrt(2)\,sqrt(2) \}$, 可描述为 $\{ upright("平方为2的数") \}$．
++ $\{ - sqrt(2)\,sqrt(2) \}$, 可描述为 $\{ upright("平方为2的数") \}$⁠．
 
 + 圆面上不在圆上的点叫做圆内的点．在平面 $P$ 上以 $O$ 为圆心，5厘米长为半径的圆内的点所成的集合，可描述为{在平面 $P$ 上和点 $O$ 的距离小于5厘米的点}．
 
@@ -79,7 +79,7 @@
 
 + $D = \{ X\|overline(O X) < 5 upright(c m)\,thick upright("且") O upright("是平面") P upright("上定点，") X in upright("平面") P \}$
 
-有时候“任一元素 $x$”也可用某种形式写出来，例如上面的集合 $A$、$B$ 可写为：$ A & = \{ 2 n\|n upright("为任意整数") \} = \{ 2 n\|n in bb(Z) \}\
+有时候“任一元素 $x$⁠”也可用某种形式写出来，例如上面的集合 $A$⁠、$B$ 可写为：$ A & = \{ 2 n\|n upright("为任意整数") \} = \{ 2 n\|n in bb(Z) \}\
 B & = \{ 2 n + 1\|n upright("为任意整数") \} = \{ 2 n + 1\|n in bb(Z) \} $
 
 #exercise[
@@ -93,15 +93,15 @@ B & = \{ 2 n + 1\|n upright("为任意整数") \} = \{ 2 n + 1\|n in bb(Z) \} $
 
   + 20与30间的奇数的全体构成的集合．
 
-  + 小于20的全体偶数构成的集合 $P$．
+  + 小于20的全体偶数构成的集合 $P$⁠．
 
-+ 用符号“$in$”，“$in.not$”表示 $b$, $c$, $d$ 与集合的关系．
++ 用符号“$in$⁠”，“$in.not$⁠”表示 $b$, $c$, $d$ 与集合的关系．
 
-  + $A = \{ x\|x upright("是15的因数") \}$，$b = 5$, $c = 15$, $d = 12$；
+  + $A = \{ x\|x upright("是15的因数") \}$⁠，$b = 5$, $c = 15$, $d = 12$⁠；
 
-  + $O = \{ x\|x upright("是小于16的质数") \}$，$b = 2$, $c = 3$, $d = 7$．
+  + $O = \{ x\|x upright("是小于16的质数") \}$⁠，$b = 2$, $c = 3$, $d = 7$⁠．
 
-+ $C$ 是平面 $P$ 上以 $O$ 为圆心，半径为3cm的圆周上的所有点组成的集合，$X$、$Y$、$Z$ 是平面 $P$ 上的三个点，且 $overline(O X) = 5 upright(c m)$, $overline(O Y) = 2 upright(c m)$, $overline(O Z) = 3 upright(c m)$, 试用符号“$in$”和“$in.not$”表示 $X$, $Y$, $Z$ 与集合 $C$ 的关系．
++ $C$ 是平面 $P$ 上以 $O$ 为圆心，半径为3cm的圆周上的所有点组成的集合，$X$⁠、$Y$⁠、$Z$ 是平面 $P$ 上的三个点，且 $overline(O X) = 5 upright(c m)$, $overline(O Y) = 2 upright(c m)$, $overline(O Z) = 3 upright(c m)$, 试用符号“$in$⁠”和“$in.not$⁠”表示 $X$, $Y$, $Z$ 与集合 $C$ 的关系．
 
 + 试用特征性质描述法描述下列集合．
 
@@ -126,13 +126,13 @@ B & = \{ 2 n + 1\|n upright("为任意整数") \} = \{ 2 n + 1\|n in bb(Z) \} $
 ]
 === 集合与集合的关系和集合的运算
 ==== 集合与集合的关系
-如果集合 $A$ 的每一个元素，也是集合 $B$ 的元素，那么我们说 $A$ 是 $B$ 的#strong[子集]．也可以说“$A$ #strong[含于] $B$”，或“$B$ #strong[包含] $A$”，我们用符号 $A subset.eq B$, 或 $B supset.eq A$ 来表示，请同学们注意：因为集合 $A$ 的每个元素肯定是集合 $A$ 的一个元素，所以每个集合 $A$ 都是它本身的子集．
+如果集合 $A$ 的每一个元素，也是集合 $B$ 的元素，那么我们说 $A$ 是 $B$ 的#strong[子集]．也可以说“$A$ #strong[含于] $B$⁠”，或“$B$ #strong[包含] $A$⁠”，我们用符号 $A subset.eq B$, 或 $B supset.eq A$ 来表示，请同学们注意：因为集合 $A$ 的每个元素肯定是集合 $A$ 的一个元素，所以每个集合 $A$ 都是它本身的子集．
 
 为了能够形象化地帮助我们理解集合，我们常用图来表示集合．最常用的方法是对给定的集合用圆形表示，圆形上的点表示该集合的元素，圆形外的点表示不是该集合的元素．不同的圆形表示不同的集合．这种圆形通常叫做维恩（Venn）图．
 
 这样，集合 $A$ 是集合 $B$ 的子集，可形象地用图2.3所示的两圆形来表示．
 
-如果集合 $A$ 中的每一个元素都是集合 $B$ 中的元素，而 $B$ 中的元素却有不属于 $A$ 的，这时我们说 $A$ 是 $B$ 的#strong[真子集]，记作 $A subset B$．
+如果集合 $A$ 中的每一个元素都是集合 $B$ 中的元素，而 $B$ 中的元素却有不属于 $A$ 的，这时我们说 $A$ 是 $B$ 的#strong[真子集]，记作 $A subset B$⁠．
 
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("2-03");], caption: []), figure([#fig("2-04");], caption: []))));
 
@@ -140,26 +140,26 @@ B & = \{ 2 n + 1\|n upright("为任意整数") \} = \{ 2 n + 1\|n in bb(Z) \} $
 
 这里我们要提醒同学们注意区分“属于”关系和“含于”关系．“属于”关系是集合的元素与集合本身的关系，但“含于”关系却是集合与集合之间的关系．
 
-例如集合 $A = \{ 3\,4\,5 \}\,thick B = \{ 3\,4\,5\,6\,7 \}$, 对于元素4来说，它和 $A$ 或 $B$ 的关系是“属于”关系，即 $4 in A$, $4 in B$\; 对于集合 $A$ 与 $B$ 来说，它们的关系却是“含于”关系，即 $A subset B$．
+例如集合 $A = \{ 3\,4\,5 \}\,thick B = \{ 3\,4\,5\,6\,7 \}$, 对于元素4来说，它和 $A$ 或 $B$ 的关系是“属于”关系，即 $4 in A$, $4 in B$\; 对于集合 $A$ 与 $B$ 来说，它们的关系却是“含于”关系，即 $A subset B$⁠．
 
-如果两个集合 $A$、$B$ 是由共同的元素所构成的，我们称它们为相等的集合，记作 $A = B$. 例如，$\{ x\,y\,z \} = \{ y\,x\,z \}$, $\{ +\,-\,times\,div \} = \{ times\,-\,+\,div \}$ 等．
+如果两个集合 $A$⁠、$B$ 是由共同的元素所构成的，我们称它们为相等的集合，记作 $A = B$. 例如，$\{ x\,y\,z \} = \{ y\,x\,z \}$, $\{ +\,-\,times\,div \} = \{ times\,-\,+\,div \}$ 等．
 
-如果两个集合 $A$、$B$, $A subset.eq B$ 且 $B subset.eq A$, 这就是说 $A$ 的每个元素都是 $B$ 的元素，而 $B$ 的每个元素也都是 $A$ 的元素，显然这两个集合含有相同的元素，则 $A = B$. 例如，$A = \{ upright("偶数") \}$，$B = \{ 2 n\|n in bb(Z) \}$, 则 $A = B$. 事实上 $A$, $B$ 两个集合就是同一个集合的两种不同描述法．
+如果两个集合 $A$⁠、$B$, $A subset.eq B$ 且 $B subset.eq A$, 这就是说 $A$ 的每个元素都是 $B$ 的元素，而 $B$ 的每个元素也都是 $A$ 的元素，显然这两个集合含有相同的元素，则 $A = B$. 例如，$A = \{ upright("偶数") \}$⁠，$B = \{ 2 n\|n in bb(Z) \}$, 则 $A = B$. 事实上 $A$, $B$ 两个集合就是同一个集合的两种不同描述法．
 
-如果有三个集合 $A$、$B$、$C$, $A subset.eq B$ 且 $B subset.eq C$, 那么显然有 $A subset.eq C$. 这就是说集合的含于关系具有传递性．
+如果有三个集合 $A$⁠、$B$⁠、$C$, $A subset.eq B$ 且 $B subset.eq C$, 那么显然有 $A subset.eq C$. 这就是说集合的含于关系具有传递性．
 
 ==== 集合的运算
 #v(0.8em);
 
-#noindent;#strong[交集]#h(1em);由集合 $A$ 与集合 $B$ 的公共元素所成的集合叫做集合 $A$ 与集合 $B$ 的交集（或交）．记为：$A inter B$，读为 $A$ 交 $B$.
+#noindent;#strong[交集]#h(1em);由集合 $A$ 与集合 $B$ 的公共元素所成的集合叫做集合 $A$ 与集合 $B$ 的交集（或交）．记为：$A inter B$⁠，读为 $A$ 交 $B$.
 
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("2-05");], caption: []), figure([#fig("2-06");], caption: []))));
 
-两个集合 $A$、$B$ 的交集用维恩图来示意，如图2.5中的阴影部分就表示 $A inter B$.
+两个集合 $A$⁠、$B$ 的交集用维恩图来示意，如图2.5中的阴影部分就表示 $A inter B$.
 
-若 $A = \{ a\,b\,c\,d \}$, $B = \{ c\,d\,e \}$, 则 $A inter B = \{ c\,d \}$．
+若 $A = \{ a\,b\,c\,d \}$, $B = \{ c\,d\,e \}$, 则 $A inter B = \{ c\,d \}$⁠．
 
-在图2.6中，直线 $ell$ 与直线 $m$ 的交集是 $A$ 点，即 $ell inter m = \{ A upright("点") \}$．
+在图2.6中，直线 $ell$ 与直线 $m$ 的交集是 $A$ 点，即 $ell inter m = \{ A upright("点") \}$⁠．
 
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("2-07");], caption: []), figure([#fig("2-08");], caption: []))));
 
@@ -173,17 +173,17 @@ B & = \{ 2 n + 1\|n upright("为任意整数") \} = \{ 2 n + 1\|n in bb(Z) \} $
 
 #v(0.8em);
 
-#noindent;#strong[并集]#h(1em);由集合 $A$ 的元素或集合 $B$ 的元素合并而成的集合叫做集合 $A$ 与集合 $B$ 的并集（或并）记为：$A union B$，读为A并B．
+#noindent;#strong[并集]#h(1em);由集合 $A$ 的元素或集合 $B$ 的元素合并而成的集合叫做集合 $A$ 与集合 $B$ 的并集（或并）记为：$A union B$⁠，读为A并B．
 
 集合 $A$ 与集合 $B$ 的并集用维恩图示意，如图2.9所示，图中的阴影部分就表示 $A union B$.
 
 如果 $A = \{ 1\,2\,3 \}$, $B = \{ 3\,4\,5 \}$, 那么 $A union B = \{ 1\,2\,3\,4\,5 \}$.
 
 #rmk[
-在求上述 $A$、$B$ 的并集时，虽然 $A$ 与 $B$ 含有共同的元素3, 但在 $A union B$ 中3只取一次．
+在求上述 $A$⁠、$B$ 的并集时，虽然 $A$ 与 $B$ 含有共同的元素3, 但在 $A union B$ 中3只取一次．
 
 ]
-如果 $A_(+) = \{ x\|x upright("是实数，且") x gt.eq 5 \}$，$A_(-) = \{ x\|x upright("是实数，且") x lt.eq - 5 \}$，$A = \{ x\|x^2 gt.eq 25 \}$，那么 $A_(+) union A_(-) = A$．
+如果 $A_(+) = \{ x\|x upright("是实数，且") x gt.eq 5 \}$⁠，$A_(-) = \{ x\|x upright("是实数，且") x lt.eq - 5 \}$⁠，$A = \{ x\|x^2 gt.eq 25 \}$⁠，那么 $A_(+) union A_(-) = A$⁠．
 
 在图2.10中，直线 $A B$ 是射线 $A B$ 和射线 $B A$ 的并集，即 $ upright("直线") A B = upright("射线") A B union upright("射线") B A $
 
@@ -193,7 +193,7 @@ B & = \{ 2 n + 1\|n upright("为任意整数") \} = \{ 2 n + 1\|n in bb(Z) \} $
 
 由空集的意义可知，对任何一个集合 $P$, 都有 $P inter nothing = nothing$, $P union nothing = P$ 成立，并且空集是任何一个集合 $P$ 的子集．即：$P supset.eq nothing$
 
-如果 $A = \{ upright("奇数") \}$，$B = \{ upright("偶数") \}$，那么 $A inter B = nothing$．
+如果 $A = \{ upright("奇数") \}$⁠，$B = \{ upright("偶数") \}$⁠，那么 $A inter B = nothing$⁠．
 
 在图2.11中，若 $dot.o O_1$ 和 $dot.o O_2$ 相离，则 $dot.o O_1 inter dot.o O_2 = nothing$
 
@@ -210,19 +210,19 @@ B & = \{ 2 n + 1\|n upright("为任意整数") \} = \{ 2 n + 1\|n in bb(Z) \} $
 
 #noindent;#strong[基集与补集]#h(1em);如果我们所讨论的集合都是一个给定集合的子集，我们就称这个给定集合为#strong[基集]，通常用符号 $I$ 表示基集．
 
-例如，我们所讨论的集合是 $nothing$、$\{ 1 \}$、$\{ 2 \}$、$\{ 3 \}$、$\{ 1\,2 \}$、$\{ 2\,3 \}$、$\{ 1\,3 \}$ 和 $\{ 1\,2\,3 \}$ 时，因为上述集合都是集合 $\{ 1\,2\,3 \}$ 的子集，所以我们称 $\{ 1\,2\,3 \}$ 为基集．
+例如，我们所讨论的集合是 $nothing$⁠、$\{ 1 \}$⁠、$\{ 2 \}$⁠、$\{ 3 \}$⁠、$\{ 1\,2 \}$⁠、$\{ 2\,3 \}$⁠、$\{ 1\,3 \}$ 和 $\{ 1\,2\,3 \}$ 时，因为上述集合都是集合 $\{ 1\,2\,3 \}$ 的子集，所以我们称 $\{ 1\,2\,3 \}$ 为基集．
 
 又因为平面和平面上的几何图形都是点的集合，那么平面几何所讨论的图形都可以看作是某平面上所有点的集合的子集，这时，我们把平面叫做基集．
 
 在代数中，当我们讨论有理数运算时，全体有理数就是基集．
 
-如果 $A subset.eq I$, 在基集 $I$ 中所有不属于 $A$ 的元素所构成的集合叫做 $A$ 的#strong[补集]，以符号“$A^c$”表示，读为 $A$ 补．因此，$ A inter A^c = nothing\,#h(2em) A union A^c = I $
+如果 $A subset.eq I$, 在基集 $I$ 中所有不属于 $A$ 的元素所构成的集合叫做 $A$ 的#strong[补集]，以符号“$A^c$⁠”表示，读为 $A$ 补．因此，$ A inter A^c = nothing\,#h(2em) A union A^c = I $
 
-基集在图示时，常常用一矩形所包围的点表示．图2.12中的阴影部分示意 $A^c$．
+基集在图示时，常常用一矩形所包围的点表示．图2.12中的阴影部分示意 $A^c$⁠．
 
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("2-12");], caption: []), figure([#fig("2-13");], caption: []))));
 
-如果以实数全体为基集 $I$，$A = \{ upright("有理数") \}$，$B = \{ upright("无理数") \}$，那么 $A^c = B$, $B^c = A$, $A union B = I$, $A$ 和 $B$ 互为补集．
+如果以实数全体为基集 $I$⁠，$A = \{ upright("有理数") \}$⁠，$B = \{ upright("无理数") \}$⁠，那么 $A^c = B$, $B^c = A$, $A union B = I$, $A$ 和 $B$ 互为补集．
 
 如果以实数的全体为基集 $I$, $A = \{ x\|x gt.eq 5 \}$, $B = \{ x\|x < 5 \}$, 那么 $A^c = B$, $B^c = A$, $A$ 和 $B$ 互为补集．
 
@@ -248,7 +248,7 @@ $A inter B = A$ 和 $A inter B^c = nothing$ 是同一件事的两种说法（图
 
   + 存在一个既是 $A$ 的元素又是 $A$ 的子集的对象吗？
 
-+ 设 $A = \{ x\|x upright("是一位的奇数") \}$，指出在下列集合中，哪个是空集？哪个是只有一个元素的集合？$ B = \{ x\|x in A upright("且") x > 2 \}\;#h(2em) C = \{ x\|x in A upright("且") x > 9 \}\
++ 设 $A = \{ x\|x upright("是一位的奇数") \}$⁠，指出在下列集合中，哪个是空集？哪个是只有一个元素的集合？$ B = \{ x\|x in A upright("且") x > 2 \}\;#h(2em) C = \{ x\|x in A upright("且") x > 9 \}\
   D = \{ x\|x in A upright("且") x upright("除以3余2") \} $
 
 + 指出下列各题中集合 $A$ 与集合 $B$ 的关系．
@@ -271,11 +271,11 @@ $A inter B = A$ 和 $A inter B^c = nothing$ 是同一件事的两种说法（图
 
   + $A = \{ x\|x upright("是18的约数") \}\,#h(2em) B = \{ x\|x upright("是小于或等于10的整数") \}$
 
-+ 已知 $A = \{ 2\,3\,5\,6\,7 \}$, $B = \{ x\|x upright("为一位奇数") \}$，分别把 $A inter B$, $A union B$ 的元素用列举法表示出来．
++ 已知 $A = \{ 2\,3\,5\,6\,7 \}$, $B = \{ x\|x upright("为一位奇数") \}$⁠，分别把 $A inter B$, $A union B$ 的元素用列举法表示出来．
 
-+ 若基集选定为实数集，$A = \{ x\|x < 5 \}$，求 $A^c$．
++ 若基集选定为实数集，$A = \{ x\|x < 5 \}$⁠，求 $A^c$⁠．
 
-+ 若基集定为平面 $P$, $O$ 是 $P$ 上一定点，设平面 $P$ 上的一个子集 $A = \{ X\|overline(O X) < 2 upright("且") X in upright("平面") P \}$, 求 $A^c$．
++ 若基集定为平面 $P$, $O$ 是 $P$ 上一定点，设平面 $P$ 上的一个子集 $A = \{ X\|overline(O X) < 2 upright("且") X in upright("平面") P \}$, 求 $A^c$⁠．
 
 + 某小组共有学生18人，其中有12人喜欢排球，有15人喜欢篮球，这两种运动都喜欢的有10人，试问：
 
@@ -297,19 +297,19 @@ C & = \{ X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
 在本书中，我们用小写字母如 $alpha\,beta\,gamma\,dots.h$ 等去表示“性质”；用相对的大写英文字母 $A\,B\,C\,D\,dots.h$ 等去表示由具有该性质的元素所构成的集合．
 
-例如：集合 $A = \{ upright("偶数") \}$，$alpha$ 表示性质：被2整除，那么集合 $A$ 完全由具有性质 $alpha$ 的元素确定．这样，偶数集合 $A$ 与构成这个集合的元素所具有的性质 $alpha$（被2整除）互相对应．因此，如果 $A$ 是由具有性质 $alpha$ 的元素所构成的集合，那么 $A$ 与 $alpha$ 之间的这种对应关系，可以表示为：$ alpha arrow.l.r.long A\,#h(2em) upright("或") #h(2em) A arrow.l.r.long alpha $
+例如：集合 $A = \{ upright("偶数") \}$⁠，$alpha$ 表示性质：被2整除，那么集合 $A$ 完全由具有性质 $alpha$ 的元素确定．这样，偶数集合 $A$ 与构成这个集合的元素所具有的性质 $alpha$（被2整除）互相对应．因此，如果 $A$ 是由具有性质 $alpha$ 的元素所构成的集合，那么 $A$ 与 $alpha$ 之间的这种对应关系，可以表示为：$ alpha arrow.l.r.long A\,#h(2em) upright("或") #h(2em) A arrow.l.r.long alpha $
 
 下面我们将利用集合与性质之间的对应关系简单地把今后要用到的简易逻辑作些说明．
 
-如果 $A = \{ x\|x upright("是4的倍数") \}$，$B = \{ x\|x upright("是2的倍数") \}$，则 $A$ 中的元素都具有性质 $alpha$：“4的倍数”；$B$ 中的元素都具有性质 $beta$：“2的倍数”．我们知道如果某元素 $x$ 是“4的倍数”，则 $x$ 一定是“2的倍数”（即 $A$ 是 $B$ 的子集），这时我们说可由“$x$ 是4的倍数”推出“$x$ 是2的倍数”．
+如果 $A = \{ x\|x upright("是4的倍数") \}$⁠，$B = \{ x\|x upright("是2的倍数") \}$⁠，则 $A$ 中的元素都具有性质 $alpha$⁠：“4的倍数”；$B$ 中的元素都具有性质 $beta$⁠：“2的倍数”．我们知道如果某元素 $x$ 是“4的倍数”，则 $x$ 一定是“2的倍数”（即 $A$ 是 $B$ 的子集），这时我们说可由“$x$ 是4的倍数”推出“$x$ 是2的倍数”．
 
 一般地，#strong[如果具有性质 ]$alpha$#strong[ 的元素也具有性质 ]$beta$#strong[, 我们说可由 ]$alpha$#strong[ 推出 ]$beta$#strong[, 用符号 ]$alpha arrow.r.double beta$#strong[ 表示．]
 
-推出关系是简易逻辑中最基本的关系．如果令：$A arrow.l.r.long alpha$, $B arrow.l.r.long beta$，则 $alpha arrow.r.double beta$ 和 $A subset.eq B$ 是同一件事的两种说法，从集合的观点看 $A$ 是 $B$ 的子集（即 $A subset.eq B$）；从性质的观点看 $alpha$ 推出 $beta$（即 $alpha arrow.r.double beta$）．
+推出关系是简易逻辑中最基本的关系．如果令：$A arrow.l.r.long alpha$, $B arrow.l.r.long beta$⁠，则 $alpha arrow.r.double beta$ 和 $A subset.eq B$ 是同一件事的两种说法，从集合的观点看 $A$ 是 $B$ 的子集（即 $A subset.eq B$⁠）；从性质的观点看 $alpha$ 推出 $beta$（即 $alpha arrow.r.double beta$⁠）．
 
-在日常用语中，我们常说“如果某事物具有性质 $alpha$, 则必具有性质 $beta$\.”也就是上面讲的 $alpha arrow.r.double beta$．
+在日常用语中，我们常说“如果某事物具有性质 $alpha$, 则必具有性质 $beta$\.”也就是上面讲的 $alpha arrow.r.double beta$⁠．
 
-如果 $alpha : x > 2$, $beta : x > 3$, 因为一个大于3的数也一定大于2, 所以 $beta arrow.r.double alpha$, 若 $A = \{ x\|x > 2 \}$, $B = \{ x\|x > 3 \}$, 则有 $B subset.eq A$．
+如果 $alpha : x > 2$, $beta : x > 3$, 因为一个大于3的数也一定大于2, 所以 $beta arrow.r.double alpha$, 若 $A = \{ x\|x > 2 \}$, $B = \{ x\|x > 3 \}$, 则有 $B subset.eq A$⁠．
 
 如果 $alpha :\|x\|> 2$, $beta : x > 1$. 设 $A = \{ x\|thick\|x\|> 2 \}$, $B = \{ x\|x > 1 \}$, 因为 $A = \{ x\|thick\|x\|> 2 \} = \{ x\|x > 2 \} union \{ x\|x < - 2 \}$, 由此，我们可以看到一个绝对值大于2的数，并不一定大于1, 所以 $A$ 不含于 $B$, 即 $alpha arrow.r.double beta$ 不成立，反之，$beta arrow.r.double alpha$ 也不成立．
 
@@ -323,13 +323,13 @@ C & = \{ X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
 现在我们从性质的观点看一下集合的交集，并集，补集的意义．
 
-设 $alpha arrow.l.r.long A$、$beta arrow.l.r.long B$, 不难看出：
+设 $alpha arrow.l.r.long A$⁠、$beta arrow.l.r.long B$, 不难看出：
 
-- $A inter B$ 就是具有性质 $alpha$ 且具有性质 $beta$ 的元素所构成的集合．“具有性质 $alpha$ 且具有性质 $beta$”，记作 $alpha and beta$，读作 $alpha$ 且 $beta$；
+- $A inter B$ 就是具有性质 $alpha$ 且具有性质 $beta$ 的元素所构成的集合．“具有性质 $alpha$ 且具有性质 $beta$⁠”，记作 $alpha and beta$⁠，读作 $alpha$ 且 $beta$⁠；
 
-- $A union B$ 就是具有性质 $alpha$ 或具有性质 $beta$ 的元素所构成的集合．“具有性质 $alpha$ 或具有性质 $beta$”，记作 $alpha or beta$. 读作 $alpha$ 或 $beta$．
+- $A union B$ 就是具有性质 $alpha$ 或具有性质 $beta$ 的元素所构成的集合．“具有性质 $alpha$ 或具有性质 $beta$⁠”，记作 $alpha or beta$. 读作 $alpha$ 或 $beta$⁠．
 
-- $A^c$ 就是那些不具有性质 $alpha$ 的元素所构成的集合．我们用 $macron(alpha)$ 表示“不具有性质 $alpha$”，读作非 $alpha$, 也叫 $alpha$ 的反性质．
+- $A^c$ 就是那些不具有性质 $alpha$ 的元素所构成的集合．我们用 $macron(alpha)$ 表示“不具有性质 $alpha$⁠”，读作非 $alpha$, 也叫 $alpha$ 的反性质．
 
 #figure([#fig("2-16");
 
@@ -338,7 +338,7 @@ C & = \{ X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
   ]
 )
 
-设 $A = \{ X\|X upright("为") dot.o O_1 upright("内的点") \}$，$B = \{ X\|X upright("为") dot.o O_2 upright("内的点") \}$，$alpha$ 表示 $dot.o O_1$ 内的点，$beta$ 表示 $dot.o O_2$ 内的点．则 $A\,B$ 与 $alpha\,beta$ 的关系如下（图2.16）：
+设 $A = \{ X\|X upright("为") dot.o O_1 upright("内的点") \}$⁠，$B = \{ X\|X upright("为") dot.o O_2 upright("内的点") \}$⁠，$alpha$ 表示 $dot.o O_1$ 内的点，$beta$ 表示 $dot.o O_2$ 内的点．则 $A\,B$ 与 $alpha\,beta$ 的关系如下（图2.16）：
 
 - $A inter B arrow.l.r.long alpha and beta$#h(1em);在 $dot.o O_1$ 且在 $dot.o O_2$ 内的点的集合．
 
@@ -395,11 +395,11 @@ C & = \{ X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
 + 对顶角相等．（真）
 
-+ $2 + 2 = 5$．（假）
++ $2 + 2 = 5$⁠．（假）
 
-+ 若 $x > y$, 则 $frac(x + 2 y, 3) > frac(x + y, 2)$．（假）
++ 若 $x > y$, 则 $frac(x + 2 y, 3) > frac(x + y, 2)$⁠．（假）
 
-这些语句都是命题．从上面这些命题中我们可以看到，命题不一定为数学所独有，如1就不是数学命题，另外我们还看到一个命题是可以判断真假的，有的容易判断如1、2、3．有的就较难判断一些，如4是个假命题，但一眼不容易看出来，实际上如果设 $x = 1$, $y = 0\,thick\(x > y\)$ 那么 $frac(1 + 2 times 0, 3) gt.not frac(1 + 0, 2)$．这就说明4是个假命题了．所谓“判断真假”是对事物的本质说的，并不要求现在就要“决定”，也不要求最近的将来便可决定．例如：
+这些语句都是命题．从上面这些命题中我们可以看到，命题不一定为数学所独有，如1就不是数学命题，另外我们还看到一个命题是可以判断真假的，有的容易判断如1、2、3．有的就较难判断一些，如4是个假命题，但一眼不容易看出来，实际上如果设 $x = 1$, $y = 0\,thick\(x > y\)$ 那么 $frac(1 + 2 times 0, 3) gt.not frac(1 + 0, 2)$⁠．这就说明4是个假命题了．所谓“判断真假”是对事物的本质说的，并不要求现在就要“决定”，也不要求最近的将来便可决定．例如：
 
 - 别的星球上有生物．
 
@@ -415,25 +415,25 @@ C & = \{ X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 ]
 下面我们仔细的分析它的结构和逻辑关系．
 
-命题“若 $alpha$, 则 $beta$”是否正确，就要看 $alpha$、$beta$ 之间是否具有推出关系 $alpha arrow.r.double beta$ 了．也就是说，如果 $alpha$、$beta$ 之间具有 $alpha arrow.r.double beta$ 的关系，则“若 $alpha$, 则 $beta$”是真命题（即正确的命题），由此可见“$alpha arrow.r.double beta$”与“若 $alpha$, 则 $beta$”是真命题是同一关系的两种不同说法．
+命题“若 $alpha$, 则 $beta$⁠”是否正确，就要看 $alpha$⁠、$beta$ 之间是否具有推出关系 $alpha arrow.r.double beta$ 了．也就是说，如果 $alpha$⁠、$beta$ 之间具有 $alpha arrow.r.double beta$ 的关系，则“若 $alpha$, 则 $beta$⁠”是真命题（即正确的命题），由此可见“$alpha arrow.r.double beta$⁠”与“若 $alpha$, 则 $beta$⁠”是真命题是同一关系的两种不同说法．
 
-在命题“若 $alpha$, 则 $beta$”中，我们把 $alpha$ 叫做命题的#strong[条件]，$beta$ 叫做命题的#strong[结论]．
+在命题“若 $alpha$, 则 $beta$⁠”中，我们把 $alpha$ 叫做命题的#strong[条件]，$beta$ 叫做命题的#strong[结论]．
 
-把“若 $alpha$, 则 $beta$”中的 $beta$ 作为条件，$alpha$ 作为结论，就得到另一个命题：若 $beta$, 则 $alpha$. 这个命题叫做“若 $alpha$, 则 $beta$”的#strong[逆命题]．
+把“若 $alpha$, 则 $beta$⁠”中的 $beta$ 作为条件，$alpha$ 作为结论，就得到另一个命题：若 $beta$, 则 $alpha$. 这个命题叫做“若 $alpha$, 则 $beta$⁠”的#strong[逆命题]．
 
-把“若 $alpha$, 则 $beta$”中的 $alpha$ 的反性质：非 $alpha$, $beta$ 的反性质：非 $beta$, 分别作为条件和结论，又得到一个新命题：若 $macron(alpha)$, 则 $macron(beta)$, 这个命题叫做“若 $alpha$, 则 $beta$”的#strong[否命题]．
+把“若 $alpha$, 则 $beta$⁠”中的 $alpha$ 的反性质：非 $alpha$, $beta$ 的反性质：非 $beta$, 分别作为条件和结论，又得到一个新命题：若 $macron(alpha)$, 则 $macron(beta)$, 这个命题叫做“若 $alpha$, 则 $beta$⁠”的#strong[否命题]．
 
-把“若 $alpha$, 则 $beta$”中的 $beta$ 的反性质：非 $beta$, $alpha$ 的反性质：非 $alpha$, 分别作为条件和结论，又可得到一个新命题：若 $macron(beta)$, 则 $macron(alpha)$. 这个命题叫做“若 $alpha$, 则 $beta$”的#strong[逆否命题]．
+把“若 $alpha$, 则 $beta$⁠”中的 $beta$ 的反性质：非 $beta$, $alpha$ 的反性质：非 $alpha$, 分别作为条件和结论，又可得到一个新命题：若 $macron(beta)$, 则 $macron(alpha)$. 这个命题叫做“若 $alpha$, 则 $beta$⁠”的#strong[逆否命题]．
 
-“若 $alpha$, 则 $beta$”则叫做上述逆命题，否命题、逆否命题的#strong[原命题]．这就是说，逆命题，否命题，逆否命题都是对原命题而说的，在四种命题中任何一个命题都可作为原命题．如：
+“若 $alpha$, 则 $beta$⁠”则叫做上述逆命题，否命题、逆否命题的#strong[原命题]．这就是说，逆命题，否命题，逆否命题都是对原命题而说的，在四种命题中任何一个命题都可作为原命题．如：
 
-- 原命题#h(1em);若 $macron(alpha)$，则 $macron(beta)$
+- 原命题#h(1em);若 $macron(alpha)$⁠，则 $macron(beta)$
 
-- 逆命题#h(1em);若 $macron(beta)$，则 $macron(alpha)$
+- 逆命题#h(1em);若 $macron(beta)$⁠，则 $macron(alpha)$
 
-- 否命题#h(1em);若 $alpha$，则 $beta$（$macron(alpha)$ 的非是 $alpha$，$macron(beta)$ 的非是 $beta$）
+- 否命题#h(1em);若 $alpha$⁠，则 $beta$（$macron(alpha)$ 的非是 $alpha$⁠，$macron(beta)$ 的非是 $beta$⁠）
 
-- 逆否命题#h(1em);若 $beta$，则 $alpha$
+- 逆否命题#h(1em);若 $beta$⁠，则 $alpha$
 
 我们把上述四种命题之间的关系，列成下表：
 
@@ -446,7 +446,7 @@ C & = \{ X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
 ]
 #solution[
-“对顶角相等”这个命题是由两部分组成的：(1) 两个角是对顶角，(2) 这两个角相等．(1) 是命题的条件，(2) 是命题的结论．这个命题若用“若---则”连结(1)、(2) 两部分，就可写成．
+“对顶角相等”这个命题是由两部分组成的：(1) 两个角是对顶角，(2) 这两个角相等．(1) 是命题的条件，(2) 是命题的结论．这个命题若用“若---则”连结 (1)、(2) 两部分，就可写成．
 
 若两个角是对顶角，则这两个角相等．所以，
 
@@ -502,11 +502,11 @@ C & = \{ X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
   + 同位角相等则两直线平行．
 
-  + 三角形内角和等于180$"" degree$．
+  + 三角形内角和等于180$"" degree$⁠．
 
   + 自然数必为有理数．
 
-+ 在以下各题中，用符号“$arrow.r.double$”把 $alpha$、$beta$ 联系起来：
++ 在以下各题中，用符号“$arrow.r.double$⁠”把 $alpha$⁠、$beta$ 联系起来：
 
   + $alpha$ 表示自然数 $a$ 被4整除，$beta$ 表示自然数 $a$ 被2整除．
 
@@ -518,11 +518,11 @@ C & = \{ X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
   + 若 $a^2 = b^2$, 则 $a = b$
 
-  + 若在 $triangle.stroked.t A B C$ 与 $triangle.stroked.t A' B' C'$ 中，$angle A = angle A'$, $angle B = angle B'$, $angle C = angle C'$，则 $triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'$
+  + 若在 $triangle.stroked.t A B C$ 与 $triangle.stroked.t A' B' C'$ 中，$angle A = angle A'$, $angle B = angle B'$, $angle C = angle C'$⁠，则 $triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'$
 
-  + 如果 $\(x - a\)\(x - b\)= 0$，则 $x - a = 0$
+  + 如果 $\(x - a\)\(x - b\)= 0$⁠，则 $x - a = 0$
 
-  + 如果 $a + c = b + d$，则 $a = b$, $c = d$
+  + 如果 $a + c = b + d$⁠，则 $a = b$, $c = d$
 
 + 分别写出下列命题的逆命题、否命题，逆否命题，并判断它们的真假．
 
@@ -540,7 +540,7 @@ C & = \{ X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
   + 若 $\(x - a\)\(x - b\)= 0$, 则 $x = a$.
 
-  + 如果 $x_1$、$x_2$ 是方程 $a x^2 + b x + c = 0$ 的两个根，那么 $x_1 + x_2 = - b / a$, $x_1 x_2 = c / a$.
+  + 如果 $x_1$⁠、$x_2$ 是方程 $a x^2 + b x + c = 0$ 的两个根，那么 $x_1 + x_2 = - b / a$, $x_1 x_2 = c / a$.
 
   + 多项式 $f\(x\)$ 除以 $\(x - a\)$ 所得的余式等于 $f\(a\)$.
 
@@ -556,14 +556,14 @@ C & = \{ X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
 又如若 $triangle.stroked.t upright(I) tilde.equiv triangle.stroked.t upright(I I)$, 则 $triangle.stroked.t upright(I)$ 与 $triangle.stroked.t upright(I I)$ 的三个角分别相等．我们知道这也是个真命题，即可由 $triangle.stroked.t upright(I) tilde.equiv triangle.stroked.t upright(I I) arrow.r.double triangle.stroked.t upright(I)$ 与 $triangle.stroked.t upright(I I)$ 的三个角分别相等．这时我们说 $triangle.stroked.t upright(I) tilde.equiv triangle.stroked.t upright(I I)$ 是 $triangle.stroked.t upright(I)$ 与 $triangle.stroked.t upright(I I)$ 的三个角分别相等的充分条件．这就是说，若有 $triangle.stroked.t upright(I) tilde.equiv triangle.stroked.t upright(I I)$, 就能充分保证 $triangle.stroked.t upright(I)$ 与 $triangle.stroked.t upright(I I)$ 的三个角分别相等．但 $triangle.stroked.t upright(I)$ 与 $triangle.stroked.t upright(I I)$ 的三个角分别相等是 $triangle.stroked.t upright(I) tilde.equiv triangle.stroked.t upright(I I)$ 的必要条件，如果 $triangle.stroked.t upright(I)$ 与 $triangle.stroked.t upright(I I)$ 的三个角不分别相等，则 $triangle.stroked.t upright(I)$ 和 $triangle.stroked.t upright(I I)$ 绝不会全等．
 
-“若 $alpha$, 则 $beta$”与它的逆命题“若 $beta$, 则 $alpha$”都是真命题，即 $alpha arrow.r.double beta$, $beta arrow.r.double alpha$ 或 $alpha arrow.l.r.double beta$. 这时我们说 $alpha$ 是 $beta$ 的充分、必要条件，同时 $beta$ 也是 $alpha$ 的充分、必要条件，充分、必要条件简称#strong[充要条件]．
+“若 $alpha$, 则 $beta$⁠”与它的逆命题“若 $beta$, 则 $alpha$⁠”都是真命题，即 $alpha arrow.r.double beta$, $beta arrow.r.double alpha$ 或 $alpha arrow.l.r.double beta$. 这时我们说 $alpha$ 是 $beta$ 的充分、必要条件，同时 $beta$ 也是 $alpha$ 的充分、必要条件，充分、必要条件简称#strong[充要条件]．
 
-例如，$triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'$ 且 $overline(B C)$ 与 $overline(B' C')$ 是对应边，则 $triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'$ 是 $angle B = angle B'$，$angle C = angle C'$，$overline(B C) = overline(B' C')$ 的充分必要条件；$x - 2 = 0$ 是 $x = 2$ 的充要条件；两圆能够重合是两个圆半径相等的充要条件．
+例如，$triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'$ 且 $overline(B C)$ 与 $overline(B' C')$ 是对应边，则 $triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'$ 是 $angle B = angle B'$⁠，$angle C = angle C'$⁠，$overline(B C) = overline(B' C')$ 的充分必要条件；$x - 2 = 0$ 是 $x = 2$ 的充要条件；两圆能够重合是两个圆半径相等的充要条件．
 
 #exercise[
 + 下面四句话是否都是表达的同一逻辑关系？
 
-  + $alpha arrow.r.double beta$；
+  + $alpha arrow.r.double beta$⁠；
 
   + 若 $alpha$, 则 $beta$ 是真命题；
 
@@ -590,7 +590,7 @@ C & = \{ X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
     [$a^2 - 2 a b + b^2 = 0$],
     [\(d)],
     [$triangle.stroked.t A B C tilde.equiv triangle.stroked.t A' B' C'$],
-    [$angle B = angle B'$，$overline(A B) = overline(A' B')$],
+    [$angle B = angle B'$⁠，$overline(A B) = overline(A' B')$],
     [\(e)],
     [$overline(A B)$ 能够重合 $overline(C D)$],
     [$overline(A B)$ 与 $overline(C D)$ 等长],
@@ -661,7 +661,7 @@ C & = \{ X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
 ]
 #blk[不等量的基本性质][
-设 $a$、$b$、$c$、$d$ 是任意实数．
+设 $a$⁠、$b$⁠、$c$⁠、$d$ 是任意实数．
 
 + 如果 $a > b$, 那么 $a + c > b + c$.
 
@@ -677,7 +677,7 @@ C & = \{ X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
 ]
 ==== 定理和证明
-我们要说明“若 $alpha$ 则 $beta$”是真命题时，以什么方式来推证呢？最常用的基本推理格式就是推出关系的传递性．即：
+我们要说明“若 $alpha$ 则 $beta$⁠”是真命题时，以什么方式来推证呢？最常用的基本推理格式就是推出关系的传递性．即：
 
 #numbered-align(($upright("如果")$, $eqph quad alpha arrow.r.double beta$, [(1)]), ($$, $quad beta arrow.r.double gamma upright("成立")$, [(2)]), ($upright("那么")$, $eqph quad alpha arrow.r.double gamma upright("成立")$, [(3)]));
 
@@ -685,7 +685,7 @@ C & = \{ X\|overline(O X) = 3 upright(c m)\,thick upright("且") O upright("是�
 
 #numbered-align(($upright("若")$, $eqph quad angle 1 upright("和") angle 2 upright("是对顶角")$, [(1)]), ($$, $quad upright("对顶角相等")$, [(2)]), ($upright("则")$, $eqph quad angle 1 = angle 2$, [(3)]));
 
-在几何论证中，使用上述推理格式，在书写上常常由(1) 直接得到(3), 而把(2) 作为由(1) 推出(3) 的理由写在(3) 后边的括号里．因此，上例又可以写为：$ because & quad angle 1 upright("与") angle 2 upright("是对顶角")\
+在几何论证中，使用上述推理格式，在书写上常常由 (1) 直接得到 (3), 而把 (2) 作为由 (1) 推出 (3) 的理由写在 (3) 后边的括号里．因此，上例又可以写为：$ because & quad angle 1 upright("与") angle 2 upright("是对顶角")\
 therefore & quad angle 1 = angle 2 #h(2em) upright("（对顶角相等）") $
 
 在数学中要证明一个命题的正确性，往往要连续使用若干次上述基本推理格式．为此，我们重新回忆一下“对顶角相等”的证明过程．
@@ -795,7 +795,7 @@ $therefore quad overline(P A) = overline(P B)$（全等三角形的对应边相�
 
 ]
 #example[
-已知：直线 $E F$ 与直线 $A B$、$C D$ 分别相交于 $P$、$Q$ 两点，并且 $angle 1 = angle 2$（图2.20）．
+已知：直线 $E F$ 与直线 $A B$⁠、$C D$ 分别相交于 $P$⁠、$Q$ 两点，并且 $angle 1 = angle 2$（图2.20）．
 
 求证：$A B pll C D$
 
@@ -816,7 +816,7 @@ $therefore quad angle 1$ 与 $angle E P B$ 是对顶角
 
 $therefore quad angle 1 = angle E P B$
 
-已知 $angle 1 = angle 2$, 由等量代换，就有 $angle 2 = angle E P B$．由平行线定义，可知 $A B pll C D$.
+已知 $angle 1 = angle 2$, 由等量代换，就有 $angle 2 = angle E P B$⁠．由平行线定义，可知 $A B pll C D$.
 
 ]
 通过以上三例，我们初步体会了一下证明定理的步骤．值得注意的是在推理时，每推一步都要有可靠的根据，都要有充分的理由．定义、基本性质、已经证明过的定理和已知条件都可作为推理的根据．推理的根据可以像例2.4、例2.5那样写在结论后面的（#h(2em);）之中，也可以像例2.6那样写在结论的前面．总之，不管怎样叙述，都要“出言有本”，“推理有据”把论证的理由说清楚．
@@ -827,13 +827,13 @@ $therefore quad angle 1 = angle E P B$
 
   + 如果两个角是对顶角，则它们相等．
 
-  + 如果 $x_1$、$x_2$ 是方程 $a x^2 + b x + c = 0$ 的两个根，则 $ x_1 + x_2 = - b / a\,quad x_1 dot.op x_2 = c / a $
+  + 如果 $x_1$⁠、$x_2$ 是方程 $a x^2 + b x + c = 0$ 的两个根，则 $ x_1 + x_2 = - b / a\,quad x_1 dot.op x_2 = c / a $
 
   + 若在 $triangle.stroked.t A B C$ 中，$overline(A B) = overline(A C)$, 则 $angle B = angle C$.
 
   + 多项式 $f\(x\)$ 除以 $\(x - a\)$ 所得的余式等于 $f\(a\)$.
 
-  + 如果 $\(x - a\)\(x - b\)= 0$, 则 $x = a$ 或 $x = b$．
+  + 如果 $\(x - a\)\(x - b\)= 0$, 则 $x = a$ 或 $x = b$⁠．
 
 + 把下列各题抄在练习本上，并在括号内填写理由：
 
@@ -891,7 +891,7 @@ $therefore quad angle 1 = angle E P B$
     
     ]])));
 
-  + 已知：如图，$angle A B C = angle E F G$, $B D$, $F H$ 分别是 $angle A B C$，$angle E F G$ 的平分线．
+  + 已知：如图，$angle A B C = angle E F G$, $B D$, $F H$ 分别是 $angle A B C$⁠，$angle E F G$ 的平分线．
 
     求证：$angle A B D = angle H F G$.
 
@@ -927,7 +927,7 @@ $therefore quad angle 1 = angle E P B$
 
     $therefore quad angle 3 = angle 4$（#h(2em);）
 
-  + 已知：如图，直线 $E F$ 与直线 $A B$、$C D$ 分别相交于 $P$、$Q$ 两点，且 $angle 1 = angle 2$.
+  + 已知：如图，直线 $E F$ 与直线 $A B$⁠、$C D$ 分别相交于 $P$⁠、$Q$ 两点，且 $angle 1 = angle 2$.
 
     求证：$angle 2 + angle 3 = 180 degree$.
 
@@ -951,7 +951,7 @@ $therefore quad angle 1 = angle E P B$
 
     即 $angle 1 + angle B O C = 90 degree$
 
-    $therefore quad angle 1 = 90 degree - angle B O C$．
+    $therefore quad angle 1 = 90 degree - angle B O C$⁠．
 
     同理：$angle 2 = 90 degree - angle B O C$
 
@@ -1085,7 +1085,7 @@ $therefore quad angle 1 = angle E P B$
 
 + 补上下列各题推理中所缺少的必要步骤．
 
-  + 已知：如图，$overline(A B)$, $overline(C D)$ 相交于 $O$ 点，并且 $overline(A O) = overline(O C)$，$overline(O D) = overline(O B)$.
+  + 已知：如图，$overline(A B)$, $overline(C D)$ 相交于 $O$ 点，并且 $overline(A O) = overline(O C)$⁠，$overline(O D) = overline(O B)$.
 
     求证：$angle D = angle B$, $overline(A D) = overline(B C)$.
 
@@ -1169,7 +1169,7 @@ $therefore quad angle 1 = angle E P B$
   
   ]])));
 
-#heading(level: 2, numbering: none, outlined: false)[复习题二]
+#heading(level: 2, numbering: none, outlined: true)[复习题二]
 
 + 试举出五个集合的例子，并用列举法或描述法表示出来．
 
@@ -1203,7 +1203,7 @@ $therefore quad angle 1 = angle E P B$
 
   + $B = \{ x\|x^2 - 2 = 0 upright(" 且 ") x upright(" 是实数") \}$
 
-+ 设 $A = \{ 1\,2\,3\,4 \}$, $B = \{ 2\,4\,6\,8 \}$, $C = \{ 3\,4\,5\,6 \}$, 求：
++ #block(sticky: true)[设 $A = \{ 1\,2\,3\,4 \}$, $B = \{ 2\,4\,6\,8 \}$, $C = \{ 3\,4\,5\,6 \}$, 求：]
 
   #cols(4)[
   + $A union B$
@@ -1228,7 +1228,7 @@ $therefore quad angle 1 = angle E P B$
 
   ]
 
-+ 如图，$A$、$B$、$C$ 三个集合相交成非空集，用阴影分别把下列各集合所表示的区域划出来．
++ #block(sticky: true)[如图，$A$⁠、$B$⁠、$C$ 三个集合相交成非空集，用阴影分别把下列各集合所表示的区域划出来．]
 
   #cols(4)[
   + $A inter B$
@@ -1264,7 +1264,7 @@ $therefore quad angle 1 = angle E P B$
   
   ]])));
 
-+ 设基集 $upright(I) = \{ 1\,2\,3\,4\,5\,6\,7\,8\,9\,10 \}$, $A = \{ 6\,8\,9 \}$, $B = \{ 1\,3\,7\,8\,9 \}$, $C = \{ 2\,6\,8\,9 \}$．求：
++ #block(sticky: true)[设基集 $upright(I) = \{ 1\,2\,3\,4\,5\,6\,7\,8\,9\,10 \}$, $A = \{ 6\,8\,9 \}$, $B = \{ 1\,3\,7\,8\,9 \}$, $C = \{ 2\,6\,8\,9 \}$⁠．求：]
 
   #cols(4)[
   + $A^c$

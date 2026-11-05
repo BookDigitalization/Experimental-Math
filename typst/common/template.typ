@@ -69,28 +69,6 @@
   } else { body }
 }
 
-#let example(body) = {
-  example-counter.step()
-  block(width: 100%, above: 1em, below: 1em, {
-    // 同 LaTeX 版的 \noindent：抵消段首缩进
-    unindent
-    // 标签放进盒子，两端对齐时空隙不会被拉进“例”与编号之间；其后空一字（同 LaTeX 版）
-    context box(strong[例 #chapter-number().#example-counter.display()])
-    h(1em, weak: true)
-    trim-start(body)
-  })
-}
-
-#let labeled(label) = body => block(width: 100%, above: 0.8em, below: 0.8em)[
-  #unindent#strong(label)#trim-start(body)
-]
-
-#let solution = labeled[解：]
-#let analyze = labeled[分析：]
-#let rmk = labeled[注意：]
-#let note = labeled[说明：]
-#let proof = labeled[证明：]
-
 // ---- “练习”框与带标题的框（对应 tcolorbox 的 ex、blk） ----
 #let titled-box(title, color, title-align, body) = {
   let has-title = title != [] and title != [ ]
@@ -178,18 +156,41 @@
       ..groups.map(g => g.map(p => p.join()).join(parbreak())),
     ))
   } else if items.len() > 0 and others.len() == 0 {
-    let per = calc.ceil(items.len() / n)
-    let groups = range(n).map(i => items.slice(calc.min(i * per, items.len()), calc.min((i + 1) * per, items.len())))
-    // 栏内的列表与普通列表缩进相同（LaTeX 中 multicols 内的各项与栏外接续的各项标号对齐）。
-    // 但三栏以上时栏很窄，Typst 的标号又比 LaTeX 占地方（缩进 + 标号宽 + 间距 > \leftmargin），
-    // 不少小题会折行，这时不缩进
-    set enum(indent: 0pt) if n >= 3
-    // 整组不跨页（同 multicols 的短内容）
-    block(breakable: false, grid(
-      columns: (1fr,) * n,
-      column-gutter: gutter,
-      ..groups.enumerate().map(((i, g)) => if g.len() == 0 { [] } else { enum(start: i * per + 1, ..g) }),
-    ))
+    context layout(size => {
+      let total = items.len()
+      let per = calc.ceil(total / n)
+      let fmt = enum.numbering
+      // 标号统一宽度（各格是单独的列表，否则 (i) 与 (d) 的正文起点不同）
+      let label(p, k) = if type(fmt) == function { numbering(fmt, ..p.slice(0, -1), k) } else { numbering(fmt, k) }
+      let lab = (..n) => context {
+        let p = n.pos()
+        let w = calc.max(..range(1, total + 1).map(k => measure([#label(p, k)]).width))
+        box(width: w, align(right, label(p, p.last())))
+      }
+      // 栏内的列表与普通列表缩进相同（LaTeX 中 multicols 内的各项与栏外接续的各项标号对齐）；
+      // 但有的小题按这个缩进在栏里排不下（Typst 的公式间距不能像 LaTeX 那样压缩）时，整组不缩进
+      let cw = (size.width - gutter * (n - 1)) / n
+      let lw = calc.max(..range(1, total + 1).map(k => measure([#numbering(if type(fmt) == function { latex-pattern(2) } else { fmt }, k)]).width))
+      let widest = calc.max(..items.map(it => measure(it.body).width))
+      let fits = enum.indent.to-absolute() + lw + enum.body-indent.to-absolute() + widest <= cw
+      set enum(numbering: lab)
+      set enum(indent: 0pt) if not fits
+      // 逐行排：同一行的格子等高，左右两栏的小题对齐（编号仍按列：第 1 栏 1…per，第 2 栏 per+1…）
+      let cells = ()
+      for r in range(per) {
+        for c in range(n) {
+          let k = c * per + r
+          cells.push(if k < total { enum(start: k + 1, items.at(k)) } else { [] })
+        }
+      }
+      // 整组不跨页（同 multicols 的短内容）
+      block(breakable: false, grid(
+        columns: (1fr,) * n,
+        column-gutter: gutter,
+        row-gutter: enum.spacing,
+        ..cells,
+      ))
+    })
   } else { cols-by-height(n, body, gutter: gutter) }
 }
 
@@ -224,6 +225,95 @@
   }
 }
 
+// 是否为块级元素（列表项、独立公式、表格、图、框等），用于判断内容是否以块开头
+#let inline-funcs = (text, strong, emph, box, h, smartquote, link, super, sub, underline, footnote, highlight, ref)
+#let is-block(c) = {
+  if c.func() == math.equation or c.func() == raw { c.block }
+  else if c.has("children") { false }   // 行内的一串内容
+  else { not inline-funcs.contains(c.func()) and c != [ ] }
+}
+#let first-content(body) = {
+  let ch = if body.has("children") { body.children.filter(c => c != [ ] and c.func() != parbreak) } else { (body,) }
+  if ch.len() == 0 { none } else { ch.first() }
+}
+
+// 列表的第一项与前面的标签排在同一行（同 LaTeX）：例题“例 1.4 1. …”、题号直接接小题“5. (a) …”。
+// Typst 中列表项以嵌套列表开头时，外层题号按嵌套列表的顶端对齐（第一行有高分式时明显偏高）；
+// 例题后直接是列表时“例 1.4”独占一行。这里把第一项排成段落：标号在行内，续行悬挂缩进到列表正文处，
+// 外层题号就按这一行的基线对齐；其余各项照常排成列表。level 为这层列表的层数
+#let lead-list(label, level, body) = context {
+  let ch = if body.has("children") { body.children } else { (body,) }
+  let items = ()
+  let k = 0
+  while k < ch.len() {
+    let c = ch.at(k)
+    if c.func() == enum.item { items.push(c) } else if not (c == [ ] or c.func() == parbreak) { break }
+    k += 1
+  }
+  if items.len() == 0 { return { label; body } }
+  let rest = ch.slice(k)
+  let first-no = if items.first().has("number") and items.first().number != none { items.first().number } else { 1 }
+  // 标号用当前的编号格式（可能被 enum-at 改过）；enum-at、latex-enum 只看层数和最后一个数
+  let fmt = enum.numbering
+  let num(n) = if type(fmt) == function { numbering(fmt, ..((1,) * (level - 1)), n) } else { numbering(fmt, n) }
+  let nums = range(items.len()).map(i => num(first-no + i))
+  let lw = calc.max(..nums.map(n => measure([#n]).width))
+  let indent = enum.indent.to-absolute()
+  let bi = enum.body-indent.to-absolute()
+  let hang = indent + lw + bi
+  // 第一项到第一个换段或块级元素为止排进这一段，其余部分整体缩进到列表正文处
+  let fb = items.first().body
+  let fch = if fb.has("children") { fb.children } else { (fb,) }
+  let j = 0
+  while j < fch.len() and fch.at(j).func() != parbreak and not is-block(fch.at(j)) { j += 1 }
+  {
+    set par(hanging-indent: hang, first-line-indent: 0pt)
+    if label != none { label; h(1em, weak: true) } else { h(indent + lw - measure([#nums.first()]).width) }
+    box(nums.first())
+    h(bi)
+    fch.slice(0, j).join()
+  }
+  if j < fch.len() { pad(left: hang, fch.slice(j).join()) }
+  if items.len() > 1 { enum(start: first-no + 1, ..items.slice(1)) }
+  rest.join()
+}
+
+#let example(body) = {
+  example-counter.step()
+  let label = context box(strong[例 #chapter-number().#example-counter.display()])
+  block(width: 100%, above: 1em, below: 1em, {
+    let b = trim-start(body)
+    let f = first-content(b)
+    if f != none and f.func() == enum.item {
+      // 例题以列表开头：第一项与“例 x.y”同一行
+      lead-list(label, 1, b)
+    } else {
+      // 同 LaTeX 版的 \noindent：抵消段首缩进
+      unindent
+      // 标签放进盒子，两端对齐时空隙不会被拉进“例”与编号之间；其后空一字（同 LaTeX 版）
+      label
+      h(1em, weak: true)
+      b
+    }
+  })
+}
+
+// “解：”“证明：”等：内容以列表、独立公式等块开头时，标签单独成行，并与后面的块排在同一页（不孤零零留在页底）
+#let labeled(label) = body => block(width: 100%, above: 0.8em, below: 0.8em, {
+  let b = trim-start(body)
+  let f = first-content(b)
+  if f != none and is-block(f) {
+    block(sticky: true, below: 0.56em, { unindent; strong(label) })
+    b
+  } else { unindent; strong(label); b }
+})
+
+#let solution = labeled[解：]
+#let analyze = labeled[分析：]
+#let rmk = labeled[注意：]
+#let note = labeled[说明：]
+#let proof = labeled[证明：]
+
 // 宽于版心时缩小到版心宽度（对应 \resizebox{\textwidth}{!}{…}，但不放大）
 #let fit-width(body) = layout(size => {
   let w = measure(body).width
@@ -235,6 +325,10 @@
 
 // 带编号的独立公式（对应 equation 环境；\[…\] 不编号），编号带章号，如 (7.7)
 #let eq-numbering = n => "(" + str(chapter-number()) + "." + str(n) + ")"
+// 独立公式上下的间距：LaTeX 版公式前后比行距多出约 10pt
+#let disp-above = 1.4em
+#let disp-below = 1.5em
+
 #let numbered-eq(body) = math.equation(block: true, numbering: eq-numbering, body)
 
 // 带编号或带 \tag 说明的多行对齐公式（对应 align 环境，以及带 \tag 的 align*、\[…\]）。
@@ -247,7 +341,7 @@
   }
   let eq(x) = math.equation(block: false, numbering: none, math.display(x))
   let rows = rows.pos().map(((l, r, n)) => (eq(l), eq(r), n))
-  block(width: 100%, above: 1em, below: 1em, layout(size => {
+  block(width: 100%, above: disp-above, below: disp-below, layout(size => {
     let lw = calc.max(..rows.map(((l, r, n)) => measure(l).width))
     let rw = calc.max(..rows.map(((l, r, n)) => measure(r).width))
     // 公式块居中后右侧剩下的宽度。说明放不下时同 amsmath：先把公式块左移，还放不下才移到下一行靠右排
@@ -293,7 +387,7 @@
   let gutter = 0.7em
   let cells = rows.map(r => math.equation(block: false, numbering: none, math.display(r)))
   // 大括号的高度取各行实际高度之和，整组不跨页
-  block(width: 100%, above: 1em, below: 1em, breakable: false, context {
+  block(width: 100%, above: disp-above, below: disp-below, breakable: false, context {
     let height = cells.map(c => measure(c).height).sum() + gutter * (n - 1)
     grid(
       columns: (1fr, auto, auto, 1fr),
@@ -382,12 +476,22 @@
   // 公式中的中文（如 \text{个}）回落到正文的中文字体
   show math.equation: set text(font: ("New Computer Modern Math",) + fonts.serif.slice(1))
   set table(stroke: none)
+  // 表格线同 LaTeX（\arrayrulewidth 0.4pt）；单元格上下的内边距小一些（LaTeX 的表格行只有支柱高度，没有额外留白）
+  set table.hline(stroke: 0.4pt)
+  set table.vline(stroke: 0.4pt)
+  set table(inset: (x: 6pt, y: 0.3em))
+  // 单元格中的文字按字体的上伸、下伸部定高（而非字形的实际边界），垂直居中时同一行各格的基线才对齐
+  show table: set text(top-edge: "ascender", bottom-edge: "descender")
   // 表格的图注（“表 4.1”）在上方，同 LaTeX 版
   show figure.where(kind: table): set figure.caption(position: top)
   // 方程组各行的间距（LaTeX 的 cases 比 Typst 默认宽松）
   set math.cases(gap: 0.6em)
   // 宽于版心的独立公式缩小到版心宽度（LaTeX 版中这些公式排得下）
-  show math.equation.where(block: true): it => fit-width(it)
+  // 独立公式上下的间距（LaTeX 的 \abovedisplayskip、\belowdisplayskip）。套在 fit-width 外面，
+  // 否则公式在 fit-width 的 layout 里，自身的间距在容器边上被吞掉
+  show math.equation.where(block: true): it => block(width: 100%, above: disp-above, below: disp-below, fit-width(it))
+  // \verb：Typst 的 raw 默认缩小到 0.8em，LaTeX 的 \verb 与正文同大
+  show raw: set text(size: 1.25em)
   // 短的行内公式不在中间断行。Typst 在关系符、运算符后都可以断行，LaTeX 则因 \relpenalty、\binoppenalty
   // 很少这样断，Typst 版常出现“AD >”在行末、“CD”在下一行的情况
   show math.equation.where(block: false): it => context {
@@ -406,8 +510,6 @@
   show figure: set block(above: 1.1em, below: 1.1em)
   set footnote(numbering: "①")
   show footnote.entry: set text(size: 9pt)
-  // 独立公式上下的间距（LaTeX 的 \abovedisplayskip 约 10pt）
-  show math.equation.where(block: true): set block(above: 0.85em, below: 0.85em)
   // 图注：“图 1.1”加粗，编号带章号；LaTeX 版多为空的 \caption{}，此时只印编号
   set figure(gap: 0.6em, numbering: n => str(chapter-number()) + "." + str(n))
   show figure.caption: it => context {
