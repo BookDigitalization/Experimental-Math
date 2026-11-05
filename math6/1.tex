@@ -28,17 +28,17 @@
 由于有理数集$\mathbb{Q}$对于开方运算不封闭，因而方程$x^2-3
 =0$在$\mathbb{Q}$中无解，但在实数集$\mathbb{R}$中就有两个解$x=\pm\sqrt{3}$.
 
-同样，实数集$\mathbb{R}$对开方运算仍不封闭，因而象方程$x^2+1=0$在$\mathbb{R}$中还是无解，因为，没有一个实数的平方等于$-1$．要解决这一类矛盾，数的概念需要进一步发展，这就需要引进新数，并讨论它的运算.
+同样，实数集$\mathbb{R}$对开方运算仍不封闭，因而像方程$x^2+1=0$在$\mathbb{R}$中还是无解，因为，没有一个实数的平方等于$-1$．要解决这一类矛盾，数的概念需要进一步发展，这就需要引进新数，并讨论它的运算.
 
 \begin{ex}
 \begin{enumerate}
     \item 试叙述实数集$\mathbb{R}$中有哪些数系运算通性？
-\item 试分别在自然数集$\mathbb{N}$．整数集$\mathbb{Z}$、有理数集$\mathbb{Q}$和实数集$\mathbb{R}$中，解方程$(x-2)(3x+1)(x+7)(x^2+5)=0$.
+\item 试分别在自然数集$\mathbb{N}$、整数集$\mathbb{Z}$、有理数集$\mathbb{Q}$和实数集$\mathbb{R}$中，解方程$(x-2)(3x+1)(x+7)(x^2+5)=0$.
 \end{enumerate}
 \end{ex}
 
 \subsection{复数及其几何表示}
-如上所述，由于解方程的需要，早在十六世纪，人们就引进了一个新数$i$，使得方程有解，并把它叫做\textbf{虚数单位}，并规定：
+如上所述，由于解方程的需要，早在十六世纪，人们就引进了一个新数$i$，使得方程$x^2+1=0$有解，并把它叫做\textbf{虚数单位}，并规定：
 \begin{enumerate}[(1)]
 \item $i^2=-1$;
 \item 它与实数进行四则运算时，运算通性及数0与1的运算特性仍然保持. 即，满足加、乘法的交换律、结合律、分配律；满足
@@ -137,7 +137,7 @@ $z=a+bi$，都由一个有序实数对$(a,b)$唯一确定，而每一个有序�
 \begin{ex}
 \begin{enumerate}
     \item 将下列给出的各数，分类填入表中：
-\[1-\sqrt{2},\quad 0.618,\quad -1+i,\quad 0,\quad i,\quad i^2,\quad 3+7\sqrt{2}i\]
+\[1-\sqrt{2},\quad 0.618,\quad -1+i,\quad \frac{1}{4}i,\quad 0,\quad i,\quad i^2,\quad 3+7\sqrt{2}i\]
 \[i-1,\quad (\sqrt{2}+\sqrt{3})i,\quad \sqrt{2}i-\sqrt{2},\quad -\frac{\sqrt{3}}{2}i\]
 \begin{tabular}{|c|p{.7\textwidth}|}
 \hline
@@ -179,7 +179,7 @@ $a-bi$&&&&&\\
 我们已经知道，复数集与复平面上的点集之间是一一对应的，即每一复数$z=a+bi\; (a,b\in\R)$都对应着复平面
 上唯一一点$Z(a,b)$，反之亦然。
 
-如果我们在复平面上连结原点$O$与表示复数$z=a+bi$的$Z(a,b)$，就得到一个向量（从$O$点指向$Z$点），记作$\VEC{OZ}$，这样就可以在复数同向量（从原点出发的向量）之间
+如果我们在复平面上连结原点$O$与表示复数$z=a+bi$的点$Z(a,b)$，就得到一个向量（从$O$点指向$Z$点），记作$\VEC{OZ}$，这样就可以在复数同向量（从原点出发的向量）之间
 建立起联系. 不难看出，任一复数$z$可唯一确定复平面上一点$Z$，进而唯一确定一个向量$\VEC{OZ}$；反之，复平面上任一向量$\VEC{OZ}$，可唯一确定一点$Z$，进而唯一确定一个复数$z$，因此，复数集$\mathbb{C}$与复平面内所有以原点$O$为起点的向量（位置向量）集合也是一一对应的。
 
 这样一来，我们就可以很方便地把复数$z=a+bi\; (a,b\in\R)$说成点$Z(a,b)$，或说成向量$\VEC{OZ}$. 研究复数的运算、性质就可以和研究向量的运算、性质互通了.
@@ -308,7 +308,7 @@ $\therefore\quad |z_1|>|z_2|$.
 \begin{enumerate}
     \item 求出下列复数的模，并按其大小用不等号连起来：
 \[\sqrt{2}-i,\quad -2+i,\quad 7,\quad 2i,\quad -1-i\]
-  \item   设$|z|=r$, $\arg z=a$，试求出$|\bar z|$, $\arg \bar z$.
+  \item   设$|z|=r$, $\arg z=\alpha$，试求出$|\bar z|$, $\arg \bar z$.
   \item 求证：复数$z_1=-3i$, $z_2=\sqrt{2}+\sqrt{7}i$, $z_3=\sqrt{7}-\sqrt{2}i$, $z_4=-2+\sqrt{5}i$所对应的四个点共圆，并写出这个圆周上的所有点应满足的条件.
 \item   你能指出满足下列条件的复数所对应的点集组成什么图形吗？
 \begin{multicols}{2}
@@ -618,9 +618,9 @@ i^5&=i^4\cdot i=i\\
 一般地，对任意$n\in\mathbb{N}$，我们可归纳出：
 \[\begin{split}
     i^{4n}&=(i^4)^n=1^n=1\\
-    i^{4n+1}&=(i^4)^n\cdot i=i\\
-    i^{4n+2}&=(i^4)^n\cdot i^2=-1\\
-    i^{4n+3}&=(i^4)^n\cdot i^3=-i\\
+    i^{4n+1}&=i^{4n}\cdot i=i\\
+    i^{4n+2}&=i^{4n}\cdot i^2=-1\\
+    i^{4n+3}&=i^{4n}\cdot i^3=-i\\
 \end{split}\]
 即，对于数$n\in\N$，则
 \[i^{4n}=1,\qquad i^{4n+1}=i,\qquad i^{4n+2}=-1,\qquad i^{4n+3}=-i\]
@@ -871,7 +871,7 @@ y=\frac{\Delta_{2}}{\Delta}=\frac{10+10i}{-4+2i}=-1-3i$
 
 \item 证明下列各命题：
 \begin{enumerate}[(1)]
-    \item 作两个复数的和、差、积、商(除数不为零)的
+    \item 任两个复数的和、差、积、商(除数不为零)的
 共轭复数，分别等于这两个复数的共轭复数的和、差、积、商.
 \item 若$f(x)$是一个一元多项式，则对于任意复数
 $z$, 有$\overline{f(z)}=f(\bar{z})$.
@@ -879,9 +879,9 @@ $z$, 有$\overline{f(z)}=f(\bar{z})$.
 
 \item 已知$f(z)=\frac{z^2-z+1}{z^2+z+1}$, 求$f(2+3i)$, $f(1-i)$的值.
 
-\item  如果规定$i^0=1$, $i^{-m}=\frac{1}{i^m}\; (m\in\mathbb{N})$, 证明：对一切整数$n$，以下等式成立：
-$$i^{4n}={1},\quad i^{4{n+1}}=i,\quad  i^{4{n+2}}=-1,\quad  i^{4n+3}=-i.$$
-\item 根据$i^2=-1$及要求复数运算满足“通性”,试说
+\staritem  如果规定$i^0=1$, $i^{-m}=\frac{1}{i^m}\; (m\in\mathbb{N})$, 证明：对一切整数$n$，以下等式成立：
+$$i^{4n}={1},\quad i^{4n+1}=i,\quad  i^{4n+2}=-1,\quad  i^{4n+3}=-i.$$
+\staritem 根据$i^2=-1$及要求复数运算满足“通性”,试说
 明复 数 加 法 、 乘 法 法 则 规 定 是 合 理 的。
 
 \item 怎样的复数$z$, 才能满足条件：
@@ -928,7 +928,7 @@ $f\left(x\right)=x^{3}+3\left({1+i}\right)x^{2}-2(5-3i)x-4\left(1+2i\right)$
 \draw[->](-1,0)--(4,0)node[right]{$x$};
 \draw[->](0,-1)--(0,3)node[right]{$y$};
 \node[below left]{$O$};
-\draw[->, very thick](0,0)--(3,2.5)node[above]{$Z$};
+\draw[->, very thick](0,0)--node[above left]{$r$}(3,2.5)node[above]{$Z$};
 \draw[dashed](3,0)--node[right]{$b$}(3,2.5);
 \node at (1.5,0)[below]{$a$};
 \draw[->](1,0)node[above right]{$\theta$} arc (0:41:1);
@@ -1268,7 +1268,7 @@ $\angle 1+\angle 2-\angle 3=0$.
     \item $12\left(\pc{\frac{7\pi}{4}}\right)\div 6\left(\pc{\frac{2\pi}{3}}\right)$
     \item $2\div (\pc{45^{\circ}})$
     \item $-i\div 2\left(\pc{\frac{4\pi}{3}}\right)$
-    \item $(-i+i)\cdot \sqrt{2}(\pc{120^{\circ}})\div 3(\pc{55^{\circ}})$
+    \item $(-1+i)\cdot \sqrt{2}(\pc{120^{\circ}})\div 3(\pc{55^{\circ}})$
 \end{enumerate}
 
 \item 你能说明复数除法的几何意义吗？
@@ -1296,11 +1296,11 @@ $\angle C=90^{\circ}$, $AC=3BC$，$E$为$AC$上一点，且$CE=2EA$，则：
 
 因此，复数$r(\pc{\theta})$的$n$次方根是
 \[\sqrt[n]{r}\left(\pc{\frac{2k\pi+\theta}{n}}\right)\]
-其中，当$k=0,1,\ldots,n-1$各值时，可以得到上式的$n$个不同值；当$k$继续取$n,n+1,\ldots$以及其它的值时，由于正弦、余弦函数都是以$2\pi$为周期，上式的值又重复出现$k$取$0,1,\ldots,n-1$时的同样结果．所以，复数的$n$次（$n\in\N$）方根是$n$个复数，它们的模都等于这个复数的模的$n$次算术根，它们的幅角分别等于这个复数的幅角与$2\pi$的$0,1,\ldots,n-1$倍的和的$n$分之一. 即
+其中，当$k=0,1,\ldots,n-1$各值时，可以得到上式的$n$个不同值；当$k$继续取$n,n+1,\ldots$以及其他的值时，由于正弦、余弦函数都是以$2\pi$为周期，上式的值又重复出现$k$取$0,1,\ldots,n-1$时的同样结果．所以，复数的$n$次（$n\in\N$）方根是$n$个复数，它们的模都等于这个复数的模的$n$次算术根，它们的幅角分别等于这个复数的幅角与$2\pi$的$0,1,\ldots,n-1$倍的和的$n$分之一. 即
 \[\sqrt[n]{r(\pc{\theta})}=\sqrt[n]{r}\left(\pc{\frac{\theta+2k\pi}{n}}\right)\quad (k=0,1,\ldots,n-1)\]
 
 \begin{rmk}
-在复数范围内，$\sqrt[n]{z}$应表示$n$个复数，这$n$个复数都是$z$的$n$次方根，为了区别于在实数范围内，$\sqrt[n]{z}$仅表示算术根，我们约定：被开方数是实数时，$\sqrt[n]{a}\; (a\in\R)$仍表示算术根（单值），$\sqrt[n]{a+0i}$或$\sqrt[n]{a(\pc{0})}\; (a>0)$或$\sqrt[n]{|a|(\pc{\pi})}$都表示$n$个$n$次方根（多值）. 至于被开方数是虚数时，$\sqrt[n]{a+bi}\; (b\ne 0)$或$\sqrt[n]{r(\pc{\theta})}$都表示$n$个方根.
+在复数范围内，$\sqrt[n]{z}$应表示$n$个复数，这$n$个复数都是$z$的$n$次方根，为了区别于在实数范围内，$\sqrt[n]{a}$仅表示算术根，我们约定：被开方数是实数时，$\sqrt[n]{a}\; (a\in\R)$仍表示算术根（单值），$\sqrt[n]{a+0i}$或$\sqrt[n]{a(\pc{0})}\; (a>0)$或$\sqrt[n]{|a|(\pc{\pi})}$都表示$n$个$n$次方根（多值）. 至于被开方数是虚数时，$\sqrt[n]{a+bi}\; (b\ne 0)$或$\sqrt[n]{r(\pc{\theta})}$都表示$n$个方根.
 \end{rmk}
 
 \begin{example}
@@ -1355,7 +1355,7 @@ z_2&=\sqrt{3}\left(\pc{\frac{3\pi}{2}}\right)=-\sqrt{3}i\\
 
 一般来说，在复数范围内，任一个负实数$-a$有两个平方根：$\pm\sqrt{a}i$.
 
-这样一来，以前在解实系数一元二次方程$ax^2+bx+c=0$时，如果$b^2-4ac<0$，在实数范围内无解. 现在，在复数范围内，方程就有两个解：
+这样一来，以前在解实系数一元二次方程$ax^2+bx+c=0$（$a\ne 0$）时，如果$b^2-4ac<0$，在实数范围内无解. 现在，在复数范围内，方程就有两个解：
 \[x=\frac{-b\pm\sqrt{-(b^2-4ac)}i}{2a}\qquad (b^2-4ac<0)\]
 显然，这两个解是一对共轭复数.
 
@@ -1614,7 +1614,7 @@ $\therefore\quad \omega^{n-1}=\overline{\omega}=\frac{1}{\omega}=\omega^{-1}$
 同理可得：\[\omega^{n-2}=\overline{\omega^2}=\omega^{-2},\ldots\]
 
 \[\begin{cases}
-\text{当$n$为偶数时}& \omega^{\tfrac{n}{2}+1}=\overline{\omega^{\tfrac{n}{2}-1}}=\omega^{-\left(\tfrac{n}{2}-1\right)}=\omega^{-\tfrac{n}{2}+1}\\
+\text{当$n$为偶数时}& \omega^{\tfrac{n}{2}+1}=\overline{\omega^{\tfrac{n}{2}-1}}=\omega^{-\left(\tfrac{n}{2}-1\right)}=\omega^{-\tfrac{n}{2}+1},\quad \omega^{\tfrac{n}{2}}=-1\\
 \text{当$n$为奇数时}& \omega^{\tfrac{n+1}{2}}=\overline{\omega^{\tfrac{n-1}{2}}}=\omega^{-\tfrac{n-1}{2}}
 \end{cases}\]
 所以，这$n$个$n$次单位根还可以写成：
@@ -1653,7 +1653,7 @@ x_n=\sqrt[n]{a}\cdot \omega^{n-1}\\
 试求出六次和七次单位根，并分别检验它们之间的关系.
 \end{ex}
 
-\section*{习题1.3}
+\subsection*{习题1.3}
 \begin{enumerate}
     \item 把下列复数化成三角形式表示：
 \begin{multicols}{3}
@@ -1811,7 +1811,7 @@ a+b=2\\ab=2
 \end{enumerate}
 \end{multicols}
 
-\item 求证：
+\staritem 求证：
 \begin{enumerate}[(1)]
     \item 不经计算证明$\left|\frac{a+bi}{a-bi}\right|\equiv 1$
     \item 有相同幅角的两个复数之比必为实数；
@@ -2023,7 +2023,7 @@ $\therefore\quad 1+\cos 2A+\cos 2B+\cos 2C+4\cos A  \cos B  \cos C=0$
 \end{enumerate}
 \end{ex}
 
-\section*{习题1.4}
+\subsection*{习题1.4}
 \begin{enumerate}
     \item 把下列复数化为指数形式：
 \begin{multicols}{3}
@@ -2129,7 +2129,7 @@ $n$个$n$次方根：
 \[x=\sqrt[n]{r}\left(\pc{\frac{\theta+2k\pi}{n}}\right)\]
 当$k=0,1,2,\ldots,n-1$时，可得出$n$个不同的解.
 
-\item 特别地，方程$x^n=1$的复数解，叫做$n$次单位根，若设$\omega=\pc{\frac{2\pi}{n}}$，则当$n$为偶数时，$n$个单位根为
+\item 特别地，方程$x^n=1$的$n$个复数解，叫做$n$次单位根，若设$\omega=\pc{\frac{2\pi}{n}}$，则当$n$为偶数时，$n$个单位根为
 \[1,\; \omega,\; \omega^2,\;\ldots,\;  \omega^{\tfrac{n}{2}-1},\;-1,\;  \overline{\omega^{\tfrac{n}{2}-1}},\; \ldots, \;  \overline{\omega^{2}},\; \overline{\omega}\]
 当$n$为奇数时，$n$个单位根为
 \[1,\; \omega,\; \omega^2,\;\ldots,\;  \omega^{\tfrac{n-1}{2}},\;  \overline{\omega^{\tfrac{n-1}{2}}},\; \ldots, \;  \overline{\omega^{2}},\; \overline{\omega}\]
@@ -2183,7 +2183,7 @@ $n$个$n$次方根：
 \item 已知$(x+yi)^3=a+bi$，$a,b,x,y\in\R$，求证：
 $\frac{a}{x}+\frac{b}{y}=4(x^2-y^2)$
 
-\item 若$a$，$b$是共轭复数，且$(a+b)-3abi=4-6i$, 试求$a$及$b$.
+\item 若$a$，$b$是共轭复数，且$(a+b)^2-3abi=4-6i$, 试求$a$及$b$.
 \item 若$x,y\in\R$, $z=x+y-30-xyi$且$\bar z=60i-|x+yi|$，试求$x$和$y$的值.
 \item 若$z=x+yi$，求证：$|z|\le |x|+|y|\le \sqrt{2}|z|$
 \item 试判断以下复数，哪些是实数？哪些是纯虚数？($z,z_1,z_2\in\mathbb{C}$)
@@ -2228,20 +2228,20 @@ $\frac{a}{x}+\frac{b}{y}=4(x^2-y^2)$
     \end{cases}$
     \item $\begin{cases}
 x^2+y^2=6\\        
-x^2+y^2=0\\        
-x^2+z^2=8i\\        
+y^2+z^2=0\\
+x^2+z^2=8i\\       
     \end{cases}$
 \end{enumerate}
 \end{multicols}
 
 \item 化简
-\[\frac{(\cos2\theta-i\sin2\theta)(\pc{\theta})^2}{\pcx{\theta+\varphi}}\cdot \frac{(\pc{2\theta})^2(\cos2\varphi-i\sin2\varphi)}{\pcx{\theta-\varphi}}\]
+\[\frac{(\cos2\theta-i\sin2\theta)(\pc{\varphi})^2}{\pcx{\theta+\varphi}}\cdot \frac{(\pc{2\theta})^2(\cos2\varphi-i\sin2\varphi)}{\pcx{\theta-\varphi}}\]
 
 \item 将下列复数化为三角形式：
 \begin{multicols}{2}
 \begin{enumerate}[(1)]
     \item $\frac{(\pc{5\varphi})^2}{(\cos3\varphi-i\sin3\varphi)^3}$
-    \item $1-\pc{\theta},\quad (0\le\theta\le\pi)$
+    \item $1-\cos\theta+i\sin\theta,\quad (0\le\theta\le\pi)$
 \end{enumerate}
 \end{multicols}
 

@@ -46,10 +46,10 @@ $x$通过代数值无限地变小，而绝对值无限地增大的任何一个�
 \end{proof}
 
 \begin{example}
-证明函数$\sin x$, 当$x\to\infty$时，没有极限．
+说明函数$\sin x$, 当$x\to\infty$时，没有极限．
 \end{example}
 
-\begin{proof}
+\begin{solution}
 令自变量$x$取数列$x_n=-\frac{\pi}{2}+2n\pi\quad (n=1,2,3,\ldots)$的值趋向$+\infty$，则对应的函数值数列
 \[\begin{split}
     \sin x_n&=\sin\left(-\frac{\pi}{2}+2n\pi\right)\\
@@ -66,7 +66,7 @@ $x$通过代数值无限地变小，而绝对值无限地增大的任何一个�
 \[\lim_{n\to\infty} \sin x_n=\lim_{n\to\infty} \sin\left(\frac{\pi}{2}+2n\pi\right) =1\]
 由于$x$取趋向$+\infty$的两个不同数列时，$y=\sin x$可以有不同的极限，因此
 $\Lim_{x\to\infty} \sin x$不存在．
-\end{proof}
+\end{solution}
 
 \begin{blk}{定义2}
  设函数$f(x)$在点$a$附近有定义（但在$x=a$时，可以没有定义），如果当自变量$x$不论通过怎样一个以$a$为极限但始终不等于$a$的数列$\{x_n\}$, 对应的函数值数列$f (x_1) ,f (x_2) , \ldots,f(x_n ) ,\ldots$
@@ -78,7 +78,7 @@ $\Lim_{x\to\infty} \sin x$不存在．
 \end{equation}
 \end{blk}
 
-极限式(1.2)的几何意义如图1.2所示：当$x$无限地靠近$a$，但总不能等于$a$时，曲线$y=f(x)$上的点$(x,f(x))$无限地接近$(a,\ell)$点．
+极限式(1.2)的几何意义如图1.2所示：当$x$无限地靠近$a$，但总不能等于$a$时，曲线$y=f(x)$上的点$(x,f(x))$无限地靠近$(a,\ell)$点．
 
 \begin{figure}[htp]
     \centering
@@ -138,7 +138,7 @@ $x=a$这一点的值没有什么必然关系，这也就是说，无论$f(x)$在
 证明当$x\to 0$时，函数$f(x)=\sin\frac{1}{x}$没有极限．
 \end{example}
 
-\begin{proof}
+\begin{solution}
 函数$f(x)=\sin\frac{1}{x}$对于一切$x\ne 0$的值有定义，因此这个函数在点$x=0$的邻域内有定义．
 
 当$x$取数列$\{x_n\}=\left\{\frac{2}{(2n+1)\pi}\Big| n=1,2,3,\ldots\right\}$的值而趋于零时，数列$\left\{\frac{1}{x_n}\right\}$相应的值是
@@ -146,7 +146,7 @@ $x=a$这一点的值没有什么必然关系，这也就是说，无论$f(x)$在
 此时数列$\left\{\sin\frac{1}{x_n}\right\}$便交替地取$-1$和$+1$这两个数值，换言之
 \[\sin\frac{1}{x_n}=(-1)^n,\qquad n=1,2,3,\ldots\]
 因此，当$n\to\infty$时，数列$\left\{\sin\frac{1}{x_n}\right\}$不趋于任何极限值．这就证明了当$x\to 0$时，函数$f(x)=\sin\frac{1}{x}$的极限不存在．
-\end{proof}
+\end{solution}
 
 函数的图象大致如图1.4所示．曲线关于原点对称，在包含原点的每一个对称邻域$(-\delta, \delta)$内，曲线$y=\sin\frac{1}{x}$
 在原点的邻近作无数次振动，且曲线的振幅恒为1, 虽将原点的邻域的长缩小，也不能减少振动的次数．
@@ -261,7 +261,8 @@ $\therefore\quad $对于任意$\varepsilon>0$，取$\delta=\min\left(1,\frac{\va
     设函数$f(x)=\begin{cases}
         x-1,&x\le 1\\
 x+1,&x>1
-    \end{cases}\quad $    
+    \end{cases}\quad $（图1.6）
+
     求$\Lim_{x\to 1^-}f(x)$和$\Lim_{x\to 1^+}f(x)$
 \end{example}
 
@@ -627,17 +628,20 @@ $\therefore\quad \left|\sqrt[n]{u(x)}-\sqrt[n]{A}\right|<|u(x)-A|\cdot \frac{2-2
 \end{proof}
 
 \begin{example}
-求：$\Lim_{x\to 2}\frac{x^2+3x-10}{3x^2-5x-2},\qquad \Lim_{x\to 0}\frac{\sqrt[3]{1+x^2}-1}{x^2}$
+求：(1) $\Lim_{x\to 2}\frac{x^2+3x-10}{3x^2-5x-2}$；\qquad (2) $\Lim_{x\to 0}\frac{\sqrt[3]{1+x^2}-1}{x^2}$
 \end{example}
 
 \begin{solution}
-    如果应用前面的定理去分别求两式中的分子、分母的极限时，其分子、分母的极限值均为零，即我们得到$\frac{0}{0}$的不定形式．我们通常要对原代数式变形，找出分子、分母中具有$x-a$的因子，消去$x-a$的公共因子，一般问题就可解决．
+    如果应用1.3中的定理去分别求(1)、(2)中的分子、分母的极限时，其分子、分母的极限值均为零，即我们得到$\frac{0}{0}$的不定形式．我们通常要对原代数式变形，找出分子、分母中具有$x-a$的因子，消去$x-a$的公共因子，一般问题就可解决．
+
+(1)
 \[\begin{split}
     \Lim_{x\to 2}\frac{x^2+3x-10}{3x^2-5x-2}&=\Lim_{x\to 2}\frac{(x+5)(x-2)}{(3x+1)(x-2)}\\
     &=\Lim_{x\to 2}\frac{x+5}{3x+1}\\
     &=\frac{2+5}{3\x 2+1}=1
 \end{split}\]
 
+(2)
 \[\begin{split}
     \Lim_{x\to 0}\frac{\sqrt[3]{1+x^2}-1}{x^2}&=\Lim_{x\to 0}\frac{{(1+x^2)}-1}{x^2\left(\sqrt[3]{(1+x^2)^2}+\sqrt[3]{1+x^2}+1\right)}\\
     &=\Lim_{x\to 0}\frac{1}{\sqrt[3]{(1+x^2)^2}+\sqrt[3]{1+x^2}+1}=\frac{1}{3}
@@ -645,17 +649,18 @@ $\therefore\quad \left|\sqrt[n]{u(x)}-\sqrt[n]{A}\right|<|u(x)-A|\cdot \frac{2-2
 \end{solution}
 
 \begin{example}
-    求：$\Lim_{x\to 0}\frac{\cos x-1}{x^2},\qquad \Lim_{x\to \pi}\frac{\sin mx}{\sin nx}(m,n\in \mathbb{N})$
+    求：(1) $\Lim_{x\to 0}\frac{\cos x-1}{x^2}$；\qquad (2) $\Lim_{x\to \pi}\frac{\sin mx}{\sin nx}\;(m,n\in \mathbb{N})$
 \end{example}
 
 \begin{solution}
+(1)
 \[\begin{split}
     \Lim_{x\to 0}\frac{\cos x-1}{x^2}&=\Lim_{x\to 0}\frac{-2\left(\sin\frac{x}{2}\right)^2}{x^2}\\
     &=\frac{-2}{2^2}\Lim_{x\to 0}\frac{\sin\frac{x}{2}}{\frac{x}{2}}\cdot \Lim_{x\to 0}\frac{\sin\frac{x}{2}}{\frac{x}{2}}\\
     &=\left(-\frac{1}{2}\right)\cdot 1\cdot 1=-\frac{1}{2}
 \end{split}\]
 
-由三角函数诱导公式易知
+(2) 由三角函数诱导公式易知
 \[\sin m(\pi-x)=\sin(m\pi-mx)=(-1)^{m-1}\sin mx\]
 同样得到
 \[\sin n(\pi-x)=(-1)^{n-1}\sin nx\]
@@ -798,7 +803,7 @@ $\therefore\quad a=-1,\quad b=\frac{1}{2}$为所求．
     \item $\Lim_{\theta \to 0} \frac{\tan\theta}{\theta}$
     \item $\Lim_{t\to 0} \frac{15t}{\tan 6t}$
     \item $\Lim_{x\to 0} \frac{\tan 2x}{\sin 7x}$
-    \item $\Lim_{\theta \to 0} \frac{\tan\theta-\sin\theta}{\theta^2}$
+    \item $\Lim_{\theta \to 0} \frac{\tan\theta-\sin\theta}{\theta^3}$
     \item $\Lim_{x\to 0} \frac{\csc x-\cot x}{x}$
     \item $\Lim_{x\to 0} \frac{\sin^2\frac{x}{2}}{x^2}$
     \item $\Lim_{x\to \pi} \frac{\sin x}{\pi-x}$
@@ -835,7 +840,7 @@ $\cdots$ &$a_{256}=2.712$&$\cdots$&$a_{1024}=2.717$\\
     \left(1+\frac{1}{n}\right)^n&=1+n\cdot\frac{1}{n}+\frac{n(n-1)}{1\cdot 2}\cdot \frac{1}{n^2}+\frac{n(n-1)(n-2)}{1\cdot 2\cdot 3}\cdot \frac{1}{n^3}\\
     &\quad +\cdots+\frac{n(n-1)(n-2)\cdots[n-(n-1)]}{1\cdot 2\cdot 3\cdots n}\cdot \frac{1}{n^n}
 \end{split}\]
-这个等式的右边的第二项等于1，其它各项可以变换如下：
+这个等式的右边的第二项等于1，其他各项可以变换如下：
 \[\begin{split}
 \frac{n(n-1)}{1\cdot 2}\cdot \frac{1}{n^2}&=\frac{n(n-1)}{n^2}\cdot\frac{1}{2!}\\&=\left(1-\frac{1}{n}\right) \cdot\frac{1}{2!}\\
 \frac{n(n-1)(n-2)}{1\cdot 2\cdot 3}\cdot \frac{1}{n^3}&=\frac{n(n-1)(n-2)}{n^3}\cdot\frac{1}{3!}\\&=\left(1-\frac{1}{n}\right)\cdot \left(1-\frac{2}{n}\right)\cdot\frac{1}{3!}\\
@@ -930,7 +935,7 @@ $$\Lim_{x\to \infty}\left(1+\frac{1}{x}\right)^{x}=e$$
 \begin{multicols}{2}
 \begin{enumerate}
     \item $\Lim_{x\to\infty}\left(1+\frac{8}{x}\right)^x$
-    \item $\Lim_{y\to 0}(1+y)^{\tfrac{1}{3}y}$
+    \item $\Lim_{y\to 0}(1+y)^{\tfrac{1}{3y}}$
     \item $\Lim_{t\to\infty}\left(1-\frac{1}{t}\right)^t$
     \item $\Lim_{t\to\infty}\left(\frac{t}{1+t}\right)^t$
     \item $\Lim_{n\to+\infty}\left(1+\frac{x}{n}\right)^n$
@@ -1089,7 +1094,7 @@ $\varepsilon=\frac{1}{2}f(a)$, 必定存在一个$\delta$使得$|x-a|<\delta$时
 \end{proof}
 
 \subsection{连续函数的运算}
-连续函数的概念是函数概念和极限概念一个自然结合，由本章函数极限算法定理直接得出下面定理．
+连续函数的概念是函数概念和极限概念一个自然结合，由本章1.3函数极限算法定理直接得出下面定理．
 
 \begin{blk}
  {定理1} 设$f$和$g$在$a$处连续，则
@@ -1105,7 +1110,7 @@ $\varepsilon=\frac{1}{2}f(a)$, 必定存在一个$\delta$使得$|x-a|<\delta$时
 \begin{enumerate}
     \item 因为$f$和$g$在$a$处连续，所以
     \[\Lim_{x\to a} f (x) =f (a) ,\qquad  \lim_{x\to a} g (x) =g (a)\]
-    根据函数极限算法定理，得
+    根据1.3中的函数极限算法定理，得
    \[\begin{split}
     \Lim_{x\to a} (f\pm g)(x)=\Lim_{x\to a}[f(x)\pm g(x)]&=\Lim_{x\to a} f(x)\pm \Lim_{x\to a}g(x)\\
     &=f(a)\pm g(a)=(f\pm g)(a)
@@ -1116,14 +1121,14 @@ $\varepsilon=\frac{1}{2}f(a)$, 必定存在一个$\delta$使得$|x-a|<\delta$时
         &=f (a) \cdot g (a) =(f\cdot g) (a) 
     \end{split}\]
     即$f\cdot g$在$a$处连续．
-    \item 由于$g(a)\ne 0$, 又$g$在$a$处连续，根据定理，知道存在点$a$的$\delta$邻域，使得对于每一个$x\in (a-\delta,a+\delta)$，有$g(x)\cdot g(a)>0$，因此
+    \item 由于$g(a)\ne 0$, 又$g$在$a$处连续，根据2.1中的定理，知道存在点$a$的$\delta$邻域，使得对于每一个$x\in (a-\delta,a+\delta)$，有$g(x)\cdot g(a)>0$，因此
 \[\Lim_{x\to a} \frac{1}{g}(x)=\frac{1}{\Lim_{x\to a} g(x)}=\frac{1}{g(a)}=\frac{1}{g}(a)\]
 
 \item 证明留给读者．
 \end{enumerate} 
 \end{proof}
 
-在第四册下，我们根据定理证明了一些基本初等函数在其定义域上到处连续的命题，现在总结如下：
+在第四册下，我们根据定理1证明了一些基本初等函数在其定义域上到处连续的命题，现在总结如下：
 
 \begin{blk}
    {命题1} 任何多项式函数到处连续． 
@@ -1158,7 +1163,7 @@ $\varepsilon=\frac{1}{2}f(a)$, 必定存在一个$\delta$使得$|x-a|<\delta$时
 \begin{proof}
 设$x_0$是任意给定的实数，由三角函数的和差化积公式，得到
 \[|\sin x-\sin x_0|=2\left|\sin\frac{x-x_0}{2}\right| \cdot \left|\cos \frac{x+x_0}{2}\right|\]
-因为$\left|\cos\frac{x+x_0}{2}\right|\le 1$, 并根据引理得到
+因为$\left|\cos\frac{x+x_0}{2}\right|\le 1$, 并根据1.3中的引理得到
 \[|\sin x-\sin x_0|\le 2\left|\frac{x-x_0}{2}\right|\]
 即
 \[|\sin x-\sin x_0|\le \left|x-x_0\right|\]
@@ -1399,7 +1404,7 @@ $\therefore\quad \Lim_{x\to 2}\sqrt{\frac{1-\cos\pi x}{4-x^2}}=\sqrt{\Lim_{x\to 
 
 \subsection{闭区间上的连续函数的性质}
 
-我们在一中已经定义了闭区间上连续函数的意义．对于这类函数，我们要介绍它的几个重要性质．
+我们在2.1中已经定义了闭区间上连续函数的意义．对于这类函数，我们要介绍它的几个重要性质．
 
 \begin{blk}
     {中间值定理} 设$y=f(x)$是一个在闭区间$[a,b]$上到处连续的函数，设$c$是一个介于$f(a)$和$f(b)$之间的常数，则必须存在一个介于$a$、$b$之间的实数$x_0$, 使得$f(x_0)=c$.
@@ -1422,7 +1427,7 @@ $\therefore\quad \Lim_{x\to 2}\sqrt{\frac{1-\cos\pi x}{4-x^2}}=\sqrt{\Lim_{x\to 
 \end{figure}
 
 
-对这个定理，我们在第四册中利用二分逼近法及连续函数的性质给出了它的证明，这里不再重述．
+对这个定理，我们在第四册（下）4.3中利用二分逼近法及连续函数的性质给出了它的证明，这里不再重述．
 
 \begin{blk}
  {最大值、最小值} 在闭区间$[a,b]$上连续的函数$f$一定在该区间上取到一个最大值和最小值．  
@@ -1461,8 +1466,9 @@ $\therefore\quad \Lim_{x\to 2}\sqrt{\frac{1-\cos\pi x}{4-x^2}}=\sqrt{\Lim_{x\to 
 \draw(0,1)node[left]{1}--(.1,1);
 \node at (0,0)[below right]{$O$};
 \draw[very thick](0,0)--(1,1);
-\tkzDefPoints{0/0/O, 1/1/A}
-\tkzDrawPoints(O,A)
+\tkzDefPoints{0/0/O, 1/0/B}
+\tkzDrawPoints(O,B)
+\draw (1,1)[fill=white] circle(1.5pt);
     \end{tikzpicture}
     \caption{}
     \end{minipage}
