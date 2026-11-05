@@ -63,7 +63,7 @@ $env:PAPER = "a4paper"; just book 3    # Windows PowerShell
 
 ### Typst 版（试验中）
 
-[`typst/`](typst/) 中是与 LaTeX 版并存的 Typst 重排本，目前有第一、二册，用 `just typst 1`、`just typst 2` 编译，详见 [`typst/README.md`](typst/README.md)。
+[`typst/`](typst/) 中是与 LaTeX 版并存的 Typst 重排本，六册都已完成，用 `just typst 1` … `just typst 6` 编译，详见 [`typst/README.md`](typst/README.md)。
 
 ### 手动编译
 

@@ -1,6 +1,6 @@
 # Typst 版（试验中）
 
-与 LaTeX 版并存的 [Typst](https://typst.app/) 重排本。LaTeX 版仍是主版本，继续维护；Typst 版目前有第一、二册。
+与 LaTeX 版并存的 [Typst](https://typst.app/) 重排本。LaTeX 版仍是主版本，继续维护；Typst 版六册都已完成。
 
 ## 目录结构
 
@@ -12,9 +12,9 @@
 | `math1/main.typ` | 第一册主文件：封面信息和各章列表 |
 | `math1/preface.typ`、`math1/ch1.typ`…… | 前言和各章正文 |
 | `math1/figs.typ`、`math1/figs/ch1.typ`…… | 插图。正文用 `#fig("章-序号")` 引用，图用 [CeTZ](https://typst.app/universe/package/cetz) 画在各章的 `figures` 字典中；没画好的图显示为红色占位框 |
-| `math2/…` | 第二册，结构同上；另有 `defs.typ`（本册专用的符号 // 和 ▱），插图分自动生成的 `figs/gen-ch*.typ` 和手工的 `figs/ch*.typ` |
+| `math2/…`…`math6/…` | 第二至六册，结构同上；插图分自动生成的 `figs/gen-ch*.typ` 和手工的 `figs/ch*.typ`。第二、五册另有 `defs.typ`（本册专用的符号 // 和 ▱）；第六册是上、下两册的合订本（`volume-part` 分册，上册末尾的附录 `app.typ` 不编号） |
 | `tools/tex2typ.py`、`tools/filter.lua` | 把 LaTeX 源码初步转换为 Typst 的脚本（需要 Python 3 和 pandoc） |
-| `tools/tikz2cetz.py` | 把 TikZ / tkz-euclide 插图自动转换为 CeTZ 代码（第二册起使用） |
+| `tools/tikz2cetz.py` | 把 TikZ / tkz-euclide 插图自动转换为 CeTZ 代码（第二册起使用；第六册的 3 幅 circuitikz 电路图手工画在 `math6/figs/ch3.typ`） |
 | `tools/tikzref.py`、`tools/tikzcmp.py`、`tools/figcmp.typ` | 把 LaTeX 版插图逐幅编译成 PNG，再与 CeTZ 版逐幅做像素比对 |
 | `tools/figpreview.typ` | 只排某一章插图的预览页，便于和 LaTeX 版逐幅对照 |
 
@@ -48,8 +48,10 @@ python typst/tools/tex2typ.py 1          # 转换第 1 册的前言和全部章�
 python typst/tools/tex2typ.py 1 3        # 只转换第 3 章（前言记作 0）
 ```
 
-脚本不会覆盖已有的 `.typ` 文件（加 `--force` 才覆盖），因为人工校对过的内容以 `.typ` 为准。
-所以 LaTeX 版以后的修订需要手动同步到 Typst 版。
+脚本不会覆盖已有的 `.typ` 文件（加 `--force` 才覆盖）。第一册的 `.typ` 是转换后人工校对过的，以 `.typ` 为准，
+LaTeX 版以后的修订要手动同步；第二至六册的正文和插图都是自动生成的，不手工修改，问题一律在 `tools/` 中的转换脚本
+或 `common/` 中的模板里修，再用 `--force` 重新生成（`python typst/tools/tex2typ.py 6 --force`）。
+各册专用的 LaTeX 命令登记在 `tex2typ.py` 的 `VOLUME_MACROS`、`VOLUME_SLOTS`、`VOLUME_TEX` 中。
 
 转换方式：先用正则把 pandoc 处理不好的结构（TikZ 图、选做题 `\staritem`、`numcases`、`\tag`、`tabular`、
 行内的 `cases` 等）换成占位符，再用 pandoc 加 `filter.lua` 转换其余部分，最后把占位符换回 Typst 代码。
@@ -57,7 +59,7 @@ python typst/tools/tex2typ.py 1 3        # 只转换第 3 章（前言记作 0�
 
 第一册的 76 幅 TikZ 插图已全部用 CeTZ 手工重画。
 
-第二册的 542 幅插图（大多用 tkz-euclide 画）由 `tools/tikz2cetz.py` 自动转换：交点、中点、切点、旋转等几何计算由脚本按
+第二至六册的插图（共一千余幅，大多用 tkz-euclide 画）由 `tools/tikz2cetz.py` 自动转换：交点、中点、切点、旋转等几何计算由脚本按
 tkz-euclide 5.14c 的算法完成，生成的 CeTZ 代码里只有点的坐标（仍用原来的点名）和画图命令，线宽、颜色、标注位置也按
 tkz-euclide 的默认值。转换不了或转换得不好的图写在 `figs/ch*.typ` 中，覆盖自动生成的同名图。
 

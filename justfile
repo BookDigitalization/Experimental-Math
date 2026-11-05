@@ -50,7 +50,7 @@ split-all: (split "1") (split "2") (split "3") (split "4") (split "5") (split "6
 _check n:
     @{{ if n =~ '^[1-6]$' { "" } else { error("册号应为 1~6，收到: " + n) } }}
 
-# 编译第 n 册的 Typst 版（试验中，目前有第 1、2 册），输出 typst/math<n>/main.pdf。
+# 编译第 n 册的 Typst 版（试验中），输出 typst/math<n>/main.pdf。
 # 同样认环境变量 CTEX_FONTSET=ubuntu 与 PAPER=a4paper
 typst n: (_check n)
     typst compile --root {{ quote(justfile_directory()) }} --input fontset={{ if fontset == "" { "windows" } else { fontset } }} --input paper={{ if paper == "a4paper" { "a4" } else { "iso-b5" } }} {{ quote("typst/math" + n + "/main.typ") }} {{ quote("typst/math" + n + "/main" + _suffix + ".pdf") }}
