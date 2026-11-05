@@ -1495,7 +1495,7 @@ class PathBuilder:
                         nrm = (-nrm[0], -nrm[1])
                     r = num(dec.get("raise", "0pt"))
                     a, b = add(a, mul(nrm, r)), add(b, mul(nrm, r))
-                    pic.out.append("cetz.decorations.brace(%s, %s, amplitude: %s, flip: %s, stroke: %s)" % (
+                    pic.out.append("cetz.decorations.flat-brace(%s, %s, amplitude: %s, flip: %s, stroke: %s)" % (
                         pic.xy(a), pic.xy(b), fmt(amp), "true" if mirror else "false", stroke))
                 else:
                     seg = num(dec.get("segment length", "10pt"))

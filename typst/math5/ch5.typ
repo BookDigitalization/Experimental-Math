@@ -25,7 +25,7 @@ a_y & = arrow(e)_y dot.op arrow(a) =\|arrow(a)\|cos chevron.l arrow(e)_y\,arrow(
 ]
 这个定理说的是，#strong[向量 ]$arrow(a)$#strong[ 在 ]$X$#strong[ 轴和 ]$Y$#strong[ 轴上的坐标分量分别是 ]$arrow(a)$#strong[ 在坐标轴上的垂直投影量]．
 
-显然，$arrow(o) =\(0\,0\)$, $arrow(e)_x =\(1\,0\)$, $arrow(e)_y =\(0\,1\)$. 令 $⟨arrow(e)_x \, arrow(a)⟩ = alpha$, $⟨arrow(e)_y \, arrow(a)⟩ = beta$⁠，$alpha\,beta$ 一起决定了 $arrow(a)$ 的方向，$alpha\,beta$ 叫做 $arrow(a)$ 的#strong[方向角]，$cos alpha$, $cos beta$ 叫做 $arrow(a)$ 的#strong[方向余弦]，上述定理表达了向量的长度、方向与它的坐标之间的关系，甚为重要，请同学要把它牢牢记住．
+显然，$arrow(o) =\(0\,0\)$, $arrow(e)_x =\(1\,0\)$, $arrow(e)_y =\(0\,1\)$. 令 $chevron.l arrow(e)_x\,arrow(a) chevron.r = alpha$, $chevron.l arrow(e)_y\,arrow(a) chevron.r = beta$⁠，$alpha\,beta$ 一起决定了 $arrow(a)$ 的方向，$alpha\,beta$ 叫做 $arrow(a)$ 的#strong[方向角]，$cos alpha$, $cos beta$ 叫做 $arrow(a)$ 的#strong[方向余弦]，上述定理表达了向量的长度、方向与它的坐标之间的关系，甚为重要，请同学要把它牢牢记住．
 
 如果在坐标平面上（图5.3），以 $O$ 为起点引 $accent(O A, ⃗) = arrow(a)$, 则 $A$ 点的位置被 $arrow(a)$ 所唯一确定，这时，我们称 $accent(O A, ⃗)$ 为点 $A$ 的#strong[位置向量]．换句话说，$A$ 点的位置向量也就是确定 $A$ 点相对于原点位置的向量．设 $accent(O P, ⃗) = x arrow(e)_x + y arrow(e)_y$⁠，则 $accent(O P, ⃗)$ 的坐标 $\(x\,y\)$ 也就是 $P$ 点的坐标；反之，$P$ 点的坐标 $\(x\,y\)$ 也就是位置向量 $accent(O P, ⃗)$ 的坐标．由此可见，给定了原点 $O$ 和两个互相垂直的单位向量 $arrow(e)_x\,arrow(e)_y$, 坐标系也就完全确定了，因而，坐标系 $O X Y$ 也可用 $\[O : thick arrow(e)_x\,arrow(e)_y\]$ 来表示，$arrow(e)_x\,arrow(e)_y$ 叫做坐标系的#strong[基向量]．
 
@@ -38,10 +38,10 @@ a_y & = arrow(e)_y dot.op arrow(a) =\|arrow(a)\|cos chevron.l arrow(e)_y\,arrow(
 
 ]
 #solution[
-设 $arrow(a) =\(a_x\,a_y\)$, $arrow(b) =\(b_x\,b_y\)$, $arrow(c) =\(c_x\,c_y\)$, 因此：$ a_x & = arrow(e)_x dot.op arrow(a) =\|arrow(a)\|cos ⟨arrow(e)_x \, arrow(a)⟩ = 2 cos 45 degree = sqrt(2)\
-a_y & =\|arrow(a)\|cos ⟨arrow(e)_y \, arrow(a)⟩ = 2 cos 45 degree = sqrt(2) $ #noindent;$therefore quad arrow(a) = (sqrt(2) \, sqrt(2))$ $ b_x & =\|arrow(b)\|cos ⟨arrow(e)_x \, arrow(b)⟩ = 3 cos\(180 degree - 60 degree\)= - 3 cos 60 degree = - 3 / 2\
-b_y & =\|arrow(b)\|cos ⟨arrow(e)_y \, arrow(b)⟩ = 3 cos\(90 degree - 60 degree\)= 3 cos 30 degree = 3 / 2 sqrt(3) $ #noindent;$therefore quad arrow(b) = (- 3 / 2 \, 3 / 2 sqrt(3))$ $ c_x & =\|arrow(c)\|cos ⟨arrow(e)_x \, arrow(c)⟩ = 4 cos 30 degree = 2 sqrt(3)\
-c_y & =\|arrow(c)\|cos ⟨arrow(e)_y \, arrow(c)⟩ = 4 cos\(30 degree + 90 degree\)= - 4 sin 30 degree = - 2 $ #noindent;$therefore quad arrow(c) = (2 sqrt(3) \, - 2)$
+设 $arrow(a) =\(a_x\,a_y\)$, $arrow(b) =\(b_x\,b_y\)$, $arrow(c) =\(c_x\,c_y\)$, 因此：$ a_x & = arrow(e)_x dot.op arrow(a) =\|arrow(a)\|cos chevron.l arrow(e)_x\,arrow(a) chevron.r = 2 cos 45 degree = sqrt(2)\
+a_y & =\|arrow(a)\|cos chevron.l arrow(e)_y\,arrow(a) chevron.r = 2 cos 45 degree = sqrt(2) $ #noindent;$therefore quad arrow(a) = (sqrt(2) \, sqrt(2))$ $ b_x & =\|arrow(b)\|cos chevron.l arrow(e)_x\,arrow(b) chevron.r = 3 cos\(180 degree - 60 degree\)= - 3 cos 60 degree = - 3 / 2\
+b_y & =\|arrow(b)\|cos chevron.l arrow(e)_y\,arrow(b) chevron.r = 3 cos\(90 degree - 60 degree\)= 3 cos 30 degree = 3 / 2 sqrt(3) $ #noindent;$therefore quad arrow(b) = (- 3 / 2 \, 3 / 2 sqrt(3))$ $ c_x & =\|arrow(c)\|cos chevron.l arrow(e)_x\,arrow(c) chevron.r = 4 cos 30 degree = 2 sqrt(3)\
+c_y & =\|arrow(c)\|cos chevron.l arrow(e)_y\,arrow(c) chevron.r = 4 cos\(30 degree + 90 degree\)= - 4 sin 30 degree = - 2 $ #noindent;$therefore quad arrow(c) = (2 sqrt(3) \, - 2)$
 
 ]
 #exercise[
@@ -123,15 +123,15 @@ accent(B A, ⃗) & =\(3 -\(- 2\)\,4 - 7\)=\(5\,- 3\). $ #noindent;显然它们�
 
 ]
 #example[
-已知三个向量 $arrow(a)$⁠、$arrow(b)$⁠、$arrow(c)$⁠，且 $\|arrow(a)\|=\|arrow(b)\|=\|arrow(c)\|= r$. $⟨arrow(a) \, arrow(b)⟩ = ⟨arrow(b) \, arrow(c)⟩ = ⟨arrow(c) \, arrow(a)⟩ = 120 degree$ (图5.6)，求证：$arrow(a) + arrow(b) + arrow(c) = arrow(0)$.
+已知三个向量 $arrow(a)$⁠、$arrow(b)$⁠、$arrow(c)$⁠，且 $\|arrow(a)\|=\|arrow(b)\|=\|arrow(c)\|= r$. $chevron.l arrow(a)\,arrow(b) chevron.r = chevron.l arrow(b)\,arrow(c) chevron.r = chevron.l arrow(c)\,arrow(a) chevron.r = 120 degree$ (图5.6)，求证：$arrow(a) + arrow(b) + arrow(c) = arrow(0)$.
 
 ]
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("5-08");], caption: []), figure([#fig("5-09");], caption: []))));
 
 #proof[
 设 $accent(O A, ⃗) = arrow(a)$, $accent(O B, ⃗) = arrow(b)$, $accent(O C, ⃗) = arrow(c)$, 以 $accent(O A, ⃗)$ 的方向作为 $X$ 轴的正方向建立坐标系 $\[O : thick arrow(e)_x\,arrow(e)_y\]$ 则 $ accent(O A, ⃗) & =\(r\,0\)\
-accent(O B, ⃗) & = (\| arrow(b) \| cos 120 degree \, \| arrow(b) \| cos 30 degree) = (- r / 2 \, sqrt(3) / 2 r)\
-accent(O C, ⃗) & = (\| arrow(c) \| cos 120 degree \, \| arrow(c) \| cos 150 degree) = (- r / 2 \, - sqrt(3) / 2 r)\
+accent(O B, ⃗) & = (\|arrow(b)\| cos 120 degree \, \|arrow(b)\| cos 30 degree) = (- r / 2 \, sqrt(3) / 2 r)\
+accent(O C, ⃗) & = (\|arrow(c)\| cos 120 degree \, \|arrow(c)\| cos 150 degree) = (- r / 2 \, - sqrt(3) / 2 r)\
 accent(O A, ⃗) + accent(O B, ⃗) + accent(O C, ⃗) & =\(r\,0\)+ (- r / 2 \, sqrt(3) / 2 r) + (- r / 2 \, - sqrt(3) / 2 r)\
  & = (r - r / 2 - r / 2 \, 0 + sqrt(3) / 2 r - sqrt(3) / 2 r) =\(0\,0\) $ #noindent;$therefore quad arrow(a) + arrow(b) + arrow(c) = arrow(0)$.
 
@@ -383,9 +383,9 @@ $ \|accent(A B, ⃗)\| & = sqrt(\(3 - 1\)^2 +\(4 - 2\)^2) = sqrt(8)\
 
 ]
 === 两向量的夹角计算公式
-已知 $arrow(a) =\(a_x\,a_y\)$, $arrow(b) =\(b_x\,b_y\)$, 则 $ cos ⟨arrow(a) \, arrow(b)⟩ = frac(arrow(a) dot.op arrow(b), \|arrow(a)\|lr(|arrow(b)|)) $ #noindent;但 $arrow(a) dot.op arrow(b) = a_x b_x + a_y b_y\,quad\|arrow(a)\|= sqrt(a_x^2 + a_y^2)\,quad lr(|arrow(b)|) = sqrt(b_x^2 + b_y^2)$⁠，所以#numbered-eq($ cos ⟨arrow(a) \, arrow(b)⟩ = frac(a_x b_x + a_y b_y, sqrt(a_x^2 + a_y^2) sqrt(b_x^2 + b_y^2)) $);#noindent; (5.7) 式是求两个向量夹角的#strong[余弦的计算公式]．由两个向量夹角的余弦，我们就可求出这两个向量的夹角．
+已知 $arrow(a) =\(a_x\,a_y\)$, $arrow(b) =\(b_x\,b_y\)$, 则 $ cos chevron.l arrow(a)\,arrow(b) chevron.r = frac(arrow(a) dot.op arrow(b), \|arrow(a)\|lr(|arrow(b)|)) $ #noindent;但 $arrow(a) dot.op arrow(b) = a_x b_x + a_y b_y\,quad\|arrow(a)\|= sqrt(a_x^2 + a_y^2)\,quad lr(|arrow(b)|) = sqrt(b_x^2 + b_y^2)$⁠，所以#numbered-eq($ cos chevron.l arrow(a)\,arrow(b) chevron.r = frac(a_x b_x + a_y b_y, sqrt(a_x^2 + a_y^2) sqrt(b_x^2 + b_y^2)) $);#noindent; (5.7) 式是求两个向量夹角的#strong[余弦的计算公式]．由两个向量夹角的余弦，我们就可求出这两个向量的夹角．
 
-设 $⟨arrow(e)_x \, arrow(a)⟩ = alpha$, $⟨arrow(e)_y \, arrow(a)⟩ = beta$⁠，已知 $ a_x =\|arrow(a)\|cos alpha\,#h(2em) a_y =\|arrow(a)\|cos beta $ #noindent;则#numbered-eq($ display(cases(cos alpha = frac(a_x, \|arrow(a)\|) = a_x / sqrt(a_x^2 + a_y^2), cos beta = frac(a_y, \|arrow(a)\|) = a_y / sqrt(a_x^2 + a_y^2))) $);#noindent;但由 (5.6) 式知 $ arrow(a)_0 = (a_x / sqrt(a_x^2 + a_y^2) \, thick a_y / sqrt(a_x^2 + a_y^2)) $ #noindent;所以：$arrow(a)_0 =\(cos alpha\,cos beta\)$. 这就是说 $\(cos alpha\,cos beta\)$ 就是 $arrow(a)$ 的单位向量的坐标．
+设 $chevron.l arrow(e)_x\,arrow(a) chevron.r = alpha$, $chevron.l arrow(e)_y\,arrow(a) chevron.r = beta$⁠，已知 $ a_x =\|arrow(a)\|cos alpha\,#h(2em) a_y =\|arrow(a)\|cos beta $ #noindent;则#numbered-eq($ display(cases(cos alpha = frac(a_x, \|arrow(a)\|) = a_x / sqrt(a_x^2 + a_y^2), cos beta = frac(a_y, \|arrow(a)\|) = a_y / sqrt(a_x^2 + a_y^2))) $);#noindent;但由 (5.6) 式知 $ arrow(a)_0 = (a_x / sqrt(a_x^2 + a_y^2) \, thick a_y / sqrt(a_x^2 + a_y^2)) $ #noindent;所以：$arrow(a)_0 =\(cos alpha\,cos beta\)$. 这就是说 $\(cos alpha\,cos beta\)$ 就是 $arrow(a)$ 的单位向量的坐标．
 
 容易验证 $cos alpha\,thick cos beta$ 之间满足关系#numbered-eq($ cos^2 alpha + cos^2 beta = 1 $);#noindent; (5.8)、(5.9) 是两个重要的公式，它们把向量的坐标与向量的长度、方向联系起来．
 
@@ -394,7 +394,7 @@ $ \|accent(A B, ⃗)\| & = sqrt(\(3 - 1\)^2 +\(4 - 2\)^2) = sqrt(8)\
 
 ]
 #solution[
-因为 $accent(A B, ⃗) =\(- sqrt(3)\,0\)$, $accent(A C, ⃗) = (- sqrt(3) / 2 \, - 1 / 2)$, 所以 $ cos ⟨accent(A B, ⃗) \, accent(A C, ⃗)⟩ = frac(- sqrt(3) times (- sqrt(3) / 2) + 0 times (- 1 / 2), sqrt((sqrt(3))^2 + 0^2) sqrt((- sqrt(3) / 2)^2 + (- 1 / 2)^2)) = sqrt(3) / 2 $ #noindent;因此，$ ⟨accent(A B, ⃗) \, accent(A C, ⃗)⟩ = pi / 6 $
+因为 $accent(A B, ⃗) =\(- sqrt(3)\,0\)$, $accent(A C, ⃗) = (- sqrt(3) / 2 \, - 1 / 2)$, 所以 $ cos chevron.l accent(A B, ⃗)\,accent(A C, ⃗) chevron.r = frac(- sqrt(3) times (- sqrt(3) / 2) + 0 times (- 1 / 2), sqrt((sqrt(3))^2 + 0^2) sqrt((- sqrt(3) / 2)^2 + (- 1 / 2)^2)) = sqrt(3) / 2 $ #noindent;因此，$ chevron.l accent(A B, ⃗)\,accent(A C, ⃗) chevron.r = pi / 6 $
 
 ]
 #example[
@@ -432,7 +432,7 @@ arrow(a)_0 =\(cos alpha\,cos beta\)= (2 / sqrt(5) \, - 1 / sqrt(5)) $
 
 ]
 === 两向量方向差的正弦、正切公式
-由于我们规定两个向量的夹角取值范围是 $\[0\,pi\]$⁠，所以在坐标平面上知道 $⟨arrow(e)_x \, arrow(a)⟩$ 和 $⟨arrow(e)_y \, arrow(a)⟩$ 这两个角 $arrow(a)$ 的方向唯一确定了，其实在坐标平面上只需要知道其中一个角就够了．
+由于我们规定两个向量的夹角取值范围是 $\[0\,pi\]$⁠，所以在坐标平面上知道 $chevron.l arrow(e)_x\,arrow(a) chevron.r$ 和 $chevron.l arrow(e)_y\,arrow(a) chevron.r$ 这两个角 $arrow(a)$ 的方向唯一确定了，其实在坐标平面上只需要知道其中一个角就够了．
 
 在坐标系 $\[O : thick arrow(e)_x\,arrow(e)_y\]$ 中（图5.12），已知非零向量 $arrow(a) =\(a_x\,a_y\)$, 作 $accent(O A, ⃗) = arrow(a)$, 这时射线 $O A$ 的方向被以 $O X$ 为始边、$O A$ 为终边的旋转角 $phi$ 所唯一确定，于是 $arrow(a)$ 的方向也被 $phi$ 所唯一确定．$phi$ 角通常叫做向量 $arrow(a)$ 的#strong[方向角]．由三角学可知，$phi$ 有无穷多值，因此平面上同一个方向可以和无穷多个角相对应．如果约定 $phi$ 在 $\[0\,2 pi\)$ 内取值，一个向量的方向角就被唯一确定了．
 
@@ -443,7 +443,7 @@ arrow(a)_0 =\(cos alpha\,cos beta\)= (2 / sqrt(5) \, - 1 / sqrt(5)) $
   ]
 )
 
-我们曾规定 $⟨arrow(e)_x \, arrow(a)⟩ = alpha$, $⟨arrow(e)_y \, arrow(a)⟩ = beta$ 的取值范围是 $\[0\,pi\]$. 因此上述定义的角 $phi$ 和角 $alpha$ 并不一致．但我们知道 $ cos alpha = frac(a_x, \|arrow(a)\|)\,#h(2em) cos beta = frac(a_y, \|arrow(a)\|) $ #noindent;由三角函数的定义，我们又知 $ cos phi = frac(a_x, \|arrow(a)\|)\,#h(2em) sin phi = frac(a_y, \|arrow(a)\|) $ #noindent;所以不论 $phi$ 取何值，都有关系式 $ cos phi = cos alpha\,#h(2em) sin phi = cos beta $ #noindent;因此一个向量的方向余弦，用它的方向角可表示为 $cos phi$, $sin phi$. 任给一单位向量 $arrow(e)$, 若方向角为 $phi$, 则 $ arrow(e) =\(cos phi\,thick sin phi\) $
+我们曾规定 $chevron.l arrow(e)_x\,arrow(a) chevron.r = alpha$, $chevron.l arrow(e)_y\,arrow(a) chevron.r = beta$ 的取值范围是 $\[0\,pi\]$. 因此上述定义的角 $phi$ 和角 $alpha$ 并不一致．但我们知道 $ cos alpha = frac(a_x, \|arrow(a)\|)\,#h(2em) cos beta = frac(a_y, \|arrow(a)\|) $ #noindent;由三角函数的定义，我们又知 $ cos phi = frac(a_x, \|arrow(a)\|)\,#h(2em) sin phi = frac(a_y, \|arrow(a)\|) $ #noindent;所以不论 $phi$ 取何值，都有关系式 $ cos phi = cos alpha\,#h(2em) sin phi = cos beta $ #noindent;因此一个向量的方向余弦，用它的方向角可表示为 $cos phi$, $sin phi$. 任给一单位向量 $arrow(e)$, 若方向角为 $phi$, 则 $ arrow(e) =\(cos phi\,thick sin phi\) $
 
 在上面 $cos phi = cos alpha$, $sin phi = cos beta$ 两式两边相除可得 $ tan phi = a_y / a_x $
 
@@ -454,7 +454,7 @@ arrow(a)_0 =\(cos alpha\,cos beta\)= (2 / sqrt(5) \, - 1 / sqrt(5)) $
   ]
 )
 
-已知 $arrow(a) =\(a_x\,a_y\)$, $arrow(b) =\(b_x\,b_y\)$, 作 $accent(O A, ⃗) = arrow(a)$, $accent(O B, ⃗) = arrow(b)$ (图5.13), 设 $arrow(a)$ 的方向角为 $phi_1$, $arrow(b)$ 的方向角为 $phi_2$, 我们把 $arrow(b)$ 与 $arrow(a)$ 的方向差 $phi$ 定义为 $phi = phi_2 - phi_1$⁠，这就是说 $phi$ 是射线 $O A$ 到射线 $O B$ 之间的旋转角，也可说 $phi$ 是 $arrow(a)$ 到 $arrow(b)$ 的旋转角．容易证明，对任意两个向量 $arrow(a)\,arrow(b)$, 有 $ cos phi = cos ⟨arrow(a) \, arrow(b)⟩ $ #noindent;由三角公式有 $ sin phi = sin\(phi_2 - phi_1\)= sin phi_2 cos phi_1 - cos phi_2 sin phi_1 $ #noindent;但 $ sin phi_2 = frac(b_y, \|arrow(b)\|)\,quad cos phi_2 = frac(b_x, \|arrow(b)\|)\,quad sin phi_1 = frac(a_y, \|arrow(a)\|)\,quad cos phi_1 = frac(a_x, \|arrow(a)\|) $ #noindent;所以#numbered-eq($ sin phi = frac(a_x b_y - a_y b_x, \|arrow(a)\|lr(|arrow(b)|)) $);#noindent;又知 $ cos phi = cos ⟨arrow(a) \, arrow(b)⟩ = frac(a_x b_x + a_y b_y, \|arrow(a)\|lr(|arrow(b)|)) $ #noindent;两式相除又可得 $ tan phi = frac(a_x b_y - a_y b_x, a_x b_x + a_y b_y) $ #noindent;为了便于记忆，(5.10) 式及上面的正切公式还可用行列式写出：$ sin phi = frac(mat(delim: "|", a_x, a_y; b_x, b_y), \|arrow(a)\|lr(|arrow(b)|))\,#h(2em) tan phi = frac(mat(delim: "|", a_x, a_y; b_x, b_y), arrow(a) dot.op arrow(b)) $
+已知 $arrow(a) =\(a_x\,a_y\)$, $arrow(b) =\(b_x\,b_y\)$, 作 $accent(O A, ⃗) = arrow(a)$, $accent(O B, ⃗) = arrow(b)$ (图5.13), 设 $arrow(a)$ 的方向角为 $phi_1$, $arrow(b)$ 的方向角为 $phi_2$, 我们把 $arrow(b)$ 与 $arrow(a)$ 的方向差 $phi$ 定义为 $phi = phi_2 - phi_1$⁠，这就是说 $phi$ 是射线 $O A$ 到射线 $O B$ 之间的旋转角，也可说 $phi$ 是 $arrow(a)$ 到 $arrow(b)$ 的旋转角．容易证明，对任意两个向量 $arrow(a)\,arrow(b)$, 有 $ cos phi = cos chevron.l arrow(a)\,arrow(b) chevron.r $ #noindent;由三角公式有 $ sin phi = sin\(phi_2 - phi_1\)= sin phi_2 cos phi_1 - cos phi_2 sin phi_1 $ #noindent;但 $ sin phi_2 = frac(b_y, \|arrow(b)\|)\,quad cos phi_2 = frac(b_x, \|arrow(b)\|)\,quad sin phi_1 = frac(a_y, \|arrow(a)\|)\,quad cos phi_1 = frac(a_x, \|arrow(a)\|) $ #noindent;所以#numbered-eq($ sin phi = frac(a_x b_y - a_y b_x, \|arrow(a)\|lr(|arrow(b)|)) $);#noindent;又知 $ cos phi = cos chevron.l arrow(a)\,arrow(b) chevron.r = frac(a_x b_x + a_y b_y, \|arrow(a)\|lr(|arrow(b)|)) $ #noindent;两式相除又可得 $ tan phi = frac(a_x b_y - a_y b_x, a_x b_x + a_y b_y) $ #noindent;为了便于记忆，(5.10) 式及上面的正切公式还可用行列式写出：$ sin phi = frac(mat(delim: "|", a_x, a_y; b_x, b_y), \|arrow(a)\|lr(|arrow(b)|))\,#h(2em) tan phi = frac(mat(delim: "|", a_x, a_y; b_x, b_y), arrow(a) dot.op arrow(b)) $
 
 #example[
 已知 $arrow(a) =\(2\,- 2\)$, 求 $arrow(a)$ 的方向角 $phi$.
@@ -518,7 +518,7 @@ accent(O D, ⃗) = accent(O E, ⃗) + accent(E D, ⃗) = (- 1 / 2 \, 1) + (0 \, 
 )
 
 #proof[
-在坐标平面上（图5.16）, 设 $accent(O E_1, ⃗) =\(cos alpha\,sin alpha\)$, $accent(O E_2, ⃗) =\(cos beta\,sin beta\)$, 则 $ cos\(alpha - beta\)= cos ⟨accent(O E_1, ⃗) \, accent(O E_2, ⃗)⟩ = cos alpha dot.op cos beta + sin alpha dot.op sin beta $
+在坐标平面上（图5.16）, 设 $accent(O E_1, ⃗) =\(cos alpha\,sin alpha\)$, $accent(O E_2, ⃗) =\(cos beta\,sin beta\)$, 则 $ cos\(alpha - beta\)= cos chevron.l accent(O E_1, ⃗)\,accent(O E_2, ⃗) chevron.r = cos alpha dot.op cos beta + sin alpha dot.op sin beta $
 
 ]
 #exercise[
@@ -574,9 +574,9 @@ accent(O D, ⃗) = accent(O E, ⃗) + accent(E D, ⃗) = (- 1 / 2 \, 1) + (0 \, 
 
 + 已知 $A\(- 10\,- 8\)$, $B\(9\,- 3\)$, $C\(2\,11\)$, 求 $triangle.stroked.t A B C$ 的面积．
 
-+ 说明$mat(delim: "|", a_x, a_y; b_x, b_y) = - mat(delim: "|", b_x, b_y; a_x, a_y)$的几何意义．
++ 说明 $mat(delim: "|", a_x, a_y; b_x, b_y) = - mat(delim: "|", b_x, b_y; a_x, a_y)$ 的几何意义．
 
-+ 说明$mat(delim: "|", a_x, a_y; a_x + b_x, a_y + b_y) = mat(delim: "|", a_x, a_y; b_x, b_y)$的几何意义．
++ 说明 $mat(delim: "|", a_x, a_y; a_x + b_x, a_y + b_y) = mat(delim: "|", a_x, a_y; b_x, b_y)$ 的几何意义．
 
 ]
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题5.1]
@@ -587,7 +587,7 @@ accent(O D, ⃗) = accent(O E, ⃗) + accent(E D, ⃗) = (- 1 / 2 \, 1) + (0 \, 
 
 + 分别求点 $\(a\,b\)$ 关于 $X$ 轴、$Y$ 轴的对称点的坐标．
 
-+ 已知 $\|accent(O A, ⃗)\|= 7$⁠、$\|accent(O B, ⃗)\|= 6$, 点 $A$ 在第四象限，点 $B$ 在第二象限，且 $⟨accent(O A, ⃗) \, arrow(e)_x⟩ = 45 degree$, $⟨accent(O B, ⃗) \, arrow(e)_y⟩ = 30 degree$. 求 $A$ 点、$B$ 点的坐标．
++ 已知 $\|accent(O A, ⃗)\|= 7$⁠、$\|accent(O B, ⃗)\|= 6$, 点 $A$ 在第四象限，点 $B$ 在第二象限，且 $chevron.l accent(O A, ⃗)\,arrow(e)_x chevron.r = 45 degree$, $chevron.l accent(O B, ⃗)\,arrow(e)_y chevron.r = 30 degree$. 求 $A$ 点、$B$ 点的坐标．
 
 + $pgram A B C D$ 中的 $overline(A B) = 8$, $overline(A D) = 5$, $angle A = 60 degree$⁠，如果取 $A$ 作原点，$X$ 轴正方向与 $accent(A B, ⃗)$ 同向，$C$ 点所在的象限为第一象限，求它各顶点的坐标．
 
@@ -601,7 +601,7 @@ accent(O D, ⃗) = accent(O E, ⃗) + accent(E D, ⃗) = (- 1 / 2 \, 1) + (0 \, 
   ]
   求 $accent(A B, ⃗)$ 的坐标．
 
-+ 已知 $\|arrow(a)\|= 12$, $⟨arrow(e)_x \, arrow(a)⟩ = 30 degree$, $⟨arrow(e)_y \, arrow(a)⟩ = 120 degree$, 求 $arrow(a)$ 的坐标．
++ 已知 $\|arrow(a)\|= 12$, $chevron.l arrow(e)_x\,arrow(a) chevron.r = 30 degree$, $chevron.l arrow(e)_y\,arrow(a) chevron.r = 120 degree$, 求 $arrow(a)$ 的坐标．
 
 + #block(sticky: true)[建立坐标系 $\[O : thick arrow(e)_x\,arrow(e)_y\]$, 画出下列各向量．]
 

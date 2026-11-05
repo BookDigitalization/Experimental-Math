@@ -843,7 +843,7 @@ f_4\(x\) & = 2\(x - 2\)\(x - 3\)\(x - 4\) $
 令 $f_1\(x\)\,f_2\(x\)\,f_3\(x\)\,f_4\(x\)$ 分别如例3.22中的已知条件所述，$F\(x\)= f_1\(x\)+ f_2\(x\)+ f_3\(x\)+ f_4\(x\)$, 则 $ F\(2\)= f_1\(2\)+ f_2\(2\)+ f_3\(2\)+ f_4\(2\)= 3 + 0 + 0 + 0 = 3 $
 
 同样可求得 $F\(3\)= 6$, $F\(4\)= - 3$, $F\(5\)= 12$, 可见：$ f\(x\)= F\(x\) & = - 1 / 2\(x - 3\)\(x - 4\)\(x - 5\)+ 3\(x - 2\)\(x - 4\)\(x - 5\)\
- & #h(2em) + 3 / 2\(x - 2\)\(x - 3\)\(x - 5\)+ 2\(x - 2\)\(x - 3\)\(x - 4\) $
+ & #h(2em) eqph + 3 / 2\(x - 2\)\(x - 3\)\(x - 5\)+ 2\(x - 2\)\(x - 3\)\(x - 4\) $
 
 ]
 #example[
@@ -862,7 +862,7 @@ $therefore quad k_1 = frac(c_1, \(alpha_1 - alpha_2\)\(alpha_1 - alpha_3\)\(alph
 $ therefore quad f_1\(x\)= frac(c_1\(x - alpha_2\)\(x - alpha_3\)\(x - alpha_4\), \(alpha_1 - alpha_2\)\(alpha_1 - alpha_3\)\(alpha_1 - alpha_4\)) $ #noindent;同理可求得：$ f_2\(x\) & = frac(c_2\(x - alpha_1\)\(x - alpha_3\)\(x - alpha_4\), \(alpha_2 - alpha_1\)\(alpha_2 - alpha_3\)\(alpha_2 - alpha_4\))\
 f_3\(x\) & = frac(c_3\(x - alpha_1\)\(x - alpha_2\)\(x - alpha_4\), \(alpha_3 - alpha_1\)\(alpha_3 - alpha_2\)\(alpha_3 - alpha_4\))\
 f_4\(x\) & = frac(c_4\(x - alpha_1\)\(x - alpha_2\)\(x - alpha_3\), \(alpha_4 - alpha_1\)\(alpha_4 - alpha_2\)\(alpha_4 - alpha_3\)) $ #noindent;因此：$ f\(x\) & = frac(c_1\(x - alpha_2\)\(x - alpha_3\)\(x - alpha_4\), \(alpha_1 - alpha_2\)\(alpha_1 - alpha_3\)\(alpha_1 - alpha_4\)) + frac(c_2\(x - alpha_1\)\(x - alpha_3\)\(x - alpha_4\), \(alpha_2 - alpha_1\)\(alpha_2 - alpha_3\)\(alpha_2 - alpha_4\))\
- & quad + frac(c_3\(x - alpha_1\)\(x - alpha_2\)\(x - alpha_4\), \(alpha_3 - alpha_1\)\(alpha_3 - alpha_2\)\(alpha_3 - alpha_4\)) + frac(c_4\(x - alpha_1\)\(x - alpha_2\)\(x - alpha_3\), \(alpha_4 - alpha_1\)\(alpha_4 - alpha_2\)\(alpha_4 - alpha_3\)) $ #noindent;还可以简单记为：$ f\(x\)= sum_(i = 1)^4 c_i frac(\(x - alpha_1\)\(x - alpha_2\)dots.h.c\(x - alpha_(i - 1)\)\(x - alpha_(i + 1)\)dots.h.c\(x - alpha_4\), \(alpha_i - alpha_1\)\(alpha_i - alpha_2\)dots.h.c\(alpha_i - alpha_(i - 1)\)\(alpha_i - alpha_(i + 1)\)dots.h.c\(alpha_i - alpha_4\)) $
+ & quad eqph + frac(c_3\(x - alpha_1\)\(x - alpha_2\)\(x - alpha_4\), \(alpha_3 - alpha_1\)\(alpha_3 - alpha_2\)\(alpha_3 - alpha_4\)) + frac(c_4\(x - alpha_1\)\(x - alpha_2\)\(x - alpha_3\), \(alpha_4 - alpha_1\)\(alpha_4 - alpha_2\)\(alpha_4 - alpha_3\)) $ #noindent;还可以简单记为：$ f\(x\)= sum_(i = 1)^4 c_i frac(\(x - alpha_1\)\(x - alpha_2\)dots.h.c\(x - alpha_(i - 1)\)\(x - alpha_(i + 1)\)dots.h.c\(x - alpha_4\), \(alpha_i - alpha_1\)\(alpha_i - alpha_2\)dots.h.c\(alpha_i - alpha_(i - 1)\)\(alpha_i - alpha_(i + 1)\)dots.h.c\(alpha_i - alpha_4\)) $
 
 ]
 #example[
@@ -871,7 +871,7 @@ $alpha_1\,alpha_2\,alpha_3$ 表三个两两不等的数，试用 $f\(alpha_1\)$,
 ]
 #solution[
 $ f\(x\)=\(x - alpha_1\)\(x - alpha_2\)\(x - alpha_3\)q\(x\)+ r\(x\) $ #noindent;并且：$upright(d e g) r\(x\)lt.eq 2$ 或 $r\(x\)= 0$⁠，则 $ r\(alpha_1\)= f\(alpha_1\)\,#h(2em) r\(alpha_2\)= f\(alpha_2\)\,#h(2em) r\(alpha_3\)= f\(alpha_3\) $ #noindent;仿照上例可得：$ r\(x\) & = f\(alpha_1\)frac(\(x - alpha_2\)\(x - alpha_3\), \(alpha_1 - alpha_2\)\(alpha_1 - alpha_3\)) + f\(alpha_2\)frac(\(x - alpha_1\)\(x - alpha_3\), \(alpha_2 - alpha_1\)\(alpha_2 - alpha_3\))\
- & quad + f\(alpha_3\)frac(\(x - alpha_1\)\(x - alpha_2\), \(alpha_3 - alpha_1\)\(alpha_3 - alpha_2\)) $
+ & quad eqph + f\(alpha_3\)frac(\(x - alpha_1\)\(x - alpha_2\), \(alpha_3 - alpha_1\)\(alpha_3 - alpha_2\)) $
 
 ]
 #exercise[
@@ -915,7 +915,7 @@ $n !$ 对非负整数 $n$ 都有定义，读作“$n$ 阶乘”，当 $n > 0$ �
 ]
 #solution[
 由插值公式可知 $ f\(1 . 5\) & = 1 dot.op frac(\(1 . 5 - 1\)\(1.5 - 2\)\(1.5 - 3\), \(0 - 1\)\(0 - 2\)\(0 - 3\)) + 4 dot.op frac(\(1.5 - 0\)\(1.5 - 2\)\(1.5 - 3\), \(1 - 0\)\(1 - 2\)\(1 - 3\))\
- & quad + 15 dot.op frac(\(1 . 5 - 0\)\(1.5 - 1\)\(1.5 - 3\), \(2 - 0\)\(2 - 1\)\(2 - 3\)) + 40 dot.op frac(\(1 . 5 - 0\)\(1.5 - 1\)\(1.5 - 2\), \(3 - 0\)\(3 - 1\)\(3 - 2\))\
+ & quad eqph + 15 dot.op frac(\(1 . 5 - 0\)\(1.5 - 1\)\(1.5 - 3\), \(2 - 0\)\(2 - 1\)\(2 - 3\)) + 40 dot.op frac(\(1 . 5 - 0\)\(1.5 - 1\)\(1.5 - 2\), \(3 - 0\)\(3 - 1\)\(3 - 2\))\
  & = 8.125 $
 
 ]
@@ -928,9 +928,9 @@ sin 45 degree = sqrt(2) / 2 = 0 . 707\,#h(2em) sin 60 degree = sqrt(3) / 2 = 0.8
 由已知 $f\(0\)= 0$, $f\(15\)= 0 . 259$, $f\(30\)= 0 . 5$, $f\(45\)= 0 . 707$, $f\(60\)= 0 . 866$, 求 $f\(23\)$⁠．
 
 方法同例3.27 $ f\(23\) & = 0 . 259 times frac(23\(23 - 30\)\(23 - 45\)\(23 - 60\), 15\(15 - 30\)\(15 - 45\)\(15 - 60\))\
- & quad + 0 . 5 times frac(23\(23 - 15\)\(23 - 45\)\(23 - 60\), 30\(30 - 15\)\(30 - 45\)\(30 - 60\))\
- & quad + 0 . 707 times frac(23\(23 - 15\)\(23 - 30\)\(23 - 60\), 45\(45 - 15\)\(45 - 30\)\(45 - 60\))\
- & quad + 0.866 times frac(23\(23 - 15\)\(23 - 30\)\(23 - 45\), 60\(60 - 15\)\(60 - 30\)\(60 - 45\))\
+ & quad eqph + 0 . 5 times frac(23\(23 - 15\)\(23 - 45\)\(23 - 60\), 30\(30 - 15\)\(30 - 45\)\(30 - 60\))\
+ & quad eqph + 0 . 707 times frac(23\(23 - 15\)\(23 - 30\)\(23 - 60\), 45\(45 - 15\)\(45 - 30\)\(45 - 60\))\
+ & quad eqph + 0.866 times frac(23\(23 - 15\)\(23 - 30\)\(23 - 45\), 60\(60 - 15\)\(60 - 30\)\(60 - 45\))\
  & approx 23 / 15^4 times\(246 + 814 - 244 + 44\)approx 0 . 391 $
 
 实际上从三角函数表上査出的 $sin 23 degree$ 如果要求精确到0.001也是0.391.
@@ -1424,9 +1424,9 @@ $therefore quad f\(x\)$ 除以 $g\(x\)$ 所得的余式为 $ r\(x\) & = f\(1\)+ 
 三、由余式定理及因式定理的推论，可以推导出插值公式------拉格朗日公式：
 
 若已知 $f\(alpha_i\)= b_i\,thick\(i = 1\,2\,dots.h\,n\,n + 1\)$, 则 $n$ 次多项式 $f\(x\)$ 的表达式为 $ f\(x\) & = b_1 frac(\(x - alpha_2\)\(x - alpha_3\)dots.h.c\(x - alpha_(n + 1)\), \(alpha_1 - alpha_2\)\(alpha_1 - alpha_3\)dots.h.c\(alpha_1 - alpha_(n + 1)\))\
- & quad + b_2 frac(\(x - alpha_1\)\(x - alpha_3\)dots.h.c\(x - alpha_(n + 1)\), \(alpha_2 - alpha_1\)\(alpha_2 - alpha_3\)dots.h.c\(alpha_2 - alpha_(n + 1)\))\
- & quad + dots.h.c + b_n frac(\(x - alpha_1\)\(x - alpha_2\)dots.h.c\(x - alpha_(n - 1)\)\(x - alpha_(n + 1)\), \(alpha_n - alpha_1\)\(alpha_n - alpha_2\)dots.h.c\(alpha_n - alpha_(n - 1)\)\(alpha_n - alpha_(n + 1)\))\
- & quad + b_(n + 1) frac(\(x - alpha_1\)\(x - alpha_2\)dots.h.c\(x - alpha_n\), \(alpha_(n + 1) - alpha_1\)\(alpha_(n + 1) - alpha_2\)dots.h.c\(alpha_(n + 1) - alpha_n\)) $ #noindent;或简记为：$ f\(x\)= sum_(i = 1)^(n + 1) b_i frac(\(x - alpha_1\)dots.h.c\(x - alpha_(i - 1)\)\(x - alpha_(i + 1)\)dots.h.c\(x - alpha_(n + 1)\), \(alpha_i - alpha_1\)dots.h.c\(alpha_i - alpha_(i - 1)\)\(alpha_i - alpha_(i + 1)\)dots.h.c\(alpha_i - alpha_(n + 1)\)) $
+ & quad eqph + b_2 frac(\(x - alpha_1\)\(x - alpha_3\)dots.h.c\(x - alpha_(n + 1)\), \(alpha_2 - alpha_1\)\(alpha_2 - alpha_3\)dots.h.c\(alpha_2 - alpha_(n + 1)\))\
+ & quad eqph + dots.h.c + b_n frac(\(x - alpha_1\)\(x - alpha_2\)dots.h.c\(x - alpha_(n - 1)\)\(x - alpha_(n + 1)\), \(alpha_n - alpha_1\)\(alpha_n - alpha_2\)dots.h.c\(alpha_n - alpha_(n - 1)\)\(alpha_n - alpha_(n + 1)\))\
+ & quad eqph + b_(n + 1) frac(\(x - alpha_1\)\(x - alpha_2\)dots.h.c\(x - alpha_n\), \(alpha_(n + 1) - alpha_1\)\(alpha_(n + 1) - alpha_2\)dots.h.c\(alpha_(n + 1) - alpha_n\)) $ #noindent;或简记为：$ f\(x\)= sum_(i = 1)^(n + 1) b_i frac(\(x - alpha_1\)dots.h.c\(x - alpha_(i - 1)\)\(x - alpha_(i + 1)\)dots.h.c\(x - alpha_(n + 1)\), \(alpha_i - alpha_1\)dots.h.c\(alpha_i - alpha_(i - 1)\)\(alpha_i - alpha_(i + 1)\)dots.h.c\(alpha_i - alpha_(n + 1)\)) $
 
 有了插值公式，就可以由多项式在 $n + 1$ 个点的 $n + 1$ 个值，确定 $n$ 次多项式的表达式，进而求出多项式在任何一点的值来．
 
@@ -1456,7 +1456,7 @@ $therefore quad f\(x\)$ 除以 $g\(x\)$ 所得的余式为 $ r\(x\) & = f\(1\)+ 
    & #h(2em) = (x^2 - 1 / 4 a^2) (x^2 - 9 / 4 a^2) $
 
 + 若 $ \(x - 1\)\(x - 2\)\(x - 3\) & = p\(x - 1\)\(x + 2\)\(x + 3\)+ q\(x + 1\)\(x - 2\)\(x + 3\)\
-   & #h(2em) + r\(x + 1\)\(x + 2\)\(x - 3\) $ #noindent;试求 $p\,q\,r$ 的值．
+   & #h(2em) eqph + r\(x + 1\)\(x + 2\)\(x - 3\) $ #noindent;试求 $p\,q\,r$ 的值．
 
 + 已知 $f\(x\)=\(x + a\)\(x + b\)\(x + c\)$ 中 $x^2$ 的系数为0, $g\(x\)=\(x - a\)\(x + b\)\(x + c\)$ 中 $x$ 的系数为0, 且 $f\(x\)$ 中 $x$ 的系数等于 $g\(x\)$ 中 $x^2$ 的系数．
 

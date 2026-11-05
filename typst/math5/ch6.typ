@@ -962,9 +962,9 @@ y & = x' sin theta + y' cos theta + k $ #noindent;代入 (6.28) 式，展开合�
  & = 2 B cos 2 theta -\(A - C\)sin 2 theta\
 C' & = A sin^2 theta - 2 B cos theta sin theta + C cos^2 theta\
 2 D' & = 2 A h cos theta + 2 B\(k cos theta + h sin theta\)+ 2 C k sin theta\
- & #h(2em) + 2 D cos theta + 2 E sin theta\
+ & #h(2em) eqph + 2 D cos theta + 2 E sin theta\
 2 E' & = - 2 A h sin theta + 2 B\(h cos theta - k sin theta\)+ 2 C k cos theta\
- & #h(2em) - 2 D sin theta + 2 E cos theta\
+ & #h(2em) eqph - 2 D sin theta + 2 E cos theta\
 F' & = A h^2 + 2 B h k + C k^2 + 2 D h + 2 E k + F $);
 
 上述关系式 (6.30), 骤看起来是有些繁琐的，但稍加分析我们不难看出以下几点：
@@ -985,7 +985,7 @@ F' & = A h^2 + 2 B h k + C k^2 + 2 D h + 2 E k + F $);
 #proof[
 + #h(0pt)
   $ A' + C' & = A cos^2 theta + 2 B sin theta cos theta + C sin^2 theta + A sin^2 theta\
-   & #h(2em) - 2 B sin theta cos theta + C cos^2 theta\
+   & #h(2em) eqph - 2 B sin theta cos theta + C cos^2 theta\
    & = A\(cos^2 theta + sin^2 theta\)+ C\(sin^2 theta + cos^2 theta\)\
    & = A + C $
 

@@ -226,7 +226,8 @@
 }
 
 // 是否为块级元素（列表项、独立公式、表格、图、框等），用于判断内容是否以块开头
-#let inline-funcs = (text, strong, emph, box, h, smartquote, link, super, sub, underline, footnote, highlight, ref)
+// [\(].func()：转义的字符（如段首的“\(1) 列表”）是 symbol 元素，也是行内的
+#let inline-funcs = (text, strong, emph, box, h, smartquote, link, super, sub, underline, footnote, highlight, ref, [\(].func())
 #let is-block(c) = {
   if c.func() == math.equation or c.func() == raw { c.block }
   else if c.has("children") { false }   // 行内的一串内容
@@ -443,6 +444,13 @@
   else if n.len() == 4 { "（" + chinese-number(n.at(3)) + "）" }
 }
 
+// \setcounter{subsubsection}{1} 等：把第 level 级标题的编号设为 n（下一个同级标题编号为 n+1）
+#let set-heading-counter(level, n) = counter(heading).update((..c) => {
+  let c = c.pos()
+  c = c + (0,) * calc.max(0, level - c.len())
+  c.slice(0, level - 1) + (n,)
+})
+
 // 选学的节、小节（LaTeX 版的 \starsection、\starsubsection）：编号左侧伸出一个“*”，
 // 不占宽度（同 \llap{*}），目录中同样带“*”。用法：#heading(level: 2, numbering: star-numbering)[…]
 #let star-numbering(..n) = box(width: 0pt, context h(-measure[\*].width) + [\*]) + heading-numbering(..n)
@@ -536,6 +544,8 @@
   set math.cases(gap: 0.6em)
   // 行内的矩阵、行列式：Typst 把元素排成脚标大小，LaTeX 的元素与正文同大
   show math.mat: it => math.display(it)
+  // 矩阵、行列式的列距、行距同 LaTeX 的 array：列距 2\arraycolsep（10pt），行距按支柱（约 1.56em 的行距）
+  set math.mat(column-gap: 1em, row-gap: 0.75em)
   // 宽于版心的独立公式缩小到版心宽度（LaTeX 版中这些公式排得下）
   // 独立公式上下的间距（LaTeX 的 \abovedisplayskip、\belowdisplayskip）。套在 fit-width 外面，
   // 否则公式在 fit-width 的 layout 里，自身的间距在容器边上被吞掉

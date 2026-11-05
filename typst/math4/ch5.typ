@@ -696,7 +696,7 @@ v_n & =\(v_n - v_(n - 1)\)+\(v_(n - 1) - v_(n - 2)\)+ dots.h.c +\(v_1 - v_0\)+ v
    & = frac(sin frac(k beta, 2), sin beta / 2) sin (alpha + frac(k - 1, 2) beta) + sin\(alpha + k beta\)\
    & = frac(1, sin beta / 2) [sin (alpha + frac(k - 1, 2) beta) sin frac(k beta, 2) + sin \( alpha + k beta \) sin beta / 2]\
    & = frac(1, 2 sin beta / 2) class("opening", stretch(\[, size: #1.8em)) cos (alpha - beta / 2) - cos (alpha + k beta - beta / 2)\
-   & #h(2em) #h(2em) + cos (alpha + k beta - beta / 2) - cos (alpha + k beta + beta / 2) class("closing", stretch(\], size: #1.8em))\
+   & #h(2em) #h(2em) eqph + cos (alpha + k beta - beta / 2) - cos (alpha + k beta + beta / 2) class("closing", stretch(\], size: #1.8em))\
    & = frac(1, 2 sin beta / 2) [cos (alpha - beta / 2) - cos (alpha + k beta + beta / 2)] $ $ S\(k + 1\) & = frac(\(- 2\), 2 sin beta / 2) sin (frac(2 alpha + k beta, 2)) sin (frac(- k beta - beta, 2))\
    & = frac(1, sin beta / 2) dot.op sin (alpha + k / 2 beta) dot.op sin frac(\(k + 1\)beta, 2)\
    & = frac(sin frac(\(k + 1\)beta, 2), sin beta / 2) sin [alpha + frac(\(k + 1\)- 1, 2) beta] $ #noindent;即当 $n = k + 1$ 时，等式仍成立．由1和2可知，等式对任何自然数 $n$ 都成立．

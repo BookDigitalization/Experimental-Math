@@ -557,27 +557,27 @@ $ accent(A M, ⃗) = accent(A B, ⃗) + accent(B M, ⃗) & = accent(A B, ⃗) + 
 
 == 长度、角度与内积运算
 === 向量的内积
-已知两个非零向量 $arrow(a)$⁠、$arrow(b)$ (图3.24), 作 $accent(O A, ⃗) = arrow(a)$, $accent(O B, ⃗) = arrow(b)$, $angle A O B$ 就叫做 $arrow(a)$ 与 $arrow(b)$ 之间的夹角，记作 $⟨arrow(a) \, arrow(b)⟩$, $⟨arrow(a) \, arrow(b)⟩$ 也就是向量 $arrow(a)$ 与 $arrow(b)$ 之间的方向差.
+已知两个非零向量 $arrow(a)$⁠、$arrow(b)$ (图3.24), 作 $accent(O A, ⃗) = arrow(a)$, $accent(O B, ⃗) = arrow(b)$, $angle A O B$ 就叫做 $arrow(a)$ 与 $arrow(b)$ 之间的夹角，记作 $chevron.l arrow(a)\,arrow(b) chevron.r$, $chevron.l arrow(a)\,arrow(b) chevron.r$ 也就是向量 $arrow(a)$ 与 $arrow(b)$ 之间的方向差.
 
-我们规定 $0 lt.eq ⟨arrow(a) \, arrow(b)⟩ lt.eq pi$, 在这个规定下，两个向量的夹角就被唯一确定了，并且 $⟨arrow(a) \, arrow(b)⟩ = ⟨arrow(b) \, arrow(a)⟩$.
+我们规定 $0 lt.eq chevron.l arrow(a)\,arrow(b) chevron.r lt.eq pi$, 在这个规定下，两个向量的夹角就被唯一确定了，并且 $chevron.l arrow(a)\,arrow(b) chevron.r = chevron.l arrow(b)\,arrow(a) chevron.r$.
 
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-31");], caption: []), figure([#fig("3-32");], caption: []))));
 
-如果 $⟨arrow(a) \, arrow(b)⟩ = pi / 2$, 那么称 $arrow(a)$ 与 $arrow(b)$ 互相#strong[垂直]，并记作 $arrow(a) tack.t arrow(b)$⁠．由于零向量的方向是不确定的，所以零向量与任一向量的夹角也是不确定的，为了以后讨论问题方便，我们规定零向量与任一向量平行或垂直．
+如果 $chevron.l arrow(a)\,arrow(b) chevron.r = pi / 2$, 那么称 $arrow(a)$ 与 $arrow(b)$ 互相#strong[垂直]，并记作 $arrow(a) tack.t arrow(b)$⁠．由于零向量的方向是不确定的，所以零向量与任一向量的夹角也是不确定的，为了以后讨论问题方便，我们规定零向量与任一向量平行或垂直．
 
 在平面几何中，一个重要的课题就是讨论三角形中的边角关系，其中最要紧的是余弦定理，如在 $triangle.stroked.t A B C$ 中，$angle A$⁠、$angle B$⁠、$angle C$ 的对边长分别用 $a$⁠、$b$⁠、$c$ 表示，则 $ c^2 = a^2 + b^2 - 2 a b cos angle C $
 
-若设 $accent(B C, ⃗) = arrow(a)$⁠，$accent(C A, ⃗) = arrow(b)$⁠，则 $ accent(B A, ⃗) = arrow(a) + arrow(b)\,quad\|arrow(a)\|= a\,quad\|arrow(b)\|= b\,quad\|arrow(a) + arrow(b)\|= c\,quad ⟨arrow(a) \, arrow(b)⟩ = pi - angle C $
+若设 $accent(B C, ⃗) = arrow(a)$⁠，$accent(C A, ⃗) = arrow(b)$⁠，则 $ accent(B A, ⃗) = arrow(a) + arrow(b)\,quad\|arrow(a)\|= a\,quad\|arrow(b)\|= b\,quad\|arrow(a) + arrow(b)\|= c\,quad chevron.l arrow(a)\,arrow(b) chevron.r = pi - angle C $
 
-上式换用向量的写法即可写为 $ \|arrow(a) + arrow(b)\|^2 =\|arrow(a)\|^2 +\|arrow(b)\|^2 + 2\|arrow(a)\|dot.op\|arrow(b)\|cos ⟨arrow(a) \, arrow(b)⟩ $ #noindent;或 $ \|arrow(a)\|dot.op\|arrow(b)\|cos ⟨arrow(a) \, arrow(b)⟩ = 1 / 2 lr(\{ \| arrow(a) + arrow(b) \|^2 - \| arrow(a) \|^2 - \| arrow(b) \|^2 \}) $ #noindent;$\|arrow(a)\|dot.op\|arrow(b)\|cos ⟨arrow(a) \, arrow(b)⟩$ 是一个极为重要的量，这节我们要对它进行详细的讨论．下面，我们先给它一个名称．
+上式换用向量的写法即可写为 $ \|arrow(a) + arrow(b)\|^2 =\|arrow(a)\|^2 +\|arrow(b)\|^2 + 2\|arrow(a)\|dot.op\|arrow(b)\|cos chevron.l arrow(a)\,arrow(b) chevron.r $ #noindent;或 $ \|arrow(a)\|dot.op\|arrow(b)\|cos chevron.l arrow(a)\,arrow(b) chevron.r = 1 / 2 lr(\{ \| arrow(a) + arrow(b) \|^2 - \|arrow(a)\|^2 - \|arrow(b)\|^2 \}) $ #noindent;$\|arrow(a)\|dot.op\|arrow(b)\|cos chevron.l arrow(a)\,arrow(b) chevron.r$ 是一个极为重要的量，这节我们要对它进行详细的讨论．下面，我们先给它一个名称．
 
 #blk[定义][
-$\|arrow(a)\|dot.op\|arrow(b)\|cos ⟨arrow(a) \, arrow(b)⟩$ 叫做 $arrow(a)$ 与 $arrow(b)$ 的内积．
+$\|arrow(a)\|dot.op\|arrow(b)\|cos chevron.l arrow(a)\,arrow(b) chevron.r$ 叫做 $arrow(a)$ 与 $arrow(b)$ 的内积．
 
-$arrow(a)$ 与 $arrow(b)$ 的内积通常记为 $arrow(a) dot.op arrow(b)$⁠，于是 $ arrow(a) dot.op arrow(b) =\|arrow(a)\|dot.op\|arrow(b)\|cos ⟨arrow(a) \, arrow(b)⟩ $
+$arrow(a)$ 与 $arrow(b)$ 的内积通常记为 $arrow(a) dot.op arrow(b)$⁠，于是 $ arrow(a) dot.op arrow(b) =\|arrow(a)\|dot.op\|arrow(b)\|cos chevron.l arrow(a)\,arrow(b) chevron.r $
 
 ]
-设 $accent(O A, ⃗) = arrow(a)$⁠，$accent(O B, ⃗) = arrow(b)$（图3.26），过 $B$ 点作 $B B_1$ 垂直于直线 $O A$ 于 $B_1$ 点，容易推知 $ O B_1 =\|arrow(b)\|cos ⟨arrow(a) \, arrow(b)⟩ $
+设 $accent(O A, ⃗) = arrow(a)$⁠，$accent(O B, ⃗) = arrow(b)$（图3.26），过 $B$ 点作 $B B_1$ 垂直于直线 $O A$ 于 $B_1$ 点，容易推知 $ O B_1 =\|arrow(b)\|cos chevron.l arrow(a)\,arrow(b) chevron.r $
 
 #figure([#fig("3-33");
 
@@ -586,18 +586,18 @@ $arrow(a)$ 与 $arrow(b)$ 的内积通常记为 $arrow(a) dot.op arrow(b)$⁠，
   ]
 )
 
-$\|arrow(b)\|cos ⟨arrow(a) \, arrow(b)⟩$⁠，叫做 $arrow(b)$ 在 $arrow(a)$ 方向上的#strong[正投影分量]．当 $⟨arrow(a) \, arrow(b)⟩$ 是个锐角时，它是个正值，当 $⟨arrow(a) \, arrow(b)⟩ = pi / 2$ 时，它等于0, 当 $⟨arrow(a) \, arrow(b)⟩$ 是个钝角时，它是个负值．由此我们可知内积的几何意义是：$arrow(a)$#strong[ 与 ]$arrow(b)$#strong[ 的内积等于 ]$arrow(a)$#strong[ 的长度与 ]$arrow(b)$#strong[ 在 ]$arrow(a)$#strong[ 方向上的正投影分量的乘积]．
+$\|arrow(b)\|cos chevron.l arrow(a)\,arrow(b) chevron.r$⁠，叫做 $arrow(b)$ 在 $arrow(a)$ 方向上的#strong[正投影分量]．当 $chevron.l arrow(a)\,arrow(b) chevron.r$ 是个锐角时，它是个正值，当 $chevron.l arrow(a)\,arrow(b) chevron.r = pi / 2$ 时，它等于0, 当 $chevron.l arrow(a)\,arrow(b) chevron.r$ 是个钝角时，它是个负值．由此我们可知内积的几何意义是：$arrow(a)$#strong[ 与 ]$arrow(b)$#strong[ 的内积等于 ]$arrow(a)$#strong[ 的长度与 ]$arrow(b)$#strong[ 在 ]$arrow(a)$#strong[ 方向上的正投影分量的乘积]．
 
 由向量内积的定义和它的几何意义，同学可自己推知内积有如下一些重要性质
 
-+ 如果 $arrow(e)$ 是单位向量，则 $ arrow(e) dot.op arrow(a) = arrow(a) dot.op arrow(e) & =\|arrow(a)\|cos ⟨arrow(a) \, arrow(e)⟩\
++ 如果 $arrow(e)$ 是单位向量，则 $ arrow(e) dot.op arrow(a) = arrow(a) dot.op arrow(e) & =\|arrow(a)\|cos chevron.l arrow(a)\,arrow(e) chevron.r\
    & = arrow(a) upright("在") arrow(e) upright("方向上的正投影分量") $
 
 + $arrow(a) tack.t arrow(b) quad arrow.l.r.double quad arrow(a) dot.op arrow(b) = 0$
 
 + $arrow(a) dot.op arrow(a) =\|arrow(a)\|^2 quad upright("或") quad\|arrow(a)\|= sqrt(arrow(a) dot.op arrow(a))$
 
-+ $cos ⟨arrow(a) \, arrow(b)⟩ = frac(arrow(a) dot.op arrow(b), \|arrow(a)\|thick\|arrow(b)\|) = frac(arrow(a) dot.op arrow(b), sqrt(arrow(a) dot.op arrow(a)) sqrt(arrow(b) dot.op arrow(b)))$
++ $cos chevron.l arrow(a)\,arrow(b) chevron.r = frac(arrow(a) dot.op arrow(b), \|arrow(a)\|thick\|arrow(b)\|) = frac(arrow(a) dot.op arrow(b), sqrt(arrow(a) dot.op arrow(a)) sqrt(arrow(b) dot.op arrow(b)))$
 
 + 对任意两个向量 $arrow(a)$, $arrow(b)$⁠，有：$ \|arrow(a) dot.op arrow(b)\|lt.eq\|arrow(a)\|thick\|arrow(b)\| $
 
@@ -612,9 +612,9 @@ $\|arrow(b)\|cos ⟨arrow(a) \, arrow(b)⟩$⁠，叫做 $arrow(b)$ 在 $arrow(a
 
 + 已知 $arrow(a) dot.op arrow(b) = 0$, 能否推知 $arrow(a) = arrow(0)$ 或 $arrow(b) = arrow(0)$, 为什么？$arrow(a) = arrow(0)$ 或 $arrow(b) = arrow(0)$ 是 $arrow(a) dot.op arrow(b) = 0$ 的什么条件？
 
-+ 已知 $arrow(a)$⁠、$arrow(b)$ 的长都等于 $sqrt(2)$, 它们的内积是 $- 1$, 求 $⟨arrow(a) \, arrow(b)⟩$
++ 已知 $arrow(a)$⁠、$arrow(b)$ 的长都等于 $sqrt(2)$, 它们的内积是 $- 1$, 求 $chevron.l arrow(a)\,arrow(b) chevron.r$
 
-+ 已知：$\|arrow(a)\|=\|arrow(b)\|$, $⟨arrow(a) \, arrow(b)⟩ = 30 degree$, $arrow(a) dot.op arrow(b) = 3$, 求它们的长度．
++ 已知：$\|arrow(a)\|=\|arrow(b)\|$, $chevron.l arrow(a)\,arrow(b) chevron.r = 30 degree$, $arrow(a) dot.op arrow(b) = 3$, 求它们的长度．
 
 + 已知 $accent(O A, ⃗) = arrow(a)$, $accent(O B, ⃗) = arrow(b)$, $arrow(a)$ 在 $arrow(b)$ 方向上的正投影向量 $accent(O A_1, ⃗) = mu arrow(b)$⁠，求证：$arrow(a) dot.op arrow(b) = mu\|arrow(b)\|^2$.
 
@@ -633,16 +633,16 @@ $\|arrow(b)\|cos ⟨arrow(a) \, arrow(b)⟩$⁠，叫做 $arrow(b)$ 在 $arrow(a
 
 ]
 #proof[
-+ 因为 $arrow(a) dot.op arrow(b) =\|arrow(a)\|lr(|arrow(b)|) cos ⟨arrow(a) \, arrow(b)⟩$⁠，$arrow(b) dot.op arrow(a) = lr(|arrow(b)|)\|arrow(a)\|cos ⟨arrow(b) \, arrow(a)⟩$
++ 因为 $arrow(a) dot.op arrow(b) =\|arrow(a)\|lr(|arrow(b)|) cos chevron.l arrow(a)\,arrow(b) chevron.r$⁠，$arrow(b) dot.op arrow(a) = lr(|arrow(b)|)\|arrow(a)\|cos chevron.l arrow(b)\,arrow(a) chevron.r$
 
-  而 $\|arrow(a)\|lr(|arrow(b)|) cos ⟨arrow(a) \, arrow(b)⟩ = lr(|arrow(b)|)\|arrow(a)\|cos ⟨arrow(b) \, arrow(a)⟩$⁠，所以 $ arrow(a) dot.op arrow(b) = arrow(b) dot.op arrow(a) $
+  而 $\|arrow(a)\|lr(|arrow(b)|) cos chevron.l arrow(a)\,arrow(b) chevron.r = lr(|arrow(b)|)\|arrow(a)\|cos chevron.l arrow(b)\,arrow(a) chevron.r$⁠，所以 $ arrow(a) dot.op arrow(b) = arrow(b) dot.op arrow(a) $
 
 + #lead-list(none, 2)[
   + 当 $lambda = 0$ 时，显然有 $arrow(a) dot.op\(lambda arrow(b)\)= lambda\(arrow(a) dot.op arrow(b)\)$
 
-  + 当 $lambda > 0$ 时，$arrow(a) dot.op\(lambda arrow(b)\)=\|arrow(a)\|lr(|lambda arrow(b)|) cos ⟨arrow(a) \, lambda arrow(b)⟩$（图3.27），但 $lr(|lambda arrow(b)|) = lambda lr(|arrow(b)|)$⁠，$lambda arrow(b)$ 与 $arrow(b)$ 同方向，$⟨arrow(a) \, lambda arrow(b)⟩ = ⟨arrow(a) \, arrow(b)⟩$⁠，所以 $ arrow(a) dot.op\(lambda arrow(b)\)= lambda\|arrow(a)\|\|arrow(b)\|cos ⟨arrow(a) \, arrow(b)⟩ = lambda\(arrow(a) dot.op arrow(b)\) $
+  + 当 $lambda > 0$ 时，$arrow(a) dot.op\(lambda arrow(b)\)=\|arrow(a)\|lr(|lambda arrow(b)|) cos chevron.l arrow(a)\,lambda arrow(b) chevron.r$（图3.27），但 $lr(|lambda arrow(b)|) = lambda lr(|arrow(b)|)$⁠，$lambda arrow(b)$ 与 $arrow(b)$ 同方向，$chevron.l arrow(a)\,lambda arrow(b) chevron.r = chevron.l arrow(a)\,arrow(b) chevron.r$⁠，所以 $ arrow(a) dot.op\(lambda arrow(b)\)= lambda\|arrow(a)\|\|arrow(b)\|cos chevron.l arrow(a)\,arrow(b) chevron.r = lambda\(arrow(a) dot.op arrow(b)\) $
 
-  + 当 $lambda < 0$ 时，$arrow(a) dot.op\(lambda arrow(b)\)=\|arrow(a)\|lr(|lambda arrow(b)|) cos ⟨arrow(a) \, lambda arrow(b)⟩$（图3.28），但 $lr(|lambda arrow(b)|) = - lambda lr(|arrow(b)|)$, $⟨arrow(a) \, lambda arrow(b)⟩ = pi - ⟨arrow(a) \, arrow(b)⟩$ 所以 $ arrow(a) dot.op\(lambda arrow(b)\)=\(- lambda\)\|arrow(a)\|lr(|arrow(b)|) cos (pi - ⟨arrow(a) \, arrow(b)⟩) = lambda\|arrow(a)\|lr(|arrow(b)|) cos ⟨arrow(a) \, arrow(b)⟩ = lambda (arrow(a) dot.op arrow(b)) $
+  + 当 $lambda < 0$ 时，$arrow(a) dot.op\(lambda arrow(b)\)=\|arrow(a)\|lr(|lambda arrow(b)|) cos chevron.l arrow(a)\,lambda arrow(b) chevron.r$（图3.28），但 $lr(|lambda arrow(b)|) = - lambda lr(|arrow(b)|)$, $chevron.l arrow(a)\,lambda arrow(b) chevron.r = pi - chevron.l arrow(a)\,arrow(b) chevron.r$ 所以 $ arrow(a) dot.op\(lambda arrow(b)\)=\(- lambda\)\|arrow(a)\|lr(|arrow(b)|) cos (pi - chevron.l arrow(a) \, arrow(b) chevron.r) = lambda\|arrow(a)\|lr(|arrow(b)|) cos chevron.l arrow(a)\,arrow(b) chevron.r = lambda (arrow(a) dot.op arrow(b)) $
 
   #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("3-34");], caption: []), figure([#fig("3-35");], caption: []))));
   ]
@@ -707,13 +707,13 @@ $ 6 arrow(a) dot.op arrow(b) + 9 arrow(b) dot.op arrow(c) = 3 arrow(b) dot.op (2
 
 ]
 #example[
-已知 $arrow(a)$⁠、$arrow(b)$, 求证：$ lr(|arrow(a) + arrow(b)|)^2 + lr(|arrow(a) - arrow(b)|)^2 = 2 (\| arrow(a) \|^2 + lr(|arrow(b)|)^2) $
+已知 $arrow(a)$⁠、$arrow(b)$, 求证：$ lr(|arrow(a) + arrow(b)|)^2 + lr(|arrow(a) - arrow(b)|)^2 = 2 (\|arrow(a)\|^2 + lr(|arrow(b)|)^2) $
 
 ]
 #proof[
 #numbered-align(($lr(|arrow(a) + arrow(b)|)^2$, $eqph = lr(|arrow(a)|)^2 + 2 arrow(a) dot.op arrow(b) + lr(|arrow(b)|)^2$, true), ($lr(|arrow(a) - arrow(b)|)^2$, $eqph = lr(|arrow(a)|)^2 - 2 arrow(a) dot.op arrow(b) + lr(|arrow(b)|)^2$, true));
 
-#noindent; $\(3.1\)+\(3.2\)$, 则得 $ lr(|arrow(a) + arrow(b)|)^2 + lr(|arrow(a) - arrow(b)|)^2 = lr(|arrow(a)|)^2 + lr(|arrow(a)|)^2 + lr(|arrow(b)|)^2 + lr(|arrow(b)|)^2 = 2 (\| arrow(a) \|^2 + lr(|arrow(b)|)^2) $
+#noindent; $\(3.1\)+\(3.2\)$, 则得 $ lr(|arrow(a) + arrow(b)|)^2 + lr(|arrow(a) - arrow(b)|)^2 = lr(|arrow(a)|)^2 + lr(|arrow(a)|)^2 + lr(|arrow(b)|)^2 + lr(|arrow(b)|)^2 = 2 (\|arrow(a)\|^2 + lr(|arrow(b)|)^2) $
 
 ]
 #example[
@@ -746,7 +746,7 @@ arrow(a) dot.op arrow(c) & = 1 / 2 lr(\{ lr(|arrow(a) + arrow(c)|)^2 - lr(|arrow
 ]
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题3.3]
 
-+ 已知 $\|arrow(a)\|= 5$, $arrow(e)$ 为单位向量，当 $⟨arrow(a) \, arrow(e)⟩ = 30 degree\,thick 45 degree\,thick 120 degree$ 时，分别求出 $arrow(a)$ 在 $arrow(e)$ 方向上的正投影分量，并绘图说明．
++ 已知 $\|arrow(a)\|= 5$, $arrow(e)$ 为单位向量，当 $chevron.l arrow(a)\,arrow(e) chevron.r = 30 degree\,thick 45 degree\,thick 120 degree$ 时，分别求出 $arrow(a)$ 在 $arrow(e)$ 方向上的正投影分量，并绘图说明．
 
 + 当 $arrow(a) dot.op arrow(b) = plus.minus 1$ 时，$arrow(a)$ 与 $arrow(b)$ 各有什么关系？
 
@@ -772,7 +772,7 @@ arrow(a) dot.op arrow(c) & = 1 / 2 lr(\{ lr(|arrow(a) + arrow(c)|)^2 - lr(|arrow
 
 + 已知 $pgram A B C D$, 设 $accent(A B, ⃗) = arrow(a)$,$accent(A D, ⃗) = arrow(b)$, 求证此平行四边形的面积 $S^2 =\(arrow(a) dot.op arrow(a)\)\(arrow(b) dot.op arrow(b)\)-\(arrow(a) dot.op arrow(b)\)^2$.
 
-  （提示：$S^2 =\|arrow(a)\|^2\|arrow(b)\|^2 sin^2 ⟨arrow(a) \, arrow(b)⟩$⁠）
+  （提示：$S^2 =\|arrow(a)\|^2\|arrow(b)\|^2 sin^2 chevron.l arrow(a)\,arrow(b) chevron.r$⁠）
 
 == 空间向量及其运算
 === 空间向量的加法，倍积与内积运算
@@ -932,7 +932,7 @@ $ accent(O G, ⃗) = accent(O A, ⃗) + accent(A G, ⃗) = arrow(a) + accent(A G
 
 ]
 #solution[
-方程 $x arrow(a) + y arrow(b) + z arrow(c) = arrow(0)$⁠，等价于方程 $ x\(2 arrow(e)_1 - arrow(e)_2\)+ y\(arrow(e)_2 + arrow(e)_3\)+ z\(4 arrow(e)_1 - 5 arrow(e)_2 - 3 arrow(e)_3\)= arrow(0) $ #noindent;即：$ \(2 x + 4 z\)arrow(e)_1 +\(- x + y - 5 z\)arrow(e)_2 +\(y - 3 z\)arrow(e)_3 = arrow(0) $ #noindent;由于 $arrow(e)_1$⁠、$arrow(e)_2$⁠、$arrow(e)_3$ 不共面，即线性无关，所以，$ display(cases(2 x + 4 z = 0, - x + y - 5 z = 0, y - 3 z = 0)) $ #noindent;上面方程组的$Delta = mat(delim: "|", 2, 0, 4; - 1, 1, - 5; 0, 1, - 3) = 0$⁠，因此方程组有一组非零解，所以 $arrow(a)$⁠、$arrow(b)$⁠、$arrow(c)$ 线性相关，即共面．
+方程 $x arrow(a) + y arrow(b) + z arrow(c) = arrow(0)$⁠，等价于方程 $ x\(2 arrow(e)_1 - arrow(e)_2\)+ y\(arrow(e)_2 + arrow(e)_3\)+ z\(4 arrow(e)_1 - 5 arrow(e)_2 - 3 arrow(e)_3\)= arrow(0) $ #noindent;即：$ \(2 x + 4 z\)arrow(e)_1 +\(- x + y - 5 z\)arrow(e)_2 +\(y - 3 z\)arrow(e)_3 = arrow(0) $ #noindent;由于 $arrow(e)_1$⁠、$arrow(e)_2$⁠、$arrow(e)_3$ 不共面，即线性无关，所以，$ display(cases(2 x + 4 z = 0, - x + y - 5 z = 0, y - 3 z = 0)) $ #noindent;上面方程组的 $Delta = mat(delim: "|", 2, 0, 4; - 1, 1, - 5; 0, 1, - 3) = 0$⁠，因此方程组有一组非零解，所以 $arrow(a)$⁠、$arrow(b)$⁠、$arrow(c)$ 线性相关，即共面．
 
 ]
 #example[
@@ -994,7 +994,7 @@ $ accent(O G, ⃗) = accent(O A, ⃗) + accent(A G, ⃗) = arrow(a) + accent(A G
   ]
 )
 
-+ $\|arrow(c)\|=\|arrow(a)\|lr(|arrow(b)|) sin ⟨arrow(a) \, arrow(b)⟩$⁠，这就是说 $arrow(c)$ 的长度在数量上等于以 $arrow(a)\,arrow(b)$ 为两相邻边向量的平行四边形的面积；
++ $\|arrow(c)\|=\|arrow(a)\|lr(|arrow(b)|) sin chevron.l arrow(a)\,arrow(b) chevron.r$⁠，这就是说 $arrow(c)$ 的长度在数量上等于以 $arrow(a)\,arrow(b)$ 为两相邻边向量的平行四边形的面积；
 
 + 向量 $arrow(c)$ 同时垂直于 $arrow(a)$ 和 $arrow(b)$⁠；
 
@@ -1002,7 +1002,7 @@ $ accent(O G, ⃗) = accent(O A, ⃗) + accent(A G, ⃗) = arrow(a) + accent(A G
 
 那么，向量 $arrow(c)$ 就叫做 $arrow(a)$ 与 $arrow(b)$ 的外积，并且用记号 $arrow(a) times arrow(b)$ 来表示，于是 $ arrow(c) = arrow(a) times arrow(b) $
 
-如果把 $arrow(a) times arrow(b)$ 的单位向量记为 $arrow(e)$, 则 $ arrow(a) times arrow(b) = (\| arrow(a) \| lr(|arrow(b)|) sin ⟨arrow(a) \, arrow(b)⟩) dot.op arrow(e) $ #noindent;其中：$arrow(e) dot.op arrow(a) = 0$, $arrow(e) dot.op arrow(b) = 0$, $arrow(a)\,arrow(b)\,arrow(e)$ 构成右手系．
+如果把 $arrow(a) times arrow(b)$ 的单位向量记为 $arrow(e)$, 则 $ arrow(a) times arrow(b) = (\|arrow(a)\| lr(|arrow(b)|) sin chevron.l arrow(a) \, arrow(b) chevron.r) dot.op arrow(e) $ #noindent;其中：$arrow(e) dot.op arrow(a) = 0$, $arrow(e) dot.op arrow(b) = 0$, $arrow(a)\,arrow(b)\,arrow(e)$ 构成右手系．
 
 由上述定义，我们容易推知 $ arrow(a) times arrow(b) = arrow(0) quad arrow.l.r.double.long quad arrow(a) pll arrow(b) $
 
@@ -1020,7 +1020,7 @@ $ accent(O G, ⃗) = accent(O A, ⃗) + accent(A G, ⃗) = arrow(a) + accent(A G
 )
 
 #proof[
-设 $arrow(c)_0$ 是 $arrow(c)$ 的单位向量（即与 $arrow(c)$ 方向相同的单位向量），我们先证明 $ (arrow(a) + arrow(b)) times arrow(c)_0 = arrow(a) times arrow(c)_0 + arrow(b) times arrow(c)_0 $ #noindent;如图3.40所示，作 $accent(O A, ⃗) = arrow(a)$, $accent(O B, ⃗) = arrow(b)$, $accent(O C_0, ⃗) = arrow(c)_0$, 把 $accent(O A, ⃗)$ 垂直投影到与 $accent(O C_0, ⃗)$ 垂直平面 $pi$ 上，得到向量 $accent(O A_1, ⃗)$, 再把 $accent(O A_1, ⃗)$ 在平面 $pi$ 上沿顺时针方向旋转 $pi / 2$ 的角得到另一向量 $accent(O A_2, ⃗)$, 由于 $ \|accent(O A_2, ⃗)\|=\|accent(O A_1, ⃗)\|=\|arrow(a)\|sin ⟨arrow(a) \, arrow(c)_0⟩ $ #noindent;又 $arrow(a)\,arrow(c)_0$ 与 $accent(O A_2, ⃗)$ 构成右手系，所以 $accent(O A_2, ⃗) = arrow(a) times arrow(c)_0$⁠，依同样的方法可以作 $arrow(b) times arrow(c)_0$, $(arrow(a) + arrow(b)) times arrow(c)_0$⁠，由于 $arrow(a)\,arrow(b)\,arrow(a) + arrow(b)$ 是首尾相接的向量，那么它们在平面 $pi$ 上的垂直投影也同样是首尾相接的向量，再把这三个向量同时旋转 $pi / 2$ 的角，所得到的三个向量也必首尾相接，依向量和的定义就有 $ (arrow(a) + arrow(b)) times arrow(c)_0 = arrow(a) times arrow(c)_0 + arrow(b) times arrow(c)_0 $ #noindent;上式两边分别乘上 $\|arrow(c)\|$, 就可得到 $ (arrow(a) + arrow(b)) times arrow(c) = arrow(a) times arrow(c) + arrow(b) times arrow(c) $ #noindent;这就证明了向量的外积运算满足分配律．
+设 $arrow(c)_0$ 是 $arrow(c)$ 的单位向量（即与 $arrow(c)$ 方向相同的单位向量），我们先证明 $ (arrow(a) + arrow(b)) times arrow(c)_0 = arrow(a) times arrow(c)_0 + arrow(b) times arrow(c)_0 $ #noindent;如图3.40所示，作 $accent(O A, ⃗) = arrow(a)$, $accent(O B, ⃗) = arrow(b)$, $accent(O C_0, ⃗) = arrow(c)_0$, 把 $accent(O A, ⃗)$ 垂直投影到与 $accent(O C_0, ⃗)$ 垂直平面 $pi$ 上，得到向量 $accent(O A_1, ⃗)$, 再把 $accent(O A_1, ⃗)$ 在平面 $pi$ 上沿顺时针方向旋转 $pi / 2$ 的角得到另一向量 $accent(O A_2, ⃗)$, 由于 $ \|accent(O A_2, ⃗)\|=\|accent(O A_1, ⃗)\|=\|arrow(a)\|sin chevron.l arrow(a)\,arrow(c)_0 chevron.r $ #noindent;又 $arrow(a)\,arrow(c)_0$ 与 $accent(O A_2, ⃗)$ 构成右手系，所以 $accent(O A_2, ⃗) = arrow(a) times arrow(c)_0$⁠，依同样的方法可以作 $arrow(b) times arrow(c)_0$, $(arrow(a) + arrow(b)) times arrow(c)_0$⁠，由于 $arrow(a)\,arrow(b)\,arrow(a) + arrow(b)$ 是首尾相接的向量，那么它们在平面 $pi$ 上的垂直投影也同样是首尾相接的向量，再把这三个向量同时旋转 $pi / 2$ 的角，所得到的三个向量也必首尾相接，依向量和的定义就有 $ (arrow(a) + arrow(b)) times arrow(c)_0 = arrow(a) times arrow(c)_0 + arrow(b) times arrow(c)_0 $ #noindent;上式两边分别乘上 $\|arrow(c)\|$, 就可得到 $ (arrow(a) + arrow(b)) times arrow(c) = arrow(a) times arrow(c) + arrow(b) times arrow(c) $ #noindent;这就证明了向量的外积运算满足分配律．
 
 ]
 #example[
@@ -1045,14 +1045,14 @@ $ (arrow(a) - arrow(b)) times (arrow(a) + arrow(b)) & = arrow(a) times arrow(a) 
 )
 
 #proof[
-设 $arrow(e)$ 为 $arrow(a) times arrow(b)$ 的单位向量，则 $ arrow(a) times arrow(b) & = (\| arrow(a) \| lr(|arrow(b)|) sin ⟨arrow(a) \, arrow(b)⟩) arrow(e) = pgram O A D B upright("的面积") times arrow(e)\
+设 $arrow(e)$ 为 $arrow(a) times arrow(b)$ 的单位向量，则 $ arrow(a) times arrow(b) & = (\|arrow(a)\| lr(|arrow(b)|) sin chevron.l arrow(a) \, arrow(b) chevron.r) arrow(e) = pgram O A D B upright("的面积") times arrow(e)\
 arrow(a) times arrow(b) dot.op arrow(c) & = pgram O A D B upright("的面积") times\(arrow(e) dot.op arrow(c)\) $ #noindent;容易看出，
 
-- 当 $⟨arrow(e) \, arrow(c)⟩ lt.eq pi / 2$ 时（$arrow(a)\,arrow(b)\,arrow(c)$ 构成右手系或共面），$arrow(e) dot.op arrow(c)$ 是个非负数且 $arrow(e) dot.op arrow(c)$ 等于这个平行六面体的底面 $O A D B$ 上的高 $h$⁠；
+- 当 $chevron.l arrow(e)\,arrow(c) chevron.r lt.eq pi / 2$ 时（$arrow(a)\,arrow(b)\,arrow(c)$ 构成右手系或共面），$arrow(e) dot.op arrow(c)$ 是个非负数且 $arrow(e) dot.op arrow(c)$ 等于这个平行六面体的底面 $O A D B$ 上的高 $h$⁠；
 
-- 当 $⟨arrow(e) \, arrow(c)⟩ > pi / 2$ 时，$arrow(e) dot.op arrow(c) < 0$, $h = - arrow(e) dot.op arrow(c)$.
+- 当 $chevron.l arrow(e)\,arrow(c) chevron.r > pi / 2$ 时，$arrow(e) dot.op arrow(c) < 0$, $h = - arrow(e) dot.op arrow(c)$.
 
-#noindent;综合上面两种情况我们有 $h =\|arrow(e) dot.op arrow(c)\|$, 所以，$ V = pgram O A D B upright("的面积") times h & = lr(|\| arrow(a) \| lr(|arrow(b)|) sin ⟨arrow(a) \, arrow(b)⟩ (arrow(e) dot.op arrow(c))|)\
+#noindent;综合上面两种情况我们有 $h =\|arrow(e) dot.op arrow(c)\|$, 所以，$ V = pgram O A D B upright("的面积") times h & = lr(|\|arrow(a)\| lr(|arrow(b)|) sin chevron.l arrow(a) \, arrow(b) chevron.r (arrow(e) dot.op arrow(c))|)\
  & = lr(|arrow(a) times arrow(b) dot.op arrow(c)|) $
 
 ]
@@ -1180,7 +1180,7 @@ arrow(e)_1 times (arrow(e)_1 times arrow(e)_2) & = arrow(e)_1 times arrow(e)_3 =
 
 + 如果 $arrow(a) = 4 arrow(e)_1 - arrow(e)_2$, $arrow(b) = arrow(e)_1 + 2 arrow(e)_2$, $arrow(c) = 2 arrow(e)_1 - 3 arrow(e)_2$ 且 $\{ arrow(e)_1\,arrow(e)_2 \}$ 为标准正交基底，化简表示式 $ arrow(a) dot.op arrow(a) + 3\(arrow(a) dot.op arrow(b)\)- 2\(arrow(b) dot.op arrow(c)\)+ 1 $
 
-+ 如果 $\|arrow(e)_1\|= 2 sqrt(2)$, $\|arrow(e)_2\|= 3$, $⟨arrow(e)_1 \, arrow(e)_2⟩ = pi / 4$ 且 $arrow(a) = 5 arrow(e)_1 + 2 arrow(e)_2$, $arrow(b) = arrow(e)_1 - 3 arrow(e)_2$, 试计算以 $arrow(a)\,arrow(b)$ 为边向量的平行四边形的两条对角线的长和面积．
++ 如果 $\|arrow(e)_1\|= 2 sqrt(2)$, $\|arrow(e)_2\|= 3$, $chevron.l arrow(e)_1\,arrow(e)_2 chevron.r = pi / 4$ 且 $arrow(a) = 5 arrow(e)_1 + 2 arrow(e)_2$, $arrow(b) = arrow(e)_1 - 3 arrow(e)_2$, 试计算以 $arrow(a)\,arrow(b)$ 为边向量的平行四边形的两条对角线的长和面积．
 
 + 已知 $arrow(a) = alpha arrow(e)_1 + 17 arrow(e)_2$, $arrow(b) = 3 arrow(e)_1 - arrow(e)_2$, 问 $alpha$ 为何值时 $arrow(a) tack.t arrow(b)$.
 

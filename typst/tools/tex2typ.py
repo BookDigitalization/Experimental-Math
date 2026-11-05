@@ -115,6 +115,10 @@ class Converter:
         tex = re.sub(r"\{\\(%s)(?![a-zA-Z])\s*([^{}\n]*)\}" % "|".join(sizes),
                      lambda m: self.slot("#text(size: %gem)[%s]" % (sizes[m.group(1)], convert_fragments([m.group(2)])[0]))
                      if m.group(2).strip() and "\\begin" not in m.group(2) else m.group(0), tex)
+        # \setcounter{subsubsection}{1} 等（正文中手写了“（一）”，后面的小节从（二）编起）
+        levels = {"section": 2, "subsection": 3, "subsubsection": 4}
+        tex = re.sub(r"\\setcounter\{(section|subsection|subsubsection)\}\{(\d+)\}%?",
+                     lambda m: self.slot("#set-heading-counter(%d, %s)" % (levels[m.group(1)], m.group(2))), tex)
         # 选学的节、小节（编号左侧加“*”，见 template.typ 的 star-numbering）
         tex = re.sub(r"\\star(sub)?section\{((?:[^{}]|\{[^{}]*\})*)\}",
                      lambda m: "\n\n" + self.slot("#heading(level: %d, numbering: star-numbering)[%s]" % (
@@ -284,6 +288,18 @@ class Converter:
         tex = re.sub(r"\\begin\{tabular\}\{@\{\}[lcr]@\{\}\}(.*?)\\end\{tabular\}",
                      lambda m: m.group(1).replace("\\\\", "\\newline "), tex, flags=re.S)
         # 其余的嵌套表格：从最后一个表格往前处理，内层的先换成占位符，外层按单元格拆分时就不会被拆坏
+        # 并排的两个表格（\end{tabular}\qquad\begin{tabular}）：表格是块元素，要包进 box 才能排在同一行
+        side_seps = set()
+        def side_sep(m: re.Match) -> str:
+            sep = m.group(1).strip()
+            if sep.startswith("\\textsc"):   # \qquad 等已被 replace_text_spaces 换成了占位符
+                s = sep
+            else:
+                sp = {"\\qquad": "2em", "\\quad": "1em"}.get(sep) or re.search(r"\{([^}]*)\}", sep).group(1)
+                s = self.slot("#h(%s)" % sp)
+            side_seps.add(s)
+            return "\\end{tabular}" + s
+        tex = re.sub(r"\\end\{tabular\}\s*(\\qquad|\\quad|\\hspace\*?\{[^}]*\}|\\textsc\{PH\d+\})\s*(?=\\begin\{tabular\})", side_sep, tex)
         # 也认 center 环境里不带花括号的 \small，以及 \setlength{\tabcolsep}{3pt}（第四册例 7.12 的表）
         pat = re.compile(r"(\{\\(small|footnotesize)\s*)?(?:\\(small|footnotesize)\s*)?"
                          r"(?:\\setlength\{\\tabcolsep\}\{([\d.]+)pt\}\s*)?\\begin\{(tabular|longtable)\}")
@@ -304,6 +320,10 @@ class Converter:
             typ = self.tabular(spec, body, colsep=float(m.group(4)) if m.group(4) else None)
             if m.group(3):
                 typ = "#text(size: %s)[%s]" % ("0.9em" if m.group(3) == "small" else "0.8em", typ)
+            # 与相邻的表格并排的
+            after = end + len(r"\end{%s}" % env)
+            if any(tex[after:].startswith(s) or tex[: m.start()].endswith(s) for s in side_seps):
+                typ = "#box(%s)" % typ[1:]
             if env == "longtable":
                 # 长表可以跨页（模板中表格默认不跨页）
                 typ = "#block(breakable: true)[#show table: set block(breakable: true)\n%s]" % typ
@@ -558,7 +578,8 @@ class Converter:
             body = m.group(1)
             if r"\begin{" not in body:
                 return m.group(0)
-            return self.slot("$%s$" % tex_math_to_typst(body))
+            # 公式占位符（而不是正文占位符）：pandoc 仍把它当作公式，filter.lua 才会在它与汉字之间加间距
+            return "$%s$" % self.math_slot(tex_math_to_typst(body))
         return re.sub(r"(?<![\\$])\$([^$]+?)\$", repl, tex, flags=re.S)
 
     # ---- 后处理 ----
@@ -575,6 +596,10 @@ class Converter:
         left = re.findall(r"PHM?\s*\d+|P H M", typ)
         if left:
             raise RuntimeError("占位符没有替换干净：%s" % left[:5])
+        # 同一行里并排的几张图（\includegraphics[scale=…] 之间只有空白）：reflow 的 scale 是块元素，包进 box 才能并排
+        img = r'#scale\([\d.]+%, reflow: true, image\("[^"]*"\)\);?'
+        typ = re.sub(r"%s(?:\s*(?:#h\([^()]*\);?)?\s*%s)+" % (img, img),
+                     lambda m: re.sub(r'#scale\(([\d.]+%, reflow: true, image\("[^"]*"\))\);?', r"#box(scale(\1));", m.group(0)), typ)
         # 独立公式后紧跟带编号的公式（占位符，filter.lua 不知道它也是独立公式）：中间的 #noindent 会成为一个空段落
         typ = re.sub(r"(\$\s*)#noindent;\s*(?=#(?:numbered-eq|numbered-align|numcases)\()", r"\1", typ)
         typ = fix_math(typ)
@@ -835,11 +860,14 @@ def fix_strings(typ: str) -> str:
 def fix_math(typ: str) -> str:
     # \dot{x}（循环小数的点）：模板中 dot 被定义成了 dot.o 等符号的字典（见 template.typ），重音要写 std.math.dot
     typ = re.sub(r"(?<![\w.#])dot\(", "std.math.dot(", typ)
+    # 向量的模 |\vec{b}|：pandoc 有时写成 \| arrow(b) \|，函数调用两侧的空格在 Typst 中会排出空隙
+    typ = re.sub(r"\\\|\s*((?:arrow|accent)\([^()]*\))\s*\\\|", r"\\|\1\\|", typ)
     # vmatrix / Vmatrix：pandoc 写成 delim: "||"、"‖‖"，Typst 只要一个字符
     typ = typ.replace('delim: "||"', 'delim: "|"').replace('delim: "‖‖"', 'delim: "‖"')
     # 多行对齐公式的续行以 & + 或 & - 开头：LaTeX（amsmath 在右栏开头补 {}）按二元运算排，
     # Typst 当作正负号紧贴后面的项；前面补一个空的普通符号 eqph（见 template.typ）
-    typ = re.sub(r"(\\\n\s*&\s*)([+-])(?=\s)", r"\1eqph \2", typ)
+    # 续行开头先空一段（& \quad + …、& \hspace{2em} - …）的也一样
+    typ = re.sub(r"(\\\n\s*&\s*(?:(?:#h\([^()]*\)|quad|qquad|wide)\s*)*)([+-])(?=\s)", r"\1eqph \2", typ)
     typ = re.sub(r"\^compose\b", " degree", typ)
     typ = re.sub(r"\^\(compose\)", " degree", typ)
     # \boxed：pandoc 在框内又套了一层独立公式
@@ -1111,7 +1139,8 @@ VOLUME_TEX = {
     5: [(r"\\Vec(?![a-zA-Z])", r"\\overrightarrow"),
         (r"\\e([XYZ])(?![a-zA-Z])", lambda m: r"\vec{e}_%s" % m.group(1).lower()),
         (r"\\va(?![a-zA-Z])", r"\\vec{a}"),
-        (r"\\expval\{((?:[^{}]|\{[^{}]*\})*)\}", r"\\left\\langle \1 \\right\\rangle"),
+        # \expval 定义成 \left\langle…\right\rangle，但 LaTeX 中这些尖括号都是正常大小；Typst 的 lr 会随箭头放大
+        (r"\\expval\{((?:[^{}]|\{[^{}]*\})*)\}", r"\\langle \1 \\rangle"),
         (r"\$\\bf\{([^{}]*)\}\$", r"$\\mathbf{\1}$")],   # 3.tex 的 $\bf{a}$
 }
 # 各册专用、要直接写成 Typst 公式的命令（pandoc 会丢掉 \displaystyle、\limits）

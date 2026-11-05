@@ -236,7 +236,7 @@
 ==== 三视图
 有些立体图形只用二视图表示还不够，例如像图1.10(1) 那样摆法的圆柱的俯视图和主视图都是矩形，这个二视图也可看成是长方体的二视图了，为了区别起见，我们再设一个与俯视图平面和主视图平面都垂直的第三个平面 $gamma$, 从左侧面看这个圆柱，它在 $gamma$ 平面上的投影是个圆．这第三个平面 $gamma$ 叫#strong[左视图平面]，在它上面画出的图叫#strong[左视图]．
 
-#figure([#scale(55%, reflow: true, image("/math5/fig/1-10-1.png")); #scale(55%, reflow: true, image("/math5/fig/1-10-2.png"));
+#figure([#box(scale(55%, reflow: true, image("/math5/fig/1-10-1.png"))); #box(scale(55%, reflow: true, image("/math5/fig/1-10-2.png")));
 
   ],
   caption: [
@@ -561,7 +561,7 @@ $therefore quad\(A union B\)union C = A union\(B union C\)$
 + 在下表的空格处填上适当的集合．
 
   #align(center)[
-  #table(
+  #box(table(
     columns: (auto, auto, auto, auto,),
     align: (center + horizon, center + horizon, center + horizon, center + horizon,),
     table.vline(x: 1),
@@ -584,7 +584,7 @@ $therefore quad\(A union B\)union C = A union\(B union C\)$
     [],
     [],
     table.hline(),
-  );#h(2em);#table(
+  ));#h(2em);#box(table(
     columns: (auto, auto, auto, auto,),
     align: (center + horizon, center + horizon, center + horizon, center + horizon,),
     table.vline(x: 1),
@@ -607,7 +607,7 @@ $therefore quad\(A union B\)union C = A union\(B union C\)$
     [],
     [],
     table.hline(),
-  );
+  ));
 
   ]
 
@@ -2982,9 +2982,12 @@ $pi tack.t pi'$ 的充要条件是 $pi'$ 含有 $pi$ 的一条垂线．
 
 此外还可利用：
 
+#block[
+#set enum(numbering: enum-at(1, none, start: 5))
 + 过平面外一点作已知平面的平行平面．
 
 + 过平面上一条直线作已知平面的相交平面等．
+]
 
 在论证和解决立体几何的问题中如果是平行、相交问题，利用集合运算方法有时也比较方便，但要注意正确运用集合运算的算律，有时还需要引入辅助集合，如平行线传递性定理的证明，就利用了辅助集合 $pi_1$.
 

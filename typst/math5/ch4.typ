@@ -397,7 +397,7 @@ accent(E F, ⃗) = accent(H G, ⃗) quad arrow.r.double quad overline(E F) = ove
 
 因为 $accent(E F, ⃗) = 1 / 2 accent(A B, ⃗) = 1 / 2\(accent(O B, ⃗) - accent(O A, ⃗)\)\,quad accent(E H, ⃗) = 1 / 2 accent(O C, ⃗)$⁠，所以 $ accent(E F, ⃗) dot.op accent(E H, ⃗) & = 1 / 2\(accent(O B, ⃗) - accent(O A, ⃗)\)dot.op 1 / 2 accent(O C, ⃗)\
  & = 1 / 4\(accent(O B, ⃗) dot.op accent(O C, ⃗) - accent(O A, ⃗) dot.op accent(O C, ⃗)\)\
- & = 1 / 8 (\| accent(O B, ⃗) \|^2 + \| accent(O C, ⃗) \|^2 - \| accent(B C, ⃗) \|^2 - \| accent(O A, ⃗) \|^2 - \| accent(O C, ⃗) \|^2 + \| accent(C A, ⃗) \|^2) $ #noindent;但已知 $\|accent(O A, ⃗)\|=\|accent(O B, ⃗)\|\,#h(2em)\|accent(C A, ⃗)\|=\|accent(C B, ⃗)\|$⁠，所以 $ accent(E F, ⃗) dot.op accent(E H, ⃗) = 0 quad arrow.r.double quad E F tack.t E H $ #noindent;故得四边形 $E F G H$ 是矩形．
+ & = 1 / 8 (\|accent(O B, ⃗)\|^2 + \|accent(O C, ⃗)\|^2 - \|accent(B C, ⃗)\|^2 - \|accent(O A, ⃗)\|^2 - \|accent(O C, ⃗)\|^2 + \|accent(C A, ⃗)\|^2) $ #noindent;但已知 $\|accent(O A, ⃗)\|=\|accent(O B, ⃗)\|\,#h(2em)\|accent(C A, ⃗)\|=\|accent(C B, ⃗)\|$⁠，所以 $ accent(E F, ⃗) dot.op accent(E H, ⃗) = 0 quad arrow.r.double quad E F tack.t E H $ #noindent;故得四边形 $E F G H$ 是矩形．
 
 ]
 由以上各例可看到在空间证明两线垂直，内积运算仍是非常有效的工具．
@@ -516,7 +516,7 @@ accent(P Q, ⃗) & = accent(A Q, ⃗) - accent(A P, ⃗) =\(y - x\)arrow(e)_1 +\
  & = accent(O P, ⃗) dot.op accent(O P, ⃗) + 2 (accent(O P, ⃗) dot.op arrow(u)) x + x^2\(arrow(u) dot.op arrow(u)\)\
  & = x^2 + 2 (accent(O P, ⃗) dot.op arrow(u)) x +\|accent(O P, ⃗)\|^2 $
 
-当点 $X$ 与点 $B$ 或 $C$ 重合时，$accent(O X, ⃗) dot.op accent(O X, ⃗) = R^2$⁠，这时有 $ x^2 + 2 (accent(O P, ⃗) dot.op arrow(u)) x + (\| accent(O P, ⃗) \|^2 - R^2) = 0 $ #noindent;这里 $x$ 是 $accent(P B, ⃗)$ 或 $accent(P C, ⃗)$ 的长度，若令 $\|accent(P B, ⃗)\|= beta$, $\|accent(P C, ⃗)\|= gamma$⁠，则由韦达定理得：$ beta gamma =\|accent(O P, ⃗)\|^2 - R^2 $
+当点 $X$ 与点 $B$ 或 $C$ 重合时，$accent(O X, ⃗) dot.op accent(O X, ⃗) = R^2$⁠，这时有 $ x^2 + 2 (accent(O P, ⃗) dot.op arrow(u)) x + (\|accent(O P, ⃗)\|^2 - R^2) = 0 $ #noindent;这里 $x$ 是 $accent(P B, ⃗)$ 或 $accent(P C, ⃗)$ 的长度，若令 $\|accent(P B, ⃗)\|= beta$, $\|accent(P C, ⃗)\|= gamma$⁠，则由韦达定理得：$ beta gamma =\|accent(O P, ⃗)\|^2 - R^2 $
 
 $because quad accent(P B, ⃗)$ 与 $accent(P C, ⃗)$ 同向
 

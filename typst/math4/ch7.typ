@@ -799,7 +799,7 @@ $ 0.3 overline(12) & = 0.3 + 0.0 overline(12) = 0.3 +\(0.012 + 0.00012 + dots.h.
 下面，我们来证明任何一个循环小数一定是一个分数．
 
 如果 $a$ 是个循环小数，它的循环节是由第 $k + 1$ 位开始到 $k + ell$ 位，平常我们写作 $ a = a_0 . c_1 c_2 dots.h.c c_k overline(c_(k + 1) c_(k + 2) dots.h.c c_(k + ell)) $ #noindent;它的意思是 $ a & = a_0 + c_1 / 10 + c_2 / 10^2 + dots.h.c + c_k / 10^k + c_(k + 1) / 10^(k + 1) + dots.h.c + c_(k + ell) / 10^(k + ell)\
- & #h(2em) + c_(k + 1) / 10^(k + ell + 1) + dots.h.c + c_(k + ell) / 10^(k + 2 ell) + c_(k + 1) / 10^(k + 2 ell + 1) + dots.h.c + c_(k + ell) / 10^(k + 3 ell) + dots.h.c $
+ & #h(2em) eqph + c_(k + 1) / 10^(k + ell + 1) + dots.h.c + c_(k + ell) / 10^(k + 2 ell) + c_(k + 1) / 10^(k + 2 ell + 1) + dots.h.c + c_(k + ell) / 10^(k + 3 ell) + dots.h.c $
 
 虽然，这不是无穷等比级数，现在用结合律来构造这个无穷级数的部分和的子数列：
 

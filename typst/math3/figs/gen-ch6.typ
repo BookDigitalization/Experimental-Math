@@ -82,9 +82,9 @@
     node((-1.5321, 1.2856), [$B_2$], pos: "left")
     node((-2.2981, 1.9284), [$B_1$], pos: "left")
     node((0, 0), [$O$], pos: "below")
-    cetz.decorations.brace((-0.0226, 0.0269), (2.2755, 1.9553), amplitude: 0.0879, flip: false, stroke: (paint: black, thickness: 0.4pt))
+    cetz.decorations.flat-brace((-0.0226, 0.0269), (2.2755, 1.9553), amplitude: 0.0879, flip: false, stroke: (paint: black, thickness: 0.4pt))
     node((1.1491, 0.9642), [$R_1$], pos: "above", dist: 3pt)
-    cetz.decorations.brace((-1.5095, 1.3125), (0.0226, 0.0269), amplitude: 0.0879, flip: false, stroke: (paint: black, thickness: 0.4pt))
+    cetz.decorations.flat-brace((-1.5095, 1.3125), (0.0226, 0.0269), amplitude: 0.0879, flip: false, stroke: (paint: black, thickness: 0.4pt))
     node((-0.766, 0.6428), [$R_2$], pos: "above", dist: 3pt)
   })
   ,
