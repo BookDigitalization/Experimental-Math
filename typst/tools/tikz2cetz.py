@@ -418,6 +418,8 @@ class Picture:
         self.result: list[tuple[float, float]] = []   # tkzPointResult 等
         self.notes: list[str] = []
         self.lookahead: dict[str, tuple[float, float]] = {}
+        self.zvec = None        # z 轴单位向量（画布坐标）；None 为 TikZ 默认的 (-3.85mm,-3.85mm)
+        self.clip_ell = None    # 当前 scope 中 \clip 的椭圆 (中心, 半轴向量 u, v)，只用于裁剪直线段
         self.clip_rect = None   # 当前 scope 中 \clip 的轴对齐矩形 (x0, y0, x1, y1)，只用于裁剪直线段
         self.label_points: dict[str, tuple[float, float]] = {}
         self.text_nodes: dict[str, tuple[float, float]] = {}   # 有文字、有名字的节点
@@ -491,6 +493,10 @@ class Picture:
         parts = split_top(s, ",")
         if len(parts) == 2:
             return self.tf.apply((num(parts[0]), num(parts[1])))
+        if len(parts) == 3:   # 三维坐标 (x,y,z)：z 分量沿 z 轴向量
+            p = self.tf.apply((num(parts[0]), num(parts[1])))
+            zv = self.zvec or (-0.385, -0.385)
+            return (p[0] + num(parts[2]) * zv[0], p[1] + num(parts[2]) * zv[1])
         raise TikzError("无法识别的坐标：(%s)" % s)
 
     def calc(self, s: str):
@@ -557,6 +563,7 @@ class Picture:
     # ---- 样式 ----
     def apply_options(self, opts: list[tuple[str, str | None]], style: Style, tf_target: str = "path"):
         """把选项作用到 style 上；变换选项作用到 self.tf 上（scope 或单条路径）"""
+        xy_base = None   # x=、y= 的向量按改坐标轴之前的变换计算（同时给出 x、y 时，y 不受新 x 轴的影响）
         for k, v in opts:
             if v is None:
                 if k in WIDTHS:
@@ -635,6 +642,9 @@ class Picture:
                 a = math.radians(num(ang))
                 r = Transform(math.cos(a), math.sin(a), -math.sin(a), math.cos(a))
                 self.tf = Transform(e=c[0], f=c[1]).then(r).then(Transform(e=-c[0], f=-c[1])).then(self.tf)
+            elif k == "z" and v.strip().startswith("("):
+                # z 轴向量是绝对长度（不经过 x=、y= 改过的变换；scope 的缩放这里不计）
+                self.zvec = self.coord_raw(v.strip()[1:-1])
             elif k in ("x", "y"):
                 inner = v.strip()
                 if inner.startswith("("):
@@ -642,10 +652,12 @@ class Picture:
                 else:
                     p = (num(inner), 0) if k == "x" else (0, num(inner))
                 a, b, c, d, e, f = self.tf.m
+                if xy_base is None:
+                    xy_base = self.tf
                 if k == "x":
-                    self.tf = self.tf.then(Transform(p[0], p[1], 0, 1)) if False else Transform(*self.tf.vec(p), c, d, e, f)
+                    self.tf = Transform(*xy_base.vec(p), c, d, e, f)
                 else:
-                    self.tf = Transform(a, b, *self.tf.vec(p), e, f)
+                    self.tf = Transform(a, b, *xy_base.vec(p), e, f)
             elif k in ("every node/.style", "nodes"):
                 style.node.update(dict(parse_options(v)))
             elif k == "decoration":
@@ -768,14 +780,14 @@ class Picture:
             m = re.match(r"\\begin\{scope\}\s*(\[)?", body[i:])
             if m:
                 i += m.end()
-                self.stack.append((self.tf, self.style, self.clip_rect))
+                self.stack.append((self.tf, self.style, self.clip_rect, self.zvec, self.clip_ell))
                 self.style = self.style.copy()
                 if m.group(1):
                     opts, i = read_group(body, i - 1, "[", "]")
                     self.apply_options(parse_options(opts), self.style)
                 continue
             if body.startswith(r"\end{scope}", i):
-                self.tf, self.style, self.clip_rect = self.stack.pop()
+                self.tf, self.style, self.clip_rect, self.zvec, self.clip_ell = self.stack.pop()
                 i += len(r"\end{scope}")
                 continue
             m = re.match(r"\\([A-Za-z]+)\*?", body[i:])
@@ -1137,6 +1149,7 @@ class PathBuilder:
                     rx = ry = num(d.get("radius", d.get("x radius", "1")))
                     if "y radius" in d:
                         ry = num(d["y radius"])
+                    rot_e = num(d["rotate"]) if "rotate" in d else 0.0
                 else:
                     r, i = read_group(s, i, "(", ")")
                     if " and " in r:
@@ -1144,8 +1157,9 @@ class PathBuilder:
                         rx, ry = num(a), num(b)
                     else:
                         rx = ry = num(r)
+                    rot_e = 0.0
                 self.close_sub(False)
-                self.subpaths.append(([("ellipse", self.cur, rx, ry)], True))
+                self.subpaths.append(([("ellipse", self.cur, rx, ry, rot_e, self.pic.tf)], True))
                 continue
             if s.startswith("arc", i):
                 i = skip_ws(s, i + 3)
@@ -1160,6 +1174,7 @@ class PathBuilder:
                     rx = ry = num(d.get("radius", d.get("x radius", "1")))
                     if "y radius" in d:
                         ry = num(d["y radius"])
+                    rot_e = num(d["rotate"]) if "rotate" in d else 0.0
                 else:
                     r, i = read_group(s, i, "(", ")")
                     parts = split_top(r, ":")
@@ -1346,6 +1361,10 @@ class PathBuilder:
         elif i < n and s[i] == "(":
             inner, i = read_group(s, i, "(", ")")
             parts = split_top(inner, ",")
+            polar_ = False
+            if len(parts) == 1 and len(split_top(inner, ":")) == 2:
+                # 极坐标 plot({\x r}: {.5*\x})：角度（度）: 半径
+                parts, polar_ = split_top(inner, ":"), True
             if len(parts) != 2:
                 raise TikzError("无法识别的 plot：" + inner)
             var = ps["var"]
@@ -1358,6 +1377,8 @@ class PathBuilder:
                 val = "(%r)" % x
                 try:
                     xy = tuple(num(re.sub(re.escape(var) + r"(?![A-Za-z])", lambda _m: val, e.strip())) for e in parts)
+                    if polar_:
+                        xy = (xy[1] * math.cos(math.radians(xy[0])), xy[1] * math.sin(math.radians(xy[0])))
                 except TikzError:
                     if runs[-1]:
                         runs.append([])
@@ -1444,6 +1465,11 @@ class PathBuilder:
                     xs_, ys_ = [q[0] for q in pts], [q[1] for q in pts]
                     if len({round(x, 9) for x in xs_}) == 2 and len({round(y, 9) for y in ys_}) == 2:
                         rect = (min(xs_), min(ys_), max(xs_), max(ys_))
+                elif len(pieces) == 1 and pieces[0][0] == "ellipse":
+                    _, c, rx, ry, rot_e, tf = pieces[0]
+                    pic.clip_ell = (c,) + ellipse_axes(tf, rx, ry, rot_e)
+                    pic.notes.append("椭圆形的 \\clip 只用于裁短直线段")
+                    return
             if rect is None:
                 pic.notes.append("忽略 \\clip")
             else:
@@ -1500,10 +1526,10 @@ class PathBuilder:
                 a.append("close: true")
             elif marks:
                 a.append("mark: %s" % marks)
-            if pic.clip_rect and not closed and not self.fill:
+            if (pic.clip_rect or pic.clip_ell) and not closed and not self.fill:
                 segs = []
                 for p0, p1 in zip(pts, pts[1:]):
-                    cl = clip_segment(p0, p1, pic.clip_rect)
+                    cl = clip_segment(p0, p1, pic.clip_rect) if pic.clip_rect else clip_segment_ellipse(p0, p1, pic.clip_ell)
                     if cl:
                         segs.append("line(%s, %s, %s)" % (pic.xy(cl[0]), pic.xy(cl[1]), ", ".join(args)))
                 return "\n".join(segs) if segs else "// （被 \\clip 裁掉）"
@@ -1523,11 +1549,14 @@ class PathBuilder:
                 return "\n".join(one_line(pts[i:j + 1]) for i, j in zip(bounds, bounds[1:]))
             return one_line(pts)
         if len(pieces) == 1 and pieces[0][0] == "ellipse":
-            _, c, rx, ry = pieces[0]
-            tf = pic.tf
-            sx = norm(tf.vec((1, 0)))
-            sy = norm(tf.vec((0, 1)))
-            rx, ry = rx * sx, ry * sy
+            _, c, rx, ry, rot_e, tf = pieces[0]
+            u, v = ellipse_axes(tf, rx, ry, rot_e)
+            if abs(u[1]) > 1e-9 or abs(v[0]) > 1e-9:
+                # 旋转的椭圆（rotate=、斜的 x/y 坐标轴中的圆）：CeTZ 的 circle 不能旋转，取点画成闭合折线
+                pts = [(c[0] + u[0] * math.cos(th) + v[0] * math.sin(th), c[1] + u[1] * math.cos(th) + v[1] * math.sin(th))
+                       for th in (math.radians(3 * j) for j in range(120))]
+                return "line(%s, %s)" % (", ".join(pic.xy(p, use_names=False) for p in pts), ", ".join(args + ["close: true"]))
+            rx, ry = abs(u[0]), abs(v[1])
             if abs(rx - ry) < 1e-9:
                 return "circle(%s, radius: %s, %s)" % (pic.xy(c), fmt(rx), ", ".join(args))
             return "circle(%s, radius: (%s, %s), %s)" % (pic.xy(c), fmt(rx), fmt(ry), ", ".join(args))
@@ -1563,10 +1592,46 @@ class PathBuilder:
                 return "arc(%s, start: %sdeg, stop: %sdeg, radius: %s)" % (
                     pic.xy(start), fmt(a0 + rot_), fmt(a1 + rot_), fmt(rx * sx))
             if abs(rot_) > 1e-6:
-                raise TikzError("旋转的椭圆弧暂不支持")
+                # 旋转的椭圆弧：CeTZ 的 arc 不能旋转，按参数方程取点画成折线（每 3° 一点）
+                k = max(int(abs(a1 - a0) / 3), 8)
+                ca, sa = math.cos(math.radians(a0)), math.sin(math.radians(a0))
+                pts = []
+                for j in range(k + 1):
+                    th = math.radians(a0 + (a1 - a0) * j / k)
+                    d = tf.vec((rx * (math.cos(th) - ca), ry * (math.sin(th) - sa)))
+                    pts.append((start[0] + d[0], start[1] + d[1]))
+                return "line(%s)" % ", ".join(pic.xy(p, use_names=False) for p in pts)
             return "arc(%s, start: %sdeg, stop: %sdeg, radius: (%s, %s))" % (
                 pic.xy(start), fmt(a0), fmt(a1), fmt(rx * sx), fmt(ry * sy))
         raise TikzError("未知路径段 " + kind)
+
+
+def ellipse_axes(tf, rx, ry, rot):
+    """椭圆 [x radius=rx, y radius=ry, rotate=rot] 经变换 tf 后的两个半轴向量（画布坐标）"""
+    c, s = math.cos(math.radians(rot)), math.sin(math.radians(rot))
+    return tf.vec((rx * c, rx * s)), tf.vec((-ry * s, ry * c))
+
+
+def clip_segment_ellipse(p, q, ell):
+    """线段 pq 在椭圆（中心 c、半轴向量 u、v）内的部分，没有则为 None"""
+    c, u, v = ell
+    det = u[0] * v[1] - u[1] * v[0]
+    def to_unit(z):   # 换到椭圆为单位圆的坐标
+        x, y = z[0] - c[0], z[1] - c[1]
+        return ((x * v[1] - y * v[0]) / det, (u[0] * y - u[1] * x) / det)
+    a, b = to_unit(p), to_unit(q)
+    d = (b[0] - a[0], b[1] - a[1])
+    A = d[0] ** 2 + d[1] ** 2
+    B = 2 * (a[0] * d[0] + a[1] * d[1])
+    C = a[0] ** 2 + a[1] ** 2 - 1
+    disc = B * B - 4 * A * C
+    if A < 1e-12 or disc <= 0:
+        return None
+    t0, t1 = max(0.0, (-B - math.sqrt(disc)) / (2 * A)), min(1.0, (-B + math.sqrt(disc)) / (2 * A))
+    if t0 > t1 - 1e-9:
+        return None
+    dx, dy = q[0] - p[0], q[1] - p[1]
+    return (p[0] + t0 * dx, p[1] + t0 * dy), (p[0] + t1 * dx, p[1] + t1 * dy)
 
 
 def clip_segment(p, q, rect):
@@ -2123,6 +2188,9 @@ class Tkz:
             if c is None:
                 raise TikzError("\\tkzAutoLabelPoints 缺少 center")
             q = add(p, mul(sub(p, c), dist))
+            # tkz：\path (center) -- (q) node[pos=…]：给了 pos 时节点在这条路径的 pos 处（默认在 q）
+            if "pos" in d:
+                q = lerp(c, q, num(d["pos"]))
             # tkz 的自动标注一律以 north 为锚点（即 below），不论往哪个方向推出
             self.node(q, "$%s$" % tex_point_name(x), [("below", None)], self.style)
 
@@ -2288,7 +2356,20 @@ class LabelBatch:
 def unshadow(typ: str) -> str:
     """公式中的 arrow、dot、circle 等符号被 fig.typ / CeTZ 的同名函数遮住，改写为 sym.…"""
     def fix_math(m: re.Match) -> str:
-        return re.sub(r"(?<![\w.])(arrow|dot|circle|rect)(?=\.|\b)", r"#sym.\1", m.group(0))
+        s = m.group(0)
+        # arrow(a) 是向量箭头（重音），改写成 accent(a, ->)（-> 是简写，不受遮挡）
+        while True:
+            k = re.search(r"(?<![\w.#])arrow\(", s)
+            if not k:
+                break
+            depth, j = 0, k.end() - 1
+            while j < len(s):
+                depth += {"(": 1, ")": -1}.get(s[j], 0)
+                if depth == 0:
+                    break
+                j += 1
+            s = s[:k.start()] + "accent(" + s[k.end():j] + ", ->)" + s[j + 1:]
+        return re.sub(r"(?<![\w.])(arrow|dot|circle|rect)(?=\.|\b)(?!\()", r"#sym.\1", s)
     return re.sub(r"\$[^$]*\$", fix_math, typ)
 
 
@@ -2301,6 +2382,8 @@ def simple_label(tex: str) -> str | None:
     if m:
         base = m.group(1)
         base = base[1:] if base.startswith("\\") else base
+        # 同 pandoc：LaTeX 的 \phi、\epsilon 是 ϕ、ϵ（Typst 的 phi.alt、epsilon.alt），\varphi 是 φ（Typst 的 phi）
+        base = {"phi": "phi.alt", "varphi": "phi", "epsilon": "epsilon.alt"}.get(base, base)
         primes = m.group(3) + m.group(5)
         sub_ = "_%s" % m.group(4) if m.group(4) else ""
         return "$%s%s%s$" % (base, primes, sub_)

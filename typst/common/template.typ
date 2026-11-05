@@ -300,6 +300,9 @@
   })
 }
 
+// 例题中的 \label：放在例题正文开头，记下“章.序号”供 ref-num 引用
+#let example-label(lbl) = context [#metadata(str(chapter-number()) + "." + str(example-counter.get().first()))#lbl]
+
 // 选学的例题（LaTeX 的 starexample）。不能写成 #example.with(star: true)[…]：后面的 […] 会被当作 with 的参数
 #let starexample(body) = example(body, star: true)
 

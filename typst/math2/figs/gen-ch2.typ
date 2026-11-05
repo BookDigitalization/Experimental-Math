@@ -44,7 +44,7 @@
     node((0.8, 1), [$B$], pos: "below")
   })
   ,
-  // 忽略 \clip
+  // 椭圆形的 \clip 只用于裁短直线段
   "2-05": canvas({
     circle((0, 0), radius: 0.75, stroke: (paint: black, thickness: 0.4pt))
     node((0, 0), [$A$])

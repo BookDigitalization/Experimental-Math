@@ -74,7 +74,7 @@
     line((-2.7, 0.5), (-2.7, -0.5), stroke: (paint: black, thickness: 0.4pt, dash: (3pt, 3pt,)))
     node((-2.7, 0.5), [$M_1$], pos: "below")
     arc((-0.35, 0), start: 180deg, stop: 135deg, radius: 0.35, stroke: (paint: black, thickness: 0.4pt))
-    node((-0.2475, 0.2475), [$phi$], pos: "left", dist: 2pt)
+    node((-0.2475, 0.2475), [$phi.alt$], pos: "left", dist: 2pt)
     line((-0.5303, 0.5303), (-0.5304, 0), stroke: (paint: black, thickness: 0.4pt, dash: (3pt, 3pt,)))
     line((-4.3, -0.7), (-3.5, -0.7), stroke: (paint: black, thickness: 0.4pt), mark: (start: ("|", "stealth"), end: ("|", "stealth"), fill: black, sep: 0))
     node((-3.9, -0.7), [$x$], fill: white)

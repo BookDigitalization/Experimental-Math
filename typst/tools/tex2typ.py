@@ -182,6 +182,9 @@ class Converter:
             arg = ", label: %s" % typst_label(lbl) if lbl else ""
             return self.slot("#numbered-eq($ %s $%s)" % (tex_math_to_typst(body), arg)) + self.noindent_after(m)
         tex = re.sub(r"\\begin\{equation\}(.*?)\\end\{equation\}", equation, tex, flags=re.S)
+        # 例题开头的 \label：#example-label 记下例题编号
+        tex = re.sub(r"(\\begin\{(?:star)?example\})\s*\\label\{([^}]*)\}",
+                     lambda m: m.group(1) + self.slot("#example-label(%s)" % typst_label(m.group(2))), tex)
         # \ref{…}：所引对象的编号（公式的 \label 已在上面各环境中取出）
         tex = re.sub(r"\\ref\{([^}]*)\}", lambda m: self.slot("#ref-num(%s)" % typst_label(m.group(1))), tex)
         tex = self.replace_inline_envs(tex)
@@ -396,6 +399,10 @@ class Converter:
             # minipage 之外还有 \caption：整组图共用一个编号图注
             outer = re.sub(r"\\begin\{minipage\}.*?\\end\{minipage\}", "", m.group(0), flags=re.S)
             oc = re.search(r"\\caption\{([^}]*)\}", outer)
+            # minipage 之外的 \caption*{第8题}（已换成 subcap 环境）：整组图下面不编号的图注
+            osub = re.search(r"\\begin\{subcap\}(.*?)\\end\{subcap\}", outer, flags=re.S)
+            if osub:
+                grid = "stack(%s, subcap[%s])" % (grid, convert_fragments([osub.group(1).strip()])[0])
             if oc:
                 cap = convert_fragments([oc.group(1)])[0] if oc.group(1).strip() else ""
                 return "\n\n" + self.slot("#figure(kind: image, %s, caption: [%s])" % (grid, cap)) + "\n\n"
@@ -1093,12 +1100,19 @@ def tex_math_to_typst(math: str) -> str:
 # 各册主文件中“本册专用”的公式命令 -> typst/math<册>/defs.typ 中的定义
 VOLUME_MACROS = {
     2: {"parallelogram": "pgram", "parallel": "pll"},
+    5: {"parallelogram": "pgram", "parallel": "pll"},
 }
 # 各册主文件中“本册专用”的、可以直接换成标准 LaTeX 命令的定义（在交给 pandoc 之前替换）
 VOLUME_TEX = {
     3: [(r"\\Vec(?![a-zA-Z])", r"\\overrightarrow")],   # \renewcommand{\Vec}{\overrightarrow}
     # \newcommand{\arccot}{{\rm arccot\; }}
     4: [(r"\\arccot(?![a-zA-Z])", r"\\operatorname{arccot}")],
+    # \renewcommand{\Vec}{\overrightarrow}、\eX = \vec{e}_x 等、\va = \vec{a}、\expval{x} = \left\langle x \right\rangle
+    5: [(r"\\Vec(?![a-zA-Z])", r"\\overrightarrow"),
+        (r"\\e([XYZ])(?![a-zA-Z])", lambda m: r"\vec{e}_%s" % m.group(1).lower()),
+        (r"\\va(?![a-zA-Z])", r"\\vec{a}"),
+        (r"\\expval\{((?:[^{}]|\{[^{}]*\})*)\}", r"\\left\\langle \1 \\right\\rangle"),
+        (r"\$\\bf\{([^{}]*)\}\$", r"$\\mathbf{\1}$")],   # 3.tex 的 $\bf{a}$
 }
 # 各册专用、要直接写成 Typst 公式的命令（pandoc 会丢掉 \displaystyle、\limits）
 VOLUME_SLOTS = {
