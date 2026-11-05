@@ -114,7 +114,45 @@ FUNCS = {
     "deg": math.degrees, "rad": math.radians, "veclen": math.hypot,
     "min": min, "max": max, "pi": math.pi, "e": math.e,
     "round": round, "floor": math.floor, "ceil": math.ceil, "int": int,
+    "cot": lambda x: 1 / math.tan(math.radians(x)),
+    "sec": lambda x: 1 / math.cos(math.radians(x)),
+    "cosec": lambda x: 1 / math.sin(math.radians(x)),
+    "log10": math.log10, "log2": math.log2, "pow": math.pow, "mod": math.fmod,
 }
+
+
+def pgf_radians(e: str) -> str:
+    """pgfmath 的后缀运算符 r（把前面的弧度值换成角度，如 sin(\\x r)）改写为 deg(…)。
+    r 作用于前面的整个乘除式：tan(-5*pi/12 r) 是 (-5*pi/12) r，3*\\x r - pi r 是 (3*\\x) r - (pi) r
+    （与 LaTeX 版的图对照确认），即向前到同一层的加减号、左括号或逗号为止"""
+    out = e
+    while True:
+        m = re.search(r"(?<=[\w.)\s])\s*\br\b(?!\s*\()", out)
+        if not m:
+            return out
+        j = m.start()
+        while j > 0 and out[j - 1].isspace():
+            j -= 1
+        k, depth = j, 0
+        while k > 0:
+            c = out[k - 1]
+            if c == ")":
+                depth += 1
+            elif c == "(":
+                if depth == 0:
+                    break
+                depth -= 1
+            elif depth == 0 and c == ",":
+                break
+            elif depth == 0 and c in "+-":
+                # 二元的加减号（前面是数、名字或右括号）是边界；一元的负号属于这个式子
+                before = out[: k - 1].rstrip()
+                if before and (before[-1].isalnum() or before[-1] in "._)"):
+                    break
+            k -= 1
+        if not out[k:j].strip():
+            raise TikzError("无法计算的表达式：" + e)
+        out = out[:k] + "deg(" + out[k:j] + ")" + out[m.end():]
 
 UNITS = {"cm": 1.0, "mm": 0.1, "pt": PT, "in": 2.54, "em": EM, "ex": EM * 0.43, "bp": 2.54 / 72}
 
@@ -124,6 +162,8 @@ def num(expr: str, unit: float = 1.0) -> float:
     e = expr.strip().replace("{", "(").replace("}", ")")
     if not e:
         raise TikzError("空表达式")
+    if re.search(r"\br\b", e):
+        e = pgf_radians(e)
     e = e.replace("^", "**")
     e = re.sub(r"\bpi\b", "pi", e)
     has_unit = False
@@ -144,6 +184,33 @@ def num(expr: str, unit: float = 1.0) -> float:
 
 
 # ---------------------------------------------------------------- 几何
+
+PLOT_KEYS = {"smooth", "tension", "domain", "samples", "variable"}
+
+
+def simplify_polyline(pts, eps: float = 0.002):
+    """去掉偏离不到 eps（cm）的中间点（Douglas–Peucker）。函数图常取上千个点，不化简生成的代码太长"""
+    if len(pts) <= 2:
+        return list(pts)
+    keep = [False] * len(pts)
+    keep[0] = keep[-1] = True
+    stack = [(0, len(pts) - 1)]
+    while stack:
+        a, b = stack.pop()
+        (x0, y0), (x1, y1) = pts[a], pts[b]
+        dx, dy = x1 - x0, y1 - y0
+        L = math.hypot(dx, dy)
+        best, idx = -1.0, -1
+        for k in range(a + 1, b):
+            x, y = pts[k]
+            d = abs(dy * (x - x0) - dx * (y - y0)) / L if L > 1e-12 else math.hypot(x - x0, y - y0)
+            if d > best:
+                best, idx = d, k
+        if best > eps:
+            keep[idx] = True
+            stack += [(a, idx), (idx, b)]
+    return [p for p, k in zip(pts, keep) if k]
+
 
 def add(p, q): return (p[0] + q[0], p[1] + q[1])
 def sub(p, q): return (p[0] - q[0], p[1] - q[1])
@@ -307,6 +374,8 @@ class Style:
         self.opacity = None
         self.node = {}            # every node 的样式
         self.font = None
+        # plot 的参数（TikZ 默认 domain=-5:5、samples=25、变量 \x）
+        self.plot = {"domain": (-5.0, 5.0), "samples": 25, "var": r"\x", "smooth": False, "tension": 0.55}
 
     def copy(self) -> "Style":
         s = Style()
@@ -503,7 +572,9 @@ class Picture:
                     style.fill = style.fill or style.color
                 elif parse_color(k) is not None:
                     style.color = parse_color(k)
-                elif k in ("rounded corners", "sharp corners", "line cap=round", "smooth", "transform shape"):
+                elif k == "smooth":
+                    style.plot["smooth"] = True
+                elif k in ("rounded corners", "sharp corners", "line cap=round", "transform shape"):
                     pass
                 else:
                     self.notes.append("忽略选项 " + k)
@@ -573,8 +644,17 @@ class Picture:
                     self.tf = Transform(a, b, *self.tf.vec(p), e, f)
             elif k in ("every node/.style", "nodes"):
                 style.node.update(dict(parse_options(v)))
+            elif k == "domain":
+                a, b = split_top(v, ":")
+                style.plot["domain"] = (num(a), num(b))
+            elif k == "samples":
+                style.plot["samples"] = int(round(num(v)))
+            elif k == "variable":
+                style.plot["var"] = v.strip()
+            elif k == "tension":
+                style.plot["tension"] = num(v)
             elif k in ("baseline", "inner sep", "outer sep", "rounded corners", "ball color", "every node/.append style",
-                       "decoration", "postaction", "mark", "domain", "samples", "smooth"):
+                       "decoration", "postaction", "mark"):
                 if k == "ball color":
                     col = parse_color(v) or (.5, .5, .5)
                     style.fill = "gradient.radial(white, %s, %s, center: (35%%, 30%%), radius: 75%%)" % (
@@ -806,7 +886,7 @@ class Picture:
             extra += ', name: "%s"' % name
             self.text_nodes[name] = p
         if rotate:
-            self.out.append("node(%s, std.rotate(%sdeg, reflow: true, %s)%s)" % (args[0], fmt(-rotate), body, extra))
+            self.out.append("node(%s, %s%s, rotate: %sdeg)" % (args[0], body, extra, fmt(rotate)))
         else:
             self.out.append("node(%s, %s%s)" % (args[0], body, extra))
 
@@ -989,7 +1069,7 @@ class PathBuilder:
             if c == "{" or c == "}":
                 i += 1
                 continue
-            if c == "(" or s.startswith("+(", i) or s.startswith("++(", i):
+            if c == "(" or re.match(r"\+\+?\s*\(", s[i : i + 8]):
                 p, i = self.read_point(s, i, relative_base=self.cur)
                 if op is None:
                     if self.cur is not None and self.pieces:
@@ -1081,9 +1161,14 @@ class PathBuilder:
                 self.close_sub(False)
                 # 矩形的四个角（在当前变换下仍是平行四边形）
                 inv = (a, (p[0], a[1]), p, (a[0], p[1]))
-                if abs(pic.tf.m[1]) > 1e-9 or abs(pic.tf.m[2]) > 1e-9:
-                    # 有旋转：用变换前的坐标求四角
-                    raise TikzError("旋转后的 rectangle 暂不支持")
+                ta, tb, tc, td = pic.tf.m[:4]
+                if abs(tb) > 1e-9 or abs(tc) > 1e-9:
+                    # 有旋转：把对角线换回变换前的坐标，求出两条边，再变换回来
+                    det = ta * td - tb * tc
+                    dx, dy = p[0] - a[0], p[1] - a[1]
+                    u = (td * dx - tc * dy) / det
+                    w = (-tb * dx + ta * dy) / det
+                    inv = (a, add(a, pic.tf.vec((u, 0))), p, add(a, pic.tf.vec((0, w))))
                 self.subpaths.append(([("line", inv[0], inv[1]), ("line", inv[1], inv[2]), ("line", inv[2], inv[3])], True))
                 self.cur = p
                 self.start = p
@@ -1109,6 +1194,10 @@ class PathBuilder:
                     self.subpaths.append(([("line", (x0, k * step), (x1, k * step))], False))
                     k += 1
                 self.cur = p
+                continue
+            if s.startswith("plot", i) and not s[i + 4 : i + 5].isalpha():
+                i = self.plot(s, i + 4, op)
+                op, op_nodes, controls, to_opts = None, [], [], []
                 continue
             if s.startswith("sin", i) or s.startswith("cos", i):
                 kind = s[i : i + 3]
@@ -1136,9 +1225,9 @@ class PathBuilder:
     def read_point(self, s: str, i: int, relative_base=None):
         rel = 0
         if s.startswith("++", i):
-            rel, i = 2, i + 2
+            rel, i = 2, skip_ws(s, i + 2)
         elif s.startswith("+", i):
-            rel, i = 1, i + 1
+            rel, i = 1, skip_ws(s, i + 1)
         inner, i = read_group(s, i, "(", ")")
         if rel:
             d = self.pic.tf.vec(self.pic.coord_raw(inner))
@@ -1211,6 +1300,89 @@ class PathBuilder:
             if text is not None and not (name and text == ""):
                 self.nodes_later.append((q, text, nopts, ang, name))
         self.cur = p
+
+    def plot(self, s: str, i: int, op) -> int:
+        """plot[选项] (x 表达式, y 表达式)、plot coordinates {…}。返回读完后的位置。
+        前面有 -- 时用直线接到第一个点，否则另起一段子路径（同 TikZ）"""
+        n = len(s)
+        i = skip_ws(s, i)
+        ps = dict(self.st.plot)
+        if i < n and s[i] == "[":
+            # plot[…] 的选项只对这段 plot 有效；线宽、颜色等是整条路径的属性，在这里不起作用（同 TikZ）
+            o, i = read_group(s, i, "[", "]")
+            tmp = self.st.copy()
+            self.pic.apply_options([kv for kv in parse_options(o) if kv[0] in PLOT_KEYS], tmp)
+            ps = tmp.plot
+            i = skip_ws(s, i)
+        if s.startswith("coordinates", i):
+            i = skip_ws(s, i + len("coordinates"))
+            body, i = read_group(s, i, "{", "}")
+            pts = []
+            j = 0
+            while True:
+                j = skip_ws(body, j)
+                if j >= len(body):
+                    break
+                p, j = self.read_point(body, j)
+                pts.append(p)
+        elif i < n and s[i] == "(":
+            inner, i = read_group(s, i, "(", ")")
+            parts = split_top(inner, ",")
+            if len(parts) != 2:
+                raise TikzError("无法识别的 plot：" + inner)
+            var = ps["var"]
+            a, b = ps["domain"]
+            k = max(ps["samples"], 2)
+            pts = []
+            runs = [[]]          # 函数无定义处（如 tan 的渐近线）断开
+            for t in range(k):
+                x = a + (b - a) * t / (k - 1)
+                val = "(%r)" % x
+                try:
+                    xy = tuple(num(re.sub(re.escape(var) + r"(?![A-Za-z])", lambda _m: val, e.strip())) for e in parts)
+                except TikzError:
+                    if runs[-1]:
+                        runs.append([])
+                    continue
+                runs[-1].append(self.pic.tf.apply(xy))
+            runs = [r for r in runs if len(r) >= 2]
+            if not runs:
+                raise TikzError("plot 没有可画的点：" + inner)
+            pts = runs[0]
+            for r in runs[1:]:   # 后面的几段各自成为子路径
+                self.add_curve(pts, ps, connect=op == "--")
+                self.close_sub(False)
+                op, pts = None, r
+        else:
+            raise TikzError("无法识别的 plot：" + s[i : i + 30])
+        self.add_curve(pts, ps, connect=op == "--")
+        return i
+
+    def add_curve(self, pts, ps, connect: bool):
+        if not pts:
+            return
+        if connect and self.cur is not None:
+            self.pieces.append(("line", self.cur, pts[0]))
+        elif self.pieces:
+            self.close_sub(False)
+        if len(pts) == 1:
+            self.cur = self.start = pts[0]
+            return
+        if not connect or self.cur is None:
+            self.start = pts[0]
+        if ps["smooth"] and len(pts) >= 3:
+            # TikZ 的 smooth：过各点的三次曲线，控制点沿前后两点连线方向，长度按 tension
+            c = ps["tension"] / 3
+            for k in range(len(pts) - 1):
+                p0, p1 = pts[k], pts[k + 1]
+                prev = pts[k - 1] if k > 0 else p0
+                nxt = pts[k + 2] if k + 2 < len(pts) else p1
+                c1 = add(p0, mul(sub(p1, prev), c)) if k > 0 else p0
+                c2 = sub(p1, mul(sub(nxt, p0), c)) if k + 2 < len(pts) else p1
+                self.pieces.append(("bezier", p0, c1, c2, p1))
+        else:
+            self.pieces.append(("poly",) + tuple(simplify_polyline(pts)))
+        self.cur = pts[-1]
 
     def arc(self, a0, a1, rx, ry):
         pic = self.pic
@@ -2036,9 +2208,20 @@ class LabelBatch:
     def resolve(self, text: str) -> str:
         if not self.items:
             return text
-        from tex2typ import convert_fragments, fix_math, fix_inline_math
+        from tex2typ import convert_fragments, fix_math, fix_inline_math, replace_command, tex_math_to_typst
+        # \tfrac：pandoc 会转成普通的分数（模板中一律按 display 排），同正文换成模板的 tfrac(…)。
+        # 先换成 \mathrm{TFRACn} 交给 pandoc，再换回来
+        tfracs: list[str] = []
+
+        def tfrac(args: list[str]) -> str:
+            tfracs.append("tfrac(%s, %s)" % tuple(tex_math_to_typst(a) for a in args))
+            return r"\mathrm{TFRAC%d}" % (len(tfracs) - 1)
+        items = [replace_command(t, "tfrac", 2, tfrac) for t in self.items]
         # 同正文的后处理：^\circ → degree、花括号不自动放大等
-        conv = [unshadow(fix_inline_math(fix_math(c))) for c in convert_fragments(self.items)]
+        conv = [unshadow(fix_inline_math(fix_math(c))) for c in convert_fragments(items)]
+        # pandoc 把 \mathrm{TFRAC12} 写成 upright(T F R A C 12)
+        conv = [re.sub(r'upright\((?:"TFRAC|T F R A C )\s*([\d ]+?)"?\)', lambda m: tfracs[int(m.group(1).replace(" ", ""))], c)
+                for c in conv]
         return re.sub(r"@@L(\d+)@@", lambda m: conv[int(m.group(1))], text)
 
 
@@ -2113,7 +2296,7 @@ def main() -> None:
         for ch, items in by_ch.items():
             body = ["// 由 tools/tikz2cetz.py 从 math%d/%s.tex 自动生成，不要手工修改；" % (volume, ch),
                     "// 需要手工修改的图复制到 ch%s.typ 的 figures 中，那里的同名图优先。" % ch,
-                    '#import "../../common/fig.typ": *', '#import "../../common/template.typ": todo-fig', "",
+                    '#import "../../common/fig.typ": *', '#import "../../common/template.typ": todo-fig, tfrac', "",
                     "#let figures = ("]
             for fid, code in items:
                 lines = code.split("\n")

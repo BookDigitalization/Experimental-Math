@@ -1,7 +1,7 @@
 // 由 tools/tikz2cetz.py 从 math2/2.tex 自动生成，不要手工修改；
 // 需要手工修改的图复制到 ch2.typ 的 figures 中，那里的同名图优先。
 #import "../../common/fig.typ": *
-#import "../../common/template.typ": todo-fig
+#import "../../common/template.typ": todo-fig, tfrac
 
 #let figures = (
   "2-01": canvas(length: 0.7cm, {
@@ -13,7 +13,7 @@
     circle((6, 0), radius: 2, fill: hatch-nw, stroke: (paint: black, thickness: 0.4pt))
     line((6, 0), (7.4142, 1.4142), stroke: (paint: black, thickness: 1.6pt))
     node((6, 0), [$O$], pos: "below", fill: white)
-    node((6.75, 1.299), std.rotate(-45deg, reflow: true, [$r$]), pos: "left", fill: white)
+    node((6.75, 1.299), [$r$], pos: "left", fill: white, rotate: 45deg)
     node((6, -3), [\(2) 圆面])
   })
   ,

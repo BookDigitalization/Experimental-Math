@@ -18,7 +18,26 @@
 // 节点。pos 为 TikZ 的位置选项：none（居中）、"above"、"below"、"left"、"right"，
 // 以及 "above left" 等组合；dist 对应 above=3pt 中的 3pt。
 // fill: white 对应 TikZ 的 [fill=white]（遮住底下的线）。
-#let node(p, body, pos: none, dist: 0pt, name: none, frame: none, fill: none) = {
+#let node(p, body, pos: none, dist: 0pt, name: none, frame: none, fill: none, rotate: 0deg) = {
+  if rotate != 0deg {
+    // 旋转的节点（TikZ 的 rotate=、sloped）：above 等方位是在旋转后的坐标系里说的。
+    // 文字与一个等大的隐藏副本拼在一起，使锚点（如 above 时文字框的下边中点）正好在整块的中心，
+    // 再绕中心旋转，放在 p 处
+    let b = box(inset: inner-sep + dist, fill: fill,
+      stroke: if frame != none { 0.4pt } else { none }, radius: if frame == "circle" { 50% } else { 0pt }, body)
+    // cetz.draw 中也有 hide、grid，这里要用 Typst 自带的
+    let h = std.hide(b)
+    let cell = if pos == none { b }
+      else if pos == "above" { stack(b, h) }
+      else if pos == "below" { stack(h, b) }
+      else if pos == "left" { stack(dir: ltr, b, h) }
+      else if pos == "right" { stack(dir: ltr, h, b) }
+      else if pos == "above left" { std.grid(columns: 2, b, h, h, h) }
+      else if pos == "above right" { std.grid(columns: 2, h, b, h, h) }
+      else if pos == "below left" { std.grid(columns: 2, h, h, b, h) }
+      else { std.grid(columns: 2, h, h, h, b) }
+    return content(p, std.rotate(-rotate, reflow: true, cell), anchor: "center")
+  }
   let anchor = if pos == none { "center" } else {
     let m = (above: "south", below: "north", left: "east", right: "west",
       "above left": "south-east", "above right": "south-west",

@@ -1,7 +1,7 @@
 // 由 tools/tikz2cetz.py 从 math2/3.tex 自动生成，不要手工修改；
 // 需要手工修改的图复制到 ch3.typ 的 figures 中，那里的同名图优先。
 #import "../../common/fig.typ": *
-#import "../../common/template.typ": todo-fig
+#import "../../common/template.typ": todo-fig, tfrac
 
 #let figures = (
   "3-01": canvas({

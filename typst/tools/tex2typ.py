@@ -87,6 +87,12 @@ class Converter:
         tex = re.sub(r"\\ding\{(\d+)\}", lambda m: chr(0x2460 + (int(m.group(1)) - 172) % 20)
                      if 172 <= int(m.group(1)) <= 181 or 192 <= int(m.group(1)) <= 201 else m.group(0), tex)
         tex = re.sub(r"\\vskip\s*[\d.]+\s*(ex|em|pt|mm|cm)", "", tex)
+        # 行内改字号的 {\small 00}、{\Large ?}（pandoc 会丢掉字号）。如第三册“21{\small00} 表示两个有效数字”
+        sizes = {"tiny": 0.5, "scriptsize": 0.7, "footnotesize": 0.8, "small": 0.9,
+                 "large": 1.2, "Large": 1.44, "LARGE": 1.73}
+        tex = re.sub(r"\{\\(%s)(?![a-zA-Z])\s*([^{}\n]*)\}" % "|".join(sizes),
+                     lambda m: self.slot("#text(size: %gem)[%s]" % (sizes[m.group(1)], convert_fragments([m.group(2)])[0]))
+                     if m.group(2).strip() and "\\begin" not in m.group(2) else m.group(0), tex)
         # \section*：后面跟 \addcontentsline{toc}{subsection} 的（习题）以小节的缩进列入目录，否则不列入目录
         # 后面跟 \addcontentsline{toc}{section} 的（复习题）与“第X节”同级列入目录
         tex = re.sub(r"\\section\*\{([^}]*)\}\s*\\addcontentsline\{toc\}\{(sub)?section\}\{[^}]*\}",
@@ -704,6 +710,8 @@ def convert_fragments(fragments: list[str]) -> list[str]:
     """一次调用 pandoc 转换多段 LaTeX 行内内容"""
     if not fragments:
         return []
+    # 空公式 $$（如 TikZ 的 node{$$}）会被 pandoc 当作陈列公式的开头，按空内容处理
+    fragments = ["" if re.fullmatch(r"\s*\$\s*\$\s*", f) else f for f in fragments]
     joined = ("\n\n%s\n\n" % CELL_SEP).join(f if f.strip() else "~" for f in fragments)
     out = pandoc(MACROS + joined)
     parts = [p.strip() for p in out.split(CELL_SEP)]
@@ -815,6 +823,10 @@ def tex_math_to_typst(math: str) -> str:
 VOLUME_MACROS = {
     2: {"parallelogram": "pgram", "parallel": "pll"},
 }
+# 各册主文件中“本册专用”的、可以直接换成标准 LaTeX 命令的定义（在交给 pandoc 之前替换）
+VOLUME_TEX = {
+    3: [(r"\\Vec(?![a-zA-Z])", r"\\overrightarrow")],   # \renewcommand{\Vec}{\overrightarrow}
+}
 
 
 def convert(volume: int, chapter: int, src: Path) -> str:
@@ -822,6 +834,8 @@ def convert(volume: int, chapter: int, src: Path) -> str:
     tex = src.read_text(encoding="utf-8")
     for name, ident in VOLUME_MACROS.get(volume, {}).items():
         tex = re.sub(r"\\%s(?![a-zA-Z])\s*" % name, lambda m, i=ident: conv.math_slot(i) + " ", tex)
+    for pat, rep in VOLUME_TEX.get(volume, []):
+        tex = re.sub(pat, rep, tex)
     tex = conv.preprocess(tex)
     typ = conv.postprocess(pandoc(MACROS + tex))
     # 插图沿用 LaTeX 版目录中的图片文件（编译时 --root 为仓库根目录）
