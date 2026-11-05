@@ -29,7 +29,7 @@
 一般地说，有如下原理：
 
 #blk[乘法原理][
-如果完成某种事需要分成 $n$ 个步骤，第一步骤有 $m_1$ 种方法，第二步骤有 $m_2$ 种方法……，第 $n$ 步骤有 $m_n$ 种方法，那么完成这件事共有 $m_1 dot.op m_2 dots.h.c m_n$ 种不同的方法.
+如果完成某种事需要分成 $n$ 个步骤，第一步骤有 $m_1$ 种方法，第二步骤有 $m_2$ 种方法……，第 $n$ 步骤有 $m_n$ 种方法，那么完成这件事共有 $m_1 dot.op m_2 thin dots.h.c thin m_n$ 种不同的方法.
 
 ]
 总的来说，如果完成一种事有几种不同的方法，这些方法又是互不相关的，任选一种方法都能完成这件事的，那么完成这件事的方法的总数，应该用加法计算. 如果完成一件事，必须分成若干步骤，每个步骤又有不同的方法，而且每一步骤中的一种方法完成之后，都可以开始下一步骤的工作，依次完成全部步骤，才能达到完成这一件事的目的，那么完成这件事的方法的总数应该用乘法计算.
@@ -107,16 +107,16 @@ $a\,b\,c\,d$ 四个元素，每次取出三个元素的不同排列有多少种�
 一般地说，从 $n$ 个不同元素中，任取 $m$ 个 $\(m lt.eq n\)$ 元素（不许重复），按照一定顺序排成一列的个数，叫做从 $n$ 个不同元素中取出 $m$ 个元素的排列数，用符号表示 $upright(P)_n^m$.
 
 #blk[定理1][
-从 $n$ 个不同元素中，任取 $m$ 个 $\(m lt.eq n\)$ 没有重复的元素的排列数为 $upright(P)_n^m = n\(n - 1\)dots.h.c\(n - m + 1\)$
+从 $n$ 个不同元素中，任取 $m$ 个 $\(m lt.eq n\)$ 没有重复的元素的排列数为 $upright(P)_n^m = n\(n - 1\) thin dots.h.c thin \(n - m + 1\)$
 
 ]
 #proof[
-在取出 $m$ 个元素排成一列时，首先在第一个位置上可以选 $n$ 个元素中的任何一个，故有 $n$ 种方法. 在第二个位置上可以选余下的 $n - 1$ 个元素中的任一个．如此类推，在第 $m$ 个位置上可以选余下的 $n -\(m - 1\)$ 个元素中的任一个. 根据乘法原理得到总的不同排列数应该是 $ upright(P)_n^m = n\(n - 1\)dots.h.c\(n - m + 1\) $
+在取出 $m$ 个元素排成一列时，首先在第一个位置上可以选 $n$ 个元素中的任何一个，故有 $n$ 种方法. 在第二个位置上可以选余下的 $n - 1$ 个元素中的任一个．如此类推，在第 $m$ 个位置上可以选余下的 $n -\(m - 1\)$ 个元素中的任一个. 根据乘法原理得到总的不同排列数应该是 $ upright(P)_n^m = n\(n - 1\) thin dots.h.c thin \(n - m + 1\) $
 
 这里的 $n$, $m$ 是自然数，并且 $m lt.eq n$, 这个公式就叫做排列数公式.
 
 ]
-特别是当 $m = n$ 时有 $ upright(P)_n^n = n\(n - 1\)dots.h.c 3 dot.op 2 dot.op 1 $ #noindent;这表示，$n$ 个不同的元素全部取出参加排列的排列数，叫做 $n$ 个不同元素的全排列，自然数1到 $n$ 的连乘积叫做 $n$ 的阶乘，用 $n !$ 表示，所以全排列数公式又可以写成 $ upright(P)_n^n = n ! $ #noindent;有了阶乘，排列数公式又可以写成 $ upright(P)_n^m = frac(n !, \(n - m\)!) $ #noindent;这里，当 $m = n$ 时，分母出现 $\(n - m\)!$ 就变成 $0 !$⁠，为了使公式仍能成立，我们特别规定 $0 ! = 1$.
+特别是当 $m = n$ 时有 $ upright(P)_n^n = n\(n - 1\) thin dots.h.c thin 3 dot.op 2 dot.op 1 $ #noindent;这表示，$n$ 个不同的元素全部取出参加排列的排列数，叫做 $n$ 个不同元素的全排列，自然数1到 $n$ 的连乘积叫做 $n$ 的阶乘，用 $n !$ 表示，所以全排列数公式又可以写成 $ upright(P)_n^n = n ! $ #noindent;有了阶乘，排列数公式又可以写成 $ upright(P)_n^m = frac(n !, \(n - m\)!) $ #noindent;这里，当 $m = n$ 时，分母出现 $\(n - m\)!$ 就变成 $0 !$⁠，为了使公式仍能成立，我们特别规定 $0 ! = 1$.
 
 例如 $upright(P)_8^5 = 8 dot.op 7 dot.op 6 dot.op 5 dot.op 4 = 6720$⁠，$upright(P)_5^5 = 5 ! = 5 dot.op 4 dot.op 3 dot.op 2 dot.op 1 = 120$
 
@@ -262,7 +262,7 @@ $a\,b$\; $a\,c$\; $a\,d$\; $a\,e$\; $b\,c$\; $b\,d$\; $b\,e$\; $c\,d$, $c\,e$ �
 由 $upright(P)_n^m = upright(C)_n^m dot.op upright(P)_m^m$⁠，所以 $ upright(C)_n^m = upright(P)_n^m / upright(P)_m^m = frac(frac(n !, \(n - m\)!), m !) = frac(n !, m !\(n - m\)!) $
 
 ]
-注意：$upright(C)_n^m = frac(n\(n - 1\)dots.h.c\(n - m + 1\), m !)$
+注意：$upright(C)_n^m = frac(n\(n - 1\) thin dots.h.c thin \(n - m + 1\), m !)$
 
 #example[
 计算 $upright(C)_8^3$, $upright(C)_8^5$ 和 $upright(C)_9^2$
@@ -455,7 +455,7 @@ $ frac(n\(n - 1\)\(n - 2\), 3 times 2 times 1) > frac(n\(n - 1\)\(n - 2\)\(n - 3
   #set enum(numbering: enum-at(2, "(1)"))
   + $frac(\(n + 1\)!, k !) - frac(n !, \(k - 1\)!) = frac(\(n - k + 1\)dot.op n !, k !)$
 
-  + $frac(\(2 n\)!, 2^n dot.op n !) = 1 dot.op 3 dot.op 5 dots.h.c\(2 n - 1\)$
+  + $frac(\(2 n\)!, 2^n dot.op n !) = 1 dot.op 3 dot.op 5 thin dots.h.c thin \(2 n - 1\)$
   ]
 
 + #block(sticky: true)[解方程：]
@@ -737,9 +737,17 @@ $therefore quad 4 ! dot.op 5 ! = 2880$
 === 重复组合
 从 $n$ 个不同元素中取出 $m$ 个元素组成一组，如果允许元素在组合中重复出现，这样的组合简称为重复组合，这种重复组合用符号 $upright(H)_n^m$ 表示.
 
-怎样计算重复组合的组合数呢？我们还是先从具体例子开始考虑，假如有三个不同的元素 $a_1\,a_2\,a_3$⁠，从其中取出两个元素组成重复组合，那么，可以得到如下的六个不同组合：#numbered-eq($ a_1 a_1\,thick a_1 a_2\,thick a_1 a_3\,thick a_2 a_2\,thick a_2 a_3\,thick a_3 a_3 #h(2em) upright("(1)") $);
+怎样计算重复组合的组合数呢？我们还是先从具体例子开始考虑，假如有三个不同的元素 $a_1\,a_2\,a_3$⁠，从其中取出两个元素组成重复组合，那么，可以得到如下的六个不同组合：
 
-如果是不允许元素重复的话，要选两个元素得到不同的组合数是6的话，应是 $upright(C)_4^2$⁠，设这四个元素为 $a'_1\,a'_2\,a'_3\,a'_4$, 那么得到的组合为：#numbered-eq($ a'_1 a'_2\,thick a'_1 a'_3\,thick a'_1 a'_4\,thick a'_2 a'_3\,thick a'_2 a'_4\,thick a'_3 a'_4 #h(2em) upright("(2)") $);#noindent;组合（1）与组合（2）不难建立它们之间的一一对应关系．在组合（1）的每个组合的元素下标上分别加上0和1，就得到了下标与（2）完全一致的组合（3）．#numbered-eq($ a_(1 + 0) a_(1 + 1)\,quad a_(1 + 0) a_(2 + 1)\,quad a_(1 + 0) a_(3 + 1)\,quad a_(2 + 0) a_(2 + 1)\,quad a_(2 + 0) a_(3 + 1)\,quad a_(3 + 0) a_(3 + 1) #h(2em) upright("(3)") $);
+#numbered-align(($$, $a_1 a_1\,thick a_1 a_2\,thick a_1 a_3\,thick a_2 a_2\,thick a_2 a_3\,thick a_3 a_3$, [(1)]));
+
+如果是不允许元素重复的话，要选两个元素得到不同的组合数是6的话，应是 $upright(C)_4^2$⁠，设这四个元素为 $a'_1\,a'_2\,a'_3\,a'_4$, 那么得到的组合为：
+
+#numbered-align(($$, $a'_1 a'_2\,thick a'_1 a'_3\,thick a'_1 a'_4\,thick a'_2 a'_3\,thick a'_2 a'_4\,thick a'_3 a'_4$, [(2)]));
+
+#noindent;组合（1）与组合（2）不难建立它们之间的一一对应关系．在组合（1）的每个组合的元素下标上分别加上0和1，就得到了下标与（2）完全一致的组合（3）．
+
+#numbered-align(($$, $a_(1 + 0) a_(1 + 1)\,quad a_(1 + 0) a_(2 + 1)\,quad a_(1 + 0) a_(3 + 1)\,quad a_(2 + 0) a_(2 + 1)\,quad a_(2 + 0) a_(3 + 1)\,quad a_(3 + 0) a_(3 + 1)$, [(3)]));
 
 又例如从4个不同元素中取出3个元素的重复组合有如下的不同组合:
 
@@ -918,7 +926,7 @@ sum_(k = 0)^n upright(C)_n^k & = upright(C)_n^0 + upright(C)_n^1 + upright(C)_n^
 
 关于求和符号还有两点说明，首先，凡是指示指标从1到 $n$⁠，且仅仅指示从1到 $n$⁠．所以可以用其他的字母来代替 $k$ 而和号仍然是表示了同一个意思. 例如 $ sum_(k = 1)^n a_k = a_1 + a_2 + dots.h.c + a_n\,#h(2em) sum_(ell = 1)^n a_ell = a_1 + a_2 + dots.h.c + a_n $
 
-一般 $sum_(* = 1)^n a_(*) = a_1 + a_2 + dots.h.c + a_n$ 这里 $*$ 可以用任何一种指标来表示，其次，求和也不限于从1到 $n$⁠，也可以从0到 $n + 2$ 等等. 例如 $ sum_(k = 0)^(n + 2) a_k & = a_0 + a_1 + dots.h.c + a_(n + 1) + a_(n + 2)\
+一般 $limits(sum)_(* = 1)^n a_(*) = a_1 + a_2 + dots.h.c + a_n$ 这里 $*$ 可以用任何一种指标来表示，其次，求和也不限于从1到 $n$⁠，也可以从0到 $n + 2$ 等等. 例如 $ sum_(k = 0)^(n + 2) a_k & = a_0 + a_1 + dots.h.c + a_(n + 1) + a_(n + 2)\
 sum_(k = 3)^(n + 1) a_k & = a_3 + a_4 + dots.h.c + a_(n + 1) $
 
 #exercise[
@@ -926,7 +934,7 @@ sum_(k = 3)^(n + 1) a_k & = a_3 + a_4 + dots.h.c + a_(n + 1) $
 
   #block[
   #set enum(numbering: enum-at(2, "(1)"))
-  + $1 + 3 + 5 + 7 dots.h.c +\(2 n - 1\)$
+  + $1 + 3 + 5 + 7 thin dots.h.c +\(2 n - 1\)$
 
   + $1 dot.op 2 + 2 dot.op 3 + 3 dot.op 4 + dots.h.c + n\(n + 1\)$
 
@@ -940,13 +948,13 @@ sum_(k = 3)^(n + 1) a_k & = a_3 + a_4 + dots.h.c + a_(n + 1) $
   #cols(2)[
   #block[
   #set enum(numbering: enum-at(2, "(1)"))
-  + $sum_(k = 1)^n frac(1, k\(2 k + 1\))$
+  + $limits(sum)_(k = 1)^n frac(1, k\(2 k + 1\))$
 
-  + $sum_(k = 1)^(n + 2) frac(k^2, k !)$
+  + $limits(sum)_(k = 1)^(n + 2) frac(k^2, k !)$
 
-  + $sum_(k = 2)^n frac(sin k x, k)$
+  + $limits(sum)_(k = 2)^n frac(sin k x, k)$
 
-  + $sum_(k = 2)^n frac(\(- 1\)^k, k^2 + k - 2)$
+  + $limits(sum)_(k = 2)^n frac(\(- 1\)^k, k^2 + k - 2)$
   ]
 
   ]
@@ -973,7 +981,7 @@ sum_(k = 3)^(n + 1) a_k & = a_3 + a_4 + dots.h.c + a_(n + 1) $
 #set enum(numbering: enum-at(1, "(1)"))
 + 当 $n = 1$ 时，$\(x + y\)^1 = x + y$ $ sum_(k = 0)^1 upright(C)_1^k x^(1 - k) y^k = upright(C)_1^0 x^1 y^0 + upright(C)_1^1 x^0 y^1 = x + y $ #noindent;故 $n = 1$ 时原命题成立.
 
-+ 假设 $n = ell$ 时有公式 $\(x + y\)^ell = sum_(k = 0)^ell upright(C)_ell^k x^(ell - k) y^k$
++ 假设 $n = ell$ 时有公式 $\(x + y\)^ell = limits(sum)_(k = 0)^ell upright(C)_ell^k x^(ell - k) y^k$
 
   现在来计算 $\(x + y\)^(ell + 1)$⁠，令 $ \(x + y\)^(ell + 1) & =\(x + y\)dot.op\(x + y\)^ell =\(x + y\)dot.op sum_(k = 0)^ell upright(C)_ell^k x^(ell - k) y^k\
    & = sum_(k = 0)^ell upright(C)_ell^k x^(ell - k + 1) y^k + sum_(k = 0)^ell upright(C)_ell^k x^(ell - k) y^(k + 1)\
@@ -984,12 +992,12 @@ sum_(k = 3)^(n + 1) a_k & = a_3 + a_4 + dots.h.c + a_(n + 1) $
    & = sum_(k = 0)^(ell + 1) upright(C)_(ell + 1)^k x^(ell + 1 - k) y^k $ #noindent;所以 $n = ell + 1$ 时命题成立.
 ]
 
-#noindent;根据（1）和（2），对于一切自然数 $n$ 都有：$\(x + y\)^n = sum_(k = 0)^n upright(C)_n^k x^(n - k) y^k$ 成立.
+#noindent;根据（1）和（2），对于一切自然数 $n$ 都有：$\(x + y\)^n = limits(sum)_(k = 0)^n upright(C)_n^k x^(n - k) y^k$ 成立.
 
 ]
-这个定理叫做二项式定理，右边的多项式 $sum_(k = 0)^n upright(C)_n^k x^(n - k) y^k$ 叫做 $\(x + y\)^n$ 的二项展开式. 式中的 $upright(C)_n^k x^(n - k) y^k$ 叫做二项展开式的通项，用 $upright(T)_(k + 1)$ 表示，即通项为展开式的第 $k + 1$ 项. $ upright(T)_(k + 1) = upright(C)_n^k x^(n - k) y^k $
+这个定理叫做二项式定理，右边的多项式 $limits(sum)_(k = 0)^n upright(C)_n^k x^(n - k) y^k$ 叫做 $\(x + y\)^n$ 的二项展开式. 式中的 $upright(C)_n^k x^(n - k) y^k$ 叫做二项展开式的通项，用 $upright(T)_(k + 1)$ 表示，即通项为展开式的第 $k + 1$ 项. $ upright(T)_(k + 1) = upright(C)_n^k x^(n - k) y^k $
 
-由二项式定理，取 $y = 1$⁠，有 $ \(x + 1\)^n = sum_(k = 0)^n upright(C)_n^k x^(n - k) $ #noindent;取 $y = - 1$⁠，有$ \(x - 1\)^n = sum_(k = 0)^n\(- 1\)^k upright(C)_n^k x^(n - k) $
+由二项式定理，取 $y = 1$⁠，有 $ \(x + 1\)^n = sum_(k = 0)^n upright(C)_n^k x^(n - k) $ #noindent;取 $y = - 1$⁠，有$ \(x - 1\)^n = limits(sum)_(k = 0)^n\(- 1\)^k upright(C)_n^k x^(n - k) $
 
 在二项式定理中，如果遇到 $n$ 是较小的正整数时展开式的系数，也可以直接用下表计算，
 
@@ -1102,7 +1110,7 @@ upright(T)_6 & = upright(C)_(2 n)^5 a^(2 n - 5) 1 / a^5 = upright(C)_(2 n)^5 a^(
 + 如果二项式的幂指数是偶数，中间一项的系数大，如果二项式的幂指数是奇数，中间两项系数相同并且大.
 
 由于展开式各项系数顺次是 $ upright(C)_n^0 = 1\,quad upright(C)_n^1 = n\,quad upright(C)_n^2 = frac(n\(n - 1\), 1 dot.op 2)\,dots.h\
-upright(C)_n^k = frac(n\(n - 1\)\(n - 2\)dots.h.c\(n - k + 1\), 1 dot.op 2 dot.op 3 dots.h.c k)\,dots.h\,quad upright(C)_n^n = 1 $ #noindent;其中，后一个系数的分子是前一个系数的分子乘以逐次减小1的数，(如 $n\,thick n - 1\,thick n - 2\,thick dots.h$), 分母是乘以逐次增大1的数 (如 $1\,2\,3\,dots.h$) 得到的，因而，各项系数从开始起总是逐渐增大，又因为与首末两端“等距离”的两项系数相等，所以系数增大到某一项时就逐渐减小，而最大项必在中间.
+upright(C)_n^k = frac(n\(n - 1\)\(n - 2\) thin dots.h.c thin \(n - k + 1\), 1 dot.op 2 dot.op 3 thin dots.h.c thin k)\,dots.h\,quad upright(C)_n^n = 1 $ #noindent;其中，后一个系数的分子是前一个系数的分子乘以逐次减小1的数，(如 $n\,thick n - 1\,thick n - 2\,thick dots.h$), 分母是乘以逐次增大1的数 (如 $1\,2\,3\,dots.h$) 得到的，因而，各项系数从开始起总是逐渐增大，又因为与首末两端“等距离”的两项系数相等，所以系数增大到某一项时就逐渐减小，而最大项必在中间.
 
 当 $n$ 是偶数时，$n + 1$ 是奇数，展开式共有 $n + 1$ 项，所以展开式有中间一项，即第 ($n / 2 + 1$) 项，并且系数最大。
 
@@ -1130,11 +1138,11 @@ upright(T)_7 & = upright(C)_11^6 x^(11 - 6) y^6 = 462 x^5 y^6 $
 
 ]
 #example[
-求证：$sum_(k = 0)^n upright(C)_n^k = upright(C)_n^0 + upright(C)_n^1 + upright(C)_n^2 + dots.h.c + upright(C)_n^(n - 1) + upright(C)_n^n = 2^n$
+求证：$limits(sum)_(k = 0)^n upright(C)_n^k = upright(C)_n^0 + upright(C)_n^1 + upright(C)_n^2 + dots.h.c + upright(C)_n^(n - 1) + upright(C)_n^n = 2^n$
 
 ]
 #proof[
-在二项式公式中取 $x = y = 1$⁠，有：$ \(1 + 1\)^n = sum_(k = 0)^n upright(C)_n^k 1^(n - k) 1^k = sum_(k = 0)^n upright(C)_n^k $ #noindent;所以 $sum_(k = 0)^n upright(C)_n^k = 2^n$
+在二项式公式中取 $x = y = 1$⁠，有：$ \(1 + 1\)^n = sum_(k = 0)^n upright(C)_n^k 1^(n - k) 1^k = sum_(k = 0)^n upright(C)_n^k $ #noindent;所以 $limits(sum)_(k = 0)^n upright(C)_n^k = 2^n$
 
 ]
 #example[
@@ -1146,12 +1154,12 @@ upright(T)_7 & = upright(C)_11^6 x^(11 - 6) y^6 = 462 x^5 y^6 $
 
 ]
 #example[
-求证：$sum_(k = 1)^n 2 k upright(C)_n^k = n dot.op 2^n$
+求证：$limits(sum)_(k = 1)^n 2 k upright(C)_n^k = n dot.op 2^n$
 
 ]
 #proof[
-因为 $ k upright(C)_n^k & = k dot.op frac(n\(n - 1\)dots.h.c\(n - k + 1\), k !)\
- & = n dot.op frac(\(n - 1\)\(n - 2\)dots.h.c\(n - k + 1\), \(k - 1\)!) = n upright(C)_(n - 1)^(k - 1) $ #noindent;所以 $ sum_(k = 1)^n 2 k upright(C)_n^k = 2 sum_(k = 1)^n k upright(C)_n^k = 2 n sum_(k = 0)^(n - 1) upright(C)_(n - 1)^k = 2 n dot.op 2^(n - 1) = n dot.op 2^n $
+因为 $ k upright(C)_n^k & = k dot.op frac(n\(n - 1\) thin dots.h.c thin \(n - k + 1\), k !)\
+ & = n dot.op frac(\(n - 1\)\(n - 2\) thin dots.h.c thin \(n - k + 1\), \(k - 1\)!) = n upright(C)_(n - 1)^(k - 1) $ #noindent;所以 $ sum_(k = 1)^n 2 k upright(C)_n^k = 2 sum_(k = 1)^n k upright(C)_n^k = 2 n sum_(k = 0)^(n - 1) upright(C)_(n - 1)^k = 2 n dot.op 2^(n - 1) = n dot.op 2^n $
 
 ]
 #example[
@@ -1261,25 +1269,25 @@ $ \(1.009\)^20 & =\(1 + 0.009\)^20\
 
   #block[
   #set enum(numbering: enum-at(2, "(1)"))
-  + $(x - 1 / x)^(2 n)$ 的展开式中常数项是 $\(- 2\)^n frac(1 dot.op 3 dot.op 5 dots.h.c\(2 n - 1\), n !)$
+  + $(x - 1 / x)^(2 n)$ 的展开式中常数项是 $\(- 2\)^n frac(1 dot.op 3 dot.op 5 thin dots.h.c thin \(2 n - 1\), n !)$
 
-  + $\(1 + x\)^(2 n)$ 的展开式的中间一项是 $frac(1 dot.op 3 dot.op 5 dots.h.c\(2 n - 1\), n !)\(2 x\)^n$
+  + $\(1 + x\)^(2 n)$ 的展开式的中间一项是 $frac(1 dot.op 3 dot.op 5 thin dots.h.c thin \(2 n - 1\), n !)\(2 x\)^n$
   ]
 
 + 求证：
 
   #block[
   #set enum(numbering: enum-at(2, "(1)"))
-  + $sum_(k = 0)^m upright(C)_(n + k)^n = upright(C)_(n + m + 1)^(n + 1)$
+  + $limits(sum)_(k = 0)^m upright(C)_(n + k)^n = upright(C)_(n + m + 1)^(n + 1)$
 
   + $2^n - upright(C)_n^1 2^(n - 1) + upright(C)_n^2 2^(n - 2) + dots.h.c +\(- 1\)^(n - 1) upright(C)_n^(n - 1) dot.op 2 +\(- 1\)^n = 1$
 
-  + $sum_(k = 0)^n\(2 k + 1\)upright(C)_n^k =\(n + 1\)2^n$
+  + $limits(sum)_(k = 0)^n\(2 k + 1\)upright(C)_n^k =\(n + 1\)2^n$
 
   + $1 + 2 upright(C)_n^1 + upright(C)_n^2 + 2 upright(C)_n^3 + upright(C)_n^4 + 2 upright(C)_n^5 + dots.h.c + 2 upright(C)_n^(n - 1) + upright(C)_n^n = 3 dot.op 2^(n - 1)$（其中 $n$ 是偶数）
   ]
 
-+ 求 $\(1 + x_1\)\(1 + x_2\)\(1 + x_3\)dots.h.c\(1 + x_n\)$ 的展开式里各项系数之和.
++ 求 $\(1 + x_1\)\(1 + x_2\)\(1 + x_3\) thin dots.h.c thin \(1 + x_n\)$ 的展开式里各项系数之和.
 
 #heading(level: 2, numbering: none, outlined: false)[本章内容要点]
 
@@ -1303,7 +1311,7 @@ $ \(1.009\)^20 & =\(1 + 0.009\)^20\
 
   排列数公式
 
-  - 选排列：$upright(P)_n^m = n\(n - 1\)dots.h.c\(n - m + 1\)= frac(n !, \(n - m\)!) quad\(m < n\)$
+  - 选排列：$upright(P)_n^m = n\(n - 1\) thin dots.h.c thin \(n - m + 1\)= frac(n !, \(n - m\)!) quad\(m < n\)$
 
   - 全排列：$upright(P)_n^n = n !$
 
@@ -1464,7 +1472,7 @@ $ \(1.009\)^20 & =\(1 + 0.009\)^20\
 
   #block[
   #set enum(numbering: enum-at(2, "(1)"))
-  + $sum_(k = 0)^n (upright(C)_n^k)^2 = frac(\(2 n\)!, n ! dot.op n !)$
+  + $limits(sum)_(k = 0)^n (upright(C)_n^k)^2 = frac(\(2 n\)!, n ! dot.op n !)$
 
   + $upright(C)_n^0 upright(C)_m^k + upright(C)_n^1 upright(C)_m^(k - 1) + dots.h.c + upright(C)_n^k upright(C)_m^0 = upright(C)_(n + m)^k$
 

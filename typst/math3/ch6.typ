@@ -254,7 +254,7 @@ $therefore quad alpha_1 : alpha_2 = 3 : 2$
 
 在图6.7(1) 中可以看到 $frac(13 pi, 6)$ 与 $- frac(11 pi, 6)$ 都和 $pi / 6$ 的角终边相同．$frac(13 pi, 6)$ 和 $- frac(11 pi, 6)$ 可以写成下列形式：$ 2 pi + pi / 6\,#h(2em) - 2 pi + pi / 6 $ #noindent;显然，除了这两个角以外，与 $pi / 6$ 的角终边相同的角还有：$ 2 times 2 pi + pi / 6\, & #h(2em) - 2 times 2 pi + pi / 6\
 3 times 2 pi + pi / 6\, & #h(2em) - 3 times 2 pi + pi / 6\
-dots.h.c dots.h.c #h(2em) & #h(2em) #h(2em) dots.h.c dots.h.c $ #noindent;所有和 $pi / 6$ 的角终边相同的角，连同 $pi / 6$ 在内，可以用下式表示：$ 2 k pi + pi / 6\,quad\(k in bb(Z)\) $ #noindent;当 $k = 0$ 时，它表示 $pi / 6$ 的角；$k = 1$ 时，它表示 $frac(13 pi, 6)$ 的角；$k = - 1$ 时，它表示 $- frac(11 pi, 6)$ 的角．
+dots.h.c thin dots.h.c #h(2em) & #h(2em) #h(2em) thin dots.h.c thin dots.h.c $ #noindent;所有和 $pi / 6$ 的角终边相同的角，连同 $pi / 6$ 在内，可以用下式表示：$ 2 k pi + pi / 6\,quad\(k in bb(Z)\) $ #noindent;当 $k = 0$ 时，它表示 $pi / 6$ 的角；$k = 1$ 时，它表示 $frac(13 pi, 6)$ 的角；$k = - 1$ 时，它表示 $- frac(11 pi, 6)$ 的角．
 
 一般地，所有和 $alpha$ 角终边相同的角，连同 $alpha$ 在内，可以用式子 $2 k pi + alpha thick\(k in bb(Z)\)$ 来表示．
 

@@ -74,6 +74,16 @@ class Converter:
                      lambda m: self.slot('#image("%s", width: %g%%)' % (m.group(2), float(m.group(1) or 1) * 100)), tex)
         # \caption* 是不编号的图注，换成 subcap 环境（filter.lua 转为 #subcap）
         tex = replace_command(tex, "caption*", 1, lambda a: r"\begin{subcap}%s\end{subcap}" % a[0])
+        # 不在 figure 环境中的几个并排 minipage（图用 \captionof{figure}{…} 加图注，第六册第一章、附录）：
+        # 包进 figure 环境，按并排的图组转换
+        tex = re.sub(r"\\captionof\{figure\}", r"\\caption", tex)
+        def wrap_minipages(m: re.Match) -> str:
+            before = tex[: m.start()]
+            if before.count("\\begin{figure}") > before.count("\\end{figure}"):
+                return m.group(0)
+            return "\\begin{figure}[htp]\n" + m.group(0) + "\n\\end{figure}\n"
+        tex = re.sub(r"(?:\\begin\{minipage\}(?:(?!\\begin\{minipage\}).)*?\\end\{minipage\}\s*"
+                     r"(?:\\hfill|\\hspace\*?\{[^}]*\}|\\q?quad)?\s*){2,}", wrap_minipages, tex, flags=re.S)
         tex = self.replace_figure_pairs(tex)
         # 没有 \caption 的 figure 在 LaTeX 中不编号；pandoc 会给它图号，所以改成居中的普通内容
         tex = re.sub(r"\\begin\{figure\}(?:\[[^\]]*\])?((?:(?!\\end\{figure\}).)*?)\\end\{figure\}",
@@ -94,6 +104,13 @@ class Converter:
             tex = re.sub(r"\\%s(?![a-zA-Z])" % name, lambda m, s=sym: " " + self.math_slot(s) + " ", tex)
         tex = self.replace_big_delims(self.one_sided_lr(tex))
         # \displaystyle\lim（如分母中）：pandoc 丢掉 \displaystyle，下标就排到了右下角
+        # 范数 \|P_n\|：pandoc 转成关系符 parallel（两侧加大空），改成普通的 ‖
+        tex = re.sub(r"(?<!\\left)(?<!\\right)(?<!\\big)(?<!\\Big)(?<!\\bigg)(?<!\\Bigg)\\\|", lambda m: self.math_slot('"‖"'), tex)
+        # common/preamble.tex：\renewcommand{\Pr}{\mathbb{P}}（概率印成黑板体 ℙ）
+        tex = re.sub(r"\\Pr(?![a-zA-Z])", r"\\mathbb{P}", tex)
+        # \sum\limits 等：行内也把上下限排在正上、正下方
+        tex = re.sub(r"\\(sum|prod|lim)\\limits(?![a-zA-Z])\s*",
+                     lambda m: self.math_slot("limits(%s)" % {"sum": "sum", "prod": "product", "lim": "lim"}[m.group(1)]) + " ", tex)
         # \displaystyle\sum 等同理：求和号用大号，上下限在正上、正下方；积分号只放大
         big_ops = {"lim": "limits(lim)", "sum": "limits(display(sum))", "prod": "limits(display(product))",
                    "int": "display(integral)"}
@@ -183,16 +200,36 @@ class Converter:
             return self.display(m, aligned_rows("\\\\".join(rows), numbered=False))
         tex = re.sub(r"\\begin\{equation\}\s*\\begin\{split\}(.*?)\\end\{split\}\s*\\tag\{([^}]*)\}\s*\\end\{equation\}",
                      split_tag, tex, flags=re.S)
+        # \[\begin{split}…\end{split} 附注\]：split 后面还有内容时，split 部分作为一个居中的对齐块（template.typ 的 split-block）
+        def split_tail(m: re.Match) -> str:
+            if re.fullmatch(r"[\s.,;:，．。；：、]*", m.group(2)):   # 尾部只是标点：照常处理
+                return m.group(0)
+            rows = []
+            for r in split_top(m.group(1), "\\\\"):
+                if r.strip():
+                    left, *rest = split_top(r, "&")
+                    right = " & ".join(rest)
+                    rows.append("($%s$, $%s%s$)" % (tex_math_to_typst(left) if left.strip() else "",
+                                                    "eqph " if left.strip() else "", tex_math_to_typst(right) if right.strip() else ""))
+            return self.display(m, "$ #split-block(%s) %s $" % (", ".join(rows), tex_math_to_typst(m.group(2))))
+        tex = re.sub(r"\\\[\s*\\begin\{split\}((?:(?!\\\]).)*?)\\end\{split\}\s*((?:(?!\\\]|\\begin).)*?(?!\\\]|\\begin)\S(?:(?!\\\]|\\begin).)*?)\s*\\\]",
+                     split_tail, tex, flags=re.S)
         # numcases 要在 replace_tags 之前：其中的 \tag 代替该行的编号
         tex = self.replace_numcases(tex)
-        tex = self.replace_tags(tex)
+        # align、equation 也要在 replace_tags 之前：其中的 \tag 代替该行的编号（排在编号的位置，不占编号）
         tex = re.sub(r"\\begin\{align\}(.*?)\\end\{align\}",
                      lambda m: self.display(m, aligned_rows(m.group(1), numbered=True)), tex, flags=re.S)
         def equation(m: re.Match) -> str:
             body, lbl = take_label(m.group(1))
+            tags = []
+            body = replace_command(body, "tag", 1, lambda a: tags.append(a[0]) or "")
+            if tags:   # 带 \tag 的 equation：只印说明，不编号
+                return self.display(m, "#numbered-align(($$, $%s$, [(%s)]))" % (
+                    tex_math_to_typst(body), convert_fragments([tags[0]])[0]))
             arg = ", label: %s" % typst_label(lbl) if lbl else ""
             return self.slot("#numbered-eq($ %s $%s)" % (tex_math_to_typst(body), arg)) + self.noindent_after(m)
         tex = re.sub(r"\\begin\{equation\}(.*?)\\end\{equation\}", equation, tex, flags=re.S)
+        tex = self.replace_tags(tex)
         # 例题开头的 \label：#example-label 记下例题编号
         tex = re.sub(r"(\\begin\{(?:star)?example\})\s*\\label\{([^}]*)\}",
                      lambda m: m.group(1) + self.slot("#example-label(%s)" % typst_label(m.group(2))), tex)
@@ -875,6 +912,18 @@ def fix_strings(typ: str) -> str:
 def fix_math(typ: str) -> str:
     # \dot{x}（循环小数的点）：模板中 dot 被定义成了 dot.o 等符号的字典（见 template.typ），重音要写 std.math.dot
     typ = re.sub(r"(?<![\w.#])dot\(", "std.math.dot(", typ)
+    # \cdots 在 LaTeX 中是 inner 原子，两侧各有细空；Typst 的 dots.h.c 没有。只在紧挨字母、数字、括号的一侧补
+    ops = {"eq", "times", "plus", "minus", "div", "approx", "equiv", "lt", "gt", "in", "subset", "union", "inter", "thin", "quad"}
+    def thin_before(m: re.Match) -> str:
+        tok = m.group(1)
+        if "." in tok or tok in ops or not re.search(r"[\w)\]']$", tok):
+            return m.group(0)
+        return tok + " thin dots.h.c"
+    typ = re.sub(r"(\S+)\s*dots\.h\.c", thin_before, typ)
+    typ = re.sub(r"dots\.h\.c\s*(?=[A-Za-z0-9(\[]|\\\()(?!(?:eq|times|plus|minus|approx|equiv|lt|gt|in|subset|union|inter|thin|quad)\b)",
+                 r"dots.h.c thin ", typ)
+    # ln|y|、sin|x|：函数名与竖线之间 LaTeX 有细空（Op 后接 Ord）
+    typ = re.sub(r"(?<![\w.])(ln|lg|log|sin|cos|tan|cot|sec|csc|arcsin|arccos|arctan)\s*(?=\\\|)", r"\1 thin ", typ)
     # 向量的模 |\vec{b}|：pandoc 有时写成 \| arrow(b) \|，函数调用两侧的空格在 Typst 中会排出空隙
     typ = re.sub(r"\\\|\s*((?:arrow|accent)\([^()]*\))\s*\\\|", r"\\|\1\\|", typ)
     # vmatrix / Vmatrix：pandoc 写成 delim: "||"、"‖‖"，Typst 只要一个字符
@@ -1154,7 +1203,7 @@ VOLUME_MACROS = {
 VOLUME_TEX = {
     3: [(r"\\Vec(?![a-zA-Z])", r"\\overrightarrow")],   # \renewcommand{\Vec}{\overrightarrow}
     # \newcommand{\arccot}{{\rm arccot\; }}
-    4: [(r"\\arccot(?![a-zA-Z])", r"\\operatorname{arccot}")],
+    4: [],
     # \renewcommand{\Vec}{\overrightarrow}、\eX = \vec{e}_x 等、\va = \vec{a}、\expval{x} = \left\langle x \right\rangle
     5: [(r"\\Vec(?![a-zA-Z])", r"\\overrightarrow"),
         (r"\\e([XYZ])(?![a-zA-Z])", lambda m: r"\vec{e}_%s" % m.group(1).lower()),
@@ -1162,8 +1211,8 @@ VOLUME_TEX = {
         # \expval 定义成 \left\langle…\right\rangle，但 LaTeX 中这些尖括号都是正常大小；Typst 的 lr 会随箭头放大
         (r"\\expval\{((?:[^{}]|\{[^{}]*\})*)\}", r"\\langle \1 \\rangle"),
         (r"\$\\bf\{([^{}]*)\}\$", r"$\\mathbf{\1}$")],   # 3.tex 的 $\bf{a}$
-    6: [(r"\\dd(?![a-zA-Z])", r"\\,\\mathrm{d}"),
-        (r"\\(arccot|arcsec)(?![a-zA-Z])", r"\\operatorname{\1}"),
+    6: [lambda tex: int_display(tex),
+        (r"\\dd(?![a-zA-Z])", r"\\,\\mathrm{d}"),
         (r"\\NC(?![a-zA-Z])", r"\\text{N}/\\text{C}"),
         (r"\\msq(?![a-zA-Z])", r"\\text{m}/\\text{s}^2"), (r"\\cmsq(?![a-zA-Z])", r"\\text{cm}/\\text{s}^2"),
         (r"\\ms(?![a-zA-Z])", r"\\text{m}/\\text{s}"), (r"\\cms(?![a-zA-Z])", r"\\text{cm}/\\text{s}"),
@@ -1172,6 +1221,17 @@ VOLUME_TEX = {
         (r"\\VEC(?![a-zA-Z])", r"\\overrightarrow"),
         lambda tex: expand_volume6(tex)],
 }
+
+
+def int_display(tex: str) -> str:
+    """\Int = \displaystyle\int：\displaystyle 作用到所在公式的末尾，同一公式中后面的 \int 也按 display 排"""
+    def fix(m: re.Match) -> str:
+        s = m.group(0)
+        k = s.find("\\Int")
+        if k < 0:
+            return s
+        return s[:k] + re.sub(r"\\int(?![a-zA-Z])", r"\\Int", s[k:])
+    return re.sub(r"(?<!\\)\$[^$]+?(?<!\\)\$", fix, tex)
 
 
 def expand_volume6(tex: str) -> str:
@@ -1185,9 +1245,10 @@ def expand_volume6(tex: str) -> str:
     return tex
 # 各册专用、要直接写成 Typst 公式的命令（pandoc 会丢掉 \displaystyle、\limits）
 VOLUME_SLOTS = {
-    4: {"Lim": "limits(lim)"},   # \newcommand{\Lim}{\displaystyle\lim}：行内也把下标排在正下方
-    # 第六册：\Lim 同上；\newcommand{\Int}{\displaystyle\int}
-    6: {"Lim": "limits(lim)", "Int": "display(integral)"},
+    # \newcommand{\Lim}{\displaystyle\lim}：行内也把下标排在正下方；\arccot 写成 op，同 arcsin 等的间距
+    4: {"Lim": "limits(lim)", "arccot": 'op("arccot")'},
+    # 第六册：\Lim、\arccot 同上；\newcommand{\Int}{\displaystyle\int}；\arcsec
+    6: {"Lim": "limits(lim)", "Int": "display(integral)", "arccot": 'op("arccot")', "arcsec": 'op("arcsec")'},
 }
 
 
@@ -1196,10 +1257,10 @@ def convert(volume: int, chapter: int | str, src: Path) -> str:
     tex = src.read_text(encoding="utf-8")
     for name, ident in VOLUME_MACROS.get(volume, {}).items():
         tex = re.sub(r"\\%s(?![a-zA-Z])\s*" % name, lambda m, i=ident: conv.math_slot(i) + " ", tex)
-    for name, typ_ in VOLUME_SLOTS.get(volume, {}).items():
-        tex = re.sub(r"\\%s(?![a-zA-Z])\s*" % name, lambda m, t=typ_: conv.math_slot(t) + " ", tex)
     for item in VOLUME_TEX.get(volume, []):
         tex = item(tex) if callable(item) else re.sub(item[0], item[1], tex)
+    for name, typ_ in VOLUME_SLOTS.get(volume, {}).items():
+        tex = re.sub(r"\\%s(?![a-zA-Z])\s*" % name, lambda m, t=typ_: conv.math_slot(t) + " ", tex)
     tex = conv.preprocess(tex)
     typ = conv.postprocess(pandoc(MACROS + tex))
     # 插图沿用 LaTeX 版目录中的图片文件（编译时 --root 为仓库根目录）

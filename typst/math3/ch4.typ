@@ -355,9 +355,9 @@
 #solution[
 这函数的定义域为一切实数，$x$ 可取任意实数，如：
 
-取 $x = dots.h.c\,quad - 4\,quad - 3\,quad - 2\,quad - 1\,quad 0\,quad 1\,quad 2\,quad 3\,quad 4\,quad dots.h.c$
+取 $x = dots.h.c\,quad - 4\,quad - 3\,quad - 2\,quad - 1\,quad 0\,quad 1\,quad 2\,quad 3\,quad 4\,quad thin dots.h.c$
 
-计算 $y = dots.h.c\,quad 8\,quad 4.5\,quad 2\,quad 0.5\,quad 0\,quad 0.5\,quad 2\,quad 4.5\,quad 8\,quad dots.h.c$
+计算 $y = dots.h.c\,quad 8\,quad 4.5\,quad 2\,quad 0.5\,quad 0\,quad 0.5\,quad 2\,quad 4.5\,quad 8\,quad thin dots.h.c$
 
 得有序对 $\(x\,y\)$⁠：$dots.h.c\,quad\(- 4\,8\)$,#h(1em);$\(- 3\,4.5\)$,#h(1em);$\(- 2\,2\)$,#h(1em);$\(- 1\,0.5\)$,#h(1em);$\(0\,0\)$,#h(1em);$\(1\,0.5\)$,#h(1em);$\(2\,2\)$,#h(1em);$\(3\,4.5\)$,#h(1em);$\(4\,8\)\,quad dots.h.c$
 

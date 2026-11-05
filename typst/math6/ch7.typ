@@ -98,7 +98,7 @@
 #example[
 设 $f\(x\)= x^(- n) = 1 / x^n thick\(x eq.not 0\,thick n in bb(N)\)$⁠，则 $ G\(x\)= frac(x^(- n + 1), - n + 1) $ #noindent;是满足 $G'\(x\)= x^(- n)$ 的一个原函数．要特别注意定理2中 $f\(x\)$ 是连续的条件，在任何包含0的区间上，函数 $f\(x\)= 1 / x^n$ 无界，即有第二类间断点，如果 $a\,b$ 异号，则定积分 $display(integral)_a^b x^(- n) thin upright(d) x$ 无意义，但若 $a\,b$ 同时为正或同时为负，则 $ integral_a^b x^(- n) thin upright(d) x = frac(x^(- n + 1), - n + 1) class("normal", stretch(|, size: #3em))_a^b = frac(b^(- n + 1), - n + 1) - frac(a^(- n + 1), - n + 1) $ #noindent;当然，只有 $n eq.not 1$ 时，上式才能成立．
 
-如果 $n = 1$⁠，依复合函数求导法则，得 $ \(ln\|x\|\)' = frac(1, \|x\|) dot.op\|x\|' $ #noindent;若 $x > 0$⁠，则 $ \(ln\|x\|\)' = 1 / x dot.op 1 = 1 / x $ #noindent;若 $x < 0$⁠，则 $ \(ln\|x\|\)' = frac(1, - x) dot.op\(- 1\)= 1 / x $ #noindent;总之 $ \(ln\|x\|\)' = 1 / x\,quad\(x eq.not 0\) $ #noindent;因此 $ integral_a^b 1 / x thin upright(d) x = ln\|x\|class("normal", stretch(|, size: #3em))_a^b & = ln\|b\|- ln\|a\|\
+如果 $n = 1$⁠，依复合函数求导法则，得 $ \(ln thin \|x\|\)' = frac(1, \|x\|) dot.op\|x\|' $ #noindent;若 $x > 0$⁠，则 $ \(ln thin \|x\|\)' = 1 / x dot.op 1 = 1 / x $ #noindent;若 $x < 0$⁠，则 $ \(ln thin \|x\|\)' = frac(1, - x) dot.op\(- 1\)= 1 / x $ #noindent;总之 $ \(ln thin \|x\|\)' = 1 / x\,quad\(x eq.not 0\) $ #noindent;因此 $ integral_a^b 1 / x thin upright(d) x = ln thin \|x\|class("normal", stretch(|, size: #3em))_a^b & = ln thin \|b\|- ln thin \|a\|\
  & = ln lr(|b / a|) = ln b / a quad\(x eq.not 0\,thick a b > 0\) $
 
 ]
@@ -204,7 +204,7 @@ $ display(cases(upright(d)\[a f\(x\)\]= a thin upright(d) f\(x\), display(integr
 
 - $frac(thin upright(d), thin upright(d) x) x^mu = mu x^(mu - 1)\,#h(2em) display(integral) x^mu thin upright(d) x = frac(x^(mu + 1), mu + 1) + C quad upright("（") mu upright("是不等于") - 1 upright("的实数）")$
 
-- $frac(thin upright(d), thin upright(d) x) ln\|x\|= 1 / x\,#h(2em) display(integral) frac(thin upright(d) x, x) = ln\|x\|+ C quad\(x eq.not 0\)$
+- $frac(thin upright(d), thin upright(d) x) ln thin \|x\|= 1 / x\,#h(2em) display(integral) frac(thin upright(d) x, x) = ln thin \|x\|+ C quad\(x eq.not 0\)$
 
 - $frac(thin upright(d), thin upright(d) x) e^x = e^x\,#h(2em) display(integral) e^x thin upright(d) x = e^x + C$
 
@@ -226,7 +226,7 @@ $ display(cases(upright(d)\[a f\(x\)\]= a thin upright(d) f\(x\), display(integr
 
 - $frac(thin upright(d), thin upright(d) x) arctan x = frac(1, x^2 + 1)\,#h(2em) display(integral) frac(thin upright(d) x, x^2 + 1) = arctan x + C$
 
-  $frac(thin upright(d), thin upright(d) x) "arccot" x = frac(- 1, x^2 + 1)\,#h(2em) display(integral) frac(thin upright(d) x, x^2 + 1) = - "arccot" x + C'$
+  $frac(thin upright(d), thin upright(d) x) op("arccot") x = frac(- 1, x^2 + 1)\,#h(2em) display(integral) frac(thin upright(d) x, x^2 + 1) = - op("arccot") x + C'$
 
 现在来看不定积分的几何意义．
 
@@ -398,7 +398,7 @@ u = x / a arrow.r & = arcsin x / a + C $
 #solution[
 $ display(integral) tan x thin upright(d) x = display(integral) frac(sin x, cos x) thin upright(d) x & = - integral frac(thin upright(d) cos x, cos x)\
 u = cos x arrow.r & = - integral frac(thin upright(d) u, u)\
- & = - ln\|u\|+ C = - ln\|cos x\|+ C = ln\|sec x\|+ C $
+ & = - ln thin \|u\|+ C = - ln thin \|cos x\|+ C = ln thin \|sec x\|+ C $
 
 ]
 从上述两例看到，在求不定积分时，首先要与已知的基本积分公式相对比，并利用简单的变量代换，把要求的积分凑成公式所具有的形式，求出以后，再把原来的变量代回．以上变量代换中关键的一步是把原来的被积函数 $f\(x\)$ 的某部分 $phi\(x\)$ 换成中间变量 $u$, 那么原来的被积表达式 $f\(x\)thin upright(d) x$ 就拆成了 $g\[phi\(x\)\]= g\(u\)$ 和 $phi'\(x\)thin upright(d) x = thin upright(d) u$ 这两部分的乘积，即 $ f\(x\)thin upright(d) x = g\[phi\(x\)\]phi'\(x\)thin upright(d) x = g\(u\)thin upright(d) u $ #noindent;于是：若 $display(integral) g\(x\)thin upright(d) x = F\(x\)+ C$⁠，那么 $ integral g\[phi\(x\)\]phi'\(x\)thin upright(d) x = integral g\(u\)thin upright(d) u = F\(u\)+ C = F\[phi\(x\)\]+ C $ #noindent;上述换元法叫做第一换元法．
@@ -430,7 +430,7 @@ $ display(integral) frac(thin upright(d) x, sqrt(a x + b)) = 1 / a integral frac
 #solution[
 $ display(integral) frac(thin upright(d) x, a^2 - x^2) & = frac(1, 2 a) integral (frac(1, a - x) + frac(1, a + x)) thin upright(d) x\
  & = frac(1, 2 a) [- integral frac(thin upright(d)\(a - x\), a - x) + integral frac(thin upright(d)\(a + x\), a + x)]\
- & = frac(1, 2 a) [- ln \| a - x \| + ln \| a + x \|] = frac(1, 2 a) ln lr(|frac(a + x, a - x)|) + C $
+ & = frac(1, 2 a) [- ln thin \| a - x \| + ln thin \| a + x \|] = frac(1, 2 a) ln lr(|frac(a + x, a - x)|) + C $
 
 ]
 #example[
@@ -441,7 +441,7 @@ $ display(integral) frac(thin upright(d) x, a^2 - x^2) & = frac(1, 2 a) integral
 $ display(integral) sec x thin upright(d) x = integral frac(cos x, cos^2 x) thin upright(d) x = integral frac(thin upright(d)\(sin x\), 1 - sin^2 x) $ #noindent;利用上题结果，得：$ integral sec x thin upright(d) x & = 1 / 2 ln lr(|frac(1 + sin x, 1 - sin x)|) + C\
  & = 1 / 2 ln frac(1 + sin x, 1 - sin x) + C\
  & = 1 / 2 ln frac(\(1 + sin x\)^2, cos^2 x) + C\
- & = ln\|sec x + tan x\|+ C $
+ & = ln thin \|sec x + tan x\|+ C $
 
 ]
 #example[
@@ -542,7 +542,7 @@ $ display(integral) frac(1, sin^2 x + 3 cos^2 x) thin upright(d) x & = display(i
 thin upright(d) x & = 2 u thin upright(d) u $ #noindent;从而 $ display(integral) frac(1, 1 + sqrt(x)) thin upright(d) x & = integral frac(1, 1 + u) 2 u thin upright(d) u\
  & = 2 integral frac(\(1 + u\)- 1, 1 + u) thin upright(d) u\
  & = 2 [integral thin upright(d) u - integral frac(1, 1 + u) thin upright(d) u]\
- & = 2 [u - ln \| 1 + u \|] + C\
+ & = 2 [u - ln thin \| 1 + u \|] + C\
  & = 2 [sqrt(x) - ln (1 + sqrt(x))] + C $
 
 ]
@@ -572,7 +572,7 @@ x = phi\(u\)arrow.r & = f\(x\) $
 #solution[
 $ display(integral) frac(thin upright(d) x, sqrt(x) + root(3, x)) = integral frac(thin upright(d) x, (root(6, x))^3 + (root(6, x))^2) $ #noindent;设 $x = u^6$⁠，$u > 0$⁠，则可化去被积函数中的根号，于是 $ frac(1, sqrt(x) + root(3, x)) = frac(1, u^3 + u^2)\,#h(2em) thin upright(d) x = 6 u^5 thin upright(d) u $ #noindent;从而 $ display(integral) frac(thin upright(d) x, sqrt(x) + root(3, x)) & = integral frac(6 u^5, u^3 + u^2) thin upright(d) u = integral frac(6 u^3, u + 1) thin upright(d) u\
  & = 6 integral (u^2 - u + 1 - frac(1, u + 1)) thin upright(d) u\
- & = 6 lr(\{ u^3 / 3 - u^2 / 2 + u - ln \| u + 1 \| \}) + C\
+ & = 6 lr(\{ u^3 / 3 - u^2 / 2 + u - ln thin \| u + 1 \| \}) + C\
  & = 2 sqrt(x) - 3 root(3, x) + 6 root(6, x) - 6 ln (root(6, x) + 1) + C $
 
 ]
@@ -610,7 +610,7 @@ sqrt(a^2 - x^2) & = a sqrt(1 - (x / a)^2) = a sqrt(1 - sin^2 t) = a cos t $ #noi
 ]
 #solution[
 因为 $sqrt(a^2 + x^2) = a sqrt(1 + (x / a)^2)$⁠，设 $x / a = tan t thick (- pi / 2 < t < pi / 2)$⁠，则存在反函数 $ t = arctan x / a\,quad upright("且") quad thin upright(d) x = a sec^2 t thin upright(d) t $ #noindent;又 $sqrt(a^2 + x^2) = a sqrt(1 + tan^2 t) = a sec t$⁠，从而：$ display(integral) frac(thin upright(d) x, sqrt(a^2 + x^2)) & = integral frac(a sec^2 t thin upright(d) t, a sec t) = integral sec t thin upright(d) t\
- & = ln\|sec t + tan t\|+ C_1\
+ & = ln thin \|sec t + tan t\|+ C_1\
  & = ln lr(|1 / a sqrt(a^2 + x^2) + x / a|) + C_1\
  & = ln lr(|x + sqrt(a^2 + x^2)|) - ln a + C_1\
  & = ln lr(|x + sqrt(a^2 + x^2)|) + C #h(2em)\(C = C_1 - ln a\) $
@@ -625,16 +625,16 @@ sqrt(a^2 - x^2) & = a sqrt(1 - (x / a)^2) = a sqrt(1 - sin^2 t) = a cos t $ #noi
 #fig("7-05");
 
 ]
-作正割代换．设 $x = a sec t thick (0 < t < pi / 2)$⁠，此函数在 $t = pi / 2$ 点间断，在区间 $lr([0 \, pi / 2))$ 上由 $a$ 递增到 $+ oo$⁠，而在区间 $lr((pi / 2 \, pi])$ 上由 $- oo$ 递增到 $- a$⁠．因此，$x = a sec t$ 在 $lr([0 \, pi / 2))$ 上的反函数是 $ t = "arcsec" x / a quad (1 < x / a < oo \, thick upright("即") x > a) $ #noindent;于是，当 $x > a$ 时，有 $ sqrt(x^2 - a^2) & = sqrt(a^2 sec^2 t - a^2) = sqrt(a^2\(sec^2 t - 1\))\
+作正割代换．设 $x = a sec t thick (0 < t < pi / 2)$⁠，此函数在 $t = pi / 2$ 点间断，在区间 $lr([0 \, pi / 2))$ 上由 $a$ 递增到 $+ oo$⁠，而在区间 $lr((pi / 2 \, pi])$ 上由 $- oo$ 递增到 $- a$⁠．因此，$x = a sec t$ 在 $lr([0 \, pi / 2))$ 上的反函数是 $ t = op("arcsec") x / a quad (1 < x / a < oo \, thick upright("即") x > a) $ #noindent;于是，当 $x > a$ 时，有 $ sqrt(x^2 - a^2) & = sqrt(a^2 sec^2 t - a^2) = sqrt(a^2\(sec^2 t - 1\))\
  & = a sqrt(tan^2 t) = a\|tan t\|\
  & = a tan t quad (0 lt.eq t < pi / 2) $ $ thin upright(d) x = thin upright(d)\(a sec t\)= a frac(sin t, cos^2 t) thin upright(d) t $ #noindent;从而：$ display(integral) 1 / sqrt(x^2 - a^2) thin upright(d) x & = integral frac(1, a tan t) dot.op frac(a sin t, cos^2 t) thin upright(d) t\
- & = integral frac(1, cos t) thin upright(d) t = ln\|sec t + tan t\|+ C_1\
+ & = integral frac(1, cos t) thin upright(d) t = ln thin \|sec t + tan t\|+ C_1\
  & = ln lr(|x / a + sqrt(x^2 - a^2) / a|) + C_1\
  & = ln lr(|x + sqrt(x^2 - a^2)|) + C_1 - ln a = ln lr(|x + sqrt(x^2 - a^2)|) + C $ #noindent;其中 $C = C_1 - ln a$.
 
-又函数 $x = a sec t$ 在 $lr((pi / 2 \, pi])$ 上的反函数是 $ t = "arcsec" x / a quad (- oo < x / a < - 1 \, thick upright("即") x < - a) $ #noindent;于是，当 $x < - a$ 时，有 $ sqrt(x^2 - a^2) = a sqrt(tan^2 t) = a\|tan t\|= - a tan t quad (pi / 2 < t lt.eq pi)\
+又函数 $x = a sec t$ 在 $lr((pi / 2 \, pi])$ 上的反函数是 $ t = op("arcsec") x / a quad (- oo < x / a < - 1 \, thick upright("即") x < - a) $ #noindent;于是，当 $x < - a$ 时，有 $ sqrt(x^2 - a^2) = a sqrt(tan^2 t) = a\|tan t\|= - a tan t quad (pi / 2 < t lt.eq pi)\
 thin upright(d) x = thin upright(d)\(a sec t\)= a frac(sin t, cos^2 t) dot.op thin upright(d) t $ $ display(integral) 1 / sqrt(x^2 - a^2) thin upright(d) x & = integral - frac(1, a tan t) dot.op frac(a sin t, cos^2 t) thin upright(d) t\
- & = - integral frac(1, cos t) thin upright(d) t = - ln\|sec t + tan t\|+ C_2\
+ & = - integral frac(1, cos t) thin upright(d) t = - ln thin \|sec t + tan t\|+ C_2\
  & = - ln lr(|x / a - sqrt(x^2 - a^2) / a|) + C_2\
  & = - ln lr(|x - sqrt(x^2 - a^2)|) + C_2 + ln a\
  & = ln lr(|frac(1, x - sqrt(x^2 - a^2))|) + C' #h(2em)\(C' = C_2 + ln a\)\
@@ -845,7 +845,7 @@ $therefore quad frac(1, x^4 - 1) = frac(A, x - 1) + frac(B, x + 1) + frac(C x + 
 设 $frac(3 x^2 + x - 2, \(x - 2\)^2\(1 - 2 x\)) = frac(A, 1 - 2 x) + frac(B, x - 2) + frac(C, \(x - 2\)^2)$⁠，则 $ 3 x^2 + x - 2 = A\(x - 2\)^2 + B\(1 - 2 x\)\(x - 2\)+ C\(1 - 2 x\) $
 
 令 $1 - 2 x = 0$⁠，则 $A = - 1 / 3$⁠；令 $x - 2 = 0$⁠，则 $C = - 4$. 比较等式两端 $x^2$ 的系数，得 $ 3 = A - 2 B quad arrow.r.double quad B = - 5 / 3 $ #noindent;所以 $ frac(3 x^2 + x - 2, \(x - 2\)^2\(1 - 2 x\)) = - frac(1, 3\(1 - 2 x\)) - frac(5, 3\(x - 2\)) - frac(4, \(x - 2\)^2) $ #noindent;从而 $ integral frac(3 x^2 + x - 2, \(x - 2\)^2\(1 - 2 x\)) thin upright(d) x & = 1 / 6 integral frac(thin upright(d) x, x - 1 / 2) - 5 / 3 integral frac(thin upright(d) x, x - 2) - 4 integral frac(thin upright(d) x, \(x - 2\)^2)\
- & = 1 / 6 ln lr(|x - 1 / 2|) - 5 / 3 ln\|x - 2\|+ frac(4, x - 2) + C $
+ & = 1 / 6 ln lr(|x - 1 / 2|) - 5 / 3 ln thin \|x - 2\|+ frac(4, x - 2) + C $
 
 ]
 三角函数有理式的积分 $ integral R\(sin x\,cos x\)thin upright(d) x $ #noindent;恒可用“半角变换”法，即设 $t = tan x / 2$ 或 $x = 2 arctan t$ 化为 $t$ 的有理函数的积分．
@@ -859,7 +859,7 @@ cos x & = frac(cos^2 x / 2 - sin^2 x / 2, sin^2 x / 2 + cos^2 x / 2) = frac(1 - 
 ]
 #solution[
 令 $t = tan theta / 2$⁠，则：$theta = 2 arctan t\,quad thin upright(d) theta = frac(2 thin upright(d) t, 1 + t^2)$⁠，从而：$ integral frac(thin upright(d) theta, sin theta) = integral frac(1 + t^2, 2 t) dot.op frac(2 thin upright(d) t, 1 + t^2) & = integral frac(thin upright(d) t, t)\
- & = ln\|t\|+ C = ln lr(|tan theta / 2|) + C $ #noindent;又 $tan theta / 2 = frac(sin theta / 2, cos theta / 2) = frac(2 sin^2 theta / 2, 2 sin theta / 2 cos theta / 2) = frac(1 - cos theta, sin theta) = csc theta - cot theta$⁠，所以 $ integral frac(thin upright(d) theta, sin theta) = ln lr(|tan theta / 2|) + C = ln\|csc theta - cot theta\|+ C $
+ & = ln thin \|t\|+ C = ln lr(|tan theta / 2|) + C $ #noindent;又 $tan theta / 2 = frac(sin theta / 2, cos theta / 2) = frac(2 sin^2 theta / 2, 2 sin theta / 2 cos theta / 2) = frac(1 - cos theta, sin theta) = csc theta - cot theta$⁠，所以 $ integral frac(thin upright(d) theta, sin theta) = ln lr(|tan theta / 2|) + C = ln thin \|csc theta - cot theta\|+ C $
 
 ]
 #example[
@@ -941,8 +941,8 @@ cos x & = frac(cos^2 x / 2 - sin^2 x / 2, sin^2 x / 2 + cos^2 x / 2) = frac(1 - 
 
 ]
 #solution[
-$ display(integral) x^2 e^(2 x) thin upright(d) x = integral x^2 thin upright(d) (e^(2 x) / 2) & = frac(x^2 e^(2 x), 2) - integral e^(2 x) / 2 thin upright(d)\(x^2\)\
- & = frac(x^2 e^(2 x), 2) - integral x e^(2 x) thin upright(d) x = frac(x^2 e^(2 x), 2) - (frac(x e^(2 x), 2) - integral e^(2 x) / 2 thin upright(d) x)\
+$ display(integral) x^2 e^(2 x) thin upright(d) x = display(integral) x^2 thin upright(d) (e^(2 x) / 2) & = frac(x^2 e^(2 x), 2) - display(integral) e^(2 x) / 2 thin upright(d)\(x^2\)\
+ & = frac(x^2 e^(2 x), 2) - display(integral) x e^(2 x) thin upright(d) x = frac(x^2 e^(2 x), 2) - (frac(x e^(2 x), 2) - display(integral) e^(2 x) / 2 thin upright(d) x)\
  & = x^2 / 2 e^(2 x) - x / 2 e^(2 x) + e^(2 x) / 4 + C\
  & = e^(2 x) (x^2 / 2 - x / 2 + 1 / 4) + C $
 
@@ -956,9 +956,9 @@ $ display(integral) x^2 e^(2 x) thin upright(d) x = integral x^2 thin upright(d)
 
 ]
 #solution[
-$ display(integral) x arctan x thin upright(d) x = integral arctan x thin upright(d) (x^2 / 2) & = frac(x^2 arctan x, 2) - integral x^2 / 2 thin upright(d)\(arctan x\)\
- & = frac(x^2 arctan x, 2) - 1 / 2 integral frac(x^2, 1 + x^2) thin upright(d) x\
- & = frac(x^2 arctan x, 2) - 1 / 2 integral (1 - frac(1, 1 + x^2)) thin upright(d) x\
+$ display(integral) x arctan x thin upright(d) x = display(integral) arctan x thin upright(d) (x^2 / 2) & = frac(x^2 arctan x, 2) - display(integral) x^2 / 2 thin upright(d)\(arctan x\)\
+ & = frac(x^2 arctan x, 2) - 1 / 2 display(integral) frac(x^2, 1 + x^2) thin upright(d) x\
+ & = frac(x^2 arctan x, 2) - 1 / 2 display(integral) (1 - frac(1, 1 + x^2)) thin upright(d) x\
  & = frac(x^2 arctan x, 2) - 1 / 2 x + 1 / 2 arctan x + C $
 
 ]
@@ -967,8 +967,8 @@ $ display(integral) x arctan x thin upright(d) x = integral arctan x thin uprigh
 
 ]
 #solution[
-$ display(integral) x^3 ln x thin upright(d) x = integral ln x thin upright(d) (x^4 / 4) & = x^4 / 4 ln x - integral x^4 / 4 thin upright(d)\(ln x\)\
- & = x^4 / 4 ln x - integral x^4 / 4 dot.op 1 / x thin upright(d) x\
+$ display(integral) x^3 ln x thin upright(d) x = display(integral) ln x thin upright(d) (x^4 / 4) & = x^4 / 4 ln x - display(integral) x^4 / 4 thin upright(d)\(ln x\)\
+ & = x^4 / 4 ln x - display(integral) x^4 / 4 dot.op 1 / x thin upright(d) x\
  & = x^4 / 4 ln x - x^4 / 16 + C $
 
 ]
@@ -981,12 +981,12 @@ $ display(integral) x^3 ln x thin upright(d) x = integral ln x thin upright(d) (
 
 ]
 #solution[
-$ display(integral) arcsin x thin upright(d) x = x arcsin x - integral x thin upright(d)\(arcsin x\) & = x arcsin x - integral x / sqrt(1 - x^2) thin upright(d) x\
- & = x arcsin x + 1 / 2 integral frac(thin upright(d)\(1 - x^2\), sqrt(1 - x^2))\
+$ display(integral) arcsin x thin upright(d) x = x arcsin x - display(integral) x thin upright(d)\(arcsin x\) & = x arcsin x - display(integral) x / sqrt(1 - x^2) thin upright(d) x\
+ & = x arcsin x + 1 / 2 display(integral) frac(thin upright(d)\(1 - x^2\), sqrt(1 - x^2))\
  & = x arcsin x + 1 / 2 dot.op 2 sqrt(1 - x^2) + C\
  & = x arcsin x + sqrt(1 - x^2) + C $
 
-另解：设 $y = arcsin x\,thick - 1 lt.eq x lt.eq 1$⁠，则 $sin y = x\,thick - pi / 2 lt.eq y lt.eq pi / 2$ $ display(integral) arcsin x thin upright(d) x = x arcsin x - integral x thin upright(d)\(arcsin x\) & = y sin y - integral sin y thin upright(d) y\
+另解：设 $y = arcsin x\,thick - 1 lt.eq x lt.eq 1$⁠，则 $sin y = x\,thick - pi / 2 lt.eq y lt.eq pi / 2$ $ display(integral) arcsin x thin upright(d) x = x arcsin x - display(integral) x thin upright(d)\(arcsin x\) & = y sin y - display(integral) sin y thin upright(d) y\
  & = y sin y + cos y + C\
  & = x arcsin x + sqrt(1 - sin^2 y) + C\
  & = x arcsin x + sqrt(1 - x^2) + C $
@@ -997,10 +997,10 @@ $ display(integral) arcsin x thin upright(d) x = x arcsin x - integral x thin up
 
 ]
 #solution[
-$ display(integral) ln^2 x thin upright(d) x = x\(ln x\)^2 - integral x thin upright(d)\(ln^2 x\) & = x\(ln x\)^2 - integral x dot.op 2 ln x dot.op 1 / x thin upright(d) x\
- & = x\(ln x\)^2 - 2 integral ln x thin upright(d) x\
- & = x\(ln x\)^2 - 2 [x ln x - integral x thin upright(d) \( ln x \)]\
- & = x\(ln x\)^2 - 2 x ln x + 2 integral thin upright(d) x\
+$ display(integral) ln^2 x thin upright(d) x = x\(ln x\)^2 - display(integral) x thin upright(d)\(ln^2 x\) & = x\(ln x\)^2 - display(integral) x dot.op 2 ln x dot.op 1 / x thin upright(d) x\
+ & = x\(ln x\)^2 - 2 display(integral) ln x thin upright(d) x\
+ & = x\(ln x\)^2 - 2 [x ln x - display(integral) x thin upright(d) \( ln x \)]\
+ & = x\(ln x\)^2 - 2 x ln x + 2 display(integral) thin upright(d) x\
  & = x\(ln x\)^2 - 2 x ln x + 2 x + C $
 
 ]
@@ -1013,12 +1013,12 @@ $ display(integral) ln^2 x thin upright(d) x = x\(ln x\)^2 - integral x thin upr
 
 ]
 #solution[
-$ I = display(integral) e^(a x) sin b x thin upright(d) x & = integral sin b x thin upright(d) (e^(a x) / a)\
- & = sin b x dot.op e^(a x) / a - integral e^(a x) / a thin upright(d)\(sin b x\)\
- & = sin b x dot.op e^(a x) / a - integral e^(a x) / a b cos b x thin upright(d) x\
- & = sin b x dot.op e^(a x) / a - b / a integral cos b x thin upright(d) (e^(a x) / a)\
- & = sin b x dot.op e^(a x) / a - b / a [cos b x dot.op e^(a x) / a - integral e^(a x) / a thin upright(d) (cos b x)]\
- & = sin b x dot.op e^(a x) / a - b / a^2 cos b x dot.op e^(a x) - b^2 / a^2 integral e^(a x) sin b x thin upright(d) x\
+$ I = display(integral) e^(a x) sin b x thin upright(d) x & = display(integral) sin b x thin upright(d) (e^(a x) / a)\
+ & = sin b x dot.op e^(a x) / a - display(integral) e^(a x) / a thin upright(d)\(sin b x\)\
+ & = sin b x dot.op e^(a x) / a - display(integral) e^(a x) / a b cos b x thin upright(d) x\
+ & = sin b x dot.op e^(a x) / a - b / a display(integral) cos b x thin upright(d) (e^(a x) / a)\
+ & = sin b x dot.op e^(a x) / a - b / a [cos b x dot.op e^(a x) / a - display(integral) e^(a x) / a thin upright(d) (cos b x)]\
+ & = sin b x dot.op e^(a x) / a - b / a^2 cos b x dot.op e^(a x) - b^2 / a^2 display(integral) e^(a x) sin b x thin upright(d) x\
  & = sin b x dot.op e^(a x) / a - b / a^2 cos b x dot.op e^(a x) - b^2 / a^2 I $ #noindent;所以：$ I (1 + b^2 / a^2) & = 1 / a sin b x dot.op e^(a x) - b / a^2 cos b x dot.op e^(a x)\
 I & = frac(e^(a x)\(a sin b x - b cos b x\), a^2 + b^2) + C $
 
@@ -1146,7 +1146,7 @@ $ I = integral sqrt(a^2 + x^2) thin upright(d) x & = x sqrt(a^2 + x^2) - integra
 
 ]
 #solution[
-作代换 $x = a sin t$⁠，当 $x$ 从0变到 $a$ 时，相应地 $t$ 自0变到 $pi / 2$⁠，于是 $ display(integral)_0^a sqrt(a^2 - x^2) thin upright(d) x = a^2 integral_0^(tfrac(pi, 2)) cos^2 t thin upright(d) t & = a^2 integral_0^(tfrac(pi, 2)) frac(1 + cos 2 t, 2) thin upright(d) t\
+作代换 $x = a sin t$⁠，当 $x$ 从0变到 $a$ 时，相应地 $t$ 自0变到 $pi / 2$⁠，于是 $ display(integral)_0^a sqrt(a^2 - x^2) thin upright(d) x = a^2 display(integral)_0^(tfrac(pi, 2)) cos^2 t thin upright(d) t & = a^2 display(integral)_0^(tfrac(pi, 2)) frac(1 + cos 2 t, 2) thin upright(d) t\
  & = a^2 / 2 (t + 1 / 2 sin 2 t) class("normal", stretch(|, size: #3em))_0^(tfrac(pi, 2)) = frac(pi a^2, 4) $
 
 ]
@@ -1155,7 +1155,7 @@ $ I = integral sqrt(a^2 + x^2) thin upright(d) x & = x sqrt(a^2 + x^2) - integra
 
 ]
 #solution[
-设 $x = u^2$⁠，于是 $ frac(1, 1 + sqrt(x)) = frac(1, 1 + u)\,#h(2em) thin upright(d) x = 2 u thin upright(d) u $ #noindent;定限：当 $x = 0$ 时，从变换 $sqrt(x) = u$ 中解出 $u = 0$⁠；当 $x = 4$ 时，解出 $u = 2$. 于是 $ display(integral)_0^4 frac(1, 1 + sqrt(x)) thin upright(d) x = integral_0^2 frac(1, 1 + u) dot.op 2 u thin upright(d) u & = 2 integral_0^2 (1 - frac(1, 1 + u)) thin upright(d) u\
+设 $x = u^2$⁠，于是 $ frac(1, 1 + sqrt(x)) = frac(1, 1 + u)\,#h(2em) thin upright(d) x = 2 u thin upright(d) u $ #noindent;定限：当 $x = 0$ 时，从变换 $sqrt(x) = u$ 中解出 $u = 0$⁠；当 $x = 4$ 时，解出 $u = 2$. 于是 $ display(integral)_0^4 frac(1, 1 + sqrt(x)) thin upright(d) x = display(integral)_0^2 frac(1, 1 + u) dot.op 2 u thin upright(d) u & = 2 display(integral)_0^2 (1 - frac(1, 1 + u)) thin upright(d) u\
  & = 2 [u - ln \( 1 + u \)] class("normal", stretch(|, size: #1.8em))_0^2 = 2\(2 - ln 3\) $
 
 ]
@@ -1164,8 +1164,8 @@ $ I = integral sqrt(a^2 + x^2) thin upright(d) x & = x sqrt(a^2 + x^2) - integra
 
 ]
 #proof[
-设 $x = a - t$⁠，则 $thin upright(d) x = - thin upright(d) t$⁠，且当 $x = 0$ 时，$t = a$⁠；当 $x = a$ 时，$t = 0$. 于是：$ display(integral)_0^a f\(x\)thin upright(d) x = integral_a^0 f\(a - t\)\(- thin upright(d) t\) & = - integral_a^0 f\(a - t\)thin upright(d) t\
- & = integral_0^a f\(a - t\)thin upright(d) t = display(integral)_0^a f\(a - x\)thin upright(d) x $
+设 $x = a - t$⁠，则 $thin upright(d) x = - thin upright(d) t$⁠，且当 $x = 0$ 时，$t = a$⁠；当 $x = a$ 时，$t = 0$. 于是：$ display(integral)_0^a f\(x\)thin upright(d) x = display(integral)_a^0 f\(a - t\)\(- thin upright(d) t\) & = - display(integral)_a^0 f\(a - t\)thin upright(d) t\
+ & = display(integral)_0^a f\(a - t\)thin upright(d) t = display(integral)_0^a f\(a - x\)thin upright(d) x $
 
 ]
 我们在第三节曾指出，使用第二种变量代换时，要注意条件是否满足，否则会出现矛盾，这里举一反例．
@@ -1189,9 +1189,9 @@ $ I = integral sqrt(a^2 + x^2) thin upright(d) x & = x sqrt(a^2 + x^2) - integra
 
 ]
 #solution[
-因为 $\|arctan x\|$ 是偶函数，所以 $ I = display(integral)_(- sqrt(3))^(sqrt(3))\|arctan x\|thin upright(d) x = 2 display(integral)_0^(sqrt(3))\|arctan x\|thin upright(d) x = 2 display(integral)_0^(sqrt(3)) arctan x thin upright(d) x $ #noindent;设 $u\(x\)= arctan x$, $v'\(x\)= 1$, 则 $v\(x\)= x$⁠，利用分部积分公式，得到：$ I = 2 display(integral)_0^(sqrt(3)) arctan x thin upright(d) x & = 2 [x arctan x class("normal", stretch(|, size: #1.8em))_0^(sqrt(3)) - integral_0^(sqrt(3)) x thin upright(d) \( arctan x \)]\
- & = 2 [sqrt(3) arctan sqrt(3) - integral_0^(sqrt(3)) x dot.op frac(1, 1 + x^2) thin upright(d) x]\
- & = 2 sqrt(3) dot.op pi / 3 - integral_0^(sqrt(3)) frac(thin upright(d)\(1 + x^2\), 1 + x^2)\
+因为 $\|arctan x\|$ 是偶函数，所以 $ I = display(integral)_(- sqrt(3))^(sqrt(3))\|arctan x\|thin upright(d) x = 2 display(integral)_0^(sqrt(3))\|arctan x\|thin upright(d) x = 2 display(integral)_0^(sqrt(3)) arctan x thin upright(d) x $ #noindent;设 $u\(x\)= arctan x$, $v'\(x\)= 1$, 则 $v\(x\)= x$⁠，利用分部积分公式，得到：$ I = 2 display(integral)_0^(sqrt(3)) arctan x thin upright(d) x & = 2 [x arctan x class("normal", stretch(|, size: #1.8em))_0^(sqrt(3)) - display(integral)_0^(sqrt(3)) x thin upright(d) \( arctan x \)]\
+ & = 2 [sqrt(3) arctan sqrt(3) - display(integral)_0^(sqrt(3)) x dot.op frac(1, 1 + x^2) thin upright(d) x]\
+ & = 2 sqrt(3) dot.op pi / 3 - display(integral)_0^(sqrt(3)) frac(thin upright(d)\(1 + x^2\), 1 + x^2)\
  & = frac(2 sqrt(3), 3) pi - ln\(1 + x^2\)class("normal", stretch(|, size: #1.8em))_0^(sqrt(3)) = frac(2 sqrt(3), 3) pi - ln 4 $
 
 ]
@@ -1203,9 +1203,9 @@ $ I = integral sqrt(a^2 + x^2) thin upright(d) x & = x sqrt(a^2 + x^2) - integra
 设 $I_n = display(integral)_0^(tfrac(pi, 2)) sin^n theta thin upright(d) theta$⁠，利用例4.42的结果，得到：$ n I_n = [- cos theta sin^(n - 1) theta] class("normal", stretch(|, size: #1.8em))_0^(tfrac(pi, 2)) +\(n - 1\)I_(n - 2) $ #noindent;因为方括号的式子对于积分上，下限的值等于零，所以上面等式化简为 $ I_n = frac(n - 1, n) I_(n - 2) $ #noindent;分别考虑 $n$ 是偶数和奇数两种情况：
 
 + 若 $n$ 是偶数，那么 $ I_n = frac(n - 1, n) I_(n - 2) & = frac(n - 1, n) dot.op frac(n - 3, n - 2) I_(n - 4)\
-   & = dots.h.c = frac(n - 1, n) dot.op frac(n - 3, n - 2) dot.op frac(n - 5, n - 4) dots.h.c 1 / 2 I_0 $ #noindent;此处 $I_0 = display(integral)_0^(tfrac(pi, 2)) 1 dot.op thin upright(d) theta = pi / 2$⁠，所以 $ I_n = frac(\(n - 1\)\(n - 3\)dots.h.c 3 dot.op 1, n\(n - 2\)dots.h.c 4 dot.op 2) dot.op pi / 2 $
+   & = dots.h.c = frac(n - 1, n) dot.op frac(n - 3, n - 2) dot.op frac(n - 5, n - 4) thin dots.h.c thin 1 / 2 I_0 $ #noindent;此处 $I_0 = display(integral)_0^(tfrac(pi, 2)) 1 dot.op thin upright(d) theta = pi / 2$⁠，所以 $ I_n = frac(\(n - 1\)\(n - 3\) thin dots.h.c thin 3 dot.op 1, n\(n - 2\) thin dots.h.c thin 4 dot.op 2) dot.op pi / 2 $
 
-+ 若 $n$ 是奇数，由于 $ I_1 = display(integral)_0^(tfrac(pi, 2)) sin theta thin upright(d) theta =\(- cos theta\)class("normal", stretch(|, size: #1.8em))_0^(tfrac(pi, 2)) = 1 $ #noindent;所以 $ I_n = frac(\(n - 1\)\(n - 3\)dots.h.c 4 dot.op 2, n\(n - 2\)dots.h.c 5 dot.op 3) $
++ 若 $n$ 是奇数，由于 $ I_1 = display(integral)_0^(tfrac(pi, 2)) sin theta thin upright(d) theta =\(- cos theta\)class("normal", stretch(|, size: #1.8em))_0^(tfrac(pi, 2)) = 1 $ #noindent;所以 $ I_n = frac(\(n - 1\)\(n - 3\) thin dots.h.c thin 4 dot.op 2, n\(n - 2\) thin dots.h.c thin 5 dot.op 3) $
 
 ]
 #exercise[
@@ -1427,13 +1427,13 @@ $P$ 点是位于曲线 $y = x^2$ 上的动点，从原点 $O$ 向点 $A\(1\,1\)$
   ]
 )
 
-+ 分 $\[a\,b\]$ 为 $n$ 份，其分点 $ a = x_0 < x_1 < x_2 < dots.h.c < x_n = b $ #noindent;记 $parallel P_n parallel = max\(x_i - x_(i - 1)\)quad i = 1\,2\,dots.h\,n$.
++ 分 $\[a\,b\]$ 为 $n$ 份，其分点 $ a = x_0 < x_1 < x_2 < dots.h.c < x_n = b $ #noindent;记 $"‖" P_n "‖" = max\(x_i - x_(i - 1)\)quad i = 1\,2\,dots.h\,n$.
 
   以平面 $x = x_i\,thick i = 0\,1\,2\,dots.h\,n$ 截此立体为 $n$ 个小单元，于是整个体积被看作这 $n$ 个小单元的和．
 
 + 求阶梯函数的总和作为所求立体体积的近似和．考虑这样一个单元，它介于两个截面 $x = x_(i - 1)\,x = x_i$ 之间，于是以 $\(x_i - x_(i - 1)\)$ 为高，以 $A\(x_(i - 1)\)$ 作为底面积的直棱柱的体积是 $ A\(x_(i - 1)\)\(x_i - x_(i - 1)\) $ #noindent;于是，我们得到所求的体积 $V$ 的近似表达式 $ sum_(i = 1)^n A\(x_(i - 1)\)\(x_i - x_(i - 1)\) $
 
-+ 对和取极限：当断面无限增加，$parallel P_n parallel arrow.r 0$ 时，有 $ V = lim_(n arrow.r oo) sum_(i = 1)^n A\(x_(i - 1)\)\(x_i - x_(i - 1)\)= integral_a^b A\(x\)thin upright(d) x $
++ 对和取极限：当断面无限增加，$"‖" P_n "‖" arrow.r 0$ 时，有 $ V = lim_(n arrow.r oo) sum_(i = 1)^n A\(x_(i - 1)\)\(x_i - x_(i - 1)\)= integral_a^b A\(x\)thin upright(d) x $
 
 现在将上面的讨论总结为下面的定理．
 

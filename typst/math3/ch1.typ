@@ -18,7 +18,7 @@
 我们来回忆一下正整数指数幂的定义：
 
 #blk[定义1][
-$a^n = overbrace(a dot.op a dots.h.c a, n upright("个"))$（$n$ 是大于1的正整数），其中 $a$ 称为#strong[底数]，$n$ 称为#strong[指数]，$a^n$ 称为以 $a$ 为底数、$n$ 为指数的#strong[幂]．当 $n = 1$ 时，规定 $a^1 = a$⁠．
+$a^n = overbrace(a dot.op a thin dots.h.c thin a, n upright("个"))$（$n$ 是大于1的正整数），其中 $a$ 称为#strong[底数]，$n$ 称为#strong[指数]，$a^n$ 称为以 $a$ 为底数、$n$ 为指数的#strong[幂]．当 $n = 1$ 时，规定 $a^1 = a$⁠．
 
 ]
 在定义1中，对于底数 $a$⁠，没有任何限制，$a$ 可以是正数，也可以是负数，也可以是零；而指数 $n$⁠，必须是正整数，否则定义1就无意义！这样，我们称按定义1定义的 $a^n$ 为正整数指数幂．
@@ -376,7 +376,7 @@ $therefore quad a^m dot.op a^n = a^(m + n)$ 成立．
 
 ]
 #blk[推论][
-$ root(n, a_1 a_2 dots.h.c a_n) = root(n, a_1) dot.op root(n, a_2) dots.h.c root(n, a_n) $
+$ root(n, a_1 a_2 thin dots.h.c thin a_n) = root(n, a_1) dot.op root(n, a_2) thin dots.h.c thin root(n, a_n) $
 
 ]
 例如：$ root(3, 60 times 18 times 25) & = root(3, \(2^2 times 3 times 5\)\(2 times 3^2\)\(5^2\))\
@@ -388,7 +388,7 @@ $ root(n, a_1 a_2 dots.h.c a_n) = root(n, a_1) dot.op root(n, a_2) dots.h.c root
 
 ]
 #proof[
-由性质1的推论得，$ root(n, a^m) = underbrace(root(n, a dot.op a dots.h.c a), m upright("个")) = underbrace(root(n, a) dots.h.c root(n, a), m upright("个")) = (root(n, a))^m $
+由性质1的推论得，$ root(n, a^m) = underbrace(root(n, a dot.op a thin dots.h.c thin a), m upright("个")) = underbrace(root(n, a) thin dots.h.c thin root(n, a), m upright("个")) = (root(n, a))^m $
 
 ]
 #blk[性质3：商的开方法则][
@@ -2531,7 +2531,7 @@ s - a = 9.94\,#h(2em) s - b = 3.89\,#h(2em) s - c = 11.48 $ #noindent;因此：$
 ]
 #solution[
 设 $A =\(- 2.31\)^3 times root(5, 0.072) = - 2.31^3 times root(5, 0.072)$⁠，那么 $ \|A\| & = 2.31^3 times root(5, 0.072)\
-lg\|A\| & = 3 lg 2.31 + 1 / 5 lg 0.072\
+lg thin \|A\| & = 3 lg 2.31 + 1 / 5 lg 0.072\
  & = 3 times 0.3636 + 1 / 5 times macron(2) .8573\
  & = 1.0908 + 1 / 5\(- 5 + 3.8573\)\
  & = 1.0908 + macron(1) .7715\
@@ -2572,7 +2572,7 @@ $ lg c_2 & = lg 62.24 + lg sin 6 degree 10' - lg sin 27 degree 18'\
 t = 1\, & quad y_1 = 10 + 10 times 1.1 % = 10\(1 + 1.1 %\)\
 t = 2\, & quad y_2 = y_1 + y_1 times 1.1 % = y_1\(1 + 1.1 %\)= 10\(1 + 1.1 %\)^2\
 t = 3\, & quad y_3 = y_2 + y_2 times 1.1 % = y_2\(1 + 1.1 %\)= 10\(1 + 1.1 %\)^3\
-dots.h.c & #h(2em) dots.h.c dots.h.c dots.h.c\
+dots.h.c & #h(2em) thin dots.h.c thin dots.h.c thin dots.h.c\
 t = t\, & quad y_t = 10\(1 + 1.1 %\)^t $
 
 设 $t$ 年后的人口数比现在增加一倍，依题意，$t$ 满足下面的指数方程：$ 10 times\(1.011\)^t = 20 $ #noindent;即：$1.011^t = 2$⁠．

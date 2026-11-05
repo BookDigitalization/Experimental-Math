@@ -185,7 +185,7 @@ def num(expr: str, unit: float = 1.0) -> float:
 
 # ---------------------------------------------------------------- 几何
 
-PLOT_KEYS = {"smooth", "tension", "domain", "samples", "variable"}
+PLOT_KEYS = {"smooth", "smooth cycle", "tension", "domain", "samples", "variable"}
 
 
 def simplify_polyline(pts, eps: float = 0.002):
@@ -375,9 +375,10 @@ class Style:
         self.node = {}            # every node 的样式
         self.font = None
         self.decorate = False     # decorate 选项（decoration= 只有和它一起才起作用）
+        self.rounded = None       # rounded corners 的半径（cm），None 为尖角
         self.decoration = {}      # decoration={coil, segment length=4pt, …}
         # plot 的参数（TikZ 默认 domain=-5:5、samples=25、变量 \x）
-        self.plot = {"domain": (-5.0, 5.0), "samples": 25, "var": r"\x", "smooth": False, "tension": 0.55}
+        self.plot = {"domain": (-5.0, 5.0), "samples": 25, "var": r"\x", "smooth": False, "cycle": False, "tension": 0.55}
 
     def copy(self) -> "Style":
         s = Style()
@@ -584,9 +585,15 @@ class Picture:
                     style.color = parse_color(k)
                 elif k == "smooth":
                     style.plot["smooth"] = True
+                elif k == "smooth cycle":
+                    style.plot["smooth"] = style.plot["cycle"] = True
                 elif k == "decorate":
                     style.decorate = True
-                elif k in ("rounded corners", "sharp corners", "line cap=round", "transform shape"):
+                elif k == "rounded corners":
+                    style.rounded = num(v) if v else num("4pt")
+                elif k == "sharp corners":
+                    style.rounded = None
+                elif k in ("line cap=round", "transform shape"):
                     pass
                 else:
                     self.notes.append("忽略选项 " + k)
@@ -675,7 +682,9 @@ class Picture:
                 style.plot["var"] = v.strip()
             elif k == "tension":
                 style.plot["tension"] = num(v)
-            elif k in ("baseline", "inner sep", "outer sep", "rounded corners", "ball color", "every node/.append style",
+            elif k == "rounded corners":
+                style.rounded = num(v) if v else num("4pt")
+            elif k in ("baseline", "inner sep", "outer sep", "ball color", "every node/.append style",
                        "postaction", "mark"):
                 if k == "ball color":
                     col = parse_color(v) or (.5, .5, .5)
@@ -1445,6 +1454,17 @@ class PathBuilder:
             return
         if not connect or self.cur is None:
             self.start = pts[0]
+        if ps["smooth"] and ps.get("cycle") and len(pts) >= 3:
+            # smooth cycle：光滑的闭合曲线，前后点按循环取，最后一段连回起点
+            c = ps["tension"] / 3
+            n = len(pts)
+            for k in range(n):
+                p0, p1 = pts[k], pts[(k + 1) % n]
+                prev, nxt = pts[k - 1], pts[(k + 2) % n]
+                self.pieces.append(("bezier", p0, add(p0, mul(sub(p1, prev), c)), sub(p1, mul(sub(nxt, p0), c)), p1))
+            self.close_sub(True)
+            self.cur = None
+            return
         if ps["smooth"] and len(pts) >= 3:
             # TikZ 的 smooth：过各点的三次曲线，控制点沿前后两点连线方向，长度按 tension
             c = ps["tension"] / 3
@@ -1571,6 +1591,26 @@ class PathBuilder:
                     if cl:
                         segs.append("line(%s, %s, %s)" % (pic.xy(cl[0]), pic.xy(cl[1]), ", ".join(args)))
                 return "\n".join(segs) if segs else "// （被 \\clip 裁掉）"
+            if self.st.rounded and len(pts) >= 3 and not self.fill:
+                # rounded corners：每个拐角沿两边各退回 r（不超过边长的一半），用贝塞尔曲线相连（控制点同 TikZ 的圆弧近似）
+                r = self.st.rounded / pic.length
+                ring = pts + ([pts[0], pts[1]] if closed else [])
+                items, cur = [], ring[0] if not closed else None
+                for k in range(1, len(ring) - 1):
+                    p0, p, p1 = ring[k - 1], ring[k], ring[k + 1]
+                    d0, d1 = norm(sub(p, p0)), norm(sub(p1, p))
+                    if d0 < 1e-9 or d1 < 1e-9:
+                        continue
+                    qa = sub(p, mul(sub(p, p0), min(r, d0 / 2) / d0))
+                    qb = add(p, mul(sub(p1, p), min(r, d1 / 2) / d1))
+                    if cur is not None:
+                        items.append("line(%s, %s)" % (pic.xy(cur, use_names=False), pic.xy(qa, use_names=False)))
+                    items.append("bezier(%s, %s, %s, %s)" % (pic.xy(qa, use_names=False), pic.xy(qb, use_names=False),
+                                 pic.xy(lerp(qa, p, 0.5523), use_names=False), pic.xy(lerp(qb, p, 0.5523), use_names=False)))
+                    cur = qb
+                if not closed:
+                    items.append("line(%s, %s)" % (pic.xy(cur, use_names=False), pic.xy(ring[-1], use_names=False)))
+                return "merge-path({%s}, %s)" % ("; ".join(items), ", ".join(a))
             def one_line(pts):
                 xs = [pic.xy(p) for p in pts]
                 if not closed and len(pts) >= 2:
@@ -2472,7 +2512,11 @@ def main() -> None:
     for fid, src in pictures(volume):
         if only and fid not in only:
             continue
-        for item in VOLUME_TEX.get(volume, []):   # 本册专用命令，如第四册的 \arccot
+        # 正文中写成 Typst 占位符的本册命令（tex2typ.VOLUME_SLOTS），插图标注里换成等价的 TeX
+        src = re.sub(r"\\(arccot|arcsec)(?![a-zA-Z])", r"\\operatorname{\1}", src)
+        src = re.sub(r"\\Lim(?![a-zA-Z])", r"\\lim", src)
+        src = re.sub(r"\\Int(?![a-zA-Z])", r"\\displaystyle\\int", src)
+        for item in VOLUME_TEX.get(volume, []):   # 本册专用命令，如第五册的 \Vec
             src = item(src) if callable(item) else re.sub(item[0], item[1], src)
         code, err = convert(fid, src, labels)
         if err:

@@ -227,7 +227,9 @@
 
 // 是否为块级元素（列表项、独立公式、表格、图、框等），用于判断内容是否以块开头
 // [\(].func()：转义的字符（如段首的“\(1) 列表”）是 symbol 元素，也是行内的
-#let inline-funcs = (text, strong, emph, box, h, smartquote, link, super, sub, underline, footnote, highlight, ref, [\(].func())
+#let inline-funcs = (text, strong, emph, box, h, smartquote, link, super, sub, underline, footnote, highlight, ref, [\(].func(),
+  // example-label 等放在行内的 context、metadata
+  (context none).func(), metadata)
 #let is-block(c) = {
   if c.func() == math.equation or c.func() == raw { c.block }
   else if c.has("children") { false }   // 行内的一串内容
@@ -290,6 +292,10 @@
     if f != none and f.func() == enum.item {
       // 例题以列表开头：第一项与“例 x.y”同一行
       lead-list(label, 1, b)
+    } else if f != none and is-block(f) {
+      // 以陈列公式等块开头：标签单独成行，并与后面的块排在同一页（同 labeled）
+      block(sticky: true, below: 0.56em, { set par(first-line-indent: 0pt); label })
+      b
     } else {
       // 同 LaTeX 版的 \noindent：抵消段首缩进
       unindent
@@ -404,6 +410,16 @@
   }))
 }
 
+// 公式中间的一组对齐的行（\[\begin{split}…\end{split}\quad (i=1,2,…)\]：split 后面还有内容时）。
+// 每行为 (左半, 右半)，在 & 处对齐；整块按数学轴上下居中，后面的内容排在它右侧
+#let split-block(..rows) = context {
+  let eq(x) = math.equation(block: false, numbering: none, math.display(x))
+  let g = grid(columns: 2, row-gutter: 0.65em, align: (right, left),
+    ..rows.pos().map(((l, r)) => (eq(l), eq(r))).flatten())
+  let h = measure(g).height
+  box(baseline: h / 2 - 0.25em, g)
+}
+
 // numbered-align 右半以关系符开头时放在最前面的空占位：属普通符号类，使 = 两侧都有间距
 #let eqph = math.class("normal", none)
 
@@ -494,7 +510,9 @@
       let in-chap(h) = h.numbering != none and counter(heading).at(h.location()).first() == chap
       let here-secs = query(heading.where(level: 2)).filter(h => h.location().page() == here().page() and in-chap(h))
       let prev-secs = query(heading.where(level: 2).before(here())).filter(in-chap)
-      let sec = if here-secs.len() > 0 { here-secs.first() } else if prev-secs.len() > 0 { prev-secs.last() }
+      // 不编号的章（附录）中不取前一章的节名
+      let unnumbered = prev.len() > 0 and prev.last().numbering == none
+      let sec = if unnumbered { none } else if here-secs.len() > 0 { here-secs.first() } else if prev-secs.len() > 0 { prev-secs.last() }
       // 前言、目录等不编号的章没有节，奇数页也印章名（同 LaTeX 的 \@mkboth{目录}{目录}）
       let front = prev.len() > 0 and prev.last().numbering == none
       let sec-name = if sec == none { if front { name } else { [] } } else {
@@ -516,6 +534,8 @@
   // 行的上下边界按实际字形（bounds）计算：默认的 cap-height/baseline 不计入分母等伸到基线以下的部分，
   // 行内的高分式会与上下行重叠。LaTeX 遇到这种情况会自动加大行距。
   set text(font: fonts.serif, size: 10.5pt, lang: "zh", region: "cn", top-edge: "bounds", bottom-edge: "bounds")
+  // 中文引号一律用中文字体：紧跟在行内公式后面（中间有防断行的 U+2060）时，Typst 会改用西文字体的窄引号
+  show regex("[“”‘’]"): set text(font: fonts.serif.slice(1))
   // 与 LaTeX 版一致：段落之间不额外加距离（spacing 与行距相同）
   set par(justify: true, first-line-indent: (amount: 2em, all: true), leading: 0.56em, spacing: 0.56em)
   // 两端对齐时允许字距略有伸缩（xeCJK 的汉字间距也可伸缩）。否则行内有长公式断不开时，
@@ -598,11 +618,14 @@
       return
     }
     pagebreak(weak: true)
-    counter(math.equation).update(0)
-    example-counter.update(0)
     counter(footnote).update(0)
-    counter(figure.where(kind: image)).update(0)
-    counter(figure.where(kind: table)).update(0)
+    // 不编号的章（前言、第六册上册末尾的附录）不清零：LaTeX 版附录的例题、图接着上一章编号
+    if it.numbering != none {
+      counter(math.equation).update(0)
+      example-counter.update(0)
+      counter(figure.where(kind: image)).update(0)
+      counter(figure.where(kind: table)).update(0)
+    }
     v(2.5em)
     align(center, text(size: 22pt, {
       if it.numbering != none { counter(heading).display(it.numbering); h(1em) }

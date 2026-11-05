@@ -268,7 +268,7 @@ upright("余式") & quad r\(x\)= 50 / 27 x + 16 / 9 $
 
   综上所述，由等式 (3.3)、(3.4)、……($k$)，就可以得到 $ f\(x\) & = q_1\(x\)dot.op g\(x\)+ f_1\(x\)\
    & =\[q_1\(x\)+ q_2\(x\)\]dot.op g\(x\)+ f_2\(x\)\
-   & = dots.h.c dots.h.c\
+   & = dots.h.c thin dots.h.c\
    & =\[q_1\(x\)+ q_2\(x\)+ dots.h.c + q_k\(x\)\]dot.op g\(x\)+ f_k\(x\) $ #noindent;其中，$upright(d e g) f_k\(x\)< upright(d e g) g\(x\)$ 或 $f_k\(x\)= 0$⁠．
 
   这时，我们就取 $ q\(x\) & = q_1\(x\)+ q_2\(x\)+ dots.h.c + q_k\(x\)\
@@ -456,18 +456,18 @@ $\(x - alpha\)$ 是 $f\(x\)$ 的一个因式的必要充分条件是 $f\(alpha\)
 
 因式定理还可以推广到一般，这就是：
 
-若 $\(x - alpha_1\)\(x - alpha_2\)dots.h.c\(x - alpha_k\)$ 是 $f\(x\)$ 的因式的必要充分条件是 $f\(alpha_1\)= f\(alpha_2\)= dots.h.c = f\(alpha_k\)= 0$. 也就是 $alpha_1\,alpha_2\,dots.h\,alpha_k$ 都是 $f\(x\)$ 的根（其中 $alpha_1\,alpha_2\,dots.h\,alpha_k$ 两两不等）．
+若 $\(x - alpha_1\)\(x - alpha_2\) thin dots.h.c thin \(x - alpha_k\)$ 是 $f\(x\)$ 的因式的必要充分条件是 $f\(alpha_1\)= f\(alpha_2\)= dots.h.c = f\(alpha_k\)= 0$. 也就是 $alpha_1\,alpha_2\,dots.h\,alpha_k$ 都是 $f\(x\)$ 的根（其中 $alpha_1\,alpha_2\,dots.h\,alpha_k$ 两两不等）．
 
 #proof[
-必要性是显然的，因为若对于两两不等的数 $alpha_1\,alpha_2\,dots.h\,alpha_k$ 来说，$\(x - alpha_1\)\(x - alpha_2\)dots.h.c\(x - alpha_k\)$ 都是 $f\(x\)$ 的因式，则有 $ f\(x\)=\(x - alpha_1\)\(x - alpha_2\)dots.h.c\(x - alpha_k\)dot.op q\(x\) $ #noindent;所以 $f\(alpha_1\)= f\(alpha_2\)= dots.h.c = f\(alpha_k\)= 0$
+必要性是显然的，因为若对于两两不等的数 $alpha_1\,alpha_2\,dots.h\,alpha_k$ 来说，$\(x - alpha_1\)\(x - alpha_2\) thin dots.h.c thin \(x - alpha_k\)$ 都是 $f\(x\)$ 的因式，则有 $ f\(x\)=\(x - alpha_1\)\(x - alpha_2\) thin dots.h.c thin \(x - alpha_k\)dot.op q\(x\) $ #noindent;所以 $f\(alpha_1\)= f\(alpha_2\)= dots.h.c = f\(alpha_k\)= 0$
 
 即 $alpha_1\,alpha_2\,dots.h\,alpha_k$ 为 $f\(x\)$ 的 $k$ 个不同的根．
 
 再证充分性，由于 $f\(alpha_1\)= 0$, 因而根据因式定理可有#numbered-eq($ f\(x\)=\(x - alpha_1\)dot.op q_1\(x\) $);
 
-将 $x = alpha_2$ 代入上式，得 $ f\(alpha_2\)=\(alpha_2 - alpha_1\)dot.op q_1\(alpha_2\) $ #noindent;其中，因 $f\(alpha_2\)= 0$, $alpha_2 - alpha_1 eq.not 0$, 所以 $ q_1\(alpha_2\)= 0 $ #noindent;再根据因式定理，就得出 $alpha_2$ 是 $q_1\(x\)$ 的根，即#numbered-eq($ q_1\(x\)=\(x - alpha_2\)dot.op q_2\(x\) $);#noindent;将 (3.10) 代入 (3.9) 得#numbered-eq($ f\(x\)=\(x - alpha_1\)\(x - alpha_2\)dot.op q_2\(x\) $);#noindent;就这样逐步推下去，我们可以得到#numbered-eq($ f\(x\)=\(x - alpha_1\)\(x - alpha_2\)dots.h.c\(x - alpha_(k - 1)\)dot.op q_(k - 1)\(x\) $);#noindent;将 $x = alpha_k$ 代入 (3.12) 式，得 $ f\(alpha_k\)=\(alpha_k - alpha_1\)dots.h.c\(alpha_k - alpha_(k - 1)\)dot.op q_(k - 1)\(alpha_k\) $ #noindent;其中，已知 $f\(alpha_k\)= 0$, 且 $\(alpha_k - alpha_1\)\,\(alpha_k - alpha_2\)\,dots.h\,\(alpha_k - alpha_(k - 1)\)$ 都不等于零，因而有 $q_(k - 1)\(alpha_k\)= 0$⁠．
+将 $x = alpha_2$ 代入上式，得 $ f\(alpha_2\)=\(alpha_2 - alpha_1\)dot.op q_1\(alpha_2\) $ #noindent;其中，因 $f\(alpha_2\)= 0$, $alpha_2 - alpha_1 eq.not 0$, 所以 $ q_1\(alpha_2\)= 0 $ #noindent;再根据因式定理，就得出 $alpha_2$ 是 $q_1\(x\)$ 的根，即#numbered-eq($ q_1\(x\)=\(x - alpha_2\)dot.op q_2\(x\) $);#noindent;将 (3.10) 代入 (3.9) 得#numbered-eq($ f\(x\)=\(x - alpha_1\)\(x - alpha_2\)dot.op q_2\(x\) $);#noindent;就这样逐步推下去，我们可以得到#numbered-eq($ f\(x\)=\(x - alpha_1\)\(x - alpha_2\) thin dots.h.c thin \(x - alpha_(k - 1)\)dot.op q_(k - 1)\(x\) $);#noindent;将 $x = alpha_k$ 代入 (3.12) 式，得 $ f\(alpha_k\)=\(alpha_k - alpha_1\) thin dots.h.c thin \(alpha_k - alpha_(k - 1)\)dot.op q_(k - 1)\(alpha_k\) $ #noindent;其中，已知 $f\(alpha_k\)= 0$, 且 $\(alpha_k - alpha_1\)\,\(alpha_k - alpha_2\)\,dots.h\,\(alpha_k - alpha_(k - 1)\)$ 都不等于零，因而有 $q_(k - 1)\(alpha_k\)= 0$⁠．
 
-由因式定理可知 $alpha_k$ 为 $q_(k - 1)\(x\)$ 的一个根，即#numbered-eq($ q_(k - 1)\(x\)=\(x - alpha_k\)dot.op q_k\(x\) $);#noindent;将 (3.13) 式代入 (3.12) 式，就得出所证结论：$ f\(x\)=\(x - alpha_1\)\(x - alpha_2\)dots.h.c\(x - alpha_(k - 1)\)\(x - alpha_k\)dot.op q_k\(x\) $ #noindent;即：$\(x - alpha_1\)\,\(x - alpha_2\)\,dots.h\,\(x - alpha_k\)$ 都是 $f\(x\)$ 的因式．
+由因式定理可知 $alpha_k$ 为 $q_(k - 1)\(x\)$ 的一个根，即#numbered-eq($ q_(k - 1)\(x\)=\(x - alpha_k\)dot.op q_k\(x\) $);#noindent;将 (3.13) 式代入 (3.12) 式，就得出所证结论：$ f\(x\)=\(x - alpha_1\)\(x - alpha_2\) thin dots.h.c thin \(x - alpha_(k - 1)\)\(x - alpha_k\)dot.op q_k\(x\) $ #noindent;即：$\(x - alpha_1\)\,\(x - alpha_2\)\,dots.h\,\(x - alpha_k\)$ 都是 $f\(x\)$ 的因式．
 
 ]
 因式定理及推广在沟通两种观点研究多项式的问题上，作用更为突出．数 $alpha$ 是多项式的一个零点（根）、一次式 $\(x - alpha\)$ 是 $f\(x\)$ 的一个因式、一次式 $\(x - alpha\)$ 能够整除 $f\(x\)$⁠、$f\(alpha\)= 0$ 都是同一件事情的不同说法，在多项式理论的学习中是很重要的．
@@ -515,9 +515,9 @@ a^2\(b - a\)+ b^2\(a - a\)+ a^2\(a - b\)= 0 $
 
 ]
 #proof[
-设 $f\(x\)= a_n x^n + a_(n - 1) x^(n - 1) + dots.h.c + a_1 x + a_0 quad\(a_n eq.not 0\)$⁠，若已知两两不等的 $n$ 个数 $alpha_1\,alpha_2\,dots.h\,alpha_n$ 都是 $f\(x\)$ 的根，则由因式定理可知#numbered-eq($ f\(x\)=\(x - alpha_1\)\(x - alpha_2\)dots.h.c\(x - alpha_n\)dot.op q\(x\) $);#noindent;但由于 $upright(d e g) f\(x\)= n$, 且 $upright(d e g)\[\(x - alpha_1\)\(x - alpha_2\)dots.h.c\(x - alpha_n\)\]= n$, 所以 (3.14) 式中 $q\(x\)$ 只能是零次多项式，即 $upright(d e g) q\(x\)= 0$, 再由多项式相等的定义，可知 $ q\(x\)= a_n eq.not 0 $
+设 $f\(x\)= a_n x^n + a_(n - 1) x^(n - 1) + dots.h.c + a_1 x + a_0 quad\(a_n eq.not 0\)$⁠，若已知两两不等的 $n$ 个数 $alpha_1\,alpha_2\,dots.h\,alpha_n$ 都是 $f\(x\)$ 的根，则由因式定理可知#numbered-eq($ f\(x\)=\(x - alpha_1\)\(x - alpha_2\) thin dots.h.c thin \(x - alpha_n\)dot.op q\(x\) $);#noindent;但由于 $upright(d e g) f\(x\)= n$, 且 $upright(d e g)\[\(x - alpha_1\)\(x - alpha_2\) thin dots.h.c thin \(x - alpha_n\)\]= n$, 所以 (3.14) 式中 $q\(x\)$ 只能是零次多项式，即 $upright(d e g) q\(x\)= 0$, 再由多项式相等的定义，可知 $ q\(x\)= a_n eq.not 0 $
 
-若再选任一个与 $alpha_i\,thick\(i = 1\,2\,dots.h\,n\)$ 都不相等的数 $alpha_(n + 1)$ 代入 (3.14) 式，得 $ f\(alpha_(n + 1)\)=\(alpha_(n + 1) - alpha_1\)\(alpha_(n + 1) - alpha_2\)dots.h.c\(alpha_(n + 1) - alpha_n\)dot.op a_n $ #noindent;其中，由 $alpha_i\,thick\(i = 1\,2\,dots.h\,n\,n + 1\)$ 都不相等，可知 $ alpha_(n + 1) - alpha_i eq.not 0 thick\(i = 1\,2\,dots.h\,n\)\,quad upright("且") quad a_n eq.not 0 $ #noindent;$therefore quad f\(alpha_(n + 1)\)eq.not 0$
+若再选任一个与 $alpha_i\,thick\(i = 1\,2\,dots.h\,n\)$ 都不相等的数 $alpha_(n + 1)$ 代入 (3.14) 式，得 $ f\(alpha_(n + 1)\)=\(alpha_(n + 1) - alpha_1\)\(alpha_(n + 1) - alpha_2\) thin dots.h.c thin \(alpha_(n + 1) - alpha_n\)dot.op a_n $ #noindent;其中，由 $alpha_i\,thick\(i = 1\,2\,dots.h\,n\,n + 1\)$ 都不相等，可知 $ alpha_(n + 1) - alpha_i eq.not 0 thick\(i = 1\,2\,dots.h\,n\)\,quad upright("且") quad a_n eq.not 0 $ #noindent;$therefore quad f\(alpha_(n + 1)\)eq.not 0$
 
 因此，$alpha_(n + 1)$ 不是 $f\(x\)$ 的根，所以，$f\(x\)$ 最多只有 $n$ 个不同根．
 
@@ -699,9 +699,9 @@ $f\(x\)= x^2 - 3 x + 2$, $g\(x\)= x^4 - 3 x^3 + 5 x^2 - 8 x + 5$
 g\(x\) & = q_2\(x\)r_1\(x\)+ r_2\(x\)\,quad upright(d e g) r_2\(x\)< upright(d e g) r_1\(x\)\
 r_1\(x\) & = q_3\(x\)r_2\(x\)+ r_3\(x\)\,quad upright(d e g) r_3\(x\)< upright(d e g) r_2\(x\)\
 r_2\(x\) & = q_4\(x\)r_3\(x\)+ r_4\(x\)\,quad upright(d e g) r_4\(x\)< upright(d e g) r_3\(x\)\
-dots.h.c & dots.h.c dots.h.c dots.h.c\
+dots.h.c & dots.h.c thin dots.h.c thin dots.h.c\
 r_(i - 1)\(x\) & = q_(i + 1)\(x\)r_i\(x\)+ r_(i + 1)\(x\)\,quad upright(d e g) r_(i + 1)\(x\)< upright(d e g) r_i\(x\)\
-dots.h.c & dots.h.c dots.h.c dots.h.c\
+dots.h.c & dots.h.c thin dots.h.c thin dots.h.c\
 r_(s - 1)\(x\) & = q_(s + 1)\(x\)r_s\(x\) $);
 
 最后一个等式表示 $r_s\(x\)$ 整除 $r_(s - 1)\(x\)$, 或者说 $r_(s + 1)\(x\)= 0$⁠．此时就有 $ class("opening", stretch(\(, size: #1.2em)) f\(x\)\,g\(x\)class("closing", stretch(\), size: #1.2em)) & = class("opening", stretch(\(, size: #1.2em)) g\(x\)\,r_1\(x\)class("closing", stretch(\), size: #1.2em)) = class("opening", stretch(\(, size: #1.2em)) r_1\(x\)\,r_2\(x\)class("closing", stretch(\), size: #1.2em)) = dots.h.c\
@@ -862,7 +862,7 @@ $therefore quad k_1 = frac(c_1, \(alpha_1 - alpha_2\)\(alpha_1 - alpha_3\)\(alph
 $ therefore quad f_1\(x\)= frac(c_1\(x - alpha_2\)\(x - alpha_3\)\(x - alpha_4\), \(alpha_1 - alpha_2\)\(alpha_1 - alpha_3\)\(alpha_1 - alpha_4\)) $ #noindent;同理可求得：$ f_2\(x\) & = frac(c_2\(x - alpha_1\)\(x - alpha_3\)\(x - alpha_4\), \(alpha_2 - alpha_1\)\(alpha_2 - alpha_3\)\(alpha_2 - alpha_4\))\
 f_3\(x\) & = frac(c_3\(x - alpha_1\)\(x - alpha_2\)\(x - alpha_4\), \(alpha_3 - alpha_1\)\(alpha_3 - alpha_2\)\(alpha_3 - alpha_4\))\
 f_4\(x\) & = frac(c_4\(x - alpha_1\)\(x - alpha_2\)\(x - alpha_3\), \(alpha_4 - alpha_1\)\(alpha_4 - alpha_2\)\(alpha_4 - alpha_3\)) $ #noindent;因此：$ f\(x\) & = frac(c_1\(x - alpha_2\)\(x - alpha_3\)\(x - alpha_4\), \(alpha_1 - alpha_2\)\(alpha_1 - alpha_3\)\(alpha_1 - alpha_4\)) + frac(c_2\(x - alpha_1\)\(x - alpha_3\)\(x - alpha_4\), \(alpha_2 - alpha_1\)\(alpha_2 - alpha_3\)\(alpha_2 - alpha_4\))\
- & quad eqph + frac(c_3\(x - alpha_1\)\(x - alpha_2\)\(x - alpha_4\), \(alpha_3 - alpha_1\)\(alpha_3 - alpha_2\)\(alpha_3 - alpha_4\)) + frac(c_4\(x - alpha_1\)\(x - alpha_2\)\(x - alpha_3\), \(alpha_4 - alpha_1\)\(alpha_4 - alpha_2\)\(alpha_4 - alpha_3\)) $ #noindent;还可以简单记为：$ f\(x\)= sum_(i = 1)^4 c_i frac(\(x - alpha_1\)\(x - alpha_2\)dots.h.c\(x - alpha_(i - 1)\)\(x - alpha_(i + 1)\)dots.h.c\(x - alpha_4\), \(alpha_i - alpha_1\)\(alpha_i - alpha_2\)dots.h.c\(alpha_i - alpha_(i - 1)\)\(alpha_i - alpha_(i + 1)\)dots.h.c\(alpha_i - alpha_4\)) $
+ & quad eqph + frac(c_3\(x - alpha_1\)\(x - alpha_2\)\(x - alpha_4\), \(alpha_3 - alpha_1\)\(alpha_3 - alpha_2\)\(alpha_3 - alpha_4\)) + frac(c_4\(x - alpha_1\)\(x - alpha_2\)\(x - alpha_3\), \(alpha_4 - alpha_1\)\(alpha_4 - alpha_2\)\(alpha_4 - alpha_3\)) $ #noindent;还可以简单记为：$ f\(x\)= sum_(i = 1)^4 c_i frac(\(x - alpha_1\)\(x - alpha_2\) thin dots.h.c thin \(x - alpha_(i - 1)\)\(x - alpha_(i + 1)\) thin dots.h.c thin \(x - alpha_4\), \(alpha_i - alpha_1\)\(alpha_i - alpha_2\) thin dots.h.c thin \(alpha_i - alpha_(i - 1)\)\(alpha_i - alpha_(i + 1)\) thin dots.h.c thin \(alpha_i - alpha_4\)) $
 
 ]
 #example[
@@ -885,11 +885,11 @@ $ f\(x\)=\(x - alpha_1\)\(x - alpha_2\)\(x - alpha_3\)q\(x\)+ r\(x\) $ #noindent
 把上述例题所得的结果予以推广，应有下列定理：
 
 #blk[定理][
-设 $f\(x\)$ 是一个次数不大于 $n$ 的多项式，$alpha_i thick\(i = 1\,2\,dots.h\,n\,n + 1\)$ 表示 $n + 1$ 个两两不等的数，$b_i thick\(i = 1\,2\,dots.h\,n\,n + 1\)$ 是任意 $n + 1$ 个数，而且 $f\(alpha_i\)= b_i\,thick\(i = 1\,2\,dots.h\,n\,n + 1\)$⁠，则：$ display(cases(f\(x\)= sum_(i = 1)^(n + 1) f_i\(x\), f_i\(x\)= b_i frac(\(x - alpha_1\)dots.h.c\(x - alpha_(i - 1)\)\(x - alpha_(i + 1)\)dots.h.c\(x - alpha_(n + 1)\), \(alpha_i - alpha_1\)dots.h.c\(alpha_i - alpha_(i - 1)\)\(alpha_i - alpha_(i + 1)\)dots.h.c\(alpha_i - alpha_(n + 1)\)))) $
+设 $f\(x\)$ 是一个次数不大于 $n$ 的多项式，$alpha_i thick\(i = 1\,2\,dots.h\,n\,n + 1\)$ 表示 $n + 1$ 个两两不等的数，$b_i thick\(i = 1\,2\,dots.h\,n\,n + 1\)$ 是任意 $n + 1$ 个数，而且 $f\(alpha_i\)= b_i\,thick\(i = 1\,2\,dots.h\,n\,n + 1\)$⁠，则：$ display(cases(f\(x\)= sum_(i = 1)^(n + 1) f_i\(x\), f_i\(x\)= b_i frac(\(x - alpha_1\) thin dots.h.c thin \(x - alpha_(i - 1)\)\(x - alpha_(i + 1)\) thin dots.h.c thin \(x - alpha_(n + 1)\), \(alpha_i - alpha_1\) thin dots.h.c thin \(alpha_i - alpha_(i - 1)\)\(alpha_i - alpha_(i + 1)\) thin dots.h.c thin \(alpha_i - alpha_(n + 1)\)))) $
 
 ]
 #proof[
-令 $f_i\(x\)$ 是由下列条件所唯一确定的次数不大于 $n$ 的多项式：$ f_i\(alpha_j\)= delta_(i j) b_i\,#h(2em) delta_(i j) = display(cases(1 & quad i = j, 0 & quad i eq.not j)) quad\(i\,j = 1\,2\,dots.h\,n + 1\) $ #noindent;则由因式定理可知 $ f_i\(x\)= c_i\(x - alpha_1\)dots.h.c\(x - alpha_(i - 1)\)\(x - alpha_(i + 1)\)dots.h.c\(x - alpha_(n + 1)\) $ #noindent;由 $f_i\(alpha_i\)= b_i$ 定出 $c_i$ 的值，可得 $ c_i = frac(b_i, \(alpha_i - alpha_1\)dots.h.c\(alpha_i - alpha_(i - 1)\)\(alpha_i - alpha_(i + 1)\)dots.h.c\(alpha_i - alpha_(n + 1)\)) $ #noindent;$therefore quad f_i\(x\)= b_i frac(\(x - alpha_1\)dots.h.c\(x - alpha_(i - 1)\)\(x - alpha_(i + 1)\)dots.h.c\(x - alpha_(n + 1)\), \(alpha_i - alpha_1\)dots.h.c\(alpha_i - alpha_(i - 1)\)\(alpha_i - alpha_(i + 1)\)dots.h.c\(alpha_i - alpha_(n + 1)\))$
+令 $f_i\(x\)$ 是由下列条件所唯一确定的次数不大于 $n$ 的多项式：$ f_i\(alpha_j\)= delta_(i j) b_i\,#h(2em) delta_(i j) = display(cases(1 & quad i = j, 0 & quad i eq.not j)) quad\(i\,j = 1\,2\,dots.h\,n + 1\) $ #noindent;则由因式定理可知 $ f_i\(x\)= c_i\(x - alpha_1\) thin dots.h.c thin \(x - alpha_(i - 1)\)\(x - alpha_(i + 1)\) thin dots.h.c thin \(x - alpha_(n + 1)\) $ #noindent;由 $f_i\(alpha_i\)= b_i$ 定出 $c_i$ 的值，可得 $ c_i = frac(b_i, \(alpha_i - alpha_1\) thin dots.h.c thin \(alpha_i - alpha_(i - 1)\)\(alpha_i - alpha_(i + 1)\) thin dots.h.c thin \(alpha_i - alpha_(n + 1)\)) $ #noindent;$therefore quad f_i\(x\)= b_i frac(\(x - alpha_1\) thin dots.h.c thin \(x - alpha_(i - 1)\)\(x - alpha_(i + 1)\) thin dots.h.c thin \(x - alpha_(n + 1)\), \(alpha_i - alpha_1\) thin dots.h.c thin \(alpha_i - alpha_(i - 1)\)\(alpha_i - alpha_(i + 1)\) thin dots.h.c thin \(alpha_i - alpha_(n + 1)\))$
 
 显然有 $f\(x\)= limits(display(sum))_(i = 1)^(n + 1) f_i\(x\)$.
 
@@ -901,8 +901,8 @@ $ f\(x\)=\(x - alpha_1\)\(x - alpha_2\)\(x - alpha_3\)q\(x\)+ r\(x\) $ #noindent
 
 ]
 #solution[
-由插值公式直接得出 $ g_n\(x\) & = frac(x\(x - 1\)\(x - 2\)dots.h.c\(x - n + 1\), 1 dot.op 2 dots.h.c n)\
- & = frac(x\(x - 1\)dots.h.c\(x - n + 1\), n !) $
+由插值公式直接得出 $ g_n\(x\) & = frac(x\(x - 1\)\(x - 2\) thin dots.h.c thin \(x - n + 1\), 1 dot.op 2 thin dots.h.c thin n)\
+ & = frac(x\(x - 1\) thin dots.h.c thin \(x - n + 1\), n !) $
 
 $n !$ 对非负整数 $n$ 都有定义，读作“$n$ 阶乘”，当 $n > 0$ 时，$n ! = 1 times 2 times dots.h.c times n$, 并规定 $0 ! = 1$.
 
@@ -1423,10 +1423,10 @@ $therefore quad f\(x\)$ 除以 $g\(x\)$ 所得的余式为 $ r\(x\) & = f\(1\)+ 
 
 三、由余式定理及因式定理的推论，可以推导出插值公式------拉格朗日公式：
 
-若已知 $f\(alpha_i\)= b_i\,thick\(i = 1\,2\,dots.h\,n\,n + 1\)$, 则 $n$ 次多项式 $f\(x\)$ 的表达式为 $ f\(x\) & = b_1 frac(\(x - alpha_2\)\(x - alpha_3\)dots.h.c\(x - alpha_(n + 1)\), \(alpha_1 - alpha_2\)\(alpha_1 - alpha_3\)dots.h.c\(alpha_1 - alpha_(n + 1)\))\
- & quad eqph + b_2 frac(\(x - alpha_1\)\(x - alpha_3\)dots.h.c\(x - alpha_(n + 1)\), \(alpha_2 - alpha_1\)\(alpha_2 - alpha_3\)dots.h.c\(alpha_2 - alpha_(n + 1)\))\
- & quad eqph + dots.h.c + b_n frac(\(x - alpha_1\)\(x - alpha_2\)dots.h.c\(x - alpha_(n - 1)\)\(x - alpha_(n + 1)\), \(alpha_n - alpha_1\)\(alpha_n - alpha_2\)dots.h.c\(alpha_n - alpha_(n - 1)\)\(alpha_n - alpha_(n + 1)\))\
- & quad eqph + b_(n + 1) frac(\(x - alpha_1\)\(x - alpha_2\)dots.h.c\(x - alpha_n\), \(alpha_(n + 1) - alpha_1\)\(alpha_(n + 1) - alpha_2\)dots.h.c\(alpha_(n + 1) - alpha_n\)) $ #noindent;或简记为：$ f\(x\)= sum_(i = 1)^(n + 1) b_i frac(\(x - alpha_1\)dots.h.c\(x - alpha_(i - 1)\)\(x - alpha_(i + 1)\)dots.h.c\(x - alpha_(n + 1)\), \(alpha_i - alpha_1\)dots.h.c\(alpha_i - alpha_(i - 1)\)\(alpha_i - alpha_(i + 1)\)dots.h.c\(alpha_i - alpha_(n + 1)\)) $
+若已知 $f\(alpha_i\)= b_i\,thick\(i = 1\,2\,dots.h\,n\,n + 1\)$, 则 $n$ 次多项式 $f\(x\)$ 的表达式为 $ f\(x\) & = b_1 frac(\(x - alpha_2\)\(x - alpha_3\) thin dots.h.c thin \(x - alpha_(n + 1)\), \(alpha_1 - alpha_2\)\(alpha_1 - alpha_3\) thin dots.h.c thin \(alpha_1 - alpha_(n + 1)\))\
+ & quad eqph + b_2 frac(\(x - alpha_1\)\(x - alpha_3\) thin dots.h.c thin \(x - alpha_(n + 1)\), \(alpha_2 - alpha_1\)\(alpha_2 - alpha_3\) thin dots.h.c thin \(alpha_2 - alpha_(n + 1)\))\
+ & quad eqph + dots.h.c + b_n frac(\(x - alpha_1\)\(x - alpha_2\) thin dots.h.c thin \(x - alpha_(n - 1)\)\(x - alpha_(n + 1)\), \(alpha_n - alpha_1\)\(alpha_n - alpha_2\) thin dots.h.c thin \(alpha_n - alpha_(n - 1)\)\(alpha_n - alpha_(n + 1)\))\
+ & quad eqph + b_(n + 1) frac(\(x - alpha_1\)\(x - alpha_2\) thin dots.h.c thin \(x - alpha_n\), \(alpha_(n + 1) - alpha_1\)\(alpha_(n + 1) - alpha_2\) thin dots.h.c thin \(alpha_(n + 1) - alpha_n\)) $ #noindent;或简记为：$ f\(x\)= sum_(i = 1)^(n + 1) b_i frac(\(x - alpha_1\) thin dots.h.c thin \(x - alpha_(i - 1)\)\(x - alpha_(i + 1)\) thin dots.h.c thin \(x - alpha_(n + 1)\), \(alpha_i - alpha_1\) thin dots.h.c thin \(alpha_i - alpha_(i - 1)\)\(alpha_i - alpha_(i + 1)\) thin dots.h.c thin \(alpha_i - alpha_(n + 1)\)) $
 
 有了插值公式，就可以由多项式在 $n + 1$ 个点的 $n + 1$ 个值，确定 $n$ 次多项式的表达式，进而求出多项式在任何一点的值来．
 

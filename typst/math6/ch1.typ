@@ -83,14 +83,8 @@ $a$⁠，$b$ 分别叫做复数 $z = a + b i$ 的#strong[实部]与#strong[虚�
 
 从复数及其相等的定义中，我们知道，任何一个复数 $z = a + b i$⁠，都由一个有序实数对 $\(a\,b\)$ 唯一确定，而每一个有序实数对，又借助平面的坐标化可以唯一确定平面上一个点，因此，只要在平面上建立起直角坐标系，就可以用平面上的点 $Z\(a\,b\)$ 表示出复数 $z = a + b i$⁠，如图1.1所示.
 
-#block[
-#fig("1-01");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (45%, 45%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-01");], caption: []), figure([#fig("1-02");], caption: []))));
 
-]
-#block[
-#fig("1-02");
-
-]
 这个建立了坐标系来表示复数的平面，叫做#strong[复平面]，其中 $X$ 轴叫做#strong[实轴]，$Y$ 轴（不含原点）叫做#strong[虚轴]\.
 
 这样一来，每一个复数，在复平面内都有唯一一点和它对应，反之，复平面内的每一个点，都有唯一的一个复数和它对应，因此，复数集 $bb(C)$ 和复平面上的点集是一一对应的. 特别地，实数集和复平面实轴上的点集一一对应；纯虚数集合和复平面虚轴（不含原点）上的点集一一对应.
@@ -298,16 +292,9 @@ $therefore quad\|z_1\|>\|z_2\|$.
 
 + 先将条件 $2 <\|z\|lt.eq 4$ 化为 $display(cases(\|z\|> 2, \|z\|lt.eq 4))$
 
-  #block[
-  再分别考虑：满足 $\|z\|> 2$ 的点集组成圆 $\|z\|= 2$ 的外部；满足 $\|z\|lt.eq 4$ 的点集组成圆 $\|z\|= 4$ 的内部（包含边界）。同时满足以上两条件的点集，就是已求两集合的交集，也就是所要求的集合.
-
-  因此，满足 $2 <\|z\|lt.eq 4$ 的点的集合是以 $O$ 为圆心，以2及4为半径的两圆所夹的圆环，其中包含外边界，但不包括内边界（图1.4）.
-
-  ]
-  #block[
-  #fig("1-04");
-
-  ]
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (45%, 45%,), column-gutter: 1em, align: center + bottom, [再分别考虑：满足 $\|z\|> 2$ 的点集组成圆 $\|z\|= 2$ 的外部；满足 $\|z\|lt.eq 4$ 的点集组成圆 $\|z\|= 4$ 的内部（包含边界）。同时满足以上两条件的点集，就是已求两集合的交集，也就是所要求的集合.
+  
+  因此，满足 $2 <\|z\|lt.eq 4$ 的点的集合是以 $O$ 为圆心，以2及4为半径的两圆所夹的圆环，其中包含外边界，但不包括内边界（图1.4）.], figure([#fig("1-04");], caption: []))));
 ]
 
 ]
@@ -442,7 +429,7 @@ $therefore quad\|z_1\|>\|z_2\|$.
 
 不难验证，复数加法法则的规定满足“运算通性”。即: 设 $z_1\,z_2\,z_3 in bb(C)$, 则
 
-#numbered-align(($z_1 + z_2$, $eqph = z_2 + z_1 #h(2em) upright("(交换律成立)")$, true), ($z_1 + (z_2 + z_3)$, $eqph = (z_1 + z_2) + z_3 = z_1 + z_2 + z_3 #h(2em) upright("(结合律成立)")$, true), ($z_1 + 0$, $eqph = 0 + z_1 = z_1 #h(2em) upright("(零的运算特性保持)")$, true));
+#numbered-align(($z_1 + z_2$, $eqph = z_2 + z_1$, [(交换律成立)]), ($z_1 + (z_2 + z_3)$, $eqph = (z_1 + z_2) + z_3 = z_1 + z_2 + z_3$, [(结合律成立)]), ($z_1 + 0$, $eqph = 0 + z_1 = z_1$, [(零的运算特性保持)]));
 
 #example[
 试求下列复数的和：
@@ -582,7 +569,7 @@ $therefore quad accent(Z_1 Z_2, ⃗)$ 对应于复数 $z_2 - z_1$⁠，于是 $ 
 
 容易验证，复数乘法运算也具有“数系运算通性”，即对于任意 $z_1\,z_2\,z_3 in bb(C)$⁠，都有
 
-#numbered-align(($z_1 dot.op z_2$, $eqph = z_2 dot.op z_1 #h(2em) upright("(乘法交换律成立)")$, true), ($z_1 dot.op\(z_2 dot.op z_3\)$, $eqph =\(z_1 dot.op z_2\)dot.op z_3 = z_1 dot.op z_2 dot.op z_3 #h(2em) upright("(乘法结合律成立)")$, true), ($z_1 dot.op\(z_2 + z_3\)$, $eqph = z_1 dot.op z_2 + z_1 dot.op z_3 #h(2em) upright("(乘法对加法的分配律成立)")$, true), ($z_1 dot.op 0$, $eqph = 0 dot.op z_1 = 0 #h(2em) upright("(零的运算特性保持)")$, true), ($z_1 dot.op 1$, $eqph = 1 dot.op z_1 = z_1 #h(2em) upright("(1的运算特性保持)")$, true));
+#numbered-align(($z_1 dot.op z_2$, $eqph = z_2 dot.op z_1$, [(乘法交换律成立)]), ($z_1 dot.op\(z_2 dot.op z_3\)$, $eqph =\(z_1 dot.op z_2\)dot.op z_3 = z_1 dot.op z_2 dot.op z_3$, [(乘法结合律成立)]), ($z_1 dot.op\(z_2 + z_3\)$, $eqph = z_1 dot.op z_2 + z_1 dot.op z_3$, [(乘法对加法的分配律成立)]), ($z_1 dot.op 0$, $eqph = 0 dot.op z_1 = 0$, [(零的运算特性保持)]), ($z_1 dot.op 1$, $eqph = 1 dot.op z_1 = z_1$, [(1的运算特性保持)]));
 
 还应该指出，复数乘方运算、幂的概念与实数完全相同，而且由于复数的乘法满足交换律、结合律，所以在实数集 $bb(R)$ 中的指数运算律，在复数集 $bb(C)$ 中仍然成立，即
 
@@ -1068,9 +1055,9 @@ $therefore quad$ 定理成立.
 )
 
 #blk[推论][
-$n$ 个复数的积仍是一个复数，它的模等于 $n$ 个乘数的模的积，它的幅角等于 $n$ 个乘数的幅角的和。（可用数学归纳法证明）即：$ z_1 dot.op z_2 dots.h.c z_n & = r_1 (cos theta_1 + i sin theta_1) dot.op r_2 (cos theta_2 + i sin theta_2)\
- & #h(2em) #h(2em) dots.h.c r_n\(cos theta_n + i sin theta_n\)\
- & = r_1 dot.op r_2 dots.h.c r_n\[cos\(theta_1 + theta_2 + dots.h.c + theta_n\)\
+$n$ 个复数的积仍是一个复数，它的模等于 $n$ 个乘数的模的积，它的幅角等于 $n$ 个乘数的幅角的和。（可用数学归纳法证明）即：$ z_1 dot.op z_2 thin dots.h.c thin z_n & = r_1 (cos theta_1 + i sin theta_1) dot.op r_2 (cos theta_2 + i sin theta_2)\
+ & #h(2em) #h(2em) thin dots.h.c thin r_n\(cos theta_n + i sin theta_n\)\
+ & = r_1 dot.op r_2 thin dots.h.c thin r_n\[cos\(theta_1 + theta_2 + dots.h.c + theta_n\)\
  & #h(2em) #h(2em) #h(2em) eqph + i sin\(theta_1 + theta_2 + dots.h.c + theta_n\)\] $
 
 ]
@@ -1374,7 +1361,7 @@ $therefore quad x = 1 dot.op (cos frac(2 k pi, n) + i sin frac(2 k pi, n)) quad\
 这样可得出 $n$ 个单位根：$ x_1 & = cos 0 + i sin 0 = 1 #h(2em) #h(2em) upright("（当") k = 0 upright("时）")\
 x_2 & = cos frac(2 pi, n) + i sin frac(2 pi, n) #h(2em) #h(2em) upright("（当") k = 1 upright("时）")\
 x_3 & = cos frac(4 pi, n) + i sin frac(4 pi, n) #h(2em) #h(2em) upright("（当") k = 2 upright("时）")\
-dots.h.c & dots.h.c dots.h.c\
+dots.h.c & dots.h.c thin dots.h.c\
 x_n & = cos frac(2\(n - 1\)pi, n) + i sin frac(2\(n - 1\)pi, n) #h(2em) upright("（当") k = n - 1 upright("时）") $
 
 由二项方程解的几何意义可以知道：$n$ 个不同的单位根可用复平面内以原点为圆心的单位圆的一个内接正 $n$ 边形顶点来表示.
@@ -1393,14 +1380,8 @@ x_2 & = cos frac(2 pi, 3) + i sin frac(2 pi, 3) = - 1 / 2 + sqrt(3) / 2 i\
 x_3 & = cos frac(4 pi, 3) + i sin frac(4 pi, 3) = - 1 / 2 - sqrt(3) / 2 i $
 
 ]
-#block[
-#fig("1-12");
+#align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (45%, 45%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-12");], caption: []), figure([#fig("1-13");], caption: []))));
 
-]
-#block[
-#fig("1-13");
-
-]
 #example[
 求四次单位根
 
@@ -1464,7 +1445,7 @@ $therefore quad x = cos frac(2 k pi, 4) + i sin frac(2 k pi, 4) quad\(k = 0\,1\,
 
 + 利用单位根，可以方便地求出任一个正实数 $a$（$a > 0$ 且 $a eq.not 1$⁠）的 $n$ 个 $n$ 次方根．
 
-  这就是：若 $a > 0$ 且 $a eq.not 1$⁠，则 $a$ 的 $n$ 个 $n$ 次方根即方程 $x^n = a$ 的解为：$ display(cases(x_1 = root(n, a), x_2 = root(n, a) dot.op omega, x_3 = root(n, a) dot.op omega^2, dots.h.c dots.h.c dots.h.c, x_n = root(n, a) dot.op omega^(n - 1))) #h(2em) upright("这里") omega = cos frac(2 pi, n) + i sin frac(2 pi, n) upright("是单位根之一") $
+  这就是：若 $a > 0$ 且 $a eq.not 1$⁠，则 $a$ 的 $n$ 个 $n$ 次方根即方程 $x^n = a$ 的解为：$ display(cases(x_1 = root(n, a), x_2 = root(n, a) dot.op omega, x_3 = root(n, a) dot.op omega^2, dots.h.c thin dots.h.c thin dots.h.c, x_n = root(n, a) dot.op omega^(n - 1))) #h(2em) upright("这里") omega = cos frac(2 pi, n) + i sin frac(2 pi, n) upright("是单位根之一") $
 
 #exercise[
 试求出六次和七次单位根，并分别检验它们之间的关系.
@@ -1775,7 +1756,7 @@ $therefore quad z = 2 dot.op e^(i tfrac(pi, 2))$
 #solution[
 由于
 
-#numbered-align(($e^(i theta)$, $eqph = cos theta + i sin theta #h(2em) upright("(1)")$, true), ($e^(- i theta)$, $eqph = cos (- theta) + i sin (- theta) = cos theta - i sin theta #h(2em) upright("(2)")$, true));
+#numbered-align(($e^(i theta)$, $eqph = cos theta + i sin theta$, [(1)]), ($e^(- i theta)$, $eqph = cos (- theta) + i sin (- theta) = cos theta - i sin theta$, [(2)]));
 
 #noindent; (1)(2) 联立，可解出 $ cos theta & = 1 / 2 (e^(i theta) + e^(- i theta))\
 sin theta & = frac(1, 2 i) (e^(i theta) - e^(- i theta)) $
@@ -2160,14 +2141,7 @@ $therefore quad 1 + cos 2 A + cos 2 B + cos 2 C + 4 cos A cos B cos C = 0$
 
 + 你能用复数表示出图中的半圆来吗？（包括边界）
 
-  #block[
-  #fig("1-17");
-
-  ]
-  #block[
-  #fig("1-18");
-
-  ]
+  #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (45%, 45%,), column-gutter: 1em, align: center + bottom, figure([#fig("1-17");], caption: []), figure([#fig("1-18");], caption: []))));
 
 + #block(sticky: true)[设 $z in bb(C)$⁠，解方程：]
 

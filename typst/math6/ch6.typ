@@ -217,8 +217,11 @@ $f\(x\)= x^2$ 从 $a$ 到 $b$ 的和 $= 1 / 3 b^3 - 1 / 3 a^3 quad\(b > a > 0\)$
 #solution[
 + 取 $\[a\,b\]$ 之间的 $n$ 等分点，将它分成 $n$ 段，即有 $ x_0 = a < x_1 < x_2 < dots.h.c < x_n = b $ #noindent;它的第 $i$ 段是 $\[x_(i - 1)\,x_i\]$⁠，且 $x_i - x_(i - 1) = frac(b - a, n)$⁠，$x_i = a + i / n\(b - a\)$
 
-+ 定义 $f\(x\)$ 的上、下夹逼阶梯函数如下：$ g_n\(x\) & = f\(x_(i - 1)\)\,#h(2em) x_(i - 1) lt.eq x lt.eq x_i\
-  G_n\(x\) & = f\(x_i\)\,#h(2em) x_(i - 1) lt.eq x lt.eq x_i quad\(i = 1\,2\,3\,dots.h\,n\) $ #noindent;由 $f\(x\)$ 的递增性，对于任何一个 $x in\[a\,b\]$⁠，有 $ g_1\(x\)lt.eq g_2\(x\)lt.eq dots.h.c lt.eq g_n\(x\)lt.eq dots.h.c lt.eq f\(x\)lt.eq dots.h.c lt.eq G_n\(x\)lt.eq dots.h.c lt.eq G_2\(x\)lt.eq G_1\(x\) $ #noindent;简写成 $ g_n\(x\)lt.eq f\(x\)lt.eq G_n\(x\)\,#h(2em) a lt.eq x lt.eq b $
++ 定义 $f\(x\)$ 的上、下夹逼阶梯函数如下：
+
+  $ #split-block(($g_n\(x\)$, $⁠eqph = f\(x_(i - 1)\)\,#h(2em) x_(i - 1) lt.eq x lt.eq x_i$), ($⁠G_n\(x\)$, $⁠eqph = f\(x_i\)\,#h(2em) x_(i - 1) lt.eq x lt.eq x_i$)) quad\(i = 1\,2\,3\,dots.h\,n\) $
+
+  #noindent;由 $f\(x\)$ 的递增性，对于任何一个 $x in\[a\,b\]$⁠，有 $ g_1\(x\)lt.eq g_2\(x\)lt.eq dots.h.c lt.eq g_n\(x\)lt.eq dots.h.c lt.eq f\(x\)lt.eq dots.h.c lt.eq G_n\(x\)lt.eq dots.h.c lt.eq G_2\(x\)lt.eq G_1\(x\) $ #noindent;简写成 $ g_n\(x\)lt.eq f\(x\)lt.eq G_n\(x\)\,#h(2em) a lt.eq x lt.eq b $
 
 + 求相应的阶梯函数从 $a$ 到 $b$ 的和#numbered-eq($ s_n = g_n\(x\)upright("从") a upright("到") b upright("的和") & = frac(b - a, n) [f \( x_0 \) + f \( x_1 \) + dots.h.c + f \( x_(n - 1) \)]\
  & = frac(b - a, n) sum_(i = 1)^n f\(x_(i - 1)\) $); #numbered-eq($ S_n = G_n\(x\)upright("从") a upright("到") b upright("的和") & = frac(b - a, n) [f \( x_1 \) + f \( x_2 \) + dots.h.c + f \( x_n \)]\

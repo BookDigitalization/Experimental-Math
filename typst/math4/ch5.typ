@@ -324,7 +324,7 @@ sum_(i = k)^n a_i & = a_k + a_(k + 1) + dots.h.c + a_n $
 数列 $\{ S_k\(n\)\}$ 称为数列 $\{ f\(n\)\}$ 的和数列，即 $ S_k\(1\) & = f\(0\)\
 S_k\(2\) & = f\(0\)+ f\(1\)\
 S_k\(3\) & = f\(0\)+ f\(1\)+ f\(2\)\
-dots.h.c & dots.h.c dots.h.c $
+dots.h.c & dots.h.c thin dots.h.c $
 
 为讨论方便起见，规定 $S_k\(0\)= 0$, 于是和数列 $\{ S_k\(n\)\}$ 满足下面两个性质：
 
@@ -332,11 +332,11 @@ dots.h.c & dots.h.c dots.h.c $
 
 + $S_k\(n + 1\)- S_k\(n\)= f\(n\)\,#h(2em) n = 0\,1\,2\,dots.h$
 
-我们来考虑这样一个多项式，它在 $k$ 个点 $0\,1\,2\,dots.h\,k - 1$ 处与横坐标轴相交，又通过 $\(k\,1\)$ 点，显然这个关于 $n$ 的多项式为 $ q_k\(n\)= frac(n\(n - 1\)dots.h.c\(n - k + 1\), k !) $ #noindent;下面来求数列 $\{ q_k\(n\)\}\,thick n = 0\,1\,2\,dots.h$ 的前 $n$ 项和的公式．
+我们来考虑这样一个多项式，它在 $k$ 个点 $0\,1\,2\,dots.h\,k - 1$ 处与横坐标轴相交，又通过 $\(k\,1\)$ 点，显然这个关于 $n$ 的多项式为 $ q_k\(n\)= frac(n\(n - 1\) thin dots.h.c thin \(n - k + 1\), k !) $ #noindent;下面来求数列 $\{ q_k\(n\)\}\,thick n = 0\,1\,2\,dots.h$ 的前 $n$ 项和的公式．
 
 #example[
-设 $q_k\(n\)= frac(1, k !) n\(n - 1\)dots.h.c\(n - k + 1\)$⁠，则前 $n$ 项的和 $ S_k\(n\) & = sum_(i = 0)^(n - 1) q_k\(i\)= q_k\(0\)+ q_k\(1\)+ dots.h.c + q_k\(n - 1\)\
- & = frac(1, \(k + 1\)!) n\(n - 1\)dots.h.c\(n - k\) $ #noindent;换言之，其和是这样一个多项式，它在 $0\,1\,2\,dots.h\,k$⁠，共 $k + 1$ 个点处与坐标轴相交且通过 $\(\(k + 1\)\,1\)$ 点．
+设 $q_k\(n\)= frac(1, k !) n\(n - 1\) thin dots.h.c thin \(n - k + 1\)$⁠，则前 $n$ 项的和 $ S_k\(n\) & = sum_(i = 0)^(n - 1) q_k\(i\)= q_k\(0\)+ q_k\(1\)+ dots.h.c + q_k\(n - 1\)\
+ & = frac(1, \(k + 1\)!) n\(n - 1\) thin dots.h.c thin \(n - k\) $ #noindent;换言之，其和是这样一个多项式，它在 $0\,1\,2\,dots.h\,k$⁠，共 $k + 1$ 个点处与坐标轴相交且通过 $\(\(k + 1\)\,1\)$ 点．
 
 ]
 #solution[
@@ -346,20 +346,20 @@ dots.h.c & dots.h.c dots.h.c $
 
 #noindent;由于 $q_k\(0\)= q_k\(1\)= dots.h.c = q_k\(k - 1\)= 0$, 且 $q_k\(k\)= 1$, 于是#numbered-eq($ S_k\(n\) & = q_k\(0\)+ q_k\(1\)+ dots.h.c + q_k\(n - 1\)\
  & = underbrace(0 + 0 + dots.h.c + 0, k upright("项")) + 1 +\(k + 1\)+\
- & #h(2em) dots.h.c + frac(1, k !)\(n - 1\)\(n - 2\)dots.h.c\(n - k\) $);
+ & #h(2em) thin dots.h.c + frac(1, k !)\(n - 1\)\(n - 2\) thin dots.h.c thin \(n - k\) $);
 
 由等式 (5.1) 和 (5.3) 得到
 
 #numbered-align(($S_k\(0\)= S_k\(1\)= dots.h.c = S_k\(k\)= 0$, $$, true), ($S_k\(k + 1\)= 1$, $$, true));
 
-#noindent;从而知道 $S_k\(n\)$ 有下面 $k + 1$ 个因式，即 $ S_k\(n\)= C n\(n - 1\)\(n - 2\)dots.h.c\(n - k\) $ #noindent;这里 $C$ 是未定的常数因子．
+#noindent;从而知道 $S_k\(n\)$ 有下面 $k + 1$ 个因式，即 $ S_k\(n\)= C n\(n - 1\)\(n - 2\) thin dots.h.c thin \(n - k\) $ #noindent;这里 $C$ 是未定的常数因子．
 
-常数因子 $C$ 可由 (5.5) 确定，$ S_k\(k + 1\)= C\(k + 1\)k\(k - 1\)dots.h.c 2 dot.op 1 = 1 $ #noindent;$therefore quad C = frac(1, \(k + 1\)!)$
+常数因子 $C$ 可由 (5.5) 确定，$ S_k\(k + 1\)= C\(k + 1\)k\(k - 1\) thin dots.h.c thin 2 dot.op 1 = 1 $ #noindent;$therefore quad C = frac(1, \(k + 1\)!)$
 
-此处记 $\(k + 1\)! = 1 dot.op 2 dot.op 3 dots.h.c k\(k + 1\)$⁠．
+此处记 $\(k + 1\)! = 1 dot.op 2 dot.op 3 thin dots.h.c thin k\(k + 1\)$⁠．
 
-因此，$ S_k\(n\) & = sum_(i = 0)^(n - 1) q_k\(i\)= sum_(i = 0)^(n - 1) frac(1, k !) i\(i - 1\)dots.h.c\(i - k + 1\)\
- & = frac(1, \(k + 1\)!) n\(n - 1\)dots.h.c\(n - k\) $
+因此，$ S_k\(n\) & = sum_(i = 0)^(n - 1) q_k\(i\)= sum_(i = 0)^(n - 1) frac(1, k !) i\(i - 1\) thin dots.h.c thin \(i - k + 1\)\
+ & = frac(1, \(k + 1\)!) n\(n - 1\) thin dots.h.c thin \(n - k\) $
 
 ]
 我们也常用这样一种想法来求数列前 $n$ 项和的公式，即如果数列的通项能分解成另一个数列相邻两项的差：
@@ -534,7 +534,7 @@ v_n & =\(v_n - v_(n - 1)\)+\(v_(n - 1) - v_(n - 2)\)+ dots.h.c +\(v_1 - v_0\)+ v
 
 + 设等比数列 $a_1\,a_2\,dots.h\,a_n\,dots.h$ 的公比是 $q$⁠．
 
-  求证：$a_1 a_2 dots.h.c a_n = a_1^n q^(tfrac(n\(n - 1\), 2))$
+  求证：$a_1 a_2 thin dots.h.c thin a_n = a_1^n q^(tfrac(n\(n - 1\), 2))$
 
 + #block(sticky: true)[求下列各数列的和]
 

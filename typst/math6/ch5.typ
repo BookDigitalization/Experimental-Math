@@ -720,19 +720,19 @@ $ f'\(x\) & = frac(sqrt(9 + x^2)\(x\)' - x (sqrt(9 + x^2))', 9 + x^2)\
 求复合函数的导数，关键在于分析清楚函数的复合关系，适当选定中间变量，根据复合函数求导法则由外向里逐层求导，直到最后一个中间变量对自变量求导为止，每次求导时，必须明确是哪个变量对哪个变量求导，所有这些导数的乘积就是复合函数的导数．
 
 #blk[推论2][
-$ \(ln\|g\(x\)\|\)' = frac(g'\(x\), g\(x\)) quad\(g\(x\)eq.not 0\) $
+$ \(ln thin \|g\(x\)\|\)' = frac(g'\(x\), g\(x\)) quad\(g\(x\)eq.not 0\) $
 
 ]
 #proof[
-$ ln\|g\(x\)\|upright("有意义") quad arrow.l.r.double.long quad g\(x\)eq.not 0 $ #noindent;又 $ \|g\(x\)\|' upright("存在") quad arrow.l.r.double.long quad g\(x\)eq.not 0 $ #noindent;所以由 $ \|g\(x\)\|' = display(cases(g'\(x\)\, & quad g\(x\)> 0, \[- g\(x\)\]' = - g'\(x\)\, & quad g\(x\)< 0)) $ #noindent;和复合函数求导法则，便得 $ \[ln\|g\(x\)\|\]' = frac(1, \|g\(x\)\|) dot.op\|g\(x\)\|' = frac(g'\(x\), g\(x\)) quad\(g\(x\)eq.not 0\) $
+$ ln thin \|g\(x\)\|upright("有意义") quad arrow.l.r.double.long quad g\(x\)eq.not 0 $ #noindent;又 $ \|g\(x\)\|' upright("存在") quad arrow.l.r.double.long quad g\(x\)eq.not 0 $ #noindent;所以由 $ \|g\(x\)\|' = display(cases(g'\(x\)\, & quad g\(x\)> 0, \[- g\(x\)\]' = - g'\(x\)\, & quad g\(x\)< 0)) $ #noindent;和复合函数求导法则，便得 $ \[ln thin \|g\(x\)\|\]' = frac(1, \|g\(x\)\|) dot.op\|g\(x\)\|' = frac(g'\(x\), g\(x\)) quad\(g\(x\)eq.not 0\) $
 
 ]
 #example[
-求 $\(ln\|x^2 - 5 x + 4\|\)'$
+求 $\(ln thin \|x^2 - 5 x + 4\|\)'$
 
 ]
 #solution[
-$ \(ln\|x^2 - 5 x + 4\|\)' = frac(\(x^2 - 5 x + 4\)', x^2 - 5 x + 4) = frac(2 x - 5, x^2 - 5 x + 4) $ #noindent;其中：$x^2 - 5 x + 4 eq.not 0$⁠，即 $x eq.not 1$ 和 $x eq.not 4$.
+$ \(ln thin \|x^2 - 5 x + 4\|\)' = frac(\(x^2 - 5 x + 4\)', x^2 - 5 x + 4) = frac(2 x - 5, x^2 - 5 x + 4) $ #noindent;其中：$x^2 - 5 x + 4 eq.not 0$⁠，即 $x eq.not 1$ 和 $x eq.not 4$.
 
 ]
 #example[
@@ -740,7 +740,7 @@ $ \(ln\|x^2 - 5 x + 4\|\)' = frac(\(x^2 - 5 x + 4\)', x^2 - 5 x + 4) = frac(2 x 
 
 ]
 #solution[
-设 $y = frac(\(x^2 + 1\)^(tfrac(1, 2))\(x - 1\)^2, \(x + 1\)^(tfrac(3, 2)))$⁠，则 $ ln\|y\| & = 1 / 2 ln\(x^2 + 1\)+ 2 ln\|x - 1\|- 3 / 2 ln\|x + 1\|\
+设 $y = frac(\(x^2 + 1\)^(tfrac(1, 2))\(x - 1\)^2, \(x + 1\)^(tfrac(3, 2)))$⁠，则 $ ln thin \|y\| & = 1 / 2 ln\(x^2 + 1\)+ 2 ln thin \|x - 1\|- 3 / 2 ln thin \|x + 1\|\
 1 / y dot.op y' & = 1 / 2 frac(2 x, x^2 + 1) + frac(2, x - 1) - frac(3, 2\(x + 1\))\
  & = frac(3 x^3 + 7 x^2 - x + 7, 2\(x^2 + 1\)\(x - 1\)\(x + 1\)) $ $ y' & = frac(3 x^3 + 7 x^2 - x + 7, 2\(x^2 + 1\)\(x - 1\)\(x + 1\)) dot.op frac(\(x^2 + 1\)^(tfrac(1, 2))\(x - 1\)^2, \(x + 1\)^(tfrac(3, 2)))\
  & = frac(\(3 x^3 + 7 x^2 - x + 7\)\(x - 1\), 2\(x^2 + 1\)^(tfrac(1, 2))\(x + 1\)^(tfrac(5, 2))) $
@@ -889,7 +889,7 @@ $therefore quad frac(thin upright(d) x, thin upright(d) t) = 10 / 3 = 3 1 / 3\(u
 $ \(arcsin x\)' & = 1 / sqrt(1 - x^2)\,#h(2em) - 1 < x < 1\
 \(arccos x\)' & = frac(- 1, sqrt(1 - x^2))\,#h(2em) - 1 < x < 1\
 \(arctan x\)' & = frac(1, 1 + x^2)\,#h(2em) - oo < x < oo\
-\("arccot" x\)' & = frac(- 1, 1 + x^2)\,#h(2em) - oo < x < oo $
+\(op("arccot") x\)' & = frac(- 1, 1 + x^2)\,#h(2em) - oo < x < oo $
 
 ]
 #proof[
@@ -901,15 +901,15 @@ $ \(arcsin x\)' & = 1 / sqrt(1 - x^2)\,#h(2em) - 1 < x < 1\
 
 ]
 #example[
-求 $\("arcsec" x\)'$.
+求 $\(op("arcsec") x\)'$.
 
 ]
 #solution[
-函数 $x = sec y$ 在区间 $(0 \, pi / 2)$ 上，由1递增到 $+ oo$⁠，而在区间 $(pi / 2 \, pi)$ 上，由 $- oo$ 递增到 $- 1$⁠．因此，$x = sec y$⁠，$y in (0 \, pi / 2) union (pi / 2 \, pi)$ 有反函数存在，即：$ y = "arcsec" x\,#h(2em) x in\(- oo\,- 1\)union\(1\,+ oo\) $
+函数 $x = sec y$ 在区间 $(0 \, pi / 2)$ 上，由1递增到 $+ oo$⁠，而在区间 $(pi / 2 \, pi)$ 上，由 $- oo$ 递增到 $- 1$⁠．因此，$x = sec y$⁠，$y in (0 \, pi / 2) union (pi / 2 \, pi)$ 有反函数存在，即：$ y = op("arcsec") x\,#h(2em) x in\(- oo\,- 1\)union\(1\,+ oo\) $
 
-依反函数求导法则，有 $ \("arcsec" x\)' & = frac(1, \(sec y\)') = frac(1, sec y dot.op tan y)\
- & = frac(1, sec\("arcsec" x\)dot.op tan\("arcsec" x\))\
- & = display(cases(frac(1, x sqrt(sec^2\("arcsec" x\)- 1))\, & quad 0 < "arcsec" x < pi / 2, frac(1, x (- sqrt(sec^2\("arcsec" x\)- 1)))\, & quad pi / 2 < "arcsec" x < pi))\
+依反函数求导法则，有 $ \(op("arcsec") x\)' & = frac(1, \(sec y\)') = frac(1, sec y dot.op tan y)\
+ & = frac(1, sec\(op("arcsec") x\)dot.op tan\(op("arcsec") x\))\
+ & = display(cases(frac(1, x sqrt(sec^2\(op("arcsec") x\)- 1))\, & quad 0 < op("arcsec") x < pi / 2, frac(1, x (- sqrt(sec^2\(op("arcsec") x\)- 1)))\, & quad pi / 2 < op("arcsec") x < pi))\
  & = display(cases(frac(1, x sqrt(x^2 - 1))\, & quad x > 1, - frac(1, x sqrt(x^2 - 1))\, & quad x < - 1)) $
 
 ]
@@ -992,9 +992,9 @@ $therefore quad frac(thin upright(d) y, thin upright(d) t) = frac(288, 25 pi\(12
 
   + $arctan\(2 tan x\)$
 
-  + $x^2 "arccot" x / a$
+  + $x^2 op("arccot") x / a$
 
-  + $ln sqrt(1 + 4 x^2) dot.op "arccot" frac(1 - x, 1 + x)$
+  + $ln sqrt(1 + 4 x^2) dot.op op("arccot") frac(1 - x, 1 + x)$
 
   + $frac(1 - arccos 2 x, arctan x)$
 
@@ -1010,7 +1010,7 @@ $therefore quad frac(thin upright(d) y, thin upright(d) t) = frac(288, 25 pi\(12
 
   + $arctan frac(1, 1 - 3 x^2) - arctan frac(1, 1 + 3 x^2)$
 
-  + $"arccot" frac(4 sqrt(x), 1 - 4 x)$
+  + $op("arccot") frac(4 sqrt(x), 1 - 4 x)$
 
 + 一圆锥形容器，深10尺，上顶圆半径为4尺；求
 
@@ -1256,7 +1256,7 @@ frac(thin upright(d)^3 y, thin upright(d) x^3) & = frac(- 2\[\(1 - x\)^3\]', \(1
 $ y' & = m a\(a x + b\)^(m - 1)\
 y'' & = m\(m - 1\)a^2\(a x + b\)^(m - 2)\
 y^(\(3\)) & = m\(m - 1\)\(m - 2\)a^3\(a x + b\)^(m - 3)\
-dots.h.c quad & dots.h.c quad dots.h.c $ #noindent;由此推知：$ y^(\(n\)) = m\(m - 1\)dots.h.c\(m - n + 1\)a^n\(a x + b\)^(m - n) = frac(m !, \(m - n\)!) a^n\(a x + b\)^(m - n) $ #noindent;这个结果的正确性可用数学归纳法证明．
+dots.h.c quad & dots.h.c quad dots.h.c $ #noindent;由此推知：$ y^(\(n\)) = m\(m - 1\) thin dots.h.c thin \(m - n + 1\)a^n\(a x + b\)^(m - n) = frac(m !, \(m - n\)!) a^n\(a x + b\)^(m - n) $ #noindent;这个结果的正确性可用数学归纳法证明．
 
 ]
 #example[

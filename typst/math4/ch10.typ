@@ -4,7 +4,7 @@
 
 = 指数函数与对数函数
 == 有理指数函数
-在本教材第三册中，已经把指数幂的定义范围从正整指数逐步推广到“负整数”，“正、负分数”，在逐步推广过程中，我们始终遵守的指导原则是保有指数法则：$ a^m dot.op a^n = a^(m + n)\,#h(2em)\(a^m\)^n = a^(m dot.op n) $ #noindent;指数在有理数系 $bb(Q)$ 内，我们有下面的指数幂的定义：$ a^n = underbrace(a dot.op a dot.op a dots.h.c a, n upright("个") a)\, & #h(2em)\(n in bb(N)\)\
+在本教材第三册中，已经把指数幂的定义范围从正整指数逐步推广到“负整数”，“正、负分数”，在逐步推广过程中，我们始终遵守的指导原则是保有指数法则：$ a^m dot.op a^n = a^(m + n)\,#h(2em)\(a^m\)^n = a^(m dot.op n) $ #noindent;指数在有理数系 $bb(Q)$ 内，我们有下面的指数幂的定义：$ a^n = underbrace(a dot.op a dot.op a thin dots.h.c thin a, n upright("个") a)\, & #h(2em)\(n in bb(N)\)\
 a^0 = 1\, & #h(2em)\(a eq.not 0\)\
 a^(- n) = 1 / a^n\, & #h(2em)\(a eq.not 0\)\
 a^(tfrac(m, n)) = root(n, a^m) = (root(n, a))^m\, & #h(2em)\(a gt.eq 0\,thick m\,n in bb(N)\)\
@@ -377,7 +377,7 @@ $0 < a < 1$ 的情形，证明留给读者．
 
 由性质1：$ f\(m\) & = f class("opening", stretch(\(, size: #1.2em))\(m - 1\)+ 1 class("closing", stretch(\), size: #1.2em)) = f\(m - 1\)dot.op f\(1\)\
  & = f\(m - 2\)dot.op class("opening", stretch(\(, size: #1.2em)) f\(1\)class("closing", stretch(\), size: #1.2em))^2 = f\(m - 3\)dot.op class("opening", stretch(\(, size: #1.2em)) f\(1\)class("closing", stretch(\), size: #1.2em))^3\
-dots.h.c & dots.h.c dots.h.c dots.h.c dots.h.c\
+dots.h.c & dots.h.c thin dots.h.c thin dots.h.c thin dots.h.c\
  & = class("opening", stretch(\(, size: #1.2em)) f\(1\)class("closing", stretch(\), size: #1.2em))^m = a^m $ #noindent;又因为 $ [f (m / n)]^n & = f overbrace((m / n + m / n + dots.h.c + m / n), n upright("个"))\
  & = f\(m\)= a^m $ #noindent;所以：$f (m / n) = root(n, a^m) = a^(tfrac(m, n))$
 

@@ -601,19 +601,19 @@ $therefore quad a = - 1\,quad b = 1 / 2$ 为所求．
 观察这一串数，我们会猜测这个数列是递增的，可能收敛于一个极限值，现在我们来证明这个猜想成立．
 
 依牛顿二项式定理，即有 $ (1 + 1 / n)^n & = 1 + n dot.op 1 / n + frac(n\(n - 1\), 1 dot.op 2) dot.op 1 / n^2 + frac(n\(n - 1\)\(n - 2\), 1 dot.op 2 dot.op 3) dot.op 1 / n^3\
- & quad eqph + dots.h.c + frac(n\(n - 1\)\(n - 2\)dots.h.c\[n -\(n - 1\)\], 1 dot.op 2 dot.op 3 dots.h.c n) dot.op 1 / n^n $ #noindent;这个等式的右边的第二项等于1，其他各项可以变换如下：$ frac(n\(n - 1\), 1 dot.op 2) dot.op 1 / n^2 & = frac(n\(n - 1\), n^2) dot.op frac(1, 2 !)\
+ & quad eqph + dots.h.c + frac(n\(n - 1\)\(n - 2\) thin dots.h.c\[n -\(n - 1\)\], 1 dot.op 2 dot.op 3 thin dots.h.c thin n) dot.op 1 / n^n $ #noindent;这个等式的右边的第二项等于1，其他各项可以变换如下：$ frac(n\(n - 1\), 1 dot.op 2) dot.op 1 / n^2 & = frac(n\(n - 1\), n^2) dot.op frac(1, 2 !)\
  & = (1 - 1 / n) dot.op frac(1, 2 !)\
 frac(n\(n - 1\)\(n - 2\), 1 dot.op 2 dot.op 3) dot.op 1 / n^3 & = frac(n\(n - 1\)\(n - 2\), n^3) dot.op frac(1, 3 !)\
  & = (1 - 1 / n) dot.op (1 - 2 / n) dot.op frac(1, 3 !)\
-dots.h.c & dots.h.c dots.h.c\
-frac(n\(n - 1\)\(n - 2\)dots.h.c\[n -\(n - 1\)\], 1 dot.op 2 dot.op 3 dots.h.c n) dot.op 1 / n^n & = frac(n\(n - 1\)\(n - 2\)dots.h.c\[n -\(n - 1\)\], n^n) dot.op frac(1, n !)\
- & = (1 - 1 / n) (1 - 2 / n) dots.h.c (1 - frac(n - 1, n)) dot.op frac(1, n !) $ #noindent;其中 $n ! = 1 dot.op 2 dot.op 3 dots.h.c n$⁠．因此：#numbered-eq($ (1 + 1 / n)^n & = 1 + 1 + (1 - 1 / n) frac(1, 2 !) + (1 - 1 / n) (1 - 2 / n) dot.op frac(1, 3 !)\
-  & eqph + dots.h.c + (1 - 1 / n) (1 - 2 / n) dots.h.c (1 - frac(n - 1, n)) dot.op frac(1, n !) $);
+dots.h.c & dots.h.c thin dots.h.c\
+frac(n\(n - 1\)\(n - 2\) thin dots.h.c\[n -\(n - 1\)\], 1 dot.op 2 dot.op 3 thin dots.h.c thin n) dot.op 1 / n^n & = frac(n\(n - 1\)\(n - 2\) thin dots.h.c\[n -\(n - 1\)\], n^n) dot.op frac(1, n !)\
+ & = (1 - 1 / n) (1 - 2 / n) thin dots.h.c thin (1 - frac(n - 1, n)) dot.op frac(1, n !) $ #noindent;其中 $n ! = 1 dot.op 2 dot.op 3 thin dots.h.c thin n$⁠．因此：#numbered-eq($ (1 + 1 / n)^n & = 1 + 1 + (1 - 1 / n) frac(1, 2 !) + (1 - 1 / n) (1 - 2 / n) dot.op frac(1, 3 !)\
+  & eqph + dots.h.c + (1 - 1 / n) (1 - 2 / n) thin dots.h.c thin (1 - frac(n - 1, n)) dot.op frac(1, n !) $);
 
 用 $n + 1$ 代替 $n$ 代入此公式，求出：#numbered-eq($ (1 + frac(1, n + 1))^(n + 1) & = 1 + 1 + (1 - frac(1, n + 1)) frac(1, 2 !) + (1 - frac(1, n + 1)) (1 - frac(2, n + 1)) dot.op frac(1, 3 !)\
- & eqph + dots.h.c + (1 - frac(1, n + 1)) (1 - frac(2, n + 1)) dots.h.c (1 - frac(n, n + 1)) dot.op frac(1, \(n + 1\)!) $);#noindent; (1.9) 的展开式项数比 (1.8) 的展开式的项数多一项，此外 (1.9) 的展开式各项由第三项起大于 (1.8) 的展开式对应项，这是因为 $ 1 - frac(1, n + 1) > 1 - 1 / n\,1 - frac(2, n + 1) > 1 - 2 / n\,dots.h\,1 - frac(n - 1, n + 1) > 1 - frac(n - 1, n) $ #noindent;所以 $ (1 + frac(1, n + 1))^(n + 1) > (1 + 1 / n)^n $ #noindent;这就是说数列 $a_n = (1 + 1 / n)^n\,thick n = 1\,2\,3\,dots.h$ 是递增的．
+ & eqph + dots.h.c + (1 - frac(1, n + 1)) (1 - frac(2, n + 1)) thin dots.h.c thin (1 - frac(n, n + 1)) dot.op frac(1, \(n + 1\)!) $);#noindent; (1.9) 的展开式项数比 (1.8) 的展开式的项数多一项，此外 (1.9) 的展开式各项由第三项起大于 (1.8) 的展开式对应项，这是因为 $ 1 - frac(1, n + 1) > 1 - 1 / n\,1 - frac(2, n + 1) > 1 - 2 / n\,dots.h\,1 - frac(n - 1, n + 1) > 1 - frac(n - 1, n) $ #noindent;所以 $ (1 + frac(1, n + 1))^(n + 1) > (1 + 1 / n)^n $ #noindent;这就是说数列 $a_n = (1 + 1 / n)^n\,thick n = 1\,2\,3\,dots.h$ 是递增的．
 
-但是由等式 (1.8) 可知 $ (1 + 1 / n)^n < 1 + 1 + frac(1, 2 !) + frac(1, 3 !) + dots.h.c + frac(1, n !) $ #noindent;又因为 $ frac(1, 1 dot.op 2 dot.op 3) < 1 / 2^2\,frac(1, 1 dot.op 2 dot.op 3 dot.op 4) < 1 / 2^3\,dots.h\,frac(1, 1 dot.op 2 dot.op 3 dots.h.c n) < 1 / 2^(n - 1) $ #noindent;所以：$ (1 + 1 / n)^n < 2 + 1 / 2 + 1 / 2^2 + dots.h.c + 1 / 2^(n - 1) $ #noindent;但是由第二项起的级数总和小于 $frac(tfrac(1, 2), 1 - tfrac(1, 2)) = 1$⁠，所以：$ (1 + 1 / n)^n < 2 + frac(1 / 2, 1 - 1 / 2) = 3 $ #noindent;这就是说数列 $lr(\{ (1 + 1 / n)^n \})$ 是递增有上界的，所以它有极限，设它的极限用 $e$ 表示，因而我们有数 $ e = limits(lim)_(n arrow.r oo) (1 + 1 / n)^n $ #noindent;这个数 $e$ 是无理数，取它的十进小数到十五位，其值是 $ e = 2.718281828459045 dots.h.c $
+但是由等式 (1.8) 可知 $ (1 + 1 / n)^n < 1 + 1 + frac(1, 2 !) + frac(1, 3 !) + dots.h.c + frac(1, n !) $ #noindent;又因为 $ frac(1, 1 dot.op 2 dot.op 3) < 1 / 2^2\,frac(1, 1 dot.op 2 dot.op 3 dot.op 4) < 1 / 2^3\,dots.h\,frac(1, 1 dot.op 2 dot.op 3 thin dots.h.c thin n) < 1 / 2^(n - 1) $ #noindent;所以：$ (1 + 1 / n)^n < 2 + 1 / 2 + 1 / 2^2 + dots.h.c + 1 / 2^(n - 1) $ #noindent;但是由第二项起的级数总和小于 $frac(tfrac(1, 2), 1 - tfrac(1, 2)) = 1$⁠，所以：$ (1 + 1 / n)^n < 2 + frac(1 / 2, 1 - 1 / 2) = 3 $ #noindent;这就是说数列 $lr(\{ (1 + 1 / n)^n \})$ 是递增有上界的，所以它有极限，设它的极限用 $e$ 表示，因而我们有数 $ e = limits(lim)_(n arrow.r oo) (1 + 1 / n)^n $ #noindent;这个数 $e$ 是无理数，取它的十进小数到十五位，其值是 $ e = 2.718281828459045 dots.h.c $
 
 现在要把变数 $n$ 推广到实数 $x$, 这是一个以后常要用到的重要极限．
 
@@ -816,7 +816,7 @@ $n$ 次算术方根函数 $root(n, x)$ 在 $\[0\,+ oo\)$ 上到处连续．
 由反函数连续性定理直接得出下面命题．
 
 #blk[命题7][
-反三角函数 $y = arcsin x thick (- pi / 2 lt.eq y lt.eq pi / 2)$,#h(1em);$y = arccos x thick (0 lt.eq y lt.eq pi)$,#h(1em);$y = arctan x thick (- pi / 2 < y < pi / 2)$,#h(1em);$y = "arccot" x thick (0 < y < pi)$ 在它们各自的定义域上到处连续．
+反三角函数 $y = arcsin x thick (- pi / 2 lt.eq y lt.eq pi / 2)$,#h(1em);$y = arccos x thick (0 lt.eq y lt.eq pi)$,#h(1em);$y = arctan x thick (- pi / 2 < y < pi / 2)$,#h(1em);$y = op("arccot") x thick (0 < y < pi)$ 在它们各自的定义域上到处连续．
 
 ]
 #blk[命题8][
@@ -916,7 +916,7 @@ $therefore quad limits(lim)_(x arrow.r 2) sqrt(frac(1 - cos pi x, 4 - x^2)) = sq
 
 + $sin x\,thick cos x\,thick tan x\,thick cot x$
 
-+ $arcsin x\,thick arccos x\,thick arctan x\,thick "arccot" x$
++ $arcsin x\,thick arccos x\,thick arctan x\,thick op("arccot") x$
 
 #noindent;上面这些函数统称为#strong[基本初等函数]．
 
@@ -942,11 +942,11 @@ $therefore quad limits(lim)_(x arrow.r 2) sqrt(frac(1 - cos pi x, 4 - x^2)) = sq
   #cols(2)[
   + $f\(x\)= frac(x^2, 1 + x^2)$
 
-  + $f\(x\)= sin\|x\|$
+  + $f\(x\)= sin thin \|x\|$
 
   + $phi\(x\)=\|sin x\|$
 
-  + $k\(x\)= lr(\{ cos x - sin \| x \| \})^3$
+  + $k\(x\)= lr(\{ cos x - sin thin \| x \| \})^3$
 
   ]
 

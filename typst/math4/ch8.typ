@@ -680,7 +680,7 @@ $f\(x\)= root(n, x)$ 在区间 $\[0\,+ oo\)$ 上连续，即 $ lim_(x arrow.r x_
 
 这样继续下去，我们得到无穷个闭区间满足下面的条件：
 
-+ $\[a\,b\]=\[1\,2\]supset.eq\[a_1\,b_1\]= [1 \, 3 / 2] supset.eq\[a_2\,b_2\]= [1 \, 5 / 4] supset.eq\[a_3\,b_3\]= [1.125 \, 1.25] supset.eq\[a_4\,b_4\]= [1.1875 \, 1.25] supset.eq\[a_5\,b_5\]= [1.1875 \, 1.2188] supset.eq\[a_6\,b_6\]= [1.203 \, 1.2188] supset.eq\[a_7\,b_7\]= [1.211 \, 1.2188] supset.eq\[a_8\,b_8\]= [1.211 \, 1.215] supset.eq\[a_9\,b_9\]= [1.213 \, 1.215] supset.eq dots.h.c supset.eq\[a_n\,b_n\]supset.eq dots.h.c$
++ $\[a\,b\]=\[1\,2\]supset.eq\[a_1\,b_1\]= [1 \, 3 / 2] supset.eq\[a_2\,b_2\]= [1 \, 5 / 4] supset.eq\[a_3\,b_3\]= [1.125 \, 1.25] supset.eq\[a_4\,b_4\]= [1.1875 \, 1.25] supset.eq\[a_5\,b_5\]= [1.1875 \, 1.2188] supset.eq\[a_6\,b_6\]= [1.203 \, 1.2188] supset.eq\[a_7\,b_7\]= [1.211 \, 1.2188] supset.eq\[a_8\,b_8\]= [1.211 \, 1.215] supset.eq\[a_9\,b_9\]= [1.213 \, 1.215] supset.eq dots.h.c thin supset.eq\[a_n\,b_n\]supset.eq dots.h.c$
 
 + $\[a_n\,b_n\]= 1 / 2\[a_(n - 1)\,b_(n - 1)\]= 1 / 2^2\[a_(n - 2)\,b_(n - 2)\]= dots.h.c = 1 / 2^n\[a\,b\]$
 

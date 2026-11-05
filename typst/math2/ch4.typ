@@ -1903,9 +1903,9 @@ $therefore quad angle A F G = angle G D B$, $B$⁠、$D$⁠、$G$⁠、$F$ 四�
 如果把圆分成 $n$ 等分，那么，顺次连结各分点所得的多边形是圆的内接正 $n$ 边形；经过各分点作圆的切线，所组成的多边形是圆的外切正 $n$ 边形．
 
 ]
-已知：$A_1\,A_2\,A_3\,dots.h\,A_n$ 为 $n$ 等分某圆周的分点，过 $A_1\,A_2\,A_3\,dots.h\,A_n$, 作圆的切线交成 $n$ 边形 $A'_1 A'_2 A'_3 dots.h.c A'_n$ (图4.73).
+已知：$A_1\,A_2\,A_3\,dots.h\,A_n$ 为 $n$ 等分某圆周的分点，过 $A_1\,A_2\,A_3\,dots.h\,A_n$, 作圆的切线交成 $n$ 边形 $A'_1 A'_2 A'_3 thin dots.h.c thin A'_n$ (图4.73).
 
-求证：$n$ 边形 $A_1 A_2 A_3 dots.h.c A_n$ 和 $A'_1 A'_2 A'_3 dots.h.c A'_n$ 都是正多边形．
+求证：$n$ 边形 $A_1 A_2 A_3 thin dots.h.c thin A_n$ 和 $A'_1 A'_2 A'_3 thin dots.h.c thin A'_n$ 都是正多边形．
 
 #figure([#fig("4-92");
 
@@ -1921,18 +1921,18 @@ $therefore quad wideparen(A_1 A_2) = wideparen(A_2 A_3) = dots.h.c = wideparen(A
 
 又 $because quad angle A_1\,angle A_2\,angle A_3\,dots.h\,angle A_n$ 的度数都等于 $wideparen(A_1 A_2)$ 的度数的 $\(n - 2\)$ 倍的一半．
 
-$therefore quad angle A_1 = angle A_2 = angle A_3 = dots.h.c = angle A_n$, $A_1 A_2 A_3 dots.h.c A_n$ 是正 $n$ 边形．
+$therefore quad angle A_1 = angle A_2 = angle A_3 = dots.h.c = angle A_n$, $A_1 A_2 A_3 thin dots.h.c thin A_n$ 是正 $n$ 边形．
 
 由于在 $triangle.stroked.t A'_1 A_1 A_2\,triangle.stroked.t A'_2 A_2 A_3\,dots.h\,triangle.stroked.t A'_n A_n A_1$ 中，$overline(A_1 A_2) = overline(A_2 A_3) = dots.h.c = overline(A_n A_1)$⁠，且
 
 #numbered-align(($angle A'_1 A_1 A_2$, $eqph = angle A'_1 A_2 A_1$, false), ($$, $eqph = angle A'_2 A_2 A_3 = angle A'_2 A_3 A_2$, [(弦切角定理及其推论)]), ($$, $eqph = dots.h.c = angle A'_n A_n A_1 = angle A'_n A_1 A_n$, false));
 
-$therefore quad triangle.stroked.t A'_1 A_1 A_2 tilde.equiv triangle.stroked.t A'_2 A_2 A_3 tilde.equiv dots.h.c tilde.equiv triangle.stroked.t A'_n A_n A_1$
+$therefore quad triangle.stroked.t A'_1 A_1 A_2 tilde.equiv triangle.stroked.t A'_2 A_2 A_3 tilde.equiv dots.h.c thin tilde.equiv triangle.stroked.t A'_n A_n A_1$
 
 因此：$ angle A'_1 & = angle A'_2 = angle A'_3 = dots.h.c = angle A'_n\
 overline(A'_1 A'_2) & = overline(A'_2 A'_3) = dots.h.c = overline(A'_n A'_1) $
 
-$therefore quad A'_1 A'_2 A'_3 dots.h.c A'_n$ 是正多边形．
+$therefore quad A'_1 A'_2 A'_3 thin dots.h.c thin A'_n$ 是正多边形．
 
 ]
 根据上述定理，我们只要把圆 $n$ 等分就可作出圆的内接正 $n$ 边形了，但能否只用直尺圆规将一个圆 $n$ 等分呢？这个问题并不简单，事实上有的是不可能的．下面我们举例给出圆内接正六边形、正三角形、正方形的作法．
@@ -2048,7 +2048,7 @@ $therefore quad A B C D$ 为 $dot.o O$ 的内接正方形（本节定理）．
 任何正多边形都有一个外接圆和一个内切圆，这两个圆是同心圆．
 
 ]
-已知：$A_1 A_2 A_3 dots.h.c A_n$ 是正多边形（图4.78）.
+已知：$A_1 A_2 A_3 thin dots.h.c thin A_n$ 是正多边形（图4.78）.
 
 求证：它有外接圆和内切圆，且二圆同心．
 
@@ -2074,9 +2074,9 @@ $therefore quad angle O A_2 A_1 = angle O A_1 A_2 = 1 / 2 angle A_n A_1 A_2 = 1 
 
 $therefore quad triangle.stroked.t O A_1 A_2 tilde.equiv triangle.stroked.t O A_2 A_3$ (SAS), $overline(O A_2) = overline(O A_3)$
 
-这就是说 $A_3$ 在所作的 $dot.o O$ 上．循此下去，同样可证明正多边形 $A_1 A_2 A_3 dots.h.c A_n$ 的其他各顶点也在 $dot.o O$ 上．
+这就是说 $A_3$ 在所作的 $dot.o O$ 上．循此下去，同样可证明正多边形 $A_1 A_2 A_3 thin dots.h.c thin A_n$ 的其他各顶点也在 $dot.o O$ 上．
 
-其次，有了外接圆 $dot.o O$⁠，圆心 $O$ 到各边的距离便彼此相等，这就是说，以 $O$ 为圆心，$O$ 到一边的距离为半径必可作一圆和各边都相切，此圆即是正多边形 $A_1 A_2 A_3 dots.h.c A_n$ 的内切圆（图4.78）.
+其次，有了外接圆 $dot.o O$⁠，圆心 $O$ 到各边的距离便彼此相等，这就是说，以 $O$ 为圆心，$O$ 到一边的距离为半径必可作一圆和各边都相切，此圆即是正多边形 $A_1 A_2 A_3 thin dots.h.c thin A_n$ 的内切圆（图4.78）.
 
 ]
 正多边形的外接圆和内切圆的公共圆心，叫做#strong[正多边形的中心]；外接圆的半径，叫做#strong[正多边形的半径]；内切圆的半径，叫做正多边形的#strong[边心距]；正多边形每一边所对的外接圆的圆心角，叫做#strong[正多边形的中心角]．
@@ -2088,7 +2088,7 @@ $therefore quad triangle.stroked.t O A_1 A_2 tilde.equiv triangle.stroked.t O A_
   ]
 )
 
-如图4.79, $A_1 A_2 A_3 dots.h.c A_n$ 是正 $n$ 边形，$dot.o\(O\,r\)$ 是它的外接圆，$dot.o\(O\,d_n\)$ 是它的内切圆，$O$ 为它的中心，$r$ 是它的半径，$d_n$ 是它的边心距．设正 $n$ 边形的边长为 $a_n$, 半径长为 $r$, 边心距为 $d_n$, 这三者有下面的勾股关系．$ r^2 = d_n^2 + (a_n / 2)^2 $
+如图4.79, $A_1 A_2 A_3 thin dots.h.c thin A_n$ 是正 $n$ 边形，$dot.o\(O\,r\)$ 是它的外接圆，$dot.o\(O\,d_n\)$ 是它的内切圆，$O$ 为它的中心，$r$ 是它的半径，$d_n$ 是它的边心距．设正 $n$ 边形的边长为 $a_n$, 半径长为 $r$, 边心距为 $d_n$, 这三者有下面的勾股关系．$ r^2 = d_n^2 + (a_n / 2)^2 $
 
 由于边数相同的正多边形的对应角都相等；正多边形的各边相等，所以边数相同的正多边形的对应边成比例．因此，我们可得下面的定理．
 

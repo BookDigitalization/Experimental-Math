@@ -21,10 +21,10 @@
 + 上述除式的意义是 $ 2 & = 0.6 times 3 + 0.2 arrow.l.r.double.long 0.6 < 2 / 3 < 0.7\,\
    & = 0.66 times 3 + 0.02 arrow.l.r.double.long 0.66 < 2 / 3 < 0.67\,\
    & = 0.666 times 3 + 0.002 arrow.l.r.double.long 0.666 < 2 / 3 < 0.667\,\
-  dots.h.c & dots.h.c dots.h.c dots.h.c dots.h.c dots.h.c dots.h.c dots.h.c $
+  dots.h.c & dots.h.c thin dots.h.c thin dots.h.c thin dots.h.c thin dots.h.c thin dots.h.c thin dots.h.c $
 
-从上面的分析，同学们可以看出 $2 / 3$ 显然不能用有限位小数表示出，但是存在着由有限位小数所成的无穷数列 $\{ a_n \}$ 和 $\{ b_n \}$ $ \{ a_n \} & : quad a_1 = 0.6\,thick a_2 = 0.66\,thick a_3 = 0.666\,thick dots.h\,thick a_n = 0 . underbrace(66 dots.h.c 66, n upright("位小数"))\,thick dots.h\
-\{ b_n \} & : quad b_1 = 0.7\,thick b_2 = 0.67\,thick b_3 = 0.667\,thick dots.h\,thick b_n = 0 . underbrace(66 dots.h.c 67, n upright("位小数"))\,thick dots.h $ #noindent;满足 $ a_n = 0 . underbrace(66 dots.h.c 66, n upright("位小数")) < 2 / 3 < 0 . underbrace(66 dots.h.c 67, n upright("位小数")) = a_n + 1 / 10^n $ #noindent;并且 $a_n$ 与 $2 / 3$ 之间的误差 $lr(|a_n - 2 / 3|) < b_n - a_n = 1 / 10^n$, 同样 $b_n$ 与 $2 / 3$ 之间误差 $lr(|b_n - 2 / 3|) < 1 / 10^n$⁠，只要 $n$ 充分大，误差可以小到任意小．上面的逼近过程，表明无穷数列 $\{ a_n \}$, $\{ b_n \}$ 从左、右两方面趋近 $2 / 3$⁠，可以使其误差任意小，$2 / 3$ 就是数列 $\{ a_n \}$ 的极限，也是数列 $\{ b_n \}$ 的极限，用符号表示就是 $ lim_(n arrow.r oo) a_n = 2 / 3\,#h(2em) lim_(n arrow.r oo) b_n = 2 / 3 $ #noindent;或者用 $ a_n arrow.r 2 / 3\,#h(2em) b_n arrow.r 2 / 3\,#h(2em) a_n arrow.r 2 / 3 arrow.l b_n $ #noindent;来生动地表述上述事实．
+从上面的分析，同学们可以看出 $2 / 3$ 显然不能用有限位小数表示出，但是存在着由有限位小数所成的无穷数列 $\{ a_n \}$ 和 $\{ b_n \}$ $ \{ a_n \} & : quad a_1 = 0.6\,thick a_2 = 0.66\,thick a_3 = 0.666\,thick dots.h\,thick a_n = 0 . underbrace(66 thin dots.h.c thin 66, n upright("位小数"))\,thick dots.h\
+\{ b_n \} & : quad b_1 = 0.7\,thick b_2 = 0.67\,thick b_3 = 0.667\,thick dots.h\,thick b_n = 0 . underbrace(66 thin dots.h.c thin 67, n upright("位小数"))\,thick dots.h $ #noindent;满足 $ a_n = 0 . underbrace(66 thin dots.h.c thin 66, n upright("位小数")) < 2 / 3 < 0 . underbrace(66 thin dots.h.c thin 67, n upright("位小数")) = a_n + 1 / 10^n $ #noindent;并且 $a_n$ 与 $2 / 3$ 之间的误差 $lr(|a_n - 2 / 3|) < b_n - a_n = 1 / 10^n$, 同样 $b_n$ 与 $2 / 3$ 之间误差 $lr(|b_n - 2 / 3|) < 1 / 10^n$⁠，只要 $n$ 充分大，误差可以小到任意小．上面的逼近过程，表明无穷数列 $\{ a_n \}$, $\{ b_n \}$ 从左、右两方面趋近 $2 / 3$⁠，可以使其误差任意小，$2 / 3$ 就是数列 $\{ a_n \}$ 的极限，也是数列 $\{ b_n \}$ 的极限，用符号表示就是 $ lim_(n arrow.r oo) a_n = 2 / 3\,#h(2em) lim_(n arrow.r oo) b_n = 2 / 3 $ #noindent;或者用 $ a_n arrow.r 2 / 3\,#h(2em) b_n arrow.r 2 / 3\,#h(2em) a_n arrow.r 2 / 3 arrow.l b_n $ #noindent;来生动地表述上述事实．
 
 从这里我们看到逼近与极限是密切相关的，极限只是把逼近过程推进到无穷 $\(n arrow.r oo\)$ 的结果，逼近只要误差小到所要求的精确度后就可以停止．$limits(lim)_(n arrow.r oo) a_n = 2 / 3$ 表示数列 $\{ a_n \}$ 当 $n$ 无限增大的极限值是 $2 / 3$⁠．
 
@@ -309,7 +309,7 @@ $ upright("分母") & = n (cos^2 1 / 2 n pi + n sin^2 1 / 2 n pi)\
 
 ]
 #proof[
-设 $a_n = frac(r^n, n !)$⁠，因 $r$ 是常数且 $n$ 在无限增大过程中必有一自然数 $k$, 使得 $k lt.eq\|r\|< k + 1$⁠，于是 $ frac(\|r\|, k + 1) < 1 $ #noindent;又：$ \|a_n\|= lr(|frac(r^n, n !)|) & = frac(\|r\|^k, k !) (frac(\|r\|, k + 1) dot.op frac(\|r\|, k + 2) dots.h.c frac(\|r\|, n))\
+设 $a_n = frac(r^n, n !)$⁠，因 $r$ 是常数且 $n$ 在无限增大过程中必有一自然数 $k$, 使得 $k lt.eq\|r\|< k + 1$⁠，于是 $ frac(\|r\|, k + 1) < 1 $ #noindent;又：$ \|a_n\|= lr(|frac(r^n, n !)|) & = frac(\|r\|^k, k !) (frac(\|r\|, k + 1) dot.op frac(\|r\|, k + 2) thin dots.h.c thin frac(\|r\|, n))\
  & < frac(\|r\|^k, k !) dot.op lr(|frac(r, k + 1)|)^(n - k)\
  & = frac(\|k + 1\|^k, k !) dot.op lr(|frac(r, k + 1)|)^n $ #noindent;$because quad lr(|frac(r, k + 1)|) < 1$
 
@@ -353,7 +353,7 @@ x_4 & = frac(2 + 1.4166666^2, 2 times 1.4166666) = 1.4142157 $ #noindent;其误�
 
 + 应用上题，求 $limits(lim)_(n arrow.r oo) frac(r^n, n !)$⁠．
 
-+ 求 $limits(lim)_(n arrow.r oo) frac(n\(n - 1\)dots.h.c\(n - k + 1\), k !) (1 / 2)^n$⁠．
++ 求 $limits(lim)_(n arrow.r oo) frac(n\(n - 1\) thin dots.h.c thin \(n - k + 1\), k !) (1 / 2)^n$⁠．
 
 + 设数列 $lr(\{ p_n / q_n \})$ 是一个逐步定义的有理分数数列：$ a_1 & = p_1 / q_1 = 1 / 1\,quad a_2 = p_2 / q_2 = frac(p_1 + 2 q_1, p_1 + q_1) = frac(1 + 2 times 1, 1 + 1) = 3 / 2\
   a_3 & = p_3 / q_3 = frac(p_2 + 2 q_2, p_2 + q_2) = frac(3 + 2 times 2, 3 + 2) = 7 / 5\,quad dots.h $ #noindent;由 $a_n = p_n / q_n$⁠，我们定义 $a_(n + 1) = p_(n + 1) / q_(n + 1) = frac(p_n + 2 q_n, p_n + q_n)$⁠．
@@ -603,7 +603,7 @@ $ (1 + 1 / n)^(P + 1) - 1 = 1 / n [(1 + 1 / n)^P + (1 + 1 / n)^(P - 1) + dots.h.
 + $limits(lim)_(n arrow.r oo) n / sqrt(n^2 + n)$
 
 ]
-注：$n ! = 1 dot.op 2 dot.op 3 dot.op dots.h.c dot.op\(n - 1\)dot.op n$⁠．
+注：$n ! = 1 dot.op 2 dot.op 3 dot.op dots.h.c thin dot.op\(n - 1\)dot.op n$⁠．
 
 == 无穷级数和无限小数
 === 无穷级数概念
@@ -648,9 +648,9 @@ s_n = 1 / 2 + 1 / 4 + dots.h.c + 1 / 2^n = frac(1 / 2 [1 - (1 / 2)^n], 1 - 1 / 2
 事实上，这个级数的部分和是：$ s_1 & = b_1 = a_1 - a_0\
 s_2 & = b_1 + b_2 =\(a_1 - a_0\)+\(a_2 - a_1\)= a_2 - a_0\
 s_3 & = b_1 + b_2 + b_3 =\(a_1 - a_0\)+\(a_2 - a_1\)+\(a_3 - a_2\)= a_3 - a_0\
-dots.h.c & dots.h.c dots.h.c dots.h.c dots.h.c\
+dots.h.c & dots.h.c thin dots.h.c thin dots.h.c thin dots.h.c\
 s_n & = b_1 + b_2 + dots.h.c + b_n =\(a_1 - a_0\)+\(a_2 - a_1\)+ dots.h.c +\(a_n - a_(n - 1)\)= a_n - a_0\
-dots.h.c & dots.h.c dots.h.c dots.h.c dots.h.c $ #noindent;因此：#numbered-eq($ sum_(i = 1)^oo b_i & = lim_(n arrow.r oo) sum_(i = 1)^n b_i = lim_(n arrow.r oo)\(a_n - a_0\)\
+dots.h.c & dots.h.c thin dots.h.c thin dots.h.c thin dots.h.c $ #noindent;因此：#numbered-eq($ sum_(i = 1)^oo b_i & = lim_(n arrow.r oo) sum_(i = 1)^n b_i = lim_(n arrow.r oo)\(a_n - a_0\)\
  & = lim_(n arrow.r oo) a_n - a_0 $);#noindent;因此，无穷级数 $sum_(i = 1)^oo b_i$ 是收敛的．
 
 #example[
@@ -704,7 +704,7 @@ s_2 & = 1 + 1 / 2\
 s_4 & = 1 + 1 / 2 + 1 / 3 + 1 / 4 > 1 + 1 / 2 + 1 / 4 + 1 / 4 = 1 + 1 / 2 + 1 / 2\
 s_8 & = 1 + 1 / 2 + 1 / 3 + 1 / 4 + 1 / 5 + 1 / 6 + 1 / 7 + 1 / 8\
  & > 1 + 1 / 2 + 1 / 4 + 1 / 4 + 1 / 8 + 1 / 8 + 1 / 8 + 1 / 8 = 1 + 1 / 2 + 1 / 2 + 1 / 2\
-dots.h.c & dots.h.c dots.h.c dots.h.c dots.h.c $
+dots.h.c & dots.h.c thin dots.h.c thin dots.h.c thin dots.h.c $
 
 一般地，$ s_(2^m) gt.eq 1 + overbrace(1 / 2 + 1 / 2 + dots.h.c + 1 / 2, m upright("个")) = frac(m + 2, 2) $ #noindent;因为，当 $m$ 无限增大时，$frac(m + 2, 2)$ 越来越大毫无止境，故 $s_(2^m)$ 也发散到无穷大，又总有这样的 $n$ 满足 $2^m < n$, 故当 $n arrow.r oo$ 时，也使 $m arrow.r oo$, $s_n > s_(2^m) arrow.r oo$, 即 $s_n$ 也发散到无穷大．
 
@@ -720,14 +720,14 @@ $alpha_0 + 1 / 10\,thick alpha_0 + 2 / 10\,thick alpha_0 + 3 / 10\,thick dots.h\
 
 再将线段 $overline(A_1 B_1)$ 十等分，我们可以找到一个整数 $alpha_2$（$0 lt.eq alpha_2 lt.eq 9$⁠），使得 $ alpha_0 + alpha_1 / 10 + alpha_2 / 10^2 lt.eq x < alpha_0 + alpha_1 / 10 + frac(alpha_2 + 1, 10^2) $ #noindent;即：$x in overline(A_2 B_2) = lr([alpha_0 + alpha_1 / 10 + alpha_2 / 10^2 \, alpha_0 + alpha_1 / 10 + frac(alpha_2 + 1, 10^2)))$⁠．
 
-经过 $n$ 步以后，$x$ 必在线段 $overline(A_n B_n)$ 之中，即 $ alpha_0 + alpha_1 / 10 + alpha_2 / 10^2 + dots.h.c + alpha_n / 10^n lt.eq x < alpha_0 + alpha_1 / 10 + alpha_2 / 10^2 + dots.h.c + frac(alpha_n + 1, 10^n) $ #noindent;这里 $alpha_1\,alpha_2\,dots.h\,alpha_n$ 都是0到9之间的整数，线段 $overline(A_n B_n)$ 之长度等于 $1 / 10^n$⁠，而有限十进小数 $alpha_0 . alpha_1 alpha_2 dots.h.c alpha_n$ 和 $alpha_0 . alpha_1 alpha_2 dots.h.c\(alpha_n + 1\)$ 分别是 $x$ 的准确到 $1 / 10^n$ 的不足近似值和过剩近似值．
+经过 $n$ 步以后，$x$ 必在线段 $overline(A_n B_n)$ 之中，即 $ alpha_0 + alpha_1 / 10 + alpha_2 / 10^2 + dots.h.c + alpha_n / 10^n lt.eq x < alpha_0 + alpha_1 / 10 + alpha_2 / 10^2 + dots.h.c + frac(alpha_n + 1, 10^n) $ #noindent;这里 $alpha_1\,alpha_2\,dots.h\,alpha_n$ 都是0到9之间的整数，线段 $overline(A_n B_n)$ 之长度等于 $1 / 10^n$⁠，而有限十进小数 $alpha_0 . alpha_1 alpha_2 thin dots.h.c thin alpha_n$ 和 $alpha_0 . alpha_1 alpha_2 thin dots.h.c thin \(alpha_n + 1\)$ 分别是 $x$ 的准确到 $1 / 10^n$ 的不足近似值和过剩近似值．
 
-让这个十分逼近过程无限地进行下去，那么实数 $x$ 就完全可以由无限小数 $alpha_0 . alpha_1 alpha_2 dots.h.c alpha_n dots.h.c$ 来表示，同时由于 $x$ 与有限小数近似值的误差 $ \|alpha_0 . alpha_1 alpha_2 dots.h.c alpha_n - x\|< 1 / 10^n\,#h(2em)\|alpha_0 . alpha_1 alpha_2 dots.h.c\(alpha_n + 1\)- x\|< 1 / 10^n $ #noindent;当 $n$ 充分大时，可以小到任意小，所以无限小数 $x = alpha_0 . alpha_1 alpha_2 dots.h.c alpha_n dots.h.c$ 是由有限十进小数组成的两个数列：$ alpha_0\,thick alpha_0 . alpha_1\,thick alpha_0 . alpha_1 alpha_2\,thick dots.h\,thick alpha_0 . alpha_1 alpha_2 dots.h.c alpha_n\,thick dots.h $ #noindent;与 $ \(alpha_0 + 1\)\,thick alpha_0 .\(alpha_1 + 1\)\,thick alpha_0 . alpha_1\(alpha_2 + 1\)\,thick dots.h\,alpha_0 . alpha_1 alpha_2 dots.h.c\(alpha_n + 1\)\,thick dots.h $ #noindent;的共同的极限值．
+让这个十分逼近过程无限地进行下去，那么实数 $x$ 就完全可以由无限小数 $alpha_0 . alpha_1 alpha_2 thin dots.h.c thin alpha_n thin dots.h.c$ 来表示，同时由于 $x$ 与有限小数近似值的误差 $ \|alpha_0 . alpha_1 alpha_2 thin dots.h.c thin alpha_n - x\|< 1 / 10^n\,#h(2em)\|alpha_0 . alpha_1 alpha_2 thin dots.h.c thin \(alpha_n + 1\)- x\|< 1 / 10^n $ #noindent;当 $n$ 充分大时，可以小到任意小，所以无限小数 $x = alpha_0 . alpha_1 alpha_2 thin dots.h.c thin alpha_n thin dots.h.c$ 是由有限十进小数组成的两个数列：$ alpha_0\,thick alpha_0 . alpha_1\,thick alpha_0 . alpha_1 alpha_2\,thick dots.h\,thick alpha_0 . alpha_1 alpha_2 thin dots.h.c thin alpha_n\,thick dots.h $ #noindent;与 $ \(alpha_0 + 1\)\,thick alpha_0 .\(alpha_1 + 1\)\,thick alpha_0 . alpha_1\(alpha_2 + 1\)\,thick dots.h\,alpha_0 . alpha_1 alpha_2 thin dots.h.c thin \(alpha_n + 1\)\,thick dots.h $ #noindent;的共同的极限值．
 
-#strong[无限小数的定义]是这样的，我们取实数的小数点以下第 $n$ 位为止的有限小数 $alpha_0 . alpha_1 alpha_2 dots.h.c alpha_n$⁠，记作 $x_n$, 即 $x_n = alpha_0 . alpha_1 alpha_2 dots.h.c alpha_n$⁠，那么数列 $\{ x_n \}$ 的极限值是这个无限小数，用式子表示就是 $ lim_(n arrow.r oo) x_n = x = alpha_0 . alpha_1 alpha_2 dots.h.c alpha_n dots.h.c $
+#strong[无限小数的定义]是这样的，我们取实数的小数点以下第 $n$ 位为止的有限小数 $alpha_0 . alpha_1 alpha_2 thin dots.h.c thin alpha_n$⁠，记作 $x_n$, 即 $x_n = alpha_0 . alpha_1 alpha_2 thin dots.h.c thin alpha_n$⁠，那么数列 $\{ x_n \}$ 的极限值是这个无限小数，用式子表示就是 $ lim_(n arrow.r oo) x_n = x = alpha_0 . alpha_1 alpha_2 thin dots.h.c thin alpha_n thin dots.h.c $
 
 #example[
-$2 / 3 = 0 . std.math.dot(6)$ 表示数列 $\{ x_n \}$ 的极限：$ x_1 = 0.6\,thick x_2 = 0.66\,thick x_3 = 0.666\,dots.h\,thick x_n = 0 . underbrace(66 dots.h.c 66, n upright("位小数"))\,thick dots.h $
+$2 / 3 = 0 . std.math.dot(6)$ 表示数列 $\{ x_n \}$ 的极限：$ x_1 = 0.6\,thick x_2 = 0.66\,thick x_3 = 0.666\,dots.h\,thick x_n = 0 . underbrace(66 thin dots.h.c thin 66, n upright("位小数"))\,thick dots.h $
 
 ]
 #example[
@@ -740,7 +740,7 @@ $2 / 3 = 0 . std.math.dot(6)$ 表示数列 $\{ x_n \}$ 的极限：$ x_1 = 0.6\,
 
 把实数写成小数形式，便于比较它们的大小．在比较时，遇到以9为循环节结尾的无限小数都用以0为循环节结尾的无限小数代替．
 
-今有两个实数 $x = alpha_0 . alpha_1 alpha_2 dots.h.c alpha_n dots.h.c$ 和 $y = beta_0 . beta_1 beta_2 dots.h.c beta_n dots.h.c$⁠，比较这两个实数 $x$ 和 $y$ 的大小，只须比较两个数的各数位上的数字，并且注意在哪一个数位上的数字不同，从而告诉我们哪个实数大．
+今有两个实数 $x = alpha_0 . alpha_1 alpha_2 thin dots.h.c thin alpha_n thin dots.h.c$ 和 $y = beta_0 . beta_1 beta_2 thin dots.h.c thin beta_n thin dots.h.c$⁠，比较这两个实数 $x$ 和 $y$ 的大小，只须比较两个数的各数位上的数字，并且注意在哪一个数位上的数字不同，从而告诉我们哪个实数大．
 
 例如：$17 / 20 = 0.850000 dots.h.c$, $45 / 53 = 0.849056 dots.h.c$⁠，看一眼就能发觉，它们有相同的第一位小数，$17 / 20$ 的第二位小数大于 $45 / 53$ 的第二位小数，因此，$17 / 20 > 45 / 53$⁠．
 
@@ -798,14 +798,14 @@ $ 0.3 overline(12) & = 0.3 + 0.0 overline(12) = 0.3 +\(0.012 + 0.00012 + dots.h.
 ]
 下面，我们来证明任何一个循环小数一定是一个分数．
 
-如果 $a$ 是个循环小数，它的循环节是由第 $k + 1$ 位开始到 $k + ell$ 位，平常我们写作 $ a = a_0 . c_1 c_2 dots.h.c c_k overline(c_(k + 1) c_(k + 2) dots.h.c c_(k + ell)) $ #noindent;它的意思是 $ a & = a_0 + c_1 / 10 + c_2 / 10^2 + dots.h.c + c_k / 10^k + c_(k + 1) / 10^(k + 1) + dots.h.c + c_(k + ell) / 10^(k + ell)\
+如果 $a$ 是个循环小数，它的循环节是由第 $k + 1$ 位开始到 $k + ell$ 位，平常我们写作 $ a = a_0 . c_1 c_2 thin dots.h.c thin c_k overline(c_(k + 1) c_(k + 2) thin dots.h.c thin c_(k + ell)) $ #noindent;它的意思是 $ a & = a_0 + c_1 / 10 + c_2 / 10^2 + dots.h.c + c_k / 10^k + c_(k + 1) / 10^(k + 1) + dots.h.c + c_(k + ell) / 10^(k + ell)\
  & #h(2em) eqph + c_(k + 1) / 10^(k + ell + 1) + dots.h.c + c_(k + ell) / 10^(k + 2 ell) + c_(k + 1) / 10^(k + 2 ell + 1) + dots.h.c + c_(k + ell) / 10^(k + 3 ell) + dots.h.c $
 
 虽然，这不是无穷等比级数，现在用结合律来构造这个无穷级数的部分和的子数列：
 
 设 $S_1 = a_0 + c_1 / 10\,quad S_2 = a_0 + c_1 / 10 + c_2 / 10^2\,dots.h$ 于是第 $k$ 个部分和是 $ S_k = a_0 + c_1 / 10 + c_2 / 10^2 + dots.h.c + c_k / 10^k $ #noindent;再令 $ d = c_(k + 1) / 10^(k + 1) + c_(k + 2) / 10^(k + 2) + dots.h.c + c_(k + ell) / 10^(k + ell) $ #noindent;所以，$d$ 是分数，而且 $0 lt.eq d < 1$
 
-那么，第 $k + m ell$ 个部分和是 $ S_(k + m ell) & = S_k + d + d / 10^ell + d / 10^(2 ell) + dots.h.c d / 10^(\(m - 1\)ell)\
+那么，第 $k + m ell$ 个部分和是 $ S_(k + m ell) & = S_k + d + d / 10^ell + d / 10^(2 ell) + dots.h.c thin d / 10^(\(m - 1\)ell)\
  & = S_k + d (1 + 1 / 10^ell + 1 / 10^(2 ell) + dots.h.c + 1 / 10^(\(m - 1\)ell))\
  & = S_k + frac(d (1 - 1 / 10^(m ell)), 1 - 1 / 10^ell) $ #noindent;当 $m = 1\,2\,3\,dots.h$ 时，部分和 $S_(k + m ell)$ 就构成无穷级数的部分和数列 $\{ S_n \}$ 的子数列 $\{ S_(k + m ell) \}$, 并且 $ lim_(m arrow.r oo) S_(k + m ell) & = lim_(m arrow.r oo) lr(\{ S_k + frac(d (1 - 1 / 10^(m ell)), 1 - 1 / 10^ell) \})\
  & = S_k + frac(d, 1 - 1 / 10^ell) = S_k + frac(10^ell dot.op d, 10^ell - 1) = a' $ #noindent;这里 $a'$ 表示分数．我们只证明了部分和数列的子数列 $\{ S_(k + m ell) \}$ 收敛到分数 $a'$, 还需要证明部分和数列 $\{ S_n \}$ 也收敛到 $a'$.
@@ -824,11 +824,11 @@ $ 0.3 overline(12) & = 0.3 + 0.0 overline(12) = 0.3 +\(0.012 + 0.00012 + dots.h.
 
   这里 $q_1$ 是 $0\,1\,2\,dots.h\,9$ 这十个整数中的某个．用和上面同样的方法，逐步得到 $ frac(10 r_1, b) & = q_2 + r_2 / b\,#h(2em) 0 < r_2 / b < 1\,\
   frac(10 r_2, b) & = q_3 + r_3 / b\,#h(2em) 0 < r_3 / b < 1\,\
-  dots.h.c & dots.h.c dots.h.c dots.h.c dots.h.c\
+  dots.h.c & dots.h.c thin dots.h.c thin dots.h.c thin dots.h.c\
   frac(10 r_(n - 1), b) & = q_n + r_n / b\,#h(2em) 0 < r_n / b < 1 $ #noindent;这里每个 $q_n$ 是 $0\,1\,2\,dots.h\,9$ 这十个整数中的某个，于是 $ a / b & = q_1 / 10 + frac(r_1, 10 b)\
    & = q_1 / 10 + q_2 / 10^2 + frac(r_2, 10^2 b)\
    & = q_1 / 10 + q_2 / 10^2 + q_3 / 10^3 + frac(r_3, 10^3 b)\
-  dots.h.c & dots.h.c dots.h.c dots.h.c dots.h.c\
+  dots.h.c & dots.h.c thin dots.h.c thin dots.h.c thin dots.h.c\
    & = q_1 / 10 + q_2 / 10^2 + dots.h.c + q_n / 10^n + frac(r_n, 10^n b) $
 
   再设 $ x_n & = q_1 / 10 + q_2 / 10^2 + dots.h.c + q_n / 10^n\
@@ -837,16 +837,16 @@ $ 0.3 overline(12) & = 0.3 + 0.0 overline(12) = 0.3 +\(0.012 + 0.00012 + dots.h.
 
   再有 $x_1 < x_2 < dots.h.c < x_(n - 1) < x_n < dots.h.c < y_n < y_(n - 1) < dots.h.c < y_2 < y_1$⁠，且 $y_n - x_n arrow.r 0$⁠．
 
-  当 $n$ 无限增大时，根据实数完备性，无限小数 $ sum_(n = 1)^oo q_n / 10^n = 0 . q_1 q_2 dots.h.c q_n dots.h.c $ #noindent;表示一实数，又因为，$d_n arrow.r 0$, 故我们确定了一个其值为 $a / b$ 的无限小数 $0 . q_1 q_2 dots.h.c q_n dots.h.c$⁠．
+  当 $n$ 无限增大时，根据实数完备性，无限小数 $ sum_(n = 1)^oo q_n / 10^n = 0 . q_1 q_2 thin dots.h.c thin q_n thin dots.h.c $ #noindent;表示一实数，又因为，$d_n arrow.r 0$, 故我们确定了一个其值为 $a / b$ 的无限小数 $0 . q_1 q_2 thin dots.h.c thin q_n thin dots.h.c$⁠．
 
   再说明这个无限小数一定是纯循环小数，设 $a = r_0$, 因为 $r_0\,r_1\,r_2\,dots.h\,r_n\,dots.h$ 是一串大于0而小于 $b$ 的正整数，这种正整数只有 $b - 1$ 个不同的，所以，这一串数 $r_0 = a\,r_1\,r_2\,dots.h r_n\,dots.h$ 必然有二者会相同，就假定 $r_k$ 为首先出现的重见余数，假定这两个相同的余数是 $r_k$ 和 $r_i$, 即有 $r_k = r_i$. 现在我们要证明 $r_i$ 只能是 $a = r_0$, 用反证法，若 $i > 0$ 则由等式 $frac(10 r_(k - 1), b) = q_k + r_k / b$ 和 $frac(10 r_(i - 1), b) = q_i + r_i / b$ 两边作减法，得到 $ frac(10\(r_(k - 1) - r_(i - 1)\), b) = q_k - q_i $ #noindent;因为 $q_k - q_i$ 是整数，所以 $b$ 能整除 $10\(r_(k - 1) - r_(i - 1)\)$, 由于 $b$ 与10互质，故 $b$ 能整除 $r_(k - 1) - r_(i - 1)$⁠，但是 $r_(k - 1) - r_(i - 1) < b$, 所以 $r_(k - 1) - r_(i - 1) = 0$, 即 $r_(k - 1) = r_(i - 1)$ 重见更早，与原设 $r_k$ 为首先出现的重见余数不合，故 $i = 0$⁠．
 
-  $therefore quad r_k = r_0 = a$, 这样 $ a / b = 0 . overline(q_1 q_2 dots.h.c q_(k - 1) q_k) $
+  $therefore quad r_k = r_0 = a$, 这样 $ a / b = 0 . overline(q_1 q_2 thin dots.h.c thin q_(k - 1) q_k) $
 
-+ 设 $b = 2^alpha 5^beta b_1$, 而 $b_1 > 1$ 且与10互质，又 $alpha$ 与 $beta$ 均不为0, 若 $alpha gt.eq beta$, $ a / b = frac(a, 2^alpha 5^beta b_1) = frac(5^(alpha - beta) a, 10^alpha b_1) $ #noindent;做 $5^(alpha - beta) a$ 除以 $b_1$, 得 $ 5^(alpha - beta) a = M b_1 + r\,quad 0 < r < b_1 $ #noindent;$M$ 是一个正整数，两边再除以 $b_1$, 得 $ 5^(alpha - beta) a / b_1 = M + r / b_1\,#h(2em) 0 < r / b_1 < 1 $ #noindent;由前段证明2的结果 $ r / b_1 = 0 . overline(c_1 c_2 dots.h.c c_s) $ #noindent;故，$ a / b & = frac(5^(alpha - beta) a, 10^alpha b_1) = 1 / 10^alpha (M + 0 . overline(c_1 c_2 dots.h.c c_s))\
-   & = 1 / 10^alpha (M . overline(c_1 c_2 dots.h.c c_s)) $
++ 设 $b = 2^alpha 5^beta b_1$, 而 $b_1 > 1$ 且与10互质，又 $alpha$ 与 $beta$ 均不为0, 若 $alpha gt.eq beta$, $ a / b = frac(a, 2^alpha 5^beta b_1) = frac(5^(alpha - beta) a, 10^alpha b_1) $ #noindent;做 $5^(alpha - beta) a$ 除以 $b_1$, 得 $ 5^(alpha - beta) a = M b_1 + r\,quad 0 < r < b_1 $ #noindent;$M$ 是一个正整数，两边再除以 $b_1$, 得 $ 5^(alpha - beta) a / b_1 = M + r / b_1\,#h(2em) 0 < r / b_1 < 1 $ #noindent;由前段证明2的结果 $ r / b_1 = 0 . overline(c_1 c_2 thin dots.h.c thin c_s) $ #noindent;故，$ a / b & = frac(5^(alpha - beta) a, 10^alpha b_1) = 1 / 10^alpha (M + 0 . overline(c_1 c_2 thin dots.h.c thin c_s))\
+   & = 1 / 10^alpha (M . overline(c_1 c_2 thin dots.h.c thin c_s)) $
 
-  当以 $10^alpha$ 除以 $M . overline(c_1 c_2 dots.h.c c_s)$ 时，也就是将小数点左移 $alpha$ 位，我们得到 $ a / b = 0 . m_1 m_2 dots.h.c m_alpha overline(c_1 c_2 dots.h.c c_s) $ #noindent;为混循环小数．
+  当以 $10^alpha$ 除以 $M . overline(c_1 c_2 thin dots.h.c thin c_s)$ 时，也就是将小数点左移 $alpha$ 位，我们得到 $ a / b = 0 . m_1 m_2 thin dots.h.c thin m_alpha overline(c_1 c_2 thin dots.h.c thin c_s) $ #noindent;为混循环小数．
 
 若 $alpha lt.eq beta$, 可以用同样的方法说明 $a / b$ 为一混循环小数，因此有
 
@@ -897,7 +897,7 @@ $ 0.3 overline(12) & = 0.3 + 0.0 overline(12) = 0.3 +\(0.012 + 0.00012 + dots.h.
 
   + $limits(lim)_(n arrow.r oo) (1 / 2 + 3 / 2^2 + 5 / 2^3 + dots.h.c + frac(2 n - 1, 2^n))$
 
-+ $limits(lim)_(n arrow.r oo) (1 - 1 / 2^2) (1 - 1 / 3^2) (1 - 1 / 4^2) dots.h.c (1 - 1 / n^2)$
++ $limits(lim)_(n arrow.r oo) (1 - 1 / 2^2) (1 - 1 / 3^2) (1 - 1 / 4^2) thin dots.h.c thin (1 - 1 / n^2)$
 
 + 数列 $x_n thick\(n = 1\,2\,3\,dots.h\)$ 是由下列各式所确定：$ x_0 = a\,thick x_1 = b\,thick x_n = frac(x_(n - 2) + x_(n - 1), 2) quad\(n gt.eq 2\) $ #noindent;求 $limits(lim)_(n arrow.r oo) x_n$.
 
@@ -1094,7 +1094,7 @@ $therefore quad x_2 = - 1$ 不合要求，因此，$ lim_(n arrow.r oo) a_n = 2 
 
 + 试利用关于单调而有界的数列的极限存在定理检验下面数列极限存在性．
 
-  + $a_n = 1 + frac(1, 1 dot.op 2) + frac(1, 1 dot.op 2 dot.op 3) + dots.h.c + frac(1, 1 dot.op 2 dot.op 3 dots.h.c\(n - 1\))$,#h(1em);$n = 1\,2\,3\,dots.h$
+  + $a_n = 1 + frac(1, 1 dot.op 2) + frac(1, 1 dot.op 2 dot.op 3) + dots.h.c + frac(1, 1 dot.op 2 dot.op 3 thin dots.h.c thin \(n - 1\))$,#h(1em);$n = 1\,2\,3\,dots.h$
 
   + $a_n = frac(1, n + 1) + frac(1, n + 2) + dots.h.c + frac(1, 2 n)$,#h(1em);$n = 1\,2\,3\,dots.h$
 
@@ -1110,7 +1110,7 @@ $therefore quad x_2 = - 1$ 不合要求，因此，$ lim_(n arrow.r oo) a_n = 2 
 
 + 设 $0 < a_1 < b_1$ 是两个给定正数，令 $ a_2 & = sqrt(a_1 b_1)\,#h(2em) b_2 = 1 / 2\(a_1 + b_1\)\,quad\(a_2 < b_2\)\
   a_3 & = sqrt(a_2 b_2)\,#h(2em) b_3 = 1 / 2\(a_2 + b_2\)\,quad\(a_3 < b_3\)\
-  dots.h.c & dots.h.c dots.h.c dots.h.c dots.h.c\
+  dots.h.c & dots.h.c thin dots.h.c thin dots.h.c thin dots.h.c\
   a_(n + 1) & = sqrt(a_n b_n)\,#h(2em) b_(n + 1) = 1 / 2\(a_n + b_n\)\,quad\(a_(n + 1) < b_(n + 1)\) $ #noindent;求证：
 
   + $\{ a_n \}$ 递增和 $\{ b_n \}$ 递减；

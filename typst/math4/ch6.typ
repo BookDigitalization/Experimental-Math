@@ -70,7 +70,7 @@
 
 我们将线段 $A_0 B_0 =\[a_0\,b_0\]$ 等分为两段，亦即 $[a_0 \, frac(a_0 + b_0, 2)]$ 和 $[frac(a_0 + b_0, 2) \, b_0]$⁠；而把 $x$ 所在的那一段叫做 $A_1 B_1 =\[a_1\,b_1\]$, 换句话说，当 $a_0 < x < frac(a_0 + b_0, 2)$ 时，$a_1 = a_0$, $b_1 = frac(a_0 + b_0, 2)$⁠；当 $frac(a_0 + b_0, 2) < x < b_0$⁠，$a_1 = frac(a_0 + b_0, 2)$⁠，$b_1 = b_0$⁠．这样逐次二等分，由 $A_1 B_1$ 求得 $A_2 B_2$,……, 由 $A_(n - 1) B_(n - 1)$ 求得 $A_n B_n$, 永远无休止地二等分下去，因为每次二等分后，分段长度减半，所以 $x$ 所在的线段就可以小到任何需要的程度．现在把上面的二分逼近过程写下来，就得到 $a_n\,b_n\,x$ 的下列关系：
 
-+ $A_0 B_0 =\[a_0\,b_0\]supset.eq A_1 B_1 =\[a_1\,b_1\]supset.eq dots.h.c supset.eq A_n B_n =\[a_n\,b_n\]supset.eq A_(n + 1) B_(n + 1) =\[a_(n + 1)\,b_(n + 1)\]supset.eq dots.h.c supset.eq \{ x \}$⁠，即：$ a_0 lt.eq a_1 lt.eq a_2 lt.eq dots.h.c lt.eq a_n lt.eq dots.h.c < x < dots.h.c lt.eq b_n lt.eq dots.h.c lt.eq b_2 lt.eq b_1 lt.eq b_0 $
++ $A_0 B_0 =\[a_0\,b_0\]supset.eq A_1 B_1 =\[a_1\,b_1\]supset.eq dots.h.c thin supset.eq A_n B_n =\[a_n\,b_n\]supset.eq A_(n + 1) B_(n + 1) =\[a_(n + 1)\,b_(n + 1)\]supset.eq dots.h.c thin supset.eq \{ x \}$⁠，即：$ a_0 lt.eq a_1 lt.eq a_2 lt.eq dots.h.c lt.eq a_n lt.eq dots.h.c < x < dots.h.c lt.eq b_n lt.eq dots.h.c lt.eq b_2 lt.eq b_1 lt.eq b_0 $
 
 + $b_n - a_n = 1 / 2\(b_(n - 1) - a_(n - 1)\)= dots.h.c = 1 / 2^n\(b_0 - a_0\)$⁠，这就保证了 $a_n$ 或 $b_n$ 和 $x$ 之间的误差小于 $1 / 2^n\(b_0 - a_0\)$, 即 $\|x - a_n\|< 1 / 2^n\(b_0 - a_0\)$ 或 $\|x - b_n\|< 1 / 2^n\(b_0 - a_0\)$, 只要 $n$ 够大，上述误差就可以小到任意小．
 
@@ -209,7 +209,7 @@ $\(1.1\)^2\,\(1.2\)^2\,\(1.3\)^2\,\(1.4\)^2 = 1.96 < 2 < 2.25 =\(1.5\)^2\,\(1.6\
 在前面，我们用二分法和十分法为例，说明了任何给定的实数 $x$ 都可以用有理数去逼近它．我们所用的是两个有理数列 $\{ a_n \}$ 和 $\{ b_n \}$ 从左、右夹逼 $x$⁠，$\{ a_n \}$, $\{ b_n \}$ 和 $x$ 之间的关系可以用下面这一串次序关系来表达：$ a_1 lt.eq a_2 lt.eq dots.h.c lt.eq a_n lt.eq dots.h.c < x < dots.h.c lt.eq b_n lt.eq dots.h.c lt.eq b_2 lt.eq b_1 $ #noindent;$\(b_n - a_n\)$ 可以任意小，记作 $\(b_n - a_n\)arrow.r 0$⁠．上面是实数 $x$ 已经先给定了的情况，去求出两串数列 $\{ a_n \}$ 和 $\{ b_n \}$ 来左、右夹逼实数 $x$, 也就是说，数轴 $ell$ 上的每一点，即每一个实数，能够由上述的两个有理数列来唯一确定．反过来问，假如先给定了满足下述这样一串大小次序关系的 $\{ a_n \}$ 和 $\{ b_n \}$, 即 $ a_1 lt.eq a_2 lt.eq dots.h.c lt.eq a_n lt.eq dots.h.c lt.eq b_n lt.eq dots.h.c lt.eq b_2 lt.eq b_1 $ #noindent;且 $\(b_n - a_n\)$ 可以任意小，是不是会有那么一个实数 $x$ 去被 $\{ a_n \}$⁠、$\{ b_n \}$ 左、右夹逼呢？上述问题的答案是肯定的！因为从实数系在长度度量的直观上看，这个实数 $x$ 的存在也就是说实数轴上没有空隙存在，即直线是连续不断的，换言之，实数系也是连续不断的，因此我们称实数系为#strong[实数连续统]；它说明实数系包含着度量时所有应该包含的数，所以也叫做实数系的#strong[完备性]．下面是直线连续不断的直观概念的解析描述．
 
 #blk[实数系完备性][
-对于任给满足下述大小次序关系的两个数列 $\{ a_n \}$ 和 $\{ b_n \}$, 即 $ a_1 lt.eq a_2 lt.eq dots.h.c a_n lt.eq dots.h.c lt.eq b_n lt.eq dots.h.c lt.eq b_2 lt.eq b_1 $ #noindent;且 $\(b_n - a_n\)arrow.r 0$⁠，则必定存在一个介于所有 $a_n\,b_n$ 之间的实数 $x$⁠．
+对于任给满足下述大小次序关系的两个数列 $\{ a_n \}$ 和 $\{ b_n \}$, 即 $ a_1 lt.eq a_2 lt.eq dots.h.c thin a_n lt.eq dots.h.c lt.eq b_n lt.eq dots.h.c lt.eq b_2 lt.eq b_1 $ #noindent;且 $\(b_n - a_n\)arrow.r 0$⁠，则必定存在一个介于所有 $a_n\,b_n$ 之间的实数 $x$⁠．
 
 ]
 实数系的完备性是非常基本而且重要的！在以后的章节中，我们将用这个性质来证明极限的存在，从而可进行一切极限运算，而这些运算乃是微积分的基础．在每次用到时，我们将详细解说其用法．这样逐步渐近，同学不难学会它的种种用法．
@@ -466,15 +466,15 @@ x < - 6 #h(2em) & upright("或") #h(2em) x > 2 $ #noindent;因此，满足不等
 
 ]
 #example[
-无论多少个正数的几何平均数不大于其算术平均数，即 $ frac(a_1 + a_2 + dots.h.c + a_n, n) gt.eq root(n, a_1 a_2 dots.h.c a_n) $
+无论多少个正数的几何平均数不大于其算术平均数，即 $ frac(a_1 + a_2 + dots.h.c + a_n, n) gt.eq root(n, a_1 a_2 thin dots.h.c thin a_n) $
 
 ]
 #proof[
-令 $A = frac(a_1 + a_2 + dots.h.c + a_n, n)$⁠，则题意是说，#numbered-eq($ A^n gt.eq a_1 a_2 dots.h.c a_n $);#noindent;当 $a_1 = a_2 = dots.h.c = a_n$ 时，则 (6.11) 显然成立．如果 $a_1\,a_2\,dots.h\,a_n$ 这 $n$ 个数有不相等的，由于 $ n A = a_1 + a_2 + dots.h.c + a_n $ #noindent;即：$ \(a_1 - A\)+\(a_2 - A\)+ dots.h.c +\(a_n - A\)= 0 $ #noindent;则必有一大于 $A$, 也必有一小于 $A$, 不妨设 $a_1 > A > a_2$, 于是，$A - a_1 < 0$, $A - a_2 > 0$, 把 $a_1\,a_2\,dots.h\,a_n$ 改换成#numbered-eq($ a'_1 = A\,thick a'_2 = a_2 + a_1 - A\,thick a'_3 = a_3\,thick dots.h\,a'_n = a_n $);#noindent;由此可见我们新得之 $n$ 个数，其和不变，即 $ a'_1 + a'_2 + dots.h.c + a'_n & = A +\(a_2 + a_1 - A\)+ a_3 + dots.h.c + a_n\
+令 $A = frac(a_1 + a_2 + dots.h.c + a_n, n)$⁠，则题意是说，#numbered-eq($ A^n gt.eq a_1 a_2 thin dots.h.c thin a_n $);#noindent;当 $a_1 = a_2 = dots.h.c = a_n$ 时，则 (6.11) 显然成立．如果 $a_1\,a_2\,dots.h\,a_n$ 这 $n$ 个数有不相等的，由于 $ n A = a_1 + a_2 + dots.h.c + a_n $ #noindent;即：$ \(a_1 - A\)+\(a_2 - A\)+ dots.h.c +\(a_n - A\)= 0 $ #noindent;则必有一大于 $A$, 也必有一小于 $A$, 不妨设 $a_1 > A > a_2$, 于是，$A - a_1 < 0$, $A - a_2 > 0$, 把 $a_1\,a_2\,dots.h\,a_n$ 改换成#numbered-eq($ a'_1 = A\,thick a'_2 = a_2 + a_1 - A\,thick a'_3 = a_3\,thick dots.h\,a'_n = a_n $);#noindent;由此可见我们新得之 $n$ 个数，其和不变，即 $ a'_1 + a'_2 + dots.h.c + a'_n & = A +\(a_2 + a_1 - A\)+ a_3 + dots.h.c + a_n\
  & = a_1 + a_2 + dots.h.c + a_n\
  & = n A $ #noindent;但其积增大，因为 $ A\(a_2 + a_1 - A\)- a_1 a_2 & = A a_2 + A a_1 - A^2 - a_1 a_2\
  & = A\(a_2 - A\)+ a_1\(A - a_2\)\
- & =\(A - a_2\)\(a_1 - A\)> 0 $ #noindent;从而 $ A\(a_2 + a_1 - A\)a_3 dots.h.c a_n > a_1 a_2 dots.h.c a_n $ #noindent;若 (6.12) 中还有不等于 $A$ 的，比如，$a_s > A > a_m$, 我们用同法即用 $A$ 取代其中较大的一个 $a_s$, 用 $a_m + a_s - A$ 代换 $a_m$, 又可另得 $n$ 个正数，其和同前，而其积更大．由此以往，不过 $n - 1$ 次，便可得 $n$ 个相等之正数 $underbrace(A\,A\,dots.h.c A, n upright("个"))$, 此时积最大，故有 $ A^n gt.eq a_1 a_2 dots.h.c a_n $ #noindent;且当 $a_1 = a_2 = dots.h.c = a_n$ 时，等式成立．
+ & =\(A - a_2\)\(a_1 - A\)> 0 $ #noindent;从而 $ A\(a_2 + a_1 - A\)a_3 thin dots.h.c thin a_n > a_1 a_2 thin dots.h.c thin a_n $ #noindent;若 (6.12) 中还有不等于 $A$ 的，比如，$a_s > A > a_m$, 我们用同法即用 $A$ 取代其中较大的一个 $a_s$, 用 $a_m + a_s - A$ 代换 $a_m$, 又可另得 $n$ 个正数，其和同前，而其积更大．由此以往，不过 $n - 1$ 次，便可得 $n$ 个相等之正数 $underbrace(A\,A\,dots.h.c thin A, n upright("个"))$, 此时积最大，故有 $ A^n gt.eq a_1 a_2 thin dots.h.c thin a_n $ #noindent;且当 $a_1 = a_2 = dots.h.c = a_n$ 时，等式成立．
 
 ]
 #example[

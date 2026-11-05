@@ -656,9 +656,9 @@ $therefore quad phi\(x\)$ 的所有根都在区间 $\[- 13\,13\]$ 之内．
 又以 $f_2\(x\)$ 除 $f_1\(x\)$, 得 $f_1\(x\)= q_2\(x\)f_2\(x\)+ r_2\(x\)$, 同样，只有 $f_2\(x\)$ 是零次多项式时，才有 $r_2\(x\)= 0$, 否则 $r_2\(x\)eq.not 0$, 记 $f_3\(x\)= - r_2\(x\)$. 如此继续下来，直到可以整除为止．即得 $ f\(x\) & = q_1\(x\)f_1\(x\)- f_2\(x\)\
 f_1\(x\) & = q_2\(x\)f_2\(x\)- f_3\(x\)\
 f_2\(x\) & = q_3\(x\)f_3\(x\)- f_4\(x\)\
-dots.h.c & dots.h.c dots.h.c dots.h.c dots.h.c\
+dots.h.c & dots.h.c thin dots.h.c thin dots.h.c thin dots.h.c\
 f_(k - 1)\(x\) & = q_k\(x\)f_k\(x\)- f_(k + 1)\(x\)\
-dots.h.c & dots.h.c dots.h.c dots.h.c dots.h.c\
+dots.h.c & dots.h.c thin dots.h.c thin dots.h.c thin dots.h.c\
 f_(s - 1)\(x\) & = q_s\(x\)f_s\(x\) $
 
 容易看到，这些计算实际上是对两个多项式 $f\(x\)$ 及 $f'\(x\)$ 进行辗转相除，只不过每一次的余式改变一个符号而已．由于非零数因子不影响辗转相除的结果，所以最后能整除的除式 $f_s\(x\)$ 就是 $f\(x\)$ 与 $f'\(x\)$ 的最高公因式．但是我们已给出 $f\(x\)$ 没有重根这样一个条件，所以 $f_s\(x\)$ 只能是零次多项式，因而可记为 $f_s$. $ f\(x\)\,f_1\(x\)\,f_2\(x\)\,dots.h\,f_k\(x\)\,dots.h\,f_s $ #noindent;叫做多项式 $f\(x\)$ 的#strong[史笃姆函数序列]．

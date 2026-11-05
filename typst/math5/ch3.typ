@@ -1172,7 +1172,7 @@ arrow(e)_1 times (arrow(e)_1 times arrow(e)_2) & = arrow(e)_1 times arrow(e)_3 =
 
 + 如果 $arrow(a)\,arrow(b)\,arrow(c)$ 是三个单位向量且 $arrow(a) + arrow(b) + arrow(c) = arrow(0)$. 试求 $arrow(a) dot.op arrow(b) + arrow(b) dot.op arrow(c) + arrow(c) dot.op arrow(a)$ 的值．
 
-+ 已知 $O$ 是正 $n$ 边形 $A_1 A_2 A_3 dots.h.c A_n$ 的中心，求证 $ accent(O A_1, ⃗) + accent(O A_2, ⃗) + accent(O A_3, ⃗) + dots.h.c + accent(O A_n, ⃗) = arrow(0) $
++ 已知 $O$ 是正 $n$ 边形 $A_1 A_2 A_3 thin dots.h.c thin A_n$ 的中心，求证 $ accent(O A_1, ⃗) + accent(O A_2, ⃗) + accent(O A_3, ⃗) + dots.h.c + accent(O A_n, ⃗) = arrow(0) $
 
 + 已知 $triangle.stroked.t A B C$, $O$ 是空间一点，试证 $ accent(O A, ⃗) + accent(O B, ⃗) + accent(O C, ⃗) = arrow(0) $ #noindent;的充要条件是：$O$ 点是三角形的重心．
 

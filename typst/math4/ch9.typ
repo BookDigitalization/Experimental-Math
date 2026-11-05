@@ -596,22 +596,22 @@ $therefore quad pi / 2 < arctan 2 + arctan 3 < pi$⁠．而且 $ tan\(arctan 2 +
 由余切函数 $y = cot x$ 的图象可以看出函数 $cot x$ 在每个开区间 $\(k pi\,\(k + 1\)pi\)\,thick k in bb(Z)$ 内，由 $+ oo$ 递减到 $- oo$, 所以在每个这样的开区间里，反函数是存在的．
 
 #blk[定义4][
-函数 $y = cot x$ 在开区间 $\(0\,pi\)$ 内的反函数叫#strong[反余切函数或反余切]，记作 $ x = "arccot" y $ #noindent;它的定义域是开区间 $- oo < y < + oo$⁠．
+函数 $y = cot x$ 在开区间 $\(0\,pi\)$ 内的反函数叫#strong[反余切函数或反余切]，记作 $ x = op("arccot") y $ #noindent;它的定义域是开区间 $- oo < y < + oo$⁠．
 
 ]
-用几何名词来叙述反余切的定义便是：在开区间 $- oo < y < + oo$ 内，数 $y$ 的反余切 $x = "arccot" y$ 是开区间 $0 < x < pi$ 内的一个角或弧，它的余切等于 $y$, 即 $cot x = y$⁠．
+用几何名词来叙述反余切的定义便是：在开区间 $- oo < y < + oo$ 内，数 $y$ 的反余切 $x = op("arccot") y$ 是开区间 $0 < x < pi$ 内的一个角或弧，它的余切等于 $y$, 即 $cot x = y$⁠．
 
 由反余切的定义和反函数定理得到反余切的性质如下：
 
-+ $"arccot"\(cot x\)= x\,thick 0 < x < pi\,#h(2em) cot\("arccot" y\)= y\,thick - oo < y < + oo$
++ $op("arccot")\(cot x\)= x\,thick 0 < x < pi\,#h(2em) cot\(op("arccot") y\)= y\,thick - oo < y < + oo$
 
 + 反余切是递减的函数并且连续；
 
-+ $"arccot"\(- x\)= pi - "arccot" x$⁠．
++ $op("arccot")\(- x\)= pi - op("arccot") x$⁠．
 
-  这是因为 $"arccot" x$ 和 $"arccot"\(- x\)$ 都属于 $\(0\,pi\)$ 内的角，且 $ 0 = pi - pi < pi - "arccot" x < 0 + pi = pi $ #noindent;又 $cot\(pi - "arccot" x\)= - cot\("arccot" x\)= - x$⁠，所以 $ pi - "arccot" x = "arccot"\(- x\) $ #noindent;即 $ "arccot"\(- x\)= pi - "arccot" x $
+  这是因为 $op("arccot") x$ 和 $op("arccot")\(- x\)$ 都属于 $\(0\,pi\)$ 内的角，且 $ 0 = pi - pi < pi - op("arccot") x < 0 + pi = pi $ #noindent;又 $cot\(pi - op("arccot") x\)= - cot\(op("arccot") x\)= - x$⁠，所以 $ pi - op("arccot") x = op("arccot")\(- x\) $ #noindent;即 $ op("arccot")\(- x\)= pi - op("arccot") x $
 
-+ 反余切 $y = "arccot" x\,thick - oo < x < + oo$ 的图象如图9.11所示．
++ 反余切 $y = op("arccot") x\,thick - oo < x < + oo$ 的图象如图9.11所示．
 
 #figure([#fig("9-11");
 
@@ -624,63 +624,63 @@ $therefore quad pi / 2 < arctan 2 + arctan 3 < pi$⁠．而且 $ tan\(arctan 2 +
 求下列各式的值：（口答）
 
 #cols(2)[
-+ $"arccot" 1$
++ $op("arccot") 1$
 
-+ $"arccot"\(- 1\)$
++ $op("arccot")\(- 1\)$
 
-+ $"arccot" sqrt(3)$
++ $op("arccot") sqrt(3)$
 
-+ $"arccot" (- sqrt(3))$
++ $op("arccot") (- sqrt(3))$
 
 ]
 ]
 #solution[
-+ $"arccot" 1 = pi / 4$⁠，因为 $cot pi / 4 = 1$⁠，而且 $0 < pi / 4 < pi$⁠．
++ $op("arccot") 1 = pi / 4$⁠，因为 $cot pi / 4 = 1$⁠，而且 $0 < pi / 4 < pi$⁠．
 
-+ $"arccot"\(- 1\)= pi - "arccot" 1 = pi - pi / 4 = frac(3 pi, 4)$
++ $op("arccot")\(- 1\)= pi - op("arccot") 1 = pi - pi / 4 = frac(3 pi, 4)$
 
-+ $"arccot" sqrt(3) = pi / 6$⁠，因为 $cot pi / 6 = sqrt(3)$⁠，而且 $0 < pi / 6 < pi$⁠．
++ $op("arccot") sqrt(3) = pi / 6$⁠，因为 $cot pi / 6 = sqrt(3)$⁠，而且 $0 < pi / 6 < pi$⁠．
 
-+ $"arccot" (- sqrt(3)) = pi - "arccot" sqrt(3) = pi - pi / 6 = frac(5 pi, 6)$
++ $op("arccot") (- sqrt(3)) = pi - op("arccot") sqrt(3) = pi - pi / 6 = frac(5 pi, 6)$
 
 ]
 #example[
-求 $sin ["arccot" (- 1 / 3)]$ 的值
+求 $sin [op("arccot") (- 1 / 3)]$ 的值
 
 ]
 #solution[
-设 $"arccot" (- 1 / 3) = alpha$⁠，其中 $0 < alpha < pi$⁠，那么 $cot alpha = - 1 / 3$⁠．
+设 $op("arccot") (- 1 / 3) = alpha$⁠，其中 $0 < alpha < pi$⁠，那么 $cot alpha = - 1 / 3$⁠．
 
 由于 $0 < alpha < pi$⁠，$cot alpha < 0$⁠，可以知道 $pi / 2 < alpha < pi$ $ csc alpha & = sqrt(1 + cot^2 alpha) = sqrt(1 + 1 / 9) = sqrt(10 / 9) = sqrt(10) / 3\
-sin alpha & = 3 / sqrt(10) $ #noindent;$therefore quad sin ["arccot" (- 1 / 3)] = sin alpha = 3 / sqrt(10) = frac(3 sqrt(10), 10)$
+sin alpha & = 3 / sqrt(10) $ #noindent;$therefore quad sin [op("arccot") (- 1 / 3)] = sin alpha = 3 / sqrt(10) = frac(3 sqrt(10), 10)$
 
 ]
 #example[
-求证：对于任何实数 $x$ 有 $ arctan x + "arccot" x = pi / 2 $
+求证：对于任何实数 $x$ 有 $ arctan x + op("arccot") x = pi / 2 $
 
 ]
 #solution[
 设 $arctan x = alpha$⁠，其中 $- pi / 2 < alpha < pi / 2$⁠，则 $tan alpha = x$⁠．
 
-又 $cot (pi / 2 - alpha) = tan alpha = x$⁠，而 $0 < pi / 2 - alpha < pi$⁠，所以 $pi / 2 - alpha = "arccot" x$⁠．
+又 $cot (pi / 2 - alpha) = tan alpha = x$⁠，而 $0 < pi / 2 - alpha < pi$⁠，所以 $pi / 2 - alpha = op("arccot") x$⁠．
 
-将 $alpha = arctan x$ 代入上式，得到 $ pi / 2 - arctan x = "arccot" x $ #noindent;所以：$arctan x + "arccot" x = pi / 2\,quad x in bb(R)$
+将 $alpha = arctan x$ 代入上式，得到 $ pi / 2 - arctan x = op("arccot") x $ #noindent;所以：$arctan x + op("arccot") x = pi / 2\,quad x in bb(R)$
 
 ]
 #blk[命题][
-在单调开区间 $\(k pi\,\(k + 1\)pi\)$ 内，$y = cot x$ 的反函数是 $ x = "arccot" y + k pi quad\(k in bb(Z)\) $
+在单调开区间 $\(k pi\,\(k + 1\)pi\)$ 内，$y = cot x$ 的反函数是 $ x = op("arccot") y + k pi quad\(k in bb(Z)\) $
 
 ]
 #example[
-证明 $arctan 3 + "arccot" (- 1 / 5) = pi - arctan 1 / 8$
+证明 $arctan 3 + op("arccot") (- 1 / 5) = pi - arctan 1 / 8$
 
 ]
 #solution[
 设 $alpha = arctan 3$⁠，其中 $0 < alpha < pi / 2$⁠，则 $tan alpha = 3$⁠．
 
-又设 $beta = "arccot" (- 1 / 5)$⁠，其中 $pi / 2 < beta < pi$⁠，则：$ cot beta = - 1 / 5\,#h(2em) tan beta = - 5 $ $ tan [arctan 3 + "arccot" (- 1 / 5)] & = tan\(alpha + beta\)\
+又设 $beta = op("arccot") (- 1 / 5)$⁠，其中 $pi / 2 < beta < pi$⁠，则：$ cot beta = - 1 / 5\,#h(2em) tan beta = - 5 $ $ tan [arctan 3 + op("arccot") (- 1 / 5)] & = tan\(alpha + beta\)\
  & = frac(tan alpha + tan beta, 1 - tan alpha dot.op tan beta)\
- & = frac(3 +\(- 5\), 1 - 3\(- 5\)) = - 1 / 8 $ #noindent;而且 $pi / 2 < alpha + beta < frac(3 pi, 2)$⁠，$ therefore quad arctan 3 + "arccot" (- 1 / 5) = arctan (- 1 / 8) + pi = pi - arctan 1 / 8 $
+ & = frac(3 +\(- 5\), 1 - 3\(- 5\)) = - 1 / 8 $ #noindent;而且 $pi / 2 < alpha + beta < frac(3 pi, 2)$⁠，$ therefore quad arctan 3 + op("arccot") (- 1 / 5) = arctan (- 1 / 8) + pi = pi - arctan 1 / 8 $
 
 ]
 #heading(level: 2, numbering: none, supplement: [toc-sub])[习题9.3]
@@ -728,7 +728,7 @@ sin alpha & = 3 / sqrt(10) $ #noindent;$therefore quad sin ["arccot" (- 1 / 3)] 
 
   + $arctan\(tan 0.7 pi\)$
 
-  + $tan (arctan 1 / 4 - "arccot" 5)$
+  + $tan (arctan 1 / 4 - op("arccot") 5)$
 
   + $sin (arctan 8 / 15 - arcsin 7 / 18)$
 
@@ -742,7 +742,7 @@ sin alpha & = 3 / sqrt(10) $ #noindent;$therefore quad sin ["arccot" (- 1 / 3)] 
 
   + $arcsin 15 / 17 = arccos 8 / 17$
 
-  + $arcsin 4 / 5 = "arccot" 3 / 4$
+  + $arcsin 4 / 5 = op("arccot") 3 / 4$
 
   + $arcsin (- 7 / 25) = - arctan 7 / 24$
 
@@ -750,7 +750,7 @@ sin alpha & = 3 / sqrt(10) $ #noindent;$therefore quad sin ["arccot" (- 1 / 3)] 
 
   + $arctan 2 / 3 + arctan 1 / 5 = pi / 4$
 
-  + $"arccot" 1 / 9 + "arccot" 4 / 5 = 3 / 4 pi$
+  + $op("arccot") 1 / 9 + op("arccot") 4 / 5 = 3 / 4 pi$
 
   + $2 arctan 1 / 3 + arctan 1 / 4 = arctan 16 / 13$
 
@@ -758,29 +758,29 @@ sin alpha & = 3 / sqrt(10) $ #noindent;$therefore quad sin ["arccot" (- 1 / 3)] 
 
 + 证明下面恒等式：
 
-  + 若 $0 < x < 1$, 那么 $ arcsin x = arccos sqrt(1 - x^2) = arctan x / sqrt(1 - x^2) = "arccot" sqrt(1 - x^2) / x $
+  + 若 $0 < x < 1$, 那么 $ arcsin x = arccos sqrt(1 - x^2) = arctan x / sqrt(1 - x^2) = op("arccot") sqrt(1 - x^2) / x $
 
-  + 若 $0 < x < 1$, 那么 $ arccos x = arcsin sqrt(1 - x^2) = arctan sqrt(1 - x^2) / x = "arccot" x / sqrt(1 - x^2) $
+  + 若 $0 < x < 1$, 那么 $ arccos x = arcsin sqrt(1 - x^2) = arctan sqrt(1 - x^2) / x = op("arccot") x / sqrt(1 - x^2) $
 
-  + 若 $x > 0$, 那么 $ arctan x = "arccot" 1 / x = arcsin x / sqrt(1 + x^2) = arccos 1 / sqrt(1 + x^2) $
+  + 若 $x > 0$, 那么 $ arctan x = op("arccot") 1 / x = arcsin x / sqrt(1 + x^2) = arccos 1 / sqrt(1 + x^2) $
 
-  + 若 $x > 0$, 那么 $ "arccot" x = arctan 1 / x = arcsin 1 / sqrt(1 + x^2) = arccos x / sqrt(1 + x^2) $
+  + 若 $x > 0$, 那么 $ op("arccot") x = arctan 1 / x = arcsin 1 / sqrt(1 + x^2) = arccos x / sqrt(1 + x^2) $
 
   + 若 $\|x\|< 1$⁠，那么 $arcsin x = arctan x / sqrt(1 - x^2)$
 
     若 $- 1 lt.eq x lt.eq 0$⁠，那么 $arcsin x = - arccos sqrt(1 - x^2)$
 
-    若 $- 1 lt.eq x < 0$⁠，那么 $arcsin x = "arccot" sqrt(1 - x^2) / x - pi$
+    若 $- 1 lt.eq x < 0$⁠，那么 $arcsin x = op("arccot") sqrt(1 - x^2) / x - pi$
 
   + 若 $- 1 lt.eq x lt.eq 0$⁠，那么 $arccos x = pi - arcsin sqrt(1 - x^2)$
 
     若 $- 1 lt.eq x < 0$⁠，那么 $arccos x = pi + arctan sqrt(1 - x^2) / x$
 
-    若 $\|x\|< 1$⁠，那么 $arccos x = "arccot" x / sqrt(1 - x^2)$
+    若 $\|x\|< 1$⁠，那么 $arccos x = op("arccot") x / sqrt(1 - x^2)$
 
-  + 若 $x < 0$, 那么 $arctan x = "arccot" 1 / x - pi$
+  + 若 $x < 0$, 那么 $arctan x = op("arccot") 1 / x - pi$
 
-    若 $x < 0$, 那么 $"arccot" x = pi + arctan 1 / x$
+    若 $x < 0$, 那么 $op("arccot") x = pi + arctan 1 / x$
 
   + 若 $x gt.eq 0$⁠，$1 / 2 arccos\(2 x^2 - 1\)= arccos x$
 
@@ -793,7 +793,7 @@ sin alpha & = 3 / sqrt(10) $ #noindent;$therefore quad sin ["arccot" (- 1 / 3)] 
   #cols(2)[
   + $arctan x = pi / 4$
 
-  + $"arccot" x = pi / 2$
+  + $op("arccot") x = pi / 2$
 
   + $arctan x = - pi / 2$
 
@@ -996,7 +996,7 @@ $ x = k pi + arctan\(- 1\)= k pi - arctan 1 = k pi - pi / 4 $
 
 ]
 ==== $cot x = a$ 的解
-如图9.17所示，$angle P_0 O A = "arccot" a$ 和 $angle P_0 O B = pi + "arccot" a$ 是方程的特解，因为它们的余切等于 $a$. 原方程的通解是 $ x = k pi + "arccot" a\,#h(2em)\(k in bb(Z)\) $
+如图9.17所示，$angle P_0 O A = op("arccot") a$ 和 $angle P_0 O B = pi + op("arccot") a$ 是方程的特解，因为它们的余切等于 $a$. 原方程的通解是 $ x = k pi + op("arccot") a\,#h(2em)\(k in bb(Z)\) $
 
 #align(center, block(breakable: false, above: 1.1em, below: 1.1em, grid(columns: (48%, 48%,), column-gutter: 1em, align: center + bottom, figure([#fig("9-16");], caption: []), figure([#fig("9-17");], caption: []))));
 
