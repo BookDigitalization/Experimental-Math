@@ -100,6 +100,13 @@ subsubsection = {
 }
 }
 
+% 选学的节、小节：原书在编号左侧加“*”（目录中同样带“*”）
+\newcommand{\starsection}[1]{%
+  \ctexset{section/name={\llap{*}第,节}}\section{#1}\ctexset{section/name={第,节}}}
+\newcommand{\starsubsection}[1]{%
+  \ctexset{subsection/name={\llap{*},、\hspace{-1em}}}\subsection{#1}%
+  \ctexset{subsection/name={,、\hspace{-1em}}}}
+
 \renewcommand{\contentsname}{目~~录}
 
 \newcommand{\poly}{\polynomial[reciprocal]}

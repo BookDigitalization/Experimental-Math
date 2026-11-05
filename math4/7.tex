@@ -107,7 +107,7 @@ $\frac{a}{b}>\sqrt{2}$. 根据有理数是有序的，稠密的，因此有理�
 因而是一个递减有界数列．
 \item 当$n$愈来愈大时，$a_n=\frac{1}{n}$
 愈来愈接近0, 它们的
-误差$|a_n-0|=\frac{1}{n}$, 只要充分大，就可以小到任意小．
+误差$|a_n-0|=\frac{1}{n}$, 只要$n$充分大，就可以小到任意小．
 \end{enumerate}
 
 对于情形3，我们就说：数列$\left\{\frac{1}{n}\right\}$
@@ -242,7 +242,7 @@ $\therefore\quad n>13.289$
 \[|a_n-0|=\left(\frac{1}{2}\right)^n\le \left(\frac{1}{2}\right)^{14}=0.000061<0.0001\]
 这也就是说，对于给定的0.0001, 总能找到这样一个项数，
 $N=14$, 使得当$n\ge14$时，其误差
-\[|a_n-0|=\left(\frac{1}{2}\right)^{14}<0.0001\]
+\[|a_n-0|=\left(\frac{1}{2}\right)^n<0.0001\]
 
 当$n$为何值时，$\left(\frac{1}{2}\right)^n<\frac{1}{10^8}$
 只须，
@@ -268,7 +268,7 @@ $\frac{\lg\varepsilon}{-0.3010}$
 \begin{blk}{定义}
     任给正数$\varepsilon$, 总可以定出一个正整数$N$, 使得只
 要$n\ge N$时，$|a_n-A|<\varepsilon$都成立，我们就说数列$\{a_n\}$的\textbf{极限
-是}A, 或者说数列$\{a_n\}$\textbf{收敛到}$A$．
+是}$A$, 或者说数列$\{a_n\}$\textbf{收敛到}$A$．
 \end{blk}
  
 让我们再对上述定义作几点说明：
@@ -300,14 +300,14 @@ N$时，$|a_n-A|<\varepsilon$ ”的意义也就是：“只要$n$够大，误�
 的极限是1．
 \end{example}
 
-\begin{solution}
+\begin{proof}
 对于任给$\varepsilon>0$，要使
 \[\left|\frac{n}{n+1}-1\right|=\frac{1}{n+1}<\varepsilon\]
 只须$n+1>\frac{1}{\varepsilon}$，即$n>\frac{1}{\varepsilon}-1$，取$N=\left(\frac{1}{\varepsilon}-1\right)$
 的整数部分$+1$，所以当$n\ge N$时，可使
 \[\left|\frac{n}{n+1}-1\right|=\frac{1}{n+1}\le \frac{1}{N+1}<\varepsilon\]
     这就是说$\Lim_{n\to\infty}\frac{n}{n+1}=1$．
-\end{solution}
+\end{proof}
 
 \begin{example}
     证明数列：
@@ -376,7 +376,7 @@ $1,0,1,0,\ldots$．
 样，在点0的小于1的任何邻域之外，有此数列无穷多个值
 为1的奇数项．假设数$A\ne 0,1$并且是此数列的极限，则在
 点$A$的任何$\varepsilon$邻域$(A-\varepsilon ,A+\varepsilon )$内都包含数0和1, 于是
-\[2\varepsilon =(A+\varepsilon )-(A-\varepsilon )>|1-0|=1\]
+\[2\varepsilon =|(A+\varepsilon )-(A-\varepsilon )|>|1-0|=1\]
 即：$\varepsilon>\frac{1}{2}$．
 这和$\varepsilon$ 是任意小的正数矛盾，因此，这个数列没有极限．
 \end{proof}
@@ -401,10 +401,10 @@ $|a_n|>M$,
 例如，$\{n^2\}$, $\{-n^2\}$, $\{(-n)\}$等数列都是无限增大的．
 
 如果数列$\{a_n\}$是无限增大的，并且从某项以后的一切
-项为正数时，我们说数列$\{a_n\}$趋于正无穷大，记作$\Lim_{n\to\infty}a_n=+\infty$，例如$\Lim_{n\to\infty}n^2=+\infty$．
+项为正数时，我们说数列$\{a_n\}$趋于\textbf{正无穷大}，记作$\Lim_{n\to\infty}a_n=+\infty$，例如$\Lim_{n\to\infty}n^2=+\infty$．
 
 如果数列$\{a_n\}$是无限增大的，并且从某项以后的一切
-项为负数时，我们说数列$\{a_n\}$趋于负无穷大，记作$\Lim_{n\to\infty}a_n=-\infty$. 例如$\Lim_{n\to\infty}(-n^2)=-\infty$．
+项为负数时，我们说数列$\{a_n\}$趋于\textbf{负无穷大}，记作$\Lim_{n\to\infty}a_n=-\infty$. 例如$\Lim_{n\to\infty}(-n^2)=-\infty$．
 
 在无界数列中，也有不是无限增大的，例如，数列
 \[\left(n\sin\frac{n\pi}{2}\right):\quad 1,0,-3,0,5,0,-7,0,\ldots\]
@@ -641,6 +641,8 @@ $\therefore\quad $当$n\to\infty$时，$ \left|\frac{r}{k+1}\right|^n\to 0$
     
 $\therefore\quad 0\le \lim_{n\to\infty}\left|\frac{r^n}{n!}\right|\le \lim_{n\to\infty}\frac{|k+1|^k}{k!} \left|\frac{r}{k+1}\right|^{n}=0$
 
+\qquad $\left(\because\ \frac{|k+1|^k}{k!}\text{是常数}\right)$
+
 $\therefore\quad \lim_{n\to\infty}\frac{r^n}{n!}=0$
 \end{proof}
 
@@ -760,7 +762,29 @@ a_n-b_n&=3+\frac{3}{n}\\
 a_n\cdot b_n&=\left(6+\frac{4}{n}\right)\left(3+\frac{1}{n}\right)=18+\frac{18}{n}+\frac{4}{n^2}\\
 \frac{a_n}{b_n}&=\frac{6+\frac{4}{n}}{3+\frac{1}{n}}=\frac{6n+4}{3n+1}=2+\frac{2}{3n+1}
 \end{split}\]
-现在我们对这些变量求它们各自的极限值，
+现在我们对这些变量求它们各自的极限值（见下表）：
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+变量$\backslash n$ & 1 & 2 & $\cdots$ & 10 & 100 & 1000 & 10000 & $\cdots$ & 极限\\
+\hline
+$a_n$ & 10 & 8 & $\cdots$ & 6.4 & 6.04 & 6.004 & 6.0004 & $\cdots$ & $\Lim_{n\to\infty}\left(6+\frac{4}{n}\right)=6$\\
+\hline
+$b_n$ & 4 & $3\frac{1}{2}$ & $\cdots$ & 3.1 & 3.01 & 3.001 & 3.0001 & $\cdots$ & $\Lim_{n\to\infty}\left(3+\frac{1}{n}\right)=3$\\
+\hline
+$a_n+b_n$ & 14 & $11\frac{1}{2}$ & $\cdots$ & 9.5 & 9.05 & 9.005 & 9.0005 & $\cdots$ & $\Lim_{n\to\infty}\left(9+\frac{5}{n}\right)=9$\\
+\hline
+$a_n-b_n$ & 6 & $4\frac{1}{2}$ & $\cdots$ & 3.3 & 3.03 & 3.003 & 3.0003 & $\cdots$ & $\Lim_{n\to\infty}\left(3+\frac{3}{n}\right)=3$\\
+\hline
+$a_n\cdot b_n$ & 40 & 28 & $\cdots$ & 19.84 & 18.18 & 18.018 & 18.0018 & $\cdots$ & $\Lim_{n\to\infty}\left(18+\frac{18}{n}+\frac{4}{n^2}\right)=18$\\
+\hline
+$a_n/b_n$ & $2\frac{1}{2}$ & $2\frac{2}{7}$ & $\cdots$ & 2.06 & 2.006 & 2.0006 & 2.00006 & $\cdots$ & $\Lim_{n\to\infty}\left(2+\frac{2}{3n+1}\right)=2$\\
+\hline
+\end{tabular}
+\end{center}
 显然有下面的等式
 \begin{enumerate}
     \item $\Lim_{n\to\infty}(a_n+b_n)=\Lim_{n\to\infty}a_n+\Lim_{n\to\infty}b_n=6+3=9$
@@ -822,7 +846,7 @@ $\Lim_{n\to\infty}Bb_n=B\Lim_{n\to\infty}b_n=B^2>0$, 所以当给定$\varepsilon
 \[-\frac{B^2}{2}<Bb_n-B^2<\frac{B^2}{2}\]
 即
 \[\frac{B^2}{2}<Bb_n<\frac{3B^2}{2}\]
-从而$\frac{2}{3B^2}<\frac{1}{Bb_n}<\frac{2}{B^2}$，
+从而$\frac{2}{3B^2}<\frac{1}{Bb_n}<\frac{2}{B^2}$，$(\because\ B\ne 0)$．
 
 取$M=\max\left(\left|\frac{2}{3B^2}\right|, \left|\frac{1}{Bb_1}\right|, \left|\frac{1}{Bb_2}\right|, \ldots, \left|\frac{1}{Bb_{N-1}}\right|,\left|\frac{2}{B^2}\right|\right)$
 
@@ -869,7 +893,7 @@ $b_n=(-1)^{n-1}\left(1+\frac{1}{n}\right)$,
 \end{solution}
 
 \begin{example}
-求$\Lim_{n\to\infty}\frac{\left(1+\frac{1}{n}\right)^{P+1}-1}{\frac{1}{n}}$  
+求$\Lim_{n\to\infty}\frac{\left(1+\frac{1}{n}\right)^{P+1}-1}{\frac{1}{n}}$（$P$为自然数）．
 \end{example}
 
 \begin{solution}
@@ -878,7 +902,7 @@ $b_n=(-1)^{n-1}\left(1+\frac{1}{n}\right)$,
 \[    \Lim_{n\to\infty}\frac{\left(1+\frac{1}{n}\right)^{P+1}-1}{\frac{1}{n}}=\Lim_{n\to\infty}\left[\left(1+\frac{1}{n}\right)^{P}+\left(1+\frac{1}{n}\right)^{P-1}+\cdots+\left(1+\frac{1}{n}\right)+1\right]
 \]
 中括号内共有$P+1$项，首项是$P$个$\left(1+\frac{1}{n}\right)$的乘积，应用定理知$\Lim_{n\to\infty} \left(1+\frac{1}{n}\right)^{P}=1$, 同理知其
-它各项的极限为1, 故
+他各项的极限为1, 故
 \[    \Lim_{n\to\infty}\frac{\left(1+\frac{1}{n}\right)^{P+1}-1}{\frac{1}{n}}=1+1+\cdots+1=P+1
 \]
 \end{solution}
@@ -893,7 +917,7 @@ $b_n=(-1)^{n-1}\left(1+\frac{1}{n}\right)$,
 \begin{solution}
     我们对$s(n)$作变形，将它改写成下面的形式
 \[n^{p-q}\left[\frac{a_0+\frac{a_1}{n}+\cdots+\frac{a_p}{n^p}}{b_0+\frac{b_1}{n}+\cdots+\frac{b_q}{n^q}}\right]\]
-在花括内的分式，其分子和分母都是以$\frac{1}{n}$
+在方括号内的分式，其分子和分母都是以$\frac{1}{n}$
 为变量的多项
 式，因此，
 \[ \Lim_{n\to\infty}\frac{a_0+\frac{a_1}{n}+\cdots+\frac{a_p}{n^p}}{b_0+\frac{b_1}{n}+\cdots+\frac{b_q}{n^q}}=\frac{a_0}{b_0}\]
@@ -907,7 +931,8 @@ $b_n=(-1)^{n-1}\left(1+\frac{1}{n}\right)$,
 \[ \Lim_{n\to\infty} s(n)=\begin{cases}
    0& p<q\\
 \frac{a_0}{b_0} & p=q\\
-+\infty & p>q,\quad \frac{a_0}{b_0}>0
++\infty & p>q,\quad \frac{a_0}{b_0}>0\\
+-\infty & p>q,\quad \frac{a_0}{b_0}<0
 \end{cases}\]
 \end{solution}
 
@@ -936,16 +961,18 @@ $\frac{a_n}{b_n}$表示$\frac{\infty}{\infty}$或$\frac{0}{0}$
 \item  $\Lim_{n\to\infty} \frac{n^{2} \sin n !}{n^{3}}$
 \item  $\Lim_{n\to\infty} \frac{3^{n}-1}{2^{n}}$
 \item  $\Lim_{n\to\infty} \frac{(-2)^{n}+3^{n}}{(-2)^{n+1}+3^{n+1}}$ 
-\item  $\Lim_{n\to\infty} \frac{3n^2-5c+\sin n}{4n^2+7n+6}$ 
-\item  $\Lim_{n\to\infty} \frac{n}{\sqrt{n^2+n}}$ 
-\end{enumerate}    
+\item  $\Lim_{n\to\infty} \frac{3n^2-5n+\sin n}{4n^2+7n+6}$ 
+\item  $\Lim_{n\to\infty} \frac{n}{\sqrt{n^2+n}}$
+\end{enumerate}
 \end{multicols}
+
+注：$n!=1\cdot 2\cdot 3\cdot \cdots \cdot (n-1)\cdot n$．
 
 \section{无穷级数和无限小数}
 \subsection{无穷级数概念}
 
 有穷级数是有限个数的和，如
-$$u_1+u_2+\cdots+u_n,\quad \text{或者}\quad \sum^n_{i=1}u_i$$
+$$u_1+u_2+u_3+\cdots+u_n,\quad \text{或者}\quad \sum^n_{i=1}u_i$$
 显然，每一个有穷级数都有确定的和．
 
 无穷级数指无穷多个数：$u_1,u_2,\ldots,u_n,\ldots$连加的式子
@@ -1057,7 +1084,7 @@ $b_1+b_2+\cdots+b_n+b_{n+1}+\cdots$是收敛的．
 
 
 \begin{solution}
-    我们在本章中，已经证明，若$|q|<1$, 则$\Lim_{n\to\infty}q^n=0$．因为：
+    我们在本章例7.9中，已经证明，若$|q|<1$, 则$\Lim_{n\to\infty}q^n=0$．因为：
 \[s_n=\frac{a_1(1-q^n)}{1-q}=\frac{a_1}{1-q}-\frac{a_1q^n}{1-q}\]
 所以，
 \[\Lim_{n\to\infty}s_n=\frac{a_1}{1-q}-\frac{a_1}{1-q}\Lim_{n\to\infty}q^n=\frac{a_1}{1-q}\]
@@ -1192,7 +1219,7 @@ $\frac{2}{3}=0.\dot{6}$表示数列$\{x_n\}$的极限：
 \[1=1.0000\cdots=0.999\cdots,\quad 2.35=2.35000\cdots=2.34999\cdots\]
 
     为排除这种不确定性，按照我们的约定，就可以去掉那
-    些从某一位以后有数字都是9的十进小数表达式．
+    些从某一位以后所有数字都是9的十进小数表达式．
 
 把实数写成小数形式，便于比较它们的大小．在比较
 时，遇到以9为循环节结尾的无限小数都用以0为循环节结
@@ -1295,7 +1322,7 @@ $\therefore\quad \sqrt{6}=2.449\cdots$．
 &=\frac{621}{10^3}+\frac{621}{10^6}+\frac{621}{10^9}+\cdots
 \end{split}\]
 显然，这个无穷级数是无穷等比级数，它的首项$a_1=\frac{621}{10^3}$, 公比$q=\frac{1}{10^3}$
-根据4.1中的定理，这个无穷等比级数的和是$\frac{a_1}{1-q}$，因此：
+根据7.4.1中的定理1，这个无穷等比级数的和是$\frac{a_1}{1-q}$，因此：
 \[\begin{split}
     0.\overline{621}&=\frac{621}{10^3}+\frac{621}{10^6}+\frac{621}{10^9}+\cdots\\
     &=\frac{621}{10^3}\cdot \frac{1}{1-\frac{1}{10^3}}=\frac{621}{10^3}\cdot \frac{10^3}{10^3-1}\\
@@ -1515,7 +1542,7 @@ $M$是一个正整数，两边再除
 \[0.\overline{47},\qquad 2.\overline{234},\qquad 0.4\overline{7},\qquad 3.2\overline{31},\qquad 0.\overline{1108},\qquad 5.38\overline{90}\]
 \item 求出下列各式的值：
 \begin{enumerate}
-    \item $0.\overline{48}\x0.\overline{48}$
+    \item $0.4\overline{8}\x0.\overline{48}$
     \item $0.\overline{12}+0.\overline{23}+0.\overline{34}+\cdots+0.\overline{89}$
     \item $0.\overline{15}+0.0\overline{15}+0.00\overline{15}+\cdots$
 \end{enumerate}
@@ -1653,7 +1680,7 @@ $BC=kB'C'$．
 \end{figure}
 
 $S_n<S_{2n}<\pi<S'_{2n}<S'_n$， 
-刘徽的计算理论基础是，
+\textbf{刘徽}的计算理论基础是，
 $|S_n-\pi|<S'_n-S_n$, 在$n$无限增大时，$(S'_n-S_n)\to 0$. 从
 图7.7看出：
 \[\begin{split}
@@ -1734,7 +1761,7 @@ $\{S_{6\cdot 2^{n-1}}\}$的极限是$\pi$.
     \item 有一束射线，每相邻两条射线间的夹角为$\alpha$，从一条射
     线上任一点对其紧邻的一射线作垂线$S_0$, 从它的垂足再对下
     一射线作垂线$S_1$, 依此类推（图7.9）．
-    问：$\Lim_{n\to\infty} (S_0+S_1+S_2+\cdots +S_n+\cdots )$
+    问：$\Lim_{n\to\infty} (S_0+S_1+S_2+\cdots +S_n+\cdots )=?$
 
 \begin{figure}[htp]\centering
     \begin{minipage}[t]{0.48\textwidth}
@@ -1868,7 +1895,7 @@ $a_n$都在线段$[A_1,B_1]$之内，将线段$[A_1,B_1]$二等分，假如分
 \begin{equation}
     a_N\le a_n
 \end{equation} 
-综合上述四点，就说明了当$n\ge N$时，有
+综合上述(7.4)---(7.7)四点，就说明了当$n\ge N$时，有
 \[k-\varepsilon<A_M\le a_N\le a_n<B_M<k+\varepsilon\]
 亦即$|a_n-k|<\varepsilon$, 这也就说明了
 $\Lim_{n\to\infty}a_n=k$．
@@ -1961,7 +1988,7 @@ $A$, 然后再用数列极限定义来验证这个极限$A$是存在的，这
 \begin{enumerate}
     \item $a_n=1+\frac{1}{1\cdot 2}+\frac{1}{1\cdot 2\cdot 3}+\cdots+\frac{1}{1\cdot 2\cdot 3\cdots (n-1)}$,\quad $n=1,2,3,\ldots$
     \item $a_n=\frac{1}{n+1}+\frac{1}{n+2}+\cdots +\frac{1}{2n}$,\quad $n=1,2,3,\ldots$
-    \item $x_n=p_0+\frac{p_1}{10}+\cdots +\frac{p_n}{10^n}$，式中$p_i,\; (i=0,1,2,\ldots)$是非负数，且从$p_1$起不大于9.
+    \item $x_n=p_0+\frac{p_1}{10}+\cdots +\frac{p_n}{10^n}$，式中$p_i,\; (i=0,1,2,\ldots)$是非负整数，且从$p_1$起不大于9.
 \end{enumerate}
 \item 已知$a_1=\sqrt{2},\; a_2=\sqrt{2\sqrt{2}},\; a_3=\sqrt{2\sqrt{2\sqrt{2}}},\ldots,a_{n+1}=\sqrt{2a_n},\ldots$, 求 $\Lim_{n\to\infty}a_n$.
 \item 设$a_{n+1}=\sqrt{k+a_n}$, 这里$k>0$, $a_1>0$, 求证数列$\{a_n\}$

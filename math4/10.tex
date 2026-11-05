@@ -19,7 +19,7 @@ a^{-\tfrac{m}{n}}=\frac{1}{a^{\tfrac{m}{n}}},&\qquad (a> 0)\\
 
 这样一来，函数$a^x\; (a>0)$对于任意有理数$x$都有定义
 了．我们称它为有理指数函数，这个函数具有上面所说的三
-个性质．下面将进一步研讨这个函数的其它重要性质：
+个性质．下面将进一步研讨这个函数的其他重要性质：
 
 \begin{blk}{性质1}
 \begin{enumerate}
@@ -101,7 +101,7 @@ a^x$的图象上的点在有单斜线的区域I和II的部分；当$0<a<
 
 \begin{blk}{性质3}
   设$a>0$，则当$n\to +\infty$时，数列$\left\{a^{\tfrac{1}{n}}\right\}$的极限是1，即
-  \[\lim_{n\to\infty}a^{\tfrac{1}{n}}=1\]
+  \[\lim_{n\to +\infty}a^{\tfrac{1}{n}}=1\]
 \end{blk}
 
 \begin{proof}
@@ -112,21 +112,21 @@ a^x$的图象上的点在有单斜线的区域I和II的部分；当$0<a<
   设$a^{\tfrac{1}{n}}=1+h$, 其中$h>0$, 两边$n$次方，得到
  \[ a=(1+h)^n\]
  
- 由贝努利不等式得
+ 由贝努利不等式（第六章例6.4）得
 \[  a=(1+h)^n>1+nh\]
   所以，
 $  0<h<\frac{a-1}{n},\qquad 1<1+h<1+\frac{a-1}{n}$，
   即：
 \[1<a^{\tfrac{1}{n}}<1+\frac{a-1}{n}\]  
   再令$n\to +\infty$, 由上式就得到
-\[1\le \lim_{n\to\infty}a^{\tfrac{1}{n}}\le 1 \]
-  因此\[\lim_{n\to\infty}a^{\tfrac{1}{n}}=1\]
+\[1\le \lim_{n\to +\infty}a^{\tfrac{1}{n}}\le 1 \]
+  因此\[\lim_{n\to +\infty}a^{\tfrac{1}{n}}=1\]
   \item 当$0<a<1$时，令$a=\frac{1}{b}$, 则$b>1$, 由上面的证明
-  得到\[\lim_{n\to\infty}b^{\tfrac{1}{n}}=1\]
+  得到\[\lim_{n\to +\infty}b^{\tfrac{1}{n}}=1\]
 于是
 \[\begin{split}
-  \lim_{n\to\infty}a^{\tfrac{1}{n}}&=\lim_{n\to\infty}\left(\frac{1}{b}\right)^{\tfrac{1}{n}}=\lim_{n\to\infty}\frac{1}{b^{\tfrac{1}{n}}}\\
-  &=\frac{1}{\displaystyle\lim_{n\to\infty}b^{\tfrac{1}{n}}}=\frac{1}{1}=1
+  \lim_{n\to +\infty}a^{\tfrac{1}{n}}&=\lim_{n\to +\infty}\left(\frac{1}{b}\right)^{\tfrac{1}{n}}=\lim_{n\to +\infty}\frac{1}{b^{\tfrac{1}{n}}}\\
+  &=\frac{1}{\displaystyle\lim_{n\to +\infty}b^{\tfrac{1}{n}}}=\frac{1}{1}=1
 \end{split}\]
 \end{enumerate} 
 \end{proof}
@@ -150,7 +150,7 @@ $  0<h<\frac{a-1}{n},\qquad 1<1+h<1+\frac{a-1}{n}$，
 \end{equation}
 所以，当$i\ge N$时，有
 \[\frac{1}{m_i+1}<|h_i|\le\frac{1}{m_i}\]
-由$h_i\to 0$知，$\frac{1}{|h_i|}\to \infty$. 从而由$m_i+1>\frac{1}{|h_i|}$知，$m_i\to\infty$．根据有理指数幂的单调性，得
+由$h_i\to 0$知，$\frac{1}{|h_i|}\to \infty$. 从而由$m_i+1>\frac{1}{|h_i|}$知，$m_i\to +\infty$．根据有理指数幂的单调性，得
 \[1<a^{|h_i|}<a^{\tfrac{1}{m_i}},\qquad (a>1)\]
 
 仿照性质3的证明，令$b_i=a^{\tfrac{1}{m_i}}-1>0$, 于是，
@@ -359,6 +359,7 @@ a^x$的变化可以任意小．
 \[(a^{r_n})^{c_n}<(a^{\beta})^{c_n}<(a^{\beta})^{\gamma}<(a^{\beta})^{d_n}<(a^{s_n})^{d_n}\]
 所以由有理指数法则，得到
 \[a^{r_n\cdot c_n}=(a^{r_n})^{c_n}<(a^{\beta})^{\gamma}<(a^{s_n})^{d_n}=a^{s_n\cdot d_n}\]
+\[\left(a^{s_n\cdot d_n}-a^{r_n\cdot c_n}\right)\to 0\]
 $\therefore\quad $由引理知，存在唯一的极限
 \[(a^{\beta})^{\gamma}=\lim a^{r_n\cdot c_n} =\lim a^{s_n\cdot d_n} =a^{\beta\cdot \gamma}\]
 
@@ -449,9 +450,9 @@ $0<a<1$的情形，留给同学证明．
 
 \begin{blk}{性质4}
 当$x$无限增大时，$a^x,\; (a>1)$也无限增大，可以写
-成$\Lim_{x\to\infty} a^x=+\infty$ （注意这个表达式并不表示此极限存在，而是
+成$\Lim_{x\to +\infty} a^x=+\infty$ （注意这个表达式并不表示此极限存在，而是
 说$a^x$可以超过任何一个指定的正数），若$0<a<1$, 则
-$\Lim_{x\to\infty} a^x=0$
+$\Lim_{x\to +\infty} a^x=0$
 \end{blk}
 
 \begin{proof}
@@ -463,10 +464,10 @@ $\Lim_{x\to\infty} a^x=0$
 \[a^n>1+n(a-1)>1+\frac{M-1}{a-1}(a-1)=M\]
 所以，当$x>n$时，便有$a^x>a^n>M$．
 
-这就是说，当$x\to +\infty$时，$\lim a^x=\infty$.
+这就是说，当$x\to +\infty$时，$\lim a^x=+\infty$.
 
 设$0<a<1$, $a=\frac{1}{b}$, 则$b>1$, $a^x=\left(\frac{1}{b}\right)^x=\frac{1}{b^x}$，
-任给$\varepsilon=\frac{1}{M}>0$, 则$M=\frac{1}{\varepsilon}$, 依前段，当$x>n>\frac{M-1}{b-1}$时，有$b^x>M$. 于是$a^x=\frac{1}{b^x}<\frac{1}{M}=\varepsilon$. 这就证明了当$x\to\infty$时，$\lim a^x=0,\; (0<a<1)$.
+任给$\varepsilon=\frac{1}{M}>0$, 则$M=\frac{1}{\varepsilon}$, 依前段，当$x>n>\frac{M-1}{b-1}$时，有$b^x>M$. 于是$a^x=\frac{1}{b^x}<\frac{1}{M}=\varepsilon$. 这就证明了当$x\to +\infty$时，$\lim a^x=0,\; (0<a<1)$.
 \end{proof}
 
 \begin{blk}{性质5}
@@ -599,7 +600,7 @@ a^x$, 对于任何实数$x$恒成立．
   \item $a^{\sqrt{2}}<a^{\tfrac{\sqrt{2}}{2}}$
   \item $a^{-\sqrt{3}}>a^2$
   \item $a^{-\sqrt{5}-\sqrt{7}}>a^{-5}$
-  \item $a^{1+\sqrt{5}}<a^{2+\sqrt{2}}$
+  \item $a^{1+\sqrt{6}}<a^{2+\sqrt{2}}$
   \item $a^{\sqrt{7}+\sqrt{2}}<a^{\sqrt{6}+\sqrt{3}}$
 \end{enumerate}
 \end{multicols}
@@ -672,7 +673,7 @@ $f(x)=\log_a x$称为\textbf{对数函数}．
   \item $\log_a x^r=r\log_a x$
   \item $\log_a b=\frac{\log_c b}{\log_c a}$（换底公式）．
 \end{enumerate}
-证明过程请看第三册第一章．
+证明过程请看第三册第一章2.2．
 
 从函数的图象来说：$y=\log_a x,\; (x\in\mathbb{R}^+)$的图象能由$y=a^x,\; (x\in\mathbb{R})$的图象经$y=x$的反射而得到，如图10.4．
 \begin{figure}[htp]
@@ -799,7 +800,7 @@ $\therefore\quad f\left(A^{-\tfrac{m}{n}}\right)=-f\left(A^{\tfrac{m}{n}}\right)
 \begin{enumerate}
   \item $2^{\log_4 9}$
   \item $5^{\log_{0.2} 7}$
-  \item $3^{\log_{\sqrt{2}}6}$
+  \item $3^{\log_{\sqrt{3}}6}$
   \item $6^{1+\log_6 5}$
   \item $25^{\tfrac{1}{3} \log_5 27-\log_{5} 4}$
   \item $10^{\lg\sqrt{100}}$
@@ -946,6 +947,8 @@ $\therefore\quad \left(\sqrt{2-\sqrt{3}}\right)^x=2+\sqrt{3}\quad \text{或}\qua
 
 即：
 \[\left({2-\sqrt{3}}\right)^{\tfrac{x}{2}}=\left({2-\sqrt{3}}\right)^{-1}\quad \text{或}\quad \left({2-\sqrt{3}}\right)^{\tfrac{x}{2}}=2-\sqrt{3}\]
+$\therefore\quad \frac{x}{2}=-1\quad \text{或}\quad \frac{x}{2}=1$
+
 $\therefore\quad x=-2\quad \text{或}\quad x=2$
 
 $\therefore\quad $原方程的解集是$\{-2,2\}$．
@@ -974,7 +977,7 @@ $\therefore\quad $原方程的解集是$\{-2,2\}$．
 \begin{solution}
   方程中的对数有意义必须
   \[\begin{cases}
-    x>5\quad\text{且}\quad  x-5\ne 1 \\
+    x>5\quad\text{且}\quad  x-5\ne 1,\quad\text{即}\quad x\ne 6 \\
     3x^2-16x+29>0
   \end{cases}\] 
   根据对数定义得到
@@ -1033,7 +1036,7 @@ $\therefore\quad $原方程的解集是$\{-2,2\}$．
 \end{solution}
 
 根据指数函数与对数函数的单调性也可以解相应的一些
-不等式．由于作对数变形时，也有可能把原来数的定义域
+不等式．由于作对数变形时，也有可能把原来函数的定义域
 缩小了，这时就会丢掉解，因此，作对数变形时，应该避免这
 种情形发生．例如，解$\lg x^2=1$,如果利用等式：$\lg x^2
 =2\lg x$，
@@ -1110,7 +1113,9 @@ $\therefore\quad $原不等式的解集是$\left\{x|0<x<a^2\right\}\cup\left\{x\
 
 \begin{solution}
 \[\begin{split}
-  \text{函数$f$有意义}&\Longleftrightarrow \log_{\tfrac{1}{2}}\frac{x}{x^2-1}\text{有意义}\Longleftrightarrow \log_{\tfrac{1}{2}}\frac{x}{x^2-1}\ge 0\\
+  \text{函数$f$有意义}&\Longleftrightarrow \begin{cases}
+    \log_{\tfrac{1}{2}}\dfrac{x}{x^2-1}\text{有意义}\\ \log_{\tfrac{1}{2}}\dfrac{x}{x^2-1}\ge 0
+  \end{cases}\\
   &\Longleftrightarrow  0<   \frac{x}{x^2-1}\le 1    \Longleftrightarrow  \begin{cases}
     \frac{x}{x^2-1}>0\\ \frac{x^2-x-1}{x^2-1}\ge 0
   \end{cases}           \\
@@ -1123,10 +1128,10 @@ $\therefore\quad $原不等式的解集是$\left\{x|0<x<a^2\right\}\cup\left\{x\
   \end{cases}      \text{或}\quad  \begin{cases}
     x>1\\x\ge\frac{1+\sqrt{5}}{2}
   \end{cases}           \\
-  &\Longleftrightarrow    \frac{1-\sqrt{5}}{2}\le x<1  \quad \text{或}\quad   x\ge\frac{1+\sqrt{5}}{2}   \\
+  &\Longleftrightarrow    \frac{1-\sqrt{5}}{2}\le x<0  \quad \text{或}\quad   x\ge\frac{1+\sqrt{5}}{2}   \\
 \end{split}\]
 故函数$f$的定义域为
-\[\left\{x\Big| \frac{1-\sqrt{5}}{2}\le x<1 \right\}\bigcup\left\{x\Big|x\ge\frac{1+\sqrt{5}}{2}  \right\}\]
+\[\left\{x\Big| \frac{1-\sqrt{5}}{2}\le x<0 \right\}\bigcup\left\{x\Big|x\ge\frac{1+\sqrt{5}}{2}  \right\}\]
 \end{solution}
 
 
@@ -1200,14 +1205,14 @@ x=\frac{\pi}{4}+k\pi
   x=\frac{5\pi}{4}+2k\pi
 \end{equation}
 再由(10.12), (10.13), (10.14)容易看出角$3x$与角$-\frac{3\pi}{2}$, $\frac{3\pi}{4}$和$-\frac{\pi}{4}$
-有相同的终边，所以若将式(10.12)和式(10.14)
+有相同的终边，所以若将解(10.12) $x=-\frac{\pi}{2}+2k\pi$和解(10.14) $x=\frac{5\pi}{4}+2k\pi$
 代入$\sin3x$中，便得到
 \[\begin{split}
   \sin 3\left(-\frac{\pi}{2}-2k\pi\right)&=\sin\left(-\frac{3\pi}{2}\right)=-\sin\frac{3\pi}{2}=1\\
   \sin 3\left(\frac{5\pi}{4}+2k\pi\right)&=\sin\frac{15\pi}{4}=\sin\left(4\pi-\frac{\pi}{4}\right)=\sin\left(-\frac{\pi}{4}\right)=-\frac{\sqrt{2}}{2}<0
 \end{split}\]
 因此这两组解是增解，应该舍去，经检验知
-$x=\frac{\pi}{4}+2k\pi$满足不等式组, 
+$x=\frac{\pi}{4}+2k\pi$满足不等式组(10.10),
 所以方程的解集是
 $\left\{x\Big|x=\frac{\pi}{4}+2k\pi,\quad k\in\mathbb{Z}\right\}$
 
@@ -1231,17 +1236,17 @@ $\left\{x\Big|x=\frac{\pi}{4}+2k\pi,\quad k\in\mathbb{Z}\right\}$
 \item $3^{2 x-1}=81$
 \item $\sqrt{5^{x}}=\sqrt[3]{25}$
 \item  $\sqrt[4]{7^{x}}=\sqrt[5]{343}$
-\item $\sqrt[4]{a^{x+1}}=\sqrt[3]{a^{x-3}}$
+\item $\sqrt[4]{a^{x+1}}=\sqrt[3]{a^{x-2}}$
 
 $(a>0,\;  a \neq 1)$
 \item  $\sqrt{2^{x}} \sqrt{3^{x}}=36$
 \item $\left(\frac{3}{4}\right)^x=\left(\frac{4}{3}\right)^5$
-  \item $\left(\frac{4}{9}\right)^{4}=\left(\frac{3}{2}\right)^{x}$
-  \item $\left(\frac{2}{3}\right)^{x}\left(\frac{9}{8}\right)=\frac{27}{64}$
+  \item $\left(\frac{4}{9}\right)^{x}=\left(\frac{3}{2}\right)^{8}$
+  \item $\left(\frac{2}{3}\right)^{x}\left(\frac{9}{8}\right)^{x}=\frac{27}{64}$
   \item $ 4^{\sqrt{x+1}}=64 \cdot 2^{\sqrt{x+1}} $
-  \item $(0.25)^{x-2}=\frac{256}{2^{x+3}}$
+  \item $(0.25)^{2-x}=\frac{256}{2^{x+3}}$
   \item  $\left(\frac{4}{9}\right)^{x}\left(\frac{27}{8}\right)^{x-1}=\frac{2}{3}$
-  \item  $2^{x} \cdot 5^{4}=0.1\left(10^{x-1}\right)^{5}$
+  \item  $2^{x} \cdot 5^{x}=0.1\left(10^{x-1}\right)^{5}$
 \end{enumerate}
 \end{multicols}
 
@@ -1258,7 +1263,7 @@ $(a>0,\;  a \neq 1)$
 \item  $3^{2 x+5}=3^{x+2}+2$
 \item   $3^{4 \sqrt{x}}-4\cdot 3^{2 \sqrt{x}}+3=0$
 \item   $4\cdot 9^{\sqrt{x}-2}-3\cdot 15^{\sqrt{x}-2}=25^{\sqrt{x}-2} $
-\item   $4^{2 x}-2.18^{2 x}=3.81^{28} $
+\item   $4^{2 x}-2\cdot 18^{2 x}=3\cdot 81^{2x} $
 \end{multicols}
 \item   $\left(\sqrt{5+2 \sqrt{6}}\right)^{x}+\left(\sqrt{5-2 \sqrt{6}}\right)^{x}=\frac{10}{3}$
 \end{enumerate}
@@ -1270,7 +1275,7 @@ $(a>0,\;  a \neq 1)$
     \item  $\left(\frac{4}{5}\right)^{x}<0.000001$
   \item  $\left(\frac{3}{5}\right)^{x}<0.0001$
     \item $\left(\frac{10}{9}\right)^{x}>1000000$
-    \item $\left(\frac{4}{5}\right)^{x}>10000000$
+    \item $\left(\frac{9}{8}\right)^{x}>10000000$
   \end{enumerate}
 \end{multicols}
 
@@ -1283,10 +1288,10 @@ $(a>0,\;  a \neq 1)$
 \item  $\frac{(0.5)^{3 x^{2}+10 x+6}}{100}<0.00125$
 \item  $2^{x+1} \cdot 5^{2 x-3}<\frac{24}{25}$
 \item  $5^{2x}-30\cdot 5^{x}+125<0$
-\item  $2^{3 x}-2^{x+1}<2^{3} $
+\item  $2^{2 x}-2^{x+1}<2^{3} $
 \item  $\frac{1}{\left(\frac{1}{10}\right)^{y}-1} \leqslant \frac{2}{\left(\frac{1}{100}\right)^{y}-10}$
 \item  $\frac{1}{2^{x}-1} \geqslant \frac{1}{4^{x}-3}$
-\item  $\left(\frac{3}{4}\right)^{x-2}\left(\frac{4}{3}\right)^{\tfrac{1}{x}}>\frac{9}{16}$
+\item  $\left(\frac{3}{4}\right)^{x-1}\left(\frac{4}{3}\right)^{\tfrac{1}{x}}>\frac{9}{16}$
 \end{enumerate}
 \end{multicols}
 
@@ -1327,11 +1332,12 @@ $(a>0,\;  a \neq 1)$
   \item $(0.4)^{\lg^2 x+1}=(6.25)^{2-\lg x^3}$
   \item $x^{\lg x+2}=1000$
   \item $\sqrt{x^{\lg \sqrt{x}}}=10$
+  \item $x^{\log_{x^2}(x^2-1)}=5$
 \item $\lg 2+\lg \left(4^{x-2}+9\right)=1+\lg \left(2^{x-2}+1\right)$
 \item $\log _{2}\left(9^{x-1}+7\right)=2+\log _{2}\left(3^{x-1}+1\right)$
 \item $\lg x+\lg \sqrt[3]{x}+\lg  \sqrt[9]{x}+\cdots=3$
 \item $\log _{9} x+\left(\log _{9} x\right)^{2}+\left(\log _{9} x\right)^{3}+\cdots=1$,
-\item $ 1+\log _{x} \frac{4-x}{x}=(\operatorname{lglg} n-1) \log _{x} 10$
+\item $ 1+\log _{x} \frac{4-x}{x}=(\lg\lg n-1) \log _{x} 10$
 \end{enumerate}
 
 \item 解下列各方程组：
@@ -1342,7 +1348,7 @@ $(a>0,\;  a \neq 1)$
 \item  $\begin{cases}2^{\tfrac{x-y}{2}}-2^{\tfrac{x-y}{4}}=2 \\ 3^{\lg(2 y-x)}=1\end{cases}$
 \item $\begin{cases}x y=40 \\ x^{\lg y}=4,\end{cases}$
 \item  $\begin{cases}3\cdot 2^{x}-\log _{2} y=2 \\ 2^{x} \cdot \log _{2} y=1\end{cases}$
-\item  $\begin{cases}7^{y} \cdot \log _{5} x=2 \\ 4.7^{y}+\log _{5} x=2\end{cases}$
+\item  $\begin{cases}7^{y} \cdot \log _{5} x=2 \\ 4\cdot 7^{y}+\log _{5} x=2\end{cases}$
 \item $\begin{cases}
 \lg^2x+\lg^2y=5\\
 \lg x-\lg y=1
